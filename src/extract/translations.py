@@ -108,20 +108,11 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         license="Public Domain",
         source_api="bible-api.com",
     ),
-    "clementine": Translation(
-        translation_id="clementine",
-        language="la",
-        name="Clementine Vulgate",
-        full_name="Clementine Latin Vulgate",
-        year=1592,
-        license="Public Domain",
-        source_api="bible-api.com",
-    ),
 }
 
 # ─── Source groupings ─────────────────────────────────────────────────────────
 
-BIBLE_API_COM_TRANSLATIONS = {"asv", "web", "darby", "clementine"}
+BIBLE_API_COM_TRANSLATIONS = {"asv", "web", "darby"}
 ABIBLIA_DIGITAL_TRANSLATIONS = {"kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee"}
 
 
