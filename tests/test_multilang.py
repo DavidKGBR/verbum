@@ -36,7 +36,7 @@ class TestTranslationRegistry:
         assert "asv" in TRANSLATION_REGISTRY
         assert "bbe" in TRANSLATION_REGISTRY
         assert "nvi" in TRANSLATION_REGISTRY
-        assert "ara" in TRANSLATION_REGISTRY
+        assert "ra" in TRANSLATION_REGISTRY
 
     def test_get_translation_known(self):
         t = get_translation("kjv")

@@ -88,8 +88,8 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         license="Biblica",
         source_api="abibliadigital.com.br",
     ),
-    "ara": Translation(
-        translation_id="ara",
+    "ra": Translation(
+        translation_id="ra",
         language="pt-br",
         name="Almeida Revista e Atualizada",
         full_name="Almeida Revista e Atualizada",
@@ -97,12 +97,30 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         license="SBB",
         source_api="abibliadigital.com.br",
     ),
+    "acf": Translation(
+        translation_id="acf",
+        language="pt-br",
+        name="Almeida Corrigida Fiel",
+        full_name="Almeida Corrigida e Revisada Fiel",
+        year=1994,
+        license="SBTB",
+        source_api="abibliadigital.com.br",
+    ),
+    "rvr": Translation(
+        translation_id="rvr",
+        language="es",
+        name="Reina-Valera",
+        full_name="Reina-Valera",
+        year=1960,
+        license="Public Domain",
+        source_api="abibliadigital.com.br",
+    ),
 }
 
 # ─── Source groupings ─────────────────────────────────────────────────────────
 
 BIBLE_API_COM_TRANSLATIONS = {"kjv", "asv", "bbe", "web", "darby", "almeida", "clementine"}
-ABIBLIA_DIGITAL_TRANSLATIONS = {"nvi", "ara"}
+ABIBLIA_DIGITAL_TRANSLATIONS = {"nvi", "ra", "acf", "rvr"}
 
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
