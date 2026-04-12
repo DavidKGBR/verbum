@@ -8,7 +8,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.api.routers import analytics, books, crossrefs, search
+from src.api.routers import ai_insights, analytics, books, crossrefs, search
 
 app = FastAPI(
     title="Bible Data Pipeline API",
@@ -28,6 +28,7 @@ app.add_middleware(
 app.include_router(search.router, prefix="/api/v1", tags=["Search"])
 app.include_router(analytics.router, prefix="/api/v1", tags=["Analytics"])
 app.include_router(crossrefs.router, prefix="/api/v1", tags=["Cross-References"])
+app.include_router(ai_insights.router, prefix="/api/v1", tags=["AI Insights"])
 app.include_router(books.router, prefix="/api/v1", tags=["Books & Verses"])
 
 

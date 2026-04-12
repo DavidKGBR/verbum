@@ -1,0 +1,11 @@
+Compare the following translations of {reference}:
+
+{translations_formatted}
+
+Analyze:
+1. **differences** — Where do the translations diverge?
+2. **nuances** — What nuances does each translation capture?
+3. **original** — Which is most faithful to the {original_language}?
+4. **recommendation** — Which translation best conveys the central idea?
+
+Respond in {language}. Return valid JSON with these exact keys: differences, nuances, original, recommendation.
