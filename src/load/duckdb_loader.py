@@ -311,7 +311,7 @@ class DuckDBLoader:
                     t["source_api"],
                 ],
             )
-        count = self.conn.execute("SELECT COUNT(*) FROM translations").fetchone()[0]
+        count = self.conn.execute("SELECT COUNT(*) FROM translations").fetchone()[0]  # type: ignore[index]
         logger.info(f"📚 Loaded {count} translations")
         return count
 
@@ -350,7 +350,7 @@ class DuckDBLoader:
             FROM df
         """)
 
-        count = self.conn.execute("SELECT COUNT(*) FROM verses").fetchone()[0]
+        count = self.conn.execute("SELECT COUNT(*) FROM verses").fetchone()[0]  # type: ignore[index]
         logger.info(f"✅ Loaded {count} verses into DuckDB")
         return count
 
@@ -379,7 +379,7 @@ class DuckDBLoader:
                 positive_verses, negative_verses, neutral_verses
             FROM df
         """)
-        count = self.conn.execute("SELECT COUNT(*) FROM book_stats").fetchone()[0]
+        count = self.conn.execute("SELECT COUNT(*) FROM book_stats").fetchone()[0]  # type: ignore[index]
         logger.info(f"📊 Loaded {count} book stats")
         return count
 
@@ -406,7 +406,7 @@ class DuckDBLoader:
                 avg_words_per_verse, avg_sentiment, avg_subjectivity
             FROM df
         """)
-        count = self.conn.execute("SELECT COUNT(*) FROM chapter_stats").fetchone()[0]
+        count = self.conn.execute("SELECT COUNT(*) FROM chapter_stats").fetchone()[0]  # type: ignore[index]
         logger.info(f"📊 Loaded {count} chapter stats")
         return count
 
@@ -431,7 +431,7 @@ class DuckDBLoader:
                 votes, reference_type, arc_distance
             FROM df
         """)
-        count = self.conn.execute("SELECT COUNT(*) FROM cross_references").fetchone()[0]
+        count = self.conn.execute("SELECT COUNT(*) FROM cross_references").fetchone()[0]  # type: ignore[index]
         logger.info(f"✅ Loaded {count} cross-references")
         return count
 

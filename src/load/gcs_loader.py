@@ -27,7 +27,7 @@ class GCSLoader:
             return
 
         try:
-            from google.cloud import bigquery, storage
+            from google.cloud import bigquery, storage  # type: ignore[attr-defined]
 
             self.storage_client = storage.Client(project=self.config.gcp_project_id)
             self.bq_client = bigquery.Client(project=self.config.gcp_project_id)

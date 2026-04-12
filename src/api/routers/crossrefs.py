@@ -50,7 +50,8 @@ def get_arcs(
             params,
         ).fetchdf()
 
-        total = conn.execute("SELECT COUNT(*) FROM cross_references").fetchone()[0]
+        row = conn.execute("SELECT COUNT(*) FROM cross_references").fetchone()
+        total = row[0] if row else 0
 
         return {
             "arcs": df.to_dict(orient="records"),

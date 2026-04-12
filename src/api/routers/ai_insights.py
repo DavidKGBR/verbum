@@ -31,7 +31,7 @@ class CompareRequest(BaseModel):
     language: str = Field("en", description="Response language")
 
 
-def _get_explainer():
+def _get_explainer():  # type: ignore[no-untyped-def]
     """Lazy-load the explainer (requires GEMINI_API_KEY)."""
     api_key = os.getenv("GEMINI_API_KEY", "")
     if not api_key:

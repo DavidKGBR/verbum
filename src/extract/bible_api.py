@@ -169,6 +169,8 @@ class BibleExtractor:
                         chapter=v.get("chapter", ch),
                         verse=v.get("verse", 0),
                         text=v.get("text", "").strip(),
+                        translation_id=self.config.translation,
+                        language="en",
                     )
                     verses.append(verse)
                 except Exception as e:
