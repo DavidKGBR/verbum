@@ -1,10 +1,23 @@
+import { useState } from "react";
 import { useArcData } from "../hooks/useArcData";
 import ArcDiagram from "../components/ArcDiagram/ArcDiagram";
+import ArcDetailPanel from "../components/ArcDiagram/ArcDetailPanel";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+
+interface SelectedArc {
+  sourceBook: string;
+  targetBook: string;
+  connectionCount: number;
+}
 
 export default function ArcDiagramPage() {
   const { books, arcs, totalCrossrefs, loading, error, filters, setFilters } =
     useArcData();
+  const [selectedArc, setSelectedArc] = useState<SelectedArc | null>(null);
+
+  function handleArcClick(sourceBook: string, targetBook: string, count: number) {
+    setSelectedArc({ sourceBook, targetBook, connectionCount: count });
+  }
 
   return (
     <div>
@@ -75,14 +88,25 @@ export default function ArcDiagramPage() {
       {loading ? (
         <LoadingSpinner text="Loading cross-references..." />
       ) : (
-        <div className="overflow-x-auto border rounded bg-white">
-          <ArcDiagram
-            books={books}
-            arcs={arcs}
-            colorBy={filters.colorBy}
-            width={1200}
-            height={480}
-          />
+        <div className="flex border rounded bg-white overflow-hidden">
+          <div className="flex-1 overflow-x-auto">
+            <ArcDiagram
+              books={books}
+              arcs={arcs}
+              colorBy={filters.colorBy}
+              width={selectedArc ? 900 : 1200}
+              height={480}
+              onArcClick={handleArcClick}
+            />
+          </div>
+          {selectedArc && (
+            <ArcDetailPanel
+              sourceBook={selectedArc.sourceBook}
+              targetBook={selectedArc.targetBook}
+              connectionCount={selectedArc.connectionCount}
+              onClose={() => setSelectedArc(null)}
+            />
+          )}
         </div>
       )}
     </div>

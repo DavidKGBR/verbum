@@ -16,6 +16,7 @@ interface Props {
   colorBy: "distance" | "testament" | "category";
   width?: number;
   height?: number;
+  onArcClick?: (sourceBook: string, targetBook: string, count: number) => void;
 }
 
 const BOOK_BAR_HEIGHT = 20;
@@ -28,6 +29,7 @@ export default function ArcDiagram({
   colorBy,
   width = 1200,
   height = 500,
+  onArcClick,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [hoveredBook, setHoveredBook] = useState<string | null>(null);
@@ -137,15 +139,18 @@ export default function ArcDiagram({
                   ? opacityScale(arc.connection_count, maxWeight)
                   : 0.03
               }
-              className="transition-opacity duration-200"
+              className="transition-opacity duration-200 cursor-pointer"
               onMouseEnter={(e) =>
                 setTooltip({
                   x: e.clientX,
                   y: e.clientY,
-                  text: `${arc.source_book_id} → ${arc.target_book_id}: ${arc.connection_count} refs`,
+                  text: `${arc.source_book_id} → ${arc.target_book_id}: ${arc.connection_count} refs (click for details)`,
                 })
               }
               onMouseLeave={() => setTooltip(null)}
+              onClick={() =>
+                onArcClick?.(arc.source_book_id, arc.target_book_id, arc.connection_count)
+              }
             />
           );
         })}

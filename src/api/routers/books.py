@@ -71,6 +71,63 @@ def get_chapter(
         conn.close()
 
 
+@router.get("/verses/random")
+def random_verse(
+    translation: str = Query("kjv", description="Translation ID"),
+) -> dict:
+    """Get a random verse."""
+    conn = get_db()
+    try:
+        df = conn.execute(
+            """
+            SELECT verse_id, reference, text, book_id, book_name,
+                   chapter, verse, sentiment_label
+            FROM verses
+            WHERE translation_id = ?
+            ORDER BY RANDOM()
+            LIMIT 1
+            """,
+            [translation.lower()],
+        ).fetchdf()
+
+        if df.empty:
+            raise HTTPException(status_code=404, detail="No verses found")
+
+        return df.iloc[0].to_dict()
+    finally:
+        conn.close()
+
+
+@router.get("/verses/{verse_id}/translations")
+def verse_translations(
+    verse_id: str,
+    translations: str = Query("kjv,nvi,rvr", description="Comma-separated translation IDs"),
+) -> dict:
+    """Get a verse in multiple translations for comparison."""
+    conn = get_db()
+    try:
+        translation_list = [t.strip().lower() for t in translations.split(",")]
+        placeholders = ", ".join(["?" for _ in translation_list])
+        df = conn.execute(
+            f"""
+            SELECT translation_id, text, language
+            FROM verses
+            WHERE verse_id = ? AND translation_id IN ({placeholders})
+            ORDER BY translation_id
+            """,
+            [verse_id.upper()] + translation_list,
+        ).fetchdf()
+
+        translations_map = {row["translation_id"]: row["text"] for _, row in df.iterrows()}
+
+        return {
+            "verse_id": verse_id.upper(),
+            "translations": translations_map,
+        }
+    finally:
+        conn.close()
+
+
 @router.get("/verses/{verse_id}")
 def get_verse(
     verse_id: str,

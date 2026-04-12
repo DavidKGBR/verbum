@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { searchVerses, type SearchResult } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 
 export default function SearchPage() {
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [totalResults, setTotalResults] = useState(0);
@@ -30,6 +32,10 @@ export default function SearchPage() {
     if (!query) return text;
     const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
     return text.replace(regex, "<mark class='bg-yellow-200'>$1</mark>");
+  }
+
+  function goToVerse(r: SearchResult) {
+    navigate(`/reader?book=${r.book_id}&chapter=${r.chapter}&verse=${r.verse}`);
   }
 
   return (
@@ -66,7 +72,9 @@ export default function SearchPage() {
         {results.map((r) => (
           <div
             key={r.verse_id}
-            className="bg-white rounded-lg border p-4 shadow-sm"
+            onClick={() => goToVerse(r)}
+            className="bg-white rounded-lg border p-4 shadow-sm cursor-pointer
+                       hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
           >
             <div className="flex justify-between items-start mb-1">
               <span className="font-bold text-sm text-[var(--color-gold)]">

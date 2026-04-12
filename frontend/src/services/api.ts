@@ -186,3 +186,49 @@ export function fetchParallelPage(
     `${BASE}/reader/parallel?book=${book}&chapter=${chapter}&left=${left}&right=${right}`
   );
 }
+
+// ── Cross-refs (detailed) ────────────────────────────────────────────────────
+
+export interface DetailedCrossRef {
+  source_verse_id: string;
+  target_verse_id: string;
+  votes: number;
+  reference_type: string;
+  source_text: string | null;
+  target_text: string | null;
+  source_ref: string | null;
+  target_ref: string | null;
+}
+
+export interface VerseCrossRef {
+  target_verse_id: string;
+  target_book_id: string;
+  target_book_name: string | null;
+  target_text: string | null;
+  votes: number;
+  reference_type: string;
+}
+
+export function fetchCrossrefsBetween(sourceBook: string, targetBook: string, limit = 50) {
+  return fetchJson<{ source_book: string; target_book: string; total: number; crossrefs: DetailedCrossRef[] }>(
+    `${BASE}/crossrefs/between?source_book=${sourceBook}&target_book=${targetBook}&limit=${limit}`
+  );
+}
+
+export function fetchVerseCrossrefs(verseId: string) {
+  return fetchJson<{ verse_id: string; outgoing: VerseCrossRef[]; incoming: VerseCrossRef[]; total: number }>(
+    `${BASE}/crossrefs/${verseId}`
+  );
+}
+
+export function fetchVerseTranslations(verseId: string, translations = "kjv,nvi,rvr") {
+  return fetchJson<{ verse_id: string; translations: Record<string, string> }>(
+    `${BASE}/verses/${verseId}/translations?translations=${translations}`
+  );
+}
+
+export function fetchRandomVerse(translation = "kjv") {
+  return fetchJson<{ verse_id: string; reference: string; text: string; book_id: string; book_name: string; chapter: number; verse: number }>(
+    `${BASE}/verses/random?translation=${translation}`
+  );
+}

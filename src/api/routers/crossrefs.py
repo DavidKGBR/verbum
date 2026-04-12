@@ -65,6 +65,44 @@ def get_arcs(
         conn.close()
 
 
+@router.get("/crossrefs/between")
+def get_crossrefs_between(
+    source_book: str = Query(..., description="Source book ID (e.g., GEN)"),
+    target_book: str = Query(..., description="Target book ID (e.g., PSA)"),
+    limit: int = Query(50, ge=1, le=200),
+) -> dict:
+    """Get detailed cross-references between two specific books."""
+    conn = get_db()
+    try:
+        df = conn.execute(
+            """
+            SELECT
+                cr.source_verse_id, cr.target_verse_id, cr.votes,
+                cr.reference_type, cr.arc_distance,
+                sv.text AS source_text, sv.reference AS source_ref,
+                tv.text AS target_text, tv.reference AS target_ref
+            FROM cross_references cr
+            LEFT JOIN verses sv ON cr.source_verse_id = sv.verse_id
+                AND sv.translation_id = 'kjv'
+            LEFT JOIN verses tv ON cr.target_verse_id = tv.verse_id
+                AND tv.translation_id = 'kjv'
+            WHERE cr.source_book_id = ? AND cr.target_book_id = ?
+            ORDER BY cr.votes DESC
+            LIMIT ?
+            """,
+            [source_book.upper(), target_book.upper(), limit],
+        ).fetchdf()
+
+        return {
+            "source_book": source_book.upper(),
+            "target_book": target_book.upper(),
+            "total": len(df),
+            "crossrefs": df.to_dict(orient="records"),
+        }
+    finally:
+        conn.close()
+
+
 @router.get("/crossrefs/network")
 def get_network(
     books: str | None = Query(None, description="Comma-separated book IDs to include"),
@@ -119,11 +157,15 @@ def get_verse_crossrefs(verse_id: str) -> dict:
 
         outgoing = conn.execute(
             """
-            SELECT target_verse_id, target_book_id, target_book_position,
-                   votes, reference_type, arc_distance
-            FROM cross_references
-            WHERE source_verse_id = ?
-            ORDER BY votes DESC
+            SELECT cr.target_verse_id, cr.target_book_id,
+                   cr.target_book_position, cr.votes,
+                   cr.reference_type, cr.arc_distance,
+                   v.text AS target_text, v.book_name AS target_book_name
+            FROM cross_references cr
+            LEFT JOIN verses v ON cr.target_verse_id = v.verse_id
+                AND v.translation_id = 'kjv'
+            WHERE cr.source_verse_id = ?
+            ORDER BY cr.votes DESC
             """,
             [vid],
         ).fetchdf()
