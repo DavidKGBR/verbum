@@ -34,7 +34,7 @@ class TestTranslationRegistry:
     def test_registry_has_expected_translations(self):
         assert "kjv" in TRANSLATION_REGISTRY
         assert "asv" in TRANSLATION_REGISTRY
-        assert "rva" in TRANSLATION_REGISTRY
+        assert "bbe" in TRANSLATION_REGISTRY
         assert "nvi" in TRANSLATION_REGISTRY
         assert "ara" in TRANSLATION_REGISTRY
 
