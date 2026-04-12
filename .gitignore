@@ -1,0 +1,47 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ─── Data (large files — tracked via DVC or downloaded at runtime) ────────────
+data/raw/*.json
+data/processed/*.csv
+data/analytics/*.csv
+data/analytics/*.duckdb
+data/analytics/*.duckdb.wal
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Environment ──────────────────────────────────────────────────────────────
+.env
+.venv/
+venv/
+env/
+
+# ─── Testing ──────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ─── Linting ──────────────────────────────────────────────────────────────────
+.mypy_cache/
+.ruff_cache/
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── GCP credentials ─────────────────────────────────────────────────────────
+*.json
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/analytics/.gitkeep

@@ -1,0 +1,86 @@
+name: 🧪 CI Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  # ─── Lint & Type Check ──────────────────────────────────────────────────────
+  quality:
+    name: 🔍 Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install ".[dev]"
+
+      - name: Lint with Ruff
+        run: ruff check src/ tests/
+
+      - name: Format check
+        run: ruff format --check src/ tests/
+
+      - name: Type check with mypy
+        run: mypy src/ --ignore-missing-imports
+
+  # ─── Tests ──────────────────────────────────────────────────────────────────
+  test:
+    name: 🧪 Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install ".[dev]"
+
+      - name: Download NLTK data
+        run: python -c "import nltk; nltk.download('punkt_tab', quiet=True)" 2>/dev/null || true
+
+      - name: Run tests
+        run: pytest -v --cov=src --cov-report=xml --cov-report=term-missing -m "not integration and not slow"
+
+      - name: Upload coverage
+        if: matrix.python-version == '3.12'
+        uses: codecov/codecov-action@v4
+        with:
+          file: coverage.xml
+          fail_ci_if_error: false
+
+  # ─── Docker Build ───────────────────────────────────────────────────────────
+  docker:
+    name: 🐳 Docker Build
+    runs-on: ubuntu-latest
+    needs: [quality, test]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build pipeline image
+        run: docker build --target production -t bible-pipeline:test .
+
+      - name: Build dashboard image
+        run: docker build --target dashboard -t bible-dashboard:test .
+
+      - name: Verify pipeline image
+        run: docker run --rm bible-pipeline:test --help
