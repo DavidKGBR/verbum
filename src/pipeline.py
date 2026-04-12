@@ -98,7 +98,9 @@ class BiblePipeline:
 
             # Coverage report for multi-translation runs
             if len(translations) > 1 and "verse_id" in enriched_df.columns:
-                coverage = compute_coverage_report(enriched_df)
+                coverage = compute_coverage_report(
+                    enriched_df, reference_translation=translations[0]
+                )
                 if not coverage.empty:
                     console.print("  📊 Translation coverage:")
                     for _, row in coverage.iterrows():
