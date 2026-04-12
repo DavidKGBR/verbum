@@ -307,7 +307,7 @@ ABIBLIA_BOOK_ABBREVS: dict[str, str] = {
     "Ezra": "ed",
     "Nehemiah": "ne",
     "Esther": "et",
-    "Job": "jó",
+    "Job": "job",
     "Psalms": "sl",
     "Proverbs": "pv",
     "Ecclesiastes": "ec",
