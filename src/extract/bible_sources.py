@@ -365,7 +365,7 @@ class ABibliaDigitalSource(BibleSource):
 
     def __init__(self, translation_id: str, config: ExtractConfig | None = None) -> None:
         super().__init__(translation_id, config)
-        token = os.getenv("ABIBLIA_DIGITAL_TOKEN", "")
+        token = os.getenv("ABIBLIA_DIGITAL_TOKEN", "").strip()
         headers: dict[str, str] = {}
         if token:
             headers["Authorization"] = f"Bearer {token}"
