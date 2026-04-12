@@ -227,7 +227,8 @@ class BibleExtractor:
                             [v.model_dump() for v in verses],
                             indent=2,
                             ensure_ascii=False,
-                        )
+                        ),
+                        encoding="utf-8",
                     )
 
                 progress.update(task, advance=1, verses_count=len(all_verses))
@@ -244,7 +245,7 @@ class BibleExtractor:
 
         for json_file in sorted(cache_dir.glob("*.json")):
             try:
-                data = json.loads(json_file.read_text())
+                data = json.loads(json_file.read_text(encoding="utf-8"))
                 for item in data:
                     verses.append(RawVerse(**item))
             except Exception as e:

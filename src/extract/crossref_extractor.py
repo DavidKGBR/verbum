@@ -257,7 +257,7 @@ class CrossRefExtractor:
             return None
 
         try:
-            data = json.loads(cache_file.read_text())
+            data = json.loads(cache_file.read_text(encoding="utf-8"))
             refs = [RawCrossReference(**item) for item in data]
             logger.info(f"📂 Loaded {len(refs)} cross-references from cache")
             return refs
@@ -276,6 +276,7 @@ class CrossRefExtractor:
             json.dumps(
                 [r.model_dump() for r in refs],
                 ensure_ascii=False,
-            )
+            ),
+            encoding="utf-8",
         )
         logger.info(f"💾 Cached {len(refs)} cross-references to {cache_file}")

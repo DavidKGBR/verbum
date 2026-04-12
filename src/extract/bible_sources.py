@@ -162,7 +162,8 @@ class BibleSource(ABC):
                             [v.model_dump() for v in verses],
                             indent=2,
                             ensure_ascii=False,
-                        )
+                        ),
+                        encoding="utf-8",
                     )
 
                 progress.update(task, advance=1, verses_count=len(all_verses))
@@ -182,7 +183,7 @@ class BibleSource(ABC):
 
         for json_file in sorted(cache_dir.glob("*.json")):
             try:
-                data = json.loads(json_file.read_text())
+                data = json.loads(json_file.read_text(encoding="utf-8"))
                 for item in data:
                     # Ensure cached data gets the correct translation_id
                     item.setdefault("translation_id", self.translation_id)
