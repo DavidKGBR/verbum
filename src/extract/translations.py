@@ -1,6 +1,9 @@
 """
 🌍 Translation Registry
 Maps Bible translations to their API sources and metadata.
+
+Primary source: abibliadigital.com.br (7 translations, all complete)
+Fallback: bible-api.com (for translations not on abibliadigital)
 """
 
 from __future__ import annotations
@@ -8,11 +11,9 @@ from __future__ import annotations
 from src.models.schemas import Translation
 
 # ─── Translation Registry ────────────────────────────────────────────────────
-# Only includes translations verified to exist on their respective APIs.
-# bible-api.com translations: https://bible-api.com/
 
 TRANSLATION_REGISTRY: dict[str, Translation] = {
-    # ── bible-api.com (English) ───────────────────────────────────────────
+    # ── abibliadigital.com.br — English ──────────────────────────────────
     "kjv": Translation(
         translation_id="kjv",
         language="en",
@@ -20,16 +21,7 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         full_name="Authorized King James Version",
         year=1611,
         license="Public Domain",
-        source_api="bible-api.com",
-    ),
-    "asv": Translation(
-        translation_id="asv",
-        language="en",
-        name="American Standard Version",
-        full_name="American Standard Version",
-        year=1901,
-        license="Public Domain",
-        source_api="bible-api.com",
+        source_api="abibliadigital.com.br",
     ),
     "bbe": Translation(
         translation_id="bbe",
@@ -38,37 +30,9 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         full_name="Bible in Basic English",
         year=1965,
         license="Public Domain",
-        source_api="bible-api.com",
+        source_api="abibliadigital.com.br",
     ),
-    "web": Translation(
-        translation_id="web",
-        language="en",
-        name="World English Bible",
-        full_name="World English Bible",
-        year=2000,
-        license="Public Domain",
-        source_api="bible-api.com",
-    ),
-    "darby": Translation(
-        translation_id="darby",
-        language="en",
-        name="Darby Bible",
-        full_name="Darby Bible",
-        year=1890,
-        license="Public Domain",
-        source_api="bible-api.com",
-    ),
-    # ── bible-api.com (Latin) ─────────────────────────────────────────────
-    "clementine": Translation(
-        translation_id="clementine",
-        language="la",
-        name="Clementine Vulgate",
-        full_name="Clementine Latin Vulgate",
-        year=1592,
-        license="Public Domain",
-        source_api="bible-api.com",
-    ),
-    # ── abibliadigital.com.br (PT-BR) ────────────────────────────────────
+    # ── abibliadigital.com.br — Portuguese ───────────────────────────────
     "nvi": Translation(
         translation_id="nvi",
         language="pt-br",
@@ -96,6 +60,7 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         license="SBTB",
         source_api="abibliadigital.com.br",
     ),
+    # ── abibliadigital.com.br — Spanish ──────────────────────────────────
     "rvr": Translation(
         translation_id="rvr",
         language="es",
@@ -105,12 +70,59 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         license="Public Domain",
         source_api="abibliadigital.com.br",
     ),
+    # ── abibliadigital.com.br — French ───────────────────────────────────
+    "apee": Translation(
+        translation_id="apee",
+        language="fr",
+        name="A Peshitta em Francês",
+        full_name="A Peshitta em Francês",
+        year=None,
+        license="Public Domain",
+        source_api="abibliadigital.com.br",
+    ),
+    # ── bible-api.com (fallback for translations not on abibliadigital) ──
+    "asv": Translation(
+        translation_id="asv",
+        language="en",
+        name="American Standard Version",
+        full_name="American Standard Version",
+        year=1901,
+        license="Public Domain",
+        source_api="bible-api.com",
+    ),
+    "web": Translation(
+        translation_id="web",
+        language="en",
+        name="World English Bible",
+        full_name="World English Bible",
+        year=2000,
+        license="Public Domain",
+        source_api="bible-api.com",
+    ),
+    "darby": Translation(
+        translation_id="darby",
+        language="en",
+        name="Darby Bible",
+        full_name="Darby Bible",
+        year=1890,
+        license="Public Domain",
+        source_api="bible-api.com",
+    ),
+    "clementine": Translation(
+        translation_id="clementine",
+        language="la",
+        name="Clementine Vulgate",
+        full_name="Clementine Latin Vulgate",
+        year=1592,
+        license="Public Domain",
+        source_api="bible-api.com",
+    ),
 }
 
 # ─── Source groupings ─────────────────────────────────────────────────────────
 
-BIBLE_API_COM_TRANSLATIONS = {"kjv", "asv", "bbe", "web", "darby", "clementine"}
-ABIBLIA_DIGITAL_TRANSLATIONS = {"nvi", "ra", "acf", "rvr"}
+BIBLE_API_COM_TRANSLATIONS = {"asv", "web", "darby", "clementine"}
+ABIBLIA_DIGITAL_TRANSLATIONS = {"kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee"}
 
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────

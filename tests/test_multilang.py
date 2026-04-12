@@ -66,8 +66,9 @@ class TestTranslationRegistry:
         assert len(available) == len(TRANSLATION_REGISTRY)
 
     def test_get_source_type(self):
-        assert get_source_type("kjv") == "bible-api.com"
+        assert get_source_type("kjv") == "abibliadigital.com.br"
         assert get_source_type("nvi") == "abibliadigital.com.br"
+        assert get_source_type("asv") == "bible-api.com"
 
     def test_source_groupings_cover_all(self):
         all_ids = BIBLE_API_COM_TRANSLATIONS | ABIBLIA_DIGITAL_TRANSLATIONS
@@ -80,7 +81,7 @@ class TestTranslationRegistry:
 class TestBibleSourceFactory:
     def test_create_source_kjv(self):
         source = create_source("kjv")
-        assert isinstance(source, BibleApiComSource)
+        assert isinstance(source, ABibliaDigitalSource)
         source.close()
 
     def test_create_source_asv(self):
