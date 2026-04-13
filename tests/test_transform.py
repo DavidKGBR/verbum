@@ -95,9 +95,7 @@ class TestNormalizeText:
 
 class TestStripKjvAnnotations:
     def test_strip_kjv_added_words(self):
-        out = strip_kjv_annotations(
-            "and God said, Let there be light: and there {was} light."
-        )
+        out = strip_kjv_annotations("and God said, Let there be light: and there {was} light.")
         assert out == "and God said, Let there be light: and there was light."
 
     def test_strip_kjv_marginal_notes(self):
@@ -117,8 +115,7 @@ class TestStripKjvAnnotations:
             "from the darkness. {the light from...: Heb. between the light}"
         )
         assert out == (
-            "And God saw the light, that it was good: "
-            "and God divided the light from the darkness."
+            "And God saw the light, that it was good: and God divided the light from the darkness."
         )
 
 
