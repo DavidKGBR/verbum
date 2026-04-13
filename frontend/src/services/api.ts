@@ -227,8 +227,58 @@ export function fetchVerseTranslations(verseId: string, translations = "kjv,nvi,
   );
 }
 
+export interface RandomVerse {
+  verse_id: string;
+  reference: string;
+  text: string;
+  book_id: string;
+  book_name: string;
+  chapter: number;
+  verse: number;
+  sentiment_label?: string;
+}
+
 export function fetchRandomVerse(translation = "kjv") {
-  return fetchJson<{ verse_id: string; reference: string; text: string; book_id: string; book_name: string; chapter: number; verse: number }>(
+  return fetchJson<RandomVerse>(
     `${BASE}/verses/random?translation=${translation}`
   );
+}
+
+// ── Cross-ref counts (per chapter) ──────────────────────────────────────────
+
+export function fetchCrossrefCounts(book: string, chapter: number) {
+  return fetchJson<{ book: string; chapter: number; counts: Record<string, number> }>(
+    `${BASE}/crossrefs/counts?book=${book}&chapter=${chapter}`
+  );
+}
+
+// ── AI Insights ─────────────────────────────────────────────────────────────
+
+export interface AIExplanation {
+  verse_id: string;
+  translation: string;
+  language: string;
+  style: string;
+  explanation: string;
+  context: string;
+  key_words: Array<{ word: string; meaning: string; original?: string }> | string[];
+  application: string;
+}
+
+export async function explainVerse(
+  verseId: string,
+  language: "en" | "pt-br" = "en",
+  translation = "kjv",
+  style: "simple" | "academic" | "devotional" = "simple"
+): Promise<AIExplanation> {
+  const res = await fetch(`${BASE}/ai/explain`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ verse_id: verseId, language, translation, style }),
+  });
+  if (!res.ok) {
+    const detail = await res.json().catch(() => ({ detail: res.statusText }));
+    throw new Error(detail.detail || `HTTP ${res.status}`);
+  }
+  return res.json();
 }

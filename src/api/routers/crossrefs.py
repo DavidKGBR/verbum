@@ -148,6 +148,39 @@ def get_network(
         conn.close()
 
 
+@router.get("/crossrefs/counts")
+def get_crossref_counts(
+    book: str = Query(..., description="Book ID (e.g., GEN)"),
+    chapter: int = Query(..., ge=1, description="Chapter number"),
+) -> dict:
+    """Return cross-reference counts per verse for a given chapter.
+
+    Used by the Reader to render a small badge next to verses that have refs.
+    Counts only outgoing references (source_verse_id).
+    """
+    conn = get_db()
+    try:
+        prefix = f"{book.upper()}.{chapter}."
+        df = conn.execute(
+            """
+            SELECT source_verse_id AS verse_id, COUNT(*) AS count
+            FROM cross_references
+            WHERE source_book_id = ? AND source_verse_id LIKE ?
+            GROUP BY source_verse_id
+            """,
+            [book.upper(), f"{prefix}%"],
+        ).fetchdf()
+
+        counts = {row["verse_id"]: int(row["count"]) for _, row in df.iterrows()}
+        return {
+            "book": book.upper(),
+            "chapter": chapter,
+            "counts": counts,
+        }
+    finally:
+        conn.close()
+
+
 @router.get("/crossrefs/{verse_id}")
 def get_verse_crossrefs(verse_id: str) -> dict:
     """Get all cross-references for a specific verse."""

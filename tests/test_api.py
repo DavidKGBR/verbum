@@ -319,3 +319,52 @@ class TestCrossRefs:
         data = r.json()
         assert len(data["nodes"]) >= 1
         assert len(data["edges"]) >= 1
+
+    def test_crossref_counts(self, client):
+        r = client.get("/api/v1/crossrefs/counts?book=GEN&chapter=1")
+        assert r.status_code == 200
+        data = r.json()
+        assert data["book"] == "GEN"
+        assert data["chapter"] == 1
+        # GEN.1.1 has one outgoing crossref in the seed
+        assert data["counts"].get("GEN.1.1") == 1
+
+    def test_crossref_counts_empty_chapter(self, client):
+        r = client.get("/api/v1/crossrefs/counts?book=GEN&chapter=99")
+        assert r.status_code == 200
+        assert r.json()["counts"] == {}
+
+
+# ─── Random verse & verse translations ───────────────────────────────────────
+
+
+class TestExtras:
+    def test_random_verse(self, client):
+        r = client.get("/api/v1/verses/random?translation=kjv")
+        assert r.status_code == 200
+        data = r.json()
+        assert "verse_id" in data
+        assert "text" in data
+        assert "reference" in data
+
+    def test_verse_translations(self, client):
+        r = client.get("/api/v1/verses/GEN.1.1/translations?translations=kjv")
+        assert r.status_code == 200
+        data = r.json()
+        assert data["verse_id"] == "GEN.1.1"
+        assert "kjv" in data["translations"]
+
+
+# ─── AI endpoint (graceful when key missing) ─────────────────────────────────
+
+
+class TestAI:
+    def test_explain_without_key(self, client, monkeypatch):
+        """Without GEMINI_API_KEY the endpoint must return 503, not crash."""
+        monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+        r = client.post(
+            "/api/v1/ai/explain",
+            json={"verse_id": "GEN.1.1", "language": "en", "translation": "kjv"},
+        )
+        assert r.status_code == 503
+        assert "Gemini" in r.json()["detail"]
