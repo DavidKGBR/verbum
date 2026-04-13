@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo, useEffect, useCallback } from "react";
+import { useRef, useState, useMemo, useEffect, useLayoutEffect, useCallback } from "react";
 import type { Book, Arc } from "../../services/api";
 import {
   computeBookPositions,
@@ -35,7 +35,12 @@ export default function ArcDiagram({
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [measuredWidth, setMeasuredWidth] = useState(widthProp ?? MIN_WIDTH);
+  // `null` until we have the real container size. Gating the canvas draw on
+  // this avoids the "perfect arc → reshape" flash that happens if we paint
+  // once with default dims and again after the observer fires.
+  const [measured, setMeasured] = useState<{ w: number; h: number } | null>(
+    widthProp ? { w: widthProp, h: height } : null
+  );
   const [hoveredBook, setHoveredBook] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{
     x: number;
@@ -43,17 +48,19 @@ export default function ArcDiagram({
     text: string;
   } | null>(null);
 
-  // Observe container width — if explicit width not given, fill available space
-  useEffect(() => {
-    if (widthProp) {
-      setMeasuredWidth(widthProp);
-      return;
-    }
+  // Observe container size — fill available space. Use `useLayoutEffect` so
+  // the re-render triggered by the first measurement is flushed into the same
+  // paint; the user never sees the default-dimensions frame.
+  useLayoutEffect(() => {
     const el = containerRef.current;
     if (!el) return;
     const update = () => {
-      const w = Math.max(MIN_WIDTH, el.clientWidth);
-      setMeasuredWidth(w);
+      const w = widthProp ?? Math.max(MIN_WIDTH, el.clientWidth);
+      const h = el.clientHeight;
+      if (h <= 100) return; // transient zero-height layout; wait for a real one
+      setMeasured((prev) =>
+        prev && prev.w === w && prev.h === h ? prev : { w, h }
+      );
     };
     update();
     const ro = new ResizeObserver(update);
@@ -61,8 +68,9 @@ export default function ArcDiagram({
     return () => ro.disconnect();
   }, [widthProp]);
 
-  const width = measuredWidth;
-  const baseline = height - BOOK_BAR_HEIGHT - LABEL_HEIGHT - BASELINE_Y_OFFSET;
+  const width = measured?.w ?? (widthProp ?? MIN_WIDTH);
+  const effectiveHeight = measured?.h ?? height;
+  const baseline = effectiveHeight - BOOK_BAR_HEIGHT - LABEL_HEIGHT - BASELINE_Y_OFFSET;
 
   const positions = useMemo(
     () => computeBookPositions(books, width),
@@ -120,7 +128,7 @@ export default function ArcDiagram({
     lineWidth: number;
   }
 
-  const maxArcHeight = height - BOOK_BAR_HEIGHT - LABEL_HEIGHT - BASELINE_Y_OFFSET - ARC_TOP_PADDING;
+  const maxArcHeight = effectiveHeight - BOOK_BAR_HEIGHT - LABEL_HEIGHT - BASELINE_Y_OFFSET - ARC_TOP_PADDING;
 
   const geoms = useMemo<ArcGeom[]>(() => {
     const out: ArcGeom[] = [];
@@ -149,6 +157,9 @@ export default function ArcDiagram({
   // Canvas drawing — internal coordinate system uses `width`;
   // the canvas element stretches to fit its container via CSS (w-full/h-full).
   useEffect(() => {
+    // Hold off until the container has been measured — otherwise we paint a
+    // stretched 500×720 frame that gets replaced once the observer fires.
+    if (!measured) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -158,11 +169,11 @@ export default function ArcDiagram({
     // Backing store sized to (width * dpr) so coords stay crisp;
     // CSS stretches canvas to parent width regardless.
     canvas.width = width * dpr;
-    canvas.height = height * dpr;
+    canvas.height = effectiveHeight * dpr;
 
     const raf = requestAnimationFrame(() => {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.clearRect(0, 0, width, height);
+      ctx.clearRect(0, 0, width, effectiveHeight);
 
       for (const g of geoms) {
         const connected =
@@ -181,7 +192,7 @@ export default function ArcDiagram({
     });
 
     return () => cancelAnimationFrame(raf);
-  }, [geoms, hoveredBook, baseline, width, height]);
+  }, [measured, geoms, hoveredBook, baseline, width, effectiveHeight]);
 
   // Hit-testing: return topmost arc at (x, y) in canvas coords.
   // An ellipse centered at (cx, baseline) with radii (rx, ry) satisfies
@@ -214,7 +225,7 @@ export default function ArcDiagram({
   ): { x: number; y: number } {
     const rect = e.currentTarget.getBoundingClientRect();
     const scaleX = rect.width > 0 ? width / rect.width : 1;
-    const scaleY = rect.height > 0 ? height / rect.height : 1;
+    const scaleY = rect.height > 0 ? effectiveHeight / rect.height : 1;
     return {
       x: (e.clientX - rect.left) * scaleX,
       y: (e.clientY - rect.top) * scaleY,
@@ -260,8 +271,8 @@ export default function ArcDiagram({
   return (
     <div
       ref={containerRef}
-      className="relative bg-[var(--color-parchment)] w-full"
-      style={{ height, minWidth: MIN_WIDTH }}
+      className="relative bg-[var(--color-parchment)] w-full h-full"
+      style={{ minWidth: MIN_WIDTH }}
     >
       {/* Canvas layer: arcs only — stretches to container via CSS */}
       <canvas
@@ -274,7 +285,7 @@ export default function ArcDiagram({
 
       {/* SVG overlay: book bars, labels, divider — uses viewBox so coords align with canvas */}
       <svg
-        viewBox={`0 0 ${width} ${height}`}
+        viewBox={`0 0 ${width} ${effectiveHeight}`}
         preserveAspectRatio="none"
         className="absolute inset-0 w-full h-full pointer-events-none"
       >

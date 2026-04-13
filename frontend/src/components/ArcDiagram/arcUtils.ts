@@ -26,20 +26,48 @@ export interface BookPosition {
   width: number;
 }
 
-/** Map books to x-positions proportional to verse count. */
+/** Map books to x-positions proportional to verse count.
+ *  Two-pass algorithm: first assigns minimum widths to small books,
+ *  then distributes remaining space proportionally to the rest.
+ *  Guarantees all books fit within totalWidth. */
 export function computeBookPositions(
   books: Book[],
   totalWidth: number,
   padding = 2
 ): BookPosition[] {
   const totalVerses = books.reduce((s, b) => s + b.total_verses, 0);
-  if (totalVerses === 0) return [];
+  if (totalVerses === 0 || books.length === 0) return [];
 
-  const usableWidth = totalWidth - padding * books.length;
+  const MIN_BOOK_WIDTH = 4;
+  const totalPadding = padding * books.length;
+  const usableWidth = totalWidth - totalPadding;
+
+  // Pass 1: find which books need the minimum width
+  // and how many verses remain for proportional distribution
+  let minWidthCount = 0;
+  let minWidthVerses = 0;
+  for (const book of books) {
+    const proportional = (book.total_verses / totalVerses) * usableWidth;
+    if (proportional < MIN_BOOK_WIDTH) {
+      minWidthCount++;
+      minWidthVerses += book.total_verses;
+    }
+  }
+
+  // Pass 2: distribute remaining space proportionally
+  const reservedForMin = minWidthCount * MIN_BOOK_WIDTH;
+  const remainingWidth = usableWidth - reservedForMin;
+  const remainingVerses = totalVerses - minWidthVerses;
+
   let x = 0;
-
   return books.map((book) => {
-    const width = Math.max(4, (book.total_verses / totalVerses) * usableWidth);
+    const proportional = (book.total_verses / totalVerses) * usableWidth;
+    const width =
+      proportional < MIN_BOOK_WIDTH
+        ? MIN_BOOK_WIDTH
+        : remainingVerses > 0
+          ? (book.total_verses / remainingVerses) * remainingWidth
+          : proportional;
     const pos = { book, x: x + padding / 2, width };
     x += width + padding;
     return pos;
