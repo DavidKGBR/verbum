@@ -8,7 +8,7 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 
-from pydantic import BaseModel, Field, computed_field
+from pydantic import BaseModel, Field, computed_field, field_validator
 
 
 class Testament(str, Enum):
@@ -175,6 +175,46 @@ class CrossRefStats(BaseModel):
     refs_old_to_new: int = 0
     refs_within_old: int = 0
     refs_within_new: int = 0
+
+
+# ─── Strong's lexicon ────────────────────────────────────────────────────────
+
+
+class StrongsLanguage(str, Enum):
+    HEBREW = "hebrew"
+    GREEK = "greek"
+
+
+class StrongsEntry(BaseModel):
+    """A single Strong's lexicon entry — Hebrew or Greek.
+
+    Normalised across sources so downstream code only sees the canonical form:
+    - `strongs_id` always starts with `H` or `G`, followed by the number with
+      NO zero-padding (e.g. "H25", not "H0025").
+    - `language` matches the prefix letter (`H` → hebrew, `G` → greek).
+    """
+
+    strongs_id: str
+    language: StrongsLanguage
+    original: str  # "חֶסֶד" / "ἀγαπάω"
+    transliteration: str  # "chesed", "agapao"
+    pronunciation: str | None = None
+    short_definition: str
+    long_definition: str | None = None
+    part_of_speech: str | None = None
+
+    @field_validator("strongs_id")
+    @classmethod
+    def validate_strongs_id(cls, v: str) -> str:
+        if not v or len(v) < 2:
+            raise ValueError(f"Invalid Strong's ID: {v!r}")
+        prefix, number = v[0], v[1:]
+        if prefix not in ("H", "G"):
+            raise ValueError(f"Strong's ID must start with H or G, got {v!r}")
+        if not number.isdigit():
+            raise ValueError(f"Strong's ID body must be digits, got {v!r}")
+        # Normalise zero-padding: H0025 -> H25
+        return f"{prefix}{int(number)}"
 
 
 # ─── Book catalog (canonical order) ───────────────────────────────────────────

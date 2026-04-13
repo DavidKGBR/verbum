@@ -52,6 +52,7 @@ class DuckDBLoader:
         self.conn.execute("DROP TABLE IF EXISTS book_stats;")
         self.conn.execute("DROP TABLE IF EXISTS chapter_stats;")
         self.conn.execute("DROP TABLE IF EXISTS translations;")
+        self.conn.execute("DROP TABLE IF EXISTS strongs_lexicon;")
 
         self.conn.execute("""
             CREATE TABLE translations (
@@ -156,6 +157,8 @@ class DuckDBLoader:
                 PRIMARY KEY (source_verse_id, target_verse_id)
             );
         """)
+
+        self._ensure_strongs_table()
 
         self._create_analytical_views()
         logger.info("✅ Schema created successfully")
@@ -435,6 +438,53 @@ class DuckDBLoader:
         logger.info(f"✅ Loaded {count} cross-references")
         return count
 
+    def _ensure_strongs_table(self) -> None:
+        """Create the Strong's lexicon table if it doesn't already exist.
+
+        Kept idempotent so `load_strongs_entries` works even on pre-existing
+        databases that were created before this table was added.
+        """
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS strongs_lexicon (
+                strongs_id       VARCHAR PRIMARY KEY,
+                language         VARCHAR NOT NULL,
+                original         VARCHAR NOT NULL,
+                transliteration  VARCHAR NOT NULL,
+                pronunciation    VARCHAR,
+                short_definition VARCHAR NOT NULL,
+                long_definition  VARCHAR,
+                part_of_speech   VARCHAR,
+                loaded_at        TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        """)
+
+    def load_strongs_entries(self, df: pd.DataFrame) -> int:
+        """Replace the Strong's lexicon with the given rows.
+
+        The lexicon is global (not scoped per translation), so this is an
+        unconditional DELETE + INSERT — same pattern as `load_cross_references`.
+        """
+        if df.empty:
+            return 0
+
+        self._ensure_strongs_table()
+
+        logger.info(f"📖 Loading {len(df)} Strong's entries into DuckDB...")
+        self.conn.execute("DELETE FROM strongs_lexicon;")
+        self.conn.execute("""
+            INSERT INTO strongs_lexicon (
+                strongs_id, language, original, transliteration,
+                pronunciation, short_definition, long_definition, part_of_speech
+            )
+            SELECT
+                strongs_id, language, original, transliteration,
+                pronunciation, short_definition, long_definition, part_of_speech
+            FROM df
+        """)
+        count = self.conn.execute("SELECT COUNT(*) FROM strongs_lexicon").fetchone()[0]  # type: ignore[index]
+        logger.info(f"✅ Loaded {count} Strong's entries")
+        return count
+
     def log_pipeline_run(
         self,
         run_id: str,
@@ -487,5 +537,12 @@ class DuckDBLoader:
 
         row = self.conn.execute("SELECT COUNT(*) FROM cross_references").fetchone()
         result["total_crossrefs"] = row[0] if row else 0
+
+        # strongs_lexicon may not exist on older DBs — guard with a catch
+        try:
+            row = self.conn.execute("SELECT COUNT(*) FROM strongs_lexicon").fetchone()
+            result["strongs_entries"] = row[0] if row else 0
+        except Exception:
+            result["strongs_entries"] = 0
 
         return result
