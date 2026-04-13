@@ -1,23 +1,12 @@
 import type { VerseNote } from "../../hooks/useVerseNotes";
 import { CATEGORY_EMOJIS, CATEGORY_LABELS } from "../../hooks/useVerseNotes";
+import { formatDate } from "../../utils/dateFormat";
 
 export interface ExportOptions {
   title?: string;
   includeVerseText?: boolean;
   /** Format timestamps with this locale. Defaults to the browser locale. */
   locale?: string;
-}
-
-function formatDate(ts: number, locale?: string): string {
-  try {
-    return new Date(ts).toLocaleDateString(locale, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  } catch {
-    return new Date(ts).toISOString().slice(0, 10);
-  }
 }
 
 /**

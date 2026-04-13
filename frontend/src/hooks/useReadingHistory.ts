@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
 const STORAGE_KEY = "bible-reading-history";
 const MAX_ENTRIES = 20;
@@ -26,51 +26,75 @@ function writeStorage(entries: ReadingEntry[]): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
   } catch {
-    // ignore
+    // ignore (private browsing)
   }
 }
 
-export function useReadingHistory() {
-  const [history, setHistory] = useState<ReadingEntry[]>(() => readStorage());
+// ─── Module-level store (shared across instances + reactive within the same tab)
+// Mirrors the pattern introduced in useVerseNotes so `useReadingStreak` and
+// `useReadingPlans` can subscribe to history changes without needing prop
+// drilling or global refactors.
 
-  useEffect(() => {
-    const handler = (e: StorageEvent) => {
-      if (e.key === STORAGE_KEY) setHistory(readStorage());
-    };
-    window.addEventListener("storage", handler);
-    return () => window.removeEventListener("storage", handler);
+let currentHistory: ReadingEntry[] = readStorage();
+const subscribers = new Set<() => void>();
+
+function notifySubscribers(): void {
+  subscribers.forEach((fn) => fn());
+}
+
+function setHistory(next: ReadingEntry[]): void {
+  if (next === currentHistory) return;
+  currentHistory = next;
+  writeStorage(next);
+  notifySubscribers();
+}
+
+function subscribe(fn: () => void): () => void {
+  subscribers.add(fn);
+  return () => {
+    subscribers.delete(fn);
+  };
+}
+
+function getSnapshot(): ReadingEntry[] {
+  return currentHistory;
+}
+
+if (typeof window !== "undefined") {
+  window.addEventListener("storage", (e: StorageEvent) => {
+    if (e.key !== STORAGE_KEY) return;
+    currentHistory = readStorage();
+    notifySubscribers();
+  });
+}
+
+export function useReadingHistory() {
+  const history = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
+
+  const record = useCallback((entry: Omit<ReadingEntry, "visited_at">) => {
+    // Dedupe on book+chapter+translation, then prepend with current timestamp.
+    const filtered = currentHistory.filter(
+      (e) =>
+        !(
+          e.book_id === entry.book_id &&
+          e.chapter === entry.chapter &&
+          e.translation === entry.translation
+        )
+    );
+    const next = [{ ...entry, visited_at: Date.now() }, ...filtered].slice(
+      0,
+      MAX_ENTRIES
+    );
+    setHistory(next);
   }, []);
 
-  const record = useCallback(
-    (entry: Omit<ReadingEntry, "visited_at">) => {
-      setHistory((prev) => {
-        // Dedupe: remove existing entry for same book+chapter+translation, then prepend
-        const filtered = prev.filter(
-          (e) =>
-            !(
-              e.book_id === entry.book_id &&
-              e.chapter === entry.chapter &&
-              e.translation === entry.translation
-            )
-        );
-        const next = [{ ...entry, visited_at: Date.now() }, ...filtered].slice(
-          0,
-          MAX_ENTRIES
-        );
-        writeStorage(next);
-        return next;
-      });
-    },
-    []
+  const getLastRead = useCallback(
+    (): ReadingEntry | null => history[0] || null,
+    [history]
   );
-
-  const getLastRead = useCallback((): ReadingEntry | null => {
-    return history[0] || null;
-  }, [history]);
 
   const clear = useCallback(() => {
     setHistory([]);
-    writeStorage([]);
   }, []);
 
   return { history, record, getLastRead, clear };

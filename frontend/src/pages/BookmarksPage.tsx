@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useBookmarks, type Bookmark } from "../hooks/useBookmarks";
+import { formatDate } from "../utils/dateFormat";
 
 const SUGGESTED_VERSES: Array<Omit<Bookmark, "added_at">> = [
   {
@@ -28,15 +29,6 @@ function verseLink(verseId: string, translation?: string): string {
   const [book, chapter, verse] = parts;
   const t = translation ? `&translation=${translation}` : "";
   return `/reader?book=${book}&chapter=${chapter}&verse=${verse}${t}`;
-}
-
-function formatDate(ts: number): string {
-  const d = new Date(ts);
-  return d.toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
 }
 
 export default function BookmarksPage() {

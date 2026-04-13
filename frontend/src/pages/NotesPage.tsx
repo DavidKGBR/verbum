@@ -12,20 +12,9 @@ import {
   notesToMarkdown,
   downloadMarkdown,
 } from "../components/notes/notesExport";
+import { formatDate } from "../utils/dateFormat";
 
 type Filter = "all" | HighlightCategory | "uncategorised";
-
-function formatDate(ts: number): string {
-  try {
-    return new Date(ts).toLocaleDateString(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  } catch {
-    return new Date(ts).toISOString().slice(0, 10);
-  }
-}
 
 function readerLinkFor(n: VerseNote): string {
   const parts = n.verse_id.split(".");
