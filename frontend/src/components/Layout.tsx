@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, Outlet, Link, useLocation } from "react-router-dom";
 import { useReadingHistory } from "../hooks/useReadingHistory";
+import VerbumLogo from "./common/VerbumLogo";
 
 const NAV_ITEMS = [
   { to: "/", label: "Home", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" },
@@ -8,6 +9,7 @@ const NAV_ITEMS = [
   { to: "/arc-diagram", label: "Arc Diagram", icon: "M4 19a8 8 0 0116 0M12 3v8m-4 4h8" },
   { to: "/search", label: "Search", icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" },
   { to: "/bookmarks", label: "Bookmarks", icon: "M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" },
+  { to: "/notes", label: "Notes", icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z" },
 ];
 
 export default function Layout() {
@@ -33,9 +35,16 @@ export default function Layout() {
 
   const sidebarContent = (
     <>
-      <h1 className="font-display text-xl font-bold mb-6 tracking-wide text-[var(--color-gold)]">
-        Bible Data Pipeline
-      </h1>
+      <Link
+        to="/"
+        className="block mb-6 px-1 text-[var(--color-gold)] focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 rounded"
+        aria-label="Verbum — home"
+      >
+        <VerbumLogo variant="wordmark" className="h-7 w-auto" />
+        <p className="text-[9px] uppercase tracking-[0.3em] opacity-40 mt-1.5 font-display">
+          Bible Data Pipeline
+        </p>
+      </Link>
       {NAV_ITEMS.map((item) => (
         <NavLink
           key={item.to}
@@ -89,9 +98,9 @@ export default function Layout() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <span className="font-display font-bold tracking-wide text-[var(--color-gold)]">
-          Bible Data Pipeline
-        </span>
+        <Link to="/" aria-label="Verbum — home" className="text-[var(--color-gold)] flex items-center">
+          <VerbumLogo variant="wordmark" className="h-5 w-auto" />
+        </Link>
         <span className="w-8" aria-hidden /> {/* spacer for centering */}
       </header>
 

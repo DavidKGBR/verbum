@@ -5,6 +5,7 @@ import ArcDiagramPage from "./pages/ArcDiagramPage";
 import ReaderPage from "./pages/ReaderPage";
 import SearchPage from "./pages/SearchPage";
 import BookmarksPage from "./pages/BookmarksPage";
+import NotesPage from "./pages/NotesPage";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/arc-diagram" element={<ArcDiagramPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/bookmarks" element={<BookmarksPage />} />
+        <Route path="/notes" element={<NotesPage />} />
       </Route>
     </Routes>
   );

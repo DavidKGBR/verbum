@@ -24,6 +24,9 @@ data/analytics/*.duckdb.wal
 *.swp
 *.swo
 
+# ─── Claude Code local workspace ──────────────────────────────────────────────
+.claude/
+
 # ─── Environment ──────────────────────────────────────────────────────────────
 .env
 .venv/

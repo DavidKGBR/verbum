@@ -9,6 +9,7 @@ import {
 import OrnateCorner from "./OrnateCorner";
 import DropCap from "./DropCap";
 import { useTranslatorNotes } from "../../hooks/useTranslatorNotes";
+import { useVerseNotes } from "../../hooks/useVerseNotes";
 import { parseKjvAnnotations } from "../reader/kjvAnnotations";
 
 const VERSES_PER_PAGE = 15;
@@ -27,6 +28,17 @@ export default function ImmersiveReader() {
   const [flipDir, setFlipDir] = useState<FlipDirection>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const { notesOn, toggle: toggleNotes } = useTranslatorNotes();
+  const { notes: verseNotes } = useVerseNotes();
+
+  /**
+   * Background color for a highlighted verse. Parchment-themed alpha is
+   * subtle (0.12); immersive is dark so we use a stronger alpha.
+   */
+  function highlightBgFor(verseId: string): string | undefined {
+    const cat = verseNotes[verseId]?.category;
+    if (!cat) return undefined;
+    return `color-mix(in srgb, var(--hl-${cat}) 22%, transparent)`;
+  }
   const flipKey = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const isKjv = translation === "kjv";
@@ -162,11 +174,20 @@ export default function ImmersiveReader() {
     return (
       <div className="font-body text-[var(--color-ink)] text-[17px] leading-[1.85]">
         {verses.map((v, i) => {
+          const hlBg = highlightBgFor(v.verse_id);
+          const hlStyle = hlBg
+            ? {
+                backgroundColor: hlBg,
+                borderRadius: "2px",
+                padding: "0 2px",
+                margin: "0 -2px",
+              }
+            : undefined;
           if (withDropCap && i === 0) {
             // Drop-cap: use clean text for the letter + rest to keep the visual
             const body = firstText ?? "";
             return (
-              <span key={v.verse}>
+              <span key={v.verse} style={hlStyle}>
                 <DropCap letter={body[0] || firstBody.text[0] || ""} />
                 <sup className="text-[var(--color-gold-dark)] text-[10px] font-bold mr-1 align-super">
                   {v.verse}
@@ -178,7 +199,7 @@ export default function ImmersiveReader() {
             );
           }
           return (
-            <span key={v.verse}>
+            <span key={v.verse} style={hlStyle}>
               <sup className="text-[var(--color-gold-dark)] text-[10px] font-bold mr-1 align-super">
                 {v.verse}
               </sup>

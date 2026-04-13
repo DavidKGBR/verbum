@@ -11,11 +11,12 @@ import LoadingSpinner from "./common/LoadingSpinner";
 import VerseActions from "./VerseActions";
 import { useReadingHistory } from "../hooks/useReadingHistory";
 import { useTranslatorNotes } from "../hooks/useTranslatorNotes";
+import { useVerseNotes } from "../hooks/useVerseNotes";
 import { parseKjvAnnotations } from "./reader/kjvAnnotations";
 
 const TRANSLATIONS = ["kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee", "asv", "web", "darby"];
 
-type InitialTab = "none" | "crossrefs";
+type InitialTab = "none" | "crossrefs" | "notes";
 
 export default function BibleReader() {
   const [searchParams] = useSearchParams();
@@ -30,6 +31,7 @@ export default function BibleReader() {
   const [activeTab, setActiveTab] = useState<InitialTab>("none");
   const [crossrefCounts, setCrossrefCounts] = useState<Record<string, number>>({});
   const { notesOn, toggle: toggleNotes } = useTranslatorNotes();
+  const { notes: verseNotes } = useVerseNotes();
   const highlightVerse = Number(searchParams.get("verse")) || null;
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const isKjv = translation === "kjv";
@@ -240,15 +242,20 @@ export default function BibleReader() {
             {page.verses.map((v) => {
               const xrefCount = crossrefCounts[v.verse_id] || 0;
               const isActive = activeVerse === v.verse;
+              const note = verseNotes[v.verse_id];
+              const highlightClass = note?.category
+                ? `verse-highlight-${note.category}`
+                : "";
+              const rowStateClass =
+                highlightVerse === v.verse || isActive
+                  ? "verse-row-active"
+                  : "verse-row";
+              const hasNoteText = !!note?.note?.trim();
               return (
                 <div
                   key={v.verse}
                   ref={(el) => { if (el) verseRefs.current.set(v.verse, el); }}
-                  className={`rounded-sm py-1 px-2 ${
-                    highlightVerse === v.verse || isActive
-                      ? "verse-row-active"
-                      : "verse-row"
-                  }`}
+                  className={`rounded-sm py-1 px-2 ${rowStateClass} ${highlightClass}`}
                 >
                   <div className="flex gap-3 items-start">
                     <span
@@ -259,6 +266,19 @@ export default function BibleReader() {
                       {v.verse}
                     </span>
                     <p className="verse-text flex-1">{renderVerseText(v)}</p>
+                    {hasNoteText && (
+                      <button
+                        onClick={() => openVerse(v.verse, "notes")}
+                        title="Open note"
+                        aria-label="Open note"
+                        className="text-[11px] shrink-0 pt-1 pr-1
+                                   text-[var(--color-gold-dark)] opacity-30 hover:opacity-70
+                                   transition-opacity focus:outline-none focus:ring-1
+                                   focus:ring-[var(--color-gold)]/40 rounded"
+                      >
+                        ·✍️
+                      </button>
+                    )}
                     {xrefCount > 0 && (
                       <button
                         onClick={() => openVerse(v.verse, "crossrefs")}
@@ -277,9 +297,13 @@ export default function BibleReader() {
                   {isActive && (
                     <VerseActions
                       verseId={v.verse_id}
-                      text={v.text}
+                      text={v.text_clean ?? v.text}
                       translation={translation}
                       reference={v.reference}
+                      bookId={page.book_id}
+                      bookName={page.book_name}
+                      chapter={page.chapter}
+                      verse={v.verse}
                       initialTab={activeTab}
                     />
                   )}

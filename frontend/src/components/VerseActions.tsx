@@ -6,28 +6,42 @@ import {
   type VerseCrossRef,
 } from "../services/api";
 import { useBookmarks } from "../hooks/useBookmarks";
+import { useVerseNotes } from "../hooks/useVerseNotes";
 import AIExplanationPanel from "./AIExplanationPanel";
+import NoteEditor from "./notes/NoteEditor";
 
 interface Props {
   verseId: string;
   text: string;
   translation: string;
   reference?: string;
+  bookId?: string;
+  bookName?: string;
+  chapter?: number;
+  verse?: number;
   initialTab?: Tab;
 }
 
-type Tab = "none" | "crossrefs" | "compare" | "explain";
+export type Tab = "none" | "crossrefs" | "compare" | "explain" | "notes";
 
 export default function VerseActions({
   verseId,
   text,
   translation,
   reference,
+  bookId,
+  bookName,
+  chapter,
+  verse,
   initialTab = "none",
 }: Props) {
   const navigate = useNavigate();
   const { isBookmarked, toggle } = useBookmarks();
+  const { get: getNote } = useVerseNotes();
   const [tab, setTab] = useState<Tab>(initialTab);
+  const existingNote = getNote(verseId);
+  const hasNote =
+    !!existingNote && (!!existingNote.category || !!existingNote.note?.trim());
   const [crossrefs, setCrossrefs] = useState<VerseCrossRef[]>([]);
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -136,6 +150,19 @@ export default function VerseActions({
           🔀 Compare
         </button>
         <button
+          onClick={() => setTab(tab === "notes" ? "none" : "notes")}
+          title={hasNote ? "Edit note" : "Add note"}
+          className={`text-xs px-3 py-1 rounded border transition ${
+            tab === "notes"
+              ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
+              : hasNote
+                ? "bg-amber-50 text-amber-900 border-amber-300"
+                : "hover:bg-gray-100"
+          }`}
+        >
+          {hasNote ? "✍️ Note •" : "✍️ Note"}
+        </button>
+        <button
           onClick={handleBookmark}
           title={bookmarked ? "Remove bookmark" : "Save bookmark"}
           className={`text-xs px-3 py-1 rounded border transition ${
@@ -203,6 +230,20 @@ export default function VerseActions({
       {/* AI Explain panel */}
       {tab === "explain" && (
         <AIExplanationPanel verseId={verseId} translation={translation} />
+      )}
+
+      {/* Note editor panel */}
+      {tab === "notes" && (
+        <NoteEditor
+          verseId={verseId}
+          reference={reference}
+          text={text}
+          translation={translation}
+          bookId={bookId}
+          bookName={bookName}
+          chapter={chapter}
+          verse={verse}
+        />
       )}
 
       {/* Compare panel */}

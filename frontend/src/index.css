@@ -20,6 +20,13 @@
   --color-epistles: #4682b4;
   --color-apocalyptic: #8b0000;
 
+  /* ── Highlight categories (Verbum notes) ────────────────────── */
+  --hl-promise:     #4a6fa5;  /* azul — promessa */
+  --hl-warning:     #a94442;  /* vermelho tijolo — advertência */
+  --hl-fulfillment: #3e7d5a;  /* verde oliva — cumprimento */
+  --hl-question:    #b8872f;  /* âmbar — dúvida */
+  --hl-prayer:      #6b4c9a;  /* roxo — oração / adoração */
+
   /* ── Immersive mode ─────────────────────────────────────────── */
   --bg-void: #0d0a07;
   --bg-ambient: #1a1410;
@@ -110,6 +117,32 @@ body {
 .verse-row-active {
   background-color: rgba(196, 162, 101, 0.1);
   border-left-color: var(--color-gold);
+}
+
+/* ── Highlight categories (Verbum notes) ─────────────────────────
+ * Applied on top of .verse-row; keep subtle on the parchment theme.
+ * The border-left wins when the category is set, but .verse-row-active
+ * still paints its gold underline when the verse is the active one (via
+ * class ordering in the JSX). */
+.verse-highlight-promise {
+  background-color: color-mix(in srgb, var(--hl-promise) 12%, transparent);
+  border-left-color: var(--hl-promise);
+}
+.verse-highlight-warning {
+  background-color: color-mix(in srgb, var(--hl-warning) 12%, transparent);
+  border-left-color: var(--hl-warning);
+}
+.verse-highlight-fulfillment {
+  background-color: color-mix(in srgb, var(--hl-fulfillment) 12%, transparent);
+  border-left-color: var(--hl-fulfillment);
+}
+.verse-highlight-question {
+  background-color: color-mix(in srgb, var(--hl-question) 14%, transparent);
+  border-left-color: var(--hl-question);
+}
+.verse-highlight-prayer {
+  background-color: color-mix(in srgb, var(--hl-prayer) 12%, transparent);
+  border-left-color: var(--hl-prayer);
 }
 
 /* ── Immersive Reader 3D book ───────────────────────────────────── */
