@@ -239,7 +239,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 |---|------|---------|--------|-----|
 | 1 | Notas + Highlighting | 🔥🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-1-notes-highlighting) |
 | 2 | Streak + Reading Plans | 🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-2-streak-plans) |
-| 3 | Extract Strong's + originals | 🔥🔥🔥🔥 | 🔲 Planejado | — |
+| 3 | Extract Strong's + originals | 🔥🔥🔥🔥 | 🚧 Em andamento (3a ✅ · 3b/c/d 🔲) | [3a](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3a-strongs-lexicon) |
 | 4 | API endpoints (6 novos) | 🔥🔥🔥 | 🔲 Planejado | — |
 | 5 | Interlinear View | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
 | 6 | Word Study page | 🔥🔥🔥🔥 | 🔲 Planejado | — |
@@ -320,3 +320,19 @@ entrada lógica — sem depender da memória de conversa.
 - **Testes E2E via Puppeteer:** ler Genesis 1 → streak 🔥 1 day · Total 1 ch; manipular localStorage pra simular read ontem → read hoje sobe pra 2 days + longest bumps; gap 3+ dias → reset current=1, longest preservado; start Psalms plano → banner no reader com "Day 1 · 1/5 read today" após abrir Psa 1; stale read date + sem leitura hoje → ❄️ "Start again today?" no sidebar.
 - **Type check clean** (`npx tsc --noEmit`). **Build prod** 400KB (130KB gzipped, +5KB vs. task #1).
 - **Próxima entrada:** Tarefa #3 — Extract Strong's + originals (Fase 2A). Muda o perfil do trabalho: agora é ETL Python pesado (parsing TSV/XML do STEPBible, openscriptures/morphhb, scrollmapper). Provável sessão dedicada pra extração + validação de sanidade antes de expor na API (Tarefa #4).
+
+### 2026-04-13 — Tarefa #3a concluída: Strong's lexicon
+- Tarefa #3 quebrada em 4 sub-PRs (3a/3b/3c/3d) pra manter revisão gerenciável. Esta é a primeira.
+- **Fonte escolhida (desvio consciente do plano mestre):** openscriptures/strongs ao invés de scrollmapper/bible_databases. Motivo: formato JS-envolvendo-JSON muito mais simples (single file por língua), licença CC-BY-SA (derivada de domínio público), e é a fonte upstream canônica. scrollmapper re-distribui os mesmos dados. Trocar poupa complexidade de parser.
+- **Dados extraídos:** 14.178 entradas (8.674 hebraicas + 5.504 gregas). Hebraico ~1.8MB, Grego ~1.1MB — caching em `data/raw/strongs/`, já no `.gitignore`.
+- **Gotchas do parser:**
+  - Arquivo começa com bloco de comentário JSDoc. Regex precisa de DOTALL pra absorver do início até o `var X = `.
+  - Hebraico usa `xlit` como campo de transliteração; grego usa `translit`. Parser aceita ambos via fallback.
+  - IDs podem ter sufixo alfa (ex: "H3023a"/"H3023b" pra homógrafos) — estes são colapsados pro ID numérico por enquanto. Disambiguação virá no #3d com tags semânticas.
+  - `json.JSONDecoder().raw_decode()` ignora lixo pós-JSON (trailing `;`, newline) sem precisar strip manual.
+- **Tabela DuckDB `strongs_lexicon`** (PK strongs_id). Load: DELETE + INSERT incondicional, lexicon é global. Método `_ensure_strongs_table` usa IF NOT EXISTS pra funcionar em DBs pré-existentes sem rodar full create_schema.
+- **CLI:** `python -m src.cli strongs [--no-cache]`. Comando standalone, não integra com `BiblePipeline` (pode baixar e carregar sem tocar em `verses`/`cross_references`). `info` atualizado pra mostrar `Strongs Entries: 14,178`.
+- **Testes:** 21 (20 unitários offline + 1 integration `@pytest.mark.integration` que baixa de verdade). Cobertura de parser, loader, idempotência, normalização de ID (H0025 → H25).
+- **Arquivos novos (2):** `src/extract/strongs_extractor.py`, `tests/test_strongs.py`.
+- **Arquivos modificados (3):** `src/models/schemas.py` (+StrongsEntry, StrongsLanguage), `src/load/duckdb_loader.py` (+ table + loader), `src/cli.py` (+ comando strongs, + info).
+- **Próxima entrada:** #3b — Hebraico WLC (openscriptures/morphhb). Começa a popular `original_texts` com texto hebraico verso-a-verso. Parse de OSIS XML (dep nova: `lxml`).

@@ -8,11 +8,13 @@ from __future__ import annotations
 import logging
 import sys
 
+import pandas as pd
 import typer
 from rich.console import Console
 from rich.logging import RichHandler
 
 from src.config import PipelineConfig
+from src.extract.strongs_extractor import StrongsExtractor
 from src.load.duckdb_loader import DuckDBLoader
 from src.pipeline import BiblePipeline
 
@@ -135,6 +137,55 @@ def info() -> None:
                 "[yellow]Database not initialized.[/yellow] Run `bible-pipeline run` first."
             )
             console.print(f"  Error: {e}")
+
+
+@app.command()
+def strongs(
+    cache: bool = typer.Option(
+        True,
+        "--cache/--no-cache",
+        help="Use cached raw file from data/raw/strongs/ if present.",
+    ),
+    log_level: str = typer.Option("INFO", "--log-level", "-l", help="Logging level"),
+) -> None:
+    """📖 Extract and load Strong's Hebrew + Greek lexicon (~14.3K entries)."""
+    setup_logging(log_level)
+
+    console.print("[bold]📖 Strong's lexicon[/bold]\n")
+    extractor = StrongsExtractor()
+    entries = extractor.extract(use_cache=cache)
+
+    if not entries:
+        console.print("[red]No entries extracted.[/red]")
+        raise typer.Exit(code=1)
+
+    # Build a DataFrame for bulk insert — shape matches strongs_lexicon columns.
+    df = pd.DataFrame(
+        [
+            {
+                "strongs_id": e.strongs_id,
+                "language": e.language.value,
+                "original": e.original,
+                "transliteration": e.transliteration,
+                "pronunciation": e.pronunciation,
+                "short_definition": e.short_definition,
+                "long_definition": e.long_definition,
+                "part_of_speech": e.part_of_speech,
+            }
+            for e in entries
+        ]
+    )
+
+    config = PipelineConfig()
+    with DuckDBLoader(config.load) as loader:
+        count = loader.load_strongs_entries(df)
+
+    hebrew = sum(1 for e in entries if e.language.value == "hebrew")
+    greek = sum(1 for e in entries if e.language.value == "greek")
+    console.print(
+        f"\n[green]✓[/green] Loaded [bold]{count:,}[/bold] Strong's entries "
+        f"([cyan]{hebrew:,}[/cyan] Hebrew · [cyan]{greek:,}[/cyan] Greek)"
+    )
 
 
 @app.command()
