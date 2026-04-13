@@ -171,11 +171,11 @@ export default function HomePage() {
       <TranslationPreview />
 
       {/* ─── TRANSLATIONS TABLE (collapsed to the bottom, reference material) ─── */}
-      <div className="bg-white rounded-lg shadow-sm border p-5 mb-8">
+      <div className="bg-white rounded-lg shadow-sm border p-5 mb-8 overflow-x-auto">
         <h3 className="font-display font-bold text-lg mb-3">
           Available Translations
         </h3>
-        <table className="w-full text-sm">
+        <table className="w-full text-sm min-w-[420px]">
           <thead>
             <tr className="border-b text-left opacity-60">
               <th className="pb-2 font-normal text-xs uppercase tracking-wider">ID</th>

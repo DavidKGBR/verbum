@@ -169,9 +169,18 @@ export default function VerseActions({
               {crossrefs.slice(0, 10).map((cr) => (
                 <div
                   key={cr.target_verse_id}
+                  role="button"
+                  tabIndex={0}
                   onClick={() => goToVerse(cr.target_verse_id)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      goToVerse(cr.target_verse_id);
+                    }
+                  }}
                   className="flex gap-2 cursor-pointer hover:bg-[var(--color-gold)]/10
-                             rounded p-1.5 transition"
+                             rounded p-1.5 transition focus:outline-none
+                             focus:ring-2 focus:ring-[var(--color-gold)]/50"
                 >
                   <span className="text-xs font-bold text-[var(--color-gold)] shrink-0 w-20">
                     {cr.target_verse_id}

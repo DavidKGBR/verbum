@@ -37,7 +37,7 @@ export default function ParallelView() {
         <select
           value={bookId}
           onChange={(e) => { setBookId(e.target.value); setChapter(1); }}
-          className="border rounded px-3 py-2 bg-white text-sm"
+          className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {books.map((b) => (
             <option key={b.book_id} value={b.book_id}>{b.book_name}</option>
@@ -47,7 +47,7 @@ export default function ParallelView() {
         <select
           value={chapter}
           onChange={(e) => setChapter(Number(e.target.value))}
-          className="border rounded px-3 py-2 bg-white text-sm"
+          className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {Array.from({ length: 150 }, (_, i) => i + 1).map((ch) => (
             <option key={ch} value={ch}>Ch. {ch}</option>
@@ -58,7 +58,7 @@ export default function ParallelView() {
           <select
             value={left}
             onChange={(e) => setLeft(e.target.value)}
-            className="border rounded px-3 py-2 bg-white"
+            className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
           >
             {TRANSLATIONS.map((t) => (
               <option key={t} value={t}>{t.toUpperCase()}</option>
@@ -68,7 +68,7 @@ export default function ParallelView() {
           <select
             value={right}
             onChange={(e) => setRight(e.target.value)}
-            className="border rounded px-3 py-2 bg-white"
+            className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
           >
             {TRANSLATIONS.map((t) => (
               <option key={t} value={t}>{t.toUpperCase()}</option>
@@ -88,18 +88,40 @@ export default function ParallelView() {
             </span>
           </h2>
 
+          {/* Column headers (md+) */}
+          <div className="hidden md:grid grid-cols-[2rem_1fr_1fr] gap-3 pb-2 mb-2 border-b text-xs opacity-50 uppercase tracking-wider">
+            <span />
+            <span>{page.left_translation.toUpperCase()}</span>
+            <span>{page.right_translation.toUpperCase()}</span>
+          </div>
           <div className="space-y-2">
             {page.verses.map((v) => (
-              <div key={v.verse} className="grid grid-cols-[2rem_1fr_1fr] gap-3 border-b pb-2">
+              <div
+                key={v.verse}
+                className="border-b pb-2 grid gap-3
+                           grid-cols-[2rem_1fr]
+                           md:grid-cols-[2rem_1fr_1fr]"
+              >
                 <span className="text-xs font-bold text-[var(--color-gold)] pt-1 text-right">
                   {v.verse}
                 </span>
-                <p className="text-sm leading-relaxed">
-                  {v.left_text || <span className="opacity-30 italic">missing</span>}
-                </p>
-                <p className="text-sm leading-relaxed">
-                  {v.right_text || <span className="opacity-30 italic">missing</span>}
-                </p>
+                <div>
+                  {/* Mobile label, hidden on md+ */}
+                  <span className="md:hidden text-[10px] uppercase tracking-wider opacity-40 font-bold">
+                    {page.left_translation.toUpperCase()}
+                  </span>
+                  <p className="text-sm leading-relaxed">
+                    {v.left_text || <span className="opacity-30 italic">missing</span>}
+                  </p>
+                </div>
+                <div className="md:col-start-3 col-start-2 pt-2 md:pt-0 border-t md:border-t-0 border-dashed">
+                  <span className="md:hidden text-[10px] uppercase tracking-wider opacity-40 font-bold">
+                    {page.right_translation.toUpperCase()}
+                  </span>
+                  <p className="text-sm leading-relaxed">
+                    {v.right_text || <span className="opacity-30 italic">missing</span>}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

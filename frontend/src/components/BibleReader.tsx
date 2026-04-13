@@ -96,6 +96,19 @@ export default function BibleReader() {
     }
   }
 
+  // Esc closes active verse panel
+  useEffect(() => {
+    if (activeVerse === null) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveVerse(null);
+        setActiveTab("none");
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [activeVerse]);
+
   const totalChapters = page?.total_chapters || 1;
 
   return (
@@ -105,7 +118,7 @@ export default function BibleReader() {
         <select
           value={bookId}
           onChange={(e) => { setBookId(e.target.value); setChapter(1); }}
-          className="border rounded px-3 py-2 bg-white text-sm"
+          className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {books.map((b) => (
             <option key={b.book_id} value={b.book_id}>{b.book_name}</option>
@@ -115,7 +128,7 @@ export default function BibleReader() {
         <select
           value={chapter}
           onChange={(e) => setChapter(Number(e.target.value))}
-          className="border rounded px-3 py-2 bg-white text-sm"
+          className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {Array.from({ length: totalChapters }, (_, i) => i + 1).map((ch) => (
             <option key={ch} value={ch}>Chapter {ch}</option>
@@ -125,7 +138,7 @@ export default function BibleReader() {
         <select
           value={translation}
           onChange={(e) => setTranslation(e.target.value)}
-          className="border rounded px-3 py-2 bg-white text-sm"
+          className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {TRANSLATIONS.map((t) => (
             <option key={t} value={t}>{t.toUpperCase()}</option>

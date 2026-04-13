@@ -1,4 +1,5 @@
-import { NavLink, Outlet, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, Outlet, Link, useLocation } from "react-router-dom";
 import { useReadingHistory } from "../hooks/useReadingHistory";
 
 const NAV_ITEMS = [
@@ -12,56 +13,122 @@ const NAV_ITEMS = [
 export default function Layout() {
   const { getLastRead } = useReadingHistory();
   const last = getLastRead();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+
+  // Auto-close drawer on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [mobileOpen]);
+
+  const sidebarContent = (
+    <>
+      <h1 className="font-display text-xl font-bold mb-6 tracking-wide text-[var(--color-gold)]">
+        Bible Data Pipeline
+      </h1>
+      {NAV_ITEMS.map((item) => (
+        <NavLink
+          key={item.to}
+          to={item.to}
+          className={({ isActive }) =>
+            `flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
+              isActive
+                ? "bg-[var(--color-gold)]/20 text-[var(--color-gold)]"
+                : "hover:bg-white/10"
+            }`
+          }
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+          </svg>
+          {item.label}
+        </NavLink>
+      ))}
+
+      {last && (
+        <Link
+          to={`/reader?book=${last.book_id}&chapter=${last.chapter}&translation=${last.translation}`}
+          className="mt-4 mx-1 p-3 rounded border border-[var(--color-gold)]/20
+                     bg-[var(--color-gold)]/5 hover:bg-[var(--color-gold)]/15 transition group"
+          title="Continue where you left off"
+        >
+          <div className="text-[10px] uppercase tracking-wider opacity-50 mb-1">
+            📖 Continue
+          </div>
+          <div className="text-sm font-bold text-[var(--color-gold)] truncate">
+            {last.book_name || last.book_id} {last.chapter}
+          </div>
+          <div className="text-[10px] opacity-50 mt-0.5">
+            {last.translation.toUpperCase()}
+          </div>
+        </Link>
+      )}
+    </>
+  );
 
   return (
-    <div className="flex min-h-screen w-full">
-      {/* Sidebar */}
-      <nav className="w-56 shrink-0 bg-[var(--color-ink)] text-[var(--color-parchment)] flex flex-col p-4 gap-1">
-        <h1 className="font-display text-xl font-bold mb-6 tracking-wide text-[var(--color-gold)]">
+    <div className="flex flex-col md:flex-row min-h-screen w-full">
+      {/* Mobile top bar (visible < md) */}
+      <header className="md:hidden flex items-center justify-between px-4 py-3 bg-[var(--color-ink)] text-[var(--color-parchment)] sticky top-0 z-30">
+        <button
+          onClick={() => setMobileOpen(true)}
+          aria-label="Open navigation"
+          className="p-1 -ml-1 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
+        >
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <span className="font-display font-bold tracking-wide text-[var(--color-gold)]">
           Bible Data Pipeline
-        </h1>
-        {NAV_ITEMS.map((item) => (
-          <NavLink
-            key={item.to}
-            to={item.to}
-            className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
-                isActive
-                  ? "bg-[var(--color-gold)]/20 text-[var(--color-gold)]"
-                  : "hover:bg-white/10"
-              }`
-            }
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-            </svg>
-            {item.label}
-          </NavLink>
-        ))}
+        </span>
+        <span className="w-8" aria-hidden /> {/* spacer for centering */}
+      </header>
 
-        {/* Continue Reading */}
-        {last && (
-          <Link
-            to={`/reader?book=${last.book_id}&chapter=${last.chapter}&translation=${last.translation}`}
-            className="mt-4 mx-1 p-3 rounded border border-[var(--color-gold)]/20
-                       bg-[var(--color-gold)]/5 hover:bg-[var(--color-gold)]/15 transition group"
-            title="Continue where you left off"
-          >
-            <div className="text-[10px] uppercase tracking-wider opacity-50 mb-1">
-              📖 Continue
-            </div>
-            <div className="text-sm font-bold text-[var(--color-gold)] truncate">
-              {last.book_name || last.book_id} {last.chapter}
-            </div>
-            <div className="text-[10px] opacity-50 mt-0.5">
-              {last.translation.toUpperCase()}
-            </div>
-          </Link>
-        )}
+      {/* Desktop sidebar (md+) */}
+      <nav className="hidden md:flex w-56 shrink-0 bg-[var(--color-ink)] text-[var(--color-parchment)] flex-col p-4 gap-1">
+        {sidebarContent}
       </nav>
 
+      {/* Mobile drawer (< md) */}
+      {mobileOpen && (
+        <>
+          <div
+            className="md:hidden fixed inset-0 bg-black/60 z-40 fade-in"
+            onClick={() => setMobileOpen(false)}
+            aria-hidden
+          />
+          <nav
+            className="md:hidden fixed top-0 left-0 bottom-0 w-64 bg-[var(--color-ink)]
+                       text-[var(--color-parchment)] flex flex-col p-4 gap-1 z-50 shadow-2xl"
+            aria-label="Main navigation"
+          >
+            <button
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close navigation"
+              className="absolute top-3 right-3 p-1 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {sidebarContent}
+          </nav>
+        </>
+      )}
+
       {/* Main content */}
-      <main className="flex-1 overflow-auto p-6">
+      <main className="flex-1 overflow-auto p-4 md:p-6">
         <Outlet />
       </main>
     </div>

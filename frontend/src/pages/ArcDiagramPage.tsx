@@ -88,7 +88,7 @@ export default function ArcDiagramPage() {
       {loading ? (
         <LoadingSpinner text="Loading cross-references..." />
       ) : (
-        <div className="flex border rounded bg-white overflow-hidden">
+        <div className="flex flex-col lg:flex-row border rounded bg-white overflow-hidden">
           <div className="flex-1 overflow-x-auto">
             <ArcDiagram
               books={books}
