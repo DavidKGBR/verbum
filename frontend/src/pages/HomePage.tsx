@@ -7,6 +7,7 @@ import {
 } from "../services/api";
 import VerseOfTheDay from "../components/VerseOfTheDay";
 import TranslationPreview from "../components/TranslationPreview";
+import VerbumLogo from "../components/common/VerbumLogo";
 import { useReadingHistory } from "../hooks/useReadingHistory";
 
 interface QuickAction {
@@ -86,7 +87,11 @@ export default function HomePage() {
         }}
       >
         <div className="relative">
-          <p className="font-display text-[var(--color-gold)] text-xs uppercase tracking-[0.3em] mb-3 opacity-70">
+          <VerbumLogo
+            variant="wordmark"
+            className="h-12 md:h-16 w-auto mb-4 text-[var(--color-gold)]"
+          />
+          <p className="font-display text-[var(--color-gold)] text-xs uppercase tracking-[0.3em] mb-6 opacity-70">
             Bible Data Pipeline
           </p>
           <h1
