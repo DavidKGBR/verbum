@@ -261,6 +261,7 @@ class TheographicExtractor:
                     name=name,
                     latitude=lat,
                     longitude=lon,
+                    geo_confidence=None,
                     place_type=fields.get("featureType"),
                     description=None,
                     also_called=(json.dumps(also_called_raw) if also_called_raw else None),
@@ -359,7 +360,9 @@ class TheographicExtractor:
                 if not isinstance(related_ids, list):
                     continue
                 for related_id in related_ids:
-                    related_slug = self._person_id_to_slug.get(related_id, related_id)
+                    related_slug = self._person_id_to_slug.get(related_id) or related_id
+                    if not related_slug:
+                        continue
                     key = (person_slug, related_slug, rel_type)
                     if key not in seen:
                         seen.add(key)
