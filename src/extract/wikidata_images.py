@@ -45,9 +45,9 @@ MAX_IMAGES_PER_PLACE = 3
 class WikidataImageRecord:
     """A Wikimedia Commons image resolved from Wikidata P18."""
 
-    image_id: str           # wikidata entity ID (e.g. Q5684)
-    place_name: str         # the biblical place name we searched for
-    file_url: str           # full-res Commons URL
+    image_id: str  # wikidata entity ID (e.g. Q5684)
+    place_name: str  # the biblical place name we searched for
+    file_url: str  # full-res Commons URL
     thumbnail_pattern: str  # URL with ####px placeholder
     license: str
     credit: str
@@ -159,11 +159,30 @@ class WikidataImageExtractor:
     def _filter_queryable(self, names: list[str]) -> list[str]:
         """Skip names that won't produce useful Wikidata results."""
         skip_patterns = {
-            "holy place", "most holy", "gate of", "tower", "pool",
-            "plain", "place", "field", "rock", "forest", "highway",
-            "south", "north", "east", "throne", "willows", "pillars",
-            "rocks", "prison gate", "straight gate", "skull",
-            "destruction", "judgment", "there",
+            "holy place",
+            "most holy",
+            "gate of",
+            "tower",
+            "pool",
+            "plain",
+            "place",
+            "field",
+            "rock",
+            "forest",
+            "highway",
+            "south",
+            "north",
+            "east",
+            "throne",
+            "willows",
+            "pillars",
+            "rocks",
+            "prison gate",
+            "straight gate",
+            "skull",
+            "destruction",
+            "judgment",
+            "there",
         }
         result = []
         for name in names:
@@ -339,13 +358,15 @@ class WikidataImageExtractor:
             if ext not in ("jpg", "jpeg", "png", "tif", "tiff"):
                 continue
 
-            candidates.setdefault(place_name, {}).setdefault(entity_id, []).append({
-                "place_name": place_name,
-                "entity_id": entity_id,
-                "filename": filename,
-                "image_url": image_url,
-                "description": description,
-            })
+            candidates.setdefault(place_name, {}).setdefault(entity_id, []).append(
+                {
+                    "place_name": place_name,
+                    "entity_id": entity_id,
+                    "filename": filename,
+                    "image_url": image_url,
+                    "description": description,
+                }
+            )
 
         # For each place, pick the BEST entity (most likely the biblical one)
         # then take up to MAX_IMAGES_PER_PLACE images from it.
@@ -362,7 +383,9 @@ class WikidataImageExtractor:
             if best_score < 0:
                 logger.debug(
                     "Skipping %s — best entity %s scored %d (likely wrong match)",
-                    place_name, best_entity, best_score,
+                    place_name,
+                    best_entity,
+                    best_score,
                 )
                 continue
 
@@ -382,46 +405,135 @@ class WikidataImageExtractor:
         desc = description.lower()
 
         # Strong positive signals: ancient, biblical, archaeological
-        for kw in ("ancient", "biblical", "archaeolog", "ruins", "tell ",
-                    "tel ", "historical", "holy", "kingdom", "empire",
-                    "israel", "jordan", "iraq", "egypt", "turkey",
-                    "levant", "mesopotamia", "canaan", "palestine",
-                    "bible", "testament"):
+        for kw in (
+            "ancient",
+            "biblical",
+            "archaeolog",
+            "ruins",
+            "tell ",
+            "tel ",
+            "historical",
+            "holy",
+            "kingdom",
+            "empire",
+            "israel",
+            "jordan",
+            "iraq",
+            "egypt",
+            "turkey",
+            "levant",
+            "mesopotamia",
+            "canaan",
+            "palestine",
+            "bible",
+            "testament",
+        ):
             if kw in desc:
                 score += 10
 
         # Negative signals: modern places, unrelated countries/states
-        for kw in ("united states", "usa",
-                    # US states
-                    "alaska", "arizona", "arkansas", "california",
-                    "colorado", "connecticut", "florida", "georgia",
-                    "illinois", "iowa", "kansas", "kentucky",
-                    "louisiana", "maryland", "massachusetts", "michigan",
-                    "minnesota", "mississippi", "missouri", "montana",
-                    "nebraska", "nevada", "new hampshire", "new jersey",
-                    "new mexico", "new york", "north carolina",
-                    "north dakota", "ohio", "oklahoma", "oregon",
-                    "pennsylvania", "rhode island", "south carolina",
-                    "south dakota", "tennessee", "texas", "utah",
-                    "vermont", "virginia", "washington", "wisconsin",
-                    # Other modern countries far from the biblical world
-                    "czech", "canada", "australia", "germany",
-                    "england", "france", "spain", "portugal",
-                    "brazil", "china", "japan", "india", "russia",
-                    "new zealand", "south africa", "philippines",
-                    "slovenia", "croatia", "poland", "norway",
-                    "sweden", "denmark", "finland", "mexico",
-                    "argentina", "colombia", "indonesia",
-                    # Administrative/modern entity types
-                    "township", "village in", "town in", "hamlet in",
-                    "suburb", "census", "county", "municipality",
-                    "commune", "civil parish",
-                    "department", "département",
-                    "french", "portuguese", "brazilian",
-                    # Clearly non-geographic
-                    "crater", "lunar", "asteroid", "moon",
-                    "ship", "vessel", "railway",
-                    "district of", "state of", "province of"):
+        for kw in (
+            "united states",
+            "usa",
+            # US states
+            "alaska",
+            "arizona",
+            "arkansas",
+            "california",
+            "colorado",
+            "connecticut",
+            "florida",
+            "georgia",
+            "illinois",
+            "iowa",
+            "kansas",
+            "kentucky",
+            "louisiana",
+            "maryland",
+            "massachusetts",
+            "michigan",
+            "minnesota",
+            "mississippi",
+            "missouri",
+            "montana",
+            "nebraska",
+            "nevada",
+            "new hampshire",
+            "new jersey",
+            "new mexico",
+            "new york",
+            "north carolina",
+            "north dakota",
+            "ohio",
+            "oklahoma",
+            "oregon",
+            "pennsylvania",
+            "rhode island",
+            "south carolina",
+            "south dakota",
+            "tennessee",
+            "texas",
+            "utah",
+            "vermont",
+            "virginia",
+            "washington",
+            "wisconsin",
+            # Other modern countries far from the biblical world
+            "czech",
+            "canada",
+            "australia",
+            "germany",
+            "england",
+            "france",
+            "spain",
+            "portugal",
+            "brazil",
+            "china",
+            "japan",
+            "india",
+            "russia",
+            "new zealand",
+            "south africa",
+            "philippines",
+            "slovenia",
+            "croatia",
+            "poland",
+            "norway",
+            "sweden",
+            "denmark",
+            "finland",
+            "mexico",
+            "argentina",
+            "colombia",
+            "indonesia",
+            # Administrative/modern entity types
+            "township",
+            "village in",
+            "town in",
+            "hamlet in",
+            "suburb",
+            "census",
+            "county",
+            "municipality",
+            "commune",
+            "civil parish",
+            "department",
+            "département",
+            "french",
+            "portuguese",
+            "brazilian",
+            # Clearly non-geographic
+            "crater",
+            "lunar",
+            "asteroid",
+            "moon",
+            "ship",
+            "vessel",
+            "railway",
+            "district of",
+            "state of",
+            "province of",
+        ):
             if kw in desc:
                 score -= 15
 
@@ -533,7 +645,8 @@ class WikidataImageExtractor:
                     thumbnail_pattern=thumb_pattern,
                     license=meta.get("license", "CC"),
                     credit=credit_clean or "Wikimedia Commons",
-                    credit_url=meta.get("credit_url", "") or f"https://commons.wikimedia.org/wiki/File:{urllib.parse.quote(filename)}",
+                    credit_url=meta.get("credit_url", "")
+                    or f"https://commons.wikimedia.org/wiki/File:{urllib.parse.quote(filename)}",
                     description=desc_clean,
                     width=meta.get("width", 0),
                     height=meta.get("height", 0),

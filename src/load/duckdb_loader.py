@@ -866,8 +866,7 @@ class DuckDBLoader:
             );
         """)
         self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_place_images_slug "
-            "ON place_images(place_slug);"
+            "CREATE INDEX IF NOT EXISTS idx_place_images_slug ON place_images(place_slug);"
         )
 
     def load_place_images(self, df: pd.DataFrame) -> int:

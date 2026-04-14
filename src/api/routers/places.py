@@ -82,9 +82,7 @@ def list_places(
                 with contextlib.suppress(json.JSONDecodeError, TypeError):
                     r["also_called"] = json.loads(r["also_called"])
             tp = r.pop("thumbnail_pattern", None)
-            r["thumbnail_url"] = (
-                tp.replace("####", "330") if tp else None
-            )
+            r["thumbnail_url"] = tp.replace("####", "330") if tp else None
 
         return {
             "total": total,
@@ -284,18 +282,20 @@ def get_place(slug: str) -> dict:
         images = []
         for _, img in img_df.iterrows():
             tp = img.get("thumbnail_pattern", "")
-            images.append({
-                "image_id": img["image_id"],
-                "file_url": img["file_url"],
-                "thumbnail_url": tp.replace("####", "330") if tp else None,
-                "hero_url": tp.replace("####", "960") if tp else None,
-                "description": img["description"],
-                "license": img["license"],
-                "credit": img["credit"],
-                "credit_url": img["credit_url"],
-                "width": int(img["width"]) if img["width"] else None,
-                "height": int(img["height"]) if img["height"] else None,
-            })
+            images.append(
+                {
+                    "image_id": img["image_id"],
+                    "file_url": img["file_url"],
+                    "thumbnail_url": tp.replace("####", "330") if tp else None,
+                    "hero_url": tp.replace("####", "960") if tp else None,
+                    "description": img["description"],
+                    "license": img["license"],
+                    "credit": img["credit"],
+                    "credit_url": img["credit_url"],
+                    "width": int(img["width"]) if img["width"] else None,
+                    "height": int(img["height"]) if img["height"] else None,
+                }
+            )
         place["images"] = images
 
         return place

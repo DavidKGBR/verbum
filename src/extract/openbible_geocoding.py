@@ -51,9 +51,9 @@ class ImageRecord:
     """A Wikimedia Commons image linked to a biblical place."""
 
     image_id: str
-    place_name: str          # ancient place name (matched to biblical_places)
+    place_name: str  # ancient place name (matched to biblical_places)
     file_url: str
-    thumbnail_pattern: str   # URL with ####px placeholder
+    thumbnail_pattern: str  # URL with ####px placeholder
     license: str
     author: str
     credit: str

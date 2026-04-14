@@ -574,14 +574,10 @@ def images(
 
             if missing_names:
                 wd_extractor = WikidataImageExtractor()
-                wd_records = wd_extractor.extract_for_places(
-                    missing_names, use_cache=cache
-                )
+                wd_records = wd_extractor.extract_for_places(missing_names, use_cache=cache)
 
                 if wd_records:
-                    console.print(
-                        f"  Wikidata returned [bold]{len(wd_records):,}[/bold] images"
-                    )
+                    console.print(f"  Wikidata returned [bold]{len(wd_records):,}[/bold] images")
                     wd_df = pd.DataFrame([asdict(r) for r in wd_records])
                     # Add missing columns expected by the loader
                     wd_df["author"] = ""
@@ -589,8 +585,7 @@ def images(
                     wd_df["crop_file"] = ""
                     added = loader.append_place_images(wd_df)
                     console.print(
-                        f"  [green]\u2713[/green] [bold]{added:,}[/bold] new images "
-                        f"from Wikidata"
+                        f"  [green]\u2713[/green] [bold]{added:,}[/bold] new images from Wikidata"
                     )
                 else:
                     console.print("  [yellow]No images found on Wikidata[/yellow]")
