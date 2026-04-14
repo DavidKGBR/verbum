@@ -307,11 +307,20 @@ export interface DevotionalPlan {
   days: number;
 }
 
+export interface OriginalTerm {
+  text: string;
+  transliteration: string;
+  language: "hebrew" | "greek";
+  strong: string;
+  meaning: string;
+}
+
 export interface DevotionalReading {
   day: number;
   title: string;
   passage: string;
   reflection: string;
+  original_term?: OriginalTerm;
 }
 
 export interface DevotionalPlanFull extends DevotionalPlan {

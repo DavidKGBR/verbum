@@ -6,7 +6,43 @@ import {
   type DevotionalPlan,
   type DevotionalPlanFull,
   type DevotionalDayReading,
+  type OriginalTerm,
 } from "../services/api";
+
+function OriginalTermCard({ term }: { term: OriginalTerm }) {
+  const isHebrew = term.language === "hebrew";
+  return (
+    <div className="mx-5 mt-4 rounded-lg border border-[var(--color-gold)]/25 bg-gradient-to-br from-amber-50/60 to-white overflow-hidden">
+      <div className="px-4 py-3 flex items-center gap-3">
+        {/* Language badge */}
+        <span className="shrink-0 text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/15 text-[var(--color-gold-dark)]">
+          {isHebrew ? "Hebrew" : "Greek"}
+        </span>
+        <span className="text-[10px] text-[var(--color-gold-dark)]/60 font-mono">
+          {term.strong}
+        </span>
+      </div>
+      <div className="px-4 pb-4 text-center">
+        {/* Original script — large */}
+        <p
+          className="text-3xl leading-relaxed font-semibold text-[var(--color-ink)]"
+          dir={isHebrew ? "rtl" : "ltr"}
+          lang={isHebrew ? "he" : "grc"}
+        >
+          {term.text}
+        </p>
+        {/* Transliteration */}
+        <p className="text-sm italic text-[var(--color-gold-dark)] mt-1">
+          {term.transliteration}
+        </p>
+        {/* Meaning */}
+        <p className="text-xs text-[var(--color-ink)]/70 mt-2 max-w-md mx-auto leading-relaxed">
+          {term.meaning}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function DevotionalPage() {
   const [plans, setPlans] = useState<DevotionalPlan[]>([]);
@@ -132,6 +168,11 @@ export default function DevotionalPage() {
                 </h3>
                 <div className="text-xs opacity-50 mt-1">{dayReading.passage}</div>
               </div>
+
+              {/* Original term spotlight */}
+              {dayReading.original_term && (
+                <OriginalTermCard term={dayReading.original_term} />
+              )}
 
               {/* Verse text */}
               <div className="px-5 py-4 space-y-2">

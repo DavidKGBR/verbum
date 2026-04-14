@@ -141,5 +141,9 @@
   "home.translations": "Traduções",
   "home.translationsCount": "traduções",
   "home.translationsLanguages": "idiomas",
-  "home.translationsOpen": "Abrir"
+  "home.translationsOpen": "Abrir",
+  "devotional.originalTerm": "Termo Original",
+  "devotional.hebrew": "Hebraico",
+  "devotional.greek": "Grego",
+  "devotional.reflection": "Reflexão"
 }
