@@ -239,7 +239,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 |---|------|---------|--------|-----|
 | 1 | Notas + Highlighting | 🔥🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-1-notes-highlighting) |
 | 2 | Streak + Reading Plans | 🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-2-streak-plans) |
-| 3 | Extract Strong's + originals | 🔥🔥🔥🔥 | 🚧 Em andamento (3a ✅ · 3b/c/d 🔲) | [3a](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3a-strongs-lexicon) |
+| 3 | Extract Strong's + originals | 🔥🔥🔥🔥 | 🚧 Em andamento (3a ✅ · 3b ✅ · 3c/d 🔲) | [3a](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3a-strongs-lexicon) · [3b](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3b-hebrew-wlc) |
 | 4 | API endpoints (6 novos) | 🔥🔥🔥 | 🔲 Planejado | — |
 | 5 | Interlinear View | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
 | 6 | Word Study page | 🔥🔥🔥🔥 | 🔲 Planejado | — |
@@ -336,3 +336,19 @@ entrada lógica — sem depender da memória de conversa.
 - **Arquivos novos (2):** `src/extract/strongs_extractor.py`, `tests/test_strongs.py`.
 - **Arquivos modificados (3):** `src/models/schemas.py` (+StrongsEntry, StrongsLanguage), `src/load/duckdb_loader.py` (+ table + loader), `src/cli.py` (+ comando strongs, + info).
 - **Próxima entrada:** #3b — Hebraico WLC (openscriptures/morphhb). Começa a popular `original_texts` com texto hebraico verso-a-verso. Parse de OSIS XML (dep nova: `lxml`).
+
+### 2026-04-13 — Tarefa #3b concluída: Hebraico WLC
+- Terceira tarefa do mesmo dia. Nova tabela `original_texts` com 23.213 versos hebraicos.
+- **Fonte:** `openscriptures/morphhb` (Westminster Leningrad Codex com morfologia). 39 arquivos OSIS XML no diretório `wlc/`, um por livro (Gen.xml ... Mal.xml). Total ~15MB. Licença WLC = domínio público, anotações CC BY 4.0.
+- **Dependências novas: zero.** Originalmente planejei `lxml`, mas o stdlib `xml.etree.ElementTree` é suficiente pros arquivos bem-formados. Adicionei `defusedxml` (já estava instalada transitivamente) pra blindar contra XXE/billion-laughs; API compatível, drop-in.
+- **Tabela `original_texts`** — PK só `verse_id` (um verso tem língua canônica; OT=hebraico, NT=grego). Colunas: `verse_id, book_id, chapter, verse, language, text, source, loaded_at`. Índices em `(book_id, chapter, verse)` e `language`. Load: DELETE scoped por language + INSERT — rodar `cli hebrew` não apaga Greek (quando #3c chegar).
+- **Divergência do plano mestre** documentada no plano de trabalho: troquei o sketch `(verse_id PK, hebrew_text, greek_text, transliteration)` pela estrutura normalizada acima. Queries mais simples (`WHERE language='hebrew'` vs. `WHERE hebrew_text IS NOT NULL`), e `transliteration` sai do modelo (é propriedade de palavra, não de verso — vai nas tabelas interlinear do #3d).
+- **Parser OSIS:** `<w>` elements juntados com espaço, `<seg>` (maqqef/sof-pasuq) colam na palavra anterior sem espaço, `<note>`/`<reference>`/`<milestone>` ignorados. Separadores de morfema `/` (convenção MorphHB pra mostrar onde prefixos se ligam) removidos do texto final.
+- **Book ID mapping:** 39 entradas OSIS→canonical ID duplicadas localmente (`_OSIS_TO_BOOK_ID` em morphhb_extractor.py). Quando o terceiro consumidor aparecer (#3c greek provavelmente), refatoro pra `src/extract/osis_names.py`.
+- **CLI:** `python -m src.cli hebrew [--book GEN] [--no-cache]`. Flag `--book` aceita tanto nome OSIS (Gen, Ps) quanto canônico (GEN, PSA).
+- **Testes:** 24 (23 offline + 1 integration que baixa Ruth e valida que Gen 1:1 tem "מואב"/Moab e Ruth 1:2 tem a raiz "אפרת"/Efratah — sem niqqud pra evitar issues de niqqud variants).
+- **Gotchas:**
+  - Teste inicial checava "אפרתה" (Efrata, singular com ה final) em Ruth 1:1. Efrata aparece em Ruth 1:2. Trocar "Ephratah" → raiz "אפרת" resolve ambos os casos.
+  - Comparações diretas de Hebreus com niqqud falham frequentemente porque marcas de cantilação (teamim) variam entre edições. Stripping de `\u0591`-`\u05c7` (cantillation + points) antes de comparar é a técnica robusta.
+- **Build prod:** `Original Texts: 23,213` visível em `cli info`.
+- **Próxima entrada:** #3c — Grego SBLGNT (NT em grego koiné, ~7.956 versos). Estrutura de dados e layout da tabela já pronta (mesmo `original_texts` com `language='greek'`). Decisão pendente de fonte: SBLGNT OSIS XML direto vs. byztxt vs. outra. Vou investigar na próxima sessão.

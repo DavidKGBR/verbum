@@ -14,6 +14,7 @@ from rich.console import Console
 from rich.logging import RichHandler
 
 from src.config import PipelineConfig
+from src.extract.morphhb_extractor import MorphHbExtractor
 from src.extract.strongs_extractor import StrongsExtractor
 from src.load.duckdb_loader import DuckDBLoader
 from src.pipeline import BiblePipeline
@@ -185,6 +186,64 @@ def strongs(
     console.print(
         f"\n[green]✓[/green] Loaded [bold]{count:,}[/bold] Strong's entries "
         f"([cyan]{hebrew:,}[/cyan] Hebrew · [cyan]{greek:,}[/cyan] Greek)"
+    )
+
+
+@app.command()
+def hebrew(
+    book: str | None = typer.Option(
+        None,
+        "--book",
+        "-b",
+        help="Load only one book (OSIS name or canonical ID). Default: all 39 OT books.",
+    ),
+    cache: bool = typer.Option(
+        True,
+        "--cache/--no-cache",
+        help="Use cached XML in data/raw/morphhb/ if present.",
+    ),
+    log_level: str = typer.Option("INFO", "--log-level", "-l", help="Logging level"),
+) -> None:
+    """📜 Extract and load the Hebrew OT (Westminster Leningrad Codex via MorphHB)."""
+    setup_logging(log_level)
+
+    console.print("[bold]📜 Hebrew OT (MorphHB · Westminster Leningrad Codex)[/bold]\n")
+    extractor = MorphHbExtractor()
+    books_arg = [book] if book else None
+    try:
+        verses = extractor.extract(books=books_arg, use_cache=cache)
+    except ValueError as e:
+        console.print(f"[red]✗[/red] {e}")
+        raise typer.Exit(code=1) from e
+
+    if not verses:
+        console.print("[yellow]No verses extracted.[/yellow]")
+        raise typer.Exit(code=1)
+
+    df = pd.DataFrame(
+        [
+            {
+                "verse_id": v.verse_id,
+                "book_id": v.book_id,
+                "chapter": v.chapter,
+                "verse": v.verse,
+                "language": v.language.value,
+                "text": v.text,
+                "source": v.source,
+            }
+            for v in verses
+        ]
+    )
+
+    config = PipelineConfig()
+    with DuckDBLoader(config.load) as loader:
+        count = loader.load_original_texts(df, language="hebrew")
+
+    books_loaded = sorted({v.book_id for v in verses})
+    console.print(
+        f"\n[green]✓[/green] Loaded [bold]{count:,}[/bold] Hebrew verses "
+        f"across [cyan]{len(books_loaded)}[/cyan] book"
+        f"{'s' if len(books_loaded) != 1 else ''}."
     )
 
 
