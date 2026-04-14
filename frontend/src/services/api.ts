@@ -482,6 +482,18 @@ export async function fetchCombinedTimeline(
 
 // ── Places ──────────────────────────────────────────────────────────────────
 
+export interface PlaceImage {
+  image_id: string;
+  file_url: string;
+  thumbnail_url: string | null;
+  description: string | null;
+  license: string;
+  credit: string;
+  credit_url: string;
+  width: number | null;
+  height: number | null;
+}
+
 export interface BiblicalPlace {
   place_id: string;
   slug: string;
@@ -493,6 +505,8 @@ export interface BiblicalPlace {
   description: string | null;
   also_called: string[] | null;
   verse_count: number;
+  thumbnail_url?: string | null;
+  images?: PlaceImage[];
   events?: { event_id: string; title: string; start_year: number | null; era: string | null }[];
 }
 

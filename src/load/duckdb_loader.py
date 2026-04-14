@@ -754,6 +754,8 @@ class DuckDBLoader:
             "CREATE INDEX IF NOT EXISTS idx_family_person ON family_relations(person_id);"
         )
 
+        self._ensure_place_images_table()
+
     def load_biblical_people(self, df: pd.DataFrame) -> int:
         """Replace all biblical people rows."""
         if df.empty:
@@ -837,6 +839,79 @@ class DuckDBLoader:
         """)
         count = self.conn.execute("SELECT COUNT(*) FROM family_relations").fetchone()[0]  # type: ignore[index]
         logger.info("Loaded %d family relations", count)
+        return count
+
+    # ── Place Images ──────────────────────────────────────────────────────
+
+    def _ensure_place_images_table(self) -> None:
+        """Create place_images table if it doesn't exist. Idempotent."""
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS place_images (
+                image_id            VARCHAR NOT NULL,
+                place_slug          VARCHAR NOT NULL,
+                file_url            VARCHAR NOT NULL,
+                thumbnail_pattern   VARCHAR,
+                description         VARCHAR,
+                license             VARCHAR,
+                author              VARCHAR,
+                credit              VARCHAR,
+                credit_url          VARCHAR,
+                width               INTEGER,
+                height              INTEGER,
+                placeholder_colors  VARCHAR,
+                crop_file           VARCHAR,
+                sort_order          INTEGER DEFAULT 0,
+                loaded_at           TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE (image_id, place_slug)
+            );
+        """)
+        self.conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_place_images_slug "
+            "ON place_images(place_slug);"
+        )
+
+    def load_place_images(self, df: pd.DataFrame) -> int:
+        """Load place images, resolving place_name → biblical_places.slug.
+
+        The DataFrame must have a ``place_name`` column that will be
+        matched case-insensitively against ``biblical_places.name``.
+        """
+        if df.empty:
+            return 0
+        self._ensure_theographic_tables()
+        self._ensure_place_images_table()
+        logger.info("Loading %d image records into DuckDB...", len(df))
+        self.conn.execute("DELETE FROM place_images;")
+        self.conn.execute("""
+            INSERT INTO place_images (
+                image_id, place_slug, file_url, thumbnail_pattern,
+                description, license, author, credit, credit_url,
+                width, height, placeholder_colors, crop_file
+            )
+            SELECT
+                df.image_id,
+                bp.slug,
+                df.file_url,
+                df.thumbnail_pattern,
+                df.description,
+                df.license,
+                df.author,
+                df.credit,
+                df.credit_url,
+                df.width,
+                df.height,
+                df.placeholder_colors,
+                df.crop_file
+            FROM df
+            JOIN biblical_places bp ON LOWER(bp.name) = LOWER(df.place_name)
+        """)
+        count = self.conn.execute(  # type: ignore[index]
+            "SELECT COUNT(*) FROM place_images"
+        ).fetchone()[0]
+        unique = self.conn.execute(  # type: ignore[index]
+            "SELECT COUNT(DISTINCT place_slug) FROM place_images"
+        ).fetchone()[0]
+        logger.info("Loaded %d images for %d unique places", count, unique)
         return count
 
     # ── Nave's Topical Bible ────────────────────────────────────────────────

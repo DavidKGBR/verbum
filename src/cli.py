@@ -512,6 +512,43 @@ def geocoding(
 
 
 @app.command()
+def images(
+    cache: bool = typer.Option(True, "--cache/--no-cache", help="Use cached JSONL files."),
+    log_level: str = typer.Option("INFO", "--log-level", "-l", help="Logging level"),
+) -> None:
+    """🖼️ Load Wikimedia Commons images for biblical places.
+
+    Downloads image.jsonl + modern.jsonl from openbibleinfo/Bible-Geocoding-Data
+    (CC-BY) and links 2,400+ place photos to the biblical_places table.
+    Run `theographic` first to populate the base place records.
+    """
+    from dataclasses import asdict
+
+    setup_logging(log_level)
+
+    console.print("[bold]🖼️  Place Images from OpenBible[/bold]\n")
+    extractor = OpenBibleGeoExtractor()
+    records = extractor.extract_images(use_cache=cache)
+
+    if not records:
+        console.print("[red]No image records extracted.[/red]")
+        raise typer.Exit(code=1)
+
+    console.print(f"  Extracted [bold]{len(records):,}[/bold] image–place pairs")
+
+    df = pd.DataFrame([asdict(r) for r in records])
+
+    config = PipelineConfig()
+    with DuckDBLoader(config.load) as loader:
+        count = loader.load_place_images(df)
+
+    console.print(
+        f"\n[green]\u2713[/green] [bold]{count:,}[/bold] images loaded "
+        f"for biblical places"
+    )
+
+
+@app.command()
 def naves(
     cache: bool = typer.Option(True, "--cache/--no-cache", help="Use cached ZIP/txt files."),
     log_level: str = typer.Option("INFO", "--log-level", "-l", help="Logging level"),

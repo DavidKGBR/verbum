@@ -17,6 +17,7 @@ interface GeoFeature {
     place_type: string | null;
     verse_count: number;
     geo_confidence: number | null;
+    thumbnail_url: string | null;
   };
 }
 
@@ -87,7 +88,15 @@ function MarkerLayer({ features }: { features: GeoFeature[] }) {
           icon={icon}
         >
           <Popup>
-            <div className="text-sm">
+            <div className="text-sm min-w-[140px]">
+              {f.properties.thumbnail_url && (
+                <img
+                  src={f.properties.thumbnail_url}
+                  alt={f.properties.name}
+                  className="w-full h-24 object-cover rounded mb-1.5"
+                  loading="lazy"
+                />
+              )}
               <strong>{f.properties.name}</strong>
               {f.properties.place_type && (
                 <span className="ml-1 text-xs opacity-60">({f.properties.place_type})</span>

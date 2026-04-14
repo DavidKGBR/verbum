@@ -174,7 +174,25 @@ export default function PlacesPage() {
                 className="w-full text-left px-4 py-3 flex items-start justify-between gap-3
                            hover:bg-[var(--color-gold)]/5 transition"
               >
-                <div className="min-w-0">
+                <div className="flex items-start gap-3 min-w-0">
+                  {/* Thumbnail */}
+                  {place.thumbnail_url ? (
+                    <img
+                      src={place.thumbnail_url}
+                      alt={place.name}
+                      className="w-12 h-12 rounded object-cover shrink-0 mt-0.5"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded bg-[var(--color-gold)]/8 shrink-0 mt-0.5 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-[var(--color-gold-dark)] opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                      </svg>
+                    </div>
+                  )}
+
+                  <div className="min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <h3 className="font-display font-bold text-[var(--color-ink)]">
                       {place.name}
@@ -199,6 +217,7 @@ export default function PlacesPage() {
                       <> · {Math.round(place.geo_confidence * 100)}% confidence</>
                     )}
                   </p>
+                </div>
                 </div>
                 <svg
                   className={`w-4 h-4 opacity-40 transition-transform shrink-0 mt-1 ${isOpen ? "rotate-180" : ""}`}
@@ -276,6 +295,39 @@ export default function PlacesPage() {
                                   </span>
                                 )}
                               </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Images gallery */}
+                      {detail.images && detail.images.length > 0 && (
+                        <div>
+                          <h4 className="text-[10px] uppercase tracking-wider font-bold opacity-50 mb-2">
+                            Photos ({detail.images.length})
+                          </h4>
+                          <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1">
+                            {detail.images.map((img) => (
+                              <a
+                                key={img.image_id}
+                                href={img.file_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group shrink-0"
+                                title={img.description || img.credit}
+                              >
+                                <img
+                                  src={img.thumbnail_url || img.file_url}
+                                  alt={img.description || detail.name}
+                                  className="w-28 h-20 object-cover rounded border
+                                             border-[var(--color-gold-dark)]/15
+                                             group-hover:border-[var(--color-gold)] transition"
+                                  loading="lazy"
+                                />
+                                <p className="text-[8px] mt-0.5 opacity-40 truncate max-w-[7rem]">
+                                  {img.credit} · {img.license}
+                                </p>
+                              </a>
                             ))}
                           </div>
                         </div>
