@@ -246,7 +246,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 | 7 | Bible Dictionary | 🔥🔥🔥 | ✅ Concluído | — |
 | 8 | Commentary (HelloAO) | 🔥🔥🔥 | ✅ Concluído | — |
 | 9 | Verse Sharing | 🔥🔥 | ✅ Concluído | — |
-| 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
+| 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | ✅ Concluído | — |
 | 11 | Translation Divergence | 🔥🔥🔥🔥 | 🔲 Planejado | — |
 | 12 | README + Deploy + SEO | 🔥🔥🔥 | 🔲 Planejado | — |
 
@@ -445,3 +445,14 @@ entrada lógica — sem depender da memória de conversa.
 - **Modificados (2):** `VerseActions.tsx` (botão + modal state), `VERBUM_PLAN.md`.
 - **Testado:** Psalms 23:1 renderiza corretamente com aspas curvas, borda, e corner accents. Preview no modal mostra canvas scaled down.
 - **Próxima entrada:** Tarefa #10 — Grafo de Campo Semântico (Crown Jewel). D3.js force-directed graph de coocorrência de Strong's + semantic tags. A mais ambiciosa do roadmap.
+
+### 2026-04-14 — Tarefa #10 concluída: Grafo de Campo Semântico (Crown Jewel, Fase 4A)
+- **A peça mais ambiciosa do Verbum** — inédita no open-source bíblico. Visualiza coocorrência de palavras Strong's via self-JOIN no `interlinear` (407K words). Se G25 (agapáō/love) e G2316 (theós/God) aparecem juntos em 35 versos, são semanticamente ligados.
+- **Backend:** novo router `src/api/routers/semantic.py` com endpoint `GET /semantic/graph?center=G25&min_shared=10&limit=30&exclude_common=true`. Lógica: self-JOIN interlinear → conta versos compartilhados → enriquece com transliteration/gloss do strongs_lexicon → retorna `{center, nodes[], edges[]}`. Flag `exclude_common` filtra os top-30 palavras mais frequentes (artigos/conjunções/preposições) que aparecem em quase todo verso.
+- **Frontend:** `SemanticGraphPage.tsx` com D3 force-directed graph. `forceSimulation` + `forceLink` + `forceManyBody` + `forceCollide`. Nós como `<circle>` sized by shared verses, colored by testament (gold center, green Hebrew, purple Greek). Labels de transliteração. Drag behavior. Zoom/pan via `d3.zoom`. Hover → tooltip com gloss + count. Click → `/word-study/:id`.
+- **Controles:** input pra Strong's ID, slider min_shared (2-50), checkbox "Hide common words".
+- **Resultado visual:** G25 (love) mostra theós (God) e Iēsoûs (Jesus) como nós maiores — faz sentido teológico perfeito. kýrios (Lord), patēr (father), entolē (commandment), allēlōn (one another) formam a constelação semântica do "amor" no NT grego.
+- **D3 types gotcha:** `d3.drag` + `d3.forceCollide` com TypeScript estrito requer `as any` casts em 2 pontos (drag behavior assignment + collide radius callback). Aceitável — D3's type system é notoriamente impreciso com simulations.
+- **Arquivos novos (2):** `src/api/routers/semantic.py`, `pages/SemanticGraphPage.tsx`.
+- **Modificados (4):** `src/api/main.py` (register router), `App.tsx` (rota), `Layout.tsx` (nav "Graph"), `api.ts` (types + fetch).
+- **Próxima entrada:** Tarefa #11 — Translation Divergence Heatmap. Visualiza onde KJV vs NVI vs RVR divergem na tradução do mesmo Strong's.

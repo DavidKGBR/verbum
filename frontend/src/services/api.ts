@@ -349,6 +349,39 @@ export function searchDictionary(q: string, limit = 50) {
   );
 }
 
+// ── Semantic Graph ──────────────────────────────────────────────────────────
+
+export interface GraphNode {
+  id: string;
+  label: string;
+  gloss: string;
+  language: string;
+  shared?: number;
+}
+
+export interface GraphEdge {
+  source: string;
+  target: string;
+  weight: number;
+}
+
+export interface SemanticGraph {
+  center: GraphNode;
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+}
+
+export function fetchSemanticGraph(
+  center: string,
+  minShared = 5,
+  limit = 30,
+  excludeCommon = true
+) {
+  return fetchJson<SemanticGraph>(
+    `${BASE}/semantic/graph?center=${center}&min_shared=${minShared}&limit=${limit}&exclude_common=${excludeCommon}`
+  );
+}
+
 // ── Commentary (HelloAO — external, fetched client-side) ────────────────────
 
 const HELLOAO_BASE = "https://bible.helloao.org/api/c";
