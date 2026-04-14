@@ -217,6 +217,41 @@ class StrongsEntry(BaseModel):
         return f"{prefix}{int(number)}"
 
 
+# ─── Original biblical texts (Hebrew OT / Greek NT) ──────────────────────────
+
+
+class OriginalTextLanguage(str, Enum):
+    HEBREW = "hebrew"
+    GREEK = "greek"
+
+
+class OriginalText(BaseModel):
+    """A single verse of the original-language biblical text.
+
+    One row per `verse_id` — OT verses carry Hebrew, NT verses carry Greek.
+    The `source` field records which critical edition the text came from
+    (e.g. "wlc" for the Westminster Leningrad Codex).
+    """
+
+    verse_id: str  # "GEN.1.1"
+    book_id: str  # "GEN"
+    chapter: int = Field(..., ge=1)
+    verse: int = Field(..., ge=1)
+    language: OriginalTextLanguage
+    text: str
+    source: str  # e.g. "wlc", "sblgnt"
+
+    @field_validator("verse_id")
+    @classmethod
+    def validate_verse_id(cls, v: str) -> str:
+        parts = v.split(".")
+        if len(parts) != 3:
+            raise ValueError(f"Invalid verse_id (expected BOOK.CH.VS): {v!r}")
+        if not parts[0] or not parts[1].isdigit() or not parts[2].isdigit():
+            raise ValueError(f"Invalid verse_id (expected BOOK.CH.VS): {v!r}")
+        return v
+
+
 # ─── Book catalog (canonical order) ───────────────────────────────────────────
 
 BOOK_CATALOG: list[dict] = [

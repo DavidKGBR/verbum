@@ -53,6 +53,7 @@ class DuckDBLoader:
         self.conn.execute("DROP TABLE IF EXISTS chapter_stats;")
         self.conn.execute("DROP TABLE IF EXISTS translations;")
         self.conn.execute("DROP TABLE IF EXISTS strongs_lexicon;")
+        self.conn.execute("DROP TABLE IF EXISTS original_texts;")
 
         self.conn.execute("""
             CREATE TABLE translations (
@@ -159,6 +160,7 @@ class DuckDBLoader:
         """)
 
         self._ensure_strongs_table()
+        self._ensure_original_texts_table()
 
         self._create_analytical_views()
         logger.info("✅ Schema created successfully")
@@ -485,6 +487,66 @@ class DuckDBLoader:
         logger.info(f"✅ Loaded {count} Strong's entries")
         return count
 
+    def _ensure_original_texts_table(self) -> None:
+        """Create the original_texts table if it doesn't exist.
+
+        Separate from `create_schema` so `load_original_texts` works on
+        pre-existing databases without rebuilding everything.
+        """
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS original_texts (
+                verse_id   VARCHAR PRIMARY KEY,
+                book_id    VARCHAR NOT NULL,
+                chapter    INTEGER NOT NULL,
+                verse      INTEGER NOT NULL,
+                language   VARCHAR NOT NULL,
+                text       VARCHAR NOT NULL,
+                source     VARCHAR NOT NULL,
+                loaded_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        """)
+        # Indexes are cheap and help both the browse path and language filters.
+        self.conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_original_book "
+            "ON original_texts(book_id, chapter, verse);"
+        )
+        self.conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_original_language ON original_texts(language);"
+        )
+
+    def load_original_texts(self, df: pd.DataFrame, language: str) -> int:
+        """Load (or refresh) original-language verses for a given language.
+
+        Uses a scoped DELETE (by `language`) so reloading Hebrew doesn't wipe
+        out Greek rows (and vice-versa). Global over translations — the same
+        verse_id maps to a canonical original regardless of translation.
+        """
+        if df.empty:
+            return 0
+
+        self._ensure_original_texts_table()
+
+        logger.info(f"📜 Loading {len(df)} {language} verses into DuckDB...")
+        self.conn.execute(
+            "DELETE FROM original_texts WHERE language = ?;",
+            [language],
+        )
+        self.conn.execute("""
+            INSERT INTO original_texts (
+                verse_id, book_id, chapter, verse, language, text, source
+            )
+            SELECT
+                verse_id, book_id, chapter, verse, language, text, source
+            FROM df
+        """)
+        count_row = self.conn.execute(
+            "SELECT COUNT(*) FROM original_texts WHERE language = ?",
+            [language],
+        ).fetchone()
+        count = count_row[0] if count_row else 0
+        logger.info(f"✅ Loaded {count} {language} verses")
+        return count
+
     def log_pipeline_run(
         self,
         run_id: str,
@@ -544,5 +606,12 @@ class DuckDBLoader:
             result["strongs_entries"] = row[0] if row else 0
         except Exception:
             result["strongs_entries"] = 0
+
+        # original_texts is likewise optional
+        try:
+            row = self.conn.execute("SELECT COUNT(*) FROM original_texts").fetchone()
+            result["original_texts"] = row[0] if row else 0
+        except Exception:
+            result["original_texts"] = 0
 
         return result
