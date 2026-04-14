@@ -6,6 +6,98 @@ async function fetchJson<T>(url: string): Promise<T> {
   return res.json();
 }
 
+// ── Emotional Landscape ────────────────────────────────────────────────────
+
+export interface EmotionalPoint {
+  verse_id: string;
+  chapter: number;
+  verse: number;
+  polarity: number;
+  label: string;
+}
+
+export interface EmotionalPeak {
+  verse_id: string;
+  reference: string;
+  chapter: number;
+  verse: number;
+  text: string;
+  polarity: number;
+  label: string;
+}
+
+export interface BookProfile {
+  book_id: string;
+  book_name: string;
+  testament: string;
+  category: string;
+  verse_count: number;
+  avg_polarity: number;
+  min_polarity: number;
+  max_polarity: number;
+  positive: number;
+  negative: number;
+  neutral: number;
+}
+
+export async function fetchEmotionalLandscape(
+  book: string,
+  translation = "kjv"
+): Promise<{ book_id: string; translation: string; total_verses: number; series: EmotionalPoint[] }> {
+  return fetchJson(`${BASE}/emotional/landscape?book=${book}&translation=${translation}`);
+}
+
+export async function fetchEmotionalPeaks(
+  book: string,
+  emotion = "positive",
+  limit = 20,
+  translation = "kjv"
+): Promise<{ book_id: string; emotion: string; results: EmotionalPeak[] }> {
+  return fetchJson(
+    `${BASE}/emotional/peaks?book=${book}&emotion=${emotion}&limit=${limit}&translation=${translation}`
+  );
+}
+
+export async function fetchBookProfiles(
+  translation = "kjv"
+): Promise<{ profiles: BookProfile[] }> {
+  return fetchJson(`${BASE}/emotional/book-profiles?translation=${translation}`);
+}
+
+// ── Community Notes ────────────────────────────────────────────────────────
+
+export interface CommunityNote {
+  id: string;
+  verse_id: string;
+  title: string;
+  content: string;
+  category: string;
+  author: string;
+  date: string;
+}
+
+export interface CommunityStats {
+  total_notes: number;
+  unique_verses: number;
+  categories: Record<string, number>;
+}
+
+export async function fetchCommunityNotes(
+  verseId: string
+): Promise<{ verse_id: string; count: number; notes: CommunityNote[] }> {
+  return fetchJson(`${BASE}/community/notes?verse_id=${encodeURIComponent(verseId)}`);
+}
+
+export async function fetchRecentNotes(
+  limit = 20
+): Promise<{ count: number; notes: CommunityNote[] }> {
+  return fetchJson(`${BASE}/community/recent?limit=${limit}`);
+}
+
+export async function fetchCommunityStats(): Promise<CommunityStats> {
+  return fetchJson(`${BASE}/community/stats`);
+}
+
 // ── Deep Analytics ──────────────────────────────────────────────────────────
 
 export interface HapaxResult {

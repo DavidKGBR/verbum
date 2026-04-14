@@ -24,6 +24,8 @@ import IntertextualityPage from "./pages/IntertextualityPage";
 import OpenQuestionsPage from "./pages/OpenQuestionsPage";
 import ThreadsPage from "./pages/ThreadsPage";
 import StructurePage from "./pages/StructurePage";
+import EmotionalLandscapePage from "./pages/EmotionalLandscapePage";
+import CommunityPage from "./pages/CommunityPage";
 
 export default function App() {
   return (
@@ -53,6 +55,8 @@ export default function App() {
         <Route path="/open-questions" element={<OpenQuestionsPage />} />
         <Route path="/threads" element={<ThreadsPage />} />
         <Route path="/structure" element={<StructurePage />} />
+        <Route path="/emotional" element={<EmotionalLandscapePage />} />
+        <Route path="/community" element={<CommunityPage />} />
       </Route>
     </Routes>
   );
