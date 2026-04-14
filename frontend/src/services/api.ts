@@ -382,6 +382,32 @@ export function fetchSemanticGraph(
   );
 }
 
+// ── Translation Divergence ───────────────────────────────────────────────────
+
+export interface DivergenceVerse {
+  verse_id: string;
+  reference: string;
+  texts: Record<string, string>;
+}
+
+export interface DivergenceResult {
+  strongs_id: string;
+  gloss: string;
+  translations_shown: string[];
+  total_verses: number;
+  verses: DivergenceVerse[];
+}
+
+export function fetchDivergence(
+  strongsId: string,
+  translations = "kjv,nvi,rvr",
+  limit = 20
+) {
+  return fetchJson<DivergenceResult>(
+    `${BASE}/semantic/divergence?strongs_id=${strongsId}&translations=${encodeURIComponent(translations)}&limit=${limit}`
+  );
+}
+
 // ── Commentary (HelloAO — external, fetched client-side) ────────────────────
 
 const HELLOAO_BASE = "https://bible.helloao.org/api/c";

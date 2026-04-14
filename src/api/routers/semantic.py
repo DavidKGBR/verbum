@@ -137,3 +137,112 @@ def get_semantic_graph(
         }
     finally:
         conn.close()
+
+
+@router.get("/semantic/divergence")
+def get_translation_divergence(
+    strongs_id: str = Query(..., description="Strong's ID (e.g., H2617, G25)"),
+    translations: str = Query(
+        "kjv,nvi,rvr",
+        description="Comma-separated translation IDs to compare",
+    ),
+    limit: int = Query(20, ge=1, le=100, description="Max verses to return"),
+) -> dict:
+    """Compare how different translations render the same Strong's word.
+
+    For each verse containing the target Strong's, returns the verse text
+    in each requested translation — enabling side-by-side comparison of
+    how translators chose to render the same Hebrew/Greek term.
+    """
+    conn = get_db()
+    try:
+        sid = strongs_id.upper()
+        trans_list = [t.strip().lower() for t in translations.split(",") if t.strip()]
+        if not trans_list:
+            raise HTTPException(status_code=400, detail="No translations specified")
+
+        # Get gloss for the header
+        lex_row = conn.execute(
+            "SELECT transliteration, short_definition FROM strongs_lexicon WHERE strongs_id = ?",
+            [sid],
+        ).fetchone()
+        gloss = ""
+        if lex_row:
+            gloss = f"{lex_row[0]} / {lex_row[1]}" if lex_row[0] else (lex_row[1] or "")
+
+        # Get distinct verse_ids containing this Strong's, limited
+        verse_ids_df = conn.execute(
+            """
+            SELECT DISTINCT verse_id
+            FROM interlinear
+            WHERE strongs_id = ?
+            ORDER BY verse_id
+            LIMIT ?
+            """,
+            [sid, limit],
+        ).fetchdf()
+
+        if verse_ids_df.empty:
+            return {
+                "strongs_id": sid,
+                "gloss": gloss,
+                "translations_shown": trans_list,
+                "total_verses": 0,
+                "verses": [],
+            }
+
+        verse_id_list = verse_ids_df["verse_id"].tolist()
+
+        # Fetch verse texts for all requested translations
+        vid_placeholders = ",".join(["?"] * len(verse_id_list))
+        tid_placeholders = ",".join(["?"] * len(trans_list))
+        params = verse_id_list + trans_list
+
+        texts_df = conn.execute(
+            f"""
+            SELECT verse_id, translation_id, text, reference
+            FROM verses
+            WHERE verse_id IN ({vid_placeholders})
+              AND translation_id IN ({tid_placeholders})
+            ORDER BY verse_id, translation_id
+            """,
+            params,
+        ).fetchdf()
+
+        # Pivot: group by verse_id
+        from collections import defaultdict
+
+        grouped: dict[str, dict] = defaultdict(lambda: {"texts": {}, "reference": ""})
+        for _, row in texts_df.iterrows():
+            vid = row["verse_id"]
+            grouped[vid]["texts"][row["translation_id"]] = row["text"]
+            if not grouped[vid]["reference"]:
+                grouped[vid]["reference"] = row["reference"]
+
+        # Total from interlinear (not limited)
+        total_row = conn.execute(
+            "SELECT COUNT(DISTINCT verse_id) FROM interlinear WHERE strongs_id = ?",
+            [sid],
+        ).fetchone()
+        total = total_row[0] if total_row else 0
+
+        verses_out = []
+        for vid in verse_id_list:
+            if vid in grouped:
+                verses_out.append(
+                    {
+                        "verse_id": vid,
+                        "reference": grouped[vid]["reference"],
+                        "texts": grouped[vid]["texts"],
+                    }
+                )
+
+        return {
+            "strongs_id": sid,
+            "gloss": gloss,
+            "translations_shown": trans_list,
+            "total_verses": total,
+            "verses": verses_out,
+        }
+    finally:
+        conn.close()

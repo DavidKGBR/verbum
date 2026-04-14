@@ -247,7 +247,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 | 8 | Commentary (HelloAO) | 🔥🔥🔥 | ✅ Concluído | — |
 | 9 | Verse Sharing | 🔥🔥 | ✅ Concluído | — |
 | 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | ✅ Concluído | — |
-| 11 | Translation Divergence | 🔥🔥🔥🔥 | 🔲 Planejado | — |
+| 11 | Translation Divergence | 🔥🔥🔥🔥 | ✅ Concluído | — |
 | 12 | README + Deploy + SEO | 🔥🔥🔥 | 🔲 Planejado | — |
 
 **Legenda de status:** 🔲 Planejado · 🚧 Em andamento · ⏸️ Pausado · ✅ Concluído
@@ -456,3 +456,12 @@ entrada lógica — sem depender da memória de conversa.
 - **Arquivos novos (2):** `src/api/routers/semantic.py`, `pages/SemanticGraphPage.tsx`.
 - **Modificados (4):** `src/api/main.py` (register router), `App.tsx` (rota), `Layout.tsx` (nav "Graph"), `api.ts` (types + fetch).
 - **Próxima entrada:** Tarefa #11 — Translation Divergence Heatmap. Visualiza onde KJV vs NVI vs RVR divergem na tradução do mesmo Strong's.
+
+### 2026-04-14 — Tarefa #11 concluída: Translation Divergence (Fase 4B)
+- **Página `/translation-divergence`** que compara como traduções diferentes renderizam a mesma palavra Strong's. Ex: H2617 (chesed) mostra "mercy" (KJV), "bondade" (NVI), "misericordia" (RVR) no mesmo verso lado a lado.
+- **Backend:** endpoint `GET /semantic/divergence?strongs_id=H2617&translations=kjv,nvi,rvr&limit=20`. Lógica: JOIN interlinear → verses (multi-translation), pivot por verse_id, retorna `{verse_id, reference, texts: {kjv: "...", nvi: "...", rvr: "..."}}`.
+- **Frontend:** tabela horizontal scrollável com sticky reference column. Translation toggles (10 traduções como chips gold). Row click expande texto truncado. Summary card com Strong's ID + gloss + contagem. Suggested IDs no empty state.
+- **Integração com WordStudyPage:** link "🔀 Compare translations of this word →" antes do bar chart.
+- **Arquivos novos (1):** `pages/TranslationDivergencePage.tsx`.
+- **Modificados (4):** `semantic.py` (+ endpoint), `api.ts` (types + fetch), `App.tsx` (rota), `WordStudyPage.tsx` (link).
+- **Próxima entrada:** Tarefa #12 — README + Deploy + SEO. A última. Envolve: README v3 completo, CLAUDE.md atualizado, Docker, static Strong's pages pra SEO, e possivelmente Terraform pra GCP.

@@ -10,6 +10,7 @@ import PlansPage from "./pages/PlansPage";
 import WordStudyPage from "./pages/WordStudyPage";
 import DictionaryPage from "./pages/DictionaryPage";
 import SemanticGraphPage from "./pages/SemanticGraphPage";
+import TranslationDivergencePage from "./pages/TranslationDivergencePage";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/word-study/:strongsId" element={<WordStudyPage />} />
         <Route path="/dictionary" element={<DictionaryPage />} />
         <Route path="/semantic-graph" element={<SemanticGraphPage />} />
+        <Route path="/translation-divergence" element={<TranslationDivergencePage />} />
       </Route>
     </Routes>
   );

@@ -144,6 +144,18 @@ export default function WordStudyPage() {
         </section>
       )}
 
+      {/* Translation divergence link */}
+      <section className="mb-8">
+        <Link
+          to={`/translation-divergence?word=${strongsId}`}
+          className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-lg border
+                     border-[var(--color-gold)]/30 hover:bg-[var(--color-gold)]/10
+                     transition text-[var(--color-gold-dark)]"
+        >
+          🔀 Compare translations of this word →
+        </Link>
+      </section>
+
       {/* Book frequency bar chart */}
       {distribution.length > 0 && (
         <section className="mb-8">
