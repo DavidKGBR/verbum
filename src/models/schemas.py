@@ -252,6 +252,48 @@ class OriginalText(BaseModel):
         return v
 
 
+# ─── Interlinear (word-level Strong's + morphology + semantic tags) ──────────
+
+
+class InterlinearLanguage(str, Enum):
+    HEBREW = "hebrew"
+    GREEK = "greek"
+
+
+class InterlinearWord(BaseModel):
+    """One word in an interlinear row — Strong's-tagged + morphologically
+    annotated + semantically disambiguated.
+
+    Source is always a STEPBible dataset (TAHOT for Hebrew, TAGNT for Greek).
+    The `strongs_id` is normalised to match `StrongsEntry.strongs_id` so that
+    `JOIN interlinear USING (strongs_id)` works directly. The `strongs_raw`
+    column preserves the original expression for audit (multi-morpheme
+    Hebrew lemmas often look like `H9002/H9009/{H0776G}` in the wild).
+    """
+
+    verse_id: str                  # "MAT.1.1"
+    word_position: int = Field(..., ge=1)
+    language: InterlinearLanguage
+    source: str                    # "tagnt" | "tahot"
+    original_word: str             # Greek or Hebrew word
+    transliteration: str | None = None
+    english: str | None = None
+    strongs_id: str | None = None  # normalised "G976" / "H776", or None if untagged
+    strongs_raw: str | None = None
+    grammar: str | None = None
+    lemma: str | None = None
+    gloss: str | None = None
+    semantic_tag: str | None = None
+
+    @field_validator("verse_id")
+    @classmethod
+    def validate_verse_id(cls, v: str) -> str:
+        parts = v.split(".")
+        if len(parts) != 3 or not parts[1].isdigit() or not parts[2].isdigit():
+            raise ValueError(f"Invalid verse_id: {v!r}")
+        return v
+
+
 # ─── Book catalog (canonical order) ───────────────────────────────────────────
 
 BOOK_CATALOG: list[dict] = [

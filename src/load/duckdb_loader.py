@@ -54,6 +54,7 @@ class DuckDBLoader:
         self.conn.execute("DROP TABLE IF EXISTS translations;")
         self.conn.execute("DROP TABLE IF EXISTS strongs_lexicon;")
         self.conn.execute("DROP TABLE IF EXISTS original_texts;")
+        self.conn.execute("DROP TABLE IF EXISTS interlinear;")
 
         self.conn.execute("""
             CREATE TABLE translations (
@@ -161,6 +162,7 @@ class DuckDBLoader:
 
         self._ensure_strongs_table()
         self._ensure_original_texts_table()
+        self._ensure_interlinear_table()
 
         self._create_analytical_views()
         logger.info("✅ Schema created successfully")
@@ -547,6 +549,74 @@ class DuckDBLoader:
         logger.info(f"✅ Loaded {count} {language} verses")
         return count
 
+    def _ensure_interlinear_table(self) -> None:
+        """Create the interlinear table if missing. Idempotent bootstrap for
+        pre-existing databases that predate task #3d."""
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS interlinear (
+                verse_id        VARCHAR NOT NULL,
+                word_position   INTEGER NOT NULL,
+                language        VARCHAR NOT NULL,
+                source          VARCHAR NOT NULL,
+                original_word   VARCHAR NOT NULL,
+                transliteration VARCHAR,
+                english         VARCHAR,
+                strongs_id      VARCHAR,
+                strongs_raw     VARCHAR,
+                grammar         VARCHAR,
+                lemma           VARCHAR,
+                gloss           VARCHAR,
+                semantic_tag    VARCHAR,
+                loaded_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (verse_id, word_position, source)
+            );
+        """)
+        self.conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_interlinear_verse ON interlinear(verse_id);"
+        )
+        self.conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_interlinear_strongs ON interlinear(strongs_id);"
+        )
+        self.conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_interlinear_language ON interlinear(language);"
+        )
+
+    def load_interlinear(self, df: pd.DataFrame, source: str) -> int:
+        """Replace interlinear rows for a given source ("tagnt" or "tahot").
+
+        Scoped DELETE keeps the two language sources independent — reloading
+        TAGNT doesn't wipe out TAHOT and vice versa.
+        """
+        if df.empty:
+            return 0
+
+        self._ensure_interlinear_table()
+
+        logger.info(f"🔤 Loading {len(df)} {source} interlinear words into DuckDB...")
+        self.conn.execute(
+            "DELETE FROM interlinear WHERE source = ?;",
+            [source],
+        )
+        self.conn.execute("""
+            INSERT INTO interlinear (
+                verse_id, word_position, language, source, original_word,
+                transliteration, english, strongs_id, strongs_raw,
+                grammar, lemma, gloss, semantic_tag
+            )
+            SELECT
+                verse_id, word_position, language, source, original_word,
+                transliteration, english, strongs_id, strongs_raw,
+                grammar, lemma, gloss, semantic_tag
+            FROM df
+        """)
+        count_row = self.conn.execute(
+            "SELECT COUNT(*) FROM interlinear WHERE source = ?",
+            [source],
+        ).fetchone()
+        count = count_row[0] if count_row else 0
+        logger.info(f"✅ Loaded {count} {source} interlinear words")
+        return count
+
     def log_pipeline_run(
         self,
         run_id: str,
@@ -613,5 +683,12 @@ class DuckDBLoader:
             result["original_texts"] = row[0] if row else 0
         except Exception:
             result["original_texts"] = 0
+
+        # interlinear is optional too
+        try:
+            row = self.conn.execute("SELECT COUNT(*) FROM interlinear").fetchone()
+            result["interlinear_words"] = row[0] if row else 0
+        except Exception:
+            result["interlinear_words"] = 0
 
         return result
