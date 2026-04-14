@@ -15,13 +15,18 @@ from src.api.routers import (
     books,
     compare,
     crossrefs,
+    deep_analytics,
     devotional,
+    intertextuality,
     lexicon,
+    open_questions,
     people,
     places,
     reader,
     search,
     semantic,
+    structure,
+    threads,
     timeline,
     topics,
 )
@@ -56,6 +61,11 @@ app.include_router(timeline.router, prefix="/api/v1", tags=["Timeline"])
 app.include_router(compare.router, prefix="/api/v1", tags=["Compare"])
 app.include_router(topics.router, prefix="/api/v1", tags=["Topics"])
 app.include_router(devotional.router, prefix="/api/v1", tags=["Devotional"])
+app.include_router(deep_analytics.router, prefix="/api/v1", tags=["Deep Analytics"])
+app.include_router(intertextuality.router, prefix="/api/v1", tags=["Intertextuality"])
+app.include_router(open_questions.router, prefix="/api/v1", tags=["Open Questions"])
+app.include_router(threads.router, prefix="/api/v1", tags=["Semantic Threads"])
+app.include_router(structure.router, prefix="/api/v1", tags=["Literary Structure"])
 
 
 @app.get("/health")

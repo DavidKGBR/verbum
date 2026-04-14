@@ -8,6 +8,7 @@ import {
   type BookFrequency,
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+import WordJourney from "../components/lexicon/WordJourney";
 
 const PAGE_SIZE = 20;
 
@@ -154,6 +155,12 @@ export default function WordStudyPage() {
         >
           🔀 Compare translations of this word →
         </Link>
+      </section>
+
+      {/* Word Journey — usage across eras */}
+      <section className="mb-8">
+        <SectionTitle>Word Journey Across Eras</SectionTitle>
+        <WordJourney strongsId={strongsId} />
       </section>
 
       {/* Book frequency bar chart */}

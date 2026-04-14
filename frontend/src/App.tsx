@@ -19,6 +19,11 @@ import TimelinePage from "./pages/TimelinePage";
 import ComparePage from "./pages/ComparePage";
 import TopicsPage from "./pages/TopicsPage";
 import DevotionalPage from "./pages/DevotionalPage";
+import DeepAnalyticsPage from "./pages/DeepAnalyticsPage";
+import IntertextualityPage from "./pages/IntertextualityPage";
+import OpenQuestionsPage from "./pages/OpenQuestionsPage";
+import ThreadsPage from "./pages/ThreadsPage";
+import StructurePage from "./pages/StructurePage";
 
 export default function App() {
   return (
@@ -43,6 +48,11 @@ export default function App() {
         <Route path="/compare" element={<ComparePage />} />
         <Route path="/topics" element={<TopicsPage />} />
         <Route path="/devotional" element={<DevotionalPage />} />
+        <Route path="/deep-analytics" element={<DeepAnalyticsPage />} />
+        <Route path="/intertextuality" element={<IntertextualityPage />} />
+        <Route path="/open-questions" element={<OpenQuestionsPage />} />
+        <Route path="/threads" element={<ThreadsPage />} />
+        <Route path="/structure" element={<StructurePage />} />
       </Route>
     </Routes>
   );

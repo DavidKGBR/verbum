@@ -207,6 +207,126 @@ def get_words_frequency(
         conn.close()
 
 
+@router.get("/words/{strongs_id}/journey")
+def get_word_journey(
+    strongs_id: str,
+) -> dict:
+    """Get a word's usage journey across biblical eras — how meaning shifts over time.
+
+    Groups occurrences by biblical era (Pentateuch, History, Poetry, Prophets,
+    Gospels, Epistles, Apocalyptic) and shows representative glosses per era.
+    """
+    conn = get_db()
+    try:
+        sid = strongs_id.upper()
+        df = conn.execute(
+            """
+            SELECT
+                SPLIT_PART(i.verse_id, '.', 1) AS book_id,
+                i.gloss,
+                i.semantic_tag,
+                COUNT(*) AS freq,
+                ANY_VALUE(v.book_name) AS book_name,
+                ANY_VALUE(v.book_position) AS book_position,
+                ANY_VALUE(bs.testament) AS testament,
+                ANY_VALUE(bs.category) AS category
+            FROM interlinear i
+            LEFT JOIN verses v ON i.verse_id = v.verse_id AND v.translation_id = 'kjv'
+            LEFT JOIN book_stats bs ON v.book_id = bs.book_id AND bs.translation_id = 'kjv'
+            WHERE i.strongs_id = ?
+            GROUP BY SPLIT_PART(i.verse_id, '.', 1), i.gloss, i.semantic_tag
+            ORDER BY ANY_VALUE(v.book_position), freq DESC
+            """,
+            [sid],
+        ).fetchdf()
+
+        if df.empty:
+            raise HTTPException(status_code=404, detail=f"No occurrences found for {sid}")
+
+        # Map categories to eras
+        era_map: dict[str, str] = {
+            "Law": "Pentateuch",
+            "History": "History",
+            "Poetry": "Poetry",
+            "Major Prophets": "Prophets",
+            "Minor Prophets": "Prophets",
+            "Gospels": "Gospels",
+            "Acts": "Epistles",
+            "Pauline Epistles": "Epistles",
+            "General Epistles": "Epistles",
+            "Apocalyptic": "Apocalyptic",
+        }
+
+        era_order = [
+            "Pentateuch",
+            "History",
+            "Poetry",
+            "Prophets",
+            "Gospels",
+            "Epistles",
+            "Apocalyptic",
+        ]
+
+        # Aggregate by era
+        eras: dict[str, dict] = {}
+        for _, row in df.iterrows():
+            cat = row.get("category") or ""
+            era = era_map.get(cat, cat or "Unknown")
+            if era not in eras:
+                eras[era] = {
+                    "era": era,
+                    "total_occurrences": 0,
+                    "books": {},
+                    "glosses": {},
+                    "semantic_tags": {},
+                }
+            bucket = eras[era]
+            freq = int(row["freq"])
+            bucket["total_occurrences"] += freq
+
+            bid = row["book_id"]
+            bucket["books"][bid] = bucket["books"].get(bid, 0) + freq
+
+            gloss = row.get("gloss") or ""
+            if gloss:
+                bucket["glosses"][gloss] = bucket["glosses"].get(gloss, 0) + freq
+
+            tag = row.get("semantic_tag") or ""
+            if tag:
+                bucket["semantic_tags"][tag] = bucket["semantic_tags"].get(tag, 0) + freq
+
+        # Format output in era order
+        journey = []
+        for era_name in era_order:
+            if era_name not in eras:
+                continue
+            b = eras[era_name]
+            top_glosses = sorted(b["glosses"].items(), key=lambda x: -x[1])[:5]
+            top_tags = sorted(b["semantic_tags"].items(), key=lambda x: -x[1])[:3]
+            journey.append(
+                {
+                    "era": era_name,
+                    "total_occurrences": b["total_occurrences"],
+                    "book_count": len(b["books"]),
+                    "top_books": sorted(
+                        [{"book_id": k, "count": v} for k, v in b["books"].items()],
+                        key=lambda x: -x["count"],
+                    )[:5],
+                    "top_glosses": [{"gloss": g, "count": c} for g, c in top_glosses],
+                    "top_semantic_tags": [{"tag": t, "count": c} for t, c in top_tags],
+                }
+            )
+
+        return {
+            "strongs_id": sid,
+            "total_eras": len(journey),
+            "total_occurrences": sum(e["total_occurrences"] for e in journey),
+            "journey": journey,
+        }
+    finally:
+        conn.close()
+
+
 @router.get("/words/{strongs_id}/distribution")
 def get_word_distribution(
     strongs_id: str,

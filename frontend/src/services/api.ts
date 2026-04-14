@@ -6,6 +6,206 @@ async function fetchJson<T>(url: string): Promise<T> {
   return res.json();
 }
 
+// ── Deep Analytics ──────────────────────────────────────────────────────────
+
+export interface HapaxResult {
+  strongs_id: string;
+  original_word: string;
+  transliteration: string;
+  gloss: string;
+  lemma: string;
+  language: string;
+  verse_id: string;
+  reference: string;
+  verse_text: string;
+  book_id: string;
+}
+
+export interface VocabRichnessBook {
+  book_id: string;
+  book_name: string;
+  testament: string;
+  unique_words: number;
+  total_words: number;
+  verse_count: number;
+  richness: number;
+}
+
+export async function fetchHapax(
+  params?: { book?: string; language?: string; limit?: number }
+): Promise<HapaxResult[]> {
+  const sp = new URLSearchParams();
+  if (params?.book) sp.set("book", params.book);
+  if (params?.language) sp.set("language", params.language);
+  if (params?.limit) sp.set("limit", String(params.limit));
+  const qs = sp.toString();
+  const data = await fetchJson<{ results: HapaxResult[] }>(
+    `${BASE}/analytics/hapax${qs ? `?${qs}` : ""}`
+  );
+  return data.results;
+}
+
+export async function fetchVocabularyRichness(): Promise<VocabRichnessBook[]> {
+  const data = await fetchJson<{ books: VocabRichnessBook[] }>(
+    `${BASE}/analytics/vocabulary-richness`
+  );
+  return data.books;
+}
+
+// ── Intertextuality ────────────────────────────────────────────────────────
+
+export interface QuotationEdge {
+  source: string;
+  target: string;
+  source_verse: string;
+  target_verse: string;
+  votes: number;
+}
+
+export interface HeatmapCell {
+  source: string;
+  target: string;
+  count: number;
+}
+
+export async function fetchOtNtQuotations(): Promise<{
+  total_edges: number;
+  edges: QuotationEdge[];
+}> {
+  return fetchJson(`${BASE}/intertextuality/quotations`);
+}
+
+export async function fetchCitationHeatmap(): Promise<{
+  ot_books: string[];
+  nt_books: string[];
+  cells: HeatmapCell[];
+}> {
+  return fetchJson(`${BASE}/intertextuality/heatmap`);
+}
+
+// ── Open Questions ─────────────────────────────────────────────────────────
+
+export interface OpenQuestion {
+  id: string;
+  title: string;
+  category: string;
+  difficulty: string;
+  verse_refs: string[];
+}
+
+export interface OpenQuestionDetail extends OpenQuestion {
+  description: string;
+  perspectives: { view: string; support: string }[];
+  related_strongs: string[];
+}
+
+export async function fetchOpenQuestions(
+  category?: string
+): Promise<{ total: number; categories: string[]; results: OpenQuestion[] }> {
+  const qs = category ? `?category=${encodeURIComponent(category)}` : "";
+  return fetchJson(`${BASE}/open-questions${qs}`);
+}
+
+export async function fetchOpenQuestion(id: string): Promise<OpenQuestionDetail> {
+  return fetchJson(`${BASE}/open-questions/${id}`);
+}
+
+// ── Semantic Threads ───────────────────────────────────────────────────────
+
+export interface SemanticThread {
+  id: string;
+  semantic_tag: string;
+  verse_count: number;
+  book_count: number;
+  word_count: number;
+  strength_score: number;
+}
+
+export interface ThreadVerse {
+  verse_id: string;
+  book_id: string;
+  reference: string;
+  verse_text: string;
+  transliteration: string;
+  gloss: string;
+  chapter: number;
+  verse: number;
+}
+
+export interface ThreadDetail {
+  id: string;
+  semantic_tag: string;
+  total_verses: number;
+  book_count: number;
+  books: { book_id: string; count: number }[];
+  verses: ThreadVerse[];
+}
+
+export async function fetchThreads(
+  minBooks = 3,
+  limit = 50
+): Promise<SemanticThread[]> {
+  const data = await fetchJson<{ threads: SemanticThread[] }>(
+    `${BASE}/threads?min_books=${minBooks}&limit=${limit}`
+  );
+  return data.threads;
+}
+
+export async function fetchThread(id: string): Promise<ThreadDetail> {
+  return fetchJson(`${BASE}/threads/${id}`);
+}
+
+// ── Literary Structure ─────────────────────────────────────────────────────
+
+export interface StructureElement {
+  label: string;
+  verse_start: number;
+  verse_end: number;
+  summary: string;
+  text_preview?: string;
+}
+
+export interface LiteraryStructure {
+  structure_id: string;
+  book_id: string;
+  chapter_start: number;
+  chapter_end: number;
+  type: string;
+  title: string;
+  confidence?: number;
+  description?: string;
+  elements?: StructureElement[];
+}
+
+export async function fetchAllStructures(
+  type?: string
+): Promise<LiteraryStructure[]> {
+  const qs = type ? `?structure_type=${type}` : "";
+  const data = await fetchJson<{ structures: LiteraryStructure[] }>(
+    `${BASE}/structure/all${qs}`
+  );
+  return data.structures;
+}
+
+export async function fetchChiasms(
+  book?: string
+): Promise<LiteraryStructure[]> {
+  const qs = book ? `?book=${book}` : "";
+  const data = await fetchJson<{ chiasms: LiteraryStructure[] }>(
+    `${BASE}/structure/chiasms${qs}`
+  );
+  return data.chiasms;
+}
+
+export async function fetchBookStructures(
+  book: string
+): Promise<LiteraryStructure[]> {
+  const data = await fetchJson<{ structures: LiteraryStructure[] }>(
+    `${BASE}/structure/${book}`
+  );
+  return data.structures;
+}
+
 // ── Devotional ──────────────────────────────────────────────────────────────
 
 export interface DevotionalPlan {

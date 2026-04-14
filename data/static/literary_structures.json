@@ -1,0 +1,212 @@
+[
+  {
+    "structure_id": "psa-1-chiasm",
+    "book_id": "PSA",
+    "chapter_start": 1,
+    "chapter_end": 1,
+    "type": "chiasm",
+    "title": "Psalm 1 — Two Ways Chiasm",
+    "confidence": 0.85,
+    "description": "Psalm 1 exhibits an A-B-C-B'-A' chiastic structure contrasting the righteous and the wicked.",
+    "elements": [
+      {"label": "A", "verse_start": 1, "verse_end": 1, "summary": "Blessed is the man who does NOT walk/stand/sit with wicked"},
+      {"label": "B", "verse_start": 2, "verse_end": 2, "summary": "Delight in the law of the LORD — meditation"},
+      {"label": "C", "verse_start": 3, "verse_end": 3, "summary": "CENTER: Tree planted by streams — prosperity"},
+      {"label": "B'", "verse_start": 4, "verse_end": 4, "summary": "The wicked are NOT so — chaff"},
+      {"label": "A'", "verse_start": 5, "verse_end": 6, "summary": "Wicked will NOT stand in judgment; LORD knows the way of the righteous"}
+    ]
+  },
+  {
+    "structure_id": "gen-6-9-chiasm",
+    "book_id": "GEN",
+    "chapter_start": 6,
+    "chapter_end": 9,
+    "type": "chiasm",
+    "title": "The Flood Narrative — Extended Chiasm",
+    "confidence": 0.9,
+    "description": "The flood narrative in Genesis 6-9 has a well-recognized chiastic structure centering on 'God remembered Noah' (8:1).",
+    "elements": [
+      {"label": "A", "verse_start": 1, "verse_end": 10, "summary": "Transitional introduction (6:1-10): Noah found grace"},
+      {"label": "B", "verse_start": 11, "verse_end": 22, "summary": "Violence on earth; God commands ark (6:11-22)"},
+      {"label": "C", "verse_start": 1, "verse_end": 5, "summary": "Enter the ark; 7 days waiting (7:1-5)"},
+      {"label": "D", "verse_start": 6, "verse_end": 16, "summary": "Waters rise 40 days (7:6-16)"},
+      {"label": "E", "verse_start": 17, "verse_end": 24, "summary": "Waters prevail 150 days (7:17-24)"},
+      {"label": "E'", "verse_start": 1, "verse_end": 5, "summary": "CENTER: God remembered Noah; waters recede 150 days (8:1-5)"},
+      {"label": "D'", "verse_start": 6, "verse_end": 14, "summary": "Waters recede 40 days; birds sent (8:6-14)"},
+      {"label": "C'", "verse_start": 15, "verse_end": 19, "summary": "Exit the ark (8:15-19)"},
+      {"label": "B'", "verse_start": 20, "verse_end": 22, "summary": "Noah's altar; God's promise (8:20-22)"},
+      {"label": "A'", "verse_start": 1, "verse_end": 17, "summary": "Transitional conclusion: covenant with Noah (9:1-17)"}
+    ]
+  },
+  {
+    "structure_id": "rom-8-28-30-chain",
+    "book_id": "ROM",
+    "chapter_start": 8,
+    "chapter_end": 8,
+    "type": "parallelism",
+    "title": "Romans 8:28-30 — The Golden Chain of Salvation",
+    "confidence": 0.95,
+    "description": "Paul presents a chain of five linked divine acts, each flowing into the next in a sorites (chain argument).",
+    "elements": [
+      {"label": "Step 1", "verse_start": 29, "verse_end": 29, "summary": "Foreknew → Predestined"},
+      {"label": "Step 2", "verse_start": 29, "verse_end": 29, "summary": "Predestined → Conformed to image of Son"},
+      {"label": "Step 3", "verse_start": 30, "verse_end": 30, "summary": "Predestined → Called"},
+      {"label": "Step 4", "verse_start": 30, "verse_end": 30, "summary": "Called → Justified"},
+      {"label": "Step 5", "verse_start": 30, "verse_end": 30, "summary": "Justified → Glorified"}
+    ]
+  },
+  {
+    "structure_id": "amo-1-2-oracles",
+    "book_id": "AMO",
+    "chapter_start": 1,
+    "chapter_end": 2,
+    "type": "parallelism",
+    "title": "Amos 1-2 — Oracle Pattern (3+1 Formula)",
+    "confidence": 0.95,
+    "description": "Eight oracles against nations follow the same pattern: 'For three transgressions of X, and for four...' spiraling from distant nations inward to Judah and finally Israel.",
+    "elements": [
+      {"label": "Oracle 1", "verse_start": 3, "verse_end": 5, "summary": "Damascus (Aram) — distant enemy"},
+      {"label": "Oracle 2", "verse_start": 6, "verse_end": 8, "summary": "Gaza (Philistia) — closer neighbor"},
+      {"label": "Oracle 3", "verse_start": 9, "verse_end": 10, "summary": "Tyre (Phoenicia)"},
+      {"label": "Oracle 4", "verse_start": 11, "verse_end": 12, "summary": "Edom — brother nation"},
+      {"label": "Oracle 5", "verse_start": 13, "verse_end": 15, "summary": "Ammon — relative"},
+      {"label": "Oracle 6", "verse_start": 1, "verse_end": 3, "summary": "Moab — relative"},
+      {"label": "Oracle 7", "verse_start": 4, "verse_end": 5, "summary": "Judah — sibling kingdom (surprise!)"},
+      {"label": "Oracle 8", "verse_start": 6, "verse_end": 16, "summary": "ISRAEL — the real target (longest oracle)"}
+    ]
+  },
+  {
+    "structure_id": "mat-5-7-sermon-mount",
+    "book_id": "MAT",
+    "chapter_start": 5,
+    "chapter_end": 7,
+    "type": "parallelism",
+    "title": "Sermon on the Mount — Three Pillars Structure",
+    "confidence": 0.8,
+    "description": "The Sermon on the Mount follows a teaching structure: Beatitudes (identity), Antitheses (ethics), and Three Practices (piety), bookended by kingdom declarations.",
+    "elements": [
+      {"label": "Opening", "verse_start": 1, "verse_end": 2, "summary": "Setting: mountain, crowds, disciples"},
+      {"label": "Beatitudes", "verse_start": 3, "verse_end": 12, "summary": "8 blessings defining kingdom citizens"},
+      {"label": "Salt & Light", "verse_start": 13, "verse_end": 16, "summary": "Mission identity"},
+      {"label": "Antitheses", "verse_start": 21, "verse_end": 48, "summary": "'You have heard... but I say' (6 contrasts)"},
+      {"label": "Three Practices", "verse_start": 1, "verse_end": 18, "summary": "Giving, prayer, fasting — 'in secret'"},
+      {"label": "Lord's Prayer", "verse_start": 9, "verse_end": 13, "summary": "CENTER: model prayer"},
+      {"label": "Warnings", "verse_start": 1, "verse_end": 23, "summary": "Judging, pearls, narrow gate, false prophets"},
+      {"label": "Two Ways", "verse_start": 24, "verse_end": 27, "summary": "Wise and foolish builders — closing parable"}
+    ]
+  },
+  {
+    "structure_id": "jhn-prologue-chiasm",
+    "book_id": "JHN",
+    "chapter_start": 1,
+    "chapter_end": 1,
+    "type": "chiasm",
+    "title": "John 1:1-18 — Prologue Chiasm",
+    "confidence": 0.85,
+    "description": "The Johannine Prologue forms a chiasm centering on the incarnation ('the Word became flesh').",
+    "elements": [
+      {"label": "A", "verse_start": 1, "verse_end": 2, "summary": "The Word was with God and was God"},
+      {"label": "B", "verse_start": 3, "verse_end": 3, "summary": "All things made through him"},
+      {"label": "C", "verse_start": 4, "verse_end": 5, "summary": "Life and light of men"},
+      {"label": "D", "verse_start": 6, "verse_end": 8, "summary": "John the witness (not the light)"},
+      {"label": "E", "verse_start": 9, "verse_end": 11, "summary": "The true light; world did not know him"},
+      {"label": "F", "verse_start": 12, "verse_end": 13, "summary": "Those who received him became children of God"},
+      {"label": "CENTER", "verse_start": 14, "verse_end": 14, "summary": "The Word became flesh — INCARNATION"},
+      {"label": "F'", "verse_start": 15, "verse_end": 15, "summary": "John's witness about him"},
+      {"label": "E'", "verse_start": 16, "verse_end": 16, "summary": "Grace upon grace received"},
+      {"label": "D'", "verse_start": 17, "verse_end": 17, "summary": "Law through Moses; grace through Jesus Christ"},
+      {"label": "A'", "verse_start": 18, "verse_end": 18, "summary": "No one has seen God; the Son has made him known"}
+    ]
+  },
+  {
+    "structure_id": "psa-119-acrostic",
+    "book_id": "PSA",
+    "chapter_start": 119,
+    "chapter_end": 119,
+    "type": "parallelism",
+    "title": "Psalm 119 — Grand Acrostic Structure",
+    "confidence": 1.0,
+    "description": "Psalm 119 is the longest chapter in the Bible: 22 stanzas of 8 verses each, one for each letter of the Hebrew alphabet. Each verse in a stanza begins with the same Hebrew letter.",
+    "elements": [
+      {"label": "Aleph", "verse_start": 1, "verse_end": 8, "summary": "Blessedness of walking in God's law"},
+      {"label": "Beth", "verse_start": 9, "verse_end": 16, "summary": "Keeping pure by the word"},
+      {"label": "Gimel", "verse_start": 17, "verse_end": 24, "summary": "Plea for understanding"},
+      {"label": "Daleth", "verse_start": 25, "verse_end": 32, "summary": "Clinging to God in dust"},
+      {"label": "He", "verse_start": 33, "verse_end": 40, "summary": "Teach me your statutes"},
+      {"label": "Vav", "verse_start": 41, "verse_end": 48, "summary": "Steadfast love and salvation"},
+      {"label": "Zayin", "verse_start": 49, "verse_end": 56, "summary": "Comfort in affliction"},
+      {"label": "Cheth", "verse_start": 57, "verse_end": 64, "summary": "The LORD is my portion"},
+      {"label": "Teth", "verse_start": 65, "verse_end": 72, "summary": "Affliction taught me your statutes"},
+      {"label": "Yod", "verse_start": 73, "verse_end": 80, "summary": "Your hands made me"},
+      {"label": "Kaph", "verse_start": 81, "verse_end": 88, "summary": "Soul faints for salvation"},
+      {"label": "Lamed", "verse_start": 89, "verse_end": 96, "summary": "Your word is eternal in heaven"},
+      {"label": "Mem", "verse_start": 97, "verse_end": 104, "summary": "Oh how I love your law!"},
+      {"label": "Nun", "verse_start": 105, "verse_end": 112, "summary": "Your word is a lamp to my feet"},
+      {"label": "Samekh", "verse_start": 113, "verse_end": 120, "summary": "Uphold me according to your promise"},
+      {"label": "Ayin", "verse_start": 121, "verse_end": 128, "summary": "Time for the LORD to act"},
+      {"label": "Pe", "verse_start": 129, "verse_end": 136, "summary": "Your testimonies are wonderful"},
+      {"label": "Tsade", "verse_start": 137, "verse_end": 144, "summary": "Your righteousness is eternal"},
+      {"label": "Qoph", "verse_start": 145, "verse_end": 152, "summary": "I cry with my whole heart"},
+      {"label": "Resh", "verse_start": 153, "verse_end": 160, "summary": "Plead my cause and redeem me"},
+      {"label": "Shin", "verse_start": 161, "verse_end": 168, "summary": "Princes persecute without cause"},
+      {"label": "Tav", "verse_start": 169, "verse_end": 176, "summary": "Let my cry come before you; I have gone astray like a lost sheep"}
+    ]
+  },
+  {
+    "structure_id": "rev-letters-chiasm",
+    "book_id": "REV",
+    "chapter_start": 2,
+    "chapter_end": 3,
+    "type": "chiasm",
+    "title": "Seven Letters of Revelation — Mirror Pattern",
+    "confidence": 0.75,
+    "description": "The seven letters to churches may form a chiastic pattern: Ephesus/Laodicea (lukewarm), Smyrna/Philadelphia (faithful), Pergamum/Sardis (compromise), with Thyatira at the center as longest letter.",
+    "elements": [
+      {"label": "A", "verse_start": 1, "verse_end": 7, "summary": "Ephesus — lost first love; threat of lampstand removal"},
+      {"label": "B", "verse_start": 8, "verse_end": 11, "summary": "Smyrna — faithful in persecution; no rebuke"},
+      {"label": "C", "verse_start": 12, "verse_end": 17, "summary": "Pergamum — compromise with false teaching"},
+      {"label": "CENTER", "verse_start": 18, "verse_end": 29, "summary": "Thyatira — longest letter; Jezebel; morning star promise"},
+      {"label": "C'", "verse_start": 1, "verse_end": 6, "summary": "Sardis — dead reputation; compromise"},
+      {"label": "B'", "verse_start": 7, "verse_end": 13, "summary": "Philadelphia — faithful; open door; no rebuke"},
+      {"label": "A'", "verse_start": 14, "verse_end": 22, "summary": "Laodicea — lukewarm; threat of being spit out"}
+    ]
+  },
+  {
+    "structure_id": "isa-5-parable-vineyard",
+    "book_id": "ISA",
+    "chapter_start": 5,
+    "chapter_end": 5,
+    "type": "inclusio",
+    "title": "Isaiah 5 — Parable of the Vineyard with Woe Oracles",
+    "confidence": 0.8,
+    "description": "Isaiah 5 begins with a love song about a vineyard (vv.1-7) and ends with judgment (vv.25-30), forming an inclusio around six woe oracles.",
+    "elements": [
+      {"label": "Opening", "verse_start": 1, "verse_end": 7, "summary": "Vineyard song: expected grapes, got wild grapes"},
+      {"label": "Woe 1", "verse_start": 8, "verse_end": 10, "summary": "Woe to land-grabbers"},
+      {"label": "Woe 2", "verse_start": 11, "verse_end": 17, "summary": "Woe to drunkards"},
+      {"label": "Woe 3", "verse_start": 18, "verse_end": 19, "summary": "Woe to those who drag sin with cords"},
+      {"label": "Woe 4", "verse_start": 20, "verse_end": 20, "summary": "Woe to those who call evil good"},
+      {"label": "Woe 5", "verse_start": 21, "verse_end": 21, "summary": "Woe to those wise in their own eyes"},
+      {"label": "Woe 6", "verse_start": 22, "verse_end": 23, "summary": "Woe to heroes at drinking wine"},
+      {"label": "Closing", "verse_start": 24, "verse_end": 30, "summary": "Judgment: fire, invasion, darkness"}
+    ]
+  },
+  {
+    "structure_id": "psa-150-doxology",
+    "book_id": "PSA",
+    "chapter_start": 150,
+    "chapter_end": 150,
+    "type": "parallelism",
+    "title": "Psalm 150 — Universal Praise Crescendo",
+    "confidence": 0.9,
+    "description": "Psalm 150 builds a crescendo of praise with three parallel sections: where to praise (vv.1-2), how to praise (vv.3-5), and who praises (v.6), all framed by Hallelujah inclusio.",
+    "elements": [
+      {"label": "Inclusio Open", "verse_start": 1, "verse_end": 1, "summary": "Praise the LORD! (Hallelujah)"},
+      {"label": "Where", "verse_start": 1, "verse_end": 1, "summary": "In his sanctuary, in his mighty heavens"},
+      {"label": "Why", "verse_start": 2, "verse_end": 2, "summary": "For his mighty deeds, his surpassing greatness"},
+      {"label": "How", "verse_start": 3, "verse_end": 5, "summary": "Trumpet, lute, harp, tambourine, dance, strings, pipe, cymbals"},
+      {"label": "Who", "verse_start": 6, "verse_end": 6, "summary": "Everything that has breath — universal scope"},
+      {"label": "Inclusio Close", "verse_start": 6, "verse_end": 6, "summary": "Praise the LORD! (Hallelujah)"}
+    ]
+  }
+]

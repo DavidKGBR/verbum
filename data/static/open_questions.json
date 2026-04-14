@@ -1,0 +1,214 @@
+[
+  {
+    "id": "sons-of-god-genesis-6",
+    "title": "Who are the 'Sons of God' in Genesis 6?",
+    "category": "Identity",
+    "difficulty": "advanced",
+    "description": "Genesis 6:1-4 mentions 'sons of God' (bene elohim) who took human wives. Three main interpretations exist: (1) fallen angels, (2) descendants of Seth, (3) ancient kings/rulers. The angelic view is oldest (Enoch, LXX, Josephus) but raises theological questions about angel-human procreation.",
+    "verse_refs": ["GEN.6.1", "GEN.6.2", "GEN.6.4", "JOB.1.6", "JOB.2.1", "JUD.1.6", "2PE.2.4"],
+    "perspectives": [
+      {"view": "Angelic", "support": "Job 1:6, 2:1 use same phrase for angels; 1 Enoch; Jude 6-7; 2 Peter 2:4"},
+      {"view": "Sethite", "support": "Augustine, Calvin; 'sons of God' = godly line of Seth marrying ungodly Cainites"},
+      {"view": "Royal/Dynastic", "support": "Ancient Near East parallels; kings called 'sons of god'"}
+    ],
+    "related_strongs": ["H1121", "H430"]
+  },
+  {
+    "id": "authorship-hebrews",
+    "title": "Who wrote the Epistle to the Hebrews?",
+    "category": "Authorship",
+    "difficulty": "intermediate",
+    "description": "Hebrews is the only NT epistle without a named author. Candidates include Paul, Barnabas, Apollos, Priscilla, Luke, and Clement of Rome. Origen famously said 'who wrote it, God alone knows.' The Greek style differs markedly from Paul's acknowledged letters.",
+    "verse_refs": ["HEB.1.1", "HEB.13.23", "HEB.13.24"],
+    "perspectives": [
+      {"view": "Pauline", "support": "Eastern church tradition; 2 Peter 3:15; Timothy connection (Heb 13:23)"},
+      {"view": "Apollos", "support": "Luther's suggestion; Acts 18:24 describes Apollos as eloquent, learned in Scripture"},
+      {"view": "Barnabas", "support": "Tertullian; Levite background fits Hebrews' priestly focus"},
+      {"view": "Priscilla", "support": "Harnack (1900); explains anonymous authorship (female writer in patriarchal culture)"}
+    ],
+    "related_strongs": []
+  },
+  {
+    "id": "mark-ending",
+    "title": "Is Mark 16:9-20 original?",
+    "category": "Textual Criticism",
+    "difficulty": "advanced",
+    "description": "The earliest manuscripts of Mark (Sinaiticus, Vaticanus) end at 16:8 with the women fleeing in fear. Verses 9-20 (the 'Longer Ending') appear in later manuscripts and contain snake-handling and poison-drinking references. Did Mark intend to end abruptly, or was the original ending lost?",
+    "verse_refs": ["MRK.16.8", "MRK.16.9", "MRK.16.15", "MRK.16.17", "MRK.16.18", "MRK.16.20"],
+    "perspectives": [
+      {"view": "Original ending at 16:8", "support": "Earliest manuscripts; abrupt ending fits Mark's literary style of amazement/fear"},
+      {"view": "Lost ending", "support": "16:8 seems incomplete; ancient scroll damage could explain loss"},
+      {"view": "Later addition", "support": "Vocabulary differs from Mark's style; material borrowed from Luke/John/Acts"}
+    ],
+    "related_strongs": []
+  },
+  {
+    "id": "isaiah-authorship",
+    "title": "Did one Isaiah write the entire book?",
+    "category": "Authorship",
+    "difficulty": "advanced",
+    "description": "Critical scholarship since Duhm (1892) divides Isaiah into Proto-Isaiah (1-39), Deutero-Isaiah (40-55), and Trito-Isaiah (56-66) based on vocabulary, theology, and historical setting. Traditional view maintains single authorship with prophetic foresight.",
+    "verse_refs": ["ISA.1.1", "ISA.40.1", "ISA.53.1", "ISA.56.1"],
+    "perspectives": [
+      {"view": "Single author", "support": "NT attributes all sections to Isaiah; Dead Sea Scrolls show no division; unified theological themes"},
+      {"view": "Multiple authors", "support": "Vocabulary shift at ch.40; Cyrus named in 44:28 (150 years before his time); different historical contexts"}
+    ],
+    "related_strongs": []
+  },
+  {
+    "id": "exodus-route",
+    "title": "What was the route of the Exodus?",
+    "category": "Geography",
+    "difficulty": "intermediate",
+    "description": "The identification of the Red Sea crossing location, Mount Sinai, and the wilderness route remain debated. 'Yam Suph' may mean 'Sea of Reeds' (a marsh lake) rather than the Red Sea. Traditional Sinai (Jebel Musa) competes with sites in Saudi Arabia (Jebel al-Lawz) and the Negev.",
+    "verse_refs": ["EXO.13.17", "EXO.13.18", "EXO.14.2", "EXO.19.1", "EXO.19.2"],
+    "perspectives": [
+      {"view": "Traditional (Southern Sinai)", "support": "4th-century Christian tradition; St. Catherine's monastery; desert geography matches"},
+      {"view": "Saudi Arabia (Midian)", "support": "Galatians 4:25 places Sinai in Arabia; Jebel al-Lawz; Moses' Midian connection"},
+      {"view": "Northern route", "support": "Yam Suph = Lake Timsah or Bitter Lakes; faster route to Canaan"}
+    ],
+    "related_strongs": ["H3220", "H5488"]
+  },
+  {
+    "id": "nephilim-identity",
+    "title": "Who were the Nephilim?",
+    "category": "Identity",
+    "difficulty": "intermediate",
+    "description": "Genesis 6:4 mentions Nephilim as 'mighty men of old.' Numbers 13:33 says the Israelite spies saw Nephilim descendants in Canaan. The word may derive from 'naphal' (to fall) or be related to 'nephilim' (giants). Their nature and survival past the Flood are debated.",
+    "verse_refs": ["GEN.6.4", "NUM.13.33"],
+    "perspectives": [
+      {"view": "Giant offspring of angels", "support": "1 Enoch; connection to 'sons of God' in Gen 6:2; LXX translates as 'giants'"},
+      {"view": "Warrior chieftains", "support": "Hebrew root 'naphal' = to fall; fallen/violent men; no supernatural element needed"},
+      {"view": "Pre-flood civilization", "support": "Canaanite mythology parallels; exaggerated report in Numbers 13:33"}
+    ],
+    "related_strongs": ["H5303"]
+  },
+  {
+    "id": "johannine-comma",
+    "title": "Is the Johannine Comma (1 John 5:7-8) original?",
+    "category": "Textual Criticism",
+    "difficulty": "advanced",
+    "description": "The Trinitarian formula 'the Father, the Word, and the Holy Ghost: and these three are one' appears in the KJV but is absent from all Greek manuscripts before the 16th century. Erasmus initially omitted it, then included it under pressure. It's now considered a Latin addition.",
+    "verse_refs": ["1JN.5.7", "1JN.5.8"],
+    "perspectives": [
+      {"view": "Later addition", "support": "Absent from all Greek MSS before 1500s; absent from all ancient versions except late Latin; no Church Father quotes it before 4th century"},
+      {"view": "Original", "support": "Found in some Old Latin MSS; Cyprian may allude to it (250 AD); Textus Receptus includes it"}
+    ],
+    "related_strongs": []
+  },
+  {
+    "id": "creation-days",
+    "title": "Are the 'days' of Genesis 1 literal 24-hour periods?",
+    "category": "Interpretation",
+    "difficulty": "beginner",
+    "description": "The Hebrew word 'yom' (day) in Genesis 1 has been interpreted as literal 24-hour days, long ages, literary framework, or analogical days. This question has divided Christians since at least Augustine (354-430), well before modern geology.",
+    "verse_refs": ["GEN.1.1", "GEN.1.5", "GEN.1.31", "GEN.2.4", "PSA.90.4", "2PE.3.8"],
+    "perspectives": [
+      {"view": "Literal 24-hour", "support": "Evening and morning formula; Exodus 20:11 parallel; 'yom' + number = literal day elsewhere"},
+      {"view": "Day-age", "support": "Psalm 90:4; 2 Peter 3:8; 'yom' can mean era (Gen 2:4); progressive creation"},
+      {"view": "Literary framework", "support": "Kline (1958); Days 1-3 parallel Days 4-6 (forming/filling); literary not chronological"},
+      {"view": "Analogical", "support": "God's workweek as analogy for human workweek; not literal but not merely literary"}
+    ],
+    "related_strongs": ["H3117"]
+  },
+  {
+    "id": "woman-revelation-12",
+    "title": "Who is the woman in Revelation 12?",
+    "category": "Identity",
+    "difficulty": "intermediate",
+    "description": "Revelation 12 describes a woman 'clothed with the sun, with the moon under her feet, and a crown of twelve stars.' She gives birth to a male child who will rule the nations. Catholic tradition identifies her as Mary; Protestants often see Israel or the Church.",
+    "verse_refs": ["REV.12.1", "REV.12.2", "REV.12.5", "REV.12.6", "REV.12.17"],
+    "perspectives": [
+      {"view": "Israel", "support": "Genesis 37:9 (Joseph's dream: sun, moon, 12 stars = Jacob's family); gives birth to Messiah"},
+      {"view": "Mary", "support": "Catholic tradition; literal mother of Jesus; Queen of Heaven imagery"},
+      {"view": "The Church", "support": "Protestant reading; persecuted people of God; both Israel and Church as unified people"}
+    ],
+    "related_strongs": ["G1135"]
+  },
+  {
+    "id": "paul-thorn-flesh",
+    "title": "What was Paul's 'thorn in the flesh'?",
+    "category": "Identity",
+    "difficulty": "beginner",
+    "description": "In 2 Corinthians 12:7, Paul mentions a 'thorn in the flesh, a messenger of Satan' that God refused to remove despite three prayers. Proposals include eye disease (Gal 4:13-15), epilepsy, malaria, a speech impediment, opposition from enemies, or spiritual temptation.",
+    "verse_refs": ["2CO.12.7", "2CO.12.8", "2CO.12.9", "GAL.4.13", "GAL.4.14", "GAL.4.15"],
+    "perspectives": [
+      {"view": "Eye disease", "support": "Galatians 4:15 (would have plucked out eyes); large handwriting (Gal 6:11); Acts 23:5"},
+      {"view": "Persecutors/opponents", "support": "'Messenger of Satan' = human agent; Numbers 33:55 uses 'thorn' for enemies"},
+      {"view": "Physical illness", "support": "Galatians 4:13-14 mentions illness; recurring nature; malaria common in region"},
+      {"view": "Spiritual temptation", "support": "Church Fathers; 'flesh' = sinful nature; pride after visions (12:7 context)"}
+    ],
+    "related_strongs": ["G4647"]
+  },
+  {
+    "id": "king-of-tyre-ezekiel",
+    "title": "Is Ezekiel 28 about Satan or the King of Tyre?",
+    "category": "Interpretation",
+    "difficulty": "intermediate",
+    "description": "Ezekiel 28:12-19 describes one who was 'in Eden, the garden of God,' an 'anointed cherub,' 'perfect from the day you were created until wickedness was found in you.' Is this hyperbolic language about Tyre's king or a glimpse of Satan's fall?",
+    "verse_refs": ["EZK.28.12", "EZK.28.13", "EZK.28.14", "EZK.28.15", "EZK.28.17"],
+    "perspectives": [
+      {"view": "King of Tyre only", "support": "Context addresses historical king; ANE royal ideology; prophetic hyperbole common in oracles"},
+      {"view": "Satan typologically", "support": "Eden reference; 'anointed cherub'; 'created perfect'; parallels Isaiah 14:12-15"},
+      {"view": "Both (dual reference)", "support": "Near-far fulfillment pattern; human king as type of cosmic rebellion"}
+    ],
+    "related_strongs": ["H3742"]
+  },
+  {
+    "id": "melchizedek-identity",
+    "title": "Who was Melchizedek?",
+    "category": "Identity",
+    "difficulty": "intermediate",
+    "description": "Melchizedek appears briefly in Genesis 14:18-20 as 'king of Salem, priest of God Most High' who blesses Abraham. Hebrews 7 elaborates that he had 'no father, no mother, no genealogy.' Was he a historical figure, a theophany (pre-incarnate Christ), or an angelic being?",
+    "verse_refs": ["GEN.14.18", "GEN.14.19", "GEN.14.20", "PSA.110.4", "HEB.5.6", "HEB.7.1", "HEB.7.3"],
+    "perspectives": [
+      {"view": "Historical Canaanite king-priest", "support": "Genesis narrative presents him matter-of-factly; Salem = Jerusalem; historical parallel to other priest-kings"},
+      {"view": "Pre-incarnate Christ (theophany)", "support": "Hebrews 7:3 ('without beginning or end'); eternal priesthood; blesses Abraham (greater blesses lesser)"},
+      {"view": "Shem (Noah's son)", "support": "Jewish tradition (Targum); Shem's lifespan overlaps Abraham's; oldest living patriarch"}
+    ],
+    "related_strongs": ["H4442"]
+  },
+  {
+    "id": "rich-man-lazarus-parable",
+    "title": "Is the Rich Man and Lazarus a parable or literal account?",
+    "category": "Interpretation",
+    "difficulty": "beginner",
+    "description": "Luke 16:19-31 uniquely names a character (Lazarus) in what appears to be a parable. Jesus describes the afterlife with Abraham's bosom, a great chasm, and conscious torment. Does this teach literal afterlife geography or use common Jewish imagery to make a moral point?",
+    "verse_refs": ["LUK.16.19", "LUK.16.22", "LUK.16.23", "LUK.16.26", "LUK.16.31"],
+    "perspectives": [
+      {"view": "Parable", "support": "Part of a parable series in Luke 15-16; uses stock characters; point is about heeding Moses and Prophets"},
+      {"view": "Literal account", "support": "Named character (Lazarus) unique among parables; Jesus presents as real event; teaches intermediate state"},
+      {"view": "Using common imagery", "support": "Parallels Egyptian and Jewish afterlife stories; Jesus repurposes familiar imagery for new teaching"}
+    ],
+    "related_strongs": ["G2976"]
+  },
+  {
+    "id": "predestination-free-will",
+    "title": "How do predestination and free will coexist?",
+    "category": "Theology",
+    "difficulty": "advanced",
+    "description": "Romans 8:29-30 and Ephesians 1:4-5 speak of God choosing/predestining believers 'before the foundation of the world.' Yet passages like Joshua 24:15 and John 3:16 emphasize human choice. This tension has produced Calvinism, Arminianism, Molinism, and other frameworks.",
+    "verse_refs": ["ROM.8.29", "ROM.8.30", "ROM.9.11", "ROM.9.16", "EPH.1.4", "EPH.1.5", "JHN.3.16", "2PE.3.9"],
+    "perspectives": [
+      {"view": "Calvinism (unconditional election)", "support": "Romans 9:11-16; Ephesians 1:4-5; God's sovereign choice not based on foreseen faith"},
+      {"view": "Arminianism (conditional election)", "support": "Romans 8:29 'foreknew' = foreseen faith; 2 Peter 3:9; John 3:16 'whoever believes'"},
+      {"view": "Molinism (middle knowledge)", "support": "God knows all possible choices; arranges circumstances; preserves both sovereignty and freedom"},
+      {"view": "Open Theism", "support": "God limits foreknowledge of free choices; genuine relationship requires real freedom"}
+    ],
+    "related_strongs": ["G4309"]
+  },
+  {
+    "id": "suffering-servant-isaiah-53",
+    "title": "Is the Suffering Servant in Isaiah 53 an individual or Israel?",
+    "category": "Interpretation",
+    "difficulty": "intermediate",
+    "description": "Isaiah 52:13-53:12 describes one who 'was pierced for our transgressions' and 'by his wounds we are healed.' Christians see Jesus; Jewish interpretation traditionally identifies the servant as the nation of Israel suffering on behalf of the nations.",
+    "verse_refs": ["ISA.52.13", "ISA.53.3", "ISA.53.5", "ISA.53.7", "ISA.53.12"],
+    "perspectives": [
+      {"view": "Jesus/Messiah", "support": "NT applies directly (Acts 8:32-35); detailed match to crucifixion; 'cut off from the land of the living'"},
+      {"view": "Israel collectively", "support": "Isaiah 49:3 'Israel, my servant'; context of exile; Israel suffers for the nations' sins"},
+      {"view": "Faithful remnant", "support": "Not all Israel but the righteous within Israel; a subset that bears suffering for the whole"}
+    ],
+    "related_strongs": ["H5650"]
+  }
+]
