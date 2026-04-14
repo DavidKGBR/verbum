@@ -244,7 +244,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 | 5 | Interlinear View | 🔥🔥🔥🔥🔥 | ✅ Concluído | — |
 | 6 | Word Study page | 🔥🔥🔥🔥 | ✅ Concluído | — |
 | 7 | Bible Dictionary | 🔥🔥🔥 | ✅ Concluído | — |
-| 8 | Commentary (HelloAO) | 🔥🔥🔥 | 🔲 Planejado | — |
+| 8 | Commentary (HelloAO) | 🔥🔥🔥 | ✅ Concluído | — |
 | 9 | Verse Sharing | 🔥🔥 | 🔲 Planejado | — |
 | 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
 | 11 | Translation Divergence | 🔥🔥🔥🔥 | 🔲 Planejado | — |
@@ -425,3 +425,14 @@ entrada lógica — sem depender da memória de conversa.
 - **Nav:** "Dictionary" adicionado ao sidebar com ícone de livro aberto.
 - **Snapshot DuckDB:** 302.503 versos · 344.754 crossrefs · 14.178 Strong's · 31.152 original texts · 406.852 interlinear words · **5.965 dictionary entries**.
 - **Próxima entrada:** Tarefa #8 — Commentary (HelloAO). Zero ETL: API externa que entrega comentário por versículo em tempo real. Matthew Henry, Adam Clarke, John Gill, Keil-Delitzsch. Integração direta no Reader como painel lateral.
+
+### 2026-04-14 — Tarefa #8 concluída: Commentary via HelloAO (Fase 3B)
+- **Task mais lean do roadmap:** zero backend, zero ETL, zero DuckDB. HelloAO Bible API (`bible.helloao.org`) serve comentários como JSON público com CORS `*` — frontend busca direto.
+- **6 comentários integrados:** Matthew Henry (default), John Gill, Adam Clarke, Jamieson-Fausset-Brown, Keil-Delitzsch (OT), Tyndale Study Notes. Dropdown pra trocar de comentarista.
+- **Formato:** `/api/c/{commentary}/{BOOK}/{chapter}.json` retorna por capítulo. Matthew Henry agrupa versos (entry "1" cobre 1-2, entry "3" cobre 3-5). Parser encontra o bloco correto via `findVerseEntry()` — entry com `number` mais alto ≤ verso selecionado.
+- **Cache in-memory:** `useRef<Map>` por `(commentary, book, chapter)` — trocar de verso no mesmo capítulo não refetcha. Trocar de capítulo ou comentarista sim.
+- **Integração:** nova aba "📚 Commentary" no `VerseActions` (entre Explain e Compare). Painel com texto formatado (parágrafos naturais do comentário), fonte body serif.
+- **Arquivos novos (1):** `components/reader/CommentaryPanel.tsx`.
+- **Arquivos modificados (3):** `services/api.ts` (types + fetch + COMMENTARIES array), `VerseActions.tsx` (tab + botão + painel), `VERBUM_PLAN.md`.
+- **Testado via Puppeteer:** Gen 1:1 → Commentary → Matthew Henry aparece com texto rico sobre a criação. Dropdown → trocar pra John Gill → texto muda.
+- **Próxima entrada:** Tarefa #9 — Verse Sharing (Canvas → PNG 1080×1080 medieval). Primeira tarefa puramente visual/design — não consome dados novos, só renderiza os existentes num formato compartilhável.

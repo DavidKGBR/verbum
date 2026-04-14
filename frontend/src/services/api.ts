@@ -349,6 +349,43 @@ export function searchDictionary(q: string, limit = 50) {
   );
 }
 
+// ── Commentary (HelloAO — external, fetched client-side) ────────────────────
+
+const HELLOAO_BASE = "https://bible.helloao.org/api/c";
+
+export interface CommentaryVerse {
+  type: string;
+  number: number;
+  content: string[];
+}
+
+export interface CommentaryChapter {
+  commentary: { id: string; name: string };
+  book: { id: string; name: string; introduction?: string };
+  chapter: { number: number; content: CommentaryVerse[]; introduction?: string };
+}
+
+export const COMMENTARIES = [
+  { id: "matthew-henry", name: "Matthew Henry" },
+  { id: "john-gill", name: "John Gill" },
+  { id: "adam-clarke", name: "Adam Clarke" },
+  { id: "jamieson-fausset-brown", name: "Jamieson-Fausset-Brown" },
+  { id: "keil-delitzsch", name: "Keil & Delitzsch (OT)" },
+  { id: "tyndale", name: "Tyndale Study Notes" },
+] as const;
+
+export async function fetchCommentary(
+  commentaryId: string,
+  book: string,
+  chapter: number
+): Promise<CommentaryChapter> {
+  const resp = await fetch(
+    `${HELLOAO_BASE}/${commentaryId}/${book}/${chapter}.json`
+  );
+  if (!resp.ok) throw new Error("Commentary not available");
+  return resp.json();
+}
+
 // ── AI Insights ─────────────────────────────────────────────────────────────
 
 export interface AIExplanation {

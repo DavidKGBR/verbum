@@ -9,6 +9,7 @@ import { useBookmarks } from "../hooks/useBookmarks";
 import { useVerseNotes } from "../hooks/useVerseNotes";
 import AIExplanationPanel from "./AIExplanationPanel";
 import NoteEditor from "./notes/NoteEditor";
+import CommentaryPanel from "./reader/CommentaryPanel";
 
 interface Props {
   verseId: string;
@@ -22,7 +23,7 @@ interface Props {
   initialTab?: Tab;
 }
 
-export type Tab = "none" | "crossrefs" | "compare" | "explain" | "notes";
+export type Tab = "none" | "crossrefs" | "compare" | "explain" | "notes" | "commentary";
 
 export default function VerseActions({
   verseId,
@@ -140,6 +141,16 @@ export default function VerseActions({
           🤖 Explain
         </button>
         <button
+          onClick={() => setTab(tab === "commentary" ? "none" : "commentary")}
+          className={`text-xs px-3 py-1 rounded border transition ${
+            tab === "commentary"
+              ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
+              : "hover:bg-gray-100"
+          }`}
+        >
+          📚 Commentary
+        </button>
+        <button
           onClick={loadCompare}
           className={`text-xs px-3 py-1 rounded border transition ${
             tab === "compare"
@@ -230,6 +241,11 @@ export default function VerseActions({
       {/* AI Explain panel */}
       {tab === "explain" && (
         <AIExplanationPanel verseId={verseId} translation={translation} />
+      )}
+
+      {/* Commentary panel */}
+      {tab === "commentary" && bookId && chapter && verse && (
+        <CommentaryPanel book={bookId} chapter={chapter} verse={verse} />
       )}
 
       {/* Note editor panel */}
