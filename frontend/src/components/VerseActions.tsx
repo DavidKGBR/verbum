@@ -10,6 +10,7 @@ import { useVerseNotes } from "../hooks/useVerseNotes";
 import AIExplanationPanel from "./AIExplanationPanel";
 import NoteEditor from "./notes/NoteEditor";
 import CommentaryPanel from "./reader/CommentaryPanel";
+import ShareModal from "./sharing/ShareModal";
 
 interface Props {
   verseId: string;
@@ -47,6 +48,7 @@ export default function VerseActions({
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
 
   // Auto-load if initialTab requests data
   useEffect(() => {
@@ -190,7 +192,22 @@ export default function VerseActions({
         >
           {copied ? "✅ Copied" : "📋 Copy"}
         </button>
+        <button
+          onClick={() => setShareOpen(true)}
+          className="text-xs px-3 py-1 rounded border hover:bg-gray-100 transition"
+        >
+          🖼️ Share
+        </button>
       </div>
+
+      {shareOpen && (
+        <ShareModal
+          text={text}
+          reference={reference || verseId}
+          translation={translation}
+          onClose={() => setShareOpen(false)}
+        />
+      )}
 
       {/* Cross-refs panel */}
       {tab === "crossrefs" && (

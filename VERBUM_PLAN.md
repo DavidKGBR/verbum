@@ -245,7 +245,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 | 6 | Word Study page | 🔥🔥🔥🔥 | ✅ Concluído | — |
 | 7 | Bible Dictionary | 🔥🔥🔥 | ✅ Concluído | — |
 | 8 | Commentary (HelloAO) | 🔥🔥🔥 | ✅ Concluído | — |
-| 9 | Verse Sharing | 🔥🔥 | 🔲 Planejado | — |
+| 9 | Verse Sharing | 🔥🔥 | ✅ Concluído | — |
 | 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
 | 11 | Translation Divergence | 🔥🔥🔥🔥 | 🔲 Planejado | — |
 | 12 | README + Deploy + SEO | 🔥🔥🔥 | 🔲 Planejado | — |
@@ -436,3 +436,12 @@ entrada lógica — sem depender da memória de conversa.
 - **Arquivos modificados (3):** `services/api.ts` (types + fetch + COMMENTARIES array), `VerseActions.tsx` (tab + botão + painel), `VERBUM_PLAN.md`.
 - **Testado via Puppeteer:** Gen 1:1 → Commentary → Matthew Henry aparece com texto rico sobre a criação. Dropdown → trocar pra John Gill → texto muda.
 - **Próxima entrada:** Tarefa #9 — Verse Sharing (Canvas → PNG 1080×1080 medieval). Primeira tarefa puramente visual/design — não consome dados novos, só renderiza os existentes num formato compartilhável.
+
+### 2026-04-14 — Tarefa #9 concluída: Verse Sharing (Fase 3C)
+- **Canvas puro, zero deps.** Renderiza card 1080×1080 via Canvas API com `ctx.fillText` + word-wrap manual.
+- **Estilo:** fundo parchment (#f5f0e8), borda dourada com L-shape corner ornaments, texto em Cormorant Garamond (40px pra versos curtos, 32px pra longos), referência em Playfair Display gold, badge da tradução, watermark "Verbum" (opacity 25%).
+- **UX:** botão "🖼️ Share" no VerseActions → modal com preview + "Copy to clipboard" (via `ClipboardItem`) + "Download PNG" (via `canvas.toBlob` + `URL.createObjectURL`). ESC fecha.
+- **Arquivos novos (2):** `components/sharing/VerseCardCanvas.tsx`, `components/sharing/ShareModal.tsx`.
+- **Modificados (2):** `VerseActions.tsx` (botão + modal state), `VERBUM_PLAN.md`.
+- **Testado:** Psalms 23:1 renderiza corretamente com aspas curvas, borda, e corner accents. Preview no modal mostra canvas scaled down.
+- **Próxima entrada:** Tarefa #10 — Grafo de Campo Semântico (Crown Jewel). D3.js force-directed graph de coocorrência de Strong's + semantic tags. A mais ambiciosa do roadmap.
