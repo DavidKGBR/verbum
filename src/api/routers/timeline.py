@@ -31,8 +31,11 @@ ERAS = [
     {"id": "monarchy", "name": "Monarchy", "start": -1050, "end": -586, "color": "#7c3aed"},
     {"id": "exile", "name": "Exile & Return", "start": -586, "end": -400, "color": "#2563eb"},
     {
-        "id": "intertestamental", "name": "Intertestamental",
-        "start": -400, "end": -5, "color": "#6b7280",
+        "id": "intertestamental",
+        "name": "Intertestamental",
+        "start": -400,
+        "end": -5,
+        "color": "#6b7280",
     },
     {"id": "nt", "name": "New Testament", "start": -5, "end": 100, "color": "#059669"},
 ]

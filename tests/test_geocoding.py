@@ -68,9 +68,7 @@ class TestExtractorParsing:
             "friendly_id": "Red Sea",
             "preceding_article": "the",
             "type": "water",
-            "identifications": [
-                {"resolutions": [{"lonlat": "36.0,22.0", "best_path_score": 700}]}
-            ],
+            "identifications": [{"resolutions": [{"lonlat": "36.0,22.0", "best_path_score": 700}]}],
         }
         jsonl_path = tmp_path / "ancient.jsonl"  # type: ignore[operator]
         jsonl_path.write_text(json.dumps(record) + "\n", encoding="utf-8")
@@ -139,32 +137,34 @@ def geo_db(tmp_path_factory: pytest.TempPathFactory) -> str:
     loader._ensure_theographic_tables()
 
     # Seed places — Jerusalem has coords, Bethel doesn't
-    places_df = pd.DataFrame([
-        {
-            "place_id": "recP1",
-            "slug": "jerusalem_1",
-            "name": "Jerusalem",
-            "latitude": 31.76,
-            "longitude": 35.21,
-            "geo_confidence": 0.5,
-            "place_type": "City",
-            "description": None,
-            "also_called": None,
-            "verse_count": 811,
-        },
-        {
-            "place_id": "recP2",
-            "slug": "bethel_1",
-            "name": "Bethel",
-            "latitude": None,
-            "longitude": None,
-            "geo_confidence": None,
-            "place_type": None,
-            "description": None,
-            "also_called": None,
-            "verse_count": 66,
-        },
-    ])
+    places_df = pd.DataFrame(
+        [
+            {
+                "place_id": "recP1",
+                "slug": "jerusalem_1",
+                "name": "Jerusalem",
+                "latitude": 31.76,
+                "longitude": 35.21,
+                "geo_confidence": 0.5,
+                "place_type": "City",
+                "description": None,
+                "also_called": None,
+                "verse_count": 811,
+            },
+            {
+                "place_id": "recP2",
+                "slug": "bethel_1",
+                "name": "Bethel",
+                "latitude": None,
+                "longitude": None,
+                "geo_confidence": None,
+                "place_type": None,
+                "description": None,
+                "also_called": None,
+                "verse_count": 66,
+            },
+        ]
+    )
     loader.load_biblical_places(places_df)
     loader.close()
     return db_path
@@ -174,15 +174,17 @@ class TestGeocodingEnrichment:
     def test_enriches_missing_coords(self, geo_db: str) -> None:
         loader = DuckDBLoader(LoadConfig(duckdb_path=geo_db))
 
-        geo_df = pd.DataFrame([
-            {
-                "name": "Bethel",
-                "latitude": 31.924,
-                "longitude": 35.234,
-                "geo_confidence": 0.75,
-                "place_type": "settlement",
-            },
-        ])
+        geo_df = pd.DataFrame(
+            [
+                {
+                    "name": "Bethel",
+                    "latitude": 31.924,
+                    "longitude": 35.234,
+                    "geo_confidence": 0.75,
+                    "place_type": "settlement",
+                },
+            ]
+        )
         total = loader.enrich_places_geocoding(geo_df)
         assert total >= 2  # Jerusalem + Bethel now both have coords
 
@@ -199,41 +201,41 @@ class TestGeocodingEnrichment:
         loader = DuckDBLoader(LoadConfig(duckdb_path=geo_db))
 
         # Jerusalem already has confidence 0.5, provide higher
-        geo_df = pd.DataFrame([
-            {
-                "name": "Jerusalem",
-                "latitude": 31.7683,
-                "longitude": 35.2137,
-                "geo_confidence": 0.95,
-                "place_type": "settlement",
-            },
-        ])
+        geo_df = pd.DataFrame(
+            [
+                {
+                    "name": "Jerusalem",
+                    "latitude": 31.7683,
+                    "longitude": 35.2137,
+                    "geo_confidence": 0.95,
+                    "place_type": "settlement",
+                },
+            ]
+        )
         loader.enrich_places_geocoding(geo_df)
 
-        df = loader.query(
-            "SELECT geo_confidence FROM biblical_places "
-            "WHERE slug = 'jerusalem_1'"
-        )
+        df = loader.query("SELECT geo_confidence FROM biblical_places WHERE slug = 'jerusalem_1'")
         loader.close()
         assert df.iloc[0]["geo_confidence"] == pytest.approx(0.95)
 
     def test_inserts_new_places(self, geo_db: str) -> None:
         loader = DuckDBLoader(LoadConfig(duckdb_path=geo_db))
 
-        geo_df = pd.DataFrame([
-            {
-                "name": "Nineveh",
-                "latitude": 36.3589,
-                "longitude": 43.1531,
-                "geo_confidence": 0.9,
-                "place_type": "settlement",
-            },
-        ])
+        geo_df = pd.DataFrame(
+            [
+                {
+                    "name": "Nineveh",
+                    "latitude": 36.3589,
+                    "longitude": 43.1531,
+                    "geo_confidence": 0.9,
+                    "place_type": "settlement",
+                },
+            ]
+        )
         loader.enrich_places_geocoding(geo_df)
 
         df = loader.query(
-            "SELECT name, latitude FROM biblical_places "
-            "WHERE LOWER(name) = 'nineveh'"
+            "SELECT name, latitude FROM biblical_places WHERE LOWER(name) = 'nineveh'"
         )
         loader.close()
         assert len(df) == 1

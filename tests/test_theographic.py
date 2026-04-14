@@ -93,81 +93,89 @@ def seeded_theographic_db(tmp_path_factory: pytest.TempPathFactory) -> str:
     loader._ensure_theographic_tables()
 
     # Seed people
-    people_df = pd.DataFrame([
-        {
-            "person_id": "rec1",
-            "slug": "moses_1",
-            "name": "Moses",
-            "gender": "Male",
-            "birth_year": -1526,
-            "death_year": -1406,
-            "description": "Leader of Israel",
-            "also_called": json.dumps(["Moshe"]),
-            "tribe": "Levi",
-            "occupation": "Prophet, Leader",
-            "books_mentioned": json.dumps(["EXO", "LEV", "NUM", "DEU"]),
-            "verse_count": 847,
-            "min_year": -1526,
-            "max_year": -1406,
-        },
-        {
-            "person_id": "rec2",
-            "slug": "aaron_1",
-            "name": "Aaron",
-            "gender": "Male",
-            "birth_year": -1529,
-            "death_year": -1407,
-            "description": "High Priest",
-            "also_called": None,
-            "tribe": "Levi",
-            "occupation": "Priest",
-            "books_mentioned": json.dumps(["EXO", "LEV", "NUM"]),
-            "verse_count": 347,
-            "min_year": -1529,
-            "max_year": -1407,
-        },
-    ])
+    people_df = pd.DataFrame(
+        [
+            {
+                "person_id": "rec1",
+                "slug": "moses_1",
+                "name": "Moses",
+                "gender": "Male",
+                "birth_year": -1526,
+                "death_year": -1406,
+                "description": "Leader of Israel",
+                "also_called": json.dumps(["Moshe"]),
+                "tribe": "Levi",
+                "occupation": "Prophet, Leader",
+                "books_mentioned": json.dumps(["EXO", "LEV", "NUM", "DEU"]),
+                "verse_count": 847,
+                "min_year": -1526,
+                "max_year": -1406,
+            },
+            {
+                "person_id": "rec2",
+                "slug": "aaron_1",
+                "name": "Aaron",
+                "gender": "Male",
+                "birth_year": -1529,
+                "death_year": -1407,
+                "description": "High Priest",
+                "also_called": None,
+                "tribe": "Levi",
+                "occupation": "Priest",
+                "books_mentioned": json.dumps(["EXO", "LEV", "NUM"]),
+                "verse_count": 347,
+                "min_year": -1529,
+                "max_year": -1407,
+            },
+        ]
+    )
     loader.load_biblical_people(people_df)
 
     # Seed places
-    places_df = pd.DataFrame([
-        {
-            "place_id": "recP1",
-            "slug": "jerusalem_1",
-            "name": "Jerusalem",
-            "latitude": 31.7683,
-            "longitude": 35.2137,
-            "geo_confidence": 0.95,
-            "place_type": "City",
-            "description": "Holy city",
-            "also_called": json.dumps(["Zion", "Salem"]),
-            "verse_count": 811,
-        },
-    ])
+    places_df = pd.DataFrame(
+        [
+            {
+                "place_id": "recP1",
+                "slug": "jerusalem_1",
+                "name": "Jerusalem",
+                "latitude": 31.7683,
+                "longitude": 35.2137,
+                "geo_confidence": 0.95,
+                "place_type": "City",
+                "description": "Holy city",
+                "also_called": json.dumps(["Zion", "Salem"]),
+                "verse_count": 811,
+            },
+        ]
+    )
     loader.load_biblical_places(places_df)
 
     # Seed events
-    events_df = pd.DataFrame([
-        {
-            "event_id": "recE1",
-            "title": "The Exodus",
-            "description": "Israel leaves Egypt",
-            "start_year": -1446,
-            "sort_key": 1446.0,
-            "duration": "40Y",
-            "era": "Exodus & Conquest",
-            "participants": json.dumps(["moses_1", "aaron_1"]),
-            "locations": json.dumps(["egypt_1", "sinai_1"]),
-            "verse_refs": json.dumps(["EXO.12.31", "EXO.14.21"]),
-        },
-    ])
+    events_df = pd.DataFrame(
+        [
+            {
+                "event_id": "recE1",
+                "title": "The Exodus",
+                "description": "Israel leaves Egypt",
+                "start_year": -1446,
+                "sort_key": 1446.0,
+                "duration": "40Y",
+                "era": "Exodus & Conquest",
+                "participants": json.dumps(["moses_1", "aaron_1"]),
+                "locations": json.dumps(["egypt_1", "sinai_1"]),
+                "verse_refs": json.dumps(["EXO.12.31", "EXO.14.21"]),
+            },
+        ]
+    )
     loader.load_biblical_events(events_df)
 
     # Seed family relations
-    rels_df = pd.DataFrame([
-        {"person_id": "moses_1", "related_person_id": "aaron_1", "relation_type": "sibling"},
-        {"person_id": "aaron_1", "related_person_id": "moses_1", "relation_type": "sibling"},
-    ])
+    rels_df = pd.DataFrame(
+        [
+            {"person_id": "moses_1", "related_person_id": "aaron_1", "relation_type": "sibling"},
+            {"person_id": "aaron_1", "related_person_id": "moses_1", "relation_type": "sibling"},
+        ]
+    )
     loader.load_family_relations(rels_df)
 
     loader.close()
@@ -201,9 +209,7 @@ class TestTheographicLoader:
 
     def test_family_relations_loaded(self, seeded_theographic_db: str) -> None:
         loader = DuckDBLoader(LoadConfig(duckdb_path=seeded_theographic_db))
-        df = loader.query(
-            "SELECT * FROM family_relations WHERE person_id = 'moses_1'"
-        )
+        df = loader.query("SELECT * FROM family_relations WHERE person_id = 'moses_1'")
         loader.close()
         assert len(df) == 1
         assert df.iloc[0]["related_person_id"] == "aaron_1"

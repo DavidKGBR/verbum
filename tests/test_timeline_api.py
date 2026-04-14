@@ -22,31 +22,46 @@ def seeded_db(tmp_path_factory: pytest.TempPathFactory) -> str:
     loader = DuckDBLoader(LoadConfig(duckdb_path=db_path))
     loader._ensure_theographic_tables()
 
-    events_df = pd.DataFrame([
-        {
-            "event_id": "recE1", "title": "The Exodus",
-            "description": "Israel leaves Egypt", "start_year": -1446,
-            "sort_key": 1446.0, "duration": "40Y", "era": "Exodus & Conquest",
-            "participants": json.dumps(["moses_1", "aaron_1"]),
-            "locations": json.dumps(["egypt_1", "sinai_1"]),
-            "verse_refs": json.dumps(["EXO.12.31"]),
-        },
-        {
-            "event_id": "recE2", "title": "The Crucifixion",
-            "description": None, "start_year": 33,
-            "sort_key": 33.0, "duration": "1D", "era": "New Testament",
-            "participants": json.dumps(["jesus_1"]),
-            "locations": json.dumps(["jerusalem_1"]),
-            "verse_refs": json.dumps(["MAT.27.33"]),
-        },
-        {
-            "event_id": "recE3", "title": "Fall of Jerusalem",
-            "description": "Babylon conquers", "start_year": -586,
-            "sort_key": 586.0, "duration": None, "era": "Monarchy",
-            "participants": None, "locations": json.dumps(["jerusalem_1"]),
-            "verse_refs": None,
-        },
-    ])
+    events_df = pd.DataFrame(
+        [
+            {
+                "event_id": "recE1",
+                "title": "The Exodus",
+                "description": "Israel leaves Egypt",
+                "start_year": -1446,
+                "sort_key": 1446.0,
+                "duration": "40Y",
+                "era": "Exodus & Conquest",
+                "participants": json.dumps(["moses_1", "aaron_1"]),
+                "locations": json.dumps(["egypt_1", "sinai_1"]),
+                "verse_refs": json.dumps(["EXO.12.31"]),
+            },
+            {
+                "event_id": "recE2",
+                "title": "The Crucifixion",
+                "description": None,
+                "start_year": 33,
+                "sort_key": 33.0,
+                "duration": "1D",
+                "era": "New Testament",
+                "participants": json.dumps(["jesus_1"]),
+                "locations": json.dumps(["jerusalem_1"]),
+                "verse_refs": json.dumps(["MAT.27.33"]),
+            },
+            {
+                "event_id": "recE3",
+                "title": "Fall of Jerusalem",
+                "description": "Babylon conquers",
+                "start_year": -586,
+                "sort_key": 586.0,
+                "duration": None,
+                "era": "Monarchy",
+                "participants": None,
+                "locations": json.dumps(["jerusalem_1"]),
+                "verse_refs": None,
+            },
+        ]
+    )
     loader.load_biblical_events(events_df)
     loader.close()
     return db_path

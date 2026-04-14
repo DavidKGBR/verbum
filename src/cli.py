@@ -447,30 +447,22 @@ def theographic(
         if people:
             df_people = pd.DataFrame([p.model_dump() for p in people])
             count_p = loader.load_biblical_people(df_people)
-            console.print(
-                f"[green]\u2713[/green] Loaded [bold]{count_p:,}[/bold] people"
-            )
+            console.print(f"[green]\u2713[/green] Loaded [bold]{count_p:,}[/bold] people")
 
         if places:
             df_places = pd.DataFrame([p.model_dump() for p in places])
             count_pl = loader.load_biblical_places(df_places)
-            console.print(
-                f"[green]\u2713[/green] Loaded [bold]{count_pl:,}[/bold] places"
-            )
+            console.print(f"[green]\u2713[/green] Loaded [bold]{count_pl:,}[/bold] places")
 
         if events:
             df_events = pd.DataFrame([e.model_dump() for e in events])
             count_e = loader.load_biblical_events(df_events)
-            console.print(
-                f"[green]\u2713[/green] Loaded [bold]{count_e:,}[/bold] events"
-            )
+            console.print(f"[green]\u2713[/green] Loaded [bold]{count_e:,}[/bold] events")
 
         if relations:
             df_rels = pd.DataFrame([r.model_dump() for r in relations])
             count_r = loader.load_family_relations(df_rels)
-            console.print(
-                f"[green]\u2713[/green] Loaded [bold]{count_r:,}[/bold] family relations"
-            )
+            console.print(f"[green]\u2713[/green] Loaded [bold]{count_r:,}[/bold] family relations")
 
     console.print("\n[green]\u2713 Theographic extraction complete.[/green]")
 

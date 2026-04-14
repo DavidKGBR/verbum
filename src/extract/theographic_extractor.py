@@ -27,27 +27,75 @@ from src.models.theographic import (
 
 logger = logging.getLogger(__name__)
 
-BASE_RAW = (
-    "https://raw.githubusercontent.com/robertrouse/"
-    "theographic-bible-metadata/master/json"
-)
+BASE_RAW = "https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/master/json"
 
 # Map Theographic OSIS-style book names to our canonical 3-letter IDs.
 _OSIS_TO_BOOK_ID: dict[str, str] = {
-    "Gen": "GEN", "Exod": "EXO", "Lev": "LEV", "Num": "NUM", "Deut": "DEU",
-    "Josh": "JOS", "Judg": "JDG", "Ruth": "RUT", "1Sam": "1SA", "2Sam": "2SA",
-    "1Kgs": "1KI", "2Kgs": "2KI", "1Chr": "1CH", "2Chr": "2CH", "Ezra": "EZR",
-    "Neh": "NEH", "Esth": "EST", "Job": "JOB", "Ps": "PSA", "Prov": "PRO",
-    "Eccl": "ECC", "Song": "SNG", "Isa": "ISA", "Jer": "JER", "Lam": "LAM",
-    "Ezek": "EZK", "Dan": "DAN", "Hos": "HOS", "Joel": "JOL", "Amos": "AMO",
-    "Obad": "OBA", "Jonah": "JON", "Mic": "MIC", "Nah": "NAM", "Hab": "HAB",
-    "Zeph": "ZEP", "Hag": "HAG", "Zech": "ZEC", "Mal": "MAL",
-    "Matt": "MAT", "Mark": "MRK", "Luke": "LUK", "John": "JHN", "Acts": "ACT",
-    "Rom": "ROM", "1Cor": "1CO", "2Cor": "2CO", "Gal": "GAL", "Eph": "EPH",
-    "Phil": "PHP", "Col": "COL", "1Thess": "1TH", "2Thess": "2TH",
-    "1Tim": "1TI", "2Tim": "2TI", "Titus": "TIT", "Phlm": "PHM",
-    "Heb": "HEB", "Jas": "JAS", "1Pet": "1PE", "2Pet": "2PE",
-    "1John": "1JN", "2John": "2JN", "3John": "3JN", "Jude": "JUD",
+    "Gen": "GEN",
+    "Exod": "EXO",
+    "Lev": "LEV",
+    "Num": "NUM",
+    "Deut": "DEU",
+    "Josh": "JOS",
+    "Judg": "JDG",
+    "Ruth": "RUT",
+    "1Sam": "1SA",
+    "2Sam": "2SA",
+    "1Kgs": "1KI",
+    "2Kgs": "2KI",
+    "1Chr": "1CH",
+    "2Chr": "2CH",
+    "Ezra": "EZR",
+    "Neh": "NEH",
+    "Esth": "EST",
+    "Job": "JOB",
+    "Ps": "PSA",
+    "Prov": "PRO",
+    "Eccl": "ECC",
+    "Song": "SNG",
+    "Isa": "ISA",
+    "Jer": "JER",
+    "Lam": "LAM",
+    "Ezek": "EZK",
+    "Dan": "DAN",
+    "Hos": "HOS",
+    "Joel": "JOL",
+    "Amos": "AMO",
+    "Obad": "OBA",
+    "Jonah": "JON",
+    "Mic": "MIC",
+    "Nah": "NAM",
+    "Hab": "HAB",
+    "Zeph": "ZEP",
+    "Hag": "HAG",
+    "Zech": "ZEC",
+    "Mal": "MAL",
+    "Matt": "MAT",
+    "Mark": "MRK",
+    "Luke": "LUK",
+    "John": "JHN",
+    "Acts": "ACT",
+    "Rom": "ROM",
+    "1Cor": "1CO",
+    "2Cor": "2CO",
+    "Gal": "GAL",
+    "Eph": "EPH",
+    "Phil": "PHP",
+    "Col": "COL",
+    "1Thess": "1TH",
+    "2Thess": "2TH",
+    "1Tim": "1TI",
+    "2Tim": "2TI",
+    "Titus": "TIT",
+    "Phlm": "PHM",
+    "Heb": "HEB",
+    "Jas": "JAS",
+    "1Pet": "1PE",
+    "2Pet": "2PE",
+    "1John": "1JN",
+    "2John": "2JN",
+    "3John": "3JN",
+    "Jude": "JUD",
     "Rev": "REV",
 }
 
@@ -115,9 +163,7 @@ def _ids_to_json(lst: list | None) -> str | None:
 class TheographicExtractor:
     """Download + parse the theographic-bible-metadata JSON files."""
 
-    def __init__(
-        self, cache_dir: Path | None = None, timeout: float = 120.0
-    ) -> None:
+    def __init__(self, cache_dir: Path | None = None, timeout: float = 120.0) -> None:
         self.cache_dir = cache_dir or Path("data/raw/theographic")
         self.timeout = timeout
         # Lookup maps built during extraction (record ID → slug)
@@ -174,14 +220,8 @@ class TheographicExtractor:
                         if isinstance(fields.get("memberOf"), list)
                         else None
                     ),
-                    occupation=(
-                        ", ".join(occupations)
-                        if isinstance(occupations, list)
-                        else None
-                    ),
-                    books_mentioned=(
-                        json.dumps(sorted(books)) if books else None
-                    ),
+                    occupation=(", ".join(occupations) if isinstance(occupations, list) else None),
+                    books_mentioned=(json.dumps(sorted(books)) if books else None),
                     verse_count=fields.get("verseCount", 0) or 0,
                     min_year=min_year,
                     max_year=max_year,
@@ -201,9 +241,7 @@ class TheographicExtractor:
             fields = rec.get("fields", rec)
             record_id = rec.get("id", "")
             slug = fields.get("placeLookup", "").strip()
-            name = fields.get(
-                "displayTitle", fields.get("kjvName", "")
-            ).strip()
+            name = fields.get("displayTitle", fields.get("kjvName", "")).strip()
             if not slug or not name:
                 continue
 
@@ -225,9 +263,7 @@ class TheographicExtractor:
                     longitude=lon,
                     place_type=fields.get("featureType"),
                     description=None,
-                    also_called=(
-                        json.dumps(also_called_raw) if also_called_raw else None
-                    ),
+                    also_called=(json.dumps(also_called_raw) if also_called_raw else None),
                     verse_count=fields.get("verseCount", 0) or 0,
                 )
             )
@@ -259,12 +295,8 @@ class TheographicExtractor:
             verse_refs_raw = fields.get("verses", [])
 
             # Map to slugs where possible
-            participant_slugs = [
-                self._person_id_to_slug.get(pid, pid) for pid in participant_ids
-            ]
-            location_slugs = [
-                self._place_id_to_slug.get(lid, lid) for lid in location_ids
-            ]
+            participant_slugs = [self._person_id_to_slug.get(pid, pid) for pid in participant_ids]
+            location_slugs = [self._place_id_to_slug.get(lid, lid) for lid in location_ids]
 
             # Convert verse OSIS refs to our format
             verse_refs = []
@@ -283,24 +315,16 @@ class TheographicExtractor:
                     sort_key=sort_key,
                     duration=fields.get("duration"),
                     era=era,
-                    participants=(
-                        json.dumps(participant_slugs) if participant_slugs else None
-                    ),
-                    locations=(
-                        json.dumps(location_slugs) if location_slugs else None
-                    ),
-                    verse_refs=(
-                        json.dumps(verse_refs) if verse_refs else None
-                    ),
+                    participants=(json.dumps(participant_slugs) if participant_slugs else None),
+                    locations=(json.dumps(location_slugs) if location_slugs else None),
+                    verse_refs=(json.dumps(verse_refs) if verse_refs else None),
                 )
             )
 
         logger.info("Extracted %d biblical events", len(events))
         return events
 
-    def extract_family_relations(
-        self, use_cache: bool = True
-    ) -> list[FamilyRelation]:
+    def extract_family_relations(self, use_cache: bool = True) -> list[FamilyRelation]:
         """Extract family relations from the people JSON.
 
         Must be called AFTER extract_people so that _person_id_to_slug is
@@ -335,9 +359,7 @@ class TheographicExtractor:
                 if not isinstance(related_ids, list):
                     continue
                 for related_id in related_ids:
-                    related_slug = self._person_id_to_slug.get(
-                        related_id, related_id
-                    )
+                    related_slug = self._person_id_to_slug.get(related_id, related_id)
                     key = (person_slug, related_slug, rel_type)
                     if key not in seen:
                         seen.add(key)

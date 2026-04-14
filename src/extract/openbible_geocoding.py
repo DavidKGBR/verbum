@@ -20,10 +20,7 @@ import httpx
 
 logger = logging.getLogger(__name__)
 
-BASE_RAW = (
-    "https://raw.githubusercontent.com/openbibleinfo/"
-    "Bible-Geocoding-Data/master/data"
-)
+BASE_RAW = "https://raw.githubusercontent.com/openbibleinfo/Bible-Geocoding-Data/master/data"
 
 
 class GeocodingRecord:
@@ -51,9 +48,7 @@ class GeocodingRecord:
 class OpenBibleGeoExtractor:
     """Download + parse OpenBible ancient.jsonl into geocoding records."""
 
-    def __init__(
-        self, cache_dir: Path | None = None, timeout: float = 120.0
-    ) -> None:
+    def __init__(self, cache_dir: Path | None = None, timeout: float = 120.0) -> None:
         self.cache_dir = cache_dir or Path("data/raw/geocoding")
         self.timeout = timeout
 

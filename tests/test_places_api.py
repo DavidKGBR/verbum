@@ -22,44 +22,76 @@ def seeded_db(tmp_path_factory: pytest.TempPathFactory) -> str:
     loader = DuckDBLoader(LoadConfig(duckdb_path=db_path))
     loader._ensure_theographic_tables()
 
-    places_df = pd.DataFrame([
-        {
-            "place_id": "recP1", "slug": "jerusalem_1", "name": "Jerusalem",
-            "latitude": 31.7683, "longitude": 35.2137, "geo_confidence": 0.95,
-            "place_type": "City", "description": "Holy city of Israel",
-            "also_called": json.dumps(["Zion", "Salem"]), "verse_count": 811,
-        },
-        {
-            "place_id": "recP2", "slug": "bethlehem_1", "name": "Bethlehem",
-            "latitude": 31.7054, "longitude": 35.2024, "geo_confidence": 0.92,
-            "place_type": "City", "description": "Birthplace of Jesus",
-            "also_called": None, "verse_count": 44,
-        },
-        {
-            "place_id": "recP3", "slug": "sinai_1", "name": "Mount Sinai",
-            "latitude": 28.5394, "longitude": 33.9753, "geo_confidence": 0.7,
-            "place_type": "Mountain", "description": "Where God gave the Law",
-            "also_called": json.dumps(["Horeb"]), "verse_count": 38,
-        },
-        {
-            "place_id": "recP4", "slug": "eden_1", "name": "Eden",
-            "latitude": None, "longitude": None, "geo_confidence": None,
-            "place_type": "Region", "description": "Garden of God",
-            "also_called": None, "verse_count": 16,
-        },
-    ])
+    places_df = pd.DataFrame(
+        [
+            {
+                "place_id": "recP1",
+                "slug": "jerusalem_1",
+                "name": "Jerusalem",
+                "latitude": 31.7683,
+                "longitude": 35.2137,
+                "geo_confidence": 0.95,
+                "place_type": "City",
+                "description": "Holy city of Israel",
+                "also_called": json.dumps(["Zion", "Salem"]),
+                "verse_count": 811,
+            },
+            {
+                "place_id": "recP2",
+                "slug": "bethlehem_1",
+                "name": "Bethlehem",
+                "latitude": 31.7054,
+                "longitude": 35.2024,
+                "geo_confidence": 0.92,
+                "place_type": "City",
+                "description": "Birthplace of Jesus",
+                "also_called": None,
+                "verse_count": 44,
+            },
+            {
+                "place_id": "recP3",
+                "slug": "sinai_1",
+                "name": "Mount Sinai",
+                "latitude": 28.5394,
+                "longitude": 33.9753,
+                "geo_confidence": 0.7,
+                "place_type": "Mountain",
+                "description": "Where God gave the Law",
+                "also_called": json.dumps(["Horeb"]),
+                "verse_count": 38,
+            },
+            {
+                "place_id": "recP4",
+                "slug": "eden_1",
+                "name": "Eden",
+                "latitude": None,
+                "longitude": None,
+                "geo_confidence": None,
+                "place_type": "Region",
+                "description": "Garden of God",
+                "also_called": None,
+                "verse_count": 16,
+            },
+        ]
+    )
     loader.load_biblical_places(places_df)
 
-    events_df = pd.DataFrame([
-        {
-            "event_id": "recE1", "title": "The Crucifixion",
-            "description": None, "start_year": 33, "sort_key": 33.0,
-            "duration": "1D", "era": "New Testament",
-            "participants": json.dumps(["jesus_1"]),
-            "locations": json.dumps(["jerusalem_1"]),
-            "verse_refs": json.dumps(["MAT.27.33"]),
-        },
-    ])
+    events_df = pd.DataFrame(
+        [
+            {
+                "event_id": "recE1",
+                "title": "The Crucifixion",
+                "description": None,
+                "start_year": 33,
+                "sort_key": 33.0,
+                "duration": "1D",
+                "era": "New Testament",
+                "participants": json.dumps(["jesus_1"]),
+                "locations": json.dumps(["jerusalem_1"]),
+                "verse_refs": json.dumps(["MAT.27.33"]),
+            },
+        ]
+    )
     loader.load_biblical_events(events_df)
 
     loader.close()

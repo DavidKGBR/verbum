@@ -34,9 +34,7 @@ def list_people(
         params: list[object] = []
 
         if q:
-            conditions.append(
-                "(LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?)"
-            )
+            conditions.append("(LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?)")
             like = f"%{q.lower()}%"
             params.extend([like, like])
         if gender:
@@ -52,9 +50,7 @@ def list_people(
         where = f"WHERE {' AND '.join(conditions)}" if conditions else ""
 
         # Count total
-        count_row = conn.execute(
-            f"SELECT COUNT(*) FROM biblical_people {where}", params
-        ).fetchone()
+        count_row = conn.execute(f"SELECT COUNT(*) FROM biblical_people {where}", params).fetchone()
         total = count_row[0] if count_row else 0
 
         # Fetch page
@@ -130,14 +126,23 @@ def get_person(slug: str) -> dict:
         ).fetchone()
 
         if not row:
-            raise HTTPException(
-                status_code=404, detail=f"Person '{slug}' not found"
-            )
+            raise HTTPException(status_code=404, detail=f"Person '{slug}' not found")
 
         columns = [
-            "person_id", "slug", "name", "gender", "birth_year", "death_year",
-            "description", "also_called", "tribe", "occupation",
-            "books_mentioned", "verse_count", "min_year", "max_year",
+            "person_id",
+            "slug",
+            "name",
+            "gender",
+            "birth_year",
+            "death_year",
+            "description",
+            "also_called",
+            "tribe",
+            "occupation",
+            "books_mentioned",
+            "verse_count",
+            "min_year",
+            "max_year",
         ]
         person = dict(zip(columns, row))
 
@@ -179,11 +184,13 @@ def get_person_family(slug: str) -> dict:
             rel_type = row["relation_type"]
             if rel_type not in family:
                 family[rel_type] = []
-            family[rel_type].append({
-                "slug": row["related_slug"],
-                "name": row["related_name"],
-                "gender": row["related_gender"],
-            })
+            family[rel_type].append(
+                {
+                    "slug": row["related_slug"],
+                    "name": row["related_name"],
+                    "gender": row["related_gender"],
+                }
+            )
 
         return {"person": slug, "relations": family}
     finally:

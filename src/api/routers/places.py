@@ -40,9 +40,7 @@ def list_places(
         params: list[object] = []
 
         if q:
-            conditions.append(
-                "(LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?)"
-            )
+            conditions.append("(LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?)")
             like = f"%{q.lower()}%"
             params.extend([like, like])
         if place_type:
@@ -55,9 +53,7 @@ def list_places(
 
         where = f"WHERE {' AND '.join(conditions)}" if conditions else ""
 
-        count_row = conn.execute(
-            f"SELECT COUNT(*) FROM biblical_places {where}", params
-        ).fetchone()
+        count_row = conn.execute(f"SELECT COUNT(*) FROM biblical_places {where}", params).fetchone()
         total = count_row[0] if count_row else 0
 
         params_page = [*params, limit, offset]
@@ -141,24 +137,26 @@ def get_places_geojson(
 
         features = []
         for _, row in df.iterrows():
-            features.append({
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [row["longitude"], row["latitude"]],
-                },
-                "properties": {
-                    "slug": row["slug"],
-                    "name": row["name"],
-                    "place_type": row["place_type"],
-                    "verse_count": int(row["verse_count"]),
-                    "geo_confidence": (
-                        round(float(row["geo_confidence"]), 3)
-                        if row["geo_confidence"] is not None
-                        else None
-                    ),
-                },
-            })
+            features.append(
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [row["longitude"], row["latitude"]],
+                    },
+                    "properties": {
+                        "slug": row["slug"],
+                        "name": row["name"],
+                        "place_type": row["place_type"],
+                        "verse_count": int(row["verse_count"]),
+                        "geo_confidence": (
+                            round(float(row["geo_confidence"]), 3)
+                            if row["geo_confidence"] is not None
+                            else None
+                        ),
+                    },
+                }
+            )
 
         return {
             "type": "FeatureCollection",
@@ -223,9 +221,16 @@ def get_place(slug: str) -> dict:
             raise HTTPException(status_code=404, detail=f"Place '{slug}' not found")
 
         columns = [
-            "place_id", "slug", "name", "latitude", "longitude",
-            "geo_confidence", "place_type", "description",
-            "also_called", "verse_count",
+            "place_id",
+            "slug",
+            "name",
+            "latitude",
+            "longitude",
+            "geo_confidence",
+            "place_type",
+            "description",
+            "also_called",
+            "verse_count",
         ]
         place = dict(zip(columns, row))
 

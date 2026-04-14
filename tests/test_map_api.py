@@ -20,20 +20,34 @@ def seeded_db(tmp_path_factory: pytest.TempPathFactory) -> str:
     loader = DuckDBLoader(LoadConfig(duckdb_path=db_path))
     loader._ensure_theographic_tables()
 
-    places_df = pd.DataFrame([
-        {
-            "place_id": "recP1", "slug": "jerusalem_1", "name": "Jerusalem",
-            "latitude": 31.7683, "longitude": 35.2137, "geo_confidence": 0.95,
-            "place_type": "City", "description": None,
-            "also_called": None, "verse_count": 811,
-        },
-        {
-            "place_id": "recP2", "slug": "bethlehem_1", "name": "Bethlehem",
-            "latitude": 31.7054, "longitude": 35.2024, "geo_confidence": 0.92,
-            "place_type": "City", "description": None,
-            "also_called": None, "verse_count": 44,
-        },
-    ])
+    places_df = pd.DataFrame(
+        [
+            {
+                "place_id": "recP1",
+                "slug": "jerusalem_1",
+                "name": "Jerusalem",
+                "latitude": 31.7683,
+                "longitude": 35.2137,
+                "geo_confidence": 0.95,
+                "place_type": "City",
+                "description": None,
+                "also_called": None,
+                "verse_count": 811,
+            },
+            {
+                "place_id": "recP2",
+                "slug": "bethlehem_1",
+                "name": "Bethlehem",
+                "latitude": 31.7054,
+                "longitude": 35.2024,
+                "geo_confidence": 0.92,
+                "place_type": "City",
+                "description": None,
+                "also_called": None,
+                "verse_count": 44,
+            },
+        ]
+    )
     loader.load_biblical_places(places_df)
     loader.close()
     return db_path

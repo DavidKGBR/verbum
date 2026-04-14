@@ -29,9 +29,7 @@ logger = logging.getLogger(__name__)
 NAVE_ZIP_URL = "http://www.justverses.com/downloads/zips/nave.zip"
 
 # Build book_number (1-66) → book_id mapping from BOOK_CATALOG
-_BOOK_NUM_TO_ID: dict[int, str] = {
-    b["pos"]: b["id"] for b in BOOK_CATALOG
-}
+_BOOK_NUM_TO_ID: dict[int, str] = {b["pos"]: b["id"] for b in BOOK_CATALOG}
 
 
 def _slugify(name: str) -> str:
@@ -76,9 +74,7 @@ class NavesExtractor:
         self.cache_dir = cache_dir or Path("data/raw/naves")
         self.timeout = timeout
 
-    def extract(
-        self, use_cache: bool = True
-    ) -> tuple[list[NaveTopic], list[NaveTopicVerse]]:
+    def extract(self, use_cache: bool = True) -> tuple[list[NaveTopic], list[NaveTopicVerse]]:
         """Return (topics, topic_verses)."""
         self._ensure_extracted(use_cache)
 

@@ -25,9 +25,7 @@ if _AUTHORS_PATH.exists():
 
 @router.get("/authors")
 def list_authors(
-    testament: str | None = Query(
-        None, description="Filter by testament: OT or NT"
-    ),
+    testament: str | None = Query(None, description="Filter by testament: OT or NT"),
 ) -> dict:
     """List all biblical authors with their books and metadata."""
     results = _AUTHORS

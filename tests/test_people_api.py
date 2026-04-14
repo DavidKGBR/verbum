@@ -23,53 +23,87 @@ def seeded_db(tmp_path_factory: pytest.TempPathFactory) -> str:
     loader._ensure_theographic_tables()
 
     # Seed people
-    people_df = pd.DataFrame([
-        {
-            "person_id": "rec1", "slug": "moses_1", "name": "Moses",
-            "gender": "Male", "birth_year": -1526, "death_year": -1406,
-            "description": "Leader of Israel", "also_called": json.dumps(["Moshe"]),
-            "tribe": "Levi", "occupation": "Prophet, Leader",
-            "books_mentioned": json.dumps(["EXO", "LEV", "NUM", "DEU"]),
-            "verse_count": 847, "min_year": -1526, "max_year": -1406,
-        },
-        {
-            "person_id": "rec2", "slug": "aaron_1", "name": "Aaron",
-            "gender": "Male", "birth_year": -1529, "death_year": -1407,
-            "description": "High Priest", "also_called": None,
-            "tribe": "Levi", "occupation": "Priest",
-            "books_mentioned": json.dumps(["EXO", "LEV", "NUM"]),
-            "verse_count": 347, "min_year": -1529, "max_year": -1407,
-        },
-        {
-            "person_id": "rec3", "slug": "miriam_1", "name": "Miriam",
-            "gender": "Female", "birth_year": -1533, "death_year": None,
-            "description": "Prophetess, sister of Moses", "also_called": None,
-            "tribe": "Levi", "occupation": "Prophetess",
-            "books_mentioned": json.dumps(["EXO", "NUM"]),
-            "verse_count": 15, "min_year": -1533, "max_year": None,
-        },
-    ])
+    people_df = pd.DataFrame(
+        [
+            {
+                "person_id": "rec1",
+                "slug": "moses_1",
+                "name": "Moses",
+                "gender": "Male",
+                "birth_year": -1526,
+                "death_year": -1406,
+                "description": "Leader of Israel",
+                "also_called": json.dumps(["Moshe"]),
+                "tribe": "Levi",
+                "occupation": "Prophet, Leader",
+                "books_mentioned": json.dumps(["EXO", "LEV", "NUM", "DEU"]),
+                "verse_count": 847,
+                "min_year": -1526,
+                "max_year": -1406,
+            },
+            {
+                "person_id": "rec2",
+                "slug": "aaron_1",
+                "name": "Aaron",
+                "gender": "Male",
+                "birth_year": -1529,
+                "death_year": -1407,
+                "description": "High Priest",
+                "also_called": None,
+                "tribe": "Levi",
+                "occupation": "Priest",
+                "books_mentioned": json.dumps(["EXO", "LEV", "NUM"]),
+                "verse_count": 347,
+                "min_year": -1529,
+                "max_year": -1407,
+            },
+            {
+                "person_id": "rec3",
+                "slug": "miriam_1",
+                "name": "Miriam",
+                "gender": "Female",
+                "birth_year": -1533,
+                "death_year": None,
+                "description": "Prophetess, sister of Moses",
+                "also_called": None,
+                "tribe": "Levi",
+                "occupation": "Prophetess",
+                "books_mentioned": json.dumps(["EXO", "NUM"]),
+                "verse_count": 15,
+                "min_year": -1533,
+                "max_year": None,
+            },
+        ]
+    )
     loader.load_biblical_people(people_df)
 
     # Seed family relations
-    rels_df = pd.DataFrame([
-        {"person_id": "moses_1", "related_person_id": "aaron_1", "relation_type": "sibling"},
-        {"person_id": "moses_1", "related_person_id": "miriam_1", "relation_type": "sibling"},
-        {"person_id": "aaron_1", "related_person_id": "moses_1", "relation_type": "sibling"},
-    ])
+    rels_df = pd.DataFrame(
+        [
+            {"person_id": "moses_1", "related_person_id": "aaron_1", "relation_type": "sibling"},
+            {"person_id": "moses_1", "related_person_id": "miriam_1", "relation_type": "sibling"},
+            {"person_id": "aaron_1", "related_person_id": "moses_1", "relation_type": "sibling"},
+        ]
+    )
     loader.load_family_relations(rels_df)
 
     # Seed events
-    events_df = pd.DataFrame([
-        {
-            "event_id": "recE1", "title": "The Exodus",
-            "description": "Israel leaves Egypt", "start_year": -1446,
-            "sort_key": 1446.0, "duration": "40Y", "era": "Exodus & Conquest",
-            "participants": json.dumps(["moses_1", "aaron_1"]),
-            "locations": json.dumps(["egypt_1"]),
-            "verse_refs": json.dumps(["EXO.12.31"]),
-        },
-    ])
+    events_df = pd.DataFrame(
+        [
+            {
+                "event_id": "recE1",
+                "title": "The Exodus",
+                "description": "Israel leaves Egypt",
+                "start_year": -1446,
+                "sort_key": 1446.0,
+                "duration": "40Y",
+                "era": "Exodus & Conquest",
+                "participants": json.dumps(["moses_1", "aaron_1"]),
+                "locations": json.dumps(["egypt_1"]),
+                "verse_refs": json.dumps(["EXO.12.31"]),
+            },
+        ]
+    )
     loader.load_biblical_events(events_df)
 
     loader.close()

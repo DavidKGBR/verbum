@@ -700,14 +700,8 @@ class DuckDBLoader:
                 loaded_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """)
-        self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_people_slug "
-            "ON biblical_people(slug);"
-        )
-        self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_people_name "
-            "ON biblical_people(name);"
-        )
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_people_slug ON biblical_people(slug);")
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_people_name ON biblical_people(name);")
 
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS biblical_places (
@@ -724,14 +718,8 @@ class DuckDBLoader:
                 loaded_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """)
-        self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_places_slug "
-            "ON biblical_places(slug);"
-        )
-        self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_places_name "
-            "ON biblical_places(name);"
-        )
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_places_slug ON biblical_places(slug);")
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_places_name ON biblical_places(name);")
 
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS biblical_events (
@@ -748,13 +736,9 @@ class DuckDBLoader:
                 loaded_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """)
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_events_era ON biblical_events(era);")
         self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_events_era "
-            "ON biblical_events(era);"
-        )
-        self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_events_year "
-            "ON biblical_events(start_year);"
+            "CREATE INDEX IF NOT EXISTS idx_events_year ON biblical_events(start_year);"
         )
 
         self.conn.execute("""
@@ -767,8 +751,7 @@ class DuckDBLoader:
             );
         """)
         self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_family_person "
-            "ON family_relations(person_id);"
+            "CREATE INDEX IF NOT EXISTS idx_family_person ON family_relations(person_id);"
         )
 
     def load_biblical_people(self, df: pd.DataFrame) -> int:
@@ -790,9 +773,7 @@ class DuckDBLoader:
                 books_mentioned, verse_count, min_year, max_year
             FROM df
         """)
-        count = self.conn.execute(
-            "SELECT COUNT(*) FROM biblical_people"
-        ).fetchone()[0]  # type: ignore[index]
+        count = self.conn.execute("SELECT COUNT(*) FROM biblical_people").fetchone()[0]  # type: ignore[index]
         logger.info("Loaded %d biblical people", count)
         return count
 
@@ -815,9 +796,7 @@ class DuckDBLoader:
                 also_called, verse_count
             FROM df
         """)
-        count = self.conn.execute(
-            "SELECT COUNT(*) FROM biblical_places"
-        ).fetchone()[0]  # type: ignore[index]
+        count = self.conn.execute("SELECT COUNT(*) FROM biblical_places").fetchone()[0]  # type: ignore[index]
         logger.info("Loaded %d biblical places", count)
         return count
 
@@ -838,9 +817,7 @@ class DuckDBLoader:
                 duration, era, participants, locations, verse_refs
             FROM df
         """)
-        count = self.conn.execute(
-            "SELECT COUNT(*) FROM biblical_events"
-        ).fetchone()[0]  # type: ignore[index]
+        count = self.conn.execute("SELECT COUNT(*) FROM biblical_events").fetchone()[0]  # type: ignore[index]
         logger.info("Loaded %d biblical events", count)
         return count
 
@@ -858,9 +835,7 @@ class DuckDBLoader:
             SELECT person_id, related_person_id, relation_type
             FROM df
         """)
-        count = self.conn.execute(
-            "SELECT COUNT(*) FROM family_relations"
-        ).fetchone()[0]  # type: ignore[index]
+        count = self.conn.execute("SELECT COUNT(*) FROM family_relations").fetchone()[0]  # type: ignore[index]
         logger.info("Loaded %d family relations", count)
         return count
 
@@ -877,12 +852,8 @@ class DuckDBLoader:
                 loaded_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """)
-        self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_topics_slug ON topics(slug);"
-        )
-        self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_topics_name ON topics(name);"
-        )
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_topics_slug ON topics(slug);")
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_topics_name ON topics(name);")
 
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS topic_verses (
@@ -894,8 +865,7 @@ class DuckDBLoader:
             );
         """)
         self.conn.execute(
-            "CREATE INDEX IF NOT EXISTS idx_topic_verses_verse "
-            "ON topic_verses(verse_id);"
+            "CREATE INDEX IF NOT EXISTS idx_topic_verses_verse ON topic_verses(verse_id);"
         )
 
     def load_topics(self, df: pd.DataFrame) -> int:
@@ -910,9 +880,7 @@ class DuckDBLoader:
             SELECT topic_id, name, slug, verse_count
             FROM df
         """)
-        count = self.conn.execute(
-            "SELECT COUNT(*) FROM topics"
-        ).fetchone()[0]  # type: ignore[index]
+        count = self.conn.execute("SELECT COUNT(*) FROM topics").fetchone()[0]  # type: ignore[index]
         logger.info("Loaded %d topics", count)
         return count
 
@@ -928,9 +896,7 @@ class DuckDBLoader:
             SELECT topic_id, verse_id, sort_order
             FROM df
         """)
-        count = self.conn.execute(
-            "SELECT COUNT(*) FROM topic_verses"
-        ).fetchone()[0]  # type: ignore[index]
+        count = self.conn.execute("SELECT COUNT(*) FROM topic_verses").fetchone()[0]  # type: ignore[index]
         logger.info("Loaded %d topic-verse links", count)
         return count
 
@@ -994,9 +960,7 @@ class DuckDBLoader:
         total = self.conn.execute(
             "SELECT COUNT(*) FROM biblical_places WHERE latitude IS NOT NULL"
         ).fetchone()[0]  # type: ignore[index]
-        logger.info(
-            "Geocoding enrichment: %d places now have coordinates", total
-        )
+        logger.info("Geocoding enrichment: %d places now have coordinates", total)
         return total
 
     def query(self, sql: str) -> pd.DataFrame:

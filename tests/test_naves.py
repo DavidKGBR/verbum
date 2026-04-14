@@ -48,9 +48,7 @@ class TestExtractorParsing:
         """Parse a minimal topics.txt."""
         topics_path = tmp_path / "topics.txt"  # type: ignore[operator]
         topics_path.write_text(
-            "-100\tDANCING\t$$T0001\n"
-            "-200\tFAITH\t$$T0002\n"
-            "-300\tLOVE\t$$T0003\n",
+            "-100\tDANCING\t$$T0001\n-200\tFAITH\t$$T0002\n-300\tLOVE\t$$T0003\n",
             encoding="utf-8",
         )
         # Create empty topicxref so _ensure_extracted doesn't fail
@@ -121,18 +119,22 @@ def seeded_naves_db(tmp_path_factory: pytest.TempPathFactory) -> str:
     loader = DuckDBLoader(LoadConfig(duckdb_path=db_path))
     loader._ensure_topics_tables()
 
-    topics_df = pd.DataFrame([
-        {"topic_id": "-100", "name": "DANCING", "slug": "dancing", "verse_count": 3},
-        {"topic_id": "-200", "name": "FAITH", "slug": "faith", "verse_count": 1},
-    ])
+    topics_df = pd.DataFrame(
+        [
+            {"topic_id": "-100", "name": "DANCING", "slug": "dancing", "verse_count": 3},
+            {"topic_id": "-200", "name": "FAITH", "slug": "faith", "verse_count": 1},
+        ]
+    )
     loader.load_topics(topics_df)
 
-    verses_df = pd.DataFrame([
-        {"topic_id": "-100", "verse_id": "EXO.15.20", "sort_order": 1},
-        {"topic_id": "-100", "verse_id": "PSA.149.3", "sort_order": 2},
-        {"topic_id": "-100", "verse_id": "PSA.150.4", "sort_order": 3},
-        {"topic_id": "-200", "verse_id": "HEB.11.1", "sort_order": 1},
-    ])
+    verses_df = pd.DataFrame(
+        [
+            {"topic_id": "-100", "verse_id": "EXO.15.20", "sort_order": 1},
+            {"topic_id": "-100", "verse_id": "PSA.149.3", "sort_order": 2},
+            {"topic_id": "-100", "verse_id": "PSA.150.4", "sort_order": 3},
+            {"topic_id": "-200", "verse_id": "HEB.11.1", "sort_order": 1},
+        ]
+    )
     loader.load_topic_verses(verses_df)
 
     loader.close()
@@ -150,9 +152,7 @@ class TestNavesLoader:
 
     def test_topic_verses_loaded(self, seeded_naves_db: str) -> None:
         loader = DuckDBLoader(LoadConfig(duckdb_path=seeded_naves_db))
-        df = loader.query(
-            "SELECT * FROM topic_verses WHERE topic_id = '-100' ORDER BY sort_order"
-        )
+        df = loader.query("SELECT * FROM topic_verses WHERE topic_id = '-100' ORDER BY sort_order")
         loader.close()
         assert len(df) == 3
         assert df.iloc[0]["verse_id"] == "EXO.15.20"
