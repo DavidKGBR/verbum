@@ -321,15 +321,11 @@ class TestRealDownload:
         by_id = {v.verse_id: v for v in verses}
         assert "RUT.1.1" in by_id
         # Strip niqqud (vowel points) to check the consonantal root.
-        consonants_11 = "".join(
-            c for c in by_id["RUT.1.1"].text if not ("\u0591" <= c <= "\u05c7")
-        )
+        consonants_11 = "".join(c for c in by_id["RUT.1.1"].text if not ("\u0591" <= c <= "\u05c7"))
         assert "מואב" in consonants_11  # Moab is in Ruth 1:1
         # Ephrathites (אפרתים) appears in Ruth 1:2 — same root as Ephratah
         assert "RUT.1.2" in by_id
-        consonants_12 = "".join(
-            c for c in by_id["RUT.1.2"].text if not ("\u0591" <= c <= "\u05c7")
-        )
+        consonants_12 = "".join(c for c in by_id["RUT.1.2"].text if not ("\u0591" <= c <= "\u05c7"))
         assert "אפרת" in consonants_12
 
         # Every verse has language=hebrew and source=wlc

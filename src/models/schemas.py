@@ -271,11 +271,11 @@ class InterlinearWord(BaseModel):
     Hebrew lemmas often look like `H9002/H9009/{H0776G}` in the wild).
     """
 
-    verse_id: str                  # "MAT.1.1"
+    verse_id: str  # "MAT.1.1"
     word_position: int = Field(..., ge=1)
     language: InterlinearLanguage
-    source: str                    # "tagnt" | "tahot"
-    original_word: str             # Greek or Hebrew word
+    source: str  # "tagnt" | "tahot"
+    original_word: str  # Greek or Hebrew word
     transliteration: str | None = None
     english: str | None = None
     strongs_id: str | None = None  # normalised "G976" / "H776", or None if untagged
