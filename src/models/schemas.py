@@ -294,6 +294,24 @@ class InterlinearWord(BaseModel):
         return v
 
 
+# ─── Bible Dictionary (Easton's + Smith's) ───────────────────────────────────
+
+
+class DictionaryEntry(BaseModel):
+    """A single entry from Easton's and/or Smith's Bible Dictionary.
+
+    The `slug` is the URL-safe key ("quails"), `name` is the display form
+    ("Quails"). Each source's text is stored separately so the UI can show
+    them side-by-side or select one.
+    """
+
+    slug: str
+    name: str
+    source: str  # "EAS", "SMI", or "EAS,SMI"
+    text_easton: str | None = None
+    text_smith: str | None = None
+
+
 # ─── Book catalog (canonical order) ───────────────────────────────────────────
 
 BOOK_CATALOG: list[dict] = [

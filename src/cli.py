@@ -14,6 +14,7 @@ from rich.console import Console
 from rich.logging import RichHandler
 
 from src.config import PipelineConfig
+from src.extract.dictionary_extractor import DictionaryExtractor
 from src.extract.morphhb_extractor import MorphHbExtractor
 from src.extract.sblgnt_extractor import SblgntExtractor
 from src.extract.stepbible_extractor import StepBibleExtractor
@@ -389,6 +390,36 @@ def interlinear(
                 )
 
     console.print(f"\n[green]✓ Total: [bold]{total:,}[/bold] interlinear words.[/green]")
+
+
+@app.command()
+def dictionary(
+    cache: bool = typer.Option(True, "--cache/--no-cache", help="Use cached JSON files."),
+    log_level: str = typer.Option("INFO", "--log-level", "-l", help="Logging level"),
+) -> None:
+    """📖 Extract and load Bible Dictionary (Easton's + Smith's, ~6K entries)."""
+    setup_logging(log_level)
+
+    console.print("[bold]📖 Bible Dictionary (Easton's + Smith's)[/bold]\n")
+    extractor = DictionaryExtractor()
+    entries = extractor.extract(use_cache=cache)
+
+    if not entries:
+        console.print("[red]No entries extracted.[/red]")
+        raise typer.Exit(code=1)
+
+    df = pd.DataFrame([e.model_dump() for e in entries])
+
+    config = PipelineConfig()
+    with DuckDBLoader(config.load) as loader:
+        count = loader.load_dictionary(df)
+
+    eas = sum(1 for e in entries if "EAS" in e.source)
+    smi = sum(1 for e in entries if "SMI" in e.source)
+    console.print(
+        f"\n[green]✓[/green] Loaded [bold]{count:,}[/bold] dictionary entries "
+        f"([cyan]{eas:,}[/cyan] Easton · [cyan]{smi:,}[/cyan] Smith)"
+    )
 
 
 @app.command()

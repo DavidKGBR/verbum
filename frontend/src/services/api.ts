@@ -328,6 +328,27 @@ export function fetchWordDistribution(strongsId: string) {
   );
 }
 
+// ── Bible Dictionary ────────────────────────────────────────────────────────
+
+export interface DictEntry {
+  slug: string;
+  name: string;
+  source: string;
+  text_easton: string | null;
+  text_smith: string | null;
+  preview?: string;
+}
+
+export function fetchDictionaryEntry(slug: string) {
+  return fetchJson<DictEntry>(`${BASE}/dictionary/${slug}`);
+}
+
+export function searchDictionary(q: string, limit = 50) {
+  return fetchJson<{ query: string; total_results: number; results: DictEntry[] }>(
+    `${BASE}/dictionary/search?q=${encodeURIComponent(q)}&limit=${limit}`
+  );
+}
+
 // ── AI Insights ─────────────────────────────────────────────────────────────
 
 export interface AIExplanation {

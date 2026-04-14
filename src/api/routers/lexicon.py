@@ -273,3 +273,46 @@ def get_word_distribution(
         }
     finally:
         conn.close()
+
+
+# ─── Bible Dictionary ────────────────────────────────────────────────────────
+
+
+@router.get("/dictionary/search")
+def search_dictionary(
+    q: str = Query(..., min_length=2, description="Search term"),
+    limit: int = Query(50, ge=1, le=200, description="Max results"),
+) -> dict:
+    """Search the Bible dictionary (Easton's + Smith's) by name."""
+    conn = get_db()
+    try:
+        df = conn.execute(
+            """
+            SELECT slug, name, source,
+                   LEFT(COALESCE(text_easton, text_smith, ''), 200) AS preview
+            FROM dictionary_entries
+            WHERE name ILIKE ?
+            ORDER BY LENGTH(name), name
+            LIMIT ?
+            """,
+            [f"%{q}%", limit],
+        ).fetchdf()
+        return {"query": q, "total_results": len(df), "results": df.to_dict(orient="records")}
+    finally:
+        conn.close()
+
+
+@router.get("/dictionary/{slug}")
+def get_dictionary_entry(slug: str) -> dict:
+    """Get a specific dictionary entry by slug."""
+    conn = get_db()
+    try:
+        df = conn.execute(
+            "SELECT * FROM dictionary_entries WHERE slug = ?",
+            [slug.lower()],
+        ).fetchdf()
+        if df.empty:
+            raise HTTPException(status_code=404, detail=f"Dictionary entry '{slug}' not found")
+        return df.to_dict(orient="records")[0]
+    finally:
+        conn.close()

@@ -243,7 +243,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 | 4 | API endpoints (6 novos) | 🔥🔥🔥 | ✅ Concluído | — |
 | 5 | Interlinear View | 🔥🔥🔥🔥🔥 | ✅ Concluído | — |
 | 6 | Word Study page | 🔥🔥🔥🔥 | ✅ Concluído | — |
-| 7 | Bible Dictionary | 🔥🔥🔥 | 🔲 Planejado | — |
+| 7 | Bible Dictionary | 🔥🔥🔥 | ✅ Concluído | — |
 | 8 | Commentary (HelloAO) | 🔥🔥🔥 | 🔲 Planejado | — |
 | 9 | Verse Sharing | 🔥🔥 | 🔲 Planejado | — |
 | 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
@@ -400,3 +400,19 @@ entrada lógica — sem depender da memória de conversa.
 - **WordDetailPanel.tsx**: Sidebar de estudos (Lexicon Sidebar) injetada à direita do Reader sempre que um Strong's é clicado. Exibe o domínio semântico, pronúncia, posições, long description, e top 5 versículos cruzados usando os 2 novos endpoints recém consumidos.
 - **Status:** Fase 2C concluída lindamente. A funcionalidade visual está entregue.
 - **Próxima entrada:** Tarefa #6 — Word Study Page (Fase 2D). Uma versão expandida da URL dedicada que receberá o force-directed graph (Gráficos) ou estatísticas avançadas baseadas nos logs de analytics.
+
+### 2026-04-14 — Sessão de continuidade: Task #6 + CI fixes + merge stack
+- **Contexto de sessão:** Nova conversa (anterior compactada). Claude retomou via Session Log + VERBUM_PLAN.md + CLAUDE.md como fontes de verdade. Confirmou estado: Tasks #1-5 ✅, próxima #6.
+- **CI fixes (3 commits):** `ruff format` em schemas.py + test_morphhb.py; mypy type annotations em stepbible_extractor.py + cli.py; `defusedxml` adicionado ao pyproject.toml (era dep transitiva, CI falhava em venv limpo).
+- **Merge stack:** 7 feature branches (1→2→3a→3b→3c→3d) fast-forward merged em `main`. Branches remotas deletadas. main pushada com histórico linear (18 commits). Git remote URL atualizado de `the-bible.git` → `verbum.git`.
+- **Task #6 — Word Study Page (`/word-study/:strongsId`):**
+  - Novo endpoint backend `GET /words/{strongs_id}/distribution` — retorna frequência por livro via query na tabela interlinear. Bug na primeira versão: DuckDB exigia GROUP BY explícito pra `ANY_VALUE` (vs. DISTINCT + ORDER BY aggregate). Corrigido.
+  - `WordStudyPage.tsx` — página completa: hero card com original word grande + transliteração + pronúncia + language badge; stats row (332 occurrences · 24 books · Acts most frequent); definição short+long; "Related Words" extraídos via regex do long_definition (`from H2616` → link pra `/word-study/H2616`); **bar chart horizontal** por livro (SVG-less, Tailwind width%, cor por testamento — verde OT / roxo NT); lista de ocorrências paginada (20 por vez, "Show all" button) com links pro Reader.
+  - `WordDetailPanel.tsx` — placeholder "Bubble Chart (Fase 2D)" substituído por botão **"Full Study →"** que navega pra página completa.
+  - `App.tsx` — rota `/word-study/:strongsId` adicionada. Sem nav item no sidebar (acesso contextual via interlinear/panel).
+  - `.gitignore` corrigido — `data/raw/` agora ignora todo o diretório (antes era só `data/raw/*.json`, o que deixou XML/TXT de morphhb/sblgnt/stepbible passarem na staging).
+  - Tasks #4/#5 (feitas no Claude web) tinham arquivos não-commitados no working tree — incluídos no mesmo commit pra limpar o estado.
+  - Testado via Puppeteer: G3056 (λόγος, 332 occ, Acts top) e H2617 (חֵסֵד, 200 occ, Psalms top). Ambos renderizam corretamente com cores de testamento.
+- **Snapshot do DuckDB:** 302.503 versos · 344.754 crossrefs · 14.178 Strong's · 31.152 original texts · 406.852 interlinear words.
+- **Evolução do projeto nesta sessão:** de 6 tasks concluídas pra 6 tasks + merge + CI fixes + Task #6 completa. Repo limpo em main, zero branches pendentes, CI passando (aguardando confirmação do último push).
+- **Próxima entrada:** Tarefa #7 — Bible Dictionary (Easton's, 3500 verbetes). Primeiro conteúdo de "referência" — não extrai de fontes bíblicas originais, mas de dicionário acadêmico do séc. XIX (domínio público). Diferente das tarefas anteriores: é um corpus textual em prosa, não TSV/XML estruturado.

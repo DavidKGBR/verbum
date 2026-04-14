@@ -8,6 +8,7 @@ import BookmarksPage from "./pages/BookmarksPage";
 import NotesPage from "./pages/NotesPage";
 import PlansPage from "./pages/PlansPage";
 import WordStudyPage from "./pages/WordStudyPage";
+import DictionaryPage from "./pages/DictionaryPage";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/notes" element={<NotesPage />} />
         <Route path="/plans" element={<PlansPage />} />
         <Route path="/word-study/:strongsId" element={<WordStudyPage />} />
+        <Route path="/dictionary" element={<DictionaryPage />} />
       </Route>
     </Routes>
   );

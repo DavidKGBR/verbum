@@ -55,6 +55,7 @@ class DuckDBLoader:
         self.conn.execute("DROP TABLE IF EXISTS strongs_lexicon;")
         self.conn.execute("DROP TABLE IF EXISTS original_texts;")
         self.conn.execute("DROP TABLE IF EXISTS interlinear;")
+        self.conn.execute("DROP TABLE IF EXISTS dictionary_entries;")
 
         self.conn.execute("""
             CREATE TABLE translations (
@@ -163,6 +164,7 @@ class DuckDBLoader:
         self._ensure_strongs_table()
         self._ensure_original_texts_table()
         self._ensure_interlinear_table()
+        self._ensure_dictionary_table()
 
         self._create_analytical_views()
         logger.info("✅ Schema created successfully")
@@ -617,6 +619,35 @@ class DuckDBLoader:
         logger.info(f"✅ Loaded {count} {source} interlinear words")
         return count
 
+    def _ensure_dictionary_table(self) -> None:
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS dictionary_entries (
+                slug         VARCHAR PRIMARY KEY,
+                name         VARCHAR NOT NULL,
+                source       VARCHAR NOT NULL,
+                text_easton  VARCHAR,
+                text_smith   VARCHAR,
+                loaded_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        """)
+        self.conn.execute("CREATE INDEX IF NOT EXISTS idx_dict_name ON dictionary_entries(name);")
+
+    def load_dictionary(self, df: pd.DataFrame) -> int:
+        """Replace dictionary entries (full refresh — small dataset)."""
+        if df.empty:
+            return 0
+        self._ensure_dictionary_table()
+        logger.info(f"📖 Loading {len(df)} dictionary entries into DuckDB...")
+        self.conn.execute("DELETE FROM dictionary_entries;")
+        self.conn.execute("""
+            INSERT INTO dictionary_entries (slug, name, source, text_easton, text_smith)
+            SELECT slug, name, source, text_easton, text_smith
+            FROM df
+        """)
+        count = self.conn.execute("SELECT COUNT(*) FROM dictionary_entries").fetchone()[0]  # type: ignore[index]
+        logger.info(f"✅ Loaded {count} dictionary entries")
+        return count
+
     def log_pipeline_run(
         self,
         run_id: str,
@@ -690,5 +721,11 @@ class DuckDBLoader:
             result["interlinear_words"] = row[0] if row else 0
         except Exception:
             result["interlinear_words"] = 0
+
+        try:
+            row = self.conn.execute("SELECT COUNT(*) FROM dictionary_entries").fetchone()
+            result["dictionary_entries"] = row[0] if row else 0
+        except Exception:
+            result["dictionary_entries"] = 0
 
         return result
