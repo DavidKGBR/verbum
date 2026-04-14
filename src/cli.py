@@ -16,6 +16,7 @@ from rich.logging import RichHandler
 from src.config import PipelineConfig
 from src.extract.morphhb_extractor import MorphHbExtractor
 from src.extract.sblgnt_extractor import SblgntExtractor
+from src.extract.stepbible_extractor import StepBibleExtractor
 from src.extract.strongs_extractor import StrongsExtractor
 from src.load.duckdb_loader import DuckDBLoader
 from src.pipeline import BiblePipeline
@@ -308,6 +309,85 @@ def greek(
         f"across [cyan]{len(books_loaded)}[/cyan] book"
         f"{'s' if len(books_loaded) != 1 else ''}."
     )
+
+
+@app.command()
+def interlinear(
+    language: str = typer.Option(
+        "both",
+        "--language",
+        "-L",
+        help="Which side to load: greek (TAGNT) | hebrew (TAHOT) | both.",
+    ),
+    cache: bool = typer.Option(
+        True,
+        "--cache/--no-cache",
+        help="Use cached TSVs in data/raw/stepbible/ if present.",
+    ),
+    log_level: str = typer.Option("INFO", "--log-level", "-l", help="Logging level"),
+) -> None:
+    """🔤 Extract and load STEPBible interlinear (Strong's + morphology + semantic tags).
+
+    Data created by www.STEPBible.org based on work at Tyndale House Cambridge
+    (CC BY 4.0). Covers every word of the OT (TAHOT) and NT (TAGNT) with
+    disambiguated Strong's, grammar codes, lemma + gloss, and semantic tags
+    that identify individuals ("David»David|David@Rut.4.17") and concepts.
+    """
+    setup_logging(log_level)
+
+    language = language.lower().strip()
+    if language not in {"greek", "hebrew", "both"}:
+        console.print(f"[red]✗[/red] --language must be greek | hebrew | both (got {language!r})")
+        raise typer.Exit(code=1)
+
+    console.print("[bold]🔤 Interlinear (STEPBible TAHOT + TAGNT)[/bold]\n")
+    extractor = StepBibleExtractor()
+    config = PipelineConfig()
+
+    def _to_df(words):
+        return pd.DataFrame(
+            [
+                {
+                    "verse_id": w.verse_id,
+                    "word_position": w.word_position,
+                    "language": w.language.value,
+                    "source": w.source,
+                    "original_word": w.original_word,
+                    "transliteration": w.transliteration,
+                    "english": w.english,
+                    "strongs_id": w.strongs_id,
+                    "strongs_raw": w.strongs_raw,
+                    "grammar": w.grammar,
+                    "lemma": w.lemma,
+                    "gloss": w.gloss,
+                    "semantic_tag": w.semantic_tag,
+                }
+                for w in words
+            ]
+        )
+
+    total = 0
+    with DuckDBLoader(config.load) as loader:
+        if language in {"greek", "both"}:
+            words = extractor.extract_tagnt(use_cache=cache)
+            if words:
+                count = loader.load_interlinear(_to_df(words), source="tagnt")
+                total += count
+                console.print(
+                    f"[green]✓[/green] Loaded [bold]{count:,}[/bold] Greek interlinear words "
+                    f"(TAGNT, {len({w.verse_id.split('.')[0] for w in words})} books)"
+                )
+        if language in {"hebrew", "both"}:
+            words = extractor.extract_tahot(use_cache=cache)
+            if words:
+                count = loader.load_interlinear(_to_df(words), source="tahot")
+                total += count
+                console.print(
+                    f"[green]✓[/green] Loaded [bold]{count:,}[/bold] Hebrew interlinear words "
+                    f"(TAHOT, {len({w.verse_id.split('.')[0] for w in words})} books)"
+                )
+
+    console.print(f"\n[green]✓ Total: [bold]{total:,}[/bold] interlinear words.[/green]")
 
 
 @app.command()

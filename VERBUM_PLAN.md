@@ -239,7 +239,7 @@ Competição média-baixa vs Bible Hub (UX terrível).
 |---|------|---------|--------|-----|
 | 1 | Notas + Highlighting | 🔥🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-1-notes-highlighting) |
 | 2 | Streak + Reading Plans | 🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-2-streak-plans) |
-| 3 | Extract Strong's + originals | 🔥🔥🔥🔥 | 🚧 Em andamento (3a ✅ · 3b ✅ · 3c ✅ · 3d 🔲) | [3a](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3a-strongs-lexicon) · [3b](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3b-hebrew-wlc) · [3c](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3c-greek-sblgnt) |
+| 3 | Extract Strong's + originals | 🔥🔥🔥🔥 | ✅ Concluído (3a+3b+3c+3d) | [3a](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3a-strongs-lexicon) · [3b](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3b-hebrew-wlc) · [3c](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3c-greek-sblgnt) · [3d](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3d-interlinear-stepbible) |
 | 4 | API endpoints (6 novos) | 🔥🔥🔥 | 🔲 Planejado | — |
 | 5 | Interlinear View | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
 | 6 | Word Study page | 🔥🔥🔥🔥 | 🔲 Planejado | — |
