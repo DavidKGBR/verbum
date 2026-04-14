@@ -83,7 +83,7 @@ def list_places(
                     r["also_called"] = json.loads(r["also_called"])
             tp = r.pop("thumbnail_pattern", None)
             r["thumbnail_url"] = (
-                tp.replace("####", "300") if tp else None
+                tp.replace("####", "330") if tp else None
             )
 
         return {
@@ -154,7 +154,7 @@ def get_places_geojson(
         features = []
         for _, row in df.iterrows():
             tp = row.get("thumbnail_pattern")
-            thumb = tp.replace("####", "300") if tp else None
+            thumb = tp.replace("####", "330") if tp else None
             features.append(
                 {
                     "type": "Feature",
@@ -287,7 +287,8 @@ def get_place(slug: str) -> dict:
             images.append({
                 "image_id": img["image_id"],
                 "file_url": img["file_url"],
-                "thumbnail_url": tp.replace("####", "300") if tp else None,
+                "thumbnail_url": tp.replace("####", "330") if tp else None,
+                "hero_url": tp.replace("####", "960") if tp else None,
                 "description": img["description"],
                 "license": img["license"],
                 "credit": img["credit"],

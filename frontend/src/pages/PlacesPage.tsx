@@ -112,7 +112,7 @@ function PlaceDetail({ detail }: { detail: BiblicalPlace }) {
       {hero && (
         <div className="relative -mx-4 -mt-0 mb-3">
           <img
-            src={hero.thumbnail_url?.replace("300", "800") || hero.file_url}
+            src={hero.hero_url || hero.thumbnail_url || hero.file_url}
             alt={hero.description || detail.name}
             className="w-full h-48 md:h-56 object-cover cursor-pointer"
             onClick={() => setLightboxImage(hero)}

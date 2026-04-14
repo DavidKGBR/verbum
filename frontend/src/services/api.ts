@@ -486,6 +486,7 @@ export interface PlaceImage {
   image_id: string;
   file_url: string;
   thumbnail_url: string | null;
+  hero_url?: string | null;
   description: string | null;
   license: string;
   credit: string;
