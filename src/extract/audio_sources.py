@@ -37,20 +37,21 @@ if sys.stderr and hasattr(sys.stderr, "buffer"):
 
 logger = logging.getLogger(__name__)
 
-# ── Configuração de vozes Neural2 ────────────────────────────────────────────
+# ── Configuração de vozes Chirp3-HD ──────────────────────────────────────────
+# Chirp3-HD é a geração mais recente do Google TTS — supera Neural2 e WaveNet.
+# Neural2 não existe para he-IL nem el-GR; Chirp3-HD é a melhor opção disponível.
+# Vozes masculinas (gender=1) selecionadas — adequadas para léxico bíblico.
 
 VOICE_CONFIG: dict[str, dict[str, str]] = {
     "hebrew": {
         "language_code": "he-IL",
-        # Neural2 disponível para hebraico — máxima qualidade
-        "name": "he-IL-Neural2-A",
-        "note": "Hebraico moderno israelense (Neural2)",
+        "name": "he-IL-Chirp3-HD-Orus",
+        "note": "Hebraico moderno israelense (Chirp3-HD — geração mais recente)",
     },
     "greek": {
         "language_code": "el-GR",
-        # Neural2 ainda não existe para grego — WaveNet é a melhor opção disponível
-        "name": "el-GR-Wavenet-A",
-        "note": "Grego moderno (WaveNet — Neural2 indisponível para el-GR)",
+        "name": "el-GR-Chirp3-HD-Orus",
+        "note": "Grego moderno (Chirp3-HD — geração mais recente)",
     },
 }
 
