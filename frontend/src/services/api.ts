@@ -1479,14 +1479,19 @@ export interface GenealogyConceptSummary {
   strongs_ids: string[];
 }
 
-export async function fetchGenealogyConcepts(): Promise<GenealogyConceptSummary[]> {
+export async function fetchGenealogyConcepts(
+  lang: string = "en",
+): Promise<GenealogyConceptSummary[]> {
   const data = await fetchJson<{ concepts: GenealogyConceptSummary[] }>(
-    `${BASE}/genealogy/concepts`
+    `${BASE}/genealogy/concepts?lang=${encodeURIComponent(lang)}`,
   );
   return data.concepts;
 }
 
-export function fetchGenealogyConcept(id: string): Promise<GenealogyConcept> {
-  return fetchJson(`${BASE}/genealogy/concepts/${id}`);
+export function fetchGenealogyConcept(
+  id: string,
+  lang: string = "en",
+): Promise<GenealogyConcept> {
+  return fetchJson(`${BASE}/genealogy/concepts/${id}?lang=${encodeURIComponent(lang)}`);
 }
 

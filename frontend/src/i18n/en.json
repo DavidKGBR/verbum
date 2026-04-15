@@ -599,6 +599,15 @@
   "ai.section.keyWords": "Key Words",
   "ai.section.application": "Application",
 
+  "genealogy.title": "Semantic Genealogy",
+  "genealogy.subtitle": "The Ariadne's thread — tracing how key concepts travel from Hebrew to Greek across the testaments. Each word carries centuries of progressive revelation.",
+  "genealogy.breadcrumb": "Semantic Genealogy",
+  "genealogy.stats.concepts": "{n} concepts mapped",
+  "genealogy.stats.route": "Hebrew → LXX → Koine Greek",
+  "genealogy.stats.testaments": "OT → NT",
+  "genealogy.footerNote": "Based on linguistic evidence, LXX, Dead Sea Scrolls, and STEPBible lexical analysis. Each bridge is an interpretive choice — not dogma.",
+  "genealogy.loadError": "Failed to load concept.",
+
   "verseActions.btn.crossrefs": "Cross-refs",
   "verseActions.btn.explain": "Explain",
   "verseActions.btn.commentary": "Commentary",

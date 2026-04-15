@@ -599,6 +599,15 @@
   "ai.section.keyWords": "Palavras-Chave",
   "ai.section.application": "Aplicação",
 
+  "genealogy.title": "Genealogia Semântica",
+  "genealogy.subtitle": "O Fio de Ariadne — rastreia como os conceitos-chave viajam do hebraico ao grego através dos testamentos. Cada palavra carrega séculos de revelação progressiva.",
+  "genealogy.breadcrumb": "Genealogia Semântica",
+  "genealogy.stats.concepts": "{n} conceitos mapeados",
+  "genealogy.stats.route": "Hebraico → LXX → Grego Koiné",
+  "genealogy.stats.testaments": "AT → NT",
+  "genealogy.footerNote": "Baseado em evidências linguísticas, LXX, papiros do Mar Morto e análise lexical STEPBible. Cada ponte é uma escolha interpretativa — não dogmática.",
+  "genealogy.loadError": "Erro ao carregar conceito.",
+
   "verseActions.btn.crossrefs": "Referências",
   "verseActions.btn.explain": "Explicar",
   "verseActions.btn.commentary": "Comentário",

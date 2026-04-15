@@ -18,6 +18,7 @@ import {
 } from "../services/api";
 import ConceptFlow from "../components/genealogy/ConceptFlow";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+import { useI18n } from "../i18n/i18nContext";
 
 // ── Color dot map ─────────────────────────────────────────────────────────
 
@@ -63,15 +64,16 @@ const COLOR_BG: Record<string, string> = {
 // ── Catalog Page ──────────────────────────────────────────────────────────
 
 function CatalogPage() {
+  const { t, locale } = useI18n();
   const [concepts, setConcepts] = useState<GenealogyConceptSummary[]>([]);
   const [loading, setLoading]   = useState(true);
 
   useEffect(() => {
-    fetchGenealogyConcepts()
+    fetchGenealogyConcepts(locale)
       .then(setConcepts)
       .catch(() => {})
       .finally(() => setLoading(false));
-  }, []);
+  }, [locale]);
 
   if (loading) return <LoadingSpinner />;
 
@@ -80,25 +82,23 @@ function CatalogPage() {
       {/* Header */}
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
-          Genealogia Semântica
+          {t("genealogy.title")}
         </h1>
         <p className="text-sm text-[var(--color-text-muted)] max-w-2xl leading-relaxed">
-          O <em>Fio de Ariadne</em> — rastreia como os conceitos-chave viajam do hebraico
-          ao grego através dos testamentos. Cada palavra carrega séculos de revelação
-          progressiva.
+          {t("genealogy.subtitle")}
         </p>
       </div>
 
       {/* Stats */}
       <div className="flex gap-3 flex-wrap">
         <span className="text-xs px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
-          {concepts.length} conceitos mapeados
+          {t("genealogy.stats.concepts").replace("{n}", String(concepts.length))}
         </span>
         <span className="text-xs px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
-          Hebraico → LXX → Grego Koiné
+          {t("genealogy.stats.route")}
         </span>
         <span className="text-xs px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
-          AT → NT
+          {t("genealogy.stats.testaments")}
         </span>
       </div>
 
@@ -153,8 +153,7 @@ function CatalogPage() {
 
       {/* Footer note */}
       <p className="text-[11px] text-[var(--color-text-muted)] italic text-center pt-2">
-        Baseado em evidências linguísticas, LXX, papiros do Mar Morto e análise lexical STEPBible.
-        Cada bridge é uma escolha interpretativa — não dogmática.
+        {t("genealogy.footerNote")}
       </p>
     </div>
   );
@@ -163,17 +162,18 @@ function CatalogPage() {
 // ── Detail Page ───────────────────────────────────────────────────────────
 
 function DetailPage({ conceptId }: { conceptId: string }) {
+  const { t, locale } = useI18n();
   const [concept, setConcept] = useState<GenealogyConcept | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError]     = useState<string | null>(null);
 
   useEffect(() => {
     setLoading(true);
-    fetchGenealogyConcept(conceptId)
+    fetchGenealogyConcept(conceptId, locale)
       .then(setConcept)
-      .catch((e) => setError(e.message ?? "Erro ao carregar conceito"))
+      .catch((e) => setError(e.message ?? t("genealogy.loadError")))
       .finally(() => setLoading(false));
-  }, [conceptId]);
+  }, [conceptId, locale, t]);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 flex flex-col gap-6">
@@ -183,7 +183,7 @@ function DetailPage({ conceptId }: { conceptId: string }) {
           to="/genealogy"
           className="hover:text-[var(--color-gold-dark)] transition-colors"
         >
-          Genealogia Semântica
+          {t("genealogy.breadcrumb")}
         </Link>
         <span>›</span>
         <span>{concept?.concept ?? conceptId}</span>

@@ -599,6 +599,15 @@
   "ai.section.keyWords": "Palabras Clave",
   "ai.section.application": "Aplicación",
 
+  "genealogy.title": "Genealogía Semántica",
+  "genealogy.subtitle": "El Hilo de Ariadna — rastrea cómo los conceptos clave viajan del hebreo al griego a través de los testamentos. Cada palabra carga siglos de revelación progresiva.",
+  "genealogy.breadcrumb": "Genealogía Semántica",
+  "genealogy.stats.concepts": "{n} conceptos mapeados",
+  "genealogy.stats.route": "Hebreo → LXX → Griego Koiné",
+  "genealogy.stats.testaments": "AT → NT",
+  "genealogy.footerNote": "Basado en evidencias lingüísticas, LXX, papiros del Mar Muerto y análisis lexical STEPBible. Cada puente es una elección interpretativa — no dogmática.",
+  "genealogy.loadError": "Error al cargar el concepto.",
+
   "verseActions.btn.crossrefs": "Referencias",
   "verseActions.btn.explain": "Explicar",
   "verseActions.btn.commentary": "Comentario",

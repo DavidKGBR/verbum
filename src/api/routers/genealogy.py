@@ -13,22 +13,46 @@ import json
 import logging
 from pathlib import Path
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 
 from src.api.dependencies import get_db
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
 
-# Load curated concept journeys once at import time
-_GENEALOGY_PATH = (
-    Path(__file__).resolve().parents[3] / "data" / "static" / "semantic_genealogy.json"
-)
-_CONCEPTS: list[dict] = []
-if _GENEALOGY_PATH.exists():
-    _CONCEPTS = json.loads(_GENEALOGY_PATH.read_text(encoding="utf-8"))
+# Load curated concept journeys once at import time — one file per locale.
+# IDs/strongs_ids/key_verses/types/colors/icons are mirrored across locales;
+# only text fields (concept, tagline, gloss, note, narrative) differ.
+_STATIC_DIR = Path(__file__).resolve().parents[3] / "data" / "static"
+_GENEALOGY_FILES = {
+    "en": _STATIC_DIR / "semantic_genealogy.json",
+    "pt": _STATIC_DIR / "semantic_genealogy_pt.json",
+    "es": _STATIC_DIR / "semantic_genealogy_es.json",
+}
 
-_CONCEPT_INDEX: dict[str, dict] = {c["id"]: c for c in _CONCEPTS}
+_CONCEPTS_BY_LOCALE: dict[str, list[dict]] = {}
+for _locale, _path in _GENEALOGY_FILES.items():
+    if _path.exists():
+        _CONCEPTS_BY_LOCALE[_locale] = json.loads(_path.read_text(encoding="utf-8"))
+    else:
+        _CONCEPTS_BY_LOCALE[_locale] = []
+
+# Fallback to EN if a locale file is missing/empty
+_DEFAULT_CONCEPTS = _CONCEPTS_BY_LOCALE.get("en", [])
+_CONCEPT_INDEX_BY_LOCALE: dict[str, dict[str, dict]] = {
+    locale: {c["id"]: c for c in concepts}
+    for locale, concepts in _CONCEPTS_BY_LOCALE.items()
+}
+
+
+def _concepts_for(locale: str) -> list[dict]:
+    """Return concept list for the locale, falling back to EN when unknown."""
+    return _CONCEPTS_BY_LOCALE.get(locale) or _DEFAULT_CONCEPTS
+
+
+def _concept_index_for(locale: str) -> dict[str, dict]:
+    """Return id→concept index for the locale, falling back to EN."""
+    return _CONCEPT_INDEX_BY_LOCALE.get(locale) or _CONCEPT_INDEX_BY_LOCALE.get("en", {})
 
 
 def _enrich_node(node: dict, db: object) -> dict:
@@ -76,40 +100,49 @@ def _enrich_node(node: dict, db: object) -> dict:
 
 
 @router.get("/genealogy/concepts")
-def list_concepts() -> dict:
-    """Lista todos os conceitos disponíveis na genealogia semântica."""
+def list_concepts(
+    lang: str = Query("en", description="Locale: en | pt | es (fallback to en)"),
+) -> dict:
+    """List all available concepts in the semantic genealogy, localized."""
+    concepts = _concepts_for(lang)
+    # Also grab the EN catalog so we can expose `concept_en` alongside the
+    # localized concept (used by the UI to show English title as a subtitle).
+    en_index = _CONCEPT_INDEX_BY_LOCALE.get("en", {})
     summary = [
         {
             "id": c["id"],
             "concept": c["concept"],
-            "concept_en": c["concept_en"],
+            "concept_en": en_index.get(c["id"], {}).get("concept", c["concept"]),
             "tagline": c["tagline"],
             "color": c["color"],
             "icon": c["icon"],
             "node_count": len(c.get("nodes", [])),
             "strongs_ids": [n["strongs_id"] for n in c.get("nodes", [])],
         }
-        for c in _CONCEPTS
+        for c in concepts
     ]
     return {"total": len(summary), "concepts": summary}
 
 
 @router.get("/genealogy/concepts/{concept_id}")
-def get_concept(concept_id: str) -> dict:
-    """
-    Retorna um conceito completo com estatísticas de ocorrência do DB.
+def get_concept(
+    concept_id: str,
+    lang: str = Query("en", description="Locale: en | pt | es (fallback to en)"),
+) -> dict:
+    """Return a full concept with occurrence stats from the DB, localized.
 
-    Para cada palavra (node), adiciona:
-    - occurrence_count: total de ocorrências no interlinear
-    - top_books: top 5 livros por frequência
-    - short_definition: definição curta do léxico Strong's
+    For each word (node), adds:
+    - occurrence_count: total occurrences in the interlinear table
+    - top_books: top 5 books by frequency
+    - short_definition: short Strong's lexicon definition
     """
-    concept = _CONCEPT_INDEX.get(concept_id)
+    index = _concept_index_for(lang)
+    concept = index.get(concept_id)
     if not concept:
+        available = list(index.keys())
         raise HTTPException(
             status_code=404,
-            detail=f"Conceito '{concept_id}' não encontrado. "
-            f"Disponíveis: {list(_CONCEPT_INDEX.keys())}",
+            detail=f"Concept '{concept_id}' not found. Available: {available}",
         )
 
     db = get_db()

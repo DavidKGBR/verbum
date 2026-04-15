@@ -1,0 +1,343 @@
+[
+  {
+    "id": "chesed",
+    "concept": "Amor de Pacto",
+    "tagline": "El amor fiel e inquebrantable de Dios — del hebreo חֶסֶד al griego ἀγάπη",
+    "color": "rose",
+    "icon": "♡",
+    "nodes": [
+      {
+        "strongs_id": "H2617",
+        "language": "hebrew",
+        "word": "חֶסֶד",
+        "transliteration": "chesed",
+        "gloss": "amor fiel, misericordia, lealtad de pacto",
+        "testament": "OT",
+        "key_verses": ["PSA.136.1", "MIC.6.8", "PSA.23.6"],
+        "note": "Núcleo del carácter de Dios en el AT — aparece 251 veces, 127 solo en los Salmos. Denota lealtad contractual inquebrantable."
+      },
+      {
+        "strongs_id": "G1656",
+        "language": "greek",
+        "word": "ἔλεος",
+        "transliteration": "eleos",
+        "gloss": "misericordia, compasión",
+        "testament": "NT",
+        "key_verses": ["LUK.1.50", "ROM.9.15", "TIT.3.5"],
+        "note": "Traducción estándar de chesed en la Septuaginta. En el NT preserva el eco del AT — misericordia de Dios en respuesta a la debilidad humana."
+      },
+      {
+        "strongs_id": "G26",
+        "language": "greek",
+        "word": "ἀγάπη",
+        "transliteration": "agapē",
+        "gloss": "amor incondicional, amor divino",
+        "testament": "NT",
+        "key_verses": ["JHN.3.16", "1JN.4.8", "1CO.13.13"],
+        "note": "Palabra rara vez usada en el griego clásico — los escritores del NT la eligieron precisamente para expresar el amor de Dios que trasciende el mérito. Juan declara: 'Dios es agapē'."
+      }
+    ],
+    "bridges": [
+      {"from": "H2617", "to": "G1656", "type": "lxx_translation", "note": "La LXX traduce chesed por eleos en ~200 de sus 251 ocurrencias"},
+      {"from": "H2617", "to": "G26", "type": "theological_development", "note": "El NT profundiza el chesed: agapē es el amor auto-entregado que chesed anticipaba"}
+    ],
+    "narrative": "El chesed hebreo es el amor fiel del pacto — la lealtad absoluta de Dios a su pueblo aun cuando este falla. En la Septuaginta, los traductores griegos usaron eleos (misericordia) para capturar esta idea. En el NT, los escritores acuñaron agapē — una palabra griega casi inusitada — para expresar la profundización de esa revelación: no solo lealtad, sino amor auto-entregado que va hasta la cruz. Juan 3:16 y 1 Juan 4:8 son el clímax de un viaje que comienza en el Sinaí."
+  },
+  {
+    "id": "shalom",
+    "concept": "Paz / Integridad",
+    "tagline": "No la ausencia de conflicto, sino la presencia de integridad — שָׁלוֹם y εἰρήνη",
+    "color": "sky",
+    "icon": "☮",
+    "nodes": [
+      {
+        "strongs_id": "H7965",
+        "language": "hebrew",
+        "word": "שָׁלוֹם",
+        "transliteration": "shalom",
+        "gloss": "paz, integridad, bienestar, plenitud",
+        "testament": "OT",
+        "key_verses": ["NUM.6.26", "ISA.9.6", "JER.29.11"],
+        "note": "Shalom va mucho más allá de la ausencia de guerra — es el estado de integridad, armonía y florecimiento pleno de una persona, comunidad o nación. El Mesías será llamado 'Príncipe del Shalom'."
+      },
+      {
+        "strongs_id": "G1515",
+        "language": "greek",
+        "word": "εἰρήνη",
+        "transliteration": "eirēnē",
+        "gloss": "paz, armonía, tranquilidad",
+        "testament": "NT",
+        "key_verses": ["JHN.14.27", "ROM.5.1", "PHP.4.7"],
+        "note": "En el NT, eirēnē carga todo el peso semántico de shalom. Pablo abre cada carta con 'gracia y paz'. La paz de Dios 'sobrepasa todo entendimiento' (Fil 4:7) — el shalom escatológico restaurado en Cristo."
+      }
+    ],
+    "bridges": [
+      {"from": "H7965", "to": "G1515", "type": "lxx_translation", "note": "Traducción directa y consistente de la LXX — shalom → eirēnē"}
+    ],
+    "narrative": "Shalom es quizá la palabra más mal traducida de la Biblia. Reducirla a 'paz' (ausencia de conflicto) es perder el 80% del concepto. Shalom es integridad, florecimiento, plenitud — el estado de un ser que es todo lo que debería ser. Cuando los escritores del NT usan eirēnē, cargan ese peso hebreo: Pablo no está deseando 'calma' a sus lectores, sino la restauración shalómica que Cristo hace posible."
+  },
+  {
+    "id": "emet",
+    "concept": "Verdad / Fidelidad",
+    "tagline": "La verdad que no cede — אֱמֶת y ἀλήθεια",
+    "color": "amber",
+    "icon": "⚖",
+    "nodes": [
+      {
+        "strongs_id": "H571",
+        "language": "hebrew",
+        "word": "אֱמֶת",
+        "transliteration": "emet",
+        "gloss": "verdad, fidelidad, confiabilidad",
+        "testament": "OT",
+        "key_verses": ["PSA.25.5", "PSA.86.11", "PRO.3.3"],
+        "note": "Emet deriva de 'aman' (ser firme, estable). La verdad hebrea es primariamente relacional — no una proposición abstracta, sino la confiabilidad de una persona. 'Dios de emet' significa Dios en quien se puede confiar absolutamente."
+      },
+      {
+        "strongs_id": "G225",
+        "language": "greek",
+        "word": "ἀλήθεια",
+        "transliteration": "alētheia",
+        "gloss": "verdad, realidad, no-ocultamiento",
+        "testament": "NT",
+        "key_verses": ["JHN.14.6", "JHN.8.32", "JHN.17.17"],
+        "note": "En griego clásico, alētheia = 'lo que no está escondido' (a-lēthē). Juan une las dos tradiciones: Jesús declara 'Yo soy la Verdad' — tanto la realidad última (griego) como la confiabilidad personal absoluta (hebreo)."
+      }
+    ],
+    "bridges": [
+      {"from": "H571", "to": "G225", "type": "lxx_translation", "note": "La LXX usa alētheia para emet — pero Juan amplía el concepto en dimensión filosófica"}
+    ],
+    "narrative": "La emet hebrea y la alētheia griega parten de direcciones opuestas y se encuentran en Cristo. El hebreo piensa en términos relacionales: la verdad es fidelidad, es alguien con quien se puede contar. El griego piensa ontológicamente: la verdad es la realidad en sí, lo desvelado. El Evangelio de Juan funde ambas: 'Yo soy el Camino, la Verdad y la Vida' — la Persona que es al mismo tiempo absolutamente confiable (emet) y la realidad última (alētheia)."
+  },
+  {
+    "id": "ruach-pneuma",
+    "concept": "Espíritu / Aliento",
+    "tagline": "El aliento que anima la creación — רוּחַ y πνεῦμα",
+    "color": "violet",
+    "icon": "🌬",
+    "nodes": [
+      {
+        "strongs_id": "H7307",
+        "language": "hebrew",
+        "word": "רוּחַ",
+        "transliteration": "ruach",
+        "gloss": "espíritu, viento, aliento, soplo",
+        "testament": "OT",
+        "key_verses": ["GEN.1.2", "EZK.37.9", "PSA.104.30"],
+        "note": "Ruach es a la vez viento, aliento y espíritu — la misma palabra describe el viento que se cierne sobre las aguas (Gn 1:2) y el Espíritu de Dios que inspira a los profetas. La ambigüedad es intencional: el Espíritu es tan real como el viento."
+      },
+      {
+        "strongs_id": "G4151",
+        "language": "greek",
+        "word": "πνεῦμα",
+        "transliteration": "pneuma",
+        "gloss": "espíritu, aliento, viento",
+        "testament": "NT",
+        "key_verses": ["JHN.3.8", "ACT.2.2", "ROM.8.11"],
+        "note": "Pneuma preserva la misma triple ambigüedad de ruach. Juan 3:8 usa este hecho teológicamente: 'El viento (pneuma) sopla donde quiere... así es todo el que nace del Espíritu (pneuma)'. En Pentecostés suena como un 'viento recio' — ruach derramada."
+      }
+    ],
+    "bridges": [
+      {"from": "H7307", "to": "G4151", "type": "lxx_translation", "note": "Traducción consistente — ruach → pneuma preserva toda la riqueza semántica"}
+    ],
+    "narrative": "Ninguna traducción de 'espíritu' captura el ruach hebreo. Ruach es viento, es aliento vital, es el agente creador que se cierne sobre las aguas en Génesis. Cuando Ezequiel ordena al viento (ruach) que sople sobre los huesos secos, está invocando el mismo poder que animó a Adán. El NT hereda este concepto intacto en pneuma — y lo profundiza: en Pentecostés, el pneuma desciende como viento (pneuma) y fuego, completando el arco abierto en Génesis 1."
+  },
+  {
+    "id": "kabowd-doxa",
+    "concept": "Gloria",
+    "tagline": "El peso de la presencia de Dios — כָּבוֹד y δόξα",
+    "color": "yellow",
+    "icon": "✦",
+    "nodes": [
+      {
+        "strongs_id": "H3519",
+        "language": "hebrew",
+        "word": "כָּבוֹד",
+        "transliteration": "kabowd",
+        "gloss": "gloria, honra, peso, riqueza",
+        "testament": "OT",
+        "key_verses": ["EXO.33.18", "ISA.6.3", "PSA.19.1"],
+        "note": "Kabowd viene de 'kabad' (ser pesado). La gloria de Dios es su presencia tangible — tan real que el tabernáculo y el templo no podían contenerla (1 Re 8:11). Isaías 6: 'Toda la tierra está llena de su kabowd'."
+      },
+      {
+        "strongs_id": "G1391",
+        "language": "greek",
+        "word": "δόξα",
+        "transliteration": "doxa",
+        "gloss": "gloria, honra, resplandor, opinión",
+        "testament": "NT",
+        "key_verses": ["JHN.1.14", "JHN.17.5", "2CO.3.18"],
+        "note": "Doxa en griego clásico significaba 'opinión' — pero la LXX la eligió para traducir kabowd, cargándola de peso revelacional. Juan 1:14: 'vimos su doxa' — el Logos encarnado manifestó el kabowd que llenó el tabernáculo."
+      }
+    ],
+    "bridges": [
+      {"from": "H3519", "to": "G1391", "type": "lxx_translation", "note": "La LXX transformó doxa (opinión) en un término de presencia divina tangible"}
+    ],
+    "narrative": "La elección de la LXX de usar doxa para kabowd es una de las más audaces de la historia de la traducción. Doxa en griego solo significaba 'opinión' o 'reputación' — algo subjetivo. Los traductores griegos la llenaron del peso tangible y físico del kabowd hebreo: la nube que llenó el tabernáculo, el fuego que descendió sobre el Sinaí. Juan 1:14 es la culminación: la doxa que llenaba el tabernáculo ahora habita (eskēnōsen — 'plantó tienda') en carne humana."
+  },
+  {
+    "id": "tsedaqah",
+    "concept": "Justicia / Rectitud",
+    "tagline": "Conformidad con el pacto — צְדָקָה y δικαιοσύνη",
+    "color": "emerald",
+    "icon": "⚐",
+    "nodes": [
+      {
+        "strongs_id": "H6666",
+        "language": "hebrew",
+        "word": "צְדָקָה",
+        "transliteration": "tsedaqah",
+        "gloss": "justicia, rectitud, conformidad con el pacto",
+        "testament": "OT",
+        "key_verses": ["GEN.15.6", "ISA.53.11", "MIC.6.8"],
+        "note": "Tsedaqah no es simplemente un comportamiento ético — es conformidad con la relación de pacto. Abraham 'creyó y le fue contado por tsedaqah' (Gn 15:6). Es también el acto de Dios de defender a los oprimidos (Is 61:11)."
+      },
+      {
+        "strongs_id": "G1343",
+        "language": "greek",
+        "word": "δικαιοσύνη",
+        "transliteration": "dikaiosynē",
+        "gloss": "justicia, rectitud, justificación",
+        "testament": "NT",
+        "key_verses": ["ROM.1.17", "ROM.3.21", "MAT.5.6"],
+        "note": "Pablo cita Gn 15:6 en Romanos 4 para construir su teología de la justificación: dikaiosynē se recibe por fe, no por obras. Pero el Sermón del Monte (Mt 5:6) preserva el aspecto activo: 'Bienaventurados los que tienen hambre de dikaiosynē' — justicia como restauración del mundo."
+      }
+    ],
+    "bridges": [
+      {"from": "H6666", "to": "G1343", "type": "lxx_translation", "note": "Pablo cita Gn 15:6 (LXX) directamente — Abraham → Romanos 4"}
+    ],
+    "narrative": "La tsedaqah hebrea es multidimensional: es la rectitud personal del que vive en conformidad con el pacto, pero también el acto de Dios de defender a los oprimidos y restaurar el mundo. Pablo usa dikaiosynē para construir su teología de la justificación — y en ese proceso recupera ambas dimensiones: justificación (dikaiosynē imputada por la fe) y santificación (dikaiosynē que produce justicia en el mundo). Romanos 1:17 y Mateo 5:6 son los dos polos de esa tensión."
+  },
+  {
+    "id": "emunah-pistis",
+    "concept": "Fe / Fidelidad",
+    "tagline": "Fe que sostiene y es sostenida — אֱמוּנָה y πίστις",
+    "color": "indigo",
+    "icon": "⚓",
+    "nodes": [
+      {
+        "strongs_id": "H530",
+        "language": "hebrew",
+        "word": "אֱמוּנָה",
+        "transliteration": "emunah",
+        "gloss": "fidelidad, firmeza, confiabilidad",
+        "testament": "OT",
+        "key_verses": ["HAB.2.4", "PSA.37.3", "LAM.3.23"],
+        "note": "Emunah es primariamente un atributo de Dios ('sus emunot son nuevas cada mañana', Lm 3:23) antes de ser exigida al ser humano. Habacuc 2:4 — 'el justo vivirá por su emunah' — es la semilla que Pablo cosecha en Romanos."
+      },
+      {
+        "strongs_id": "G4102",
+        "language": "greek",
+        "word": "πίστις",
+        "transliteration": "pistis",
+        "gloss": "fe, confianza, fidelidad",
+        "testament": "NT",
+        "key_verses": ["ROM.1.17", "GAL.3.11", "HEB.11.1"],
+        "note": "Pistis en griego significa tanto 'fe' (confianza activa) como 'fidelidad' (lealtad comprobada). Pablo cita Hab 2:4 tres veces (Rm 1:17, Gl 3:11, Heb 10:38). Hebreos 11 enumera a los que 'vivieron por emunah/pistis' — el hilo de Ariadna de la historia de la salvación."
+      }
+    ],
+    "bridges": [
+      {"from": "H530", "to": "G4102", "type": "lxx_translation", "note": "Pablo cita Hab 2:4 (LXX) como fundamento de su teología de la fe"}
+    ],
+    "narrative": "Habacuc 2:4 es probablemente el versículo del AT más citado en el NT: 'el justo vivirá por su emunah/pistis'. Pablo usa este versículo tres veces para fundamentar que la justificación es por fe desde siempre — Abraham, Habacuc y el cristiano viven por el mismo principio. Pero la palabra hebrea emunah lleva 'fidelidad' tanto como 'fe' — lo cual plantea la pregunta exegética más rica del NT: '¿pistis Iēsou Christou' significa 'fe en Cristo' o 'fidelidad de Cristo'?"
+  },
+  {
+    "id": "mashiach-christos",
+    "concept": "Mesías / Cristo",
+    "tagline": "El Ungido esperado — מָשִׁיחַ y Χριστός",
+    "color": "purple",
+    "icon": "✝",
+    "nodes": [
+      {
+        "strongs_id": "H4899",
+        "language": "hebrew",
+        "word": "מָשִׁיחַ",
+        "transliteration": "mashiach",
+        "gloss": "ungido, consagrado por unción",
+        "testament": "OT",
+        "key_verses": ["PSA.2.2", "DAN.9.25", "ISA.61.1"],
+        "note": "Mashiach (ungido) era el título de reyes y sacerdotes ungidos con aceite como señal de consagración divina. El AT desarrolla gradualmente la expectativa de un Mashiach escatológico — un descendiente de David que establecería el reino de Dios definitivamente."
+      },
+      {
+        "strongs_id": "G5547",
+        "language": "greek",
+        "word": "Χριστός",
+        "transliteration": "Christos",
+        "gloss": "ungido, Cristo, Mesías",
+        "testament": "NT",
+        "key_verses": ["MAT.16.16", "JHN.20.31", "ACT.2.36"],
+        "note": "Christos es la transliteración griega de mashiach. Para los lectores gentiles era inicialmente solo el apellido de Jesús — pero los escritores del NT insisten en que es un título: Jesús es EL Ungido esperado. En Hechos 2, Pedro proclama: 'Dios lo ha hecho Señor y Cristo (Christos/Mashiach)'."
+      }
+    ],
+    "bridges": [
+      {"from": "H4899", "to": "G5547", "type": "semantic_equivalence", "note": "Christos es transliteración directa de mashiach — mismo concepto, escritura griega"}
+    ],
+    "narrative": "El viaje de mashiach a Christos es único: no es una traducción (como chesed → eleos), sino una transliteración — el mismo sonido, nuevo alfabeto. El NT afirma que Jesús de Nazaret es el cumplimiento de todas las promesas del mashiach: sacerdote (ungido), rey (trono de David) y profeta (ungido por el Espíritu en Is 61:1). El nombre 'Jesucristo' no es nombre + apellido, sino nombre + título — equivalente a 'Jesús, el Mesías'."
+  },
+  {
+    "id": "dabar-logos",
+    "concept": "Palabra / Razón",
+    "tagline": "La Palabra que actúa y crea — דָּבָר y λόγος",
+    "color": "cyan",
+    "icon": "λ",
+    "nodes": [
+      {
+        "strongs_id": "H1697",
+        "language": "hebrew",
+        "word": "דָּבָר",
+        "transliteration": "dabar",
+        "gloss": "palabra, discurso, cosa, acontecimiento",
+        "testament": "OT",
+        "key_verses": ["GEN.1.3", "PSA.33.6", "ISA.55.11"],
+        "note": "Dabar es la palabra de Dios que crea, que actúa, que no vuelve vacía. 'Y Dios dijo (dabar)... y fue'. En el AT, dabar es evento antes que concepto — no es mera comunicación, es intervención creadora. El profeta recibe el 'dabar de YHWH' como un poder que lo compele."
+      },
+      {
+        "strongs_id": "G3056",
+        "language": "greek",
+        "word": "λόγος",
+        "transliteration": "logos",
+        "gloss": "palabra, razón, lógica, principio ordenador",
+        "testament": "NT",
+        "key_verses": ["JHN.1.1", "JHN.1.14", "REV.19.13"],
+        "note": "El logos griego era el principio racional que ordenaba el universo (Heráclito, Estoicos). Juan usa el término para hablar tanto al judío (dabar creador) como al griego (logos ordenador) — y declara que este Logos eterno 'se hizo carne'. Es la convergencia más audaz de dos mundos de pensamiento."
+      }
+    ],
+    "bridges": [
+      {"from": "H1697", "to": "G3056", "type": "theological_development", "note": "Juan funde el dabar hebreo con el logos griego — la mayor síntesis del NT"}
+    ],
+    "narrative": "El Prólogo de Juan (1:1-18) es el texto que más conscientemente une las dos tradiciones. El dabar hebreo — la palabra de Dios que crea el cosmos ('Y Dios dijo...') — y el logos griego — el principio racional que Heráclito y los Estoicos veían como fundamento del universo — son declarados idénticos, y este Logos eterno 'se hizo carne y habitó entre nosotros'. Ninguna otra declaración en la literatura antigua unifica tan audazmente el pensamiento hebreo y helénico."
+  },
+  {
+    "id": "teshuvah-metanoia",
+    "concept": "Arrepentimiento / Retorno",
+    "tagline": "Volver a casa — שׁוּב y μετάνοια",
+    "color": "orange",
+    "icon": "↩",
+    "nodes": [
+      {
+        "strongs_id": "H7725",
+        "language": "hebrew",
+        "word": "שׁוּב",
+        "transliteration": "shuv",
+        "gloss": "retornar, volver, convertirse",
+        "testament": "OT",
+        "key_verses": ["JER.31.18", "HOS.6.1", "JOL.2.12"],
+        "note": "Shuv es el verbo hebreo del arrepentimiento — literalmente 'volver'. Los profetas claman: '¡Volved (shuvu) al SEÑOR!' (Os 6:1). Es movimiento físico antes que emocional — cambiar de dirección, no solo sentir remordimiento. El hijo pródigo 'volvió' (Lucas usa el equivalente griego)."
+      },
+      {
+        "strongs_id": "G3341",
+        "language": "greek",
+        "word": "μετάνοια",
+        "transliteration": "metanoia",
+        "gloss": "arrepentimiento, cambio de mente, transformación",
+        "testament": "NT",
+        "key_verses": ["MAT.3.2", "ACT.2.38", "LUK.15.7"],
+        "note": "Metanoia (meta + nous) es literalmente 'cambio de mente' — pero el NT lo usa con el peso direccional de shuv hebreo. Juan Bautista clama 'metanoeite' y Jesús retoma el mismo llamado. La parábola del hijo pródigo (Lc 15) es la mejor ilustración: cambio de mente → cambio de dirección → retorno al padre."
+      }
+    ],
+    "bridges": [
+      {"from": "H7725", "to": "G3341", "type": "theological_development", "note": "Metanoia preserva el movimiento direccional de shuv — cambio de mente que cambia el camino"}
+    ],
+    "narrative": "El arrepentimiento bíblico no es principalmente sentimiento — es movimiento. El hebreo shuv es darse vuelta; el griego metanoia es cambiar de mente (nous). El NT une los dos: el verdadero arrepentimiento es tanto cognitivo (cambiar de idea sobre Dios y sobre uno mismo) como conductual (volver al Padre). La parábola del Hijo Pródigo (Lucas 15) es la síntesis: 'volvió en sí' (metanoia) y 'se levantó y fue' (shuv). El padre corre al encuentro del que 'se había perdido y fue hallado' — el clímax de toda genealogía semántica del retorno."
+  }
+]
