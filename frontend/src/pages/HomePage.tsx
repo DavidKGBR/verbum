@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import {
   fetchTranslationStats,
   fetchArcs,
-  fetchBooks,
   fetchHomeStats,
   type TranslationStat,
-  type Book,
   type HomeStats,
 } from "../services/api";
+import { useBooks, localizeBookName } from "../i18n/bookNames";
 import { useI18n } from "../i18n/i18nContext";
 import VerseOfTheDay from "../components/VerseOfTheDay";
 import TranslationPreview from "../components/TranslationPreview";
@@ -42,10 +41,10 @@ const ICONS = {
 };
 
 export default function HomePage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [translations, setTranslations] = useState<TranslationStat[]>([]);
   const [totalCrossrefs, setTotalCrossrefs] = useState<number | null>(null);
-  const [books, setBooks] = useState<Book[]>([]);
+  const books = useBooks("kjv");
   const [homeStats, setHomeStats] = useState<HomeStats | null>(null);
   const [translationsOpen, setTranslationsOpen] = useState(false);
   const { getLastRead } = useReadingHistory();
@@ -59,7 +58,6 @@ export default function HomePage() {
     fetchArcs(undefined, 1, "distance")
       .then((d) => setTotalCrossrefs(d.metadata.total_crossrefs))
       .catch(() => {});
-    fetchBooks("kjv").then(setBooks).catch(() => {});
     fetchHomeStats().then(setHomeStats).catch(() => {});
   }, []);
 
@@ -78,7 +76,7 @@ export default function HomePage() {
         to: "/plans",
         icon: ICONS.trophy,
         titleKey: "",
-        subtitle: `${planDef.title} · Day ${today.day}`,
+        subtitle: `${t(planDef.titleKey)} · ${t("plans.dayOf").replace("{day}", String(today.day)).replace("{total}", String(planDef.total_days))}`,
         accent: true,
       };
     }
@@ -87,7 +85,9 @@ export default function HomePage() {
       to: `/reader?book=${nextCh.book_id}&chapter=${nextCh.chapter}&translation=kjv`,
       icon: ICONS.book,
       titleKey: "",
-      subtitle: `${remaining.length} chapter${remaining.length === 1 ? "" : "s"} left today`,
+      subtitle: remaining.length === 1
+        ? t("plans.chapterToRead").replace("{n}", "1")
+        : t("plans.chaptersToRead").replace("{n}", String(remaining.length)),
       accent: true,
     };
   })();
@@ -105,7 +105,7 @@ export default function HomePage() {
           to: `/reader?book=${last.book_id}&chapter=${last.chapter}&translation=${last.translation}`,
           icon: ICONS.book,
           titleKey: "home.continueReading",
-          subtitle: `${last.book_name || last.book_id} ${last.chapter} · ${last.translation.toUpperCase()}`,
+          subtitle: `${localizeBookName(last.book_id, locale, last.book_name || last.book_id)} ${last.chapter} · ${last.translation.toUpperCase()}`,
           accent: true,
         }
       : {

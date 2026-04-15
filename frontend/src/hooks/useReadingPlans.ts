@@ -213,18 +213,10 @@ export function useReadingPlans(): UseReadingPlansResult {
 
   const reset = useCallback((planId: PlanId) => {
     setMap((prev) => {
-      const p = prev[planId];
-      if (!p) return prev;
-      return {
-        ...prev,
-        [planId]: {
-          ...p,
-          started_at: startOfDay(Date.now()),
-          completed: [],
-          paused: false,
-          paused_at: undefined,
-        },
-      };
+      if (!(planId in prev)) return prev;
+      const next = { ...prev };
+      delete next[planId];
+      return next;
     });
   }, []);
 

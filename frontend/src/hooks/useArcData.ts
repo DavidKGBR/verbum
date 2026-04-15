@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchBooks, fetchArcs, type Book, type Arc } from "../services/api";
+import { localizeBooks } from "../i18n/bookNames";
+import { useI18n } from "../i18n/i18nContext";
 
 export interface ArcFilters {
   sourceBook: string;
@@ -26,6 +28,8 @@ const DEFAULT_FILTERS: ArcFilters = {
 };
 
 export function useArcData(): ArcData {
+  const { locale } = useI18n();
+  const [raw, setRaw] = useState<Book[]>([]);
   const [books, setBooks] = useState<Book[]>([]);
   const [arcs, setArcs] = useState<Arc[]>([]);
   const [totalCrossrefs, setTotalCrossrefs] = useState(0);
@@ -40,9 +44,14 @@ export function useArcData(): ArcData {
   // Fetch books once
   useEffect(() => {
     fetchBooks("kjv")
-      .then(setBooks)
+      .then(setRaw)
       .catch((e) => setError(e.message));
   }, []);
+
+  // Re-localize when raw data or locale changes
+  useEffect(() => {
+    setBooks(localizeBooks(raw, locale));
+  }, [raw, locale]);
 
   // Fetch arcs when filters change
   useEffect(() => {

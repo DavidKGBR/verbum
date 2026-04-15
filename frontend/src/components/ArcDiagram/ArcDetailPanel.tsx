@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchCrossrefsBetween, type DetailedCrossRef } from "../../services/api";
+import { localizeBookName } from "../../i18n/bookNames";
+import { useI18n } from "../../i18n/i18nContext";
 
 interface Props {
   sourceBook: string;
@@ -39,11 +41,15 @@ export default function ArcDetailPanel({
   connectionCount,
   onClose,
 }: Props) {
+  const { t, locale } = useI18n();
   const navigate = useNavigate();
   const [crossrefs, setCrossrefs] = useState<DetailedCrossRef[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [showAll, setShowAll] = useState(false);
+
+  const srcName = localizeBookName(sourceBook, locale);
+  const tgtName = localizeBookName(targetBook, locale);
 
   useEffect(() => {
     setLoading(true);
@@ -93,18 +99,18 @@ export default function ArcDetailPanel({
     <div
       className="w-full lg:w-80 bg-white border-t lg:border-t-0 lg:border-l shadow-lg flex flex-col max-h-[60vh] lg:max-h-none lg:h-full"
       role="complementary"
-      aria-label={`Cross-references from ${sourceBook} to ${targetBook}`}
+      aria-label={`${srcName} → ${tgtName}`}
     >
       {/* Header */}
       <div className="flex justify-between items-start p-4 border-b">
         <div>
           <h3 className="font-display font-bold text-[var(--color-ink)]">
-            {sourceBook} → {targetBook}
+            {srcName} → {tgtName}
           </h3>
           <p className="text-xs opacity-60">
-            {connectionCount.toLocaleString()} connections
+            {connectionCount.toLocaleString()} {t("arc.connections")}
             {crossrefs.length > 0 && crossrefs.length < connectionCount && (
-              <span className="opacity-70"> · showing top {crossrefs.length}</span>
+              <span className="opacity-70"> · {t("arc.showingTop").replace("{n}", String(crossrefs.length))}</span>
             )}
           </p>
         </div>
@@ -132,10 +138,10 @@ export default function ArcDetailPanel({
           </div>
         ) : error ? (
           <p className="text-sm text-red-600 bg-red-50 rounded p-2">
-            Could not load cross-references. Try again later.
+            {t("arc.loadError")}
           </p>
         ) : groups.length === 0 ? (
-          <p className="text-sm opacity-50">No detailed data available.</p>
+          <p className="text-sm opacity-50">{t("arc.noData")}</p>
         ) : (
           <>
             <div className="space-y-2">
@@ -155,10 +161,10 @@ export default function ArcDetailPanel({
                       ▸
                     </span>
                     <span>
-                      {sourceBook} {chapter}
+                      {srcName} {chapter}
                     </span>
                     <span className="opacity-50 font-normal ml-auto">
-                      {refs.length} ref{refs.length !== 1 ? "s" : ""}
+                      {refs.length} {refs.length !== 1 ? t("arc.refs") : t("arc.ref")}
                     </span>
                   </summary>
                   <div className="space-y-0.5 mt-1">
@@ -194,7 +200,7 @@ export default function ArcDetailPanel({
                            py-2 rounded border border-dashed border-[var(--color-gold)]/30
                            hover:bg-[var(--color-gold)]/5 transition"
               >
-                Show {hiddenGroupsCount} more chapter{hiddenGroupsCount !== 1 ? "s" : ""} ↓
+                {t("arc.showMore").replace("{n}", String(hiddenGroupsCount))}
               </button>
             )}
           </>
@@ -210,7 +216,7 @@ export default function ArcDetailPanel({
                        hover:bg-[var(--color-gold)]/10 hover:border-[var(--color-gold)]/50
                        transition focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
           >
-            Open {sourceBook} →
+            {t("arc.open")} {srcName} →
           </button>
           <button
             onClick={() => openBook(targetBook)}
@@ -218,7 +224,7 @@ export default function ArcDetailPanel({
                        hover:bg-[var(--color-gold)]/10 hover:border-[var(--color-gold)]/50
                        transition focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
           >
-            Open {targetBook} →
+            {t("arc.open")} {tgtName} →
           </button>
         </div>
       )}

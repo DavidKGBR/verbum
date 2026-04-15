@@ -7,6 +7,8 @@ import {
   type VocabRichnessBook,
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+import { useI18n } from "../i18n/i18nContext";
+import { localizeBookName } from "../i18n/bookNames";
 
 type Tab = "hapax" | "richness";
 
@@ -118,6 +120,7 @@ function HapaxTab() {
 }
 
 function RichnessTab() {
+  const { locale } = useI18n();
   const [books, setBooks] = useState<VocabRichnessBook[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -138,7 +141,7 @@ function RichnessTab() {
       {books.map((b) => (
         <div key={b.book_id} className="flex items-center gap-3 text-sm group">
           <span className="w-28 text-right text-xs opacity-70 shrink-0 truncate">
-            {b.book_name}
+            {localizeBookName(b.book_id, locale, b.book_name)}
           </span>
           <div className="flex-1 h-5 bg-black/5 rounded overflow-hidden">
             <div
@@ -151,7 +154,7 @@ function RichnessTab() {
                     : "var(--color-new-testament)",
                 opacity: 0.7,
               }}
-              title={`${b.book_name}: ${b.richness} richness (${b.unique_words} unique / ${b.total_words} total)`}
+              title={`${localizeBookName(b.book_id, locale, b.book_name)}: ${b.richness} richness (${b.unique_words} unique / ${b.total_words} total)`}
             />
           </div>
           <span className="text-xs tabular-nums opacity-50 w-14 text-right">

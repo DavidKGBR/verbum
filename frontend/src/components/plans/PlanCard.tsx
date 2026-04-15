@@ -1,3 +1,4 @@
+import { useI18n } from "../../i18n/i18nContext";
 import type { PlanDefinition, PlanId } from "./plansData";
 import type { PlanProgress } from "../../hooks/useReadingPlans";
 
@@ -37,6 +38,7 @@ export default function PlanCard({
   onResume,
   onReset,
 }: Props) {
+  const { t } = useI18n();
   const hasProgress = !!progress;
   const isPaused = hasProgress && progress!.paused === true;
   const isActive = hasProgress && !isPaused;
@@ -53,35 +55,37 @@ export default function PlanCard({
                     : "border-[var(--color-gold-dark)]/20 bg-white hover:border-[var(--color-gold-dark)]/40"}`}
     >
       <div className="flex items-start gap-3 mb-3">
-        <div className="text-2xl leading-none">{plan.emoji}</div>
+        <svg className="w-6 h-6 shrink-0 text-[var(--color-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d={plan.icon} />
+        </svg>
         <div className="min-w-0 flex-1">
           <h3 className="font-display font-bold text-[var(--color-ink)] truncate">
-            {plan.title}
+            {t(plan.titleKey)}
           </h3>
-          <p className="text-xs opacity-60">{plan.subtitle}</p>
+          <p className="text-xs opacity-60">{t(plan.subtitleKey)}</p>
         </div>
         {isActive && (
           <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--color-gold)] text-white shrink-0">
-            Active
+            {t("plans.active")}
           </span>
         )}
         {isPaused && (
           <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--color-gold-dark)]/20 text-[var(--color-gold-dark)] shrink-0">
-            Paused
+            {t("plans.paused")}
           </span>
         )}
       </div>
 
-      <p className="text-sm opacity-80 mb-3 leading-relaxed">{plan.description}</p>
+      <p className="text-sm opacity-80 mb-3 leading-relaxed">{t(plan.descriptionKey)}</p>
 
       {hasProgress && (
         <div className="mb-3">
           <div className="flex items-baseline justify-between mb-1.5 text-xs">
             <span className="opacity-70">
-              Day {currentDay} / {plan.total_days}
+              {t("plans.dayOf").replace("{day}", String(currentDay)).replace("{total}", String(plan.total_days))}
             </span>
             <span className="opacity-50 tabular-nums">
-              {done} / {total} ch · {pct}%
+              {done} / {total} {t("plans.chAbbr")} · {pct}%
             </span>
           </div>
           <ProgressBar value={currentDay} max={plan.total_days} />
@@ -96,7 +100,7 @@ export default function PlanCard({
                        hover:opacity-90 transition focus:outline-none
                        focus:ring-2 focus:ring-[var(--color-gold)]/60"
           >
-            Start plan
+            {t("plans.startPlan")}
           </button>
         )}
         {isActive && (
@@ -105,17 +109,17 @@ export default function PlanCard({
               onClick={() => onPause(plan.id)}
               className="text-xs px-3 py-1.5 rounded border hover:bg-gray-50 transition"
             >
-              Pause
+              {t("plans.pause")}
             </button>
             <button
               onClick={() => {
-                if (confirm("Reset progress for this plan? Completed chapters will be cleared.")) {
+                if (confirm(t("plans.confirmReset"))) {
                   onReset(plan.id);
                 }
               }}
               className="text-xs px-3 py-1.5 rounded border border-red-200 text-red-700 hover:bg-red-50 transition"
             >
-              Reset
+              {t("plans.reset")}
             </button>
           </>
         )}
@@ -126,17 +130,17 @@ export default function PlanCard({
               className="text-sm px-3 py-1.5 rounded bg-[var(--color-gold)] text-white
                          hover:opacity-90 transition"
             >
-              Resume
+              {t("plans.resume")}
             </button>
             <button
               onClick={() => {
-                if (confirm("Reset progress for this plan? Completed chapters will be cleared.")) {
+                if (confirm(t("plans.confirmReset"))) {
                   onReset(plan.id);
                 }
               }}
               className="text-xs px-3 py-1.5 rounded border border-red-200 text-red-700 hover:bg-red-50 transition"
             >
-              Reset
+              {t("plans.reset")}
             </button>
           </>
         )}

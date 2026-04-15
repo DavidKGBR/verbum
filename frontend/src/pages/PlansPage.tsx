@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchBooks, type Book } from "../services/api";
 import { useReadingPlans } from "../hooks/useReadingPlans";
 import { PLANS, getPlanById, type ChapterRef } from "../components/plans/plansData";
 import PlanCard from "../components/plans/PlanCard";
+import { useBooks, localizeBookName } from "../i18n/bookNames";
+import { useI18n } from "../i18n/i18nContext";
 
 export default function PlansPage() {
-  const [books, setBooks] = useState<Book[]>([]);
+  const { t } = useI18n();
+  const books = useBooks("kjv");
   const {
     progress,
     active,
@@ -22,18 +23,14 @@ export default function PlansPage() {
     scheduleProgress,
   } = useReadingPlans();
 
-  useEffect(() => {
-    fetchBooks("kjv").then(setBooks).catch(() => {});
-  }, []);
-
   const activeDef = active ? getPlanById(active.plan_id) : undefined;
   const todayDay = activeDef ? todayReading(activeDef, books) : null;
 
   function handleStart(planId: typeof PLANS[number]["id"]) {
     if (active && active.plan_id !== planId) {
       const other = getPlanById(active.plan_id);
-      const title = other?.title ?? active.plan_id;
-      if (!confirm(`This will pause "${title}". Continue?`)) return;
+      const title = other ? t(other.titleKey) : active.plan_id;
+      if (!confirm(t("plans.confirmPause").replace("{title}", title))) return;
     }
     start(planId);
   }
@@ -41,10 +38,9 @@ export default function PlansPage() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="mb-6">
-        <h1 className="page-title text-3xl">Reading Plans</h1>
+        <h1 className="page-title text-3xl">{t("plans.pageTitle")}</h1>
         <p className="text-sm opacity-60 mt-1">
-          Structured daily readings to give your study a rhythm. Only one plan
-          is active at a time — switching pauses the current one.
+          {t("plans.pageSubtitle")}
         </p>
       </div>
 
@@ -54,22 +50,27 @@ export default function PlansPage() {
           <div className="flex items-start justify-between gap-3 flex-wrap mb-3">
             <div>
               <div className="text-[10px] uppercase tracking-[0.25em] opacity-60 font-display">
-                Today's Reading
+                {t("plans.todaysReading")}
               </div>
-              <h2 className="font-display font-bold text-xl text-[var(--color-ink)] mt-1">
-                {activeDef.emoji} {activeDef.title}
+              <h2 className="font-display font-bold text-xl text-[var(--color-ink)] mt-1 flex items-center gap-2">
+                <svg className="w-5 h-5 text-[var(--color-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d={activeDef.icon} />
+                </svg>
+                {t(activeDef.titleKey)}
               </h2>
               <p className="text-sm opacity-70 mt-1">
-                Day {currentDay(activeDef)} / {activeDef.total_days} ·{" "}
-                {todayDay.chapters.length}{" "}
-                {todayDay.chapters.length === 1 ? "chapter" : "chapters"} to read
+                {t("plans.dayOf").replace("{day}", String(currentDay(activeDef))).replace("{total}", String(activeDef.total_days))}
+                {" · "}
+                {todayDay.chapters.length === 1
+                  ? t("plans.chapterToRead").replace("{n}", "1")
+                  : t("plans.chaptersToRead").replace("{n}", String(todayDay.chapters.length))}
               </p>
             </div>
             <button
               onClick={() => pause(activeDef.id)}
               className="text-xs px-3 py-1.5 rounded border hover:bg-white transition"
             >
-              Pause plan
+              {t("plans.pausePlan")}
             </button>
           </div>
 
@@ -90,11 +91,12 @@ export default function PlansPage() {
 
           <div className="mt-3 flex items-center justify-between text-xs">
             <span className="opacity-60">
-              {todayDay.chapters.filter((c) => isCompleted(activeDef.id, c.chapter_id)).length} of{" "}
-              {todayDay.chapters.length} done today
+              {t("plans.doneToday")
+                .replace("{done}", String(todayDay.chapters.filter((c) => isCompleted(activeDef.id, c.chapter_id)).length))
+                .replace("{total}", String(todayDay.chapters.length))}
               {todayDay.chapters.length > 0 &&
                 todayDay.chapters.every((c) => isCompleted(activeDef.id, c.chapter_id)) &&
-                " 🎉"}
+                ` — ${t("plans.allDone")}`}
             </span>
             <button
               onClick={() => {
@@ -104,7 +106,7 @@ export default function PlansPage() {
               }}
               className="text-[var(--color-gold-dark)] hover:underline"
             >
-              Mark all done
+              {t("plans.markAllDone")}
             </button>
           </div>
         </section>
@@ -144,6 +146,7 @@ function TodayChapterRow({
   done: boolean;
   onToggle: () => void;
 }) {
+  const { locale } = useI18n();
   const readerLink = `/reader?book=${ch.book_id}&chapter=${ch.chapter}&translation=kjv`;
   return (
     <li className="flex items-center gap-2">
@@ -179,7 +182,7 @@ function TodayChapterRow({
             : "hover:text-[var(--color-gold-dark)]"
         }`}
       >
-        {ch.book_name} {ch.chapter}
+        {localizeBookName(ch.book_id, locale, ch.book_name)} {ch.chapter}
       </Link>
     </li>
   );

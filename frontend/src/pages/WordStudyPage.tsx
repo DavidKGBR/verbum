@@ -9,11 +9,14 @@ import {
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import WordJourney from "../components/lexicon/WordJourney";
+import { useI18n } from "../i18n/i18nContext";
+import { localizeBookName } from "../i18n/bookNames";
 
 const PAGE_SIZE = 20;
 
 export default function WordStudyPage() {
   const { strongsId } = useParams<{ strongsId: string }>();
+  const { locale } = useI18n();
   const [entry, setEntry] = useState<StrongsEntry | null>(null);
   const [distribution, setDistribution] = useState<BookFrequency[]>([]);
   const [totalOccurrences, setTotalOccurrences] = useState(0);
@@ -108,7 +111,7 @@ export default function WordStudyPage() {
         <StatCard label="Books" value={String(booksCount)} />
         <StatCard
           label="Most frequent"
-          value={topBook ? topBook.book_name : "—"}
+          value={topBook ? localizeBookName(topBook.book_id, locale, topBook.book_name) : "—"}
           sub={topBook ? `${topBook.frequency}×` : ""}
         />
       </div>
@@ -173,7 +176,7 @@ export default function WordStudyPage() {
             {distribution.map((d) => (
               <div key={d.book_id} className="flex items-center gap-3 text-sm group">
                 <span className="w-24 text-right text-xs opacity-70 shrink-0 truncate">
-                  {d.book_name}
+                  {localizeBookName(d.book_id, locale, d.book_name)}
                 </span>
                 <div className="flex-1 h-5 bg-[var(--color-gold-dark)]/5 rounded overflow-hidden">
                   <div
@@ -186,7 +189,7 @@ export default function WordStudyPage() {
                           : "var(--color-new-testament)",
                       opacity: 0.7,
                     }}
-                    title={`${d.book_name}: ${d.frequency} occurrences`}
+                    title={`${localizeBookName(d.book_id, locale, d.book_name)}: ${d.frequency} occurrences`}
                   />
                 </div>
                 <span className="text-xs tabular-nums opacity-50 w-8 text-right">

@@ -3,9 +3,8 @@ import {
   fetchEmotionalLandscape,
   fetchEmotionalPeaks,
   fetchBookProfiles,
-  fetchBooks,
-  type Book,
 } from "../services/api";
+import { useBooks, localizeBookName } from "../i18n/bookNames";
 import { useI18n } from "../i18n/i18nContext";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 
@@ -43,19 +42,14 @@ interface BookProfile {
 type Tab = "landscape" | "profiles";
 
 export default function EmotionalLandscapePage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [tab, setTab] = useState<Tab>("landscape");
-  const [books, setBooks] = useState<Book[]>([]);
+  const books = useBooks("kjv");
   const [selectedBook, setSelectedBook] = useState("PSA");
   const [series, setSeries] = useState<SentimentPoint[]>([]);
   const [peaks, setPeaks] = useState<PeakVerse[]>([]);
   const [profiles, setProfiles] = useState<BookProfile[]>([]);
   const [loading, setLoading] = useState(true);
-
-  // Load book list
-  useEffect(() => {
-    fetchBooks().then(setBooks).catch(() => {});
-  }, []);
 
   // Load landscape data when book changes
   useEffect(() => {
@@ -226,7 +220,7 @@ export default function EmotionalLandscapePage() {
                     className="flex items-center gap-3 text-sm group"
                   >
                     <span className="w-28 text-right text-xs opacity-70 shrink-0 truncate">
-                      {p.book_name}
+                      {localizeBookName(p.book_id, locale, p.book_name)}
                     </span>
                     {/* Stacked bar: negative | neutral | positive */}
                     <div className="flex-1 h-5 bg-black/5 rounded overflow-hidden flex">

@@ -13,6 +13,8 @@ import {
   downloadMarkdown,
 } from "../components/notes/notesExport";
 import { formatDate } from "../utils/dateFormat";
+import { useI18n } from "../i18n/i18nContext";
+import { localizeBookName } from "../i18n/bookNames";
 
 type Filter = "all" | HighlightCategory | "uncategorised";
 
@@ -27,6 +29,7 @@ function readerLinkFor(n: VerseNote): string {
 
 export default function NotesPage() {
   const { notes, list, remove } = useVerseNotes();
+  const { locale } = useI18n();
   const [filter, setFilter] = useState<Filter>("all");
   const [exportOpen, setExportOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -155,7 +158,9 @@ export default function NotesPage() {
                          transition focus:outline-none focus:ring-2
                          focus:ring-[var(--color-gold)]/40 rounded"
             >
-              {book}
+              {bookNotes[0]?.book_id
+                ? localizeBookName(bookNotes[0].book_id, locale, book)
+                : book}
               <span className="ml-2 text-xs opacity-50 font-normal font-body">
                 {bookNotes.length} {bookNotes.length === 1 ? "note" : "notes"}
               </span>

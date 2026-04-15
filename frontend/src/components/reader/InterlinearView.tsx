@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
-  fetchBooks,
   fetchReaderPage,
   fetchInterlinearChapter,
-  type Book,
   type ReaderPage,
   type InterlinearWord
 } from "../../services/api";
+import { useBooks, localizeBookName } from "../../i18n/bookNames";
 import LoadingSpinner from "../common/LoadingSpinner";
 import WordDetailPanel from "../lexicon/WordDetailPanel";
 import { useI18n } from "../../i18n/i18nContext";
 
 export default function InterlinearView() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [searchParams] = useSearchParams();
-  const [books, setBooks] = useState<Book[]>([]);
   const [page, setPage] = useState<ReaderPage | null>(null);
   const [words, setWords] = useState<InterlinearWord[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,12 +21,9 @@ export default function InterlinearView() {
   const [bookId, setBookId] = useState(searchParams.get("book") || "GEN");
   const [chapter, setChapter] = useState(Number(searchParams.get("chapter")) || 1);
   const [translation] = useState("kjv");
+  const books = useBooks(translation);
 
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetchBooks(translation).then(setBooks).catch(() => {});
-  }, [translation]);
 
   useEffect(() => {
     const b = searchParams.get("book");
@@ -100,7 +95,7 @@ export default function InterlinearView() {
         <div>
           <div className="mb-10 text-center fade-in">
             <h2 className="page-title text-4xl mb-2">
-              {page.book_name} {page.chapter}
+              {localizeBookName(page.book_id, locale, page.book_name)} {page.chapter}
             </h2>
             <p className="text-sm opacity-50 uppercase tracking-widest text-[var(--color-gold-dark)] font-bold">
               {t("reader.interlinearTitle")}

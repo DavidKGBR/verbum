@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, Outlet, Link, useLocation } from "react-router-dom";
 import { useReadingHistory } from "../hooks/useReadingHistory";
 import { useI18n, LOCALES } from "../i18n/i18nContext";
+import { localizeBookName } from "../i18n/bookNames";
 import VerbumLogo from "./common/VerbumLogo";
 import StreakBadge from "./streak/StreakBadge";
 
@@ -115,7 +116,7 @@ export default function Layout() {
             {t("nav.continue")}
           </div>
           <div className="text-sm font-bold text-[var(--color-gold)] truncate">
-            {last.book_name || last.book_id} {last.chapter}
+            {localizeBookName(last.book_id, locale, last.book_name || last.book_id)} {last.chapter}
           </div>
           <div className="text-[10px] opacity-50 mt-0.5">
             {last.translation.toUpperCase()}

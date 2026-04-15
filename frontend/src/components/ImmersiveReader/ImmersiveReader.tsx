@@ -2,11 +2,10 @@ import { useState, useEffect, useCallback, useRef, forwardRef, useMemo } from "r
 import HTMLFlipBook from "react-pageflip-enhanced";
 import {
   fetchReaderPage,
-  fetchBooks,
   type ReaderPage,
   type ReaderVerse,
-  type Book,
 } from "../../services/api";
+import { useBooks, localizeBookName } from "../../i18n/bookNames";
 import OrnateCorner from "./OrnateCorner";
 import DropCap from "./DropCap";
 import { useTranslatorNotes } from "../../hooks/useTranslatorNotes";
@@ -202,13 +201,13 @@ const BookPage = forwardRef<HTMLDivElement, BookPageProps>(function BookPage(
 
 /* ─── Main Immersive Reader ────────────────────────────────────────────── */
 export default function ImmersiveReader() {
-  const { t } = useI18n();
-  const [books, setBooks] = useState<Book[]>([]);
+  const { t, locale } = useI18n();
   const [data, setData] = useState<ReaderPage | null>(null);
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState("GEN");
   const [chapter, setChapter] = useState(1);
   const [translation, setTranslation] = useState("kjv");
+  const books = useBooks(translation);
   const [currentPage, setCurrentPage] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -248,10 +247,6 @@ export default function ImmersiveReader() {
     document.addEventListener("fullscreenchange", handler);
     return () => document.removeEventListener("fullscreenchange", handler);
   }, []);
-
-  useEffect(() => {
-    fetchBooks(translation).then(setBooks).catch(() => {});
-  }, [translation]);
 
   useEffect(() => {
     setLoading(true);
@@ -435,7 +430,7 @@ export default function ImmersiveReader() {
               className="font-display text-2xl tracking-[0.25em]"
               style={{ color: "var(--color-gold)" }}
             >
-              {data.book_name}
+              {localizeBookName(data.book_id, locale, data.book_name)}
             </h2>
             <span className="block text-xs tracking-[0.4em] opacity-50 mt-1 text-[var(--color-parchment)]">
               {t("reader.chapter").toUpperCase()} {data.chapter}
@@ -482,7 +477,7 @@ export default function ImmersiveReader() {
                   corner={idx % 2 === 0 ? "left" : "right"}
                   nextChapterLabel={
                     pageVerses.length === 0 && data?.has_next
-                      ? `${t("reader.turnNext")} ${data.book_name} ${data.chapter + 1}`
+                      ? `${t("reader.turnNext")} ${localizeBookName(data.book_id, locale, data.book_name)} ${data.chapter + 1}`
                       : undefined
                   }
                   onNextChapter={

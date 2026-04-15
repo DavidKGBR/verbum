@@ -1,12 +1,11 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import {
-  fetchBooks,
   fetchReaderPage,
   fetchCrossrefCounts,
-  type Book,
   type ReaderPage,
 } from "../services/api";
+import { useBooks, localizeBookName } from "../i18n/bookNames";
 import LoadingSpinner from "./common/LoadingSpinner";
 import VerseActions from "./VerseActions";
 import { useReadingHistory } from "../hooks/useReadingHistory";
@@ -22,15 +21,15 @@ const TRANSLATIONS = ["kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee", "asv", "w
 type InitialTab = "none" | "crossrefs" | "notes";
 
 export default function BibleReader() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [searchParams] = useSearchParams();
   const { record } = useReadingHistory();
-  const [books, setBooks] = useState<Book[]>([]);
   const [page, setPage] = useState<ReaderPage | null>(null);
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState(searchParams.get("book") || "GEN");
   const [chapter, setChapter] = useState(Number(searchParams.get("chapter")) || 1);
   const [translation, setTranslation] = useState(searchParams.get("translation") || "kjv");
+  const books = useBooks(translation);
   const [activeVerse, setActiveVerse] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<InitialTab>("none");
   const [crossrefCounts, setCrossrefCounts] = useState<Record<string, number>>({});
@@ -40,11 +39,6 @@ export default function BibleReader() {
   const highlightVerse = Number(searchParams.get("verse")) || null;
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const isKjv = translation === "kjv";
-
-  // Load book list
-  useEffect(() => {
-    fetchBooks(translation).then(setBooks).catch(() => {});
-  }, [translation]);
 
   // Sync from URL params
   useEffect(() => {
@@ -236,7 +230,7 @@ export default function BibleReader() {
           {/* Header */}
           <div className="mb-6 fade-in">
             <h2 className="page-title text-3xl">
-              {page.book_name} {page.chapter}
+              {localizeBookName(page.book_id, locale, page.book_name)} {page.chapter}
             </h2>
             <p className="text-xs opacity-50 mt-1">
               {page.testament} &middot; {page.category} &middot;{" "}
@@ -265,12 +259,15 @@ export default function BibleReader() {
                            bg-[var(--color-gold)]/5 px-4 py-2 text-sm hover:bg-[var(--color-gold)]/10
                            transition focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
               >
-                <span className="font-display font-bold text-[var(--color-gold-dark)]">
-                  {planDef.emoji} {planDef.title}
+                <span className="font-display font-bold text-[var(--color-gold-dark)] inline-flex items-center gap-1.5">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d={planDef.icon} />
+                  </svg>
+                  {t(planDef.titleKey)}
                 </span>
                 <span className="opacity-60 ml-2">
-                  · Day {today.day} · {doneToday} / {total} {t("reader.readToday")}
-                  {doneToday === total && total > 0 ? " 🎉" : ""}
+                  · {t("plans.dayOf").replace("{day}", String(today.day)).replace("{total}", String(planDef.total_days))} · {doneToday} / {total} {t("reader.readToday")}
+                  {doneToday === total && total > 0 ? ` — ${t("plans.allDone")}` : ""}
                 </span>
               </Link>
             );
@@ -340,7 +337,7 @@ export default function BibleReader() {
                       translation={translation}
                       reference={v.reference}
                       bookId={page.book_id}
-                      bookName={page.book_name}
+                      bookName={localizeBookName(page.book_id, locale, page.book_name)}
                       chapter={page.chapter}
                       verse={v.verse}
                       initialTab={activeTab}

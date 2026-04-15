@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 import { fetchRandomVerse, type RandomVerse } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
 
+const LOCALE_TRANSLATION: Record<string, string> = {
+  en: "kjv",
+  pt: "nvi",
+  es: "rvr",
+};
+
 export default function VerseOfTheDay() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const translation = LOCALE_TRANSLATION[locale] ?? "kjv";
   const [verse, setVerse] = useState<RandomVerse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -12,11 +19,11 @@ export default function VerseOfTheDay() {
   const load = useCallback(() => {
     setLoading(true);
     setError(false);
-    fetchRandomVerse("kjv")
+    fetchRandomVerse(translation)
       .then(setVerse)
       .catch(() => setError(true))
       .finally(() => setLoading(false));
-  }, []);
+  }, [translation]);
 
   useEffect(() => {
     load();

@@ -1,28 +1,23 @@
 import { useState, useEffect } from "react";
 import {
-  fetchBooks,
   fetchParallelPage,
-  type Book,
   type ParallelPage,
 } from "../services/api";
 import LoadingSpinner from "./common/LoadingSpinner";
 import { useI18n } from "../i18n/i18nContext";
+import { useBooks, localizeBookName } from "../i18n/bookNames";
 
 const TRANSLATIONS = ["kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee", "asv", "web", "darby"];
 
 export default function ParallelView() {
-  const { t } = useI18n();
-  const [books, setBooks] = useState<Book[]>([]);
+  const { t, locale } = useI18n();
+  const books = useBooks("kjv");
   const [page, setPage] = useState<ParallelPage | null>(null);
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState("GEN");
   const [chapter, setChapter] = useState(1);
   const [left, setLeft] = useState("kjv");
   const [right, setRight] = useState("nvi");
-
-  useEffect(() => {
-    fetchBooks("kjv").then(setBooks).catch(() => {});
-  }, []);
 
   useEffect(() => {
     setLoading(true);
@@ -86,7 +81,7 @@ export default function ParallelView() {
       ) : page ? (
         <div>
           <h2 className="text-xl font-bold mb-4 text-[var(--color-ink)]">
-            {page.book_name} {page.chapter}
+            {localizeBookName(page.book_id, locale, page.book_name)} {page.chapter}
             <span className="text-sm font-normal opacity-50 ml-2">
               {page.left_translation.toUpperCase()} {t("reader.vs")} {page.right_translation.toUpperCase()}
             </span>

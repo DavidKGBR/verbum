@@ -8,6 +8,8 @@ import {
   opacityScale,
   type BookPosition,
 } from "./arcUtils";
+import { useI18n } from "../../i18n/i18nContext";
+import { localizeBookName } from "../../i18n/bookNames";
 
 interface Props {
   books: Book[];
@@ -33,6 +35,13 @@ export default function ArcDiagram({
   height = 500,
   onArcClick,
 }: Props) {
+  const { t, locale } = useI18n();
+
+  const bookNameMap = useMemo(() => {
+    const m: Record<string, string> = {};
+    for (const b of books) m[b.book_id] = b.book_name;
+    return m;
+  }, [books]);
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   // `null` until we have the real container size. Gating the canvas draw on
@@ -239,7 +248,7 @@ export default function ArcDiagram({
       setTooltip({
         x: e.clientX,
         y: e.clientY,
-        text: `${hit.arc.source_book_id} → ${hit.arc.target_book_id}: ${hit.arc.connection_count} refs (click for details)`,
+        text: `${bookNameMap[hit.arc.source_book_id] ?? hit.arc.source_book_id} → ${bookNameMap[hit.arc.target_book_id] ?? hit.arc.target_book_id}: ${hit.arc.connection_count} ${t("arc.connections")}`,
       });
       e.currentTarget.style.cursor = "pointer";
     } else {
@@ -324,7 +333,7 @@ export default function ArcDiagram({
               onMouseEnter={() => setHoveredBook(pos.book.book_id)}
               onMouseLeave={() => setHoveredBook(null)}
             >
-              <title>{pos.book.book_name}</title>
+              <title>{localizeBookName(pos.book.book_id, locale, pos.book.book_name)}</title>
             </rect>
             {pos.width > 12 && (
               <text
@@ -353,7 +362,7 @@ export default function ArcDiagram({
               fill="var(--color-old-testament)"
               fontWeight="bold"
             >
-              Old Testament
+              {t("arc.oldTestament")}
             </text>
             <text
               x={otNtDivider + (width - otNtDivider) / 2}
@@ -363,7 +372,7 @@ export default function ArcDiagram({
               fill="var(--color-new-testament)"
               fontWeight="bold"
             >
-              New Testament
+              {t("arc.newTestament")}
             </text>
           </>
         )}
