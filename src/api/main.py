@@ -5,8 +5,11 @@ REST API for Bible Data Pipeline analytics.
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from src.api.routers import (
     ai_insights,
@@ -19,6 +22,7 @@ from src.api.routers import (
     deep_analytics,
     devotional,
     emotional,
+    explorer,
     home,
     intertextuality,
     lexicon,
@@ -57,6 +61,7 @@ app.include_router(ai_insights.router, prefix="/api/v1", tags=["AI Insights"])
 app.include_router(books.router, prefix="/api/v1", tags=["Books & Verses"])
 app.include_router(lexicon.router, prefix="/api/v1", tags=["Lexicon & Interlinear"])
 app.include_router(semantic.router, prefix="/api/v1", tags=["Semantic Graph"])
+app.include_router(explorer.router, prefix="/api/v1", tags=["Explorer"])
 app.include_router(authors.router, prefix="/api/v1", tags=["Authors"])
 app.include_router(people.router, prefix="/api/v1", tags=["People"])
 app.include_router(places.router, prefix="/api/v1", tags=["Places"])
@@ -78,3 +83,10 @@ app.include_router(community.router, prefix="/api/v1", tags=["Community Notes"])
 def health_check() -> dict:
     """Health check endpoint."""
     return {"status": "ok", "version": "2.0.0"}
+
+
+# ── Static audio files (Fase 5A — Neural2 pronunciations) ───────────────────
+# Mounted AFTER all API routes so /audio/* never conflicts with /api/v1/*.
+_AUDIO_DIR = Path("data/audio")
+_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+app.mount("/audio", StaticFiles(directory=str(_AUDIO_DIR)), name="audio")

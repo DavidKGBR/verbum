@@ -106,6 +106,7 @@ export default function WordStudyPage() {
               language={entry.language as "hebrew" | "greek"}
               text={entry.original}
               transliteration={entry.transliteration}
+              audioUrl={entry.audio_url}
               size="sm"
             />
           </div>

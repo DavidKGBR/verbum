@@ -5,9 +5,12 @@ Endpoints for Strong's entries, original texts, and interlinear data.
 
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException, Query
+import os
+
+from fastapi import APIRouter, HTTPException, Query, Request
 
 from src.api.dependencies import get_db
+from src.extract.audio_sources import audio_url as resolve_audio_url
 
 router = APIRouter()
 
@@ -60,7 +63,7 @@ def search_strongs(
 
 
 @router.get("/strongs/{strongs_id}")
-def get_strongs(strongs_id: str) -> dict:
+def get_strongs(strongs_id: str, request: Request) -> dict:
     """Get a specific Strong's entry by ID (e.g., H776, G976)."""
     conn = get_db()
     try:
@@ -70,7 +73,15 @@ def get_strongs(strongs_id: str) -> dict:
         ).fetchdf()
         if df.empty:
             raise HTTPException(status_code=404, detail="Strong's ID not found")
-        return df.to_dict(orient="records")[0]
+        entry = df.to_dict(orient="records")[0]
+
+        # Attach audio URL if the MP3 was already generated (Fase 5A)
+        sid = strongs_id.upper()
+        lang = entry.get("language", "")
+        base = str(request.base_url).rstrip("/")
+        entry["audio_url"] = resolve_audio_url(sid, lang, base_url=base)
+
+        return entry
     finally:
         conn.close()
 

@@ -612,6 +612,23 @@ export async function fetchPersonFamily(slug: string): Promise<FamilyResponse> {
   return fetchJson<FamilyResponse>(`${BASE}/people/${slug}/family`);
 }
 
+export interface PersonEvent {
+  event_id: string;
+  title: string;
+  start_year: number | null;
+  era: string | null;
+  duration: number | null;
+  participants: string[];
+  locations: string[];
+  verse_refs: string[];
+}
+
+export async function fetchPersonEvents(
+  slug: string
+): Promise<{ person: string; events: PersonEvent[] }> {
+  return fetchJson(`${BASE}/people/${slug}/events`);
+}
+
 // ── Authors ─────────────────────────────────────────────────────────────────
 
 export interface Author {
@@ -649,6 +666,27 @@ export async function fetchAuthors(testament?: string): Promise<Author[]> {
 
 export async function fetchAuthorDetail(authorId: string): Promise<AuthorDetail> {
   return fetchJson<AuthorDetail>(`${BASE}/authors/${authorId}`);
+}
+
+export interface AuthorBookStats {
+  book_id: string;
+  book_name: string;
+  testament: string;
+  category: string;
+  total_chapters: number;
+  total_verses: number;
+  total_words: number;
+  avg_words_per_verse: number;
+  avg_sentiment: number;
+}
+
+export async function fetchAuthorBooks(
+  authorId: string
+): Promise<AuthorBookStats[]> {
+  const data = await fetchJson<{ author_id: string; books: AuthorBookStats[] }>(
+    `${BASE}/authors/${authorId}/books`
+  );
+  return data.books;
 }
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -948,6 +986,8 @@ export interface StrongsEntry {
   short_definition: string;
   long_definition: string;
   part_of_speech: string;
+  /** URL do MP3 Neural2 (Fase 5A). Null se ainda não gerado. */
+  audio_url?: string | null;
 }
 
 export interface InterlinearWord {
@@ -1029,7 +1069,7 @@ export function searchDictionary(q: string, limit = 50) {
   );
 }
 
-// ── Semantic Graph ──────────────────────────────────────────────────────────
+// ── Semantic Graph (legacy) ─────────────────────────────────────────────────
 
 export interface GraphNode {
   id: string;
@@ -1060,6 +1100,100 @@ export function fetchSemanticGraph(
   return fetchJson<SemanticGraph>(
     `${BASE}/semantic/graph?center=${center}&min_shared=${minShared}&limit=${limit}&exclude_common=${excludeCommon}`
   );
+}
+
+// ── Semantic Explorer ──────────────────────────────────────────────────────
+
+export interface ExplorerSearchResult {
+  type: string;
+  id: string;
+  label: string;
+  secondary_label: string | null;
+  meta: Record<string, unknown>;
+}
+
+export interface ExplorerNodeData {
+  type: string;
+  id: string;
+  label: string;
+  gloss?: string;
+  language?: string;
+  shared?: number;
+}
+
+export interface ExplorerEdgeData {
+  source: string;
+  target: string;
+  edge_type: string;
+  weight: number;
+}
+
+export interface ExplorerExpandResponse {
+  center: ExplorerNodeData;
+  nodes: ExplorerNodeData[];
+  edges: ExplorerEdgeData[];
+}
+
+export interface ExplorerEvidenceVerse {
+  verse_id: string;
+  reference: string;
+  text: string;
+  highlights: string[];
+}
+
+export interface ExplorerEdgeEvidence {
+  source: string;
+  target: string;
+  edge_type: string;
+  total_shared: number;
+  verses: ExplorerEvidenceVerse[];
+}
+
+export interface ExplorerPresetEntry {
+  type: string;
+  id: string;
+}
+
+export interface ExplorerPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  entry_nodes: ExplorerPresetEntry[];
+}
+
+export function fetchExplorerSearch(q: string, limit = 20) {
+  return fetchJson<{ results: ExplorerSearchResult[] }>(
+    `${BASE}/explorer/search?q=${encodeURIComponent(q)}&limit=${limit}`
+  );
+}
+
+export function fetchExplorerExpand(
+  nodeType: string,
+  nodeId: string,
+  layers = "lexical,topics",
+  limit = 30
+) {
+  return fetchJson<ExplorerExpandResponse>(
+    `${BASE}/explorer/expand?node_type=${nodeType}&node_id=${encodeURIComponent(nodeId)}&layers=${layers}&limit=${limit}`
+  );
+}
+
+export function fetchExplorerEdgeEvidence(
+  sourceType: string,
+  sourceId: string,
+  targetType: string,
+  targetId: string,
+  edgeType: string,
+  limit = 10
+) {
+  return fetchJson<ExplorerEdgeEvidence>(
+    `${BASE}/explorer/edge-evidence?source_type=${sourceType}&source_id=${encodeURIComponent(sourceId)}&target_type=${targetType}&target_id=${encodeURIComponent(targetId)}&edge_type=${edgeType}&limit=${limit}`
+  );
+}
+
+export function fetchExplorerPresets() {
+  return fetchJson<{ presets: ExplorerPreset[] }>(`${BASE}/explorer/presets`);
 }
 
 // ── Translation Divergence ───────────────────────────────────────────────────

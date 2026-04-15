@@ -76,6 +76,7 @@ export default function WordDetailPanel({ strongsId, onClose }: Props) {
                language={entry.language as "hebrew" | "greek"}
                text={entry.original}
                transliteration={entry.transliteration}
+               audioUrl={entry.audio_url}
                size="md"
              />
           </div>
