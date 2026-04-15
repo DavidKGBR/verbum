@@ -262,7 +262,7 @@ export interface LiteraryStructure {
   book_id: string;
   chapter_start: number;
   chapter_end: number;
-  type: string;
+  type: "chiasm" | "parallelism" | "inclusio";
   title: string;
   confidence?: number;
   description?: string;
@@ -294,6 +294,17 @@ export async function fetchBookStructures(
 ): Promise<LiteraryStructure[]> {
   const data = await fetchJson<{ structures: LiteraryStructure[] }>(
     `${BASE}/structure/${book}`
+  );
+  return data.structures;
+}
+
+export async function fetchChapterStructures(
+  book: string,
+  chapter: number,
+  translation = "kjv"
+): Promise<LiteraryStructure[]> {
+  const data = await fetchJson<{ structures: LiteraryStructure[] }>(
+    `${BASE}/structure/${book}/${chapter}?translation=${translation}`
   );
   return data.structures;
 }
