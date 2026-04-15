@@ -364,7 +364,7 @@ scripts/sync_audio_gcs.py         # sync local → bucket público
 |-------|------------|---------|
 | **5A — Base** | Download Open Hebrew Greek MP3 (CC-BY 4.0), upload GCS, wiring no InterlinearView | 1 sessão |
 | **5B — Contato Foreman/Kantor** | Email pedindo autorização de uso CC-BY para o projeto open-source | 1 hora |
-| **5C — Special Passages Engine** | Engine reutilizável: 4 camadas simultâneas (Aramaico+Grego+PT+EN), Pai Nosso inaugural, catálogo expandível com zero código novo por passagem | 2 sessões ✅ |
+| **5C — Special Passages Engine** | Engine reutilizável com 10 passagens (AT+NT), camadas Aramaico/Hebraico/Grego/PT/EN, áudio proxy Árabe, palavras clicáveis com PassageWordPanel | 3 sessões ✅ |
 | **5D — Camada Acadêmica** | Integrar Foreman (Tibéria) + Kantor (Koiné) se autorização confirmada | 1 sessão |
 
 #### Por que isso transcende
@@ -460,7 +460,7 @@ A Bíblia hebraica foi projetada para tradição oral com estruturas complexas q
 | — | **FASE 5 — A Voz Original** | | |
 | 13 | 5A — Chirp3-HD TTS (he-IL + el-GR, 14.178 entradas) | 🔥🔥🔥🔥 | 🚧 Em andamento |
 | 14 | 5B — Contato Foreman + Kantor (Camada 2 acadêmica) | 🔥🔥🔥🔥🔥 | ⏸️ Pausado — Chirp3-HD suficiente por ora |
-| 15 | 5C — Special Passages Engine (Pai Nosso inaugural, 4 camadas) | 🔥🔥🔥🔥🔥 | ✅ Concluído |
+| 15 | 5C — Special Passages Engine (10 passagens, áudio proxy, clicáveis) | 🔥🔥🔥🔥🔥 | ✅ Concluído |
 | 16 | 5D — Camada acadêmica (Tibéria + Koiné) | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
 | — | **FASE 6-8 — Legado** | | |
 | 17 | Fase 6 — Estruturas quiásticas (Macula-Hebrew + modo Structural) | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
