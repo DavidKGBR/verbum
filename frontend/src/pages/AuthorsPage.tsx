@@ -1,6 +1,41 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchAuthors, fetchAuthorDetail, type Author, type AuthorDetail } from "../services/api";
+import {
+  fetchAuthors,
+  fetchAuthorDetail,
+  fetchAuthorBooks,
+  type Author,
+  type AuthorDetail,
+  type AuthorBookStats,
+} from "../services/api";
+import AuthorCompare from "../components/authors/AuthorCompare";
+
+// ── Period parser ──────────────────────────────────────────────────────────
+
+function parsePeriod(period: string): { start: number; end: number } | null {
+  // Format: ~YEAR BC, ~START–END BC/AD
+  const cleaned = period.replace(/~/g, "").trim();
+  const isAD = cleaned.includes("AD");
+  const sign = isAD ? 1 : -1;
+  const numPart = cleaned.replace(/\s*(BC|AD)\s*/gi, "").trim();
+
+  // Range: "1050–950" or "60–70"
+  const rangeMatch = numPart.match(/(\d+)\s*[–\-]\s*(\d+)/);
+  if (rangeMatch) {
+    const a = parseInt(rangeMatch[1], 10) * sign;
+    const b = parseInt(rangeMatch[2], 10) * sign;
+    return { start: Math.min(a, b), end: Math.max(a, b) };
+  }
+
+  // Single year: "1400"
+  const singleMatch = numPart.match(/(\d+)/);
+  if (singleMatch) {
+    const y = parseInt(singleMatch[1], 10) * sign;
+    return { start: y, end: y };
+  }
+
+  return null;
+}
 
 export default function AuthorsPage() {
   const [authors, setAuthors] = useState<Author[]>([]);
@@ -8,7 +43,10 @@ export default function AuthorsPage() {
   const [filter, setFilter] = useState<"all" | "OT" | "NT">("all");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [detail, setDetail] = useState<AuthorDetail | null>(null);
+  const [bookStats, setBookStats] = useState<AuthorBookStats[]>([]);
   const [detailLoading, setDetailLoading] = useState(false);
+  const [compareMode, setCompareMode] = useState(false);
+  const [compareSelection, setCompareSelection] = useState<string[]>([]);
 
   useEffect(() => {
     setLoading(true);
@@ -22,15 +60,27 @@ export default function AuthorsPage() {
     if (expanded === authorId) {
       setExpanded(null);
       setDetail(null);
+      setBookStats([]);
       return;
     }
     setExpanded(authorId);
     setDetailLoading(true);
-    fetchAuthorDetail(authorId)
-      .then(setDetail)
-      .catch(() => setDetail(null))
+    Promise.all([fetchAuthorDetail(authorId), fetchAuthorBooks(authorId)])
+      .then(([d, b]) => {
+        setDetail(d);
+        setBookStats(b);
+      })
+      .catch(() => {
+        setDetail(null);
+        setBookStats([]);
+      })
       .finally(() => setDetailLoading(false));
   };
+
+  // ── Summary stats (computed from loaded authors) ───────────────────────
+  const totalBooks = authors.reduce((s, a) => s + a.books.length, 0);
+  const otCount = authors.filter((a) => a.testament === "OT").length;
+  const ntCount = authors.filter((a) => a.testament === "NT").length;
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -42,8 +92,37 @@ export default function AuthorsPage() {
         </p>
       </div>
 
-      {/* Filter chips */}
-      <div className="flex gap-2 mb-6">
+      {/* Summary stats */}
+      {!loading && authors.length > 0 && (
+        <div className="flex gap-3 mb-5 flex-wrap">
+          {[
+            { label: "Authors", value: authors.length },
+            { label: "Books", value: totalBooks },
+            { label: "Old Testament", value: `${otCount} authors` },
+            { label: "New Testament", value: `${ntCount} authors` },
+          ].map((s) => (
+            <div
+              key={s.label}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--color-gold)]/5 border border-[var(--color-gold)]/15"
+            >
+              <span className="text-sm font-bold text-[var(--color-gold-dark)]">
+                {s.value}
+              </span>
+              <span className="text-[10px] uppercase tracking-wider opacity-50">
+                {s.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Historical timeline */}
+      {!loading && authors.length > 0 && (
+        <AuthorTimeline authors={authors} />
+      )}
+
+      {/* Filter chips + Compare toggle */}
+      <div className="flex gap-2 mb-6 flex-wrap items-center">
         {(["all", "OT", "NT"] as const).map((f) => (
           <button
             key={f}
@@ -57,7 +136,42 @@ export default function AuthorsPage() {
             {f === "all" ? "All" : f === "OT" ? "Old Testament" : "New Testament"}
           </button>
         ))}
+        <span className="w-px h-4 bg-gray-200 mx-1" />
+        <button
+          onClick={() => {
+            setCompareMode(!compareMode);
+            setCompareSelection([]);
+          }}
+          className={`text-xs px-4 py-1.5 rounded-full border transition ${
+            compareMode
+              ? "bg-blue-500 text-white border-blue-500"
+              : "border-blue-200 hover:bg-blue-50 text-blue-500"
+          }`}
+        >
+          {compareMode ? "Cancel Compare" : "Compare"}
+        </button>
+        {compareMode && compareSelection.length > 0 && (
+          <span className="text-[10px] opacity-50">
+            {compareSelection.length}/2 selected
+          </span>
+        )}
       </div>
+
+      {/* Comparison panel */}
+      {compareMode && compareSelection.length === 2 && (() => {
+        const a = authors.find((x) => x.author_id === compareSelection[0]);
+        const b = authors.find((x) => x.author_id === compareSelection[1]);
+        if (!a || !b) return null;
+        return (
+          <AuthorCompare
+            authors={[a, b]}
+            onClose={() => {
+              setCompareMode(false);
+              setCompareSelection([]);
+            }}
+          />
+        );
+      })()}
 
       {loading && <p className="text-sm opacity-50">Loading authors...</p>}
 
@@ -65,14 +179,42 @@ export default function AuthorsPage() {
       <div className="space-y-3">
         {authors.map((author) => {
           const isOpen = expanded === author.author_id;
+          const isSelected = compareSelection.includes(author.author_id);
           return (
             <div
               key={author.author_id}
-              className="rounded-lg border border-[var(--color-gold-dark)]/15 bg-white overflow-hidden"
+              className={`rounded-lg border bg-white overflow-hidden transition ${
+                isSelected
+                  ? "border-blue-400 ring-2 ring-blue-200"
+                  : "border-[var(--color-gold-dark)]/15"
+              }`}
             >
+              <div className="flex items-start">
+                {/* Compare checkbox */}
+                {compareMode && (
+                  <button
+                    onClick={() => {
+                      setCompareSelection((prev) =>
+                        prev.includes(author.author_id)
+                          ? prev.filter((id) => id !== author.author_id)
+                          : prev.length < 2
+                            ? [...prev, author.author_id]
+                            : prev
+                      );
+                    }}
+                    className={`shrink-0 w-8 flex items-center justify-center self-stretch
+                               border-r transition ${
+                      isSelected
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-50 text-gray-300 hover:bg-blue-50 hover:text-blue-400"
+                    }`}
+                  >
+                    {isSelected ? "✓" : "○"}
+                  </button>
+                )}
               <button
-                onClick={() => handleExpand(author.author_id)}
-                className="w-full text-left px-4 py-3 flex items-start justify-between gap-3
+                onClick={() => !compareMode && handleExpand(author.author_id)}
+                className="flex-1 text-left px-4 py-3 flex items-start justify-between gap-3
                            hover:bg-[var(--color-gold)]/5 transition"
               >
                 <div className="min-w-0">
@@ -104,6 +246,7 @@ export default function AuthorsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+              </div>{/* end flex items-start */}
 
               {isOpen && (
                 <div className="px-4 pb-4 space-y-4 border-t border-[var(--color-gold-dark)]/10">
@@ -140,7 +283,7 @@ export default function AuthorsPage() {
                       <h4 className="text-[10px] uppercase tracking-wider font-bold opacity-50 mb-2">
                         Vocabulary Fingerprint
                       </h4>
-                      <div className="grid grid-cols-3 gap-3 mb-3">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
                         <div className="text-center p-2 rounded bg-[var(--color-gold)]/5">
                           <div className="text-lg font-bold text-[var(--color-gold-dark)]">
                             {detail.stats.unique_strongs.toLocaleString()}
@@ -163,6 +306,16 @@ export default function AuthorsPage() {
                           </div>
                           <div className="text-[9px] uppercase tracking-wider opacity-50">
                             Verses
+                          </div>
+                        </div>
+                        <div className="text-center p-2 rounded bg-[var(--color-gold)]/5">
+                          <div className="text-lg font-bold text-[var(--color-gold-dark)]">
+                            {detail.stats.total_words > 0
+                              ? ((detail.stats.unique_strongs / detail.stats.total_words) * 100).toFixed(1)
+                              : "—"}%
+                          </div>
+                          <div className="text-[9px] uppercase tracking-wider opacity-50">
+                            Vocab Richness
                           </div>
                         </div>
                       </div>
@@ -190,11 +343,187 @@ export default function AuthorsPage() {
                       )}
                     </div>
                   )}
+
+                  {/* Book stats breakdown */}
+                  {!detailLoading && bookStats.length > 0 && (
+                    <BookStatsBreakdown books={bookStats} />
+                  )}
                 </div>
               )}
             </div>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+// ── Author Timeline ────────────────────────────────────────────────────────
+
+function AuthorTimeline({ authors }: { authors: Author[] }) {
+  const items = useMemo(() => {
+    const parsed = authors
+      .map((a) => ({ author: a, range: parsePeriod(a.period) }))
+      .filter((x): x is { author: Author; range: { start: number; end: number } } => x.range !== null);
+
+    if (parsed.length === 0) return { entries: [], minYear: 0, maxYear: 0, span: 1 };
+
+    const minYear = Math.min(...parsed.map((p) => p.range.start));
+    const maxYear = Math.max(...parsed.map((p) => p.range.end));
+    const span = maxYear - minYear || 1;
+
+    return {
+      entries: parsed,
+      minYear,
+      maxYear,
+      span,
+    };
+  }, [authors]);
+
+  if (items.entries.length === 0) return null;
+
+  const { entries, minYear, span } = items;
+  const yearToPercent = (y: number) => ((y - minYear) / span) * 100;
+
+  // Era markers
+  const eras = [
+    { label: "Patriarchs", year: -2000 },
+    { label: "Exodus", year: -1400 },
+    { label: "Kings", year: -1000 },
+    { label: "Exile", year: -586 },
+    { label: "NT", year: 0 },
+  ].filter((e) => e.year >= minYear && e.year <= minYear + span);
+
+  return (
+    <div className="mb-5 p-4 rounded-lg border bg-white">
+      <h4 className="text-[10px] uppercase tracking-wider font-bold opacity-50 mb-3">
+        Historical Timeline
+      </h4>
+
+      {/* Era markers */}
+      <div className="relative h-4 mb-1">
+        {eras.map((era) => (
+          <span
+            key={era.label}
+            className="absolute text-[8px] uppercase tracking-wider opacity-30 -translate-x-1/2"
+            style={{ left: `${yearToPercent(era.year)}%` }}
+          >
+            {era.label}
+          </span>
+        ))}
+      </div>
+
+      {/* Timeline bar */}
+      <div className="relative h-8 bg-gray-50 rounded overflow-hidden">
+        {entries.map(({ author, range }) => {
+          const left = yearToPercent(range.start);
+          const width = Math.max(yearToPercent(range.end) - left, 0.8);
+          const isOT = author.testament === "OT";
+
+          return (
+            <div
+              key={author.author_id}
+              className={`absolute top-1 h-6 rounded-sm cursor-default transition-opacity
+                         hover:opacity-100 ${isOT ? "bg-emerald-400/60" : "bg-[var(--color-gold)]/60"}
+                         group`}
+              style={{ left: `${left}%`, width: `${width}%`, minWidth: "4px" }}
+              title={`${author.name} — ${author.period}`}
+            >
+              {/* Tooltip on hover */}
+              <div className="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-1
+                             bg-[var(--color-ink)] text-white text-[10px] px-2 py-1 rounded whitespace-nowrap z-10">
+                {author.name} · {author.period}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Year axis */}
+      <div className="relative h-4 mt-1">
+        <span className="absolute left-0 text-[9px] opacity-40">
+          {Math.abs(minYear)} BC
+        </span>
+        <span className="absolute right-0 text-[9px] opacity-40">
+          {Math.abs(minYear + span)} {minYear + span < 0 ? "BC" : "AD"}
+        </span>
+      </div>
+
+      {/* Legend */}
+      <div className="flex gap-4 text-[9px] opacity-40 mt-1">
+        <span className="flex items-center gap-1">
+          <span className="w-2 h-2 rounded-full bg-emerald-400" /> Old Testament
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="w-2 h-2 rounded-full bg-[var(--color-gold)]" /> New Testament
+        </span>
+      </div>
+    </div>
+  );
+}
+
+// ── Book Stats Breakdown Component ─────────────────────────────────────────
+
+function BookStatsBreakdown({ books }: { books: AuthorBookStats[] }) {
+  const maxWords = Math.max(...books.map((b) => b.total_words), 1);
+
+  function sentimentColor(s: number): string {
+    if (s > 0.05) return "bg-emerald-400";
+    if (s < -0.05) return "bg-rose-400";
+    return "bg-amber-400";
+  }
+
+  function sentimentLabel(s: number): string {
+    if (s > 0.05) return "positive";
+    if (s < -0.05) return "negative";
+    return "neutral";
+  }
+
+  return (
+    <div>
+      <h4 className="text-[10px] uppercase tracking-wider font-bold opacity-50 mb-2">
+        Books Breakdown
+      </h4>
+      <div className="space-y-2">
+        {books.map((b) => {
+          const pct = (b.total_words / maxWords) * 100;
+          return (
+            <div key={b.book_id} className="group">
+              <div className="flex items-center gap-3">
+                <Link
+                  to={`/reader?book=${b.book_id}&chapter=1`}
+                  className="text-xs font-bold w-12 shrink-0 text-[var(--color-gold-dark)]
+                             hover:underline"
+                >
+                  {b.book_id}
+                </Link>
+                <div className="flex-1 h-5 bg-gray-50 rounded overflow-hidden relative">
+                  <div
+                    className={`h-full rounded ${sentimentColor(b.avg_sentiment)} opacity-60 transition-all`}
+                    style={{ width: `${Math.max(pct, 2)}%` }}
+                  />
+                  <span className="absolute inset-0 flex items-center px-2 text-[10px] font-medium text-[var(--color-ink)]">
+                    {b.total_words.toLocaleString()} words
+                  </span>
+                </div>
+                <span className="text-[10px] opacity-40 w-20 text-right shrink-0">
+                  {b.total_chapters} ch · {b.total_verses} vs
+                </span>
+              </div>
+              {/* Hover detail */}
+              <div className="hidden group-hover:flex gap-4 ml-15 mt-0.5 text-[10px] opacity-50 pl-15">
+                <span>{b.avg_words_per_verse?.toFixed(1)} words/verse</span>
+                <span>Sentiment: {sentimentLabel(b.avg_sentiment)} ({b.avg_sentiment?.toFixed(3)})</span>
+                <span>{b.category}</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="flex gap-4 mt-2 text-[9px] opacity-40">
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-400" /> Positive</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-amber-400" /> Neutral</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-rose-400" /> Negative</span>
       </div>
     </div>
   );

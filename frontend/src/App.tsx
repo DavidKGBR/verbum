@@ -9,7 +9,7 @@ import NotesPage from "./pages/NotesPage";
 import PlansPage from "./pages/PlansPage";
 import WordStudyPage from "./pages/WordStudyPage";
 import DictionaryPage from "./pages/DictionaryPage";
-import SemanticGraphPage from "./pages/SemanticGraphPage";
+import SemanticExplorerPage from "./pages/SemanticExplorerPage";
 import TranslationDivergencePage from "./pages/TranslationDivergencePage";
 import AuthorsPage from "./pages/AuthorsPage";
 import PeoplePage from "./pages/PeoplePage";
@@ -40,7 +40,7 @@ export default function App() {
         <Route path="/plans" element={<PlansPage />} />
         <Route path="/word-study/:strongsId" element={<WordStudyPage />} />
         <Route path="/dictionary" element={<DictionaryPage />} />
-        <Route path="/semantic-graph" element={<SemanticGraphPage />} />
+        <Route path="/semantic-graph" element={<SemanticExplorerPage />} />
         <Route path="/translation-divergence" element={<TranslationDivergencePage />} />
         <Route path="/authors" element={<AuthorsPage />} />
         <Route path="/people" element={<PeoplePage />} />

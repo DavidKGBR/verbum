@@ -16,18 +16,22 @@ de dados que só Logos oferece (pago) — grátis, bonito, offline.
 
 ---
 
-## 📊 Estado Atual (v2.0) ✅
+## 📊 Estado Atual (v3.0) ✅
 
 | Métrica | Valor |
 |---------|-------|
-| Backend Python | 4.786 linhas, 25 módulos |
-| Frontend TypeScript | 3.808 linhas, 20 componentes, 4 hooks |
-| API REST | 18+ endpoints (FastAPI) |
+| Backend Python | 24 routers FastAPI, 30+ módulos |
+| Frontend TypeScript | 27 páginas, 34 componentes, 9 hooks |
+| API REST | 50+ endpoints (FastAPI) |
 | Traduções | 10 (KJV, NVI, BBE, RA, ACF, RVR, APEE, ASV, WEB, Darby) |
 | Cross-references | 344.754 (OpenBible.info) |
-| Testes | 138 funções pytest |
-| Reader modes | Single, Parallel, Immersive (3D book), em breve Interlinear |
-| Features | VerseActions, Search, Bookmarks, Streak, AI (Gemini), KJV annotation toggle |
+| Strong's Lexicon | 14.178 entradas (8.674 heb + 5.504 gre) |
+| Textos originais | 31.152 versos (WLC hebraico + SBLGNT grego) |
+| Interlinear | 406.852 palavras (STEPBible TAHOT + TAGNT) |
+| Dictionary | 5.965 verbetes (Easton's + Smith's) |
+| Testes | 138+ funções pytest |
+| Reader modes | Single, Parallel, Immersive (3D book), Interlinear |
+| Áudio | Chirp3-HD em geração (he-IL + el-GR) — 🚧 em andamento |
 
 ---
 
@@ -329,6 +333,37 @@ A maioria das pessoas que ora o Pai Nosso nunca ouviu o som das palavras na lín
 
 ---
 
+---
+
+### 🏛️ FASE 6: Engenharia Literária (Arquitetura Oculta)
+
+*Revelar a geometria matemática do texto.*
+
+A Bíblia hebraica foi projetada para tradição oral com estruturas complexas que a tipografia moderna oculta.
+
+- **Estruturas Quiásticas:** Mapeamento de quiasmos (A-B-C-B'-A') e paralelismos poéticos via análise sintática do *Macula-Hebrew* (CC BY 4.0).
+- **Modo Structural:** Novo modo de leitura que redesenha o texto em cascata, destacando visualmente as simetrias literárias — devolve a tridimensionalidade matemática ao texto.
+
+---
+
+### 🧬 FASE 7: Genealogia Semântica (Fio de Ariadne)
+
+*Rastrear a imutabilidade do conceito através dos tempos.*
+
+- **Rastreio Multilíngue:** Ferramenta visual que mostra a "viagem" de um termo — ex: como o hebraico *Chesed* foi traduzido para *Eleos* ou *Agape* na Septuaginta.
+- **Conexão Canônica:** Visualização de como o NT ecoa conceitos do AT, preservando o "DNA" da revelação através das línguas.
+
+---
+
+### 🌍 FASE 8: O Repositório Canônico (O Legado Final)
+
+*Transformar a matriz de dados num bem público universal.*
+
+- **BigQuery Public Dataset:** Exportação de toda a matriz higienizada para o Google BigQuery — acessível via SQL para seminários, universidades e pesquisadores.
+- **Infraestrutura como legado:** O Verbum torna-se a "pedra fundamental" de dados para pesquisa bíblica global, independente de qual interface tecnológica prevalecer.
+
+---
+
 ## 📢 Comunidade
 
 | Onde | Público | Ângulo |
@@ -347,27 +382,48 @@ A maioria das pessoas que ora o Pai Nosso nunca ouviu o som das palavras na lín
 
 ## 📋 Ordem Final
 
-| # | Task | Impacto | Status | PR |
-|---|------|---------|--------|-----|
-| 1 | Notas + Highlighting | 🔥🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-1-notes-highlighting) |
-| 2 | Streak + Reading Plans | 🔥🔥🔥 | ✅ Concluído | [branch](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-2-streak-plans) |
-| 3 | Extract Strong's + originals | 🔥🔥🔥🔥 | ✅ Concluído (3a+3b+3c+3d) | [3a](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3a-strongs-lexicon) · [3b](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3b-hebrew-wlc) · [3c](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3c-greek-sblgnt) · [3d](https://github.com/DavidKGBR/verbum/pull/new/feat/verbum-3d-interlinear-stepbible) |
-| 4 | API endpoints (6 novos) | 🔥🔥🔥 | ✅ Concluído | — |
-| 5 | Interlinear View | 🔥🔥🔥🔥🔥 | ✅ Concluído | — |
-| 6 | Word Study page | 🔥🔥🔥🔥 | ✅ Concluído | — |
-| 7 | Bible Dictionary | 🔥🔥🔥 | ✅ Concluído | — |
-| 8 | Commentary (HelloAO) | 🔥🔥🔥 | ✅ Concluído | — |
-| 9 | Verse Sharing | 🔥🔥 | ✅ Concluído | — |
-| 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | ✅ Concluído | — |
-| 11 | Translation Divergence | 🔥🔥🔥🔥 | ✅ Concluído | — |
-| 12 | README + Deploy + SEO | 🔥🔥🔥 | 🔲 Planejado | — |
-| — | **FASE 5** | | | |
-| 13 | 5A — Base audio (Open HGB MP3, CC-BY) | 🔥🔥🔥🔥 | 🔲 Planejado | — |
-| 14 | 5B — Contato Foreman + Kantor | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
-| 15 | 5C — Pai Nosso em Aramaico (4 camadas) | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
-| 16 | 5D — Camada acadêmica (Tibéria + Koiné) | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
+| # | Task | Impacto | Status |
+|---|------|---------|--------|
+| 1 | Notas + Highlighting | 🔥🔥🔥🔥 | ✅ Concluído |
+| 2 | Streak + Reading Plans | 🔥🔥🔥 | ✅ Concluído |
+| 3 | Extract Strong's + originals (3a+3b+3c+3d) | 🔥🔥🔥🔥 | ✅ Concluído |
+| 4 | API endpoints lexicon (6 novos) | 🔥🔥🔥 | ✅ Concluído |
+| 5 | Interlinear View | 🔥🔥🔥🔥🔥 | ✅ Concluído |
+| 6 | Word Study page | 🔥🔥🔥🔥 | ✅ Concluído |
+| 7 | Bible Dictionary (Easton's + Smith's) | 🔥🔥🔥 | ✅ Concluído |
+| 8 | Commentary (HelloAO — Matthew Henry et al.) | 🔥🔥🔥 | ✅ Concluído |
+| 9 | Verse Sharing (Canvas 1080×1080) | 🔥🔥 | ✅ Concluído |
+| 10 | Grafo Semântico D3 force-directed | 🔥🔥🔥🔥🔥 | ✅ Concluído |
+| 11 | Translation Divergence Heatmap | 🔥🔥🔥🔥 | ✅ Concluído |
+| — | **Extras construídos (não planejados originalmente)** | | |
+| E1 | Biblical Timeline (eras + eventos, router `timeline.py`) | 🔥🔥🔥 | ✅ Concluído |
+| E2 | People & Genealogy (família + eventos, router `people.py`) | 🔥🔥🔥🔥 | ✅ Concluído |
+| E3 | Places Map (Leaflet + OpenStreetMap, router `places.py`) | 🔥🔥🔥🔥 | ✅ Concluído |
+| E4 | Authors compare (router `authors.py`) | 🔥🔥 | ✅ Concluído |
+| E5 | Topics / Nave's Themes (router `topics.py`) | 🔥🔥🔥 | ✅ Concluído |
+| E6 | Devotional diário (router `devotional.py`) | 🔥🔥 | ✅ Concluído |
+| E7 | Emotional Landscape (router `emotional.py`) | 🔥🔥🔥 | ✅ Concluído |
+| E8 | Deep Analytics (router `deep_analytics.py`) | 🔥🔥🔥 | ✅ Concluído |
+| E9 | Intertextuality (router `intertextuality.py`) | 🔥🔥🔥 | ✅ Concluído |
+| E10 | Open Theological Questions (router `open_questions.py`) | 🔥🔥 | ✅ Concluído |
+| E11 | Narrative Threads (router `threads.py`) | 🔥🔥🔥 | ✅ Concluído |
+| E12 | Literary Structure (router `structure.py`) | 🔥🔥🔥 | ✅ Concluído |
+| E13 | Community (router `community.py`) | 🔥🔥 | ✅ Concluído |
+| E14 | Semantic Explorer extended (router `explorer.py`) | 🔥🔥🔥🔥 | ✅ Concluído |
+| E15 | Passage Compare (router `compare.py`) | 🔥🔥🔥 | ✅ Concluído |
+| — | **Pendentes** | | |
+| 12 | README + Deploy + SEO (14k páginas estáticas Strong's) | 🔥🔥🔥 | 🔲 Planejado |
+| — | **FASE 5 — A Voz Original** | | |
+| 13 | 5A — Chirp3-HD TTS (he-IL + el-GR, 14.178 entradas) | 🔥🔥🔥🔥 | 🚧 Em andamento |
+| 14 | 5B — Contato Foreman + Kantor (Camada 2 acadêmica) | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
+| 15 | 5C — Pai Nosso em Aramaico (4 camadas UI) | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
+| 16 | 5D — Camada acadêmica (Tibéria + Koiné) | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
+| — | **FASE 6-8 — Legado** | | |
+| 17 | Fase 6 — Estruturas quiásticas (Macula-Hebrew + modo Structural) | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
+| 18 | Fase 7 — Genealogia semântica (chesed → eleos → agape, AT→NT) | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
+| 19 | Fase 8 — BigQuery Public Dataset + infraestrutura como legado | 🔥🔥🔥🔥🔥 | 🔲 Planejado |
 
-**Legenda de status:** 🔲 Planejado · 🚧 Em andamento · ⏸️ Pausado · ✅ Concluído
+**Legenda:** 🔲 Planejado · 🚧 Em andamento · ⏸️ Pausado · ✅ Concluído
 
 ---
 
@@ -594,3 +650,15 @@ entrada lógica — sem depender da memória de conversa.
 - **Modelo 3 camadas:** Camada 1 (TTS CC-BY, imediato) → Camada 2 (acadêmica, contato a fazer) → Camada 3 (legado: gravação com seminário brasileiro, CC-BY que o Verbum publica).
 - **Feature estrela:** Pai Nosso em 4 camadas simultâneas — aramaico (Jesus) + hebraico + grego Koiné + português. Nenhuma ferramenta gratuita no mundo oferece isso.
 - **Próxima entrada:** Tarefa #12 (README + Deploy + SEO) ou Tarefa #13 (5A — Base audio). A serem priorizadas na próxima sessão conforme disponibilidade de David.
+
+### 2026-04-15 — Fase 5A: Áudio Chirp3-HD + auditoria do plano
+
+- **Contexto:** nova sessão após compactação. Continuação da Fase 5.
+- **Fix de voz:** `el-GR-Neural2-A` não existe → trocado para `el-GR-Wavenet-A`. Em seguida descoberto que `he-IL-Neural2-A` também não existe. Listadas as vozes disponíveis via API: ambos os idiomas têm **Chirp3-HD** (geração mais recente, supera Neural2 e WaveNet). Configuração final: `he-IL-Chirp3-HD-Orus` + `el-GR-Chirp3-HD-Orus` (voz masculina, adequada para léxico bíblico).
+- **Abordagem mudou:** o plano original previa Open Hebrew Greek Bible MP3 (Eliran Wong, CC-BY) como Camada 1. Decisão desta sessão: gerar direto com Google Cloud TTS Chirp3-HD (~$3 USD para 14.178 entradas) — mais rápido, mais simples, qualidade superior ao TTS legado do Eliran Wong.
+- **Geração em andamento:** 573 arquivos gregos gerados com Wavenet-A antes do fix; hebraico iniciado com Chirp3-HD. Windows Update interrompeu o processo — reiniciado em 2 terminais paralelos (Greek + Hebrew).
+- **Frontend wired:** `AudioButton.tsx`, `useWordAudio.ts` (fallback Web Speech API), `InterlinearView`, `WordDetailPanel`, `WordStudyPage` todos integrados com `audio_url` do endpoint. FastAPI serve `data/audio/` via `StaticFiles`.
+- **Auditoria do plano:** VERBUM_PLAN.md estava severamente defasado da realidade. Encontrados 15 features/páginas construídas e não documentadas (Timeline, People, Map, Authors, Topics, Devotional, Emotional, DeepAnalytics, Intertextuality, OpenQuestions, Threads, Structure, Community, SemanticExplorer, Compare + routers correspondentes). Todos adicionados ao ledger como E1-E15 ✅.
+- **Limpeza de docs:** `VERBUM_PRESENTATION.md` (197 linhas, framing competitivo desatualizado) e `Verbum - Plano de Legado Transgeracional.md` (55 linhas Gemini) deletados. Conteúdo das Fases 6-8 absorvido no VERBUM_PLAN.md.
+- **Commits desta sessão:** `fix: use el-GR-Wavenet-A`, `fix: upgrade both voices to Chirp3-HD`.
+- **Próxima entrada:** aguardar conclusão da geração de áudio (hebraico ~10h, grego ~6h em paralelo). Depois: Tarefa #12 (Deploy + SEO) ou 5B (contato Foreman/Kantor).

@@ -58,6 +58,7 @@ def list_people(
         df = conn.execute(
             f"""
             SELECT person_id, slug, name, gender, birth_year, death_year,
+                   description, also_called,
                    tribe, occupation, books_mentioned, verse_count,
                    min_year, max_year
             FROM biblical_people
@@ -71,9 +72,10 @@ def list_people(
         results = df.to_dict(orient="records")
         # Parse JSON array fields for the response
         for r in results:
-            if r.get("books_mentioned"):
-                with contextlib.suppress(json.JSONDecodeError, TypeError):
-                    r["books_mentioned"] = json.loads(r["books_mentioned"])
+            for field in ("books_mentioned", "also_called"):
+                if r.get(field):
+                    with contextlib.suppress(json.JSONDecodeError, TypeError):
+                        r[field] = json.loads(r[field])
 
         return {
             "total": total,
