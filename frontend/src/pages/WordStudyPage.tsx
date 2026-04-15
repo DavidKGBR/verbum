@@ -9,6 +9,7 @@ import {
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import WordJourney from "../components/lexicon/WordJourney";
+import AudioButton from "../components/common/AudioButton";
 import { useI18n } from "../i18n/i18nContext";
 import { localizeBookName } from "../i18n/bookNames";
 
@@ -91,7 +92,7 @@ export default function WordStudyPage() {
           <div className={`text-6xl md:text-7xl mt-2 mb-4 ${isHebrew ? "font-hebrew" : "font-greek"}`}>
             {entry.original}
           </div>
-          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 text-sm">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
             <span className="italic opacity-70">{entry.transliteration}</span>
             {entry.pronunciation && (
               <span className="font-mono text-xs opacity-50">[{entry.pronunciation}]</span>
@@ -101,6 +102,12 @@ export default function WordStudyPage() {
                 {entry.part_of_speech}
               </span>
             )}
+            <AudioButton
+              language={entry.language as "hebrew" | "greek"}
+              text={entry.original}
+              transliteration={entry.transliteration}
+              size="sm"
+            />
           </div>
         </div>
       </div>

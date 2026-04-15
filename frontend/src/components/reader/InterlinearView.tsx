@@ -9,6 +9,7 @@ import {
 import { useBooks, localizeBookName } from "../../i18n/bookNames";
 import LoadingSpinner from "../common/LoadingSpinner";
 import WordDetailPanel from "../lexicon/WordDetailPanel";
+import AudioButton from "../common/AudioButton";
 import { useI18n } from "../../i18n/i18nContext";
 
 export default function InterlinearView() {
@@ -118,8 +119,21 @@ export default function InterlinearView() {
                       <p className="text-sm italic opacity-50 pt-3">{t("reader.interlinearMissing")}</p>
                     ) : (vWords.map((w, idx) => (
                       <div key={`${w.verse_id}-${w.word_position}-${idx}`} className="flex flex-col gap-1.5 items-center w-auto max-w-[140px] text-center" style={{ direction: 'ltr' }}>
-                         <div className={`text-2xl leading-none text-[var(--color-ink)] ${w.language === 'hebrew' ? 'font-hebrew pt-1 pb-2' : 'font-greek py-1'}`}>
+                         {/* Palavra original — clique abre painel, AudioButton toca a pronúncia */}
+                         <div className="relative group/word">
+                           <div className={`text-2xl leading-none text-[var(--color-ink)] cursor-pointer hover:text-[var(--color-gold-dark)] transition-colors ${w.language === 'hebrew' ? 'font-hebrew pt-1 pb-2' : 'font-greek py-1'}`}
+                                onClick={() => setSelectedWord(w.strongs_id)}>
                              {w.original_word}
+                           </div>
+                           {/* Botão de áudio — aparece no hover sobre a palavra */}
+                           <div className="absolute -top-4 left-1/2 -translate-x-1/2 opacity-0 group-hover/word:opacity-100 transition-opacity">
+                             <AudioButton
+                               language={w.language}
+                               text={w.original_word}
+                               transliteration={w.transliteration}
+                               size="xs"
+                             />
+                           </div>
                          </div>
                          <div className="hidden md:block text-[11px] text-[var(--color-gold-dark)] opacity-70 italic truncate w-full" title={w.lemma}>
                              {w.transliteration} <span className="opacity-50 text-[9px] uppercase not-italic ml-0.5">· {w.grammar}</span>

@@ -6,6 +6,7 @@ import {
   type StrongsEntry,
 } from "../../services/api";
 import LoadingSpinner from "../common/LoadingSpinner";
+import AudioButton from "../common/AudioButton";
 
 interface Props {
   strongsId: string | null;
@@ -70,7 +71,13 @@ export default function WordDetailPanel({ strongsId, onClose }: Props) {
                 {entry.original}
              </div>
              <div className="text-sm italic opacity-70 mb-1">{entry.transliteration}</div>
-             <div className="text-xs font-mono text-[var(--color-ink)]/50">[{entry.pronunciation}]</div>
+             <div className="text-xs font-mono text-[var(--color-ink)]/50 mb-3">[{entry.pronunciation}]</div>
+             <AudioButton
+               language={entry.language as "hebrew" | "greek"}
+               text={entry.original}
+               transliteration={entry.transliteration}
+               size="md"
+             />
           </div>
 
           <div className="space-y-5 px-1">
