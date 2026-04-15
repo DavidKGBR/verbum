@@ -29,13 +29,21 @@ from pathlib import Path
 
 import duckdb
 
-# Força UTF-8 no stdout/stderr — necessário no Windows (cp1252 não suporta emojis)
-if sys.stdout and hasattr(sys.stdout, "buffer"):
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-if sys.stderr and hasattr(sys.stderr, "buffer"):
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
-
 logger = logging.getLogger(__name__)
+
+
+def _force_utf8_stdio() -> None:
+    """Reconfigura stdout/stderr para UTF-8 (Windows cp1252 não suporta emojis).
+
+    Só deve ser chamado quando este módulo roda como script (CLI entry).
+    Chamar em import-time quebra a captura de stdout/stderr do pytest
+    (ValueError: I/O operation on closed file no teardown).
+    """
+    if sys.stdout and hasattr(sys.stdout, "buffer"):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    if sys.stderr and hasattr(sys.stderr, "buffer"):
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
 
 # ── Configuração de vozes Chirp3-HD ──────────────────────────────────────────
 # Chirp3-HD é a geração mais recente do Google TTS — supera Neural2 e WaveNet.
@@ -279,6 +287,7 @@ def audio_url(strongs_id: str, language: str, base_url: str = "") -> str | None:
 if __name__ == "__main__":
     import argparse
 
+    _force_utf8_stdio()
     logging.basicConfig(level=logging.INFO)
 
     parser = argparse.ArgumentParser(description="Gerador de pronúncias bíblicas Neural2")

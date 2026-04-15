@@ -65,8 +65,8 @@ class TestHomeStats:
         r = client.get("/api/v1/home/stats")
         assert r.status_code == 200
         data = r.json()
-        # We know literary_structures.json has 10 entries
-        assert data["structures_count"] == 10
+        # We know literary_structures.json has 14 entries (Fase 6 added 4 new structures)
+        assert data["structures_count"] == 14
         # We know open_questions.json has 15 entries
         assert data["questions_count"] == 15
         # We know community_notes.json has entries

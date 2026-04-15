@@ -40,13 +40,21 @@ from pathlib import Path
 
 import duckdb
 
-# UTF-8 no stdout — necessário no Windows (cp1252 não suporta caracteres especiais)
-if sys.stdout and hasattr(sys.stdout, "buffer"):
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-if sys.stderr and hasattr(sys.stderr, "buffer"):
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
-
 logger = logging.getLogger(__name__)
+
+
+def _force_utf8_stdio() -> None:
+    """Reconfigura stdout/stderr para UTF-8 (Windows cp1252 não suporta emojis).
+
+    Só deve ser chamado quando este módulo roda como script (CLI entry).
+    Chamar em import-time quebra a captura de stdout/stderr do pytest
+    (ValueError: I/O operation on closed file no teardown).
+    """
+    if sys.stdout and hasattr(sys.stdout, "buffer"):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    if sys.stderr and hasattr(sys.stderr, "buffer"):
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
 
 # ── Configuração de voz ───────────────────────────────────────────────────────
 # Árabe Chirp3-HD como proxy fonético para Aramaico Siríaco.
@@ -245,6 +253,7 @@ def generate_all(
 if __name__ == "__main__":
     import argparse
 
+    _force_utf8_stdio()
     logging.basicConfig(level=logging.INFO)
 
     parser = argparse.ArgumentParser(
