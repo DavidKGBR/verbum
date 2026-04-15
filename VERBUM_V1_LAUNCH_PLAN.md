@@ -6,6 +6,10 @@
 > **Stack de deploy:** Firebase Hosting (frontend) + Cloud Run (backend) + BigQuery (dataset público).
 > **URL inicial:** `https://verbum-app-bible.web.app` (subdomínio default — o Firebase atribui sempre `<projectId>.web.app`). Na sessão #6, tentar reservar `verbum.web.app` como custom Firebase subdomain — se disponível, vira a URL pública principal e o `verbum-app-bible.web.app` continua redirecionando.
 > **Analytics:** GA4 via Firebase — gratuito, ilimitado, integração nativa.
+>
+> **Progresso pré-launch até 15 abr 2026:**
+> - ✅ **Sessão 1** — Áudio hebraico Chirp3-HD (8674 MP3, 0 falhas; 100% Strong's HE)
+> - Em paralelo: `VERBUM_REVISION_PLAN.md` → R1 ✅, R2 ✅, R3 em fila
 
 ---
 
@@ -32,7 +36,7 @@ Para evitar escopo elástico — qualquer item abaixo é tentação, e a regra �
 | **Sync CRDT/WebRTC** (Frente 3) | Solução para problema que ninguém ainda relatou. v2. |
 | **Spaced Repetition (SM-2)** (Frente 4) | Feature nova. v2. |
 | **RAG teológico grounded** (Frente 5) | Substitui `/ai/explain` atual; este já funciona. v2. |
-| **Áudio Chirp3-HD para 100% das 14.178 entradas Strong's** | Cobertura HE+GR já cobre ~90% dos cliques. Backlog v1.5. |
+| ~~**Áudio Chirp3-HD para 100% das 14.178 entradas Strong's**~~ | ✅ **Entregue na Sessão 1 (15 abr 2026).** 8674 HE + 5504 GR = 14178 MP3 local. Publicação via GCS/CDN → backlog v1.5 (hoje servidos do disco de build pra simplicidade). |
 | **Camada acadêmica de áudio (Foreman/Kantor)** | Já marcado como backlog no plano original. Não entra. |
 | **Cursos guiados (Frente 6 que sugeri no opus)** | Conceito interessante, sem dados estruturados ainda. v2.5. |
 | **Mobile native app (React Native/Capacitor)** | Web responsive cobre mobile no v1. |
@@ -48,16 +52,18 @@ Cada sessão tem **um objetivo, uma entrega, e um critério de done**. Encerra q
 
 ### Sessão 1 — Fechar áudio hebraico
 
-> Status: 🚧 já em andamento
+> Status: ✅ **Concluído** (15 abril 2026)
 
 **Entrega:** TTS Chirp3-HD para todas as palavras hebraicas top N (paridade com cobertura grega).
 
-**Critério de done:**
-- `data/audio/hebrew/` populado para top N Strong's HE
-- Botão de áudio funcional no Reader interlinear para palavras HE testadas
-- `python -m src.cli info` confirma contagem de áudios HE ≈ contagem GR
+**Resultado:**
+- `data/audio/hebrew/` — **8674 arquivos MP3** (100% das entradas Strong's HE)
+  - 8674 gerados · 0 pulados · 0 falhas · 0 GCS (local-only por ora)
+- `data/audio/greek/` — 5504 arquivos (baseline GR já tinha paridade desde Fase 5)
+- Cobertura HE 100% atingiu e superou o critério "≈ GR"; mais 3170 arquivos que o léxico grego, refletindo que o TAHOT HE tem mais entradas que o TAGNT GR
+- Botão de áudio funcional no Reader interlinear confirmado em palavras HE testadas (Gen 1:1, Deut 6:4)
 
-**Próxima:** Sessão 2 começa imediatamente após.
+**Próxima:** Sessão 2 (README de produto + assets de marca) começa após fechamento do `VERBUM_REVISION_PLAN.md`.
 
 ---
 

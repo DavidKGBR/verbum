@@ -579,10 +579,9 @@ Quando as 7 sessões R1–R7 estiverem ✅:
 **Ordem total revisada:**
 
 ```
-Sessão (em paralelo) — Áudio HE termina  ╮
-                                          │  Independente
+✅ Áudio HE concluído (15 abr 2026) — 8674 arquivos, 0 falhas (paralelo)
 ✅ R1 — Trocador + synoptic parallels + explorer presets + localized helper
-Sessão R2 — Static JSONs restantes (devotional, special passages, genealogy, …)
+✅ R2 — Static JSONs restantes (devotional, special passages, genealogy, …)
 Sessão R3 — personNames + placeNames + timelineEvents + topicNames (lookup tables FE)
 Sessão R3.5 — Semantic Explorer UX polish (G3.b/c/d/e/f/g — sem dataset novo)
 Sessão R3.6.0 — Strong's multilingual setup (schema + scripts + backend + indicator)
@@ -609,7 +608,8 @@ R7.23+ — Sentiment 60 livros restantes × PT-BR (~91 batches, ~6-9 meses em ca
 ```
 
 **Totais:**
-- **Pré-launch:** R1 (✅) + R2 + R3 + R3.5 + R3.6.0 + R3.6.1-4 (4 batches) + R4 + R5 + R6 + R7.0 + R7.1-22 (22 batches) + L2-L11 (9 launch) = **~9 sessões base + ~26 batches + 9 launch = ~44 sessões** até produto lançado. Em cadência sessão-a-sessão, ~8-10 semanas.
+- **Pré-launch:** ✅ R1 + ✅ R2 + R3 + R3.5 + R3.6.0 + R3.6.1-4 (4 batches) + R4 + R5 + R6 + R7.0 + R7.1-22 (22 batches) + L2-L11 (9 launch) = **~9 sessões base + ~26 batches + 9 launch = ~44 sessões** até produto lançado. Em cadência sessão-a-sessão, ~8-10 semanas.
+- **Entregue até agora (paralelo ao planejamento):** áudio HE (8674 MP3, 0 falhas), áudio GR (5504 MP3 pré-existente) — Sessão 1 do `VERBUM_V1_LAUNCH_PLAN.md` concluída.
 - **Pós-launch incremental:**
   - **R3.6.5+** — Strong's 12.178 restantes × 2 línguas ≈ **~24 batches** (~3 meses em cadência 2-3/semana)
   - **R7.23+** — Sentiment 60 livros restantes NVI ≈ **~91 batches** (~6-9 meses em cadência 2-3/semana)
