@@ -271,6 +271,50 @@ Jesus não orou em hebraico. Orou em **aramaico galileico do séc. I** — a lí
 
 O texto que sobreviveu em aramaico é a **Peshitta** (aramaico sírio oriental), levemente diferente do galileico original, mas o mais próximo disponível. O **Abwoon Network** (Dr. Neil Douglas-Klotz) tem o Pai Nosso em aramaico com áudio, livre, baseado na Peshitta.
 
+---
+
+### 🔍 Pesquisa: Fontes de Áudio Aramaico Autêntico
+
+> **Status atual:** Proxy Árabe implementado (`ar-XA-Chirp3-HD-Orus`) em `src/extract/aramaic_audio_gen.py`.
+> Qualidade estimada: ~65-70% de acurácia fonética. Substituível por fonte abaixo sem alterar nenhum código — só trocar `audio_url` no DB.
+
+#### Por que nenhum TTS funciona nativamente
+
+Nenhum provedor major (Google, Azure, Amazon, ElevenLabs) suporta Siríaco Clássico (`syc`) ou Aramaico Oficial (`arc`) como língua de TTS. O Siríaco é uma língua litúrgica com ~400k falantes de variedades modernas, não comercialmente viável para TTS proprietário.
+
+#### Fontes a investigar (em ordem de prioridade)
+
+| # | Fonte | Tipo | Licença estimada | URL / Contato |
+|---|-------|------|-----------------|---------------|
+| 1 | **Abwoon Network** (Neil Douglas-Klotz) | Gravação humana — Pai Nosso completo | CC-BY ou permissão direta | https://abwoon.org · contato: info@abwoon.org |
+| 2 | **Beth Mardutho — Syriac Institute** | Léxico digital com possível áudio | Acadêmica, contatar | https://bethmardutho.org |
+| 3 | **Assyrian Church of the East** | Leituras litúrgicas da Peshitta (YouTube) | Uso educacional, contatar | Canal: "Assyrian Church of the East Official" |
+| 4 | **CNRS — Corpus de Aramaico** | Gravações acadêmicas de aramaico moderno (Neo-Siríaco) | Pesquisa, verificar | https://lacito.vjf.cnrs.fr/pangloss |
+| 5 | **ElevenLabs Voice Cloning** | Clonar voz de gravação existente (~5 min de audio) | Depende da fonte base | ~$5 por geração completa |
+| 6 | **Communauté Syriaque Française** | Falantes nativos de Siríaco Neo-Oriental na França | Voluntário | Pesquisar comunidades em Paris/Lyon |
+| 7 | **Open Aramaic Project** (se existir) | Verificar GitHub/HuggingFace | Open source | Buscar: "aramaic tts huggingface" |
+
+#### Critérios para substituição
+
+Quando uma fonte for encontrada, a troca é cirúrgica:
+
+```bash
+# 1. Gerar novos MP3s com a fonte autêntica
+python -m src.extract.aramaic_audio_gen --force --passage lords_prayer
+
+# 2. OU atualizar audio_url direto no DB para URLs externas
+UPDATE aramaic_verses SET audio_url = 'https://fonte.com/audio/abwoon.mp3'
+WHERE passage_id = 'lords_prayer' AND transliteration = 'Abwoon';
+```
+
+Zero alteração no código do frontend ou backend. O `AudioButton` já está preparado para receber `audio_url` externo ou local.
+
+#### Nota sobre autenticidade
+
+O Aramaico Galileico do séc. I (língua de Jesus) não tem falantes nativos e é parcialmente reconstruído. Mesmo gravações "autênticas" da Peshitta usam Siríaco Oriental/Ocidental posterior. O proxy Árabe é honesto nesse sentido: nenhuma gravação existente é 100% o Aramaico que Jesus falou.
+
+---
+
 **O que o Verbum faria que ninguém faz:**
 
 Mateus 6:9-13 em **4 camadas com áudio**:
