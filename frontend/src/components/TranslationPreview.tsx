@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchVerseTranslations } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
+import {
+  useTranslationIdsCsv,
+  useTranslationLanguages,
+  getLanguageName,
+} from "../hooks/useTranslations";
 
 const FAMOUS_VERSES = [
   { id: "JHN.3.16", ref: "John 3:16", book: "JHN", ch: 3, v: 16 },
@@ -16,23 +21,10 @@ const FAMOUS_VERSES = [
   { id: "PSA.119.105", ref: "Psalm 119:105", book: "PSA", ch: 119, v: 105 },
 ];
 
-const TRANSLATIONS = "kjv,nvi,rvr,bbe,ra,acf";
-
-const LABELS: Record<string, { lang: string; short: string }> = {
-  kjv: { lang: "English", short: "KJV" },
-  asv: { lang: "English", short: "ASV" },
-  bbe: { lang: "English", short: "BBE" },
-  web: { lang: "English", short: "WEB" },
-  nvi: { lang: "Português", short: "NVI" },
-  ra: { lang: "Português", short: "RA" },
-  acf: { lang: "Português", short: "ACF" },
-  rvr: { lang: "Español", short: "RVR" },
-  apee: { lang: "Français", short: "APEE" },
-  darby: { lang: "English", short: "DARBY" },
-};
-
 export default function TranslationPreview() {
   const { t } = useI18n();
+  const translationsCsv = useTranslationIdsCsv();
+  const langMap = useTranslationLanguages();
   const [verseIdx, setVerseIdx] = useState(0);
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
@@ -40,12 +32,13 @@ export default function TranslationPreview() {
   const current = FAMOUS_VERSES[verseIdx];
 
   useEffect(() => {
+    if (!translationsCsv) return;
     setLoading(true);
-    fetchVerseTranslations(current.id, TRANSLATIONS)
+    fetchVerseTranslations(current.id, translationsCsv)
       .then((d) => setTranslations(d.translations))
       .catch(() => setTranslations({}))
       .finally(() => setLoading(false));
-  }, [current.id]);
+  }, [current.id, translationsCsv]);
 
   const shuffle = () => {
     setVerseIdx((prev) => (prev + 1) % FAMOUS_VERSES.length);
@@ -79,7 +72,8 @@ export default function TranslationPreview() {
       ) : (
         <div className="space-y-3">
           {Object.entries(translations).map(([tid, text]) => {
-            const meta = LABELS[tid] || { lang: "?", short: tid.toUpperCase() };
+            const lang = langMap[tid] ? getLanguageName(langMap[tid]) : "?";
+            const meta = { lang, short: tid.toUpperCase() };
             return (
               <div
                 key={tid}

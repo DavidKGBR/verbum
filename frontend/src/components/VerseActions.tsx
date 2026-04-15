@@ -11,6 +11,7 @@ import AIExplanationPanel from "./AIExplanationPanel";
 import NoteEditor from "./notes/NoteEditor";
 import CommentaryPanel from "./reader/CommentaryPanel";
 import ShareModal from "./sharing/ShareModal";
+import { useTranslationIdsCsv } from "../hooks/useTranslations";
 
 interface Props {
   verseId: string;
@@ -40,6 +41,7 @@ export default function VerseActions({
   const navigate = useNavigate();
   const { isBookmarked, toggle } = useBookmarks();
   const { get: getNote } = useVerseNotes();
+  const allTranslationsCsv = useTranslationIdsCsv();
   const [tab, setTab] = useState<Tab>(initialTab);
   const existingNote = getNote(verseId);
   const hasNote =
@@ -86,7 +88,7 @@ export default function VerseActions({
     if (Object.keys(translations).length > 0) return;
     setLoading(true);
     try {
-      const data = await fetchVerseTranslations(verseId, "kjv,nvi,rvr,bbe,ra,acf");
+      const data = await fetchVerseTranslations(verseId, allTranslationsCsv);
       setTranslations(data.translations);
     } catch {
       setTranslations({});

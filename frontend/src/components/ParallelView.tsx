@@ -6,12 +6,12 @@ import {
 import LoadingSpinner from "./common/LoadingSpinner";
 import { useI18n } from "../i18n/i18nContext";
 import { useBooks, localizeBookName } from "../i18n/bookNames";
-
-const TRANSLATIONS = ["kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee", "asv", "web", "darby", "neue"];
+import { useTranslationIds } from "../hooks/useTranslations";
 
 export default function ParallelView() {
   const { t, locale } = useI18n();
   const books = useBooks("kjv");
+  const translationIds = useTranslationIds();
   const [page, setPage] = useState<ParallelPage | null>(null);
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState("GEN");
@@ -59,7 +59,7 @@ export default function ParallelView() {
             onChange={(e) => setLeft(e.target.value)}
             className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
           >
-            {TRANSLATIONS.map((t) => (
+            {translationIds.map((t) => (
               <option key={t} value={t}>{t.toUpperCase()}</option>
             ))}
           </select>
@@ -69,7 +69,7 @@ export default function ParallelView() {
             onChange={(e) => setRight(e.target.value)}
             className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
           >
-            {TRANSLATIONS.map((t) => (
+            {translationIds.map((t) => (
               <option key={t} value={t}>{t.toUpperCase()}</option>
             ))}
           </select>

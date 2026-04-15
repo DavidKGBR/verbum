@@ -15,8 +15,7 @@ import { useReadingPlans, recordPlanAutoMark } from "../hooks/useReadingPlans";
 import { getPlanById } from "./plans/plansData";
 import { parseKjvAnnotations } from "./reader/kjvAnnotations";
 import { useI18n } from "../i18n/i18nContext";
-
-const TRANSLATIONS = ["kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee", "asv", "web", "darby", "neue"];
+import { useTranslationIds } from "../hooks/useTranslations";
 
 type InitialTab = "none" | "crossrefs" | "notes";
 
@@ -24,6 +23,7 @@ export default function BibleReader() {
   const { t, locale } = useI18n();
   const [searchParams] = useSearchParams();
   const { record } = useReadingHistory();
+  const translationIds = useTranslationIds();
   const [page, setPage] = useState<ReaderPage | null>(null);
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState(searchParams.get("book") || "GEN");
@@ -202,7 +202,7 @@ export default function BibleReader() {
           onChange={(e) => setTranslation(e.target.value)}
           className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
-          {TRANSLATIONS.map((t) => (
+          {translationIds.map((t) => (
             <option key={t} value={t}>{t.toUpperCase()}</option>
           ))}
         </select>

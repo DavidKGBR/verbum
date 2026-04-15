@@ -12,8 +12,7 @@ import { useTranslatorNotes } from "../../hooks/useTranslatorNotes";
 import { useVerseNotes } from "../../hooks/useVerseNotes";
 import { parseKjvAnnotations } from "../reader/kjvAnnotations";
 import { useI18n } from "../../i18n/i18nContext";
-
-const TRANSLATIONS = ["kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee", "asv", "web", "darby", "neue"];
+import { useTranslationIds } from "../../hooks/useTranslations";
 
 /** Approximate max chars per page — keeps pages balanced. */
 const CHARS_PER_PAGE = 1400;
@@ -202,6 +201,7 @@ const BookPage = forwardRef<HTMLDivElement, BookPageProps>(function BookPage(
 /* ─── Main Immersive Reader ────────────────────────────────────────────── */
 export default function ImmersiveReader() {
   const { t, locale } = useI18n();
+  const translationIds = useTranslationIds();
   const [data, setData] = useState<ReaderPage | null>(null);
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState("GEN");
@@ -369,7 +369,7 @@ export default function ImmersiveReader() {
                      bg-[var(--bg-ambient)] text-[var(--color-parchment)] text-sm
                      focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50"
         >
-          {TRANSLATIONS.map((t) => (
+          {translationIds.map((t) => (
             <option key={t} value={t}>
               {t.toUpperCase()}
             </option>

@@ -5,14 +5,13 @@ import {
   type DivergenceResult,
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+import { useTranslationIds } from "../hooks/useTranslations";
 
 const DEFAULT_TRANSLATIONS = ["kjv", "nvi", "rvr", "bbe", "acf"];
-const ALL_TRANSLATIONS = [
-  "kjv", "bbe", "asv", "web", "darby", "nvi", "ra", "acf", "rvr", "apee", "neue",
-];
 
 export default function TranslationDivergencePage() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const allTranslations = useTranslationIds();
   const [strongsId, setStrongsId] = useState(searchParams.get("word") || "H2617");
   const [selectedTrans, setSelectedTrans] = useState<string[]>(DEFAULT_TRANSLATIONS);
   const [data, setData] = useState<DivergenceResult | null>(null);
@@ -75,7 +74,7 @@ export default function TranslationDivergencePage() {
         </label>
 
         <div className="flex flex-wrap gap-1.5">
-          {ALL_TRANSLATIONS.map((t) => (
+          {allTranslations.map((t) => (
             <button
               key={t}
               onClick={() => toggleTrans(t)}

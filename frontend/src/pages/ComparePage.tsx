@@ -5,6 +5,7 @@ import {
   type ComparePreset,
   type CompareResult,
 } from "../services/api";
+import { useTranslationIds } from "../hooks/useTranslations";
 
 export default function ComparePage() {
   const [presets, setPresets] = useState<ComparePreset[]>([]);
@@ -12,6 +13,7 @@ export default function ComparePage() {
   const [result, setResult] = useState<CompareResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [translation, setTranslation] = useState("kjv");
+  const translationIds = useTranslationIds();
 
   useEffect(() => {
     fetchComparePresets().then(setPresets).catch(() => {});
@@ -68,7 +70,7 @@ export default function ComparePage() {
       {/* Translation selector */}
       <div className="flex items-center gap-3 mb-4">
         <span className="text-xs opacity-50">Translation:</span>
-        {["kjv", "asv", "bbe", "web", "darby", "nvi", "ra", "acf", "rvr", "apee", "neue"].map((t) => (
+        {translationIds.map((t) => (
           <button
             key={t}
             onClick={() => setTranslation(t)}
