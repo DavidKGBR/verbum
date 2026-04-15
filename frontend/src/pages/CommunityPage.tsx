@@ -8,6 +8,7 @@ import {
   type CommunityStats,
 } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
+import { localized } from "../i18n/localized";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 
 export default function CommunityPage() {
@@ -151,6 +152,7 @@ function NoteList({
   expanded: string | null;
   onToggle: (id: string | null) => void;
 }) {
+  const { t, locale } = useI18n();
   const CATEGORY_COLORS: Record<string, string> = {
     theology: "#8B4513",
     language: "#2E8B57",
@@ -175,7 +177,7 @@ function NoteList({
                 {expanded === note.id ? "▾" : "▸"}
               </span>
               <div className="flex-1 min-w-0">
-                <h3 className="font-display font-bold text-sm">{note.title}</h3>
+                <h3 className="font-display font-bold text-sm">{localized(note, locale, "title")}</h3>
                 <div className="flex items-center gap-2 mt-1">
                   <Link
                     to={`/reader?book=${note.verse_id.split(".")[0]}&chapter=${note.verse_id.split(".")[1]}&verse=${note.verse_id.split(".")[2]}&translation=kjv`}
@@ -185,13 +187,13 @@ function NoteList({
                     {note.verse_id}
                   </Link>
                   <span
-                    className="text-[10px] px-2 py-0.5 rounded-full capitalize"
+                    className="text-[10px] px-2 py-0.5 rounded-full"
                     style={{
                       backgroundColor: `${CATEGORY_COLORS[note.category] || "#666"}15`,
                       color: CATEGORY_COLORS[note.category] || "#666",
                     }}
                   >
-                    {note.category}
+                    {t(`community.category.${note.category}`)}
                   </span>
                   <span className="text-[10px] opacity-30">{note.date}</span>
                 </div>
@@ -202,7 +204,7 @@ function NoteList({
           {expanded === note.id && (
             <div className="px-4 pb-4 border-t border-[var(--color-gold)]/10">
               <p className="text-sm leading-relaxed opacity-80 pt-3 whitespace-pre-line">
-                {note.content}
+                {localized(note, locale, "content")}
               </p>
             </div>
           )}

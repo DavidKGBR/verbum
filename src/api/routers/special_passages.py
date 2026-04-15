@@ -333,11 +333,12 @@ def get_special_passage(
 
     db.close()
 
+    # Spread meta so the frontend gets all i18n fields (title_pt/title_es,
+    # description_pt/description_es, reference_pt/reference_es, layer_notes_*).
+    # Keep explicit keys below for anything meta doesn't provide or needs overriding.
     return {
+        **meta,
         "id": passage_id,
-        "title": meta.get("title", passage_id),
-        "title_en": meta.get("title_en", ""),
-        "reference": meta.get("reference", ""),
         "translation": pt_trans,
         "translation_en": en_trans,
         "layers": layers,

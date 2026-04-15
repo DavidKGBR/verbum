@@ -20,6 +20,7 @@ import {
   type PassageWord,
 } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
+import { localized } from "../i18n/localized";
 
 /* ── Catalog page ─────────────────────────────────────────────────────────── */
 
@@ -36,7 +37,7 @@ function layerLabel(key: PassageLayerKey, t: (k: string) => string): string {
 }
 
 function CatalogPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [catalog, setCatalog] = useState<SpecialPassageMeta[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -76,25 +77,28 @@ function CatalogPage() {
               {p.badge && (
                 <span className="self-start text-[11px] px-2 py-0.5 rounded-full font-medium
                                  bg-[var(--color-gold)]/15 text-[var(--color-gold-dark)]">
-                  {p.badge}
+                  {t(`specialPassage.badge.${p.badge}`)}
                 </span>
               )}
 
               {/* Title */}
               <div>
                 <h2 className="font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-gold-dark)] transition-colors">
-                  {p.title}
+                  {localized(p, locale, "title")}
                 </h2>
-                {p.title_en && (
-                  <p className="text-xs text-[var(--color-text-muted)] italic">{p.title_en}</p>
+                {/* Canonical EN title as subtitle when user is in PT/ES */}
+                {locale !== "en" && p.title && (
+                  <p className="text-xs text-[var(--color-text-muted)] italic">{p.title}</p>
                 )}
-                <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">{p.reference}</p>
+                <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
+                  {localized(p, locale, "reference")}
+                </p>
               </div>
 
               {/* Description */}
-              {p.description && (
+              {(p.description || p.description_pt || p.description_es) && (
                 <p className="text-xs text-[var(--color-text-muted)] line-clamp-2">
-                  {p.description}
+                  {localized(p, locale, "description")}
                 </p>
               )}
 
@@ -121,7 +125,7 @@ const PT_TRANSLATIONS = ["nvi", "ra", "acf"] as const;
 const EN_TRANSLATIONS = ["kjv", "bbe", "asv", "web", "darby"] as const;
 
 function PassageDetailPage({ passageId }: { passageId: string }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [passage, setPassage] = useState<SpecialPassageResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -157,7 +161,7 @@ function PassageDetailPage({ passageId }: { passageId: string }) {
           {t("specialPassage.breadcrumb")}
         </Link>
         <span>›</span>
-        <span>{passage?.title ?? passageId}</span>
+        <span>{passage ? localized(passage, locale, "title") : passageId}</span>
       </nav>
 
       {/* Header */}
@@ -165,15 +169,18 @@ function PassageDetailPage({ passageId }: { passageId: string }) {
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-3 flex-wrap">
             <h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
-              {passage.title}
+              {localized(passage, locale, "title")}
             </h1>
-            {passage.title_en && (
+            {/* Canonical EN title as subtitle when user is in PT/ES */}
+            {locale !== "en" && passage.title && (
               <span className="text-sm text-[var(--color-text-muted)] italic">
-                — {passage.title_en}
+                — {passage.title}
               </span>
             )}
           </div>
-          <p className="text-sm text-[var(--color-text-secondary)]">{passage.reference}</p>
+          <p className="text-sm text-[var(--color-text-secondary)]">
+            {localized(passage, locale, "reference")}
+          </p>
         </div>
       )}
 

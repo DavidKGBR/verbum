@@ -70,7 +70,12 @@ export interface CommunityNote {
   id: string;
   verse_id: string;
   title: string;
+  title_pt?: string;
+  title_es?: string;
   content: string;
+  content_pt?: string;
+  content_es?: string;
+  /** Category ID in EN (theology/language/culture/interpretation/prophecy). Translated via i18n key `community.category.{id}`. */
   category: string;
   author: string;
   date: string;
@@ -1341,21 +1346,40 @@ export interface PassageLayer {
 
 export interface SpecialPassageResult {
   id: string;
+  /** Canonical EN title (source of truth). */
   title: string;
-  title_en: string;
+  title_pt?: string;
+  title_es?: string;
   reference: string;
+  reference_pt?: string;
+  reference_es?: string;
+  description?: string;
+  description_pt?: string;
+  description_es?: string;
+  /** Badge ID in EN (feature/foundation/origin/classic/prophecy/...). Translated via i18n key `specialPassage.badge.{id}`. */
+  badge?: string;
   translation: string;
   translation_en: string;
   layers: Partial<Record<PassageLayerKey, PassageLayer>>;
+  layer_notes?: Record<string, string>;
+  layer_notes_pt?: Record<string, string>;
+  layer_notes_es?: Record<string, string>;
 }
 
 export interface SpecialPassageMeta {
   id: string;
+  /** Canonical EN title (source of truth). */
   title: string;
-  title_en?: string;
+  title_pt?: string;
+  title_es?: string;
   reference: string;
+  reference_pt?: string;
+  reference_es?: string;
+  /** Badge ID in EN (feature/foundation/origin/classic/prophecy/...). */
   badge?: string;
   description?: string;
+  description_pt?: string;
+  description_es?: string;
   layers: PassageLayerKey[];
 }
 
