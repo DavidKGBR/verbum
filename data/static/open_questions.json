@@ -2,212 +2,601 @@
   {
     "id": "sons-of-god-genesis-6",
     "title": "Who are the 'Sons of God' in Genesis 6?",
+    "title_pt": "Quem são os 'Filhos de Deus' em Gênesis 6?",
+    "title_es": "¿Quiénes son los 'Hijos de Dios' en Génesis 6?",
     "category": "Identity",
     "difficulty": "advanced",
     "description": "Genesis 6:1-4 mentions 'sons of God' (bene elohim) who took human wives. Three main interpretations exist: (1) fallen angels, (2) descendants of Seth, (3) ancient kings/rulers. The angelic view is oldest (Enoch, LXX, Josephus) but raises theological questions about angel-human procreation.",
+    "description_pt": "Gênesis 6:1-4 menciona 'filhos de Deus' (bene elohim) que tomaram mulheres humanas por esposas. Existem três interpretações principais: (1) anjos caídos, (2) descendentes de Sete, (3) reis/governantes antigos. A visão angélica é a mais antiga (Enoque, LXX, Josefo), mas levanta questões teológicas sobre procriação anjo-humano.",
+    "description_es": "Génesis 6:1-4 menciona 'hijos de Dios' (bene elohim) que tomaron mujeres humanas por esposas. Existen tres interpretaciones principales: (1) ángeles caídos, (2) descendientes de Set, (3) reyes/gobernantes antiguos. La visión angélica es la más antigua (Enoc, LXX, Josefo), pero plantea preguntas teológicas sobre la procreación ángel-humano.",
     "verse_refs": ["GEN.6.1", "GEN.6.2", "GEN.6.4", "JOB.1.6", "JOB.2.1", "JUD.1.6", "2PE.2.4"],
     "perspectives": [
-      {"view": "Angelic", "support": "Job 1:6, 2:1 use same phrase for angels; 1 Enoch; Jude 6-7; 2 Peter 2:4"},
-      {"view": "Sethite", "support": "Augustine, Calvin; 'sons of God' = godly line of Seth marrying ungodly Cainites"},
-      {"view": "Royal/Dynastic", "support": "Ancient Near East parallels; kings called 'sons of god'"}
+      {
+        "view": "Angelic",
+        "view_pt": "Angélica",
+        "view_es": "Angélica",
+        "support": "Job 1:6, 2:1 use same phrase for angels; 1 Enoch; Jude 6-7; 2 Peter 2:4",
+        "support_pt": "Jó 1:6 e 2:1 usam a mesma expressão para anjos; 1 Enoque; Judas 6-7; 2 Pedro 2:4",
+        "support_es": "Job 1:6 y 2:1 usan la misma expresión para ángeles; 1 Enoc; Judas 6-7; 2 Pedro 2:4"
+      },
+      {
+        "view": "Sethite",
+        "view_pt": "Setita",
+        "view_es": "Setita",
+        "support": "Augustine, Calvin; 'sons of God' = godly line of Seth marrying ungodly Cainites",
+        "support_pt": "Agostinho, Calvino; 'filhos de Deus' = linhagem piedosa de Sete casando-se com cainitas ímpios",
+        "support_es": "Agustín, Calvino; 'hijos de Dios' = linaje piadoso de Set casándose con cainitas impíos"
+      },
+      {
+        "view": "Royal/Dynastic",
+        "view_pt": "Real/Dinástica",
+        "view_es": "Real/Dinástica",
+        "support": "Ancient Near East parallels; kings called 'sons of god'",
+        "support_pt": "Paralelos no Antigo Oriente Próximo; reis eram chamados de 'filhos de deus'",
+        "support_es": "Paralelos en el Antiguo Oriente Próximo; los reyes eran llamados 'hijos de dios'"
+      }
     ],
     "related_strongs": ["H1121", "H430"]
   },
   {
     "id": "authorship-hebrews",
     "title": "Who wrote the Epistle to the Hebrews?",
+    "title_pt": "Quem escreveu a Epístola aos Hebreus?",
+    "title_es": "¿Quién escribió la Epístola a los Hebreos?",
     "category": "Authorship",
     "difficulty": "intermediate",
     "description": "Hebrews is the only NT epistle without a named author. Candidates include Paul, Barnabas, Apollos, Priscilla, Luke, and Clement of Rome. Origen famously said 'who wrote it, God alone knows.' The Greek style differs markedly from Paul's acknowledged letters.",
+    "description_pt": "Hebreus é a única epístola do NT sem autor identificado. Entre os candidatos estão Paulo, Barnabé, Apolo, Priscila, Lucas e Clemente de Roma. Orígenes afirmou a célebre frase: 'quem a escreveu, só Deus sabe'. O estilo grego difere marcadamente das cartas reconhecidamente paulinas.",
+    "description_es": "Hebreos es la única epístola del NT sin autor identificado. Entre los candidatos están Pablo, Bernabé, Apolos, Priscila, Lucas y Clemente de Roma. Orígenes pronunció la célebre frase: 'quién la escribió, solo Dios lo sabe'. El estilo griego difiere marcadamente de las cartas reconocidamente paulinas.",
     "verse_refs": ["HEB.1.1", "HEB.13.23", "HEB.13.24"],
     "perspectives": [
-      {"view": "Pauline", "support": "Eastern church tradition; 2 Peter 3:15; Timothy connection (Heb 13:23)"},
-      {"view": "Apollos", "support": "Luther's suggestion; Acts 18:24 describes Apollos as eloquent, learned in Scripture"},
-      {"view": "Barnabas", "support": "Tertullian; Levite background fits Hebrews' priestly focus"},
-      {"view": "Priscilla", "support": "Harnack (1900); explains anonymous authorship (female writer in patriarchal culture)"}
+      {
+        "view": "Pauline",
+        "view_pt": "Paulina",
+        "view_es": "Paulina",
+        "support": "Eastern church tradition; 2 Peter 3:15; Timothy connection (Heb 13:23)",
+        "support_pt": "Tradição da igreja oriental; 2 Pedro 3:15; conexão com Timóteo (Hb 13:23)",
+        "support_es": "Tradición de la iglesia oriental; 2 Pedro 3:15; conexión con Timoteo (Heb 13:23)"
+      },
+      {
+        "view": "Apollos",
+        "view_pt": "Apolo",
+        "view_es": "Apolos",
+        "support": "Luther's suggestion; Acts 18:24 describes Apollos as eloquent, learned in Scripture",
+        "support_pt": "Sugestão de Lutero; Atos 18:24 descreve Apolo como eloquente e erudito nas Escrituras",
+        "support_es": "Sugerencia de Lutero; Hechos 18:24 describe a Apolos como elocuente y erudito en las Escrituras"
+      },
+      {
+        "view": "Barnabas",
+        "view_pt": "Barnabé",
+        "view_es": "Bernabé",
+        "support": "Tertullian; Levite background fits Hebrews' priestly focus",
+        "support_pt": "Tertuliano; sua origem levítica combina com o foco sacerdotal de Hebreus",
+        "support_es": "Tertuliano; su origen levítico combina con el enfoque sacerdotal de Hebreos"
+      },
+      {
+        "view": "Priscilla",
+        "view_pt": "Priscila",
+        "view_es": "Priscila",
+        "support": "Harnack (1900); explains anonymous authorship (female writer in patriarchal culture)",
+        "support_pt": "Harnack (1900); explica a autoria anônima (autora mulher numa cultura patriarcal)",
+        "support_es": "Harnack (1900); explica la autoría anónima (autora mujer en una cultura patriarcal)"
+      }
     ],
     "related_strongs": []
   },
   {
     "id": "mark-ending",
     "title": "Is Mark 16:9-20 original?",
+    "title_pt": "Marcos 16:9-20 é original?",
+    "title_es": "¿Marcos 16:9-20 es original?",
     "category": "Textual Criticism",
     "difficulty": "advanced",
     "description": "The earliest manuscripts of Mark (Sinaiticus, Vaticanus) end at 16:8 with the women fleeing in fear. Verses 9-20 (the 'Longer Ending') appear in later manuscripts and contain snake-handling and poison-drinking references. Did Mark intend to end abruptly, or was the original ending lost?",
+    "description_pt": "Os manuscritos mais antigos de Marcos (Sinaítico, Vaticano) terminam em 16:8, com as mulheres fugindo amedrontadas. Os versículos 9-20 (o 'Final Longo') aparecem em manuscritos posteriores e contêm referências ao manuseio de serpentes e ingestão de veneno. Marcos pretendeu terminar de forma abrupta, ou o final original se perdeu?",
+    "description_es": "Los manuscritos más antiguos de Marcos (Sinaítico, Vaticano) terminan en 16:8, con las mujeres huyendo atemorizadas. Los versículos 9-20 (el 'Final Largo') aparecen en manuscritos posteriores y contienen referencias al manejo de serpientes y beber veneno. ¿Marcos pretendió terminar abruptamente, o el final original se perdió?",
     "verse_refs": ["MRK.16.8", "MRK.16.9", "MRK.16.15", "MRK.16.17", "MRK.16.18", "MRK.16.20"],
     "perspectives": [
-      {"view": "Original ending at 16:8", "support": "Earliest manuscripts; abrupt ending fits Mark's literary style of amazement/fear"},
-      {"view": "Lost ending", "support": "16:8 seems incomplete; ancient scroll damage could explain loss"},
-      {"view": "Later addition", "support": "Vocabulary differs from Mark's style; material borrowed from Luke/John/Acts"}
+      {
+        "view": "Original ending at 16:8",
+        "view_pt": "Final original em 16:8",
+        "view_es": "Final original en 16:8",
+        "support": "Earliest manuscripts; abrupt ending fits Mark's literary style of amazement/fear",
+        "support_pt": "Manuscritos mais antigos; o final abrupto combina com o estilo literário de Marcos de espanto/medo",
+        "support_es": "Manuscritos más antiguos; el final abrupto encaja con el estilo literario de Marcos de asombro/temor"
+      },
+      {
+        "view": "Lost ending",
+        "view_pt": "Final perdido",
+        "view_es": "Final perdido",
+        "support": "16:8 seems incomplete; ancient scroll damage could explain loss",
+        "support_pt": "O 16:8 parece incompleto; danos antigos ao rolo poderiam explicar a perda",
+        "support_es": "El 16:8 parece incompleto; daños antiguos al rollo podrían explicar la pérdida"
+      },
+      {
+        "view": "Later addition",
+        "view_pt": "Acréscimo posterior",
+        "view_es": "Añadido posterior",
+        "support": "Vocabulary differs from Mark's style; material borrowed from Luke/John/Acts",
+        "support_pt": "O vocabulário difere do estilo de Marcos; material tomado de Lucas/João/Atos",
+        "support_es": "El vocabulario difiere del estilo de Marcos; material tomado de Lucas/Juan/Hechos"
+      }
     ],
     "related_strongs": []
   },
   {
     "id": "isaiah-authorship",
     "title": "Did one Isaiah write the entire book?",
+    "title_pt": "Um único Isaías escreveu o livro inteiro?",
+    "title_es": "¿Un único Isaías escribió el libro entero?",
     "category": "Authorship",
     "difficulty": "advanced",
     "description": "Critical scholarship since Duhm (1892) divides Isaiah into Proto-Isaiah (1-39), Deutero-Isaiah (40-55), and Trito-Isaiah (56-66) based on vocabulary, theology, and historical setting. Traditional view maintains single authorship with prophetic foresight.",
+    "description_pt": "A erudição crítica desde Duhm (1892) divide Isaías em Proto-Isaías (1-39), Dêutero-Isaías (40-55) e Trito-Isaías (56-66), com base em vocabulário, teologia e contexto histórico. A visão tradicional sustenta autoria única com presciência profética.",
+    "description_es": "La erudición crítica desde Duhm (1892) divide Isaías en Proto-Isaías (1-39), Deutero-Isaías (40-55) y Trito-Isaías (56-66), basándose en vocabulario, teología y contexto histórico. La visión tradicional mantiene autoría única con presciencia profética.",
     "verse_refs": ["ISA.1.1", "ISA.40.1", "ISA.53.1", "ISA.56.1"],
     "perspectives": [
-      {"view": "Single author", "support": "NT attributes all sections to Isaiah; Dead Sea Scrolls show no division; unified theological themes"},
-      {"view": "Multiple authors", "support": "Vocabulary shift at ch.40; Cyrus named in 44:28 (150 years before his time); different historical contexts"}
+      {
+        "view": "Single author",
+        "view_pt": "Autor único",
+        "view_es": "Autor único",
+        "support": "NT attributes all sections to Isaiah; Dead Sea Scrolls show no division; unified theological themes",
+        "support_pt": "O NT atribui todas as seções a Isaías; os Manuscritos do Mar Morto não mostram divisão; temas teológicos unificados",
+        "support_es": "El NT atribuye todas las secciones a Isaías; los Manuscritos del Mar Muerto no muestran división; temas teológicos unificados"
+      },
+      {
+        "view": "Multiple authors",
+        "view_pt": "Múltiplos autores",
+        "view_es": "Múltiples autores",
+        "support": "Vocabulary shift at ch.40; Cyrus named in 44:28 (150 years before his time); different historical contexts",
+        "support_pt": "Mudança de vocabulário a partir do cap. 40; Ciro é nomeado em 44:28 (150 anos antes de seu tempo); contextos históricos distintos",
+        "support_es": "Cambio de vocabulario a partir del cap. 40; Ciro es nombrado en 44:28 (150 años antes de su tiempo); contextos históricos distintos"
+      }
     ],
     "related_strongs": []
   },
   {
     "id": "exodus-route",
     "title": "What was the route of the Exodus?",
+    "title_pt": "Qual foi a rota do Êxodo?",
+    "title_es": "¿Cuál fue la ruta del Éxodo?",
     "category": "Geography",
     "difficulty": "intermediate",
     "description": "The identification of the Red Sea crossing location, Mount Sinai, and the wilderness route remain debated. 'Yam Suph' may mean 'Sea of Reeds' (a marsh lake) rather than the Red Sea. Traditional Sinai (Jebel Musa) competes with sites in Saudi Arabia (Jebel al-Lawz) and the Negev.",
+    "description_pt": "A identificação do local da travessia do Mar Vermelho, do Monte Sinai e da rota pelo deserto continua sendo debatida. 'Yam Suph' pode significar 'Mar dos Juncos' (um lago pantanoso), e não o Mar Vermelho. O Sinai tradicional (Jebel Musa) compete com locais na Arábia Saudita (Jebel al-Lawz) e no Neguev.",
+    "description_es": "La identificación del lugar del cruce del Mar Rojo, del Monte Sinaí y de la ruta por el desierto sigue en debate. 'Yam Suph' puede significar 'Mar de Juncos' (un lago pantanoso), y no el Mar Rojo. El Sinaí tradicional (Jebel Musa) compite con lugares en Arabia Saudita (Jebel al-Lawz) y en el Néguev.",
     "verse_refs": ["EXO.13.17", "EXO.13.18", "EXO.14.2", "EXO.19.1", "EXO.19.2"],
     "perspectives": [
-      {"view": "Traditional (Southern Sinai)", "support": "4th-century Christian tradition; St. Catherine's monastery; desert geography matches"},
-      {"view": "Saudi Arabia (Midian)", "support": "Galatians 4:25 places Sinai in Arabia; Jebel al-Lawz; Moses' Midian connection"},
-      {"view": "Northern route", "support": "Yam Suph = Lake Timsah or Bitter Lakes; faster route to Canaan"}
+      {
+        "view": "Traditional (Southern Sinai)",
+        "view_pt": "Tradicional (Sinai Meridional)",
+        "view_es": "Tradicional (Sinaí Meridional)",
+        "support": "4th-century Christian tradition; St. Catherine's monastery; desert geography matches",
+        "support_pt": "Tradição cristã do séc. IV; Mosteiro de Santa Catarina; geografia do deserto combina",
+        "support_es": "Tradición cristiana del siglo IV; Monasterio de Santa Catalina; la geografía del desierto coincide"
+      },
+      {
+        "view": "Saudi Arabia (Midian)",
+        "view_pt": "Arábia Saudita (Midiã)",
+        "view_es": "Arabia Saudita (Madián)",
+        "support": "Galatians 4:25 places Sinai in Arabia; Jebel al-Lawz; Moses' Midian connection",
+        "support_pt": "Gálatas 4:25 localiza o Sinai na Arábia; Jebel al-Lawz; conexão de Moisés com Midiã",
+        "support_es": "Gálatas 4:25 ubica el Sinaí en Arabia; Jebel al-Lawz; la conexión de Moisés con Madián"
+      },
+      {
+        "view": "Northern route",
+        "view_pt": "Rota Setentrional",
+        "view_es": "Ruta Septentrional",
+        "support": "Yam Suph = Lake Timsah or Bitter Lakes; faster route to Canaan",
+        "support_pt": "Yam Suph = Lago Timsa ou Lagos Amargos; rota mais rápida até Canaã",
+        "support_es": "Yam Suph = Lago Timsah o Lagos Amargos; ruta más rápida hacia Canaán"
+      }
     ],
     "related_strongs": ["H3220", "H5488"]
   },
   {
     "id": "nephilim-identity",
     "title": "Who were the Nephilim?",
+    "title_pt": "Quem eram os Nefilim?",
+    "title_es": "¿Quiénes eran los Nefilim?",
     "category": "Identity",
     "difficulty": "intermediate",
     "description": "Genesis 6:4 mentions Nephilim as 'mighty men of old.' Numbers 13:33 says the Israelite spies saw Nephilim descendants in Canaan. The word may derive from 'naphal' (to fall) or be related to 'nephilim' (giants). Their nature and survival past the Flood are debated.",
+    "description_pt": "Gênesis 6:4 menciona os Nefilim como 'os valentes que houve na antiguidade'. Números 13:33 diz que os espias israelitas viram descendentes dos Nefilim em Canaã. A palavra pode derivar de 'naphal' (cair) ou estar relacionada a 'nephilim' (gigantes). Sua natureza e sobrevivência após o Dilúvio são debatidas.",
+    "description_es": "Génesis 6:4 menciona a los Nefilim como 'los valientes que hubo en la antigüedad'. Números 13:33 dice que los espías israelitas vieron descendientes de Nefilim en Canaán. La palabra puede derivar de 'naphal' (caer) o estar relacionada con 'nephilim' (gigantes). Su naturaleza y supervivencia tras el Diluvio son debatidas.",
     "verse_refs": ["GEN.6.4", "NUM.13.33"],
     "perspectives": [
-      {"view": "Giant offspring of angels", "support": "1 Enoch; connection to 'sons of God' in Gen 6:2; LXX translates as 'giants'"},
-      {"view": "Warrior chieftains", "support": "Hebrew root 'naphal' = to fall; fallen/violent men; no supernatural element needed"},
-      {"view": "Pre-flood civilization", "support": "Canaanite mythology parallels; exaggerated report in Numbers 13:33"}
+      {
+        "view": "Giant offspring of angels",
+        "view_pt": "Descendência gigante de anjos",
+        "view_es": "Descendencia gigante de ángeles",
+        "support": "1 Enoch; connection to 'sons of God' in Gen 6:2; LXX translates as 'giants'",
+        "support_pt": "1 Enoque; ligação com os 'filhos de Deus' em Gn 6:2; a LXX traduz como 'gigantes'",
+        "support_es": "1 Enoc; conexión con los 'hijos de Dios' en Gn 6:2; la LXX traduce como 'gigantes'"
+      },
+      {
+        "view": "Warrior chieftains",
+        "view_pt": "Chefes guerreiros",
+        "view_es": "Caudillos guerreros",
+        "support": "Hebrew root 'naphal' = to fall; fallen/violent men; no supernatural element needed",
+        "support_pt": "Raiz hebraica 'naphal' = cair; homens caídos/violentos; nenhum elemento sobrenatural necessário",
+        "support_es": "Raíz hebrea 'naphal' = caer; hombres caídos/violentos; ningún elemento sobrenatural necesario"
+      },
+      {
+        "view": "Pre-flood civilization",
+        "view_pt": "Civilização pré-diluviana",
+        "view_es": "Civilización prediluviana",
+        "support": "Canaanite mythology parallels; exaggerated report in Numbers 13:33",
+        "support_pt": "Paralelos na mitologia cananita; relato exagerado em Números 13:33",
+        "support_es": "Paralelos en la mitología cananea; informe exagerado en Números 13:33"
+      }
     ],
     "related_strongs": ["H5303"]
   },
   {
     "id": "johannine-comma",
     "title": "Is the Johannine Comma (1 John 5:7-8) original?",
+    "title_pt": "A Vírgula Joanina (1 João 5:7-8) é original?",
+    "title_es": "¿La Coma Joánica (1 Juan 5:7-8) es original?",
     "category": "Textual Criticism",
     "difficulty": "advanced",
     "description": "The Trinitarian formula 'the Father, the Word, and the Holy Ghost: and these three are one' appears in the KJV but is absent from all Greek manuscripts before the 16th century. Erasmus initially omitted it, then included it under pressure. It's now considered a Latin addition.",
+    "description_pt": "A fórmula trinitária 'o Pai, o Verbo e o Espírito Santo: e estes três são um' aparece na KJV, mas está ausente de todos os manuscritos gregos anteriores ao séc. XVI. Erasmo inicialmente a omitiu e depois a incluiu sob pressão. Hoje é considerada um acréscimo latino.",
+    "description_es": "La fórmula trinitaria 'el Padre, el Verbo y el Espíritu Santo: y estos tres son uno' aparece en la KJV, pero está ausente de todos los manuscritos griegos anteriores al siglo XVI. Erasmo inicialmente la omitió y luego la incluyó bajo presión. Hoy se considera un añadido latino.",
     "verse_refs": ["1JN.5.7", "1JN.5.8"],
     "perspectives": [
-      {"view": "Later addition", "support": "Absent from all Greek MSS before 1500s; absent from all ancient versions except late Latin; no Church Father quotes it before 4th century"},
-      {"view": "Original", "support": "Found in some Old Latin MSS; Cyprian may allude to it (250 AD); Textus Receptus includes it"}
+      {
+        "view": "Later addition",
+        "view_pt": "Acréscimo posterior",
+        "view_es": "Añadido posterior",
+        "support": "Absent from all Greek MSS before 1500s; absent from all ancient versions except late Latin; no Church Father quotes it before 4th century",
+        "support_pt": "Ausente de todos os manuscritos gregos antes de 1500; ausente de todas as versões antigas, exceto o latim tardio; nenhum Pai da Igreja o cita antes do séc. IV",
+        "support_es": "Ausente de todos los manuscritos griegos antes de 1500; ausente de todas las versiones antiguas, excepto el latín tardío; ningún Padre de la Iglesia lo cita antes del siglo IV"
+      },
+      {
+        "view": "Original",
+        "view_pt": "Original",
+        "view_es": "Original",
+        "support": "Found in some Old Latin MSS; Cyprian may allude to it (250 AD); Textus Receptus includes it",
+        "support_pt": "Encontrado em alguns manuscritos da Vetus Latina; Cipriano pode aludir a ela (250 d.C.); o Textus Receptus a inclui",
+        "support_es": "Encontrado en algunos manuscritos de la Vetus Latina; Cipriano puede aludir a ella (250 d.C.); el Textus Receptus la incluye"
+      }
     ],
     "related_strongs": []
   },
   {
     "id": "creation-days",
     "title": "Are the 'days' of Genesis 1 literal 24-hour periods?",
+    "title_pt": "Os 'dias' de Gênesis 1 são períodos literais de 24 horas?",
+    "title_es": "¿Los 'días' de Génesis 1 son períodos literales de 24 horas?",
     "category": "Interpretation",
     "difficulty": "beginner",
     "description": "The Hebrew word 'yom' (day) in Genesis 1 has been interpreted as literal 24-hour days, long ages, literary framework, or analogical days. This question has divided Christians since at least Augustine (354-430), well before modern geology.",
+    "description_pt": "A palavra hebraica 'yom' (dia) em Gênesis 1 tem sido interpretada como dias literais de 24 horas, longas eras, estrutura literária ou dias analógicos. Essa questão divide cristãos ao menos desde Agostinho (354-430), muito antes da geologia moderna.",
+    "description_es": "La palabra hebrea 'yom' (día) en Génesis 1 ha sido interpretada como días literales de 24 horas, eras largas, marco literario o días analógicos. Esta cuestión divide a los cristianos al menos desde Agustín (354-430), mucho antes de la geología moderna.",
     "verse_refs": ["GEN.1.1", "GEN.1.5", "GEN.1.31", "GEN.2.4", "PSA.90.4", "2PE.3.8"],
     "perspectives": [
-      {"view": "Literal 24-hour", "support": "Evening and morning formula; Exodus 20:11 parallel; 'yom' + number = literal day elsewhere"},
-      {"view": "Day-age", "support": "Psalm 90:4; 2 Peter 3:8; 'yom' can mean era (Gen 2:4); progressive creation"},
-      {"view": "Literary framework", "support": "Kline (1958); Days 1-3 parallel Days 4-6 (forming/filling); literary not chronological"},
-      {"view": "Analogical", "support": "God's workweek as analogy for human workweek; not literal but not merely literary"}
+      {
+        "view": "Literal 24-hour",
+        "view_pt": "Literal de 24 horas",
+        "view_es": "Literal de 24 horas",
+        "support": "Evening and morning formula; Exodus 20:11 parallel; 'yom' + number = literal day elsewhere",
+        "support_pt": "Fórmula 'tarde e manhã'; paralelo em Êxodo 20:11; 'yom' + número = dia literal em outros lugares",
+        "support_es": "Fórmula 'tarde y mañana'; paralelo en Éxodo 20:11; 'yom' + número = día literal en otros lugares"
+      },
+      {
+        "view": "Day-age",
+        "view_pt": "Dia-era",
+        "view_es": "Día-era",
+        "support": "Psalm 90:4; 2 Peter 3:8; 'yom' can mean era (Gen 2:4); progressive creation",
+        "support_pt": "Salmo 90:4; 2 Pedro 3:8; 'yom' pode significar era (Gn 2:4); criação progressiva",
+        "support_es": "Salmo 90:4; 2 Pedro 3:8; 'yom' puede significar era (Gn 2:4); creación progresiva"
+      },
+      {
+        "view": "Literary framework",
+        "view_pt": "Estrutura literária",
+        "view_es": "Marco literario",
+        "support": "Kline (1958); Days 1-3 parallel Days 4-6 (forming/filling); literary not chronological",
+        "support_pt": "Kline (1958); os dias 1-3 são paralelos aos dias 4-6 (formando/preenchendo); literário, não cronológico",
+        "support_es": "Kline (1958); los días 1-3 son paralelos a los días 4-6 (formando/llenando); literario, no cronológico"
+      },
+      {
+        "view": "Analogical",
+        "view_pt": "Analógica",
+        "view_es": "Analógica",
+        "support": "God's workweek as analogy for human workweek; not literal but not merely literary",
+        "support_pt": "A semana de trabalho de Deus como analogia da semana humana; não literal, mas também não meramente literário",
+        "support_es": "La semana de trabajo de Dios como analogía de la semana humana; no literal, pero tampoco meramente literario"
+      }
     ],
     "related_strongs": ["H3117"]
   },
   {
     "id": "woman-revelation-12",
     "title": "Who is the woman in Revelation 12?",
+    "title_pt": "Quem é a mulher de Apocalipse 12?",
+    "title_es": "¿Quién es la mujer de Apocalipsis 12?",
     "category": "Identity",
     "difficulty": "intermediate",
     "description": "Revelation 12 describes a woman 'clothed with the sun, with the moon under her feet, and a crown of twelve stars.' She gives birth to a male child who will rule the nations. Catholic tradition identifies her as Mary; Protestants often see Israel or the Church.",
+    "description_pt": "Apocalipse 12 descreve uma mulher 'vestida do sol, com a lua debaixo dos pés e uma coroa de doze estrelas'. Ela dá à luz um filho varão que governará as nações. A tradição católica a identifica como Maria; protestantes frequentemente veem Israel ou a Igreja.",
+    "description_es": "Apocalipsis 12 describe a una mujer 'vestida del sol, con la luna bajo sus pies y una corona de doce estrellas'. Da a luz a un hijo varón que gobernará a las naciones. La tradición católica la identifica como María; los protestantes frecuentemente ven a Israel o a la Iglesia.",
     "verse_refs": ["REV.12.1", "REV.12.2", "REV.12.5", "REV.12.6", "REV.12.17"],
     "perspectives": [
-      {"view": "Israel", "support": "Genesis 37:9 (Joseph's dream: sun, moon, 12 stars = Jacob's family); gives birth to Messiah"},
-      {"view": "Mary", "support": "Catholic tradition; literal mother of Jesus; Queen of Heaven imagery"},
-      {"view": "The Church", "support": "Protestant reading; persecuted people of God; both Israel and Church as unified people"}
+      {
+        "view": "Israel",
+        "view_pt": "Israel",
+        "view_es": "Israel",
+        "support": "Genesis 37:9 (Joseph's dream: sun, moon, 12 stars = Jacob's family); gives birth to Messiah",
+        "support_pt": "Gênesis 37:9 (sonho de José: sol, lua e 12 estrelas = família de Jacó); dá à luz o Messias",
+        "support_es": "Génesis 37:9 (sueño de José: sol, luna y 12 estrellas = familia de Jacob); da a luz al Mesías"
+      },
+      {
+        "view": "Mary",
+        "view_pt": "Maria",
+        "view_es": "María",
+        "support": "Catholic tradition; literal mother of Jesus; Queen of Heaven imagery",
+        "support_pt": "Tradição católica; mãe literal de Jesus; imagem da Rainha do Céu",
+        "support_es": "Tradición católica; madre literal de Jesús; imaginería de la Reina del Cielo"
+      },
+      {
+        "view": "The Church",
+        "view_pt": "A Igreja",
+        "view_es": "La Iglesia",
+        "support": "Protestant reading; persecuted people of God; both Israel and Church as unified people",
+        "support_pt": "Leitura protestante; povo de Deus perseguido; Israel e Igreja como povo unificado",
+        "support_es": "Lectura protestante; pueblo de Dios perseguido; Israel e Iglesia como pueblo unificado"
+      }
     ],
     "related_strongs": ["G1135"]
   },
   {
     "id": "paul-thorn-flesh",
     "title": "What was Paul's 'thorn in the flesh'?",
+    "title_pt": "O que era o 'espinho na carne' de Paulo?",
+    "title_es": "¿Qué era el 'aguijón en la carne' de Pablo?",
     "category": "Identity",
     "difficulty": "beginner",
     "description": "In 2 Corinthians 12:7, Paul mentions a 'thorn in the flesh, a messenger of Satan' that God refused to remove despite three prayers. Proposals include eye disease (Gal 4:13-15), epilepsy, malaria, a speech impediment, opposition from enemies, or spiritual temptation.",
+    "description_pt": "Em 2 Coríntios 12:7, Paulo menciona um 'espinho na carne, um mensageiro de Satanás' que Deus se recusou a remover apesar de três orações. As propostas incluem doença nos olhos (Gl 4:13-15), epilepsia, malária, impedimento na fala, oposição de inimigos ou tentação espiritual.",
+    "description_es": "En 2 Corintios 12:7, Pablo menciona un 'aguijón en la carne, un mensajero de Satanás' que Dios se negó a quitar a pesar de tres oraciones. Las propuestas incluyen enfermedad ocular (Gl 4:13-15), epilepsia, malaria, impedimento del habla, oposición de enemigos o tentación espiritual.",
     "verse_refs": ["2CO.12.7", "2CO.12.8", "2CO.12.9", "GAL.4.13", "GAL.4.14", "GAL.4.15"],
     "perspectives": [
-      {"view": "Eye disease", "support": "Galatians 4:15 (would have plucked out eyes); large handwriting (Gal 6:11); Acts 23:5"},
-      {"view": "Persecutors/opponents", "support": "'Messenger of Satan' = human agent; Numbers 33:55 uses 'thorn' for enemies"},
-      {"view": "Physical illness", "support": "Galatians 4:13-14 mentions illness; recurring nature; malaria common in region"},
-      {"view": "Spiritual temptation", "support": "Church Fathers; 'flesh' = sinful nature; pride after visions (12:7 context)"}
+      {
+        "view": "Eye disease",
+        "view_pt": "Doença nos olhos",
+        "view_es": "Enfermedad ocular",
+        "support": "Galatians 4:15 (would have plucked out eyes); large handwriting (Gal 6:11); Acts 23:5",
+        "support_pt": "Gálatas 4:15 (teriam arrancado os próprios olhos); letra grande (Gl 6:11); Atos 23:5",
+        "support_es": "Gálatas 4:15 (se habrían sacado los propios ojos); letra grande (Gl 6:11); Hechos 23:5"
+      },
+      {
+        "view": "Persecutors/opponents",
+        "view_pt": "Perseguidores/adversários",
+        "view_es": "Perseguidores/adversarios",
+        "support": "'Messenger of Satan' = human agent; Numbers 33:55 uses 'thorn' for enemies",
+        "support_pt": "'Mensageiro de Satanás' = agente humano; Números 33:55 usa 'espinho' para inimigos",
+        "support_es": "'Mensajero de Satanás' = agente humano; Números 33:55 usa 'aguijón' para enemigos"
+      },
+      {
+        "view": "Physical illness",
+        "view_pt": "Enfermidade física",
+        "view_es": "Enfermedad física",
+        "support": "Galatians 4:13-14 mentions illness; recurring nature; malaria common in region",
+        "support_pt": "Gálatas 4:13-14 menciona enfermidade; natureza recorrente; malária era comum na região",
+        "support_es": "Gálatas 4:13-14 menciona enfermedad; naturaleza recurrente; malaria común en la región"
+      },
+      {
+        "view": "Spiritual temptation",
+        "view_pt": "Tentação espiritual",
+        "view_es": "Tentación espiritual",
+        "support": "Church Fathers; 'flesh' = sinful nature; pride after visions (12:7 context)",
+        "support_pt": "Pais da Igreja; 'carne' = natureza pecaminosa; orgulho após as visões (contexto de 12:7)",
+        "support_es": "Padres de la Iglesia; 'carne' = naturaleza pecaminosa; orgullo tras las visiones (contexto de 12:7)"
+      }
     ],
     "related_strongs": ["G4647"]
   },
   {
     "id": "king-of-tyre-ezekiel",
     "title": "Is Ezekiel 28 about Satan or the King of Tyre?",
+    "title_pt": "Ezequiel 28 fala de Satanás ou do Rei de Tiro?",
+    "title_es": "¿Ezequiel 28 habla de Satanás o del Rey de Tiro?",
     "category": "Interpretation",
     "difficulty": "intermediate",
     "description": "Ezekiel 28:12-19 describes one who was 'in Eden, the garden of God,' an 'anointed cherub,' 'perfect from the day you were created until wickedness was found in you.' Is this hyperbolic language about Tyre's king or a glimpse of Satan's fall?",
+    "description_pt": "Ezequiel 28:12-19 descreve alguém que esteve 'no Éden, jardim de Deus', um 'querubim ungido', 'perfeito desde o dia em que foste criado, até que em ti se achou iniquidade'. Seria linguagem hiperbólica sobre o rei de Tiro, ou um vislumbre da queda de Satanás?",
+    "description_es": "Ezequiel 28:12-19 describe a alguien que estuvo 'en el Edén, huerto de Dios', un 'querubín ungido', 'perfecto desde el día en que fuiste creado, hasta que se halló maldad en ti'. ¿Es lenguaje hiperbólico sobre el rey de Tiro, o un atisbo de la caída de Satanás?",
     "verse_refs": ["EZK.28.12", "EZK.28.13", "EZK.28.14", "EZK.28.15", "EZK.28.17"],
     "perspectives": [
-      {"view": "King of Tyre only", "support": "Context addresses historical king; ANE royal ideology; prophetic hyperbole common in oracles"},
-      {"view": "Satan typologically", "support": "Eden reference; 'anointed cherub'; 'created perfect'; parallels Isaiah 14:12-15"},
-      {"view": "Both (dual reference)", "support": "Near-far fulfillment pattern; human king as type of cosmic rebellion"}
+      {
+        "view": "King of Tyre only",
+        "view_pt": "Apenas o Rei de Tiro",
+        "view_es": "Solo el Rey de Tiro",
+        "support": "Context addresses historical king; ANE royal ideology; prophetic hyperbole common in oracles",
+        "support_pt": "O contexto se dirige ao rei histórico; ideologia real do Antigo Oriente Próximo; hipérbole profética comum em oráculos",
+        "support_es": "El contexto se dirige al rey histórico; ideología real del Antiguo Oriente Próximo; hipérbole profética común en oráculos"
+      },
+      {
+        "view": "Satan typologically",
+        "view_pt": "Satanás tipologicamente",
+        "view_es": "Satanás tipológicamente",
+        "support": "Eden reference; 'anointed cherub'; 'created perfect'; parallels Isaiah 14:12-15",
+        "support_pt": "Referência ao Éden; 'querubim ungido'; 'criado perfeito'; paralelos com Isaías 14:12-15",
+        "support_es": "Referencia al Edén; 'querubín ungido'; 'creado perfecto'; paralelos con Isaías 14:12-15"
+      },
+      {
+        "view": "Both (dual reference)",
+        "view_pt": "Ambos (dupla referência)",
+        "view_es": "Ambos (doble referencia)",
+        "support": "Near-far fulfillment pattern; human king as type of cosmic rebellion",
+        "support_pt": "Padrão de cumprimento próximo-distante; rei humano como tipo da rebelião cósmica",
+        "support_es": "Patrón de cumplimiento cercano-lejano; rey humano como tipo de la rebelión cósmica"
+      }
     ],
     "related_strongs": ["H3742"]
   },
   {
     "id": "melchizedek-identity",
     "title": "Who was Melchizedek?",
+    "title_pt": "Quem foi Melquisedeque?",
+    "title_es": "¿Quién fue Melquisedec?",
     "category": "Identity",
     "difficulty": "intermediate",
     "description": "Melchizedek appears briefly in Genesis 14:18-20 as 'king of Salem, priest of God Most High' who blesses Abraham. Hebrews 7 elaborates that he had 'no father, no mother, no genealogy.' Was he a historical figure, a theophany (pre-incarnate Christ), or an angelic being?",
+    "description_pt": "Melquisedeque aparece brevemente em Gênesis 14:18-20 como 'rei de Salém, sacerdote do Deus Altíssimo' que abençoa Abraão. Hebreus 7 elabora que ele era 'sem pai, sem mãe, sem genealogia'. Seria um personagem histórico, uma teofania (Cristo pré-encarnado) ou um ser angélico?",
+    "description_es": "Melquisedec aparece brevemente en Génesis 14:18-20 como 'rey de Salem, sacerdote del Dios Altísimo' que bendice a Abraham. Hebreos 7 elabora que era 'sin padre, sin madre, sin genealogía'. ¿Era un personaje histórico, una teofanía (Cristo preencarnado) o un ser angélico?",
     "verse_refs": ["GEN.14.18", "GEN.14.19", "GEN.14.20", "PSA.110.4", "HEB.5.6", "HEB.7.1", "HEB.7.3"],
     "perspectives": [
-      {"view": "Historical Canaanite king-priest", "support": "Genesis narrative presents him matter-of-factly; Salem = Jerusalem; historical parallel to other priest-kings"},
-      {"view": "Pre-incarnate Christ (theophany)", "support": "Hebrews 7:3 ('without beginning or end'); eternal priesthood; blesses Abraham (greater blesses lesser)"},
-      {"view": "Shem (Noah's son)", "support": "Jewish tradition (Targum); Shem's lifespan overlaps Abraham's; oldest living patriarch"}
+      {
+        "view": "Historical Canaanite king-priest",
+        "view_pt": "Rei-sacerdote cananeu histórico",
+        "view_es": "Rey-sacerdote cananeo histórico",
+        "support": "Genesis narrative presents him matter-of-factly; Salem = Jerusalem; historical parallel to other priest-kings",
+        "support_pt": "A narrativa de Gênesis o apresenta de modo natural; Salém = Jerusalém; paralelo histórico com outros reis-sacerdotes",
+        "support_es": "La narrativa de Génesis lo presenta de modo natural; Salem = Jerusalén; paralelo histórico con otros reyes-sacerdotes"
+      },
+      {
+        "view": "Pre-incarnate Christ (theophany)",
+        "view_pt": "Cristo pré-encarnado (teofania)",
+        "view_es": "Cristo preencarnado (teofanía)",
+        "support": "Hebrews 7:3 ('without beginning or end'); eternal priesthood; blesses Abraham (greater blesses lesser)",
+        "support_pt": "Hebreus 7:3 ('sem princípio nem fim'); sacerdócio eterno; abençoa Abraão (o maior abençoa o menor)",
+        "support_es": "Hebreos 7:3 ('sin principio ni fin'); sacerdocio eterno; bendice a Abraham (el mayor bendice al menor)"
+      },
+      {
+        "view": "Shem (Noah's son)",
+        "view_pt": "Sem (filho de Noé)",
+        "view_es": "Sem (hijo de Noé)",
+        "support": "Jewish tradition (Targum); Shem's lifespan overlaps Abraham's; oldest living patriarch",
+        "support_pt": "Tradição judaica (Targum); o tempo de vida de Sem se sobrepõe ao de Abraão; patriarca vivo mais antigo",
+        "support_es": "Tradición judía (Targum); la vida de Sem se superpone a la de Abraham; patriarca vivo más antiguo"
+      }
     ],
     "related_strongs": ["H4442"]
   },
   {
     "id": "rich-man-lazarus-parable",
     "title": "Is the Rich Man and Lazarus a parable or literal account?",
+    "title_pt": "O Rico e Lázaro é parábola ou relato literal?",
+    "title_es": "¿El Rico y Lázaro es parábola o relato literal?",
     "category": "Interpretation",
     "difficulty": "beginner",
     "description": "Luke 16:19-31 uniquely names a character (Lazarus) in what appears to be a parable. Jesus describes the afterlife with Abraham's bosom, a great chasm, and conscious torment. Does this teach literal afterlife geography or use common Jewish imagery to make a moral point?",
+    "description_pt": "Lucas 16:19-31 nomeia de modo singular um personagem (Lázaro) no que parece ser uma parábola. Jesus descreve a vida após a morte com o seio de Abraão, um grande abismo e tormento consciente. Isso ensina uma geografia literal do além, ou usa imagens judaicas comuns para fazer um ponto moral?",
+    "description_es": "Lucas 16:19-31 nombra de modo singular a un personaje (Lázaro) en lo que parece ser una parábola. Jesús describe la vida después de la muerte con el seno de Abraham, un gran abismo y tormento consciente. ¿Esto enseña una geografía literal del más allá, o utiliza imágenes judías comunes para transmitir una enseñanza moral?",
     "verse_refs": ["LUK.16.19", "LUK.16.22", "LUK.16.23", "LUK.16.26", "LUK.16.31"],
     "perspectives": [
-      {"view": "Parable", "support": "Part of a parable series in Luke 15-16; uses stock characters; point is about heeding Moses and Prophets"},
-      {"view": "Literal account", "support": "Named character (Lazarus) unique among parables; Jesus presents as real event; teaches intermediate state"},
-      {"view": "Using common imagery", "support": "Parallels Egyptian and Jewish afterlife stories; Jesus repurposes familiar imagery for new teaching"}
+      {
+        "view": "Parable",
+        "view_pt": "Parábola",
+        "view_es": "Parábola",
+        "support": "Part of a parable series in Luke 15-16; uses stock characters; point is about heeding Moses and Prophets",
+        "support_pt": "Parte de uma série de parábolas em Lucas 15-16; usa personagens-tipo; o ponto é dar ouvidos a Moisés e aos Profetas",
+        "support_es": "Parte de una serie de parábolas en Lucas 15-16; usa personajes-tipo; el punto es escuchar a Moisés y a los Profetas"
+      },
+      {
+        "view": "Literal account",
+        "view_pt": "Relato literal",
+        "view_es": "Relato literal",
+        "support": "Named character (Lazarus) unique among parables; Jesus presents as real event; teaches intermediate state",
+        "support_pt": "Personagem nomeado (Lázaro) único entre as parábolas; Jesus apresenta como evento real; ensina o estado intermediário",
+        "support_es": "Personaje nombrado (Lázaro) único entre las parábolas; Jesús lo presenta como hecho real; enseña el estado intermedio"
+      },
+      {
+        "view": "Using common imagery",
+        "view_pt": "Uso de imagens comuns",
+        "view_es": "Uso de imágenes comunes",
+        "support": "Parallels Egyptian and Jewish afterlife stories; Jesus repurposes familiar imagery for new teaching",
+        "support_pt": "Paralelos com relatos egípcios e judaicos sobre o além; Jesus reutiliza imagens familiares para um novo ensino",
+        "support_es": "Paralelos con relatos egipcios y judíos sobre el más allá; Jesús reutiliza imágenes familiares para una nueva enseñanza"
+      }
     ],
     "related_strongs": ["G2976"]
   },
   {
     "id": "predestination-free-will",
     "title": "How do predestination and free will coexist?",
+    "title_pt": "Como predestinação e livre-arbítrio coexistem?",
+    "title_es": "¿Cómo coexisten la predestinación y el libre albedrío?",
     "category": "Theology",
     "difficulty": "advanced",
     "description": "Romans 8:29-30 and Ephesians 1:4-5 speak of God choosing/predestining believers 'before the foundation of the world.' Yet passages like Joshua 24:15 and John 3:16 emphasize human choice. This tension has produced Calvinism, Arminianism, Molinism, and other frameworks.",
+    "description_pt": "Romanos 8:29-30 e Efésios 1:4-5 falam de Deus escolhendo/predestinando os crentes 'antes da fundação do mundo'. No entanto, passagens como Josué 24:15 e João 3:16 enfatizam a escolha humana. Essa tensão originou o calvinismo, o arminianismo, o molinismo e outros arcabouços.",
+    "description_es": "Romanos 8:29-30 y Efesios 1:4-5 hablan de Dios eligiendo/predestinando a los creyentes 'antes de la fundación del mundo'. Sin embargo, pasajes como Josué 24:15 y Juan 3:16 enfatizan la elección humana. Esta tensión ha producido el calvinismo, el arminianismo, el molinismo y otros marcos.",
     "verse_refs": ["ROM.8.29", "ROM.8.30", "ROM.9.11", "ROM.9.16", "EPH.1.4", "EPH.1.5", "JHN.3.16", "2PE.3.9"],
     "perspectives": [
-      {"view": "Calvinism (unconditional election)", "support": "Romans 9:11-16; Ephesians 1:4-5; God's sovereign choice not based on foreseen faith"},
-      {"view": "Arminianism (conditional election)", "support": "Romans 8:29 'foreknew' = foreseen faith; 2 Peter 3:9; John 3:16 'whoever believes'"},
-      {"view": "Molinism (middle knowledge)", "support": "God knows all possible choices; arranges circumstances; preserves both sovereignty and freedom"},
-      {"view": "Open Theism", "support": "God limits foreknowledge of free choices; genuine relationship requires real freedom"}
+      {
+        "view": "Calvinism (unconditional election)",
+        "view_pt": "Calvinismo (eleição incondicional)",
+        "view_es": "Calvinismo (elección incondicional)",
+        "support": "Romans 9:11-16; Ephesians 1:4-5; God's sovereign choice not based on foreseen faith",
+        "support_pt": "Romanos 9:11-16; Efésios 1:4-5; a escolha soberana de Deus não se baseia em fé prevista",
+        "support_es": "Romanos 9:11-16; Efesios 1:4-5; la elección soberana de Dios no se basa en fe prevista"
+      },
+      {
+        "view": "Arminianism (conditional election)",
+        "view_pt": "Arminianismo (eleição condicional)",
+        "view_es": "Arminianismo (elección condicional)",
+        "support": "Romans 8:29 'foreknew' = foreseen faith; 2 Peter 3:9; John 3:16 'whoever believes'",
+        "support_pt": "Romanos 8:29 'conheceu antes' = fé prevista; 2 Pedro 3:9; João 3:16 'todo aquele que crê'",
+        "support_es": "Romanos 8:29 'conoció de antemano' = fe prevista; 2 Pedro 3:9; Juan 3:16 'todo aquel que cree'"
+      },
+      {
+        "view": "Molinism (middle knowledge)",
+        "view_pt": "Molinismo (conhecimento médio)",
+        "view_es": "Molinismo (conocimiento medio)",
+        "support": "God knows all possible choices; arranges circumstances; preserves both sovereignty and freedom",
+        "support_pt": "Deus conhece todas as escolhas possíveis; ordena circunstâncias; preserva tanto a soberania quanto a liberdade",
+        "support_es": "Dios conoce todas las elecciones posibles; dispone las circunstancias; preserva tanto la soberanía como la libertad"
+      },
+      {
+        "view": "Open Theism",
+        "view_pt": "Teísmo Aberto",
+        "view_es": "Teísmo Abierto",
+        "support": "God limits foreknowledge of free choices; genuine relationship requires real freedom",
+        "support_pt": "Deus limita a presciência sobre escolhas livres; relacionamento genuíno exige liberdade real",
+        "support_es": "Dios limita la presciencia sobre las elecciones libres; la relación genuina requiere libertad real"
+      }
     ],
     "related_strongs": ["G4309"]
   },
   {
     "id": "suffering-servant-isaiah-53",
     "title": "Is the Suffering Servant in Isaiah 53 an individual or Israel?",
+    "title_pt": "O Servo Sofredor de Isaías 53 é um indivíduo ou Israel?",
+    "title_es": "¿El Siervo Sufriente de Isaías 53 es un individuo o Israel?",
     "category": "Interpretation",
     "difficulty": "intermediate",
     "description": "Isaiah 52:13-53:12 describes one who 'was pierced for our transgressions' and 'by his wounds we are healed.' Christians see Jesus; Jewish interpretation traditionally identifies the servant as the nation of Israel suffering on behalf of the nations.",
+    "description_pt": "Isaías 52:13-53:12 descreve alguém que 'foi traspassado pelas nossas transgressões' e 'pelas suas pisaduras fomos sarados'. Os cristãos veem Jesus; a interpretação judaica tradicionalmente identifica o servo como a nação de Israel sofrendo em favor das nações.",
+    "description_es": "Isaías 52:13-53:12 describe a alguien que 'fue traspasado por nuestras transgresiones' y 'por sus llagas fuimos sanados'. Los cristianos ven a Jesús; la interpretación judía tradicionalmente identifica al siervo como la nación de Israel sufriendo en favor de las naciones.",
     "verse_refs": ["ISA.52.13", "ISA.53.3", "ISA.53.5", "ISA.53.7", "ISA.53.12"],
     "perspectives": [
-      {"view": "Jesus/Messiah", "support": "NT applies directly (Acts 8:32-35); detailed match to crucifixion; 'cut off from the land of the living'"},
-      {"view": "Israel collectively", "support": "Isaiah 49:3 'Israel, my servant'; context of exile; Israel suffers for the nations' sins"},
-      {"view": "Faithful remnant", "support": "Not all Israel but the righteous within Israel; a subset that bears suffering for the whole"}
+      {
+        "view": "Jesus/Messiah",
+        "view_pt": "Jesus/Messias",
+        "view_es": "Jesús/Mesías",
+        "support": "NT applies directly (Acts 8:32-35); detailed match to crucifixion; 'cut off from the land of the living'",
+        "support_pt": "O NT aplica diretamente (Atos 8:32-35); correspondência detalhada com a crucificação; 'cortado da terra dos viventes'",
+        "support_es": "El NT lo aplica directamente (Hechos 8:32-35); correspondencia detallada con la crucifixión; 'cortado de la tierra de los vivientes'"
+      },
+      {
+        "view": "Israel collectively",
+        "view_pt": "Israel coletivamente",
+        "view_es": "Israel colectivamente",
+        "support": "Isaiah 49:3 'Israel, my servant'; context of exile; Israel suffers for the nations' sins",
+        "support_pt": "Isaías 49:3 'Israel, meu servo'; contexto do exílio; Israel sofre pelos pecados das nações",
+        "support_es": "Isaías 49:3 'Israel, mi siervo'; contexto del exilio; Israel sufre por los pecados de las naciones"
+      },
+      {
+        "view": "Faithful remnant",
+        "view_pt": "Remanescente fiel",
+        "view_es": "Remanente fiel",
+        "support": "Not all Israel but the righteous within Israel; a subset that bears suffering for the whole",
+        "support_pt": "Não todo Israel, mas os justos dentro de Israel; um subconjunto que carrega o sofrimento pelo todo",
+        "support_es": "No todo Israel, sino los justos dentro de Israel; un subconjunto que carga el sufrimiento por el todo"
+      }
     ],
     "related_strongs": ["H5650"]
   }

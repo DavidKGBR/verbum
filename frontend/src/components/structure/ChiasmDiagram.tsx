@@ -8,6 +8,8 @@
  */
 
 import type { LiteraryStructure, StructureElement } from "../../services/api";
+import { useI18n } from "../../i18n/i18nContext";
+import { localized } from "../../i18n/localized";
 
 interface Props {
   structure: LiteraryStructure;
@@ -49,12 +51,7 @@ function getDepthColors(depthIdx: number) {
   return DEPTH_COLORS[Math.min(depthIdx, DEPTH_COLORS.length - 1)];
 }
 
-// ── Type label helpers ─────────────────────────────────────────────────────
-const TYPE_LABEL: Record<LiteraryStructure["type"], string> = {
-  chiasm:      "Quiasmo",
-  parallelism: "Paralelismo",
-  inclusio:    "Inclusão",
-};
+// ── Type visual mapping (label is i18n-driven via structure.type.*) ───────
 
 const TYPE_COLORS: Record<LiteraryStructure["type"], string> = {
   chiasm:      "bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30",
@@ -77,6 +74,7 @@ function ChiasmRow({
   isCenter: boolean;
   showTextPreview: boolean;
 }) {
+  const { locale } = useI18n();
   const colors = getDepthColors(depth);
 
   return (
@@ -106,7 +104,7 @@ function ChiasmRow({
               isCenter ? "ring-1 ring-[var(--color-gold)]/40" : "",
             ].join(" ")}
           >
-            {isCenter && "★ "}{elem.label}
+            {isCenter && "★ "}{localized(elem, locale, "label")}
           </span>
 
           {/* Verse ref */}
@@ -118,7 +116,7 @@ function ChiasmRow({
 
         {/* Summary */}
         <p className="text-xs text-[var(--color-text-secondary)] leading-snug">
-          {elem.summary}
+          {localized(elem, locale, "summary")}
         </p>
 
         {/* Text preview */}
@@ -143,6 +141,7 @@ function ParallelRow({
   index: number;
   showTextPreview: boolean;
 }) {
+  const { locale } = useI18n();
   const colors = getDepthColors(index % DEPTH_COLORS.length);
 
   return (
@@ -163,7 +162,7 @@ function ParallelRow({
               colors.badge,
             ].join(" ")}
           >
-            {elem.label}
+            {localized(elem, locale, "label")}
           </span>
           <span className="text-[10px] text-[var(--color-text-muted)] font-mono">
             v.{elem.verse_start}
@@ -171,7 +170,7 @@ function ParallelRow({
           </span>
         </div>
         <p className="text-xs text-[var(--color-text-secondary)] leading-snug">
-          {elem.summary}
+          {localized(elem, locale, "summary")}
         </p>
         {showTextPreview && elem.text_preview && (
           <p className="text-[11px] text-[var(--color-text-muted)] italic leading-snug mt-0.5 line-clamp-2">
@@ -186,6 +185,7 @@ function ParallelRow({
 // ── Main component ─────────────────────────────────────────────────────────
 
 export default function ChiasmDiagram({ structure, showTextPreview = false }: Props) {
+  const { t, locale } = useI18n();
   const elements = structure.elements ?? [];
   const isChiasm = structure.type === "chiasm";
 
@@ -203,24 +203,24 @@ export default function ChiasmDiagram({ structure, showTextPreview = false }: Pr
             TYPE_COLORS[structure.type],
           ].join(" ")}
         >
-          {TYPE_LABEL[structure.type]}
+          {t(`structure.type.${structure.type}`)}
         </span>
         {structure.confidence !== undefined && (
           <span className="text-[10px] text-[var(--color-text-muted)]">
-            {(structure.confidence * 100).toFixed(0)}% confiança
+            {t("structure.confidence").replace("{n}", (structure.confidence * 100).toFixed(0))}
           </span>
         )}
         {isChiasm && (
           <span className="text-[10px] text-[var(--color-text-muted)] italic">
-            — centro destacado em ★
+            {t("structure.centerHighlight")}
           </span>
         )}
       </div>
 
       {/* Description */}
-      {structure.description && (
+      {(structure.description || structure.description_pt || structure.description_es) && (
         <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-          {structure.description}
+          {localized(structure, locale, "description")}
         </p>
       )}
 
@@ -277,13 +277,13 @@ export default function ChiasmDiagram({ structure, showTextPreview = false }: Pr
                       : colors.badge,
                   ].join(" ")}
                 >
-                  {elem.label}
+                  {localized(elem, locale, "label")}
                 </span>
               );
             })}
           </div>
           <span className="text-[9px] text-[var(--color-text-muted)]">
-            estrutura simétrica
+            {t("structure.symmetric")}
           </span>
         </div>
       )}

@@ -15,6 +15,7 @@ import ChiasmDiagram from "../components/structure/ChiasmDiagram";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import { useI18n } from "../i18n/i18nContext";
 import { localizeBookName } from "../i18n/bookNames";
+import { localized } from "../i18n/localized";
 
 // ── Constants ─────────────────────────────────────────────────────────────
 
@@ -191,7 +192,7 @@ export default function StructurePage() {
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex flex-col gap-1.5">
                       <h3 className="font-semibold text-[var(--color-text-primary)] text-sm leading-snug">
-                        {s.title}
+                        {localized(s, locale, "title")}
                       </h3>
                       <div className="flex items-center gap-2 flex-wrap">
                         <span

@@ -185,14 +185,27 @@ export async function fetchCitationHeatmap(): Promise<{
 export interface OpenQuestion {
   id: string;
   title: string;
+  title_pt?: string;
+  title_es?: string;
+  /** Category in EN ("Identity", "Authorship", "Textual Criticism", ...). Translated via i18n key `openQuestions.category.{slug}`. */
   category: string;
+  /** Difficulty in EN ("beginner" | "intermediate" | "advanced"). Translated via `openQuestions.difficulty.{level}`. */
   difficulty: string;
   verse_refs: string[];
 }
 
 export interface OpenQuestionDetail extends OpenQuestion {
   description: string;
-  perspectives: { view: string; support: string }[];
+  description_pt?: string;
+  description_es?: string;
+  perspectives: {
+    view: string;
+    view_pt?: string;
+    view_es?: string;
+    support: string;
+    support_pt?: string;
+    support_es?: string;
+  }[];
   related_strongs: string[];
 }
 
@@ -256,9 +269,13 @@ export async function fetchThread(id: string): Promise<ThreadDetail> {
 
 export interface StructureElement {
   label: string;
+  label_pt?: string;
+  label_es?: string;
   verse_start: number;
   verse_end: number;
   summary: string;
+  summary_pt?: string;
+  summary_es?: string;
   text_preview?: string;
 }
 
@@ -267,10 +284,15 @@ export interface LiteraryStructure {
   book_id: string;
   chapter_start: number;
   chapter_end: number;
+  /** Structure type ID (chiasm/parallelism/inclusio). Translated via i18n `structure.type.{id}`. */
   type: "chiasm" | "parallelism" | "inclusio";
   title: string;
+  title_pt?: string;
+  title_es?: string;
   confidence?: number;
   description?: string;
+  description_pt?: string;
+  description_es?: string;
   elements?: StructureElement[];
 }
 

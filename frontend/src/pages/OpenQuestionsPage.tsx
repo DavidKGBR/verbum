@@ -8,9 +8,13 @@ import {
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import { useI18n } from "../i18n/i18nContext";
+import { localized } from "../i18n/localized";
+
+/** Turn "Textual Criticism" into "textual_criticism" for i18n key lookup. */
+const slug = (s: string) => s.toLowerCase().replace(/\s+/g, "_");
 
 export default function OpenQuestionsPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [questions, setQuestions] = useState<OpenQuestion[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const [catFilter, setCatFilter] = useState("");
@@ -73,7 +77,7 @@ export default function OpenQuestionsPage() {
                 : "bg-black/5 hover:bg-black/10"
             }`}
           >
-            {c}
+            {t(`openQuestions.category.${slug(c)}`)}
           </button>
         ))}
       </div>
@@ -95,13 +99,13 @@ export default function OpenQuestionsPage() {
                   {expanded === q.id ? "▾" : "▸"}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-display font-bold text-sm">{q.title}</h3>
+                  <h3 className="font-display font-bold text-sm">{localized(q, locale, "title")}</h3>
                   <div className="flex items-center gap-2 mt-1">
                     <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)]">
-                      {q.category}
+                      {t(`openQuestions.category.${slug(q.category)}`)}
                     </span>
                     <span className="text-[10px] opacity-40">
-                      {q.difficulty}
+                      {t(`openQuestions.difficulty.${q.difficulty}`)}
                     </span>
                     <span className="text-[10px] opacity-30">
                       {(q.verse_refs.length === 1 ? t("questions.verse") : t("questions.verses"))
@@ -118,7 +122,7 @@ export default function OpenQuestionsPage() {
                   ) : detail ? (
                     <div className="pt-3 space-y-4">
                       <p className="text-sm leading-relaxed opacity-80">
-                        {detail.description}
+                        {localized(detail, locale, "description")}
                       </p>
 
                       {/* Perspectives */}
@@ -132,8 +136,8 @@ export default function OpenQuestionsPage() {
                               key={i}
                               className="p-3 rounded bg-black/[0.02] border border-black/5"
                             >
-                              <div className="font-bold text-sm mb-1">{p.view}</div>
-                              <div className="text-xs opacity-70">{p.support}</div>
+                              <div className="font-bold text-sm mb-1">{localized(p, locale, "view")}</div>
+                              <div className="text-xs opacity-70">{localized(p, locale, "support")}</div>
                             </div>
                           ))}
                         </div>

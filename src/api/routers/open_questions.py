@@ -44,6 +44,9 @@ def list_questions(
 
     categories = sorted({q.get("category", "") for q in _QUESTIONS if q.get("category")})
 
+    # Return the summary shape used by the list UI, but spread the source
+    # object so all i18n fields (title_pt/title_es, description_pt/_es, etc.)
+    # are available when the frontend needs them.
     return {
         "total": total,
         "limit": limit,
@@ -51,6 +54,7 @@ def list_questions(
         "categories": categories,
         "results": [
             {
+                **q,
                 "id": q["id"],
                 "title": q["title"],
                 "category": q.get("category", ""),

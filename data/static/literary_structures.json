@@ -6,14 +6,53 @@
     "chapter_end": 1,
     "type": "chiasm",
     "title": "Psalm 1 — Two Ways Chiasm",
+    "title_pt": "Salmo 1 — Quiasmo dos Dois Caminhos",
+    "title_es": "Salmo 1 — Quiasmo de los Dos Caminos",
     "confidence": 0.85,
     "description": "Psalm 1 exhibits an A-B-C-B'-A' chiastic structure contrasting the righteous and the wicked.",
+    "description_pt": "O Salmo 1 exibe uma estrutura quiástica A-B-C-B'-A' contrastando o justo e o ímpio.",
+    "description_es": "El Salmo 1 exhibe una estructura quiástica A-B-C-B'-A' contrastando al justo y al impío.",
     "elements": [
-      {"label": "A", "verse_start": 1, "verse_end": 1, "summary": "Blessed is the man who does NOT walk/stand/sit with wicked"},
-      {"label": "B", "verse_start": 2, "verse_end": 2, "summary": "Delight in the law of the LORD — meditation"},
-      {"label": "C", "verse_start": 3, "verse_end": 3, "summary": "CENTER: Tree planted by streams — prosperity"},
-      {"label": "B'", "verse_start": 4, "verse_end": 4, "summary": "The wicked are NOT so — chaff"},
-      {"label": "A'", "verse_start": 5, "verse_end": 6, "summary": "Wicked will NOT stand in judgment; LORD knows the way of the righteous"}
+      {
+        "label": "A",
+        "verse_start": 1,
+        "verse_end": 1,
+        "summary": "Blessed is the man who does NOT walk/stand/sit with wicked",
+        "summary_pt": "Bem-aventurado o homem que NÃO anda/está/assenta com os ímpios",
+        "summary_es": "Bienaventurado el hombre que NO anda/está/se sienta con los impíos"
+      },
+      {
+        "label": "B",
+        "verse_start": 2,
+        "verse_end": 2,
+        "summary": "Delight in the law of the LORD — meditation",
+        "summary_pt": "Deleite na lei do SENHOR — meditação",
+        "summary_es": "Deleite en la ley del SEÑOR — meditación"
+      },
+      {
+        "label": "C",
+        "verse_start": 3,
+        "verse_end": 3,
+        "summary": "CENTER: Tree planted by streams — prosperity",
+        "summary_pt": "CENTRO: Árvore plantada junto a ribeiros — prosperidade",
+        "summary_es": "CENTRO: Árbol plantado junto a arroyos — prosperidad"
+      },
+      {
+        "label": "B'",
+        "verse_start": 4,
+        "verse_end": 4,
+        "summary": "The wicked are NOT so — chaff",
+        "summary_pt": "Os ímpios NÃO são assim — palha",
+        "summary_es": "Los impíos NO son así — paja"
+      },
+      {
+        "label": "A'",
+        "verse_start": 5,
+        "verse_end": 6,
+        "summary": "Wicked will NOT stand in judgment; LORD knows the way of the righteous",
+        "summary_pt": "Os ímpios NÃO subsistirão no juízo; o SENHOR conhece o caminho dos justos",
+        "summary_es": "Los impíos NO prevalecerán en el juicio; el SEÑOR conoce el camino de los justos"
+      }
     ]
   },
   {
@@ -23,19 +62,83 @@
     "chapter_end": 9,
     "type": "chiasm",
     "title": "The Flood Narrative — Extended Chiasm",
+    "title_pt": "A Narrativa do Dilúvio — Quiasmo Estendido",
+    "title_es": "La Narrativa del Diluvio — Quiasmo Extendido",
     "confidence": 0.9,
     "description": "The flood narrative in Genesis 6-9 has a well-recognized chiastic structure centering on 'God remembered Noah' (8:1).",
+    "description_pt": "A narrativa do dilúvio em Gênesis 6-9 tem uma estrutura quiástica bem reconhecida centrada em 'Deus lembrou-se de Noé' (8:1).",
+    "description_es": "La narrativa del diluvio en Génesis 6-9 tiene una estructura quiástica bien reconocida centrada en 'Dios se acordó de Noé' (8:1).",
     "elements": [
-      {"label": "A", "verse_start": 1, "verse_end": 10, "summary": "Transitional introduction (6:1-10): Noah found grace"},
-      {"label": "B", "verse_start": 11, "verse_end": 22, "summary": "Violence on earth; God commands ark (6:11-22)"},
-      {"label": "C", "verse_start": 1, "verse_end": 5, "summary": "Enter the ark; 7 days waiting (7:1-5)"},
-      {"label": "D", "verse_start": 6, "verse_end": 16, "summary": "Waters rise 40 days (7:6-16)"},
-      {"label": "E", "verse_start": 17, "verse_end": 24, "summary": "Waters prevail 150 days (7:17-24)"},
-      {"label": "E'", "verse_start": 1, "verse_end": 5, "summary": "CENTER: God remembered Noah; waters recede 150 days (8:1-5)"},
-      {"label": "D'", "verse_start": 6, "verse_end": 14, "summary": "Waters recede 40 days; birds sent (8:6-14)"},
-      {"label": "C'", "verse_start": 15, "verse_end": 19, "summary": "Exit the ark (8:15-19)"},
-      {"label": "B'", "verse_start": 20, "verse_end": 22, "summary": "Noah's altar; God's promise (8:20-22)"},
-      {"label": "A'", "verse_start": 1, "verse_end": 17, "summary": "Transitional conclusion: covenant with Noah (9:1-17)"}
+      {
+        "label": "A",
+        "verse_start": 1, "verse_end": 10,
+        "summary": "Transitional introduction (6:1-10): Noah found grace",
+        "summary_pt": "Introdução de transição (6:1-10): Noé achou graça",
+        "summary_es": "Introducción de transición (6:1-10): Noé halló gracia"
+      },
+      {
+        "label": "B",
+        "verse_start": 11, "verse_end": 22,
+        "summary": "Violence on earth; God commands ark (6:11-22)",
+        "summary_pt": "Violência na terra; Deus ordena a arca (6:11-22)",
+        "summary_es": "Violencia en la tierra; Dios ordena el arca (6:11-22)"
+      },
+      {
+        "label": "C",
+        "verse_start": 1, "verse_end": 5,
+        "summary": "Enter the ark; 7 days waiting (7:1-5)",
+        "summary_pt": "Entrada na arca; 7 dias de espera (7:1-5)",
+        "summary_es": "Entrada en el arca; 7 días de espera (7:1-5)"
+      },
+      {
+        "label": "D",
+        "verse_start": 6, "verse_end": 16,
+        "summary": "Waters rise 40 days (7:6-16)",
+        "summary_pt": "Águas sobem por 40 dias (7:6-16)",
+        "summary_es": "Las aguas suben 40 días (7:6-16)"
+      },
+      {
+        "label": "E",
+        "verse_start": 17, "verse_end": 24,
+        "summary": "Waters prevail 150 days (7:17-24)",
+        "summary_pt": "Águas prevalecem por 150 dias (7:17-24)",
+        "summary_es": "Las aguas prevalecen 150 días (7:17-24)"
+      },
+      {
+        "label": "E'",
+        "verse_start": 1, "verse_end": 5,
+        "summary": "CENTER: God remembered Noah; waters recede 150 days (8:1-5)",
+        "summary_pt": "CENTRO: Deus lembrou-se de Noé; águas recuam por 150 dias (8:1-5)",
+        "summary_es": "CENTRO: Dios se acordó de Noé; las aguas retroceden 150 días (8:1-5)"
+      },
+      {
+        "label": "D'",
+        "verse_start": 6, "verse_end": 14,
+        "summary": "Waters recede 40 days; birds sent (8:6-14)",
+        "summary_pt": "Águas recuam por 40 dias; aves são enviadas (8:6-14)",
+        "summary_es": "Las aguas retroceden 40 días; aves son enviadas (8:6-14)"
+      },
+      {
+        "label": "C'",
+        "verse_start": 15, "verse_end": 19,
+        "summary": "Exit the ark (8:15-19)",
+        "summary_pt": "Saída da arca (8:15-19)",
+        "summary_es": "Salida del arca (8:15-19)"
+      },
+      {
+        "label": "B'",
+        "verse_start": 20, "verse_end": 22,
+        "summary": "Noah's altar; God's promise (8:20-22)",
+        "summary_pt": "Altar de Noé; promessa de Deus (8:20-22)",
+        "summary_es": "Altar de Noé; promesa de Dios (8:20-22)"
+      },
+      {
+        "label": "A'",
+        "verse_start": 1, "verse_end": 17,
+        "summary": "Transitional conclusion: covenant with Noah (9:1-17)",
+        "summary_pt": "Conclusão de transição: aliança com Noé (9:1-17)",
+        "summary_es": "Conclusión de transición: pacto con Noé (9:1-17)"
+      }
     ]
   },
   {
@@ -45,14 +148,48 @@
     "chapter_end": 8,
     "type": "parallelism",
     "title": "Romans 8:28-30 — The Golden Chain of Salvation",
+    "title_pt": "Romanos 8:28-30 — A Cadeia de Ouro da Salvação",
+    "title_es": "Romanos 8:28-30 — La Cadena de Oro de la Salvación",
     "confidence": 0.95,
     "description": "Paul presents a chain of five linked divine acts, each flowing into the next in a sorites (chain argument).",
+    "description_pt": "Paulo apresenta uma cadeia de cinco atos divinos interligados, cada um fluindo para o seguinte num sorites (argumento em cadeia).",
+    "description_es": "Pablo presenta una cadena de cinco actos divinos enlazados, cada uno fluyendo hacia el siguiente en un sorites (argumento encadenado).",
     "elements": [
-      {"label": "Step 1", "verse_start": 29, "verse_end": 29, "summary": "Foreknew → Predestined"},
-      {"label": "Step 2", "verse_start": 29, "verse_end": 29, "summary": "Predestined → Conformed to image of Son"},
-      {"label": "Step 3", "verse_start": 30, "verse_end": 30, "summary": "Predestined → Called"},
-      {"label": "Step 4", "verse_start": 30, "verse_end": 30, "summary": "Called → Justified"},
-      {"label": "Step 5", "verse_start": 30, "verse_end": 30, "summary": "Justified → Glorified"}
+      {
+        "label": "Step 1", "label_pt": "Etapa 1", "label_es": "Etapa 1",
+        "verse_start": 29, "verse_end": 29,
+        "summary": "Foreknew → Predestined",
+        "summary_pt": "Conheceu de antemão → Predestinou",
+        "summary_es": "Conoció de antemano → Predestinó"
+      },
+      {
+        "label": "Step 2", "label_pt": "Etapa 2", "label_es": "Etapa 2",
+        "verse_start": 29, "verse_end": 29,
+        "summary": "Predestined → Conformed to image of Son",
+        "summary_pt": "Predestinou → Conformou à imagem do Filho",
+        "summary_es": "Predestinó → Conformó a la imagen del Hijo"
+      },
+      {
+        "label": "Step 3", "label_pt": "Etapa 3", "label_es": "Etapa 3",
+        "verse_start": 30, "verse_end": 30,
+        "summary": "Predestined → Called",
+        "summary_pt": "Predestinou → Chamou",
+        "summary_es": "Predestinó → Llamó"
+      },
+      {
+        "label": "Step 4", "label_pt": "Etapa 4", "label_es": "Etapa 4",
+        "verse_start": 30, "verse_end": 30,
+        "summary": "Called → Justified",
+        "summary_pt": "Chamou → Justificou",
+        "summary_es": "Llamó → Justificó"
+      },
+      {
+        "label": "Step 5", "label_pt": "Etapa 5", "label_es": "Etapa 5",
+        "verse_start": 30, "verse_end": 30,
+        "summary": "Justified → Glorified",
+        "summary_pt": "Justificou → Glorificou",
+        "summary_es": "Justificó → Glorificó"
+      }
     ]
   },
   {
@@ -62,17 +199,69 @@
     "chapter_end": 2,
     "type": "parallelism",
     "title": "Amos 1-2 — Oracle Pattern (3+1 Formula)",
+    "title_pt": "Amós 1-2 — Padrão de Oráculos (Fórmula 3+1)",
+    "title_es": "Amós 1-2 — Patrón de Oráculos (Fórmula 3+1)",
     "confidence": 0.95,
     "description": "Eight oracles against nations follow the same pattern: 'For three transgressions of X, and for four...' spiraling from distant nations inward to Judah and finally Israel.",
+    "description_pt": "Oito oráculos contra nações seguem o mesmo padrão: 'Por três transgressões de X, e por quatro...' espiralando das nações distantes para dentro, até Judá e finalmente Israel.",
+    "description_es": "Ocho oráculos contra naciones siguen el mismo patrón: 'Por tres transgresiones de X, y por cuatro...' espiralando desde las naciones distantes hacia dentro, hasta Judá y finalmente Israel.",
     "elements": [
-      {"label": "Oracle 1", "verse_start": 3, "verse_end": 5, "summary": "Damascus (Aram) — distant enemy"},
-      {"label": "Oracle 2", "verse_start": 6, "verse_end": 8, "summary": "Gaza (Philistia) — closer neighbor"},
-      {"label": "Oracle 3", "verse_start": 9, "verse_end": 10, "summary": "Tyre (Phoenicia)"},
-      {"label": "Oracle 4", "verse_start": 11, "verse_end": 12, "summary": "Edom — brother nation"},
-      {"label": "Oracle 5", "verse_start": 13, "verse_end": 15, "summary": "Ammon — relative"},
-      {"label": "Oracle 6", "verse_start": 1, "verse_end": 3, "summary": "Moab — relative"},
-      {"label": "Oracle 7", "verse_start": 4, "verse_end": 5, "summary": "Judah — sibling kingdom (surprise!)"},
-      {"label": "Oracle 8", "verse_start": 6, "verse_end": 16, "summary": "ISRAEL — the real target (longest oracle)"}
+      {
+        "label": "Oracle 1", "label_pt": "Oráculo 1", "label_es": "Oráculo 1",
+        "verse_start": 3, "verse_end": 5,
+        "summary": "Damascus (Aram) — distant enemy",
+        "summary_pt": "Damasco (Arã) — inimigo distante",
+        "summary_es": "Damasco (Aram) — enemigo distante"
+      },
+      {
+        "label": "Oracle 2", "label_pt": "Oráculo 2", "label_es": "Oráculo 2",
+        "verse_start": 6, "verse_end": 8,
+        "summary": "Gaza (Philistia) — closer neighbor",
+        "summary_pt": "Gaza (Filístia) — vizinho mais próximo",
+        "summary_es": "Gaza (Filistea) — vecino más cercano"
+      },
+      {
+        "label": "Oracle 3", "label_pt": "Oráculo 3", "label_es": "Oráculo 3",
+        "verse_start": 9, "verse_end": 10,
+        "summary": "Tyre (Phoenicia)",
+        "summary_pt": "Tiro (Fenícia)",
+        "summary_es": "Tiro (Fenicia)"
+      },
+      {
+        "label": "Oracle 4", "label_pt": "Oráculo 4", "label_es": "Oráculo 4",
+        "verse_start": 11, "verse_end": 12,
+        "summary": "Edom — brother nation",
+        "summary_pt": "Edom — nação irmã",
+        "summary_es": "Edom — nación hermana"
+      },
+      {
+        "label": "Oracle 5", "label_pt": "Oráculo 5", "label_es": "Oráculo 5",
+        "verse_start": 13, "verse_end": 15,
+        "summary": "Ammon — relative",
+        "summary_pt": "Amom — parente",
+        "summary_es": "Amón — pariente"
+      },
+      {
+        "label": "Oracle 6", "label_pt": "Oráculo 6", "label_es": "Oráculo 6",
+        "verse_start": 1, "verse_end": 3,
+        "summary": "Moab — relative",
+        "summary_pt": "Moabe — parente",
+        "summary_es": "Moab — pariente"
+      },
+      {
+        "label": "Oracle 7", "label_pt": "Oráculo 7", "label_es": "Oráculo 7",
+        "verse_start": 4, "verse_end": 5,
+        "summary": "Judah — sibling kingdom (surprise!)",
+        "summary_pt": "Judá — reino irmão (surpresa!)",
+        "summary_es": "Judá — reino hermano (¡sorpresa!)"
+      },
+      {
+        "label": "Oracle 8", "label_pt": "Oráculo 8", "label_es": "Oráculo 8",
+        "verse_start": 6, "verse_end": 16,
+        "summary": "ISRAEL — the real target (longest oracle)",
+        "summary_pt": "ISRAEL — o verdadeiro alvo (oráculo mais longo)",
+        "summary_es": "ISRAEL — el verdadero blanco (oráculo más largo)"
+      }
     ]
   },
   {
@@ -82,17 +271,69 @@
     "chapter_end": 7,
     "type": "parallelism",
     "title": "Sermon on the Mount — Three Pillars Structure",
+    "title_pt": "Sermão da Montanha — Estrutura dos Três Pilares",
+    "title_es": "Sermón del Monte — Estructura de Tres Pilares",
     "confidence": 0.8,
     "description": "The Sermon on the Mount follows a teaching structure: Beatitudes (identity), Antitheses (ethics), and Three Practices (piety), bookended by kingdom declarations.",
+    "description_pt": "O Sermão da Montanha segue uma estrutura didática: Bem-aventuranças (identidade), Antíteses (ética) e Três Práticas (piedade), emoldurado por declarações do reino.",
+    "description_es": "El Sermón del Monte sigue una estructura didáctica: Bienaventuranzas (identidad), Antítesis (ética) y Tres Prácticas (piedad), enmarcado por declaraciones del reino.",
     "elements": [
-      {"label": "Opening", "verse_start": 1, "verse_end": 2, "summary": "Setting: mountain, crowds, disciples"},
-      {"label": "Beatitudes", "verse_start": 3, "verse_end": 12, "summary": "8 blessings defining kingdom citizens"},
-      {"label": "Salt & Light", "verse_start": 13, "verse_end": 16, "summary": "Mission identity"},
-      {"label": "Antitheses", "verse_start": 21, "verse_end": 48, "summary": "'You have heard... but I say' (6 contrasts)"},
-      {"label": "Three Practices", "verse_start": 1, "verse_end": 18, "summary": "Giving, prayer, fasting — 'in secret'"},
-      {"label": "Lord's Prayer", "verse_start": 9, "verse_end": 13, "summary": "CENTER: model prayer"},
-      {"label": "Warnings", "verse_start": 1, "verse_end": 23, "summary": "Judging, pearls, narrow gate, false prophets"},
-      {"label": "Two Ways", "verse_start": 24, "verse_end": 27, "summary": "Wise and foolish builders — closing parable"}
+      {
+        "label": "Opening", "label_pt": "Abertura", "label_es": "Apertura",
+        "verse_start": 1, "verse_end": 2,
+        "summary": "Setting: mountain, crowds, disciples",
+        "summary_pt": "Cenário: a montanha, as multidões, os discípulos",
+        "summary_es": "Escenario: la montaña, las multitudes, los discípulos"
+      },
+      {
+        "label": "Beatitudes", "label_pt": "Bem-aventuranças", "label_es": "Bienaventuranzas",
+        "verse_start": 3, "verse_end": 12,
+        "summary": "8 blessings defining kingdom citizens",
+        "summary_pt": "8 bem-aventuranças que definem os cidadãos do reino",
+        "summary_es": "8 bienaventuranzas que definen a los ciudadanos del reino"
+      },
+      {
+        "label": "Salt & Light", "label_pt": "Sal e Luz", "label_es": "Sal y Luz",
+        "verse_start": 13, "verse_end": 16,
+        "summary": "Mission identity",
+        "summary_pt": "Identidade missionária",
+        "summary_es": "Identidad misionera"
+      },
+      {
+        "label": "Antitheses", "label_pt": "Antíteses", "label_es": "Antítesis",
+        "verse_start": 21, "verse_end": 48,
+        "summary": "'You have heard... but I say' (6 contrasts)",
+        "summary_pt": "'Ouvistes... mas eu vos digo' (6 contrastes)",
+        "summary_es": "'Oísteis... pero yo os digo' (6 contrastes)"
+      },
+      {
+        "label": "Three Practices", "label_pt": "Três Práticas", "label_es": "Tres Prácticas",
+        "verse_start": 1, "verse_end": 18,
+        "summary": "Giving, prayer, fasting — 'in secret'",
+        "summary_pt": "Esmola, oração, jejum — 'em secreto'",
+        "summary_es": "Limosna, oración, ayuno — 'en secreto'"
+      },
+      {
+        "label": "Lord's Prayer", "label_pt": "Pai-Nosso", "label_es": "Padrenuestro",
+        "verse_start": 9, "verse_end": 13,
+        "summary": "CENTER: model prayer",
+        "summary_pt": "CENTRO: oração modelo",
+        "summary_es": "CENTRO: oración modelo"
+      },
+      {
+        "label": "Warnings", "label_pt": "Advertências", "label_es": "Advertencias",
+        "verse_start": 1, "verse_end": 23,
+        "summary": "Judging, pearls, narrow gate, false prophets",
+        "summary_pt": "Juízo, pérolas, porta estreita, falsos profetas",
+        "summary_es": "Juicio, perlas, puerta estrecha, falsos profetas"
+      },
+      {
+        "label": "Two Ways", "label_pt": "Dois Caminhos", "label_es": "Dos Caminos",
+        "verse_start": 24, "verse_end": 27,
+        "summary": "Wise and foolish builders — closing parable",
+        "summary_pt": "Construtores sábio e insensato — parábola de encerramento",
+        "summary_es": "Constructores sabio e insensato — parábola de cierre"
+      }
     ]
   },
   {
@@ -102,20 +343,80 @@
     "chapter_end": 1,
     "type": "chiasm",
     "title": "John 1:1-18 — Prologue Chiasm",
+    "title_pt": "João 1:1-18 — Quiasmo do Prólogo",
+    "title_es": "Juan 1:1-18 — Quiasmo del Prólogo",
     "confidence": 0.85,
     "description": "The Johannine Prologue forms a chiasm centering on the incarnation ('the Word became flesh').",
+    "description_pt": "O Prólogo Joanino forma um quiasmo centrado na encarnação ('o Verbo se fez carne').",
+    "description_es": "El Prólogo Joánico forma un quiasmo centrado en la encarnación ('el Verbo se hizo carne').",
     "elements": [
-      {"label": "A", "verse_start": 1, "verse_end": 2, "summary": "The Word was with God and was God"},
-      {"label": "B", "verse_start": 3, "verse_end": 3, "summary": "All things made through him"},
-      {"label": "C", "verse_start": 4, "verse_end": 5, "summary": "Life and light of men"},
-      {"label": "D", "verse_start": 6, "verse_end": 8, "summary": "John the witness (not the light)"},
-      {"label": "E", "verse_start": 9, "verse_end": 11, "summary": "The true light; world did not know him"},
-      {"label": "F", "verse_start": 12, "verse_end": 13, "summary": "Those who received him became children of God"},
-      {"label": "CENTER", "verse_start": 14, "verse_end": 14, "summary": "The Word became flesh — INCARNATION"},
-      {"label": "F'", "verse_start": 15, "verse_end": 15, "summary": "John's witness about him"},
-      {"label": "E'", "verse_start": 16, "verse_end": 16, "summary": "Grace upon grace received"},
-      {"label": "D'", "verse_start": 17, "verse_end": 17, "summary": "Law through Moses; grace through Jesus Christ"},
-      {"label": "A'", "verse_start": 18, "verse_end": 18, "summary": "No one has seen God; the Son has made him known"}
+      {
+        "label": "A", "verse_start": 1, "verse_end": 2,
+        "summary": "The Word was with God and was God",
+        "summary_pt": "O Verbo estava com Deus e era Deus",
+        "summary_es": "El Verbo estaba con Dios y era Dios"
+      },
+      {
+        "label": "B", "verse_start": 3, "verse_end": 3,
+        "summary": "All things made through him",
+        "summary_pt": "Todas as coisas foram feitas por ele",
+        "summary_es": "Todas las cosas fueron hechas por él"
+      },
+      {
+        "label": "C", "verse_start": 4, "verse_end": 5,
+        "summary": "Life and light of men",
+        "summary_pt": "Vida e luz dos homens",
+        "summary_es": "Vida y luz de los hombres"
+      },
+      {
+        "label": "D", "verse_start": 6, "verse_end": 8,
+        "summary": "John the witness (not the light)",
+        "summary_pt": "João, a testemunha (não a luz)",
+        "summary_es": "Juan, el testigo (no la luz)"
+      },
+      {
+        "label": "E", "verse_start": 9, "verse_end": 11,
+        "summary": "The true light; world did not know him",
+        "summary_pt": "A verdadeira luz; o mundo não o conheceu",
+        "summary_es": "La verdadera luz; el mundo no lo conoció"
+      },
+      {
+        "label": "F", "verse_start": 12, "verse_end": 13,
+        "summary": "Those who received him became children of God",
+        "summary_pt": "Os que o receberam se tornaram filhos de Deus",
+        "summary_es": "Los que lo recibieron fueron hechos hijos de Dios"
+      },
+      {
+        "label": "CENTER", "label_pt": "CENTRO", "label_es": "CENTRO",
+        "verse_start": 14, "verse_end": 14,
+        "summary": "The Word became flesh — INCARNATION",
+        "summary_pt": "O Verbo se fez carne — ENCARNAÇÃO",
+        "summary_es": "El Verbo se hizo carne — ENCARNACIÓN"
+      },
+      {
+        "label": "F'", "verse_start": 15, "verse_end": 15,
+        "summary": "John's witness about him",
+        "summary_pt": "Testemunho de João a respeito dele",
+        "summary_es": "Testimonio de Juan acerca de él"
+      },
+      {
+        "label": "E'", "verse_start": 16, "verse_end": 16,
+        "summary": "Grace upon grace received",
+        "summary_pt": "Graça sobre graça recebida",
+        "summary_es": "Gracia sobre gracia recibida"
+      },
+      {
+        "label": "D'", "verse_start": 17, "verse_end": 17,
+        "summary": "Law through Moses; grace through Jesus Christ",
+        "summary_pt": "A lei por Moisés; a graça por Jesus Cristo",
+        "summary_es": "La ley por Moisés; la gracia por Jesucristo"
+      },
+      {
+        "label": "A'", "verse_start": 18, "verse_end": 18,
+        "summary": "No one has seen God; the Son has made him known",
+        "summary_pt": "Ninguém viu a Deus; o Filho o deu a conhecer",
+        "summary_es": "Nadie ha visto a Dios; el Hijo lo ha dado a conocer"
+      }
     ]
   },
   {
@@ -125,31 +426,35 @@
     "chapter_end": 119,
     "type": "parallelism",
     "title": "Psalm 119 — Grand Acrostic Structure",
+    "title_pt": "Salmo 119 — Grande Estrutura Acróstica",
+    "title_es": "Salmo 119 — Gran Estructura Acróstica",
     "confidence": 1.0,
     "description": "Psalm 119 is the longest chapter in the Bible: 22 stanzas of 8 verses each, one for each letter of the Hebrew alphabet. Each verse in a stanza begins with the same Hebrew letter.",
+    "description_pt": "O Salmo 119 é o capítulo mais longo da Bíblia: 22 estrofes de 8 versículos cada, uma para cada letra do alfabeto hebraico. Cada versículo de uma estrofe começa com a mesma letra hebraica.",
+    "description_es": "El Salmo 119 es el capítulo más largo de la Biblia: 22 estrofas de 8 versículos cada una, una por cada letra del alfabeto hebreo. Cada versículo de una estrofa comienza con la misma letra hebrea.",
     "elements": [
-      {"label": "Aleph", "verse_start": 1, "verse_end": 8, "summary": "Blessedness of walking in God's law"},
-      {"label": "Beth", "verse_start": 9, "verse_end": 16, "summary": "Keeping pure by the word"},
-      {"label": "Gimel", "verse_start": 17, "verse_end": 24, "summary": "Plea for understanding"},
-      {"label": "Daleth", "verse_start": 25, "verse_end": 32, "summary": "Clinging to God in dust"},
-      {"label": "He", "verse_start": 33, "verse_end": 40, "summary": "Teach me your statutes"},
-      {"label": "Vav", "verse_start": 41, "verse_end": 48, "summary": "Steadfast love and salvation"},
-      {"label": "Zayin", "verse_start": 49, "verse_end": 56, "summary": "Comfort in affliction"},
-      {"label": "Cheth", "verse_start": 57, "verse_end": 64, "summary": "The LORD is my portion"},
-      {"label": "Teth", "verse_start": 65, "verse_end": 72, "summary": "Affliction taught me your statutes"},
-      {"label": "Yod", "verse_start": 73, "verse_end": 80, "summary": "Your hands made me"},
-      {"label": "Kaph", "verse_start": 81, "verse_end": 88, "summary": "Soul faints for salvation"},
-      {"label": "Lamed", "verse_start": 89, "verse_end": 96, "summary": "Your word is eternal in heaven"},
-      {"label": "Mem", "verse_start": 97, "verse_end": 104, "summary": "Oh how I love your law!"},
-      {"label": "Nun", "verse_start": 105, "verse_end": 112, "summary": "Your word is a lamp to my feet"},
-      {"label": "Samekh", "verse_start": 113, "verse_end": 120, "summary": "Uphold me according to your promise"},
-      {"label": "Ayin", "verse_start": 121, "verse_end": 128, "summary": "Time for the LORD to act"},
-      {"label": "Pe", "verse_start": 129, "verse_end": 136, "summary": "Your testimonies are wonderful"},
-      {"label": "Tsade", "verse_start": 137, "verse_end": 144, "summary": "Your righteousness is eternal"},
-      {"label": "Qoph", "verse_start": 145, "verse_end": 152, "summary": "I cry with my whole heart"},
-      {"label": "Resh", "verse_start": 153, "verse_end": 160, "summary": "Plead my cause and redeem me"},
-      {"label": "Shin", "verse_start": 161, "verse_end": 168, "summary": "Princes persecute without cause"},
-      {"label": "Tav", "verse_start": 169, "verse_end": 176, "summary": "Let my cry come before you; I have gone astray like a lost sheep"}
+      {"label": "Aleph", "verse_start": 1, "verse_end": 8, "summary": "Blessedness of walking in God's law", "summary_pt": "Bem-aventurança de andar na lei de Deus", "summary_es": "Bienaventuranza de andar en la ley de Dios"},
+      {"label": "Beth", "verse_start": 9, "verse_end": 16, "summary": "Keeping pure by the word", "summary_pt": "Manter-se puro pela palavra", "summary_es": "Mantenerse puro por la palabra"},
+      {"label": "Gimel", "verse_start": 17, "verse_end": 24, "summary": "Plea for understanding", "summary_pt": "Súplica por entendimento", "summary_es": "Súplica por entendimiento"},
+      {"label": "Daleth", "verse_start": 25, "verse_end": 32, "summary": "Clinging to God in dust", "summary_pt": "Apegar-se a Deus no pó", "summary_es": "Aferrarse a Dios en el polvo"},
+      {"label": "He", "verse_start": 33, "verse_end": 40, "summary": "Teach me your statutes", "summary_pt": "Ensina-me os teus estatutos", "summary_es": "Enséñame tus estatutos"},
+      {"label": "Vav", "verse_start": 41, "verse_end": 48, "summary": "Steadfast love and salvation", "summary_pt": "Misericórdia e salvação", "summary_es": "Misericordia y salvación"},
+      {"label": "Zayin", "verse_start": 49, "verse_end": 56, "summary": "Comfort in affliction", "summary_pt": "Consolo na aflição", "summary_es": "Consuelo en la aflicción"},
+      {"label": "Cheth", "verse_start": 57, "verse_end": 64, "summary": "The LORD is my portion", "summary_pt": "O SENHOR é a minha porção", "summary_es": "El SEÑOR es mi porción"},
+      {"label": "Teth", "verse_start": 65, "verse_end": 72, "summary": "Affliction taught me your statutes", "summary_pt": "A aflição me ensinou os teus estatutos", "summary_es": "La aflicción me enseñó tus estatutos"},
+      {"label": "Yod", "verse_start": 73, "verse_end": 80, "summary": "Your hands made me", "summary_pt": "Tuas mãos me fizeram", "summary_es": "Tus manos me hicieron"},
+      {"label": "Kaph", "verse_start": 81, "verse_end": 88, "summary": "Soul faints for salvation", "summary_pt": "A alma desfalece pela salvação", "summary_es": "El alma desfallece por la salvación"},
+      {"label": "Lamed", "verse_start": 89, "verse_end": 96, "summary": "Your word is eternal in heaven", "summary_pt": "Tua palavra é eterna nos céus", "summary_es": "Tu palabra es eterna en los cielos"},
+      {"label": "Mem", "verse_start": 97, "verse_end": 104, "summary": "Oh how I love your law!", "summary_pt": "Ó, quanto amo a tua lei!", "summary_es": "¡Oh, cuánto amo tu ley!"},
+      {"label": "Nun", "verse_start": 105, "verse_end": 112, "summary": "Your word is a lamp to my feet", "summary_pt": "Tua palavra é lâmpada para os meus pés", "summary_es": "Tu palabra es lámpara a mis pies"},
+      {"label": "Samekh", "verse_start": 113, "verse_end": 120, "summary": "Uphold me according to your promise", "summary_pt": "Ampara-me segundo a tua promessa", "summary_es": "Susténtame según tu promesa"},
+      {"label": "Ayin", "verse_start": 121, "verse_end": 128, "summary": "Time for the LORD to act", "summary_pt": "É tempo de o SENHOR agir", "summary_es": "Tiempo para que el SEÑOR actúe"},
+      {"label": "Pe", "verse_start": 129, "verse_end": 136, "summary": "Your testimonies are wonderful", "summary_pt": "Maravilhosos são os teus testemunhos", "summary_es": "Maravillosos son tus testimonios"},
+      {"label": "Tsade", "verse_start": 137, "verse_end": 144, "summary": "Your righteousness is eternal", "summary_pt": "Tua justiça é eterna", "summary_es": "Tu justicia es eterna"},
+      {"label": "Qoph", "verse_start": 145, "verse_end": 152, "summary": "I cry with my whole heart", "summary_pt": "Clamo de todo o coração", "summary_es": "Clamo con todo mi corazón"},
+      {"label": "Resh", "verse_start": 153, "verse_end": 160, "summary": "Plead my cause and redeem me", "summary_pt": "Defende a minha causa e resgata-me", "summary_es": "Defiende mi causa y redímeme"},
+      {"label": "Shin", "verse_start": 161, "verse_end": 168, "summary": "Princes persecute without cause", "summary_pt": "Príncipes me perseguem sem causa", "summary_es": "Príncipes me persiguen sin causa"},
+      {"label": "Tav", "verse_start": 169, "verse_end": 176, "summary": "Let my cry come before you; I have gone astray like a lost sheep", "summary_pt": "Chegue a ti o meu clamor; desviei-me como ovelha perdida", "summary_es": "Llegue a ti mi clamor; me he extraviado como oveja perdida"}
     ]
   },
   {
@@ -159,16 +464,20 @@
     "chapter_end": 3,
     "type": "chiasm",
     "title": "Seven Letters of Revelation — Mirror Pattern",
+    "title_pt": "Sete Cartas do Apocalipse — Padrão Espelhado",
+    "title_es": "Siete Cartas del Apocalipsis — Patrón en Espejo",
     "confidence": 0.75,
     "description": "The seven letters to churches may form a chiastic pattern: Ephesus/Laodicea (lukewarm), Smyrna/Philadelphia (faithful), Pergamum/Sardis (compromise), with Thyatira at the center as longest letter.",
+    "description_pt": "As sete cartas às igrejas podem formar um padrão quiástico: Éfeso/Laodiceia (mornas), Esmirna/Filadélfia (fiéis), Pérgamo/Sardes (compromisso), com Tiatira no centro como a carta mais longa.",
+    "description_es": "Las siete cartas a las iglesias pueden formar un patrón quiástico: Éfeso/Laodicea (tibias), Esmirna/Filadelfia (fieles), Pérgamo/Sardis (compromiso), con Tiatira en el centro como la carta más larga.",
     "elements": [
-      {"label": "A", "verse_start": 1, "verse_end": 7, "summary": "Ephesus — lost first love; threat of lampstand removal"},
-      {"label": "B", "verse_start": 8, "verse_end": 11, "summary": "Smyrna — faithful in persecution; no rebuke"},
-      {"label": "C", "verse_start": 12, "verse_end": 17, "summary": "Pergamum — compromise with false teaching"},
-      {"label": "CENTER", "verse_start": 18, "verse_end": 29, "summary": "Thyatira — longest letter; Jezebel; morning star promise"},
-      {"label": "C'", "verse_start": 1, "verse_end": 6, "summary": "Sardis — dead reputation; compromise"},
-      {"label": "B'", "verse_start": 7, "verse_end": 13, "summary": "Philadelphia — faithful; open door; no rebuke"},
-      {"label": "A'", "verse_start": 14, "verse_end": 22, "summary": "Laodicea — lukewarm; threat of being spit out"}
+      {"label": "A", "verse_start": 1, "verse_end": 7, "summary": "Ephesus — lost first love; threat of lampstand removal", "summary_pt": "Éfeso — perdeu o primeiro amor; ameaça de remoção do candelabro", "summary_es": "Éfeso — perdió el primer amor; amenaza de retirar el candelero"},
+      {"label": "B", "verse_start": 8, "verse_end": 11, "summary": "Smyrna — faithful in persecution; no rebuke", "summary_pt": "Esmirna — fiel na perseguição; sem repreensão", "summary_es": "Esmirna — fiel en la persecución; sin reprensión"},
+      {"label": "C", "verse_start": 12, "verse_end": 17, "summary": "Pergamum — compromise with false teaching", "summary_pt": "Pérgamo — compromisso com falso ensino", "summary_es": "Pérgamo — compromiso con la falsa enseñanza"},
+      {"label": "CENTER", "label_pt": "CENTRO", "label_es": "CENTRO", "verse_start": 18, "verse_end": 29, "summary": "Thyatira — longest letter; Jezebel; morning star promise", "summary_pt": "Tiatira — a carta mais longa; Jezabel; promessa da estrela da manhã", "summary_es": "Tiatira — la carta más larga; Jezabel; promesa del lucero de la mañana"},
+      {"label": "C'", "verse_start": 1, "verse_end": 6, "summary": "Sardis — dead reputation; compromise", "summary_pt": "Sardes — reputação morta; compromisso", "summary_es": "Sardis — reputación muerta; compromiso"},
+      {"label": "B'", "verse_start": 7, "verse_end": 13, "summary": "Philadelphia — faithful; open door; no rebuke", "summary_pt": "Filadélfia — fiel; porta aberta; sem repreensão", "summary_es": "Filadelfia — fiel; puerta abierta; sin reprensión"},
+      {"label": "A'", "verse_start": 14, "verse_end": 22, "summary": "Laodicea — lukewarm; threat of being spit out", "summary_pt": "Laodiceia — morna; ameaça de ser vomitada", "summary_es": "Laodicea — tibia; amenaza de ser vomitada"}
     ]
   },
   {
@@ -178,17 +487,21 @@
     "chapter_end": 5,
     "type": "inclusio",
     "title": "Isaiah 5 — Parable of the Vineyard with Woe Oracles",
+    "title_pt": "Isaías 5 — Parábola da Vinha com Oráculos de Ai",
+    "title_es": "Isaías 5 — Parábola de la Viña con Oráculos de Ay",
     "confidence": 0.8,
     "description": "Isaiah 5 begins with a love song about a vineyard (vv.1-7) and ends with judgment (vv.25-30), forming an inclusio around six woe oracles.",
+    "description_pt": "Isaías 5 começa com um cântico de amor sobre uma vinha (vv.1-7) e termina com juízo (vv.25-30), formando um inclusio em torno de seis oráculos de 'ai'.",
+    "description_es": "Isaías 5 comienza con un cántico de amor sobre una viña (vv.1-7) y termina con juicio (vv.25-30), formando un inclusio alrededor de seis oráculos de '¡ay!'.",
     "elements": [
-      {"label": "Opening", "verse_start": 1, "verse_end": 7, "summary": "Vineyard song: expected grapes, got wild grapes"},
-      {"label": "Woe 1", "verse_start": 8, "verse_end": 10, "summary": "Woe to land-grabbers"},
-      {"label": "Woe 2", "verse_start": 11, "verse_end": 17, "summary": "Woe to drunkards"},
-      {"label": "Woe 3", "verse_start": 18, "verse_end": 19, "summary": "Woe to those who drag sin with cords"},
-      {"label": "Woe 4", "verse_start": 20, "verse_end": 20, "summary": "Woe to those who call evil good"},
-      {"label": "Woe 5", "verse_start": 21, "verse_end": 21, "summary": "Woe to those wise in their own eyes"},
-      {"label": "Woe 6", "verse_start": 22, "verse_end": 23, "summary": "Woe to heroes at drinking wine"},
-      {"label": "Closing", "verse_start": 24, "verse_end": 30, "summary": "Judgment: fire, invasion, darkness"}
+      {"label": "Opening", "label_pt": "Abertura", "label_es": "Apertura", "verse_start": 1, "verse_end": 7, "summary": "Vineyard song: expected grapes, got wild grapes", "summary_pt": "Cântico da vinha: esperava uvas, colheu uvas bravas", "summary_es": "Cántico de la viña: esperaba uvas, recogió uvas silvestres"},
+      {"label": "Woe 1", "label_pt": "Ai 1", "label_es": "Ay 1", "verse_start": 8, "verse_end": 10, "summary": "Woe to land-grabbers", "summary_pt": "Ai dos que acumulam terras", "summary_es": "Ay de los que acaparan tierras"},
+      {"label": "Woe 2", "label_pt": "Ai 2", "label_es": "Ay 2", "verse_start": 11, "verse_end": 17, "summary": "Woe to drunkards", "summary_pt": "Ai dos que se embebedam", "summary_es": "Ay de los borrachos"},
+      {"label": "Woe 3", "label_pt": "Ai 3", "label_es": "Ay 3", "verse_start": 18, "verse_end": 19, "summary": "Woe to those who drag sin with cords", "summary_pt": "Ai dos que arrastam o pecado com cordas", "summary_es": "Ay de los que arrastran el pecado con cuerdas"},
+      {"label": "Woe 4", "label_pt": "Ai 4", "label_es": "Ay 4", "verse_start": 20, "verse_end": 20, "summary": "Woe to those who call evil good", "summary_pt": "Ai dos que chamam o mal de bem", "summary_es": "Ay de los que llaman al mal bien"},
+      {"label": "Woe 5", "label_pt": "Ai 5", "label_es": "Ay 5", "verse_start": 21, "verse_end": 21, "summary": "Woe to those wise in their own eyes", "summary_pt": "Ai dos sábios aos seus próprios olhos", "summary_es": "Ay de los sabios a sus propios ojos"},
+      {"label": "Woe 6", "label_pt": "Ai 6", "label_es": "Ay 6", "verse_start": 22, "verse_end": 23, "summary": "Woe to heroes at drinking wine", "summary_pt": "Ai dos heróis no beber vinho", "summary_es": "Ay de los héroes para beber vino"},
+      {"label": "Closing", "label_pt": "Fechamento", "label_es": "Cierre", "verse_start": 24, "verse_end": 30, "summary": "Judgment: fire, invasion, darkness", "summary_pt": "Juízo: fogo, invasão, trevas", "summary_es": "Juicio: fuego, invasión, tinieblas"}
     ]
   },
   {
@@ -198,15 +511,19 @@
     "chapter_end": 1,
     "type": "parallelism",
     "title": "Genesis 1 — Creation Week: Form & Filling",
+    "title_pt": "Gênesis 1 — Semana da Criação: Formar e Preencher",
+    "title_es": "Génesis 1 — Semana de la Creación: Formar y Llenar",
     "confidence": 0.95,
     "description": "The six creation days follow a parallel structure: Days 1–3 create 'realms' (light, sky/waters, land) that Days 4–6 fill with 'rulers' (sun/stars, birds/fish, animals/humanity). The symmetry reveals intentional literary architecture.",
+    "description_pt": "Os seis dias da criação seguem uma estrutura paralela: os dias 1–3 criam 'domínios' (luz, céu/águas, terra) que os dias 4–6 preenchem com 'governantes' (sol/estrelas, aves/peixes, animais/humanidade). A simetria revela uma arquitetura literária intencional.",
+    "description_es": "Los seis días de la creación siguen una estructura paralela: los días 1–3 crean 'dominios' (luz, cielo/aguas, tierra) que los días 4–6 llenan con 'gobernantes' (sol/estrellas, aves/peces, animales/humanidad). La simetría revela una arquitectura literaria intencional.",
     "elements": [
-      {"label": "Day 1 — Form", "verse_start": 3, "verse_end": 5, "summary": "Light created; darkness and light separated"},
-      {"label": "Day 2 — Form", "verse_start": 6, "verse_end": 8, "summary": "Sky and waters separated — the dome (raqia)"},
-      {"label": "Day 3 — Form", "verse_start": 9, "verse_end": 13, "summary": "Dry land, seas gathered; vegetation brought forth"},
-      {"label": "Day 4 — Fill", "verse_start": 14, "verse_end": 19, "summary": "Lights to govern day and night — filling the light realm"},
-      {"label": "Day 5 — Fill", "verse_start": 20, "verse_end": 23, "summary": "Birds and sea creatures — filling sky and water"},
-      {"label": "Day 6 — Fill", "verse_start": 24, "verse_end": 31, "summary": "Land animals and mankind (imago Dei) — filling the land"}
+      {"label": "Day 1 — Form", "label_pt": "Dia 1 — Formar", "label_es": "Día 1 — Formar", "verse_start": 3, "verse_end": 5, "summary": "Light created; darkness and light separated", "summary_pt": "Luz criada; trevas e luz separadas", "summary_es": "Luz creada; tinieblas y luz separadas"},
+      {"label": "Day 2 — Form", "label_pt": "Dia 2 — Formar", "label_es": "Día 2 — Formar", "verse_start": 6, "verse_end": 8, "summary": "Sky and waters separated — the dome (raqia)", "summary_pt": "Céu e águas separados — o firmamento (raqia)", "summary_es": "Cielo y aguas separados — el firmamento (raqia)"},
+      {"label": "Day 3 — Form", "label_pt": "Dia 3 — Formar", "label_es": "Día 3 — Formar", "verse_start": 9, "verse_end": 13, "summary": "Dry land, seas gathered; vegetation brought forth", "summary_pt": "Terra seca, mares reunidos; vegetação brotando", "summary_es": "Tierra seca, mares reunidos; vegetación brotando"},
+      {"label": "Day 4 — Fill", "label_pt": "Dia 4 — Preencher", "label_es": "Día 4 — Llenar", "verse_start": 14, "verse_end": 19, "summary": "Lights to govern day and night — filling the light realm", "summary_pt": "Luminares para governar o dia e a noite — preenchendo o domínio da luz", "summary_es": "Lumbreras para gobernar el día y la noche — llenando el dominio de la luz"},
+      {"label": "Day 5 — Fill", "label_pt": "Dia 5 — Preencher", "label_es": "Día 5 — Llenar", "verse_start": 20, "verse_end": 23, "summary": "Birds and sea creatures — filling sky and water", "summary_pt": "Aves e criaturas marinhas — preenchendo céu e águas", "summary_es": "Aves y criaturas marinas — llenando el cielo y las aguas"},
+      {"label": "Day 6 — Fill", "label_pt": "Dia 6 — Preencher", "label_es": "Día 6 — Llenar", "verse_start": 24, "verse_end": 31, "summary": "Land animals and mankind (imago Dei) — filling the land", "summary_pt": "Animais terrestres e humanidade (imago Dei) — preenchendo a terra", "summary_es": "Animales terrestres y humanidad (imago Dei) — llenando la tierra"}
     ]
   },
   {
@@ -216,16 +533,20 @@
     "chapter_end": 23,
     "type": "chiasm",
     "title": "Psalm 23 — The Shepherd Psalm Chiasm",
+    "title_pt": "Salmo 23 — Quiasmo do Salmo do Pastor",
+    "title_es": "Salmo 23 — Quiasmo del Salmo del Pastor",
     "confidence": 0.8,
     "description": "Psalm 23 pivots at verse 4 where the psalmist shifts from third-person ('He') to direct address ('You are with me'). This inversion is the center of a chiasm moving from sheep in a field to a guest at God's eternal table.",
+    "description_pt": "O Salmo 23 gira no versículo 4, onde o salmista muda da terceira pessoa ('Ele') para o discurso direto ('Tu estás comigo'). Essa inversão é o centro de um quiasmo que se move de ovelha no campo a hóspede à mesa eterna de Deus.",
+    "description_es": "El Salmo 23 gira en el versículo 4, donde el salmista pasa de tercera persona ('Él') al discurso directo ('Tú estás conmigo'). Esta inversión es el centro de un quiasmo que se mueve de oveja en el campo a huésped en la mesa eterna de Dios.",
     "elements": [
-      {"label": "A", "verse_start": 1, "verse_end": 1, "summary": "The LORD is my shepherd — identity and relationship"},
-      {"label": "B", "verse_start": 2, "verse_end": 2, "summary": "Green pastures, still waters — provision and rest"},
-      {"label": "C", "verse_start": 3, "verse_end": 3, "summary": "Paths of righteousness — divine guidance"},
-      {"label": "CENTER", "verse_start": 4, "verse_end": 4, "summary": "Valley of shadow of death — shift: 'You are with me'; rod and staff"},
-      {"label": "C'", "verse_start": 5, "verse_end": 5, "summary": "Table prepared before enemies — honored by God"},
-      {"label": "B'", "verse_start": 5, "verse_end": 5, "summary": "Anointed head, overflowing cup — abundant provision"},
-      {"label": "A'", "verse_start": 6, "verse_end": 6, "summary": "Dwelling in the house of the LORD forever — ultimate home"}
+      {"label": "A", "verse_start": 1, "verse_end": 1, "summary": "The LORD is my shepherd — identity and relationship", "summary_pt": "O SENHOR é o meu pastor — identidade e relacionamento", "summary_es": "El SEÑOR es mi pastor — identidad y relación"},
+      {"label": "B", "verse_start": 2, "verse_end": 2, "summary": "Green pastures, still waters — provision and rest", "summary_pt": "Pastos verdes, águas tranquilas — provisão e descanso", "summary_es": "Pastos verdes, aguas tranquilas — provisión y descanso"},
+      {"label": "C", "verse_start": 3, "verse_end": 3, "summary": "Paths of righteousness — divine guidance", "summary_pt": "Veredas de justiça — direção divina", "summary_es": "Sendas de justicia — dirección divina"},
+      {"label": "CENTER", "label_pt": "CENTRO", "label_es": "CENTRO", "verse_start": 4, "verse_end": 4, "summary": "Valley of shadow of death — shift: 'You are with me'; rod and staff", "summary_pt": "Vale da sombra da morte — giro: 'Tu estás comigo'; vara e cajado", "summary_es": "Valle de sombra de muerte — giro: 'Tú estás conmigo'; vara y cayado"},
+      {"label": "C'", "verse_start": 5, "verse_end": 5, "summary": "Table prepared before enemies — honored by God", "summary_pt": "Mesa preparada diante dos inimigos — honrado por Deus", "summary_es": "Mesa preparada ante los enemigos — honrado por Dios"},
+      {"label": "B'", "verse_start": 5, "verse_end": 5, "summary": "Anointed head, overflowing cup — abundant provision", "summary_pt": "Cabeça ungida, cálice transbordante — provisão abundante", "summary_es": "Cabeza ungida, copa rebosante — provisión abundante"},
+      {"label": "A'", "verse_start": 6, "verse_end": 6, "summary": "Dwelling in the house of the LORD forever — ultimate home", "summary_pt": "Habitar na casa do SENHOR para sempre — lar definitivo", "summary_es": "Habitar en la casa del SEÑOR para siempre — hogar definitivo"}
     ]
   },
   {
@@ -235,16 +556,20 @@
     "chapter_end": 6,
     "type": "chiasm",
     "title": "Matthew 6:9-13 — The Lord's Prayer",
+    "title_pt": "Mateus 6:9-13 — O Pai-Nosso",
+    "title_es": "Mateo 6:9-13 — El Padrenuestro",
     "confidence": 0.8,
     "description": "The Lord's Prayer forms a chiastic structure: three petitions for God's glory (A–C) are mirrored by three petitions for human need (C'–A'), with daily provision and forgiveness at the pivot — the intersection of divine grace and human dependence.",
+    "description_pt": "O Pai-Nosso forma uma estrutura quiástica: três petições pela glória de Deus (A–C) são espelhadas por três petições pela necessidade humana (C'–A'), com o pão diário e o perdão no eixo — a interseção entre graça divina e dependência humana.",
+    "description_es": "El Padrenuestro forma una estructura quiástica: tres peticiones por la gloria de Dios (A–C) son espejadas por tres peticiones por la necesidad humana (C'–A'), con el pan diario y el perdón en el pivote — la intersección entre gracia divina y dependencia humana.",
     "elements": [
-      {"label": "A", "verse_start": 9, "verse_end": 9, "summary": "Hallowed be your name — divine glory and holiness"},
-      {"label": "B", "verse_start": 10, "verse_end": 10, "summary": "Your kingdom come — divine reign and sovereignty"},
-      {"label": "C", "verse_start": 10, "verse_end": 10, "summary": "Your will be done on earth as in heaven — divine purpose"},
-      {"label": "CENTER", "verse_start": 11, "verse_end": 12, "summary": "Daily bread + Forgiveness of debts — the heart: human need met by grace"},
-      {"label": "C'", "verse_start": 12, "verse_end": 12, "summary": "As we forgive our debtors — human response mirrors divine grace"},
-      {"label": "B'", "verse_start": 13, "verse_end": 13, "summary": "Lead us not into temptation — protection from evil's dominion"},
-      {"label": "A'", "verse_start": 13, "verse_end": 13, "summary": "Deliver us from evil — divine protection (doxology in manuscripts)"}
+      {"label": "A", "verse_start": 9, "verse_end": 9, "summary": "Hallowed be your name — divine glory and holiness", "summary_pt": "Santificado seja o teu nome — glória e santidade divinas", "summary_es": "Santificado sea tu nombre — gloria y santidad divinas"},
+      {"label": "B", "verse_start": 10, "verse_end": 10, "summary": "Your kingdom come — divine reign and sovereignty", "summary_pt": "Venha o teu reino — reinado e soberania divinos", "summary_es": "Venga tu reino — reinado y soberanía divinos"},
+      {"label": "C", "verse_start": 10, "verse_end": 10, "summary": "Your will be done on earth as in heaven — divine purpose", "summary_pt": "Seja feita a tua vontade na terra como no céu — propósito divino", "summary_es": "Hágase tu voluntad en la tierra como en el cielo — propósito divino"},
+      {"label": "CENTER", "label_pt": "CENTRO", "label_es": "CENTRO", "verse_start": 11, "verse_end": 12, "summary": "Daily bread + Forgiveness of debts — the heart: human need met by grace", "summary_pt": "Pão diário + Perdão das dívidas — o coração: necessidade humana suprida pela graça", "summary_es": "Pan diario + Perdón de las deudas — el corazón: necesidad humana suplida por la gracia"},
+      {"label": "C'", "verse_start": 12, "verse_end": 12, "summary": "As we forgive our debtors — human response mirrors divine grace", "summary_pt": "Assim como nós perdoamos aos nossos devedores — resposta humana reflete a graça divina", "summary_es": "Así como nosotros perdonamos a nuestros deudores — respuesta humana refleja la gracia divina"},
+      {"label": "B'", "verse_start": 13, "verse_end": 13, "summary": "Lead us not into temptation — protection from evil's dominion", "summary_pt": "Não nos deixes cair em tentação — proteção contra o domínio do mal", "summary_es": "No nos dejes caer en tentación — protección contra el dominio del mal"},
+      {"label": "A'", "verse_start": 13, "verse_end": 13, "summary": "Deliver us from evil — divine protection (doxology in manuscripts)", "summary_pt": "Livra-nos do mal — proteção divina (doxologia nos manuscritos)", "summary_es": "Líbranos del mal — protección divina (doxología en los manuscritos)"}
     ]
   },
   {
@@ -254,14 +579,18 @@
     "chapter_end": 2,
     "type": "chiasm",
     "title": "Philippians 2:5-11 — Carmen Christi (Hymn of Christ)",
+    "title_pt": "Filipenses 2:5-11 — Carmen Christi (Hino de Cristo)",
+    "title_es": "Filipenses 2:5-11 — Carmen Christi (Himno de Cristo)",
     "confidence": 0.9,
     "description": "One of the most celebrated christological passages in Paul. The hymn descends from divine pre-existence to the lowest humiliation (cross), then ascends to universal exaltation. A perfect chiasm mirroring the cosmic movement of the Son.",
+    "description_pt": "Uma das passagens cristológicas mais célebres de Paulo. O hino desce da preexistência divina à humilhação mais baixa (a cruz) e então ascende à exaltação universal. Um quiasmo perfeito que espelha o movimento cósmico do Filho.",
+    "description_es": "Uno de los pasajes cristológicos más célebres de Pablo. El himno desciende desde la preexistencia divina hasta la humillación más baja (la cruz) y luego asciende hasta la exaltación universal. Un quiasmo perfecto que refleja el movimiento cósmico del Hijo.",
     "elements": [
-      {"label": "A", "verse_start": 6, "verse_end": 6, "summary": "Pre-existent: equal with God, did not grasp equality"},
-      {"label": "B", "verse_start": 7, "verse_end": 7, "summary": "Descended: emptied himself; took form of a servant"},
-      {"label": "CENTER", "verse_start": 8, "verse_end": 8, "summary": "Obedient to death — even death on a cross (nadir)"},
-      {"label": "B'", "verse_start": 9, "verse_end": 9, "summary": "Exalted: God highly exalted him; name above every name"},
-      {"label": "A'", "verse_start": 10, "verse_end": 11, "summary": "Universal: every knee bows, every tongue confesses Jesus is Lord"}
+      {"label": "A", "verse_start": 6, "verse_end": 6, "summary": "Pre-existent: equal with God, did not grasp equality", "summary_pt": "Preexistente: igual a Deus, não se apegou à igualdade", "summary_es": "Preexistente: igual a Dios, no se aferró a la igualdad"},
+      {"label": "B", "verse_start": 7, "verse_end": 7, "summary": "Descended: emptied himself; took form of a servant", "summary_pt": "Desceu: esvaziou-se a si mesmo; tomou forma de servo", "summary_es": "Descendió: se vació a sí mismo; tomó forma de siervo"},
+      {"label": "CENTER", "label_pt": "CENTRO", "label_es": "CENTRO", "verse_start": 8, "verse_end": 8, "summary": "Obedient to death — even death on a cross (nadir)", "summary_pt": "Obediente até à morte — e morte de cruz (nadir)", "summary_es": "Obediente hasta la muerte — y muerte de cruz (nadir)"},
+      {"label": "B'", "verse_start": 9, "verse_end": 9, "summary": "Exalted: God highly exalted him; name above every name", "summary_pt": "Exaltado: Deus o exaltou soberanamente; nome acima de todo nome", "summary_es": "Exaltado: Dios lo exaltó soberanamente; nombre sobre todo nombre"},
+      {"label": "A'", "verse_start": 10, "verse_end": 11, "summary": "Universal: every knee bows, every tongue confesses Jesus is Lord", "summary_pt": "Universal: todo joelho se dobra, toda língua confessa que Jesus é Senhor", "summary_es": "Universal: toda rodilla se doble, toda lengua confiese que Jesús es Señor"}
     ]
   },
   {
@@ -271,15 +600,19 @@
     "chapter_end": 150,
     "type": "parallelism",
     "title": "Psalm 150 — Universal Praise Crescendo",
+    "title_pt": "Salmo 150 — Crescendo de Louvor Universal",
+    "title_es": "Salmo 150 — Crescendo de Alabanza Universal",
     "confidence": 0.9,
     "description": "Psalm 150 builds a crescendo of praise with three parallel sections: where to praise (vv.1-2), how to praise (vv.3-5), and who praises (v.6), all framed by Hallelujah inclusio.",
+    "description_pt": "O Salmo 150 constrói um crescendo de louvor em três seções paralelas: onde louvar (vv.1-2), como louvar (vv.3-5) e quem louva (v.6), tudo emoldurado por um inclusio de Aleluia.",
+    "description_es": "El Salmo 150 construye un crescendo de alabanza en tres secciones paralelas: dónde alabar (vv.1-2), cómo alabar (vv.3-5) y quién alaba (v.6), todo enmarcado por un inclusio de Aleluya.",
     "elements": [
-      {"label": "Inclusio Open", "verse_start": 1, "verse_end": 1, "summary": "Praise the LORD! (Hallelujah)"},
-      {"label": "Where", "verse_start": 1, "verse_end": 1, "summary": "In his sanctuary, in his mighty heavens"},
-      {"label": "Why", "verse_start": 2, "verse_end": 2, "summary": "For his mighty deeds, his surpassing greatness"},
-      {"label": "How", "verse_start": 3, "verse_end": 5, "summary": "Trumpet, lute, harp, tambourine, dance, strings, pipe, cymbals"},
-      {"label": "Who", "verse_start": 6, "verse_end": 6, "summary": "Everything that has breath — universal scope"},
-      {"label": "Inclusio Close", "verse_start": 6, "verse_end": 6, "summary": "Praise the LORD! (Hallelujah)"}
+      {"label": "Inclusio Open", "label_pt": "Inclusio Abertura", "label_es": "Inclusio Apertura", "verse_start": 1, "verse_end": 1, "summary": "Praise the LORD! (Hallelujah)", "summary_pt": "Louvai ao SENHOR! (Aleluia)", "summary_es": "¡Alabad al SEÑOR! (Aleluya)"},
+      {"label": "Where", "label_pt": "Onde", "label_es": "Dónde", "verse_start": 1, "verse_end": 1, "summary": "In his sanctuary, in his mighty heavens", "summary_pt": "No seu santuário, no firmamento do seu poder", "summary_es": "En su santuario, en el firmamento de su poder"},
+      {"label": "Why", "label_pt": "Por quê", "label_es": "Por qué", "verse_start": 2, "verse_end": 2, "summary": "For his mighty deeds, his surpassing greatness", "summary_pt": "Pelos seus atos poderosos, pela sua grandeza sem igual", "summary_es": "Por sus obras poderosas, por su excelsa grandeza"},
+      {"label": "How", "label_pt": "Como", "label_es": "Cómo", "verse_start": 3, "verse_end": 5, "summary": "Trumpet, lute, harp, tambourine, dance, strings, pipe, cymbals", "summary_pt": "Trombeta, alaúde, harpa, adufe, dança, cordas, flauta, címbalos", "summary_es": "Trompeta, laúd, arpa, pandero, danza, cuerdas, flauta, címbalos"},
+      {"label": "Who", "label_pt": "Quem", "label_es": "Quién", "verse_start": 6, "verse_end": 6, "summary": "Everything that has breath — universal scope", "summary_pt": "Tudo o que respira — alcance universal", "summary_es": "Todo lo que respira — alcance universal"},
+      {"label": "Inclusio Close", "label_pt": "Inclusio Fechamento", "label_es": "Inclusio Cierre", "verse_start": 6, "verse_end": 6, "summary": "Praise the LORD! (Hallelujah)", "summary_pt": "Louvai ao SENHOR! (Aleluia)", "summary_es": "¡Alabad al SEÑOR! (Aleluya)"}
     ]
   }
 ]
