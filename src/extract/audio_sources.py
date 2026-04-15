@@ -42,13 +42,15 @@ logger = logging.getLogger(__name__)
 VOICE_CONFIG: dict[str, dict[str, str]] = {
     "hebrew": {
         "language_code": "he-IL",
+        # Neural2 disponível para hebraico — máxima qualidade
         "name": "he-IL-Neural2-A",
         "note": "Hebraico moderno israelense (Neural2)",
     },
     "greek": {
         "language_code": "el-GR",
-        "name": "el-GR-Neural2-A",
-        "note": "Grego moderno (Koiné reconstruído virá na Camada 2)",
+        # Neural2 ainda não existe para grego — WaveNet é a melhor opção disponível
+        "name": "el-GR-Wavenet-A",
+        "note": "Grego moderno (WaveNet — Neural2 indisponível para el-GR)",
     },
 }
 
