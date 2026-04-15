@@ -95,9 +95,14 @@ export default function LayerColumn({ layerKey, layer, onWordClick }: Props) {
                 dir={isRtl ? "rtl" : "ltr"}
               >
                 {verse.words.map((word) => (
-                  <button
+                  <div
                     key={word.word_position}
                     onClick={() => onWordClick?.(word, layerKey)}
+                    role={word.strongs_id ? "button" : undefined}
+                    tabIndex={word.strongs_id ? 0 : undefined}
+                    onKeyDown={word.strongs_id
+                      ? (e) => { if (e.key === "Enter" || e.key === " ") onWordClick?.(word, layerKey); }
+                      : undefined}
                     className={[
                       "group flex flex-col items-center rounded-lg px-2 py-1.5 gap-0.5",
                       "border border-transparent hover:border-[var(--color-border)]",
@@ -131,7 +136,7 @@ export default function LayerColumn({ layerKey, layer, onWordClick }: Props) {
                       </span>
                     )}
 
-                    {/* Audio button — Aramaic hides itself when no audio_url */}
+                    {/* Audio button — sits inside the div, not nested in <button> */}
                     {lang && (
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <AudioButton
@@ -143,7 +148,7 @@ export default function LayerColumn({ layerKey, layer, onWordClick }: Props) {
                         />
                       </div>
                     )}
-                  </button>
+                  </div>
                 ))}
               </div>
             ) : (
