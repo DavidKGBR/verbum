@@ -1,0 +1,85 @@
+{
+  "presets": [
+    {
+      "id": "love-hebrew-greek",
+      "label": "Love in Hebrew & Greek",
+      "description": "Explore how love is expressed across both Testaments — from chesed and ahab to agapē and phileō.",
+      "icon": "❤️",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H2617" },
+        { "type": "strongs", "id": "G25" }
+      ]
+    },
+    {
+      "id": "covenant-theology",
+      "label": "Covenant Theology",
+      "description": "Trace the thread of covenant (berith) through Scripture — from Noah to the New Covenant.",
+      "icon": "📜",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H1285" },
+        { "type": "topic", "id": "covenant" }
+      ]
+    },
+    {
+      "id": "names-of-god",
+      "label": "Names of God",
+      "description": "Discover the many names and titles used for God — Elohim, YHWH, Adonai, Theos, and more.",
+      "icon": "✨",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H430" },
+        { "type": "strongs", "id": "H3068" },
+        { "type": "strongs", "id": "G2316" }
+      ]
+    },
+    {
+      "id": "faith-trust",
+      "label": "Faith & Trust",
+      "description": "How do the original languages express faith, belief, and trust — from batach and emunah to pistis?",
+      "icon": "🙏",
+      "entry_nodes": [
+        { "type": "strongs", "id": "G4102" },
+        { "type": "strongs", "id": "H539" }
+      ]
+    },
+    {
+      "id": "suffering-hope",
+      "label": "Suffering & Hope",
+      "description": "Explore the tension between affliction and expectation across Scripture.",
+      "icon": "🌅",
+      "entry_nodes": [
+        { "type": "topic", "id": "suffering" },
+        { "type": "topic", "id": "hope" }
+      ]
+    },
+    {
+      "id": "word-logos",
+      "label": "The Word (Logos)",
+      "description": "The rich concept of logos — word, reason, account — and its Hebrew counterpart dabar.",
+      "icon": "📖",
+      "entry_nodes": [
+        { "type": "strongs", "id": "G3056" },
+        { "type": "strongs", "id": "H1697" }
+      ]
+    },
+    {
+      "id": "spirit-ruach-pneuma",
+      "label": "Spirit — Ruach & Pneuma",
+      "description": "Wind, breath, spirit — trace this concept from Genesis to Revelation.",
+      "icon": "🕊️",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H7307" },
+        { "type": "strongs", "id": "G4151" }
+      ]
+    },
+    {
+      "id": "righteousness-justice",
+      "label": "Righteousness & Justice",
+      "description": "Tsedaqah and dikaiosynē — the intertwined concepts of righteousness and justice.",
+      "icon": "⚖️",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H6666" },
+        { "type": "strongs", "id": "G1343" }
+      ]
+    }
+  ]
+}
