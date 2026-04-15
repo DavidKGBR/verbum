@@ -217,6 +217,118 @@ Competição média-baixa vs Bible Hub (UX terrível).
 
 ---
 
+---
+
+### 🎙️ FASE 5: A Voz Original (Preservação Fonética)
+
+*"A fé vem pelo ouvir." — Romanos 10:17*
+
+A Palavra foi escrita para ser proclamada. O texto estático perde a métrica, o peso e a musicalidade que os autores originais conceberam. A Fase 5 devolve essa dimensão perdida.
+
+#### Visão
+
+Um estudante clica na palavra **רָעָה** (*rā'āh*, "pastor") em Salmo 23:1 e ouve — em milissegundos — a pronúncia que os escribas Massoretas de Tiberíades usavam em ~900 d.C. Não é síntese genérica. É reconstrução acadêmica.
+
+Um grupo de oração clica em Mateus 6:9-13 e ouve o **Pai Nosso em aramaico** — a língua que Jesus realmente usou quando orou com os discípulos na Galileia do séc. I.
+
+Isso não existe em nenhuma ferramenta gratuita no mundo.
+
+#### Modelo de 3 Camadas
+
+| Camada | Fonte | Cobertura | Qualidade | Licença | Status |
+|--------|-------|-----------|-----------|---------|--------|
+| **Camada 1 — Base** | Open Hebrew Greek Bible MP3 (Eliran Wong) | OT inteiro (HEB) + NT inteiro (GRK) | TTS razoável | CC-BY 4.0 | Pronto no GitHub |
+| **Camada 2 — Acadêmica** | Alex Foreman (Tibéria, Hebraico) + KoineGreek.com (Benjamin Kantor, Koiné) | Seleção curada | Reconstrução histórica rigorosa | CC-BY (Foreman) / verificar Kantor | Contato a fazer |
+| **Camada 3 — Legado** | Gravação em parceria com seminário/hebraísta brasileiro | Completa e nova | Máxima — criamos o dataset | CC-BY 4.0 que o Verbum publicaria | Futuro |
+
+#### Fontes Validadas pela Pesquisa
+
+**Hebraico Bíblico — Pronúncia Tibéria (Acadêmica)**
+- **Alex Foreman / Geoffrey Khan** — Reconstrução da pronúncia Tibéria (Cambridge), publicada pela Open Book Publishers em CC-BY. Gravações no SoundCloud público. Primeira reconstrução recitada em ~1000 anos.
+  - Livro: https://www.openbookpublishers.com/books/10.11647/obp.0163
+  - Áudio: https://soundcloud.com/alex-foreman-209218576/sets/bible-readings-in-tiberian
+- **Mechon Mamre** — Tanakh completo em pronúncia Sefardita, livre para download. Não é Tibéria, mas é sólido e cobre 100% do AT.
+  - https://mechon-mamre.org/
+
+**Grego Koiné — Pronúncia Reconstruída (Histórica)**
+- **KoineGreek.com (Benjamin Kantor)** — NT inteiro em Koiné reconstruído, baseado em análise de erros ortográficos de documentos do séc. I (não a Erasmiana que universidades ensinaram errado). Parcialmente livre.
+  - https://www.koinegreek.com/greek-audio-reader
+- **Lanz.li — SBL Greek NT** — NT completo em MP3, livre para download direto, pronúncia sólida.
+  - https://www.lanz.li/index.php/hebrew/9-overview-article/13-sbl-greek-new-testament-audio-mp3-files
+
+**Para uso imediato (CC-BY 4.0, já disponível)**
+- **Open Hebrew Greek Bible MP3** (Eliran Wong) — TTS gerado, cobre OT inteiro (hebraico) + NT inteiro (grego). Rápido e lento. GitHub público.
+  - https://github.com/eliranwong/MP3_OpenHebrewGreekBible_fast
+  - https://github.com/eliranwong/MP3_OpenHebrewGreekBible_slow
+
+#### O Caso Especial: Pai Nosso em Aramaico
+
+Jesus não orou em hebraico. Orou em **aramaico galileico do séc. I** — a língua cotidiana da Galileia.
+
+O texto que sobreviveu em aramaico é a **Peshitta** (aramaico sírio oriental), levemente diferente do galileico original, mas o mais próximo disponível. O **Abwoon Network** (Dr. Neil Douglas-Klotz) tem o Pai Nosso em aramaico com áudio, livre, baseado na Peshitta.
+
+**O que o Verbum faria que ninguém faz:**
+
+Mateus 6:9-13 em **4 camadas com áudio**:
+1. **Aramaico** (Peshitta) — como Jesus orou
+2. **Hebraico** (tradição rabínica massorética)
+3. **Grego Koiné** — como Paulo e a Igreja primitiva conheciam
+4. **Português / Inglês / Espanhol** — tradução moderna
+
+Cada palavra clicável. Cada camada com pronúncia. Nenhum paywall.
+
+#### Implementação Técnica
+
+**Novas tabelas DuckDB:**
+```sql
+audio_pronunciations (
+  strongs_id     TEXT,        -- H7462, G0026, etc.
+  language       TEXT,        -- 'hebrew' | 'greek' | 'aramaic'
+  source         TEXT,        -- 'foreman-tiberian' | 'kantor-koine' | 'eliranwong-tts'
+  quality_tier   INTEGER,     -- 1=TTS base, 2=academic, 3=legacy
+  audio_url      TEXT,        -- GCS bucket ou CDN
+  duration_ms    INTEGER,
+  license        TEXT
+)
+```
+
+**Hosting dos áudios:**
+- Google Cloud Storage bucket público (alinhado com Fase 8 — BigQuery legacy)
+- Formato: MP3 64kbps mono (suficiente para fala, mínimo de custo de storage)
+- Naming: `audio/{language}/{quality}/{strongs_id}.mp3`
+- CDN: Cloud CDN ou Cloudflare (gratuito para assets públicos)
+
+**Frontend — Integração:**
+- `InterlinearView`: botão 🔊 ao lado de cada palavra original
+- `WordDetailPanel`: player de áudio com seletor de camada (Tibéria / Koiné / TTS)
+- `MatthewPage` (futuro): player do Pai Nosso com 4 camadas visíveis simultaneamente
+
+**Novos módulos Python:**
+```
+src/extract/audio_sources.py      # download + validação de fontes CC-BY
+src/load/audio_loader.py          # DuckDB + GCS upload
+scripts/sync_audio_gcs.py         # sync local → bucket público
+```
+
+#### Plano de Execução
+
+| Etapa | O que fazer | Esforço |
+|-------|------------|---------|
+| **5A — Base** | Download Open Hebrew Greek MP3 (CC-BY 4.0), upload GCS, wiring no InterlinearView | 1 sessão |
+| **5B — Contato Foreman/Kantor** | Email pedindo autorização de uso CC-BY para o projeto open-source | 1 hora |
+| **5C — Pai Nosso** | Integrar Abwoon aramaic audio, criar UI de 4 camadas em Mateus 6 | 1 sessão |
+| **5D — Camada Acadêmica** | Integrar Foreman (Tibéria) + Kantor (Koiné) se autorização confirmada | 1 sessão |
+
+#### Por que isso transcende
+
+Este não é um recurso de UX. É uma ponte civilizacional.
+
+A maioria das pessoas que ora o Pai Nosso nunca ouviu o som das palavras na língua original. A maioria dos cristãos brasileiros jamais teve acesso a isso — nem em seminários, nem em faculdades de teologia. O Verbum entrega de graça o que o mundo acadêmico guardou por séculos.
+
+*"A fé vem pelo ouvir, e o ouvir pela palavra de Cristo."*
+
+---
+
 ## 📢 Comunidade
 
 | Onde | Público | Ângulo |
@@ -249,6 +361,11 @@ Competição média-baixa vs Bible Hub (UX terrível).
 | 10 | Grafo Semântico | 🔥🔥🔥🔥🔥 | ✅ Concluído | — |
 | 11 | Translation Divergence | 🔥🔥🔥🔥 | ✅ Concluído | — |
 | 12 | README + Deploy + SEO | 🔥🔥🔥 | 🔲 Planejado | — |
+| — | **FASE 5** | | | |
+| 13 | 5A — Base audio (Open HGB MP3, CC-BY) | 🔥🔥🔥🔥 | 🔲 Planejado | — |
+| 14 | 5B — Contato Foreman + Kantor | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
+| 15 | 5C — Pai Nosso em Aramaico (4 camadas) | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
+| 16 | 5D — Camada acadêmica (Tibéria + Koiné) | 🔥🔥🔥🔥🔥 | 🔲 Planejado | — |
 
 **Legenda de status:** 🔲 Planejado · 🚧 Em andamento · ⏸️ Pausado · ✅ Concluído
 
@@ -465,3 +582,15 @@ entrada lógica — sem depender da memória de conversa.
 - **Arquivos novos (1):** `pages/TranslationDivergencePage.tsx`.
 - **Modificados (4):** `semantic.py` (+ endpoint), `api.ts` (types + fetch), `App.tsx` (rota), `WordStudyPage.tsx` (link).
 - **Próxima entrada:** Tarefa #12 — README + Deploy + SEO. A última. Envolve: README v3 completo, CLAUDE.md atualizado, Docker, static Strong's pages pra SEO, e possivelmente Terraform pra GCP.
+
+### 2026-04-14 — Fase 5 formalizada: A Voz Original (Preservação Fonética)
+- **Decisão estratégica:** após pesquisa profunda de fontes, confirmado que existem fontes de qualidade acadêmica real e acessíveis para hebraico bíblico, grego Koiné e aramaico.
+- **Revisão da posição anterior:** a ressalva inicial ("TTS genérico faz mais mal que bem") foi superada. Existem fontes de reconstrução histórica rigorosa com licença aberta ou contactável.
+- **Fontes confirmadas:**
+  - Open Hebrew Greek Bible MP3 (Eliran Wong, CC-BY 4.0) — base imediata, GitHub público.
+  - Alex Foreman / Geoffrey Khan — pronúncia Tibéria reconstruída, Cambridge, CC-BY via Open Book Publishers.
+  - KoineGreek.com (Benjamin Kantor) — NT inteiro em Koiné reconstruído, licença a verificar.
+  - Abwoon Network (Dr. Neil Douglas-Klotz) — Pai Nosso em aramaico (Peshitta) com áudio livre.
+- **Modelo 3 camadas:** Camada 1 (TTS CC-BY, imediato) → Camada 2 (acadêmica, contato a fazer) → Camada 3 (legado: gravação com seminário brasileiro, CC-BY que o Verbum publica).
+- **Feature estrela:** Pai Nosso em 4 camadas simultâneas — aramaico (Jesus) + hebraico + grego Koiné + português. Nenhuma ferramenta gratuita no mundo oferece isso.
+- **Próxima entrada:** Tarefa #12 (README + Deploy + SEO) ou Tarefa #13 (5A — Base audio). A serem priorizadas na próxima sessão conforme disponibilidade de David.
