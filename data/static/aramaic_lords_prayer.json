@@ -1,0 +1,82 @@
+{
+  "passage_id": "lords_prayer",
+  "source": "Peshitta (Eastern Syriac NT)",
+  "license": "Public Domain",
+  "credit": "Peshitta NT — tradição aramáica oriental. Transliterações baseadas em Lamsa (1933) e Douglas-Klotz (Abwoon Network).",
+  "verses": [
+    {
+      "verse_ref": "MAT.6.9",
+      "verse_number": 9,
+      "words": [
+        { "word_position": 1, "script": "ܗܟܢܐ", "transliteration": "hakhana", "gloss": "assim" },
+        { "word_position": 2, "script": "ܗܟܝܠ", "transliteration": "hakhil", "gloss": "portanto" },
+        { "word_position": 3, "script": "ܨܠܘ", "transliteration": "tsalo", "gloss": "orai" },
+        { "word_position": 4, "script": "ܐܢܬܘܢ", "transliteration": "antun", "gloss": "vós" },
+        { "word_position": 5, "script": "ܐܒܘܢ", "transliteration": "Abwoon", "gloss": "Pai nosso" },
+        { "word_position": 6, "script": "ܕܒܫܡܝܐ", "transliteration": "d'bwashmaya", "gloss": "que estás nos céus" },
+        { "word_position": 7, "script": "ܢܬܩܕܫ", "transliteration": "nethqadash", "gloss": "santificado seja" },
+        { "word_position": 8, "script": "ܫܡܟ", "transliteration": "shmakh", "gloss": "teu nome" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.10",
+      "verse_number": 10,
+      "words": [
+        { "word_position": 1, "script": "ܬܐܬܐ", "transliteration": "teytey", "gloss": "venha" },
+        { "word_position": 2, "script": "ܡܠܟܘܬܟ", "transliteration": "malkuthakh", "gloss": "teu reino" },
+        { "word_position": 3, "script": "ܢܗܘܐ", "transliteration": "nehweh", "gloss": "seja feita" },
+        { "word_position": 4, "script": "ܨܒܝܢܟ", "transliteration": "tsebyanak", "gloss": "tua vontade" },
+        { "word_position": 5, "script": "ܐܝܟܢܐ", "transliteration": "aykanna", "gloss": "assim" },
+        { "word_position": 6, "script": "ܕܒܫܡܝܐ", "transliteration": "d'bwashmaya", "gloss": "nos céus" },
+        { "word_position": 7, "script": "ܐܦ", "transliteration": "aph", "gloss": "como também" },
+        { "word_position": 8, "script": "ܒܐܪܥܐ", "transliteration": "b'ar'a", "gloss": "na terra" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.11",
+      "verse_number": 11,
+      "words": [
+        { "word_position": 1, "script": "ܗܒ", "transliteration": "hab", "gloss": "dá" },
+        { "word_position": 2, "script": "ܠܢ", "transliteration": "lan", "gloss": "a nós" },
+        { "word_position": 3, "script": "ܠܚܡܐ", "transliteration": "lakhma", "gloss": "pão" },
+        { "word_position": 4, "script": "ܕܣܘܢܩܢܢ", "transliteration": "d'sunqanan", "gloss": "de nossa necessidade" },
+        { "word_position": 5, "script": "ܝܘܡܢܐ", "transliteration": "yawmana", "gloss": "hoje" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.12",
+      "verse_number": 12,
+      "words": [
+        { "word_position": 1, "script": "ܘܫܒܘܩ", "transliteration": "washbuq", "gloss": "e perdoa" },
+        { "word_position": 2, "script": "ܠܢ", "transliteration": "lan", "gloss": "a nós" },
+        { "word_position": 3, "script": "ܚܘܒܝܢ", "transliteration": "khawbayn", "gloss": "nossas dívidas" },
+        { "word_position": 4, "script": "ܐܝܟܢܐ", "transliteration": "aykanna", "gloss": "assim" },
+        { "word_position": 5, "script": "ܕܐܦ", "transliteration": "d'aph", "gloss": "como também" },
+        { "word_position": 6, "script": "ܚܢܢ", "transliteration": "khnan", "gloss": "nós" },
+        { "word_position": 7, "script": "ܫܒܩܢ", "transliteration": "shbaqan", "gloss": "perdoamos" },
+        { "word_position": 8, "script": "ܠܚܝܒܝܢ", "transliteration": "l'khayyabayn", "gloss": "aos nossos devedores" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.13",
+      "verse_number": 13,
+      "words": [
+        { "word_position": 1, "script": "ܘܠܐ", "transliteration": "wela", "gloss": "e não" },
+        { "word_position": 2, "script": "ܬܥܠܢ", "transliteration": "ta'lan", "gloss": "nos leves" },
+        { "word_position": 3, "script": "ܠܢܣܝܘܢܐ", "transliteration": "l'nesyuna", "gloss": "à tentação" },
+        { "word_position": 4, "script": "ܐܠܐ", "transliteration": "ela", "gloss": "mas" },
+        { "word_position": 5, "script": "ܦܨܢ", "transliteration": "patsan", "gloss": "livra-nos" },
+        { "word_position": 6, "script": "ܡܢ", "transliteration": "men", "gloss": "de" },
+        { "word_position": 7, "script": "ܒܝܫܐ", "transliteration": "bisha", "gloss": "o mal" },
+        { "word_position": 8, "script": "ܕܕܝܠܟ", "transliteration": "d'dilakh", "gloss": "porque tua" },
+        { "word_position": 9, "script": "ܗܝ", "transliteration": "hi", "gloss": "é" },
+        { "word_position": 10, "script": "ܡܠܟܘܬܐ", "transliteration": "malkutha", "gloss": "o reino" },
+        { "word_position": 11, "script": "ܘܚܝܠܐ", "transliteration": "w'khayla", "gloss": "e o poder" },
+        { "word_position": 12, "script": "ܘܬܫܒܘܚܬܐ", "transliteration": "w'teshbukhta", "gloss": "e a glória" },
+        { "word_position": 13, "script": "ܠܥܠܡ", "transliteration": "l'alam", "gloss": "para o século" },
+        { "word_position": 14, "script": "ܥܠܡܝܢ", "transliteration": "almin", "gloss": "dos séculos" },
+        { "word_position": 15, "script": "ܐܡܝܢ", "transliteration": "amin", "gloss": "Amém" }
+      ]
+    }
+  ]
+}

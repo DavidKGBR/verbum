@@ -69,6 +69,12 @@ body {
   font-family: 'GFS Didot', serif;
 }
 
+.font-aramaic {
+  font-family: 'Noto Sans Syriac', sans-serif;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
 /* ── Verse text styling ─────────────────────────────────────────── */
 
 .verse-text {

@@ -1,0 +1,19 @@
+{
+  "passages": [
+    {
+      "id": "lords_prayer",
+      "title": "O Pai Nosso",
+      "title_en": "The Lord's Prayer",
+      "reference": "Mateus 6:9-13",
+      "badge": "Destaque",
+      "description": "A oração que Jesus ensinou — em 4 tradições simultâneas",
+      "layers": ["aramaic", "greek", "portuguese", "english"],
+      "layer_notes": {
+        "aramaic": "Peshitta — a língua que Jesus falava (Aramaico galileu, séc. I)",
+        "greek": "SBLGNT — texto grego original do NT (Koiné, séc. I)",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      }
+    }
+  ]
+}

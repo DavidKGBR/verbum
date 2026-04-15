@@ -183,6 +183,7 @@ class CrossRefStats(BaseModel):
 class StrongsLanguage(str, Enum):
     HEBREW = "hebrew"
     GREEK = "greek"
+    ARAMAIC = "aramaic"
 
 
 class StrongsEntry(BaseModel):

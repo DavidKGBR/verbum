@@ -648,6 +648,57 @@ class DuckDBLoader:
         logger.info(f"✅ Loaded {count} dictionary entries")
         return count
 
+    def _ensure_aramaic_verses_table(self) -> None:
+        """Create the aramaic_verses table for Special Passages seed data."""
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS aramaic_verses (
+                passage_id      VARCHAR NOT NULL,
+                verse_ref       VARCHAR NOT NULL,
+                verse_number    INTEGER NOT NULL,
+                word_position   INTEGER NOT NULL,
+                script          VARCHAR NOT NULL,
+                transliteration VARCHAR,
+                gloss           VARCHAR,
+                audio_url       VARCHAR,
+                source          VARCHAR NOT NULL DEFAULT 'peshitta',
+                PRIMARY KEY (passage_id, verse_ref, word_position)
+            );
+        """)
+        self.conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_aramaic_passage "
+            "ON aramaic_verses(passage_id, verse_ref);"
+        )
+
+    def load_aramaic_verses(self, df: pd.DataFrame, passage_id: str) -> int:
+        """Load (or refresh) Aramaic word data for a given passage.
+
+        Scoped DELETE by passage_id — loading lords_prayer doesn't
+        affect other passages added later.
+        """
+        if df.empty:
+            return 0
+        self._ensure_aramaic_verses_table()
+        logger.info(f"📜 Loading {len(df)} Aramaic words for '{passage_id}'...")
+        self.conn.execute(
+            "DELETE FROM aramaic_verses WHERE passage_id = ?;", [passage_id]
+        )
+        self.conn.execute("""
+            INSERT INTO aramaic_verses (
+                passage_id, verse_ref, verse_number, word_position,
+                script, transliteration, gloss, audio_url, source
+            )
+            SELECT
+                passage_id, verse_ref, verse_number, word_position,
+                script, transliteration, gloss, audio_url, source
+            FROM df
+        """)
+        count_row = self.conn.execute(
+            "SELECT COUNT(*) FROM aramaic_verses WHERE passage_id = ?", [passage_id]
+        ).fetchone()
+        count = count_row[0] if count_row else 0
+        logger.info(f"✅ Loaded {count} Aramaic words for '{passage_id}'")
+        return count
+
     def log_pipeline_run(
         self,
         run_id: str,

@@ -82,6 +82,8 @@ export default function AudioButton({
   const hasMp3 = Boolean(audioUrl);
   const isPlaying = hasMp3 ? mp3Playing : speechPlaying;
 
+  // Aramaic: no TTS available + no MP3 yet → hide button entirely
+  if (language === "aramaic" && !hasMp3) return null;
   if (!hasMp3 && !isSupported) return null;
 
   const handleClick = hasMp3

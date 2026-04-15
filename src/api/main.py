@@ -32,6 +32,7 @@ from src.api.routers import (
     reader,
     search,
     semantic,
+    special_passages,
     structure,
     threads,
     timeline,
@@ -68,6 +69,7 @@ app.include_router(places.router, prefix="/api/v1", tags=["Places"])
 app.include_router(timeline.router, prefix="/api/v1", tags=["Timeline"])
 app.include_router(compare.router, prefix="/api/v1", tags=["Compare"])
 app.include_router(topics.router, prefix="/api/v1", tags=["Topics"])
+app.include_router(special_passages.router, prefix="/api/v1", tags=["Special Passages"])
 app.include_router(devotional.router, prefix="/api/v1", tags=["Devotional"])
 app.include_router(deep_analytics.router, prefix="/api/v1", tags=["Deep Analytics"])
 app.include_router(intertextuality.router, prefix="/api/v1", tags=["Intertextuality"])

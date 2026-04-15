@@ -26,6 +26,7 @@ import ThreadsPage from "./pages/ThreadsPage";
 import StructurePage from "./pages/StructurePage";
 import EmotionalLandscapePage from "./pages/EmotionalLandscapePage";
 import CommunityPage from "./pages/CommunityPage";
+import SpecialPassagePage from "./pages/SpecialPassagePage";
 
 export default function App() {
   return (
@@ -57,6 +58,8 @@ export default function App() {
         <Route path="/structure" element={<StructurePage />} />
         <Route path="/emotional" element={<EmotionalLandscapePage />} />
         <Route path="/community" element={<CommunityPage />} />
+        <Route path="/special-passages" element={<SpecialPassagePage />} />
+        <Route path="/special-passages/:passageId" element={<SpecialPassagePage />} />
       </Route>
     </Routes>
   );

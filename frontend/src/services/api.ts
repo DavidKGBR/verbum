@@ -1289,3 +1289,67 @@ export async function explainVerse(
   }
   return res.json();
 }
+
+// ── Special Passages ──────────────────────────────────────────────────────────
+export type PassageLayerKey = "aramaic" | "greek" | "portuguese" | "english";
+
+export interface PassageWord {
+  word_position: number;
+  script: string;
+  transliteration: string | null;
+  gloss: string | null;
+  audio_url: string | null;
+  strongs_id: string | null;
+}
+
+export interface PassageVerse {
+  verse_ref: string;
+  verse_number: number;
+  words?: PassageWord[];
+  full_text?: string;
+}
+
+export interface PassageLayer {
+  label: string;
+  language_code: string;
+  direction: "rtl" | "ltr";
+  source: string;
+  audio_note: string | null;
+  verse_count: number;
+  verses: PassageVerse[];
+}
+
+export interface SpecialPassageResult {
+  id: string;
+  title: string;
+  title_en: string;
+  reference: string;
+  translation: string;
+  translation_en: string;
+  layers: Record<PassageLayerKey, PassageLayer>;
+}
+
+export interface SpecialPassageMeta {
+  id: string;
+  title: string;
+  title_en?: string;
+  reference: string;
+  badge?: string;
+  description?: string;
+  layers: PassageLayerKey[];
+}
+
+export function fetchSpecialPassageCatalog(): Promise<{ passages: SpecialPassageMeta[] }> {
+  return fetchJson(`${BASE}/special-passages/catalog`);
+}
+
+export function fetchSpecialPassage(
+  passageId: string,
+  translation = "nvi",
+  translationEn = "kjv",
+): Promise<SpecialPassageResult> {
+  return fetchJson(
+    `${BASE}/special-passages/${passageId}?translation=${translation}&translation_en=${translationEn}`,
+  );
+}
+

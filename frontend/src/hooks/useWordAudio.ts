@@ -11,12 +11,14 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export type BiblicalLanguage = "hebrew" | "greek";
+export type BiblicalLanguage = "hebrew" | "greek" | "aramaic";
 
-/** BCP-47 language tags tentados em ordem de preferência. */
+/** BCP-47 language tags tentados em ordem de preferência.
+ *  Aramaic: empty — no TTS voice available; AudioButton will hide itself. */
 const VOICE_LANGS: Record<BiblicalLanguage, string[]> = {
-  hebrew: ["he-IL", "he"],
-  greek:  ["el-GR", "el"],
+  hebrew:  ["he-IL", "he"],
+  greek:   ["el-GR", "el"],
+  aramaic: [],   // Syriac TTS not available — audio_url from server when ready
 };
 
 function findVoice(language: BiblicalLanguage): SpeechSynthesisVoice | null {
