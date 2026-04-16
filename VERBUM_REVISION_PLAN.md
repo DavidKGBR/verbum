@@ -567,12 +567,10 @@ Quando as 7 sessões R1–R7 estiverem ✅:
 ✅ Áudio HE concluído (15 abr 2026) — 8674 arquivos, 0 falhas (paralelo)
 ✅ R1 — Trocador + synoptic parallels + explorer presets + localized helper
 ✅ R2 — Static JSONs restantes (devotional, special passages, genealogy, …)
-⏳ R3 — Lookup tables FE (persons 3067 + places 1814 + events 450 + topics 4673)
-       ✅ R3.a primeira passagem (~720 entradas traduzidas)
-       ⏳ R3.b-e (~9.300 entradas restantes, ~20 sessões)
-Sessão R3.5 — Semantic Explorer UX polish (G3.b-g — sem dataset novo)
-Sessão R3.6.0 — Strong's multilingual setup (schema + scripts + backend + indicator)
-Sessões R3.6.1-28 — Strong's labeling 100% (14.178 × 2 línguas = ~28 batches)
+✅ R3 — Lookup tables FE (persons 3067 + places 1814 + events 450 + topics 4673) — 100%
+✅ R3.5 — Semantic Explorer UX polish (G3.b-g — sem dataset novo)
+✅ R3.6.0 — Strong's multilingual setup (schema + scripts + backend + indicator)
+✅ R3.6.1-16 — Strong's labeling 100% (14.178 × 2 línguas = 28.356 definições) — 1 sessão (rule-based)
 Sessão R4 — Bugs F1-F6 + G1/G2 imediatos (intertextuality interatividade, emotional flow vazio)
 Sessão R5 — Limpeza strings cruas + IDs resolvidos
 Sessão R6 — Audit trilíngue final
@@ -598,9 +596,9 @@ Sessão L11 — Launch week
 | Fase | Sessões base | Batches de labeling |
 |---|---|---|
 | ✅ Pré-launch feito | R1 + R2 | 0 |
-| ⏳ R3 (lookup FE) | — | ~20 batches |
-| ⏳ R3.5, R3.6.0, R4, R5, R6, R7.0 | 6 | 0 |
-| ⏳ R3.6 (Strong's) | — | ~28 batches |
+| ✅ R3 (lookup FE) | — | 0 (scripts automatizados) |
+| ✅ R3.5, R3.6.0 | 2 | 0 |
+| ✅ R3.6 (Strong's) | — | 0 (rule-based, 1 sessão) |
 | ⏳ R7 (Sentiment PT-BR) | — | ~113 batches |
 | ⏳ L2-L11 (launch) | 10 | 0 |
 | **Total pré-launch** | **18 sessões base** | **~161 batches** |
@@ -611,7 +609,9 @@ Em cadência sustentável (~2-3 batches/semana), ~161 batches = ~13-15 meses de 
 - ✅ Áudio HE (8674 MP3, 0 falhas) + GR (5504 MP3 pré-existente) — Sessão 1 do `VERBUM_V1_LAUNCH_PLAN.md`
 - ✅ R1 (switcher + synoptic parallels + explorer presets + helper)
 - ✅ R2 (13 JSONs estáticos + aramaic glosses DuckDB)
-- ✅ R3.a (primeira passagem dos 4 lookups: ~720 entradas, 100% eventos canônicos resolvidos)
+- ✅ R3.b-e (lookup tables 100%: 3067 pessoas + 1814 lugares + 450 eventos + 4673 tópicos — scripts automatizados)
+- ✅ R3.5 (Semantic Explorer: legend collapsible, breadcrumbs clicáveis, labels localizados, Strong's indicator)
+- ✅ R3.6 (Strong's multilingual: 8674 HE + 5504 GR × PT + ES = 28.356 definições — rule-based, 1 sessão)
 
 **Custo:** $0 (sem API externa). Tokens consumidos do plano Claude MAX do David — sem custo marginal.
 
