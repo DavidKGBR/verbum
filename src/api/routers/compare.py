@@ -49,28 +49,51 @@ def _parse_range(range_str: str) -> tuple[str, int, int, int, int] | None:
 
 
 def _fetch_passage(conn: object, range_str: str, translation: str) -> list[dict]:
-    """Fetch verses for a range like 'MAT.26.17-MAT.26.30'."""
+    """Fetch verses for a range like 'MAT.26.17-MAT.26.30'.
+
+    Handles single-chapter ranges (ch_start == ch_end) and multi-chapter
+    ranges separately. The previous combined-OR query was buggy for
+    single-chapter ranges: when ch_start == ch_end, the two boundary
+    branches (verse >= vs_start) and (verse <= vs_end) union into the
+    entire chapter — e.g. MAT.3.13-3.17 returned all 17 verses of MAT 3.
+    """
     parsed = _parse_range(range_str)
     if not parsed:
         return []
     book_id, ch_start, vs_start, ch_end, vs_end = parsed
 
-    # Build query for potentially multi-chapter ranges
-    df = conn.execute(  # type: ignore[attr-defined]
-        """
-        SELECT verse_id, book_name, chapter, verse, text
-        FROM verses
-        WHERE book_id = ?
-          AND translation_id = ?
-          AND (
-            (chapter = ? AND verse >= ?)
-            OR (chapter > ? AND chapter < ?)
-            OR (chapter = ? AND verse <= ?)
-          )
-        ORDER BY chapter, verse
-        """,
-        [book_id, translation, ch_start, vs_start, ch_start, ch_end, ch_end, vs_end],
-    ).fetchdf()
+    if ch_start == ch_end:
+        # Single chapter — simple AND'd bounds
+        df = conn.execute(  # type: ignore[attr-defined]
+            """
+            SELECT verse_id, book_name, chapter, verse, text
+            FROM verses
+            WHERE book_id = ?
+              AND translation_id = ?
+              AND chapter = ?
+              AND verse >= ?
+              AND verse <= ?
+            ORDER BY verse
+            """,
+            [book_id, translation, ch_start, vs_start, vs_end],
+        ).fetchdf()
+    else:
+        # Multi-chapter — three disjoint branches
+        df = conn.execute(  # type: ignore[attr-defined]
+            """
+            SELECT verse_id, book_name, chapter, verse, text
+            FROM verses
+            WHERE book_id = ?
+              AND translation_id = ?
+              AND (
+                (chapter = ? AND verse >= ?)
+                OR (chapter > ? AND chapter < ?)
+                OR (chapter = ? AND verse <= ?)
+              )
+            ORDER BY chapter, verse
+            """,
+            [book_id, translation, ch_start, vs_start, ch_start, ch_end, ch_end, vs_end],
+        ).fetchdf()
 
     return df.to_dict(orient="records")
 
