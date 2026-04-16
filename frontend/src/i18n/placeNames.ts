@@ -1852,6 +1852,15 @@ const PLACES: Record<string, PlaceEntry> = {
   "zobah-hamath_1273": { pt: "Zobá-Hamate", es: "Soba-Hamat" },
   zophim_1274: { pt: "Zofim", es: "Zofim" },
   zuph_1276: { pt: "Zufe", es: "Zuf" },
+  "herod\u2019s_palace": { pt: "Palácio de Herodes", es: "Palacio de Herodes" },
+  "solomon\u2019s_portico": { pt: "Pórtico de Salomão", es: "Pórtico de Salomón" },
+  "the_diviners\u2019_oak": { pt: "Carvalho dos Adivinhos", es: "Encina de los adivinos" },
+  "the_king\u2019s_highway": { pt: "o Caminho Real", es: "el Camino Real" },
+  "the_king\u2019s_valley": { pt: "o Vale do Rei", es: "el Valle del Rey" },
+  "the_people\u2019s_gate": { pt: "a Porta do Povo", es: "la Puerta del Pueblo" },
+  "the_serpent\u2019s_stone": { pt: "a Pedra da Serpente", es: "la Piedra de la Serpiente" },
+  "the_washer\u2019s_field": { pt: "o Campo do Lavandeiro", es: "el Campo del Lavandero" },
+  "the_wildgoats\u2019_rocks": { pt: "as Rochas das Cabras Montesas", es: "las Rocas de las Cabras Montesas" },
 };
 
 // ─── Helper functions ────────────────────────────────────────────────────────
