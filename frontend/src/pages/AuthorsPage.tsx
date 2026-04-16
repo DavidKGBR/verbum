@@ -409,17 +409,28 @@ function AuthorTimeline({ authors }: { authors: Author[] }) {
         {t("authors.historicalTimeline")}
       </h4>
 
-      {/* Era markers */}
+      {/* Era markers — alignment adjusts at edges so labels don't overflow the container */}
       <div className="relative h-4 mb-1">
-        {eras.map((era) => (
-          <span
-            key={era.label}
-            className="absolute text-[8px] uppercase tracking-wider opacity-30 -translate-x-1/2"
-            style={{ left: `${yearToPercent(era.year)}%` }}
-          >
-            {era.label}
-          </span>
-        ))}
+        {eras.map((era) => {
+          const leftPct = yearToPercent(era.year);
+          // Near the left edge: left-align. Near the right edge: right-align.
+          // Middle: centered (the classic translateX(-50%) behavior).
+          const transform =
+            leftPct <= 5
+              ? "translateX(0%)"
+              : leftPct >= 95
+                ? "translateX(-100%)"
+                : "translateX(-50%)";
+          return (
+            <span
+              key={era.label}
+              className="absolute text-[8px] uppercase tracking-wider opacity-30 whitespace-nowrap"
+              style={{ left: `${leftPct}%`, transform }}
+            >
+              {era.label}
+            </span>
+          );
+        })}
       </div>
 
       {/* Timeline bar */}
