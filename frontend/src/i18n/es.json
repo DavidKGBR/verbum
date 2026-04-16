@@ -502,7 +502,6 @@
   "specialPassage.badge.apocalypse": "Apocalipsis",
   "specialPassage.badge.wisdom": "Sabiduría",
   "specialPassage.badge.sermon": "Sermón",
-
   "intertextuality.title": "Intertextualidad",
   "intertextuality.subtitle": "Explora cómo el Antiguo y el Nuevo Testamento se citan mutuamente — mediante mapas de calor y grafos de conexiones.",
   "intertextuality.tab.heatmap": "Mapa de Citas",
@@ -513,7 +512,6 @@
   "intertextuality.heatmap.tooltip": "{ot} → {nt}: {count} refs",
   "intertextuality.graph.loading": "Cargando grafo de citas...",
   "intertextuality.graph.summary": "Principales pares AT→NT por número de conexiones ({total} citas en total)",
-
   "questions.title": "Preguntas Abiertas",
   "questions.subtitle": "Pasajes sin resolver y enigmas interpretativos que los estudiosos siguen debatiendo.",
   "questions.filterAll": "Todas",
@@ -531,7 +529,6 @@
   "openQuestions.difficulty.beginner": "Principiante",
   "openQuestions.difficulty.intermediate": "Intermedio",
   "openQuestions.difficulty.advanced": "Avanzado",
-
   "graph.title": "Grafo Semántico",
   "graph.subtitle": "Visualiza una palabra y sus vecinos semánticos más fuertes — palabras que coinciden con ella en muchos versículos.",
   "graph.loadError": "Error al cargar el grafo. Verifica el ID de Strong.",
@@ -545,7 +542,6 @@
   "graph.legendCenter": "Centro",
   "graph.legendHebrew": "Hebreo",
   "graph.legendGreek": "Griego",
-
   "structure.title": "Estructura Literaria",
   "structure.subtitle": "La Biblia hebrea se compuso para la tradición oral con arquitecturas matemáticas ocultas — quiasmos, paralelismos e inclusiones que la tipografía moderna borra.",
   "structure.filterAll": "Todas ({n})",
@@ -567,7 +563,6 @@
   "structure.elements": "{n} elementos",
   "structure.openStructural": "Abrir en modo Estructural",
   "structure.footerNote": "Estructuras basadas en análisis académico — no exhaustivas. Se añadirán más patrones continuamente.",
-
   "threads.title": "Hilos Semánticos",
   "threads.subtitle": "Cadenas de versículos unidos por vocabulario compartido a lo largo de varios libros — temas teológicos entretejidos en la Escritura.",
   "threads.minBooks": "Mín. libros:",
@@ -582,7 +577,6 @@
   "threads.tooltipStrength": "Fuerza: {score}",
   "threads.loadingThread": "Cargando hilo...",
   "threads.moreVerses": "... y {n} versículos más",
-
   "divergence.title": "Divergencia entre Traducciones",
   "divergence.subtitle": "Observa cómo distintas traducciones presentan la misma palabra hebrea/griega, una junto a la otra. Revela decisiones teológicas y estilísticas.",
   "divergence.strongsLabel": "ID de Strong",
@@ -593,7 +587,6 @@
   "divergence.refHeader": "Ref",
   "divergence.noVerses": "No se encontraron versículos para {id} en las traducciones seleccionadas.",
   "divergence.emptyHint": "Introduce un ID de Strong y pulsa Comparar para ver cómo difieren las traducciones.",
-
   "ai.header": "Explicación por IA",
   "ai.generateBtn": "Generar explicación",
   "ai.poweredBy": "Con tecnología Gemini · En caché en el backend",
@@ -603,7 +596,6 @@
   "ai.section.context": "Contexto Histórico",
   "ai.section.keyWords": "Palabras Clave",
   "ai.section.application": "Aplicación",
-
   "devotional.title": "Devocional",
   "devotional.subtitle": "Planes devocionales guiados con lecturas diarias y preguntas reflexivas.",
   "devotional.day": "{n} día",
@@ -613,10 +605,8 @@
   "devotional.loadingPlan": "Cargando plan...",
   "devotional.loadingReading": "Cargando lectura...",
   "devotional.noVerses": "Versículos no disponibles para esta traducción.",
-  "devotional.reflection": "Reflexión",
   "devotional.previousDay": "← Día Anterior",
   "devotional.nextDay": "Día Siguiente →",
-
   "genealogy.title": "Genealogía Semántica",
   "genealogy.subtitle": "El Hilo de Ariadna — rastrea cómo los conceptos clave viajan del hebreo al griego a través de los testamentos. Cada palabra carga siglos de revelación progresiva.",
   "genealogy.breadcrumb": "Genealogía Semántica",
@@ -625,7 +615,6 @@
   "genealogy.stats.testaments": "AT → NT",
   "genealogy.footerNote": "Basado en evidencias lingüísticas, LXX, papiros del Mar Muerto y análisis lexical STEPBible. Cada puente es una elección interpretativa — no dogmática.",
   "genealogy.loadError": "Error al cargar el concepto.",
-
   "verseActions.btn.crossrefs": "Referencias",
   "verseActions.btn.explain": "Explicar",
   "verseActions.btn.commentary": "Comentario",
@@ -647,14 +636,12 @@
   "verseActions.crossrefs.more": "+ {n} más",
   "verseActions.compare.loading": "Cargando traducciones...",
   "verseActions.compare.none": "No se encontraron traducciones.",
-
   "audio.tooltipMp3": "Escuchar pronunciación (Neural2 — Google TTS)",
   "audio.tooltipSpeech": "Escuchar pronunciación (síntesis de voz — {locale})",
   "audio.ariaPlaying": "Reproduciendo...",
   "audio.ariaListen": "Escuchar pronunciación",
   "audio.labelListen": "Escuchar",
   "audio.labelPlaying": "Reproduciendo...",
-
   "lexicon.header": "Léxico · {language}",
   "lexicon.searching": "Buscando en el léxico...",
   "lexicon.definition": "Definición",
@@ -671,7 +658,6 @@
   "lexicon.journey.meanings": "Significados:",
   "lexicon.journey.books": "Libros:",
   "lexicon.journey.eraTooltip": "{era}: {n} apariciones",
-
   "notes.editor.label": "Nota",
   "notes.editor.placeholder": "Anota un pensamiento, pregunta o conexión…",
   "notes.editor.lastEdit": "Última edición: {when}",
@@ -681,25 +667,29 @@
   "notes.highlight.activeAria": "Resaltado {category} (activo)",
   "notes.highlight.aria": "Resaltado {category}",
   "notes.highlight.clear": "Quitar resaltado",
-
   "sharing.shareVerse": "Compartir Versículo",
   "sharing.close": "Cerrar",
   "sharing.copyClipboard": "Copiar al portapapeles",
   "sharing.copied": "¡Copiado!",
   "sharing.downloadPng": "Descargar PNG",
-
   "commentary.label": "Comentario",
   "commentary.loadingCommentator": "Cargando {name}...",
   "commentary.notAvailable": "Comentario no disponible para este pasaje.",
   "commentary.onVerse": "{name} sobre el versículo {n}",
   "commentary.onVerseRange": "{name} sobre los versículos {a}–{b}",
   "commentary.noneFound": "No se encontró comentario para el versículo {n} en {name}.",
-
   "passageWord.closeAria": "Cerrar",
   "passageWord.meaning": "Significado",
   "passageWord.source": "Fuente",
   "passageWord.source.aramaic": "Peshitta — Arameo Siríaco",
   "passageWord.source.hebrew": "WLC — Texto Masorético",
   "passageWord.source.greek": "SBLGNT — Griego Koiné",
-  "passageWord.aramaicAudioNote": "Pronunciación vía proxy Árabe (fonética Semítica aproximada)."
+  "passageWord.aramaicAudioNote": "Pronunciación vía proxy Árabe (fonética Semítica aproximada).",
+  "intertextuality.heatmap.minRefs": "Mínimo de refs por par",
+  "intertextuality.heatmap.clickHint": "Haz clic en una celda para ver las referencias.",
+  "intertextuality.panel.title": "Referencias cruzadas",
+  "intertextuality.panel.loading": "Cargando referencias...",
+  "intertextuality.panel.empty": "Sin referencias cruzadas para este par.",
+  "intertextuality.panel.showing": "Mostrando {shown} de {total}",
+  "intertextuality.panel.close": "Cerrar"
 }

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   fetchCitationHeatmap,
+  fetchCrossrefsBetween,
   fetchOtNtQuotations,
+  type DetailedCrossRef,
   type HeatmapCell,
   type QuotationEdge,
 } from "../services/api";
@@ -49,6 +52,8 @@ function HeatmapTab() {
   const [otBooks, setOtBooks] = useState<string[]>([]);
   const [ntBooks, setNtBooks] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [minRefs, setMinRefs] = useState(1);
+  const [selectedPair, setSelectedPair] = useState<{ ot: string; nt: string } | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -73,60 +78,207 @@ function HeatmapTab() {
   });
 
   return (
-    <div className="overflow-x-auto">
-      <table className="text-[10px] border-collapse">
-        <thead>
-          <tr>
-            <th className="p-1 sticky left-0 bg-white z-10">
-              {t("intertextuality.heatmap.otAxis")} \ {t("intertextuality.heatmap.ntAxis")}
-            </th>
-            {ntBooks.map((nt) => (
+    <div>
+      {/* Filter + hint row */}
+      <div className="flex flex-wrap items-center gap-4 mb-4 text-xs">
+        <label className="flex items-center gap-2">
+          <span className="opacity-60">{t("intertextuality.heatmap.minRefs")}:</span>
+          <input
+            type="range"
+            min={1}
+            max={Math.min(50, maxCount)}
+            value={minRefs}
+            onChange={(e) => setMinRefs(Number(e.target.value))}
+            className="accent-[var(--color-gold)]"
+          />
+          <span className="tabular-nums font-bold w-7 text-right">{minRefs}</span>
+        </label>
+        <span className="opacity-40 italic">{t("intertextuality.heatmap.clickHint")}</span>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="text-[10px] border-collapse">
+          <thead>
+            <tr>
+              {/* Corner cell — same height as rotated headers, diagonal divider for clarity */}
               <th
-                key={nt}
-                className="p-1 font-normal -rotate-45 origin-bottom-left h-16 whitespace-nowrap"
+                className="sticky left-0 top-0 bg-white z-20 h-16 align-bottom p-1 whitespace-nowrap
+                           border-b border-[var(--color-gold-dark)]/10"
               >
-                {nt}
+                <div className="flex justify-between items-end h-full">
+                  <span className="text-[9px] opacity-60">
+                    {t("intertextuality.heatmap.otAxis")}
+                  </span>
+                  <span className="text-[9px] opacity-60 self-start">
+                    {t("intertextuality.heatmap.ntAxis")}
+                  </span>
+                </div>
               </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {otBooks.map((ot) => (
-            <tr key={ot}>
-              <td className="p-1 font-medium sticky left-0 bg-white z-10 whitespace-nowrap">
-                {ot}
-              </td>
-              {ntBooks.map((nt) => {
-                const count = lookup[`${ot}-${nt}`] || 0;
-                const intensity = count > 0 ? Math.max(0.1, count / maxCount) : 0;
-                return (
-                  <td
-                    key={nt}
-                    className="p-0 w-5 h-5"
-                    title={
-                      count > 0
-                        ? t("intertextuality.heatmap.tooltip")
-                            .replace("{ot}", ot)
-                            .replace("{nt}", nt)
-                            .replace("{count}", String(count))
-                        : ""
-                    }
-                  >
-                    {count > 0 && (
-                      <div
-                        className="w-full h-full"
-                        style={{
-                          backgroundColor: `rgba(196, 162, 101, ${intensity})`,
-                        }}
-                      />
-                    )}
-                  </td>
-                );
-              })}
+              {ntBooks.map((nt) => (
+                <th
+                  key={nt}
+                  className="p-1 font-normal -rotate-45 origin-bottom-left h-16 whitespace-nowrap"
+                >
+                  {nt}
+                </th>
+              ))}
             </tr>
+          </thead>
+          <tbody>
+            {otBooks.map((ot) => (
+              <tr key={ot}>
+                <td className="p-1 font-medium sticky left-0 bg-white z-10 whitespace-nowrap">
+                  {ot}
+                </td>
+                {ntBooks.map((nt) => {
+                  const count = lookup[`${ot}-${nt}`] || 0;
+                  const intensity = count > 0 ? Math.max(0.1, count / maxCount) : 0;
+                  const passesFilter = count >= minRefs;
+                  const visible = count > 0 && passesFilter;
+                  return (
+                    <td
+                      key={nt}
+                      className={`p-0 w-5 h-5 ${
+                        visible ? "cursor-pointer hover:outline hover:outline-2 hover:outline-[var(--color-gold)]" : ""
+                      }`}
+                      title={
+                        count > 0
+                          ? t("intertextuality.heatmap.tooltip")
+                              .replace("{ot}", ot)
+                              .replace("{nt}", nt)
+                              .replace("{count}", String(count))
+                          : ""
+                      }
+                      onClick={visible ? () => setSelectedPair({ ot, nt }) : undefined}
+                    >
+                      {visible && (
+                        <div
+                          className="w-full h-full"
+                          style={{
+                            backgroundColor: `rgba(196, 162, 101, ${intensity})`,
+                          }}
+                        />
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {selectedPair && (
+        <CrossRefPanel
+          sourceBook={selectedPair.ot}
+          targetBook={selectedPair.nt}
+          totalCount={lookup[`${selectedPair.ot}-${selectedPair.nt}`] || 0}
+          onClose={() => setSelectedPair(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+// ─── Cross-reference panel ───────────────────────────────────────────────────
+
+interface CrossRefPanelProps {
+  sourceBook: string;
+  targetBook: string;
+  totalCount: number;
+  onClose: () => void;
+}
+
+function CrossRefPanel({ sourceBook, targetBook, totalCount, onClose }: CrossRefPanelProps) {
+  const { t } = useI18n();
+  const [refs, setRefs] = useState<DetailedCrossRef[]>([]);
+  const [loading, setLoading] = useState(true);
+  const LIMIT = 50;
+
+  useEffect(() => {
+    setLoading(true);
+    setRefs([]);
+    fetchCrossrefsBetween(sourceBook, targetBook, LIMIT)
+      .then((d) => setRefs(d.crossrefs))
+      .catch(() => setRefs([]))
+      .finally(() => setLoading(false));
+  }, [sourceBook, targetBook]);
+
+  return (
+    <div
+      className="fixed inset-y-0 right-0 w-full md:w-[480px] bg-[var(--color-parchment)]
+                 shadow-[0_0_40px_rgba(0,0,0,0.15)] border-l border-[var(--color-gold)]/30
+                 p-6 overflow-y-auto z-50 flex flex-col fade-in"
+    >
+      <div className="flex justify-between items-start mb-4 pt-2">
+        <div>
+          <span className="text-[10px] font-bold tracking-widest text-[var(--color-gold-dark)] uppercase">
+            {t("intertextuality.panel.title")}
+          </span>
+          <h2 className="text-2xl font-display mt-1">
+            <span className="text-amber-800">{sourceBook}</span>
+            <span className="opacity-30 mx-2">→</span>
+            <span className="text-blue-800">{targetBook}</span>
+          </h2>
+          <p className="text-[11px] opacity-50 mt-1">
+            {t("intertextuality.panel.showing")
+              .replace("{shown}", String(Math.min(refs.length, LIMIT)))
+              .replace("{total}", String(totalCount))}
+          </p>
+        </div>
+        <button
+          onClick={onClose}
+          className="text-3xl leading-none font-display font-light text-[var(--color-gold-dark)]
+                     opacity-50 hover:opacity-100 transition"
+          aria-label={t("intertextuality.panel.close")}
+        >
+          ×
+        </button>
+      </div>
+
+      {loading ? (
+        <div className="flex-1 flex items-center justify-center">
+          <LoadingSpinner text={t("intertextuality.panel.loading")} />
+        </div>
+      ) : refs.length === 0 ? (
+        <p className="text-sm italic opacity-50">{t("intertextuality.panel.empty")}</p>
+      ) : (
+        <ul className="space-y-4">
+          {refs.map((r) => (
+            <li
+              key={`${r.source_verse_id}-${r.target_verse_id}`}
+              className="text-[13px] font-body leading-relaxed border-l-2 border-[var(--color-gold)]/30 pl-3"
+            >
+              <div className="flex items-center justify-between gap-2 mb-1">
+                <Link
+                  to={`/reader?book=${r.source_verse_id.split(".")[0]}&chapter=${r.source_verse_id.split(".")[1]}&verse=${r.source_verse_id.split(".")[2]}`}
+                  className="text-xs font-sans font-bold text-amber-800 hover:underline"
+                >
+                  {r.source_ref ?? r.source_verse_id}
+                </Link>
+                <span className="opacity-30 text-xs">→</span>
+                <Link
+                  to={`/reader?book=${r.target_verse_id.split(".")[0]}&chapter=${r.target_verse_id.split(".")[1]}&verse=${r.target_verse_id.split(".")[2]}`}
+                  className="text-xs font-sans font-bold text-blue-800 hover:underline"
+                >
+                  {r.target_ref ?? r.target_verse_id}
+                </Link>
+              </div>
+              {r.source_text && (
+                <p className="italic opacity-80 mb-1">"{r.source_text}"</p>
+              )}
+              {r.target_text && (
+                <p className="text-[var(--color-ink)]/90">"{r.target_text}"</p>
+              )}
+              {r.votes > 1 && (
+                <span className="text-[10px] opacity-40 mt-1 block">
+                  {r.votes} votes · {r.reference_type}
+                </span>
+              )}
+            </li>
           ))}
-        </tbody>
-      </table>
+        </ul>
+      )}
     </div>
   );
 }

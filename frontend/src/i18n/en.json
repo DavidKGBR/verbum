@@ -502,7 +502,6 @@
   "specialPassage.badge.apocalypse": "Apocalypse",
   "specialPassage.badge.wisdom": "Wisdom",
   "specialPassage.badge.sermon": "Sermon",
-
   "intertextuality.title": "Intertextuality",
   "intertextuality.subtitle": "Explore how the Old and New Testaments cite each other — through heatmaps and network graphs.",
   "intertextuality.tab.heatmap": "Citation Heatmap",
@@ -513,7 +512,6 @@
   "intertextuality.heatmap.tooltip": "{ot} → {nt}: {count} refs",
   "intertextuality.graph.loading": "Loading citation graph...",
   "intertextuality.graph.summary": "Top OT→NT cross-reference pairs by number of connections ({total} total citations)",
-
   "questions.title": "Open Questions",
   "questions.subtitle": "Unresolved passages and interpretive puzzles scholars still debate.",
   "questions.filterAll": "All",
@@ -531,7 +529,6 @@
   "openQuestions.difficulty.beginner": "Beginner",
   "openQuestions.difficulty.intermediate": "Intermediate",
   "openQuestions.difficulty.advanced": "Advanced",
-
   "graph.title": "Semantic Graph",
   "graph.subtitle": "Visualize a word and its strongest semantic neighbors — words that co-occur with it across many verses.",
   "graph.loadError": "Failed to load graph. Check the Strong's ID.",
@@ -545,7 +542,6 @@
   "graph.legendCenter": "Center",
   "graph.legendHebrew": "Hebrew",
   "graph.legendGreek": "Greek",
-
   "structure.title": "Literary Structure",
   "structure.subtitle": "The Hebrew Bible was composed for oral tradition with hidden mathematical architectures — chiasms, parallelisms, and inclusios that modern typography erases.",
   "structure.filterAll": "All ({n})",
@@ -567,7 +563,6 @@
   "structure.elements": "{n} elements",
   "structure.openStructural": "Open in Structural mode",
   "structure.footerNote": "Structures based on academic analysis — not exhaustive. More patterns added continuously.",
-
   "threads.title": "Semantic Threads",
   "threads.subtitle": "Chains of verses linked by shared vocabulary across multiple books — theological themes woven through Scripture.",
   "threads.minBooks": "Min books:",
@@ -582,7 +577,6 @@
   "threads.tooltipStrength": "Strength: {score}",
   "threads.loadingThread": "Loading thread...",
   "threads.moreVerses": "... and {n} more verses",
-
   "divergence.title": "Translation Divergence",
   "divergence.subtitle": "See how different translations render the same Hebrew/Greek word side by side. Reveals theological and stylistic choices.",
   "divergence.strongsLabel": "Strong's ID",
@@ -593,7 +587,6 @@
   "divergence.refHeader": "Ref",
   "divergence.noVerses": "No verses found for {id} in the selected translations.",
   "divergence.emptyHint": "Enter a Strong's ID and click Compare to see how translations differ.",
-
   "ai.header": "AI Explanation",
   "ai.generateBtn": "Generate explanation",
   "ai.poweredBy": "Powered by Gemini · Cached on backend",
@@ -603,7 +596,6 @@
   "ai.section.context": "Historical Context",
   "ai.section.keyWords": "Key Words",
   "ai.section.application": "Application",
-
   "devotional.title": "Devotional",
   "devotional.subtitle": "Guided devotional plans with daily Scripture readings and reflective questions.",
   "devotional.day": "{n} day",
@@ -613,10 +605,8 @@
   "devotional.loadingPlan": "Loading plan...",
   "devotional.loadingReading": "Loading reading...",
   "devotional.noVerses": "Verses not available for this translation.",
-  "devotional.reflection": "Reflection",
   "devotional.previousDay": "← Previous Day",
   "devotional.nextDay": "Next Day →",
-
   "genealogy.title": "Semantic Genealogy",
   "genealogy.subtitle": "The Ariadne's thread — tracing how key concepts travel from Hebrew to Greek across the testaments. Each word carries centuries of progressive revelation.",
   "genealogy.breadcrumb": "Semantic Genealogy",
@@ -625,7 +615,6 @@
   "genealogy.stats.testaments": "OT → NT",
   "genealogy.footerNote": "Based on linguistic evidence, LXX, Dead Sea Scrolls, and STEPBible lexical analysis. Each bridge is an interpretive choice — not dogma.",
   "genealogy.loadError": "Failed to load concept.",
-
   "verseActions.btn.crossrefs": "Cross-refs",
   "verseActions.btn.explain": "Explain",
   "verseActions.btn.commentary": "Commentary",
@@ -647,14 +636,12 @@
   "verseActions.crossrefs.more": "+ {n} more",
   "verseActions.compare.loading": "Loading translations...",
   "verseActions.compare.none": "No translations found.",
-
   "audio.tooltipMp3": "Listen to pronunciation (Neural2 — Google TTS)",
   "audio.tooltipSpeech": "Listen to pronunciation (speech synthesis — {locale})",
   "audio.ariaPlaying": "Playing...",
   "audio.ariaListen": "Listen to pronunciation",
   "audio.labelListen": "Listen",
   "audio.labelPlaying": "Playing...",
-
   "lexicon.header": "Lexicon · {language}",
   "lexicon.searching": "Searching lexicon...",
   "lexicon.definition": "Definition",
@@ -671,7 +658,6 @@
   "lexicon.journey.meanings": "Meanings:",
   "lexicon.journey.books": "Books:",
   "lexicon.journey.eraTooltip": "{era}: {n} occurrences",
-
   "notes.editor.label": "Note",
   "notes.editor.placeholder": "Record a thought, question, or connection…",
   "notes.editor.lastEdit": "Last edit: {when}",
@@ -681,25 +667,29 @@
   "notes.highlight.activeAria": "{category} highlight (active)",
   "notes.highlight.aria": "{category} highlight",
   "notes.highlight.clear": "Clear highlight",
-
   "sharing.shareVerse": "Share Verse",
   "sharing.close": "Close",
   "sharing.copyClipboard": "Copy to clipboard",
   "sharing.copied": "Copied!",
   "sharing.downloadPng": "Download PNG",
-
   "commentary.label": "Commentary",
   "commentary.loadingCommentator": "Loading {name}...",
   "commentary.notAvailable": "Commentary not available for this passage.",
   "commentary.onVerse": "{name} on verse {n}",
   "commentary.onVerseRange": "{name} on verses {a}–{b}",
   "commentary.noneFound": "No commentary found for verse {n} in {name}.",
-
   "passageWord.closeAria": "Close",
   "passageWord.meaning": "Meaning",
   "passageWord.source": "Source",
   "passageWord.source.aramaic": "Peshitta — Syriac Aramaic",
   "passageWord.source.hebrew": "WLC — Masoretic Text",
   "passageWord.source.greek": "SBLGNT — Koine Greek",
-  "passageWord.aramaicAudioNote": "Pronunciation via Arabic proxy (approximate Semitic phonetics)."
+  "passageWord.aramaicAudioNote": "Pronunciation via Arabic proxy (approximate Semitic phonetics).",
+  "intertextuality.heatmap.minRefs": "Minimum refs per pair",
+  "intertextuality.heatmap.clickHint": "Click a cell to see the references.",
+  "intertextuality.panel.title": "Cross-references",
+  "intertextuality.panel.loading": "Loading references...",
+  "intertextuality.panel.empty": "No cross-references for this pair.",
+  "intertextuality.panel.showing": "Showing {shown} of {total}",
+  "intertextuality.panel.close": "Close"
 }
