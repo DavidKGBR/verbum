@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useReducer } from "react";
 import * as d3 from "d3";
 import type { ExplorerNode, NodeType, ExplorerState } from "./explorerReducer";
 import { useI18n } from "../../i18n/i18nContext";
@@ -58,6 +58,7 @@ export default function ExplorerGraph({
   const svgRef = useRef<SVGSVGElement>(null);
   const simRef = useRef<d3.Simulation<SimNode, SimEdge>>(undefined);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
+  const [legendOpen, toggleLegend] = useReducer((s: boolean) => !s, true);
 
   // ResizeObserver
   useEffect(() => {
@@ -288,21 +289,31 @@ export default function ExplorerGraph({
         className="w-full h-full"
       />
 
-      {/* Legend */}
-      <div className="absolute bottom-3 left-3 bg-white/90 rounded border px-3 py-2 text-[10px] space-y-1">
-        {Object.entries(NODE_COLORS).map(([type, color]) => (
-          <div key={type} className="flex items-center gap-2">
-            <span
-              className="w-3 h-3 rounded-full border"
-              style={{ backgroundColor: color + "30", borderColor: color }}
-            />
-            <span className="opacity-70">
-              {type === "strongs"
-                ? t("explorer.types.strongsShort")
-                : t(`explorer.types.${type}Short`)}
-            </span>
+      {/* Legend (G3.g — collapsible) */}
+      <div className="absolute bottom-3 left-3">
+        <button
+          onClick={toggleLegend}
+          className="text-[9px] px-2 py-1 bg-white/90 rounded border opacity-60 hover:opacity-100 transition mb-1 block"
+        >
+          {t("explorer.legendToggle")} {legendOpen ? "▲" : "▼"}
+        </button>
+        {legendOpen && (
+          <div className="bg-white/90 rounded border px-3 py-2 text-[10px] space-y-1">
+            {Object.entries(NODE_COLORS).map(([type, color]) => (
+              <div key={type} className="flex items-center gap-2">
+                <span
+                  className="w-3 h-3 rounded-full border"
+                  style={{ backgroundColor: color + "30", borderColor: color }}
+                />
+                <span className="opacity-70">
+                  {type === "strongs"
+                    ? t("explorer.types.strongsShort")
+                    : t(`explorer.types.${type}Short`)}
+                </span>
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </div>
 
       {/* Status */}

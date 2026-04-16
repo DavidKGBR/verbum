@@ -10,9 +10,10 @@ import { useI18n } from "../../i18n/i18nContext";
 interface Props {
   state: ExplorerState;
   onClose: () => void;
+  translation?: string;
 }
 
-export default function DetailPanel({ state, onClose }: Props) {
+export default function DetailPanel({ state, onClose, translation = "kjv" }: Props) {
   const { selectedNode, selectedEdge, nodes } = state;
 
   if (selectedEdge) {
@@ -21,6 +22,7 @@ export default function DetailPanel({ state, onClose }: Props) {
         sourceKey={selectedEdge.source}
         targetKey={selectedEdge.target}
         nodes={nodes}
+        translation={translation}
         onClose={onClose}
       />
     );
@@ -79,7 +81,15 @@ function NodeDetail({
         {node.language && (
           <div className="text-xs">
             <span className="opacity-50">{t("explorer.language")}</span>{" "}
-            <span className="capitalize font-medium">{node.language}</span>
+            <span className="font-medium">
+              {t(`explorer.lang.${node.language}`) || node.language}
+            </span>
+          </div>
+        )}
+
+        {node.type === "strongs" && node.gloss && (
+          <div className="text-[10px] opacity-40 italic mt-1">
+            {t("explorer.strongsDef.original")}
           </div>
         )}
 
@@ -143,11 +153,13 @@ function EdgeDetail({
   sourceKey,
   targetKey,
   nodes,
+  translation,
   onClose,
 }: {
   sourceKey: string;
   targetKey: string;
   nodes: Map<string, ExplorerNode>;
+  translation: string;
   onClose: () => void;
 }) {
   const { t } = useI18n();
@@ -166,7 +178,8 @@ function EdgeDetail({
       targetNode.type,
       targetNode.id,
       "co-occurrence",
-      8
+      8,
+      translation
     )
       .then(setEvidence)
       .catch(() => setEvidence(null))

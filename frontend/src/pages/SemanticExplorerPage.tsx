@@ -18,10 +18,48 @@ import PresetExplorations from "../components/explorer/PresetExplorations";
 import LayerControls from "../components/explorer/LayerControls";
 import ExplorerGraph from "../components/explorer/ExplorerGraph";
 import DetailPanel from "../components/explorer/DetailPanel";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, type Locale } from "../i18n/i18nContext";
+import { personName } from "../i18n/personNames";
+import { topicName } from "../i18n/topicNames";
+import { placeName } from "../i18n/placeNames";
+
+// ── Locale → Bible translation mapping (same as VerseOfTheDay) ──────────────
+const LOCALE_TRANSLATION: Record<string, string> = { en: "kjv", pt: "nvi", es: "rvr" };
+
+// ── G3.d: Raw label formatter ────────────────────────────────────────────────
+/**
+ * Converts API raw labels (UPPER_CASE, snake_case) to readable Title Case.
+ * Preserves all-caps acronyms (≤4 chars: NT, OT, YHWH).
+ */
+function formatNodeLabel(raw: string): string {
+  return raw
+    .replace(/_/g, " ")
+    .split(" ")
+    .map((word) => {
+      if (word.length <= 4 && word === word.toUpperCase()) return word; // NT, OT, YHWH
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+}
+
+// ── G3.c: Localize a node label based on type + id + locale ─────────────────
+function localizeNodeLabel(
+  type: NodeType,
+  id: string,
+  rawLabel: string,
+  locale: Locale
+): string {
+  if (locale === "en") return rawLabel;
+  if (type === "person") return personName(id, locale, rawLabel);
+  if (type === "topic") return topicName(id, locale, formatNodeLabel(rawLabel));
+  if (type === "place") return placeName(id, locale, rawLabel);
+  // strongs + thread: keep raw (Hebrew/Greek word or EN thread name)
+  return rawLabel;
+}
 
 export default function SemanticExplorerPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const translation = LOCALE_TRANSLATION[locale] ?? "kjv";
   const [state, dispatch] = useReducer(explorerReducer, initialState);
   const [loading, setLoading] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
@@ -40,7 +78,7 @@ export default function SemanticExplorerPage() {
         const center: ExplorerNode = {
           type: data.center.type as NodeType,
           id: data.center.id,
-          label: data.center.label,
+          label: localizeNodeLabel(data.center.type as NodeType, data.center.id, data.center.label, locale),
           gloss: data.center.gloss,
           language: data.center.language,
         };
@@ -48,7 +86,7 @@ export default function SemanticExplorerPage() {
         const nodes: ExplorerNode[] = data.nodes.map((n) => ({
           type: n.type as NodeType,
           id: n.id,
-          label: n.label,
+          label: localizeNodeLabel(n.type as NodeType, n.id, n.label, locale),
           gloss: n.gloss,
           language: n.language,
           shared: n.shared,
@@ -187,6 +225,7 @@ export default function SemanticExplorerPage() {
             <div className="w-80 border-l bg-white overflow-hidden flex flex-col shrink-0">
               <DetailPanel
                 state={state}
+                translation={translation}
                 onClose={() => {
                   setPanelOpen(false);
                   dispatch({ type: "SELECT_NODE", nodeKey: null });
@@ -197,7 +236,7 @@ export default function SemanticExplorerPage() {
         </div>
       )}
 
-      {/* Breadcrumb */}
+      {/* Breadcrumb (G3.f — clickable trail) */}
       {hasGraph && state.breadcrumb.length > 0 && (
         <div className="px-4 py-1.5 border-t bg-white text-[10px] flex items-center gap-1 overflow-x-auto">
           <span className="opacity-40">{t("explorer.trail")}</span>
@@ -206,9 +245,15 @@ export default function SemanticExplorerPage() {
             return (
               <span key={`${key}-${i}`} className="flex items-center gap-1">
                 {i > 0 && <span className="opacity-20">→</span>}
-                <span className="font-medium text-[var(--color-gold-dark)]">
+                <button
+                  onClick={() => {
+                    dispatch({ type: "SELECT_NODE", nodeKey: key });
+                    setPanelOpen(true);
+                  }}
+                  className="font-medium text-[var(--color-gold-dark)] hover:underline cursor-pointer"
+                >
                   {node?.label || key}
-                </span>
+                </button>
               </span>
             );
           })}

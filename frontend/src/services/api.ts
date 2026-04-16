@@ -701,6 +701,7 @@ export interface Author {
 
 export interface AuthorTopWord {
   strongs_id: string;
+  transliteration: string;
   gloss: string;
   occurrences: number;
 }
@@ -1248,10 +1249,11 @@ export function fetchExplorerEdgeEvidence(
   targetType: string,
   targetId: string,
   edgeType: string,
-  limit = 10
+  limit = 10,
+  translation = "kjv"
 ) {
   return fetchJson<ExplorerEdgeEvidence>(
-    `${BASE}/explorer/edge-evidence?source_type=${sourceType}&source_id=${encodeURIComponent(sourceId)}&target_type=${targetType}&target_id=${encodeURIComponent(targetId)}&edge_type=${edgeType}&limit=${limit}`
+    `${BASE}/explorer/edge-evidence?source_type=${sourceType}&source_id=${encodeURIComponent(sourceId)}&target_type=${targetType}&target_id=${encodeURIComponent(targetId)}&edge_type=${edgeType}&limit=${limit}&translation=${translation}`
   );
 }
 

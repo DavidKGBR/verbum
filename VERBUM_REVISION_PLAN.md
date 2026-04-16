@@ -244,10 +244,10 @@ Reportados na 2ª rodada de auditoria. Mais profundos que F porque envolvem visu
 | Sub-sessão | Escopo | Entradas | Esforço |
 |---|---|---|---|
 | R3.a (✅) | First pass: top-visíveis + eventos canônicos + cobertura 100% dos participantes/lugares dos eventos traduzidos | ~720 | 1 sessão (feito) |
-| R3.b | Pessoas batches 1-6 (500 por batch) | 2.790 | 6 sessões |
-| R3.c | Lugares batches 1-3 (~550 por batch) | 1.632 | 3 sessões |
-| R3.d | Eventos específicos restantes | 268 | 1 sessão |
-| R3.e | Tópicos batches 1-10 (~460 por batch) | 4.593 | 10 sessões |
+| R3.b (✅) | Pessoas — 3.067/3.067 cobertas (100%) | 3.067 | Concluído (sessões anteriores) |
+| R3.c (✅) | Lugares — 1.814/1.814 cobertas (100%) | 1.814 | Concluído (sessões anteriores) |
+| R3.d (✅) | Eventos — 296 específicos + 154 via pattern templates = 450/450 (100%) | 450 | Concluído (sessões anteriores) |
+| R3.e (✅) | Tópicos — 4.673/4.673 cobertas (100%) | 4.673 | Concluído (16 abr 2026) |
 | **Total** | | **~9.300** | **~20 sessões** |
 
 **Tarefas (cada batch):**
