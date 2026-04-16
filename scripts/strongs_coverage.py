@@ -102,7 +102,7 @@ def main() -> None:
         COVERAGE_DIR.mkdir(parents=True, exist_ok=True)
         out_path = COVERAGE_DIR / "coverage.json"
         out_path.write_text(json.dumps(coverage_data, indent=2), encoding="utf-8")
-        print(f"\n  Snapshot saved → {out_path}")
+        print(f"\n  Snapshot saved -> {out_path}")
 
 
 if __name__ == "__main__":
