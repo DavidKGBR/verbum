@@ -18,6 +18,11 @@ data/analytics/*.csv
 data/analytics/*.duckdb
 data/analytics/*.duckdb.wal
 data/audio/
+# Phantom DB files — the REAL database is data/analytics/bible.duckdb.
+# data/bible.db is an empty placeholder left by old scripts; never commit it.
+data/*.db
+data/*.duckdb
+data/*.duckdb.wal
 
 # ─── IDE ──────────────────────────────────────────────────────────────────────
 .vscode/
