@@ -1,10 +1,42 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { searchDictionary, type DictEntry } from "../services/api";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, type Locale } from "../i18n/i18nContext";
+import { PERSONS } from "../i18n/personNames";
+import { PLACES } from "../i18n/placeNames";
+
+/**
+ * The dictionary backend (Easton + Smith) is English-only. When a PT/ES user
+ * types "Ester" or "Moisés", the naive search returns 0 hits. Map the typed
+ * term back to its canonical English form by scanning the person/place
+ * translation tables — the slug's prefix (e.g. "esther" in "esther_1343")
+ * gives us the EN spelling used by the dictionary corpus.
+ *
+ * This is a best-effort pass-through: unknown terms go to the backend as-is,
+ * so English queries and non-biblical terms still work.
+ */
+function toCanonicalEnglishQuery(q: string, locale: Locale): string {
+  if (locale === "en") return q;
+  const needle = q.trim().toLowerCase();
+  if (!needle) return q;
+  const tables: Array<Record<string, { pt: string; es: string }>> = [PERSONS, PLACES];
+  for (const table of tables) {
+    for (const [slug, entry] of Object.entries(table)) {
+      if (
+        entry.pt.toLowerCase() === needle ||
+        entry.es.toLowerCase() === needle
+      ) {
+        const enRaw = slug.split("_")[0];
+        // Title-case the prefix: "esther" → "Esther"
+        return enRaw.charAt(0).toUpperCase() + enRaw.slice(1);
+      }
+    }
+  }
+  return q;
+}
 
 export default function DictionaryPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") || "");
   const [results, setResults] = useState<DictEntry[]>([]);
@@ -26,14 +58,15 @@ export default function DictionaryPage() {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       setLoading(true);
-      searchDictionary(query, 100)
+      const canonicalQuery = toCanonicalEnglishQuery(query, locale);
+      searchDictionary(canonicalQuery, 100)
         .then((d) => setResults(d.results))
         .catch(() => setResults([]))
         .finally(() => setLoading(false));
       setSearchParams(query ? { q: query } : {}, { replace: true });
     }, 300);
     return () => { if (debounceRef.current !== null) clearTimeout(debounceRef.current); };
-  }, [query, setSearchParams]);
+  }, [query, locale, setSearchParams]);
 
   return (
     <div className="max-w-4xl mx-auto">
