@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { searchVerses, type SearchResult } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import { useI18n } from "../i18n/i18nContext";
@@ -56,11 +56,22 @@ function verseIdToReaderLink(verseId: string): string {
 export default function SearchPage() {
   const { t } = useI18n();
   const navigate = useNavigate();
-  const [query, setQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialQ = searchParams.get("q") ?? "";
+  const [query, setQuery] = useState(initialQ);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [totalResults, setTotalResults] = useState(0);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
+
+  // Run search on mount (or URL change) when ?q= is present.
+  // Also keeps the input in sync if the user navigates via back/forward.
+  useEffect(() => {
+    const q = searchParams.get("q") ?? "";
+    if (q && q !== query) setQuery(q);
+    if (q) void runSearch(q);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   async function runSearch(q: string) {
     const trimmed = q.trim();
@@ -82,11 +93,16 @@ export default function SearchPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    void runSearch(query);
+    const trimmed = query.trim();
+    if (!trimmed) return;
+    // Push ?q= to the URL so reload / share / back button all work.
+    setSearchParams(trimmed ? { q: trimmed } : {});
+    void runSearch(trimmed);
   }
 
   function handleTagClick(tag: string) {
     setQuery(tag);
+    setSearchParams({ q: tag });
     void runSearch(tag);
   }
 
