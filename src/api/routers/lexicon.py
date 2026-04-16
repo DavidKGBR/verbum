@@ -61,8 +61,22 @@ def search_strongs(
 
 
 @router.get("/strongs/{strongs_id}")
-def get_strongs(strongs_id: str, request: Request) -> dict:
-    """Get a specific Strong's entry by ID (e.g., H776, G976)."""
+def get_strongs(
+    strongs_id: str,
+    request: Request,
+    lang: str | None = Query(
+        None,
+        description="Target language for definitions: 'pt' or 'es'. "
+                    "Falls back to English when translation unavailable.",
+    ),
+) -> dict:
+    """Get a specific Strong's entry by ID (e.g., H776, G976).
+
+    If `lang` is provided and a translation exists in `strongs_lexicon_multilang`,
+    the `short_definition` and `long_definition` fields are replaced with the
+    translated versions. The response includes `is_translated: bool` to let the
+    frontend display a "translation in progress" indicator when false.
+    """
     conn = get_db()
     try:
         df = conn.execute(
@@ -73,11 +87,32 @@ def get_strongs(strongs_id: str, request: Request) -> dict:
             raise HTTPException(status_code=404, detail="Strong's ID not found")
         entry = df.to_dict(orient="records")[0]
 
+        # Multilingual overlay (R3.6)
+        is_translated = False
+        if lang and lang.lower() in ("pt", "es"):
+            target_lang = lang.lower()
+            ml_row = conn.execute(
+                """
+                SELECT short_definition, long_definition
+                FROM strongs_lexicon_multilang
+                WHERE strongs_id = ? AND lang = ?
+                  AND short_definition IS NOT NULL
+                """,
+                [strongs_id.upper(), target_lang],
+            ).fetchone()
+            if ml_row:
+                entry["short_definition"] = ml_row[0]
+                if ml_row[1]:
+                    entry["long_definition"] = ml_row[1]
+                is_translated = True
+
+        entry["is_translated"] = is_translated
+
         # Attach audio URL if the MP3 was already generated (Fase 5A)
         sid = strongs_id.upper()
-        lang = entry.get("language", "")
+        src_lang = entry.get("language", "")
         base = str(request.base_url).rstrip("/")
-        entry["audio_url"] = resolve_audio_url(sid, lang, base_url=base)
+        entry["audio_url"] = resolve_audio_url(sid, src_lang, base_url=base)
 
         return entry
     finally:

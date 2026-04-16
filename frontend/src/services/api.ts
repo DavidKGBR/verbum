@@ -1047,6 +1047,8 @@ export interface StrongsEntry {
   part_of_speech: string;
   /** URL do MP3 Neural2 (Fase 5A). Null se ainda não gerado. */
   audio_url?: string | null;
+  /** True when short_definition / long_definition are in the requested locale (R3.6). */
+  is_translated?: boolean;
 }
 
 export interface InterlinearWord {
@@ -1078,8 +1080,9 @@ export function fetchInterlinearChapter(book: string, chapter: number) {
   );
 }
 
-export function fetchStrongs(strongsId: string) {
-  return fetchJson<StrongsEntry>(`${BASE}/strongs/${strongsId}`);
+export function fetchStrongs(strongsId: string, lang?: string) {
+  const langParam = lang && lang !== "en" ? `?lang=${lang}` : "";
+  return fetchJson<StrongsEntry>(`${BASE}/strongs/${strongsId}${langParam}`);
 }
 
 export function fetchVersesByStrongs(strongsId: string, limit = 5) {

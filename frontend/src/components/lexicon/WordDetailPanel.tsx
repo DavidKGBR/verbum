@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function WordDetailPanel({ strongsId, onClose }: Props) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [entry, setEntry] = useState<StrongsEntry | null>(null);
   const [verses, setVerses] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ export default function WordDetailPanel({ strongsId, onClose }: Props) {
     if (!strongsId) return;
     setLoading(true);
     Promise.all([
-      fetchStrongs(strongsId),
+      fetchStrongs(strongsId, locale !== "en" ? locale : undefined),
       fetchVersesByStrongs(strongsId, 5),
     ])
       .then(([e, v]) => {
@@ -87,6 +87,11 @@ export default function WordDetailPanel({ strongsId, onClose }: Props) {
              <div>
                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-gold-dark)] opacity-80 mb-1">{t("lexicon.definition")}</h3>
                <p className="text-[17px] font-body font-bold leading-tight">{entry.short_definition}</p>
+               {locale !== "en" && !entry.is_translated && (
+                 <p className="text-[10px] opacity-40 italic mt-1">
+                   {t("explorer.strongsDef.original")}
+                 </p>
+               )}
              </div>
              
              <div>
