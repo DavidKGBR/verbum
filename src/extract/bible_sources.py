@@ -585,10 +585,24 @@ class PreCachedSource(BibleSource):
 
     def fetch_chapter(self, book_name: str, chapter: int) -> list[RawVerse]:
         """Not supported — data must come from the existing JSON cache."""
-        raise NotImplementedError(
-            f"PreCachedSource ({self.translation_id}) has no API. "
-            "Ensure data/raw/{self.translation_id}/ contains cached JSON files."
+        logger.warning(
+            f"PreCachedSource ({self.translation_id}) has no API to fetch "
+            f"{book_name} {chapter}. Skipping."
         )
+        return []
+
+    def fetch_all(
+        self,
+        output_dir: Path | None = None,
+        books: list[str] | None = None,
+    ) -> list[RawVerse]:
+        """Override: skip missing books instead of trying to fetch them."""
+        if books:
+            logger.warning(
+                f"PreCachedSource ({self.translation_id}) cannot fetch missing "
+                f"books {books} — no API available. Skipping."
+            )
+        return []
 
     def close(self) -> None:
         pass
