@@ -691,5 +691,13 @@
   "intertextuality.panel.loading": "Loading references...",
   "intertextuality.panel.empty": "No cross-references for this pair.",
   "intertextuality.panel.showing": "Showing {shown} of {total}",
-  "intertextuality.panel.close": "Close"
+  "intertextuality.panel.close": "Close",
+  "emotional.sentimentFlow": "Sentiment Flow",
+  "emotional.versesCount": "{n} verses",
+  "emotional.chapter": "Ch. {n}",
+  "emotional.peaks.mostPositive": "Most Positive",
+  "emotional.peaks.mostNegative": "Most Negative",
+  "emotional.label.positive": "Positive",
+  "emotional.label.negative": "Negative",
+  "emotional.label.neutral": "Neutral"
 }

@@ -691,5 +691,13 @@
   "intertextuality.panel.loading": "Cargando referencias...",
   "intertextuality.panel.empty": "Sin referencias cruzadas para este par.",
   "intertextuality.panel.showing": "Mostrando {shown} de {total}",
-  "intertextuality.panel.close": "Cerrar"
+  "intertextuality.panel.close": "Cerrar",
+  "emotional.sentimentFlow": "Flujo de Sentimiento",
+  "emotional.versesCount": "{n} versículos",
+  "emotional.chapter": "Cap. {n}",
+  "emotional.peaks.mostPositive": "Más Positivos",
+  "emotional.peaks.mostNegative": "Más Negativos",
+  "emotional.label.positive": "Positivo",
+  "emotional.label.negative": "Negativo",
+  "emotional.label.neutral": "Neutro"
 }

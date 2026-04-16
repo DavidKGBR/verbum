@@ -125,43 +125,55 @@ export default function EmotionalLandscapePage() {
             <LoadingSpinner text={t("common.loading")} />
           ) : (
             <>
-              {/* Sentiment terrain */}
+              {/* Sentiment terrain — SVG scales responsively regardless of verse count */}
               <div className="mb-8 rounded-lg border bg-white p-4 overflow-hidden">
                 <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40 mb-3">
-                  Sentiment Flow — {series.length} verses
+                  {t("emotional.sentimentFlow")} —{" "}
+                  {t("emotional.versesCount").replace("{n}", String(series.length))}
                 </h3>
-                <div className="flex items-center h-32 gap-px">
+                <svg
+                  viewBox={`0 0 ${Math.max(series.length, 1)} 100`}
+                  preserveAspectRatio="none"
+                  className="w-full h-32 block"
+                  role="img"
+                  aria-label={t("emotional.sentimentFlow")}
+                >
+                  {/* Zero baseline */}
+                  <line
+                    x1="0"
+                    y1="50"
+                    x2={Math.max(series.length, 1)}
+                    y2="50"
+                    stroke="currentColor"
+                    strokeWidth="0.1"
+                    className="opacity-10"
+                  />
                   {series.map((s, i) => {
-                    const height = Math.abs(s.polarity) / maxAbs;
-                    const isPositive = s.polarity >= 0;
+                    const norm = s.polarity / maxAbs; // in [-1, 1]
+                    const barHeight = Math.max(Math.abs(norm) * 50, 0.5); // min 0.5 viewBox units
+                    const y = norm >= 0 ? 50 - barHeight : 50;
                     return (
-                      <div
+                      <rect
                         key={i}
-                        className="flex-1 min-w-0 flex flex-col justify-center h-full relative group"
-                        title={`${s.verse_id}: ${s.polarity.toFixed(3)} (${s.label})`}
+                        x={i}
+                        y={y}
+                        width={1}
+                        height={barHeight}
+                        fill={norm >= 0 ? "rgb(34, 197, 94)" : "rgb(239, 68, 68)"}
+                        opacity={0.7}
                       >
-                        <div
-                          className="w-full rounded-sm transition-all group-hover:opacity-100"
-                          style={{
-                            height: `${Math.max(2, height * 100)}%`,
-                            backgroundColor: isPositive
-                              ? "rgb(34, 197, 94)"
-                              : "rgb(239, 68, 68)",
-                            opacity: 0.6,
-                            alignSelf: isPositive ? "flex-end" : "flex-start",
-                          }}
-                        />
-                      </div>
+                        <title>{`${s.verse_id}: ${s.polarity.toFixed(3)} (${s.label})`}</title>
+                      </rect>
                     );
                   })}
-                </div>
+                </svg>
                 <div className="flex justify-between text-[10px] opacity-30 mt-1">
-                  <span>Ch. 1</span>
+                  <span>{t("emotional.chapter").replace("{n}", "1")}</span>
                   <span>
-                    Ch.{" "}
-                    {series.length > 0
-                      ? series[series.length - 1].chapter
-                      : "?"}
+                    {t("emotional.chapter").replace(
+                      "{n}",
+                      String(series.length > 0 ? series[series.length - 1].chapter : "?"),
+                    )}
                   </span>
                 </div>
               </div>
@@ -170,7 +182,7 @@ export default function EmotionalLandscapePage() {
               {peaks.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40 mb-3">
-                    {t("emotional.peaks")} — Most Positive
+                    {t("emotional.peaks")} — {t("emotional.peaks.mostPositive")}
                   </h3>
                   <div className="space-y-2">
                     {peaks.map((p) => (
@@ -230,7 +242,7 @@ export default function EmotionalLandscapePage() {
                           style={{
                             width: `${(p.negative / total) * 100}%`,
                           }}
-                          title={`Negative: ${p.negative}`}
+                          title={`${t("emotional.label.negative")}: ${p.negative}`}
                         />
                       )}
                       {p.neutral > 0 && (
@@ -239,7 +251,7 @@ export default function EmotionalLandscapePage() {
                           style={{
                             width: `${(p.neutral / total) * 100}%`,
                           }}
-                          title={`Neutral: ${p.neutral}`}
+                          title={`${t("emotional.label.neutral")}: ${p.neutral}`}
                         />
                       )}
                       {p.positive > 0 && (
@@ -248,7 +260,7 @@ export default function EmotionalLandscapePage() {
                           style={{
                             width: `${(p.positive / total) * 100}%`,
                           }}
-                          title={`Positive: ${p.positive}`}
+                          title={`${t("emotional.label.positive")}: ${p.positive}`}
                         />
                       )}
                     </div>
@@ -262,13 +274,13 @@ export default function EmotionalLandscapePage() {
               {/* Legend */}
               <div className="flex items-center gap-4 justify-center pt-4 text-[10px] opacity-40">
                 <span className="flex items-center gap-1">
-                  <span className="w-3 h-3 rounded bg-red-400/70" /> Negative
+                  <span className="w-3 h-3 rounded bg-red-400/70" /> {t("emotional.label.negative")}
                 </span>
                 <span className="flex items-center gap-1">
-                  <span className="w-3 h-3 rounded bg-gray-300/70" /> Neutral
+                  <span className="w-3 h-3 rounded bg-gray-300/70" /> {t("emotional.label.neutral")}
                 </span>
                 <span className="flex items-center gap-1">
-                  <span className="w-3 h-3 rounded bg-green-400/70" /> Positive
+                  <span className="w-3 h-3 rounded bg-green-400/70" /> {t("emotional.label.positive")}
                 </span>
               </div>
             </div>
