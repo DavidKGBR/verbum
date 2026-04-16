@@ -217,45 +217,47 @@ export default function ConceptFlow({ concept }: Props) {
     <div className="flex flex-col gap-8">
 
       {/* Flow diagram */}
-      <div className="flex flex-col gap-4">
-        {/* Column headers */}
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-2 flex-1">
-            <div className="w-2 h-2 rounded-full bg-sky-500" />
-            <span className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
-              Antigo Testamento — Hebraico
-            </span>
-          </div>
-          <div className="w-24" />
-          <div className="flex items-center gap-2 flex-1">
-            <div className="w-2 h-2 rounded-full bg-purple-500" />
-            <span className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
-              Novo Testamento — Grego
-            </span>
-          </div>
-        </div>
-
-        {/* Nodes + connectors — horizontal flow */}
-        <div className="flex items-start gap-0 overflow-x-auto pb-2">
-          {/* Hebrew column */}
-          <div className="flex flex-col gap-3 shrink-0">
-            {hebrewNodes.map((node) => (
-              <WordNode key={node.strongs_id} node={node} color={concept.color} />
-            ))}
+      <div className="overflow-x-auto pb-2">
+        <div className="flex flex-col gap-4 w-fit">
+          {/* Column headers — same width constraints as content columns */}
+          <div className="flex items-center gap-0">
+            <div className="flex items-center gap-2 shrink-0 min-w-[200px] max-w-[240px]">
+              <div className="w-2 h-2 rounded-full bg-sky-500 shrink-0" />
+              <span className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
+                Antigo Testamento — Hebraico
+              </span>
+            </div>
+            <div className="shrink-0 w-[140px]" />
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="w-2 h-2 rounded-full bg-purple-500 shrink-0" />
+              <span className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
+                Novo Testamento — Grego
+              </span>
+            </div>
           </div>
 
-          {/* Bridge area */}
-          <div className="flex flex-col gap-3 shrink-0">
-            {concept.bridges.map((bridge, i) => (
-              <BridgeConnector key={i} bridge={bridge} color={concept.color} />
-            ))}
-          </div>
+          {/* Nodes + connectors — horizontal flow */}
+          <div className="flex items-start gap-0">
+            {/* Hebrew column */}
+            <div className="flex flex-col gap-3 shrink-0">
+              {hebrewNodes.map((node) => (
+                <WordNode key={node.strongs_id} node={node} color={concept.color} />
+              ))}
+            </div>
 
-          {/* Greek column */}
-          <div className="flex flex-col gap-3 shrink-0">
-            {greekNodes.map((node) => (
-              <WordNode key={node.strongs_id} node={node} color={concept.color} />
-            ))}
+            {/* Bridge area */}
+            <div className="flex flex-col gap-3 shrink-0">
+              {concept.bridges.map((bridge, i) => (
+                <BridgeConnector key={i} bridge={bridge} color={concept.color} />
+              ))}
+            </div>
+
+            {/* Greek column */}
+            <div className="flex flex-col gap-3 shrink-0">
+              {greekNodes.map((node) => (
+                <WordNode key={node.strongs_id} node={node} color={concept.color} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

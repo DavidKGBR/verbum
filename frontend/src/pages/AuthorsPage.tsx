@@ -339,8 +339,10 @@ export default function AuthorsPage() {
                                 to={`/word-study/${w.strongs_id}`}
                                 className="text-[11px] px-2 py-0.5 rounded bg-[var(--color-gold)]/10
                                            text-[var(--color-gold-dark)] hover:bg-[var(--color-gold)]/20 transition"
-                                title={`${w.strongs_id} — ${w.occurrences} ${t("authors.occurrences")}`}
+                                title={`${w.strongs_id} — ${w.gloss} — ${w.occurrences} ${t("authors.occurrences")}`}
                               >
+                                {w.transliteration && <span className="font-semibold">{w.transliteration}</span>}
+                                {w.transliteration && w.gloss ? " · " : ""}
                                 {w.gloss} <span className="opacity-40">({w.occurrences})</span>
                               </Link>
                             ))}

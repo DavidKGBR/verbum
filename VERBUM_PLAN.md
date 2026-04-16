@@ -458,7 +458,7 @@ A Bíblia hebraica foi projetada para tradição oral com estruturas complexas q
 | — | **Pendentes** | | |
 | 12 | README + Deploy + SEO (14k páginas estáticas Strong's) | 🔥🔥🔥 | 🔲 Planejado |
 | — | **FASE 5 — A Voz Original** | | |
-| 13 | 5A — Chirp3-HD TTS (he-IL + el-GR, 14.178 entradas) | 🔥🔥🔥🔥 | 🚧 Em andamento |
+| 13 | 5A — Chirp3-HD TTS (he-IL + el-GR, 14.178 entradas) | 🔥🔥🔥🔥 | ✅ Concluído |
 | 14 | 5B — Contato Foreman + Kantor (Camada 2 acadêmica) | 🔥🔥🔥🔥🔥 | ⏸️ Pausado — Chirp3-HD suficiente por ora |
 | 15 | 5C — Special Passages Engine (10 passagens, áudio proxy, clicáveis) | 🔥🔥🔥🔥🔥 | ✅ Concluído |
 | 16 | 5D — Camada acadêmica (Tibéria + Koiné) | 🔥🔥🔥🔥🔥 | 🗄️ Backlog — Chirp3-HD suficiente |

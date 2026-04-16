@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from pathlib import Path
 
 from fastapi import APIRouter, HTTPException, Query
@@ -21,6 +22,51 @@ _AUTHORS_PATH = Path(__file__).resolve().parents[3] / "data" / "static" / "autho
 _AUTHORS: list[dict] = []
 if _AUTHORS_PATH.exists():
     _AUTHORS = json.loads(_AUTHORS_PATH.read_text(encoding="utf-8"))
+
+# Overrides para verbetes onde o `short_definition` do Strong's começa com termo
+# etimológico ("properly", "primary root") em vez do uso comum, ou onde a palavra
+# é uma partícula gramatical sem gloss limpa (object marker, conjunctions, etc.).
+# Mantenha curto (1-3 palavras) — vai aparecer em chips de UI.
+TOP_WORD_GLOSS_OVERRIDES: dict[str, str] = {
+    "H853": "[obj. marker]",  # ʼêth — marcador de objeto direto, sem tradução
+    "H3605": "all",  # kôl — Strong's diz "properly, the whole; hence, all..."
+    "H413": "to/towards",  # ʼêl — Strong's começa com "near"
+    "H5921": "upon/on",  # ʻal — Strong's começa com "above"
+    "H3588": "for/that",  # kîy — conjunção polissêmica, Strong's verboso
+    "G846": "self/he/she",  # autós — Strong's diz "the reflexive pronoun self, used..."
+    "G3004": "to say",  # légō — Strong's diz "properly, to 'lay' forth..."
+    "G2316": "God/deity",  # theós — short_definition no DB está truncada (só cauda)
+    "G3756": "no/not",  # ou — negativa absoluta, def. com parêntese aninhado
+}
+
+_PAREN_RE = re.compile(r"\s*\([^)]*\)")
+
+
+def _clean_gloss(strongs_id: str, short_def: str | None) -> str:
+    """Extrai gloss curta e legível a partir de short_definition do Strong's."""
+    if strongs_id in TOP_WORD_GLOSS_OVERRIDES:
+        return TOP_WORD_GLOSS_OVERRIDES[strongs_id]
+    if not short_def:
+        return "?"
+    text = short_def.strip()
+    # Remove parênteses iterativamente (lida com aninhados)
+    for _ in range(5):
+        new = _PAREN_RE.sub("", text)
+        if new == text:
+            break
+        text = new
+    # Limpa ')' residuais de parênteses aninhados (ex: G3361 (μή)) → sobra ')')
+    text = text.replace(")", "")
+    # Remove aspas
+    text = text.replace('"', "").replace("'", "")
+    # Divide em , ou ; e filtra tokens inúteis
+    parts = re.split(r"[,;]", text)
+    parts = [
+        p.strip().rstrip(".")
+        for p in parts
+        if p.strip() and p.strip().lower() not in ("properly", "etc", "etc.")
+    ]
+    return parts[0] if parts else "?"
 
 
 @router.get("/authors")
@@ -71,24 +117,38 @@ def get_author(author_id: str) -> dict:
                 stats["total_words"] = row[1]
                 stats["total_verses"] = row[2]
 
-            # Top 10 most used Strong's IDs
-            top_words = conn.execute(
+            # Top 10 Strong's IDs mais usados.
+            # JOIN com strongs_lexicon — limpeza de short_definition fica em Python
+            # porque as defs têm parênteses aninhados, aspas e padrões que regex
+            # SQL não lida bem (STEPBible TSV leaks: '[Obj.]', 'X»Y@ref', etc.).
+            top_rows = conn.execute(
                 f"""
-                SELECT
-                    i.strongs_id,
-                    i.gloss,
-                    COUNT(*) AS occurrences
-                FROM interlinear i
-                WHERE SPLIT_PART(i.verse_id, '.', 1) IN ({placeholders})
-                  AND i.strongs_id IS NOT NULL
-                  AND i.gloss IS NOT NULL
-                GROUP BY i.strongs_id, i.gloss
-                ORDER BY occurrences DESC
-                LIMIT 10
+                WITH counts AS (
+                    SELECT i.strongs_id, COUNT(*) AS occurrences
+                    FROM interlinear i
+                    WHERE SPLIT_PART(i.verse_id, '.', 1) IN ({placeholders})
+                      AND i.strongs_id IS NOT NULL
+                    GROUP BY i.strongs_id
+                    ORDER BY occurrences DESC
+                    LIMIT 10
+                )
+                SELECT c.strongs_id, sl.transliteration, sl.short_definition,
+                       c.occurrences
+                FROM counts c
+                LEFT JOIN strongs_lexicon sl ON sl.strongs_id = c.strongs_id
+                ORDER BY c.occurrences DESC
                 """,
                 books,
-            ).fetchdf()
-            stats["top_words"] = top_words.to_dict(orient="records")
+            ).fetchall()
+            stats["top_words"] = [
+                {
+                    "strongs_id": sid,
+                    "transliteration": translit or "",
+                    "gloss": _clean_gloss(sid, short_def),
+                    "occurrences": occ,
+                }
+                for sid, translit, short_def, occ in top_rows
+            ]
 
         except Exception as e:
             logger.warning("Could not compute vocab stats for %s: %s", author_id, e)

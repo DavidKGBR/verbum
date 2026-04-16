@@ -154,8 +154,10 @@ export default function AuthorCompare({ authors, onClose }: Props) {
                               ? "bg-[var(--color-gold)]/30 text-[var(--color-gold-dark)] font-bold ring-1 ring-[var(--color-gold)]/50"
                               : "bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] hover:bg-[var(--color-gold)]/20"
                           }`}
-                          title={`${w.strongs_id} — ${w.occurrences}×${isShared ? ` (${t("authors.compare.highlighted")})` : ""}`}
+                          title={`${w.strongs_id} — ${w.gloss} — ${w.occurrences}×${isShared ? ` (${t("authors.compare.highlighted")})` : ""}`}
                         >
+                          {w.transliteration && <span className="font-semibold">{w.transliteration}</span>}
+                          {w.transliteration && w.gloss ? " · " : ""}
                           {w.gloss} <span className="opacity-40">({w.occurrences})</span>
                         </Link>
                       );

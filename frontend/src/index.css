@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=GFS+Didot&display=swap');
+@import "tailwindcss";
 
 :root {
   /* ── Base palette (parchment theme) ─────────────────────────── */
