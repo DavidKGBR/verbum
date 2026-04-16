@@ -740,10 +740,12 @@ export interface AuthorBookStats {
 }
 
 export async function fetchAuthorBooks(
-  authorId: string
+  authorId: string,
+  translation?: string
 ): Promise<AuthorBookStats[]> {
+  const params = translation ? `?translation=${translation}` : "";
   const data = await fetchJson<{ author_id: string; books: AuthorBookStats[] }>(
-    `${BASE}/authors/${authorId}/books`
+    `${BASE}/authors/${authorId}/books${params}`
   );
   return data.books;
 }

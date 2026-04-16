@@ -162,9 +162,15 @@ export default function ComparePage() {
                     </div>
                   ))}
                   {col.verses.length === 0 && (
-                    <p className="text-xs opacity-40 italic">
-                      {t("compare.noVersesForTranslation")}
-                    </p>
+                    <div className="flex flex-col items-center gap-2 py-4 text-center">
+                      <div className="text-2xl opacity-20">∅</div>
+                      <p className="text-xs text-red-400 font-medium">
+                        {t("compare.noVersesForTranslation")}
+                      </p>
+                      <p className="text-[10px] opacity-40">
+                        {col.label} · {translation.toUpperCase()}
+                      </p>
+                    </div>
                   )}
                 </div>
               </div>

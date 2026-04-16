@@ -118,6 +118,16 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         license="Public Domain",
         source_api="bible-api.com",
     ),
+    # ── Pre-cached (extracted via removed BibleSuperSearch API) ──────────
+    "luther": Translation(
+        translation_id="luther",
+        language="de",
+        name="Luther 1912",
+        full_name="Martin Luther Übersetzung (1912)",
+        year=1912,
+        license="Public Domain",
+        source_api="pre-cached",
+    ),
 }
 
 # ─── Source groupings ─────────────────────────────────────────────────────────
@@ -125,6 +135,7 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
 BIBLE_API_COM_TRANSLATIONS = {"asv", "web", "darby"}
 ABIBLIA_DIGITAL_TRANSLATIONS = {"kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee"}
 ZEFANIA_XML_TRANSLATIONS = {"neue"}
+PRE_CACHED_TRANSLATIONS = {"luther"}
 
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────

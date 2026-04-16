@@ -20,6 +20,7 @@ from src.config import ExtractConfig
 from src.extract.translations import (
     ABIBLIA_DIGITAL_TRANSLATIONS,
     BIBLE_API_COM_TRANSLATIONS,
+    PRE_CACHED_TRANSLATIONS,
     ZEFANIA_XML_TRANSLATIONS,
     get_translation,
 )
@@ -571,6 +572,28 @@ class ZefaniaXMLSource(BibleSource):
         return all_verses
 
 
+# ─── Pre-cached Implementation ────────────────────────────────────────────────
+
+
+class PreCachedSource(BibleSource):
+    """Cache-only source for translations whose JSON files already exist.
+
+    Used for translations originally fetched from APIs that have since been
+    removed (e.g., Luther 1912 from BibleSuperSearch). No network calls —
+    load_from_cache() in the base class handles everything.
+    """
+
+    def fetch_chapter(self, book_name: str, chapter: int) -> list[RawVerse]:
+        """Not supported — data must come from the existing JSON cache."""
+        raise NotImplementedError(
+            f"PreCachedSource ({self.translation_id}) has no API. "
+            "Ensure data/raw/{self.translation_id}/ contains cached JSON files."
+        )
+
+    def close(self) -> None:
+        pass
+
+
 # ─── Factory ──────────────────────────────────────────────────────────────────
 
 
@@ -587,7 +610,14 @@ def create_source(
         return ABibliaDigitalSource(tid, config)
     if tid in ZEFANIA_XML_TRANSLATIONS:
         return ZefaniaXMLSource(tid, config)
+    if tid in PRE_CACHED_TRANSLATIONS:
+        return PreCachedSource(tid, config)
     available = ", ".join(
-        sorted(BIBLE_API_COM_TRANSLATIONS | ABIBLIA_DIGITAL_TRANSLATIONS | ZEFANIA_XML_TRANSLATIONS)
+        sorted(
+            BIBLE_API_COM_TRANSLATIONS
+            | ABIBLIA_DIGITAL_TRANSLATIONS
+            | ZEFANIA_XML_TRANSLATIONS
+            | PRE_CACHED_TRANSLATIONS
+        )
     )
     raise ValueError(f"Unknown translation '{translation_id}'. Available: {available}")

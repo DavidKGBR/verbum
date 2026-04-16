@@ -162,7 +162,10 @@ def get_author(author_id: str) -> dict:
 
 
 @router.get("/authors/{author_id}/books")
-def get_author_books(author_id: str) -> dict:
+def get_author_books(
+    author_id: str,
+    translation: str = Query("kjv", description="Translation ID for book stats"),
+) -> dict:
     """Get book-level stats for an author's books."""
     author = next((a for a in _AUTHORS if a["author_id"] == author_id), None)
     if not author:
@@ -183,13 +186,14 @@ def get_author_books(author_id: str) -> dict:
                 avg_words_per_verse, avg_sentiment
             FROM book_stats
             WHERE book_id IN ({placeholders})
-              AND translation_id = 'kjv'
+              AND translation_id = ?
             ORDER BY book_position
             """,
-            books,
+            [*books, translation],
         ).fetchdf()
         return {
             "author_id": author_id,
+            "translation": translation,
             "books": df.to_dict(orient="records"),
         }
     finally:
