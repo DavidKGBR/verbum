@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=GFS+Didot&display=swap');
+/* Fonts are loaded via <link rel="preload"/> and <link rel="stylesheet"/> in
+   frontend/index.html — avoids the render-blocking @import waterfall that
+   caused FOUC/FOUT on pages with autoFocus (e.g. PeoplePage). Keeping any
+   @import here would re-introduce the waterfall: HTML → main.css → @import
+   fetch → font. */
 @import "tailwindcss";
 
 :root {

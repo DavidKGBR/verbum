@@ -183,7 +183,6 @@ export default function PeoplePage() {
           className="w-full rounded-lg border border-[var(--color-gold-dark)]/20 px-4 py-3
                      text-sm bg-white focus:outline-none focus:ring-2
                      focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/50"
-          autoFocus
         />
       </div>
 
