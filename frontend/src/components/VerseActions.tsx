@@ -124,7 +124,10 @@ export default function VerseActions({
 
   return (
     <div className="ml-9 mb-3 mt-1">
-      {/* Action buttons */}
+      {/* Action buttons — two rows grouped by purpose:
+          row 1 = analysis/reading (crossrefs, explain, commentary, compare)
+          row 2 = personal/share (note, bookmark, copy, share).
+          Each row still has flex-wrap so mobile can reflow without breaking. */}
       <div className="flex gap-2 mb-2 flex-wrap">
         <button
           onClick={loadCrossrefs}
@@ -166,6 +169,9 @@ export default function VerseActions({
         >
           🔀 {t("verseActions.btn.compare")}
         </button>
+      </div>
+
+      <div className="flex gap-2 mb-2 flex-wrap">
         <button
           onClick={() => setTab(tab === "notes" ? "none" : "notes")}
           title={hasNote ? t("verseActions.note.edit") : t("verseActions.note.add")}

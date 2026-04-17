@@ -77,11 +77,12 @@ HEBREW_TTS_OVERRIDES: dict[str, str] = {
     "H3068": "יֶהוֹבַה",  # Yᵉhôvâh — patach (ַ) em vez de qamatz: força "va" claro
     "H3069": "יֶהוֹבִה",  # Yᵉhôvih — variante com hireq
     # H430 — ʼĕlôhîym. A grafia canônica אֱלֹהִים faz o Chirp3-HD colapsar em
-    # algo como "alerrim" (o holam [ֹ] no lamed é curto e a tônica vai pro final).
-    # Grafando com vav-holam explícito (וֹ) forçamos o modelo a marcar o "ho"
-    # como sílaba longa, resultando em "eh-lo-HEEM" — mesmo som que o Bing
-    # Translator entrega pra essa palavra.
-    "H430": "אֱלוֹהִים",
+    # algo como "alerrim". Tentativa 1 (vav-holam explícito "אֱלוֹהִים") também
+    # saiu errado. Tentativa 2 — remover todo o niqqud: hebraico moderno
+    # israelense é normalmente escrito sem vogais, e nesse modo o Chirp3-HD
+    # cai na heurística nativa do speaker, que pronuncia "elohim" como
+    # qualquer israelense faria no dia-a-dia (eh-lo-HEEM, tônica no "him").
+    "H430": "אלוהים",
 }
 
 AUDIO_DIR = Path("data/audio")
