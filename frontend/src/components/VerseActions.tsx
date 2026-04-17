@@ -13,6 +13,7 @@ import CommentaryPanel from "./reader/CommentaryPanel";
 import ShareModal from "./sharing/ShareModal";
 import { useTranslationIdsCsv } from "../hooks/useTranslations";
 import { useI18n } from "../i18n/i18nContext";
+import ActionIcon from "./icons/ActionIcon";
 
 interface Props {
   verseId: string;
@@ -131,43 +132,43 @@ export default function VerseActions({
       <div className="flex gap-2 mb-2 flex-wrap">
         <button
           onClick={loadCrossrefs}
-          className={`text-xs px-3 py-1 rounded border transition ${
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
             tab === "crossrefs"
               ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
               : "hover:bg-gray-100"
           }`}
         >
-          🔗 {t("verseActions.btn.crossrefs")}
+          <ActionIcon name="link" /> {t("verseActions.btn.crossrefs")}
         </button>
         <button
           onClick={loadExplain}
-          className={`text-xs px-3 py-1 rounded border transition ${
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
             tab === "explain"
               ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
               : "hover:bg-gray-100"
           }`}
         >
-          🤖 {t("verseActions.btn.explain")}
+          <ActionIcon name="sparkles" /> {t("verseActions.btn.explain")}
         </button>
         <button
           onClick={() => setTab(tab === "commentary" ? "none" : "commentary")}
-          className={`text-xs px-3 py-1 rounded border transition ${
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
             tab === "commentary"
               ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
               : "hover:bg-gray-100"
           }`}
         >
-          📚 {t("verseActions.btn.commentary")}
+          <ActionIcon name="book" /> {t("verseActions.btn.commentary")}
         </button>
         <button
           onClick={loadCompare}
-          className={`text-xs px-3 py-1 rounded border transition ${
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
             tab === "compare"
               ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
               : "hover:bg-gray-100"
           }`}
         >
-          🔀 {t("verseActions.btn.compare")}
+          <ActionIcon name="compare" /> {t("verseActions.btn.compare")}
         </button>
       </div>
 
@@ -175,7 +176,7 @@ export default function VerseActions({
         <button
           onClick={() => setTab(tab === "notes" ? "none" : "notes")}
           title={hasNote ? t("verseActions.note.edit") : t("verseActions.note.add")}
-          className={`text-xs px-3 py-1 rounded border transition ${
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
             tab === "notes"
               ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
               : hasNote
@@ -183,30 +184,33 @@ export default function VerseActions({
                 : "hover:bg-gray-100"
           }`}
         >
-          {hasNote ? `✍️ ${t("verseActions.btn.noteWith")}` : `✍️ ${t("verseActions.btn.note")}`}
+          <ActionIcon name={hasNote ? "pencil-filled" : "pencil"} />{" "}
+          {hasNote ? t("verseActions.btn.noteWith") : t("verseActions.btn.note")}
         </button>
         <button
           onClick={handleBookmark}
           title={bookmarked ? t("verseActions.bookmark.remove") : t("verseActions.bookmark.save")}
-          className={`text-xs px-3 py-1 rounded border transition ${
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
             bookmarked
               ? "bg-amber-100 text-amber-800 border-amber-300"
               : "hover:bg-gray-100"
           }`}
         >
-          {bookmarked ? `★ ${t("verseActions.btn.saved")}` : `☆ ${t("verseActions.btn.save")}`}
+          <ActionIcon name={bookmarked ? "star-filled" : "star"} />{" "}
+          {bookmarked ? t("verseActions.btn.saved") : t("verseActions.btn.save")}
         </button>
         <button
           onClick={copyVerse}
-          className="text-xs px-3 py-1 rounded border hover:bg-gray-100 transition"
+          className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border hover:bg-gray-100 transition"
         >
-          {copied ? `✅ ${t("verseActions.btn.copied")}` : `📋 ${t("verseActions.btn.copy")}`}
+          <ActionIcon name={copied ? "check" : "clipboard"} />{" "}
+          {copied ? t("verseActions.btn.copied") : t("verseActions.btn.copy")}
         </button>
         <button
           onClick={() => setShareOpen(true)}
-          className="text-xs px-3 py-1 rounded border hover:bg-gray-100 transition"
+          className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border hover:bg-gray-100 transition"
         >
-          🖼️ {t("verseActions.btn.share")}
+          <ActionIcon name="share" /> {t("verseActions.btn.share")}
         </button>
       </div>
 
