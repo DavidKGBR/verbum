@@ -554,6 +554,26 @@ python scripts/load_sentiment_batch.py data/processed/sentiment_pt/PSA/batch_001
 
 ---
 
+### Sessão R8 — Dicionário Bíblico multilingual (Easton + Smith) — pré-launch, **100%**
+
+**Entrega:** As ~6.000 entradas combinadas de Easton (1897) + Smith (1863) traduzidas para PT-BR e ES, sem fallback para inglês na interface nesses idiomas. Hoje (R6) a DictionaryPage mostra um disclaimer discreto avisando que o conteúdo segue em inglês; R8 remove esse disclaimer porque passa a ser verdadeiro PT/ES de ponta a ponta.
+
+**Por que após R7:** mesmo padrão do R3.6 (Strong's) — a R3.6 estabeleceu o workflow (schema multilang + UPSERT idempotent + coverage script + frontend fallback indicator). Reaplicamos aqui:
+
+**Subsessões:**
+- **R8.0** — Infra (schema `dictionary_entries_multilang`, router `/dictionary/search?lang=` + `/dictionary/{slug}?lang=`, frontend `is_translated` flag, fallback para EN quando faltar). Script `scripts/prep_dict_batch.py` + `scripts/load_dict_batch.py` + `scripts/dictionary_coverage.py` — mesma pegada do R3.6.
+- **R8.1-N** — Batches. ~6.000 entradas ÷ 1.000 por batch = ~6 batches × 2 idiomas. Poderia ser rule-based (tradutor) como o R3.6 Strong's; talvez com pós-edição humana em nomes de lugares ambíguos.
+- **Spot-check** como no R3.6.
+
+**Critério de done R8:**
+- Coverage 100% PT-BR + ES em `dictionary_coverage.py`
+- Remover o banner `dictionary.englishNotice` em PT/ES (ou torná-lo condicional a entradas ainda sem tradução)
+- Testar "babilônia" em PT → retorna entrada `Babylon` já em português
+
+**Decisão data-driven:** R8 pode rodar depois do launch se a janela apertar — o disclaimer atual é honesto e o reverse-lookup já entrega a entrada certa. Mas deixar registrado aqui pra não virar "surpresa post-launch".
+
+---
+
 ## Encerramento — passa o bastão pro LAUNCH_PLAN
 
 Quando as 7 sessões R1–R7 estiverem ✅:
