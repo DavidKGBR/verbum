@@ -997,6 +997,8 @@ export interface HomeStatsNote {
   id: string;
   verse_id: string;
   title: string;
+  title_pt?: string;
+  title_es?: string;
   category: string;
   date: string;
 }
@@ -1004,6 +1006,8 @@ export interface HomeStatsNote {
 export interface HomeStatsQuestion {
   id: string;
   title: string;
+  title_pt?: string;
+  title_es?: string;
   category: string;
 }
 

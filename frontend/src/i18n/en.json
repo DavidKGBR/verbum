@@ -699,5 +699,7 @@
   "emotional.peaks.mostNegative": "Most Negative",
   "emotional.label.positive": "Positive",
   "emotional.label.negative": "Negative",
-  "emotional.label.neutral": "Neutral"
+  "emotional.label.neutral": "Neutral",
+  "community.category.textual": "Textual",
+  "community.category.historical": "Historical"
 }

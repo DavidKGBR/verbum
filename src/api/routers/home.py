@@ -68,12 +68,16 @@ def get_home_stats() -> dict:
         questions_count = len(_OPEN_QUESTIONS)
         community_notes_count = len(_COMMUNITY_NOTES)
 
-        # Recent items for community preview
+        # Recent items for community preview.
+        # Frontend does the locale pick via localized() helper, so always
+        # ship title_pt / title_es alongside the English title.
         recent_notes = [
             {
                 "id": n.get("id", ""),
                 "verse_id": n.get("verse_id", ""),
                 "title": n.get("title", ""),
+                "title_pt": n.get("title_pt", ""),
+                "title_es": n.get("title_es", ""),
                 "category": n.get("category", ""),
                 "date": n.get("date", ""),
             }
@@ -84,6 +88,8 @@ def get_home_stats() -> dict:
             {
                 "id": q.get("id", ""),
                 "title": q.get("title", ""),
+                "title_pt": q.get("title_pt", ""),
+                "title_es": q.get("title_es", ""),
                 "category": q.get("category", ""),
             }
             for q in _OPEN_QUESTIONS[:3]
