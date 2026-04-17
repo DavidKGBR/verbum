@@ -10,8 +10,15 @@ import re
 from fastapi import APIRouter, Query
 
 from src.api.dependencies import get_db
+from src.transform.kjv_annotations import strip_kjv_annotations
 
 router = APIRouter()
+
+
+def _clean_text(raw: str, translation: str) -> str:
+    """For KJV, return text without translator annotations ("{Heb. ...}").
+    Every other translation stores clean prose already."""
+    return strip_kjv_annotations(raw) if translation == "kjv" else raw
 
 
 @router.get("/verses/search")
@@ -84,11 +91,27 @@ def search_verses(
         # match_rank is an implementation detail — don't leak it in the JSON.
         df = df.drop(columns=["match_rank"])
 
+        # For KJV, strip the translator-annotation blocks ("{Heb. ...}",
+        # "{eloquent: a man of words}") before returning. If the query only
+        # matched inside those blocks — e.g. searching "Ester" and hitting
+        # "Heb. since yesterday" — the row no longer contains the substring
+        # in its clean form, so we drop it. This hides both false positives
+        # AND the raw curly-brace noise from the returned text field.
+        records: list[dict] = []
+        needle = q.lower()
+        tl = translation.lower()
+        for row in df.to_dict(orient="records"):
+            cleaned = _clean_text(row["text"], tl)
+            if tl == "kjv" and needle not in cleaned.lower():
+                continue  # match was inside annotations only — false positive
+            row["text"] = cleaned
+            records.append(row)
+
         return {
             "query": q,
-            "translation": translation.lower(),
-            "total_results": len(df),
-            "results": df.to_dict(orient="records"),
+            "translation": tl,
+            "total_results": len(records),
+            "results": records,
         }
     finally:
         conn.close()
