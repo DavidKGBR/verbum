@@ -1125,15 +1125,22 @@ export interface DictEntry {
   text_easton: string | null;
   text_smith: string | null;
   preview?: string;
+  /** Present on /dictionary/{slug} responses (and on /dictionary/search
+   *  results when `lang` is provided). true when at least one body was
+   *  served from dictionary_entries_multilang; false when everything
+   *  fell back to the English original. */
+  is_translated?: boolean;
 }
 
-export function fetchDictionaryEntry(slug: string) {
-  return fetchJson<DictEntry>(`${BASE}/dictionary/${slug}`);
+export function fetchDictionaryEntry(slug: string, lang?: string) {
+  const q = lang ? `?lang=${encodeURIComponent(lang)}` : "";
+  return fetchJson<DictEntry>(`${BASE}/dictionary/${slug}${q}`);
 }
 
-export function searchDictionary(q: string, limit = 50) {
+export function searchDictionary(q: string, limit = 50, lang?: string) {
+  const langQ = lang ? `&lang=${encodeURIComponent(lang)}` : "";
   return fetchJson<{ query: string; total_results: number; results: DictEntry[] }>(
-    `${BASE}/dictionary/search?q=${encodeURIComponent(q)}&limit=${limit}`
+    `${BASE}/dictionary/search?q=${encodeURIComponent(q)}&limit=${limit}${langQ}`
   );
 }
 

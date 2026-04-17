@@ -741,5 +741,6 @@
   "notes.category.prayer": "Oração",
   "plans.banner.minimize": "Minimizar painel do plano",
   "plans.banner.expand": "Expandir painel do plano",
-  "plans.banner.todayLabel": "Leitura de hoje"
+  "plans.banner.todayLabel": "Leitura de hoje",
+  "dictionary.refinementInProgress": "Original em inglês · tradução em refinamento"
 }

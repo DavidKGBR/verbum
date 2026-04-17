@@ -447,13 +447,25 @@ def get_word_distribution(
 def search_dictionary(
     q: str = Query(..., min_length=2, description="Search term"),
     limit: int = Query(50, ge=1, le=200, description="Max results"),
+    lang: str | None = Query(
+        None,
+        description="Target language for the preview: 'pt' or 'es'. "
+                    "Falls back to English when translation unavailable.",
+    ),
 ) -> dict:
-    """Search the Bible dictionary (Easton's + Smith's) by name."""
+    """Search the Bible dictionary (Easton's + Smith's) by name.
+
+    When `lang` is provided and a translation exists in
+    `dictionary_entries_multilang`, the preview snippet uses the
+    translated body. Results still come from `name` matching on the
+    English source because user-friendly name search is already handled
+    upstream by the frontend's toCanonicalEnglishQuery() helper.
+    """
     conn = get_db()
     try:
         df = conn.execute(
             """
-            SELECT slug, name, source,
+            SELECT slug, name, source, text_easton, text_smith,
                    LEFT(COALESCE(text_easton, text_smith, ''), 200) AS preview
             FROM dictionary_entries
             WHERE name ILIKE ?
@@ -462,14 +474,67 @@ def search_dictionary(
             """,
             [f"%{q}%", limit],
         ).fetchdf()
-        return {"query": q, "total_results": len(df), "results": df.to_dict(orient="records")}
+
+        records = df.to_dict(orient="records")
+
+        # Overlay the returned text + preview with the translated version
+        # when a language is asked for and we have a translation for that slug.
+        # Per-source fallback — a slug may have only Easton translated, not
+        # Smith (or vice versa). Missing side keeps the English original.
+        if lang and lang.lower() in ("pt", "es") and records:
+            target = lang.lower()
+            slugs = [r["slug"] for r in records]
+            placeholders = ",".join("?" * len(slugs))
+            ml_rows = conn.execute(
+                f"""
+                SELECT slug, text_easton, text_smith
+                FROM dictionary_entries_multilang
+                WHERE lang = ? AND slug IN ({placeholders})
+                """,
+                [target, *slugs],
+            ).fetchall()
+            ml_map = {
+                row[0]: {"text_easton": row[1], "text_smith": row[2]}
+                for row in ml_rows
+            }
+            for r in records:
+                ml = ml_map.get(r["slug"])
+                any_translated = False
+                if ml:
+                    if r.get("text_easton") and ml["text_easton"]:
+                        r["text_easton"] = ml["text_easton"]
+                        any_translated = True
+                    if r.get("text_smith") and ml["text_smith"]:
+                        r["text_smith"] = ml["text_smith"]
+                        any_translated = True
+                if any_translated:
+                    r["preview"] = (r.get("text_easton") or r.get("text_smith") or "")[:200]
+                r["is_translated"] = any_translated
+
+        return {"query": q, "total_results": len(records), "results": records}
     finally:
         conn.close()
 
 
 @router.get("/dictionary/{slug}")
-def get_dictionary_entry(slug: str) -> dict:
-    """Get a specific dictionary entry by slug."""
+def get_dictionary_entry(
+    slug: str,
+    lang: str | None = Query(
+        None,
+        description="Target language: 'pt' or 'es'. Falls back to English "
+                    "for whichever source body (Easton/Smith) lacks translation.",
+    ),
+) -> dict:
+    """Get a specific dictionary entry by slug.
+
+    Mirrors the Strong's `?lang=` pattern: if a translation exists in
+    `dictionary_entries_multilang`, the response has `text_easton` /
+    `text_smith` replaced by the translated bodies. Per-source fallback —
+    a slug may have a translated Easton body but no translated Smith body
+    (or vice versa); the missing side falls back to the English original.
+    The response includes `is_translated: bool` so the frontend can flag
+    entries still awaiting translation.
+    """
     conn = get_db()
     try:
         df = conn.execute(
@@ -478,6 +543,34 @@ def get_dictionary_entry(slug: str) -> dict:
         ).fetchdf()
         if df.empty:
             raise HTTPException(status_code=404, detail=f"Dictionary entry '{slug}' not found")
-        return df.to_dict(orient="records")[0]
+        entry = df.to_dict(orient="records")[0]
+
+        is_translated = False
+        if lang and lang.lower() in ("pt", "es"):
+            target = lang.lower()
+            ml_row = conn.execute(
+                """
+                SELECT text_easton, text_smith
+                FROM dictionary_entries_multilang
+                WHERE slug = ? AND lang = ?
+                """,
+                [slug.lower(), target],
+            ).fetchone()
+            if ml_row:
+                translated_easton = ml_row[0]
+                translated_smith = ml_row[1]
+                # Only overlay when the source had that body to begin with,
+                # so a spurious translation row can't introduce ghost text.
+                has_any_translation = False
+                if entry.get("text_easton") and translated_easton:
+                    entry["text_easton"] = translated_easton
+                    has_any_translation = True
+                if entry.get("text_smith") and translated_smith:
+                    entry["text_smith"] = translated_smith
+                    has_any_translation = True
+                is_translated = has_any_translation
+
+        entry["is_translated"] = is_translated
+        return entry
     finally:
         conn.close()

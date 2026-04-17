@@ -59,7 +59,10 @@ export default function DictionaryPage() {
     debounceRef.current = setTimeout(() => {
       setLoading(true);
       const canonicalQuery = toCanonicalEnglishQuery(query, locale);
-      searchDictionary(canonicalQuery, 100)
+      // Pass the active locale so the backend overlays translated previews
+      // from dictionary_entries_multilang when available.
+      const lang = locale !== "en" ? locale : undefined;
+      searchDictionary(canonicalQuery, 100, lang)
         .then((d) => setResults(d.results))
         .catch(() => setResults([]))
         .finally(() => setLoading(false));
@@ -166,6 +169,14 @@ export default function DictionaryPage() {
 
               {isOpen && (
                 <div className="px-4 pb-4 space-y-4 border-t border-[var(--color-gold-dark)]/10">
+                  {/* Per-entry "original English · translation in progress" notice
+                      — only shown when a locale translation was requested but the
+                      multilang table had no row (or an empty row) for this slug.  */}
+                  {locale !== "en" && entry.is_translated === false && (
+                    <p className="text-[10px] italic opacity-50 mt-3">
+                      {t("dictionary.refinementInProgress")}
+                    </p>
+                  )}
                   {entry.text_easton && (
                     <div className="mt-3">
                       <h4 className="text-[10px] uppercase tracking-wider font-bold text-[var(--color-gold-dark)] opacity-60 mb-1">

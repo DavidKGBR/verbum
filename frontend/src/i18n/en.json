@@ -741,5 +741,6 @@
   "notes.category.prayer": "Prayer",
   "plans.banner.minimize": "Minimize plan banner",
   "plans.banner.expand": "Expand plan banner",
-  "plans.banner.todayLabel": "Today's reading"
+  "plans.banner.todayLabel": "Today's reading",
+  "dictionary.refinementInProgress": "English original · translation in progress"
 }
