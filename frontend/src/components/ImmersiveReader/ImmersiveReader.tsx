@@ -248,14 +248,61 @@ export default function ImmersiveReader() {
     return () => document.removeEventListener("fullscreenchange", handler);
   }, []);
 
+  // ── Reader-page cache (stale-while-revalidate + adjacent prefetch) ───────
+  // We keep a Map of already-fetched pages keyed by `book|ch|translation`.
+  // When the user jumps to a chapter that's already cached, we apply it
+  // synchronously (no loading state, no book remount).
+  // After the current chapter lands, we quietly prefetch the next and the
+  // previous one in the background, so clicking → / ← never triggers a
+  // visible fetch unless the user is at the very edges of the Bible.
+  const pageCache = useRef<Map<string, ReaderPage>>(new Map());
+  const cacheKey = (b: string, c: number, t: string) => `${b}|${c}|${t}`;
+
   useEffect(() => {
-    setLoading(true);
-    setCurrentPage(0);
-    fetchReaderPage(bookId, chapter, translation)
-      .then(setData)
-      .catch(() => setData(null))
-      .finally(() => setLoading(false));
+    const key = cacheKey(bookId, chapter, translation);
+    const cached = pageCache.current.get(key);
+    if (cached) {
+      // Synchronous swap — FlipBook stays mounted, just its children update.
+      setData(cached);
+      setCurrentPage(0);
+      setLoading(false);
+    } else {
+      // Keep the previous `data` rendered so the book doesn't blink white;
+      // only show the spinner on the very first load (when data is still null).
+      setLoading(true);
+      fetchReaderPage(bookId, chapter, translation)
+        .then((d) => {
+          pageCache.current.set(key, d);
+          setData(d);
+          setCurrentPage(0);
+        })
+        .catch(() => setData(null))
+        .finally(() => setLoading(false));
+    }
   }, [bookId, chapter, translation]);
+
+  // Prefetch adjacent chapters so the next click has zero latency.
+  useEffect(() => {
+    if (!data) return;
+    const translationId = translation;
+    const candidates: Array<[string, number]> = [];
+    if (data.has_next) candidates.push([data.book_id, data.chapter + 1]);
+    if (data.has_previous) candidates.push([data.book_id, data.chapter - 1]);
+    for (const [b, c] of candidates) {
+      const key = cacheKey(b, c, translationId);
+      if (pageCache.current.has(key)) continue;
+      // Fire-and-forget — errors silently ignored; user-triggered fetch will
+      // re-raise them and show the error state.
+      fetchReaderPage(b, c, translationId)
+        .then((d) => pageCache.current.set(key, d))
+        .catch(() => {});
+    }
+  }, [data, translation]);
+
+  // Changing translation invalidates the cache (different verses per edition).
+  useEffect(() => {
+    pageCache.current.clear();
+  }, [translation]);
 
   const pages = useMemo(() => (data ? paginateVerses(data.verses) : []), [data]);
 
@@ -416,14 +463,20 @@ export default function ImmersiveReader() {
         </button>
       </div>
 
-      {loading ? (
+      {!data && loading ? (
         <p className="text-center text-[var(--color-gold)] opacity-50 py-20 font-body text-lg">
           {t("common.loading")}
         </p>
       ) : !data ? (
         <p className="text-center text-red-400 py-20">{t("reader.loadError")}</p>
       ) : (
-        <div className="book-scene">
+        /* Book stays mounted across chapter switches; `loading` only dims the
+           text slightly so the user has feedback that a fetch is in flight
+           (rare — adjacent chapters are prefetched into pageCache).  */
+        <div
+          className="book-scene transition-opacity duration-200"
+          style={{ opacity: loading ? 0.65 : 1 }}
+        >
           {/* Chapter title banner */}
           <div className="text-center mb-4">
             <h2
