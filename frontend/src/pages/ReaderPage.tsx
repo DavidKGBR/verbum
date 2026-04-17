@@ -5,6 +5,7 @@ import ParallelView from "../components/ParallelView";
 import ImmersiveReader from "../components/ImmersiveReader/ImmersiveReader";
 import InterlinearView from "../components/reader/InterlinearView";
 import StructuralView from "../components/structure/StructuralView";
+import ActivePlanIndicator from "../components/plans/ActivePlanIndicator";
 import { useI18n } from "../i18n/i18nContext";
 
 type Mode = "single" | "parallel" | "immersive" | "interlinear" | "structural";
@@ -55,6 +56,9 @@ export default function ReaderPage() {
           ))}
         </div>
       </div>
+
+      {/* Persistent plan status — rendered once across all modes */}
+      <ActivePlanIndicator />
 
       {mode === "single"      && <BibleReader />}
       {mode === "parallel"    && <ParallelView />}

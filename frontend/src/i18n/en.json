@@ -738,5 +738,8 @@
   "notes.category.warning": "Warning",
   "notes.category.fulfillment": "Fulfillment",
   "notes.category.question": "Question",
-  "notes.category.prayer": "Prayer"
+  "notes.category.prayer": "Prayer",
+  "plans.banner.minimize": "Minimize plan banner",
+  "plans.banner.expand": "Expand plan banner",
+  "plans.banner.todayLabel": "Today's reading"
 }

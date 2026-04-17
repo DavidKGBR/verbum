@@ -738,5 +738,8 @@
   "notes.category.warning": "Advertência",
   "notes.category.fulfillment": "Cumprimento",
   "notes.category.question": "Dúvida",
-  "notes.category.prayer": "Oração"
+  "notes.category.prayer": "Oração",
+  "plans.banner.minimize": "Minimizar painel do plano",
+  "plans.banner.expand": "Expandir painel do plano",
+  "plans.banner.todayLabel": "Leitura de hoje"
 }

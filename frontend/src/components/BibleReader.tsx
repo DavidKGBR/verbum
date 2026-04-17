@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import {
   fetchReaderPage,
   fetchCrossrefCounts,
@@ -11,8 +11,7 @@ import VerseActions from "./VerseActions";
 import { useReadingHistory } from "../hooks/useReadingHistory";
 import { useTranslatorNotes } from "../hooks/useTranslatorNotes";
 import { useVerseNotes } from "../hooks/useVerseNotes";
-import { useReadingPlans, recordPlanAutoMark } from "../hooks/useReadingPlans";
-import { getPlanById } from "./plans/plansData";
+import { recordPlanAutoMark } from "../hooks/useReadingPlans";
 import { parseKjvAnnotations } from "./reader/kjvAnnotations";
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { useTranslationIds } from "../hooks/useTranslations";
@@ -62,7 +61,6 @@ export default function BibleReader() {
   const [crossrefCounts, setCrossrefCounts] = useState<Record<string, number>>({});
   const { notesOn, toggle: toggleNotes } = useTranslatorNotes();
   const { notes: verseNotes } = useVerseNotes();
-  const { active: activePlan, todayReading, isCompleted } = useReadingPlans();
   const highlightVerse = Number(searchParams.get("verse")) || null;
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const isKjv = translation === "kjv";
@@ -278,40 +276,9 @@ export default function BibleReader() {
             </p>
           </div>
 
-          {/* Today's plan banner — only when this chapter is part of an active plan's today */}
-          {(() => {
-            if (!activePlan) return null;
-            const planDef = getPlanById(activePlan.plan_id);
-            if (!planDef || books.length === 0) return null;
-            const today = todayReading(planDef, books);
-            if (!today) return null;
-            const chapterId = `${page.book_id}.${page.chapter}`;
-            const inToday = today.chapters.some((c) => c.chapter_id === chapterId);
-            if (!inToday) return null;
-            const doneToday = today.chapters.filter((c) =>
-              isCompleted(activePlan.plan_id, c.chapter_id)
-            ).length;
-            const total = today.chapters.length;
-            return (
-              <Link
-                to="/plans"
-                className="block mb-5 rounded border border-[var(--color-gold)]/30
-                           bg-[var(--color-gold)]/5 px-4 py-2 text-sm hover:bg-[var(--color-gold)]/10
-                           transition focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
-              >
-                <span className="font-display font-bold text-[var(--color-gold-dark)] inline-flex items-center gap-1.5">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d={planDef.icon} />
-                  </svg>
-                  {t(planDef.titleKey)}
-                </span>
-                <span className="opacity-60 ml-2">
-                  · {t("plans.dayOf").replace("{day}", String(today.day)).replace("{total}", String(planDef.total_days))} · {doneToday} / {total} {t("reader.readToday")}
-                  {doneToday === total && total > 0 ? ` — ${t("plans.allDone")}` : ""}
-                </span>
-              </Link>
-            );
-          })()}
+          {/* Plan banner moved to ReaderPage → <ActivePlanIndicator />, which
+              now renders it once across every mode (Single/Parallel/Immersive/
+              Interlinear/Structural) and is collapsible. */}
 
           {/* Verses */}
           <div className="space-y-0.5 fade-in">
