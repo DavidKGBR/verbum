@@ -507,14 +507,14 @@ export default function ImmersiveReader() {
           </div>
 
           {/* ── FlipBook ──
-               key forces the lib to remount on chapter change so its
-               internal pageIndex is always reset to 0, preventing the
-               "skip to mid-chapter" bug. Data comes from pageCache so
-               this is effectively synchronous; the fade-in wrapper makes
-               the remount feel like a smooth replacement instead of a
-               rip-and-rebuild. */}
-          <div key={flipBookKey} className="flex justify-center fade-in">
+               `key` is on HTMLFlipBook itself (not the wrapper) so only
+               the library remounts on chapter change. Remounting the
+               wrapper caused a visual glitch where a flip animation would
+               sometimes land back on the same spread. With the pageCache
+               populating `data` synchronously, this remount is imperceptible. */}
+          <div className="flex justify-center">
             <HTMLFlipBook
+              key={flipBookKey}
               ref={flipBookRef}
               width={550}
               height={720}
