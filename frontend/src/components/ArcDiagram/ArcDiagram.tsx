@@ -9,7 +9,7 @@ import {
   type BookPosition,
 } from "./arcUtils";
 import { useI18n } from "../../i18n/i18nContext";
-import { localizeBookName } from "../../i18n/bookNames";
+import { localizeBookName, localizeBookAbbrev } from "../../i18n/bookNames";
 
 interface Props {
   books: Book[];
@@ -345,7 +345,7 @@ export default function ArcDiagram({
                 opacity={0.7}
                 className="select-none pointer-events-none"
               >
-                {pos.book.book_id}
+                {localizeBookAbbrev(pos.book.book_id, locale)}
               </text>
             )}
           </g>

@@ -1,6 +1,54 @@
 import { useEffect, useState } from "react";
 import { fetchBooks, type Book } from "../services/api";
-import { useI18n } from "./i18nContext";
+import { useI18n, type Locale } from "./i18nContext";
+
+// ─── Abbreviated book names per locale ──────────────────────────────────────
+// Used in tight visuals (ArcDiagram canvas labels, arc legends, etc.) where
+// the full "Gênesis"/"Apocalipsis" wouldn't fit. Each language follows its
+// consagrated scholarly convention (SBB for PT-BR, RV for ES-LATAM).
+
+const BOOK_ABBREV_PT: Record<string, string> = {
+  GEN: "Gn",  EXO: "Êx",  LEV: "Lv",  NUM: "Nm",  DEU: "Dt",
+  JOS: "Js",  JDG: "Jz",  RUT: "Rt",  "1SA": "1Sm", "2SA": "2Sm",
+  "1KI": "1Rs", "2KI": "2Rs", "1CH": "1Cr", "2CH": "2Cr",
+  EZR: "Ed",  NEH: "Ne",  EST: "Et",  JOB: "Jó",  PSA: "Sl",
+  PRO: "Pv",  ECC: "Ec",  SNG: "Ct",  ISA: "Is",  JER: "Jr",
+  LAM: "Lm",  EZK: "Ez",  DAN: "Dn",  HOS: "Os",  JOL: "Jl",
+  AMO: "Am",  OBA: "Ob",  JNA: "Jn",  MIC: "Mq",  NAM: "Na",
+  HAB: "Hc",  ZEP: "Sf",  HAG: "Ag",  ZEC: "Zc",  MAL: "Ml",
+  MAT: "Mt",  MRK: "Mc",  LUK: "Lc",  JHN: "Jo",  ACT: "At",
+  ROM: "Rm",  "1CO": "1Co", "2CO": "2Co", GAL: "Gl",  EPH: "Ef",
+  PHP: "Fp",  COL: "Cl",  "1TH": "1Ts", "2TH": "2Ts",
+  "1TI": "1Tm", "2TI": "2Tm", TIT: "Tt",  PHM: "Fm",
+  HEB: "Hb",  JAS: "Tg",  "1PE": "1Pe", "2PE": "2Pe",
+  "1JN": "1Jo", "2JN": "2Jo", "3JN": "3Jo", JUD: "Jd",  REV: "Ap",
+};
+
+const BOOK_ABBREV_ES: Record<string, string> = {
+  GEN: "Gn",  EXO: "Éx",  LEV: "Lv",  NUM: "Nm",  DEU: "Dt",
+  JOS: "Jos", JDG: "Jue", RUT: "Rt",  "1SA": "1Sm", "2SA": "2Sm",
+  "1KI": "1Re", "2KI": "2Re", "1CH": "1Cr", "2CH": "2Cr",
+  EZR: "Esd", NEH: "Neh", EST: "Est", JOB: "Job", PSA: "Sal",
+  PRO: "Pr",  ECC: "Ecl", SNG: "Cnt", ISA: "Is",  JER: "Jer",
+  LAM: "Lm",  EZK: "Ez",  DAN: "Dn",  HOS: "Os",  JOL: "Jl",
+  AMO: "Am",  OBA: "Abd", JNA: "Jon", MIC: "Miq", NAM: "Nah",
+  HAB: "Hab", ZEP: "Sof", HAG: "Hag", ZEC: "Zac", MAL: "Mal",
+  MAT: "Mt",  MRK: "Mc",  LUK: "Lc",  JHN: "Jn",  ACT: "Hch",
+  ROM: "Rom", "1CO": "1Co", "2CO": "2Co", GAL: "Gl",  EPH: "Ef",
+  PHP: "Flp", COL: "Col", "1TH": "1Ts", "2TH": "2Ts",
+  "1TI": "1Tm", "2TI": "2Tm", TIT: "Tit", PHM: "Flm",
+  HEB: "Heb", JAS: "Stg", "1PE": "1Pe", "2PE": "2Pe",
+  "1JN": "1Jn", "2JN": "2Jn", "3JN": "3Jn", JUD: "Jud", REV: "Ap",
+};
+
+/** Short book abbreviation per locale. Falls back to the canonical
+ *  3-letter id (PSA, GEN, MAT) when no mapping exists (EN locale, or
+ *  a new book not yet mapped). */
+export function localizeBookAbbrev(bookId: string, locale: Locale): string {
+  if (locale === "pt") return BOOK_ABBREV_PT[bookId] ?? bookId;
+  if (locale === "es") return BOOK_ABBREV_ES[bookId] ?? bookId;
+  return bookId; // EN — keep canonical 3-letter id (Gen, Psa, Mat…)
+}
 
 // ─── Portuguese (pt-br) ─────────────────────────────────────────────────────
 

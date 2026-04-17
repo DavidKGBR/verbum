@@ -125,7 +125,7 @@ export default function ArcDiagramPage() {
             onChange={(e) =>
               setFilters({ minConnections: Number(e.target.value) })
             }
-            className="w-32"
+            className="w-32 accent-[var(--color-gold)]"
           />
         </label>
       </div>
