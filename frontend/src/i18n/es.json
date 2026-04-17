@@ -730,5 +730,8 @@
   "book.category.acts": "Hechos",
   "book.category.paulineEpistles": "Epístolas Paulinas",
   "book.category.generalEpistles": "Epístolas Generales",
-  "book.category.apocalyptic": "Apocalíptica"
+  "book.category.apocalyptic": "Apocalíptica",
+  "search.sentiment.positive": "Positivo",
+  "search.sentiment.negative": "Negativo",
+  "search.sentiment.neutral": "Neutro"
 }

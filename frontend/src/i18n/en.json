@@ -730,5 +730,8 @@
   "book.category.acts": "Acts",
   "book.category.paulineEpistles": "Pauline Epistles",
   "book.category.generalEpistles": "General Epistles",
-  "book.category.apocalyptic": "Apocalyptic"
+  "book.category.apocalyptic": "Apocalyptic",
+  "search.sentiment.positive": "Positive",
+  "search.sentiment.negative": "Negative",
+  "search.sentiment.neutral": "Neutral"
 }

@@ -2,21 +2,15 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { searchVerses, type SearchResult } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext";
 
-const KEYWORD_SUGGESTIONS = [
-  "love",
-  "faith",
-  "hope",
-  "grace",
-  "peace",
-  "wisdom",
-  "Jesus",
-  "David",
-  "Moses",
-  "beginning",
-  "light",
-];
+// Suggestions are matched against verse text via ILIKE — they must exist in
+// the user's active translation, so they're locale-specific.
+const KEYWORD_SUGGESTIONS: Record<Locale, string[]> = {
+  en: ["love", "faith", "hope", "grace", "peace", "wisdom", "Jesus", "David", "Moses", "beginning", "light"],
+  pt: ["amor", "fé", "esperança", "graça", "paz", "sabedoria", "Jesus", "Davi", "Moisés", "princípio", "luz"],
+  es: ["amor", "fe", "esperanza", "gracia", "paz", "sabiduría", "Jesús", "David", "Moisés", "principio", "luz"],
+};
 
 interface PopularVerse {
   ref: string;
@@ -24,28 +18,34 @@ interface PopularVerse {
   preview: string;
 }
 
-const POPULAR_VERSES: PopularVerse[] = [
-  {
-    ref: "John 3:16",
-    verse_id: "JHN.3.16",
-    preview: "For God so loved the world...",
-  },
-  {
-    ref: "Psalm 23:1",
-    verse_id: "PSA.23.1",
-    preview: "The LORD is my shepherd...",
-  },
-  {
-    ref: "Romans 8:28",
-    verse_id: "ROM.8.28",
-    preview: "And we know that all things work together for good...",
-  },
-  {
-    ref: "Philippians 4:13",
-    verse_id: "PHP.4.13",
-    preview: "I can do all things through Christ which strengtheneth me.",
-  },
-];
+// Handpicked showcase verses — ref + first-line preview in each locale.
+// The verse_id stays canonical so the Reader deep-link works universally.
+const POPULAR_VERSES: Record<Locale, PopularVerse[]> = {
+  en: [
+    { ref: "John 3:16",        verse_id: "JHN.3.16", preview: "For God so loved the world..." },
+    { ref: "Psalm 23:1",       verse_id: "PSA.23.1", preview: "The LORD is my shepherd..." },
+    { ref: "Romans 8:28",      verse_id: "ROM.8.28", preview: "And we know that all things work together for good..." },
+    { ref: "Philippians 4:13", verse_id: "PHP.4.13", preview: "I can do all things through Christ which strengtheneth me." },
+  ],
+  pt: [
+    { ref: "João 3:16",        verse_id: "JHN.3.16", preview: "Porque Deus amou o mundo de tal maneira..." },
+    { ref: "Salmos 23:1",      verse_id: "PSA.23.1", preview: "O Senhor é o meu pastor; nada me faltará." },
+    { ref: "Romanos 8:28",     verse_id: "ROM.8.28", preview: "E sabemos que todas as coisas contribuem juntamente para o bem..." },
+    { ref: "Filipenses 4:13",  verse_id: "PHP.4.13", preview: "Posso todas as coisas naquele que me fortalece." },
+  ],
+  es: [
+    { ref: "Juan 3:16",        verse_id: "JHN.3.16", preview: "Porque de tal manera amó Dios al mundo..." },
+    { ref: "Salmos 23:1",      verse_id: "PSA.23.1", preview: "Jehová es mi pastor; nada me faltará." },
+    { ref: "Romanos 8:28",     verse_id: "ROM.8.28", preview: "Y sabemos que a los que aman a Dios, todas las cosas..." },
+    { ref: "Filipenses 4:13",  verse_id: "PHP.4.13", preview: "Todo lo puedo en Cristo que me fortalece." },
+  ],
+};
+
+const SENTIMENT_I18N: Record<string, string> = {
+  positive: "search.sentiment.positive",
+  negative: "search.sentiment.negative",
+  neutral:  "search.sentiment.neutral",
+};
 
 function verseIdToReaderLink(verseId: string): string {
   const parts = verseId.split(".");
@@ -54,7 +54,8 @@ function verseIdToReaderLink(verseId: string): string {
 }
 
 export default function SearchPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const translation = defaultTranslationFor(locale);
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const initialQ = searchParams.get("q") ?? "";
@@ -64,21 +65,24 @@ export default function SearchPage() {
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
 
-  // Run search on mount (or URL change) when ?q= is present.
-  // Also keeps the input in sync if the user navigates via back/forward.
+  // Run search on mount (or URL change) when ?q= is present. Also re-runs
+  // when the user switches UI locale — so a PT-BR visitor typing "amor"
+  // and then switching to ES gets re-queried against the ES corpus.
   useEffect(() => {
     const q = searchParams.get("q") ?? "";
     if (q && q !== query) setQuery(q);
     if (q) void runSearch(q);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
+  }, [searchParams, locale]);
 
   async function runSearch(q: string) {
     const trimmed = q.trim();
     if (!trimmed) return;
     setLoading(true);
     try {
-      const data = await searchVerses(trimmed);
+      // Search inside the user's active translation so PT users hit NVI,
+      // ES users hit RVR, etc. — previously always KJV → "amor" returned 0.
+      const data = await searchVerses(trimmed, translation);
       setResults(data.results);
       setTotalResults(data.total_results);
       setSearched(true);
@@ -150,7 +154,7 @@ export default function SearchPage() {
               {t("search.trySearchingFor")}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {KEYWORD_SUGGESTIONS.map((tag) => (
+              {KEYWORD_SUGGESTIONS[locale].map((tag) => (
                 <button
                   key={tag}
                   onClick={() => handleTagClick(tag)}
@@ -170,7 +174,7 @@ export default function SearchPage() {
               {t("search.popularVerses")}
             </h3>
             <div className="space-y-2">
-              {POPULAR_VERSES.map((v) => (
+              {POPULAR_VERSES[locale].map((v) => (
                 <Link
                   key={v.verse_id}
                   to={verseIdToReaderLink(v.verse_id)}
@@ -250,7 +254,7 @@ export default function SearchPage() {
                   aria-label={t("search.sentimentLabel").replace("{label}", r.sentiment_label)}
                 >
                   <span aria-hidden className="mr-1">{sIcon}</span>
-                  {r.sentiment_label}
+                  {t(SENTIMENT_I18N[r.sentiment_label] ?? "") || r.sentiment_label}
                 </span>
               </div>
               <p
