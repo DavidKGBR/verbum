@@ -10,6 +10,7 @@ import OrnateCorner from "./OrnateCorner";
 import DropCap from "./DropCap";
 import { useTranslatorNotes } from "../../hooks/useTranslatorNotes";
 import { useVerseNotes } from "../../hooks/useVerseNotes";
+import { recordPlanAutoMark } from "../../hooks/useReadingPlans";
 import { parseKjvAnnotations } from "../reader/kjvAnnotations";
 import { useI18n, defaultTranslationFor } from "../../i18n/i18nContext";
 import { useTranslationIds } from "../../hooks/useTranslations";
@@ -270,6 +271,7 @@ export default function ImmersiveReader() {
       // Synchronous swap — FlipBook stays mounted, just its children update.
       setData(cached);
       setLoading(false);
+      recordPlanAutoMark(`${cached.book_id}.${cached.chapter}`, books);
     } else {
       // Keep the previous `data` rendered so the book doesn't blink white;
       // only show the spinner on the very first load (when data is still null).
@@ -278,11 +280,12 @@ export default function ImmersiveReader() {
         .then((d) => {
           pageCache.current.set(key, d);
           setData(d);
+          recordPlanAutoMark(`${d.book_id}.${d.chapter}`, books);
         })
         .catch(() => setData(null))
         .finally(() => setLoading(false));
     }
-  }, [bookId, chapter, translation]);
+  }, [bookId, chapter, translation, books]);
 
   // When the content under the FlipBook changes (new book or chapter), the
   // library's internal currentPageIndex is left wherever the user last

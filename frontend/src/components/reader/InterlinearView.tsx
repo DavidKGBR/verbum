@@ -11,6 +11,7 @@ import LoadingSpinner from "../common/LoadingSpinner";
 import WordDetailPanel from "../lexicon/WordDetailPanel";
 import AudioButton from "../common/AudioButton";
 import { useI18n } from "../../i18n/i18nContext";
+import { recordPlanAutoMark } from "../../hooks/useReadingPlans";
 
 export default function InterlinearView() {
   const { t, locale } = useI18n();
@@ -42,13 +43,16 @@ export default function InterlinearView() {
       .then(([p, interData]) => {
         setPage(p);
         setWords(interData.words);
+        // Interlinear reading — word-by-word study of the chapter — counts
+        // toward an active plan just like the plain reader.
+        recordPlanAutoMark(`${p.book_id}.${p.chapter}`, books);
       })
       .catch(() => {
         setPage(null);
         setWords([]);
       })
       .finally(() => setLoading(false));
-  }, [bookId, chapter, translation]);
+  }, [bookId, chapter, translation, books]);
 
   const totalChapters = page?.total_chapters || 1;
 

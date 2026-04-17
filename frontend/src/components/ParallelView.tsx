@@ -7,6 +7,7 @@ import LoadingSpinner from "./common/LoadingSpinner";
 import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext";
 import { useBooks, localizeBookName } from "../i18n/bookNames";
 import { useTranslationIds } from "../hooks/useTranslations";
+import { recordPlanAutoMark } from "../hooks/useReadingPlans";
 
 // Complement for the right-side parallel column — pairs each locale's
 // native default with a contrasting English edition so the user sees
@@ -37,10 +38,15 @@ export default function ParallelView() {
   useEffect(() => {
     setLoading(true);
     fetchParallelPage(bookId, chapter, left, right)
-      .then(setPage)
+      .then((p) => {
+        setPage(p);
+        // Parallel reading counts toward an active plan — the chapter
+        // is still being read, just in two translations side by side.
+        recordPlanAutoMark(`${p.book_id}.${p.chapter}`, books);
+      })
       .catch(() => setPage(null))
       .finally(() => setLoading(false));
-  }, [bookId, chapter, left, right]);
+  }, [bookId, chapter, left, right, books]);
 
   const totalChapters = page?.total_chapters || 1;
 

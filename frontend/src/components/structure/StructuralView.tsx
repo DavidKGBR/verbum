@@ -18,6 +18,8 @@ import {
 import ChiasmDiagram from "./ChiasmDiagram";
 import LoadingSpinner from "../common/LoadingSpinner";
 import { useI18n } from "../../i18n/i18nContext";
+import { useBooks } from "../../i18n/bookNames";
+import { recordPlanAutoMark } from "../../hooks/useReadingPlans";
 
 interface Props {
   book: string;
@@ -231,6 +233,7 @@ export default function StructuralView({ book, chapter, translation = "kjv" }: P
   const [structures, setStructures] = useState<LiteraryStructure[]>([]);
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const books = useBooks(translation);
 
   useEffect(() => {
     setLoading(true);
@@ -239,10 +242,15 @@ export default function StructuralView({ book, chapter, translation = "kjv" }: P
         setStructures(s);
         // Auto-expand if only one structure
         if (s.length === 1) setExpanded(s[0].structure_id);
+        // Structural study of a chapter is still reading the chapter —
+        // count it toward the active plan even when the page shows no
+        // mapped structure (empty state is an educational detour that
+        // still implies the user considered this chapter).
+        recordPlanAutoMark(`${book}.${chapter}`, books);
       })
       .catch(() => setStructures([]))
       .finally(() => setLoading(false));
-  }, [book, chapter, translation]);
+  }, [book, chapter, translation, books]);
 
   if (loading) return <LoadingSpinner />;
   if (structures.length === 0) return <NoStructurePlaceholder book={book} chapter={chapter} />;
