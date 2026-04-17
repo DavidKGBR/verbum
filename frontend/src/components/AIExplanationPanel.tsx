@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { explainVerse, type AIExplanation } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
+import ActionIcon from "./icons/ActionIcon";
 
 interface Props {
   verseId: string;
@@ -87,7 +88,9 @@ export default function AIExplanationPanel({ verseId, translation }: Props) {
     <div className="bg-gradient-to-br from-white to-amber-50/30 border border-[var(--color-gold)]/30 rounded p-3 text-sm">
       {/* Language toggle */}
       <div className="flex gap-2 mb-3 items-center">
-        <span className="text-xs opacity-50">🤖 {t("ai.header")}</span>
+        <span className="inline-flex items-center gap-1.5 text-xs opacity-50">
+          <ActionIcon name="sparkles" className="w-3.5 h-3.5" /> {t("ai.header")}
+        </span>
         <div className="ml-auto flex gap-1">
           {(["en", "pt-br"] as Lang[]).map((l) => (
             <button
@@ -109,10 +112,10 @@ export default function AIExplanationPanel({ verseId, translation }: Props) {
         <div className="text-center py-3">
           <button
             onClick={() => load(language)}
-            className="text-xs px-4 py-2 rounded bg-[var(--color-gold)] text-white
-                       hover:opacity-90 transition"
+            className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded
+                       bg-[var(--color-gold)] text-white hover:opacity-90 transition"
           >
-            ✨ {t("ai.generateBtn")}
+            <ActionIcon name="sparkles" /> {t("ai.generateBtn")}
           </button>
           <p className="text-xs opacity-50 mt-2">
             {t("ai.poweredBy")}
