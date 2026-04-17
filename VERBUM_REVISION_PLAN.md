@@ -548,6 +548,7 @@ python scripts/load_sentiment_batch.py data/processed/sentiment_pt/PSA/batch_001
 - Infraestrutura (schema + scripts + backend + frontend marker + dashboard) entregue na sessão R7.0
 - **Todos os 66 livros NVI** 100% labelados e carregados (~31K versos)
 - `/emotional` em PT-BR sem nenhum indicador "em refinamento"
+- **`/search` re-habilita o badge de sentiment** quando a translation ≠ kjv. Durante R6 o badge foi escondido em não-KJV porque o TextBlob KJV-only produz rótulos absurdos (ex.: "queimar esterco" vinha como "Neutro" em NVI). Grep `TODO(R7)` em `frontend/src/pages/SearchPage.tsx` para o ponto exato a reverter.
 - Coverage 100% PT-BR registrado em `coverage.json` + `sentimentCoverage.ts`
 - ES entra depois do PT fechar (decisão David: PT primeiro, ES sequencial, ambos pré-launch se janela permitir — senão ES vira launch mediato pós-PT)
 
@@ -571,6 +572,7 @@ Quando as 7 sessões R1–R7 estiverem ✅:
 ✅ R3.5 — Semantic Explorer UX polish (G3.b-g — sem dataset novo)
 ✅ R3.6.0 — Strong's multilingual setup (schema + scripts + backend + indicator)
 ✅ R3.6.1-16 — Strong's labeling 100% (14.178 × 2 línguas = 28.356 definições) — 1 sessão (rule-based)
+✅ R3.7 — Compare/Authors data fixes (Luther reg., darby/web gap fix, authors translation param, genealogy layout)
 Sessão R4 — Bugs F1-F6 + G1/G2 imediatos (intertextuality interatividade, emotional flow vazio)
 Sessão R5 — Limpeza strings cruas + IDs resolvidos
 Sessão R6 — Audit trilíngue final
@@ -612,6 +614,14 @@ Em cadência sustentável (~2-3 batches/semana), ~161 batches = ~13-15 meses de 
 - ✅ R3.b-e (lookup tables 100%: 3067 pessoas + 1814 lugares + 450 eventos + 4673 tópicos — scripts automatizados)
 - ✅ R3.5 (Semantic Explorer: legend collapsible, breadcrumbs clicáveis, labels localizados, Strong's indicator)
 - ✅ R3.6 (Strong's multilingual: 8674 HE + 5504 GR × PT + ES = 28.356 definições — rule-based, 1 sessão)
+- ✅ R3.7 (Compare/Authors data fixes — 16 abr 2026):
+  - Registrou tradução Luther 1912 (DE) no pipeline: `TRANSLATION_REGISTRY`, `PreCachedSource`, `PRE_CACHED_TRANSLATIONS`
+  - Corrigiu gaps de extração: darby MRK caps 13-14 e web JHN cap 13 re-extraídos de bible-api.com
+  - Re-rodou pipeline completo: 12 traduções, 356.582 versos, 66 livros (Luther: 40 livros AT, NT pendente fonte Zefania XML)
+  - Fix `/authors/{id}/books`: removeu `translation_id = 'kjv'` hardcoded, aceita `?translation=` param
+  - Melhorou feedback visual no `/compare` quando tradução não tem livro (label + tradução visível)
+  - Fix layout `/genealogy`: header "NT — Grego" alinhado com colunas de conteúdo (`w-fit` + spacer `w-[140px]`)
+  - **Pendente Luther NT:** cache original (BibleSuperSearch, removida) tem 26 livros NT vazios. Fonte necessária: Zefania XML Luther 1912 (disponível em SourceForge: `zefania-sharp/Bibles/GER/Lutherbibel/Luther 1912/`)
 
 **Custo:** $0 (sem API externa). Tokens consumidos do plano Claude MAX do David — sem custo marginal.
 

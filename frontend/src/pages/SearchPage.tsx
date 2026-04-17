@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { searchVerses, type SearchResult } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext";
+import { localizeBookName } from "../i18n/bookNames";
 
 // Suggestions are matched against verse text via ILIKE — they must exist in
 // the user's active translation, so they're locale-specific.
@@ -46,6 +47,26 @@ const SENTIMENT_I18N: Record<string, string> = {
   negative: "search.sentiment.negative",
   neutral:  "search.sentiment.neutral",
 };
+
+/**
+ * Rebuild the verse reference in the user's locale. The backend stores
+ * references in English ("1 Kings 14:10"), so for PT/ES we swap the
+ * book name using localizeBookName() while keeping the chapter:verse
+ * numeric suffix intact. If the reference shape is unexpected we fall
+ * back to the original string to avoid breaking the display.
+ */
+function localizedReference(
+  reference: string,
+  bookId: string,
+  chapter: number,
+  verse: number,
+  locale: Locale,
+): string {
+  if (locale === "en") return reference;
+  const m = reference.match(/^(.+?)\s+\d+:\d+$/);
+  const enBookName = m?.[1] ?? bookId;
+  return `${localizeBookName(bookId, locale, enBookName)} ${chapter}:${verse}`;
+}
 
 function verseIdToReaderLink(verseId: string): string {
   const parts = verseId.split(".");
@@ -229,6 +250,13 @@ export default function SearchPage() {
               : r.sentiment_label === "negative"
                 ? "bg-red-100 text-red-700"
                 : "bg-gray-100 text-gray-600";
+          // The sentiment polarity on every row was computed once with TextBlob
+          // on the KJV text. It doesn't reflect the PT/ES corpus shown to the
+          // user (e.g. "queima esterco" reads as Neutral only because KJV's
+          // "burns dung" was classified that way). Hide the badge until R7
+          // recomputes sentiment per translation.  TODO(R7): re-enable for
+          // all translations once the multilingual sentiment job lands.
+          const showSentiment = translation === "kjv";
           return (
             <div
               key={r.verse_id}
@@ -247,15 +275,17 @@ export default function SearchPage() {
             >
               <div className="flex justify-between items-start mb-1 gap-2">
                 <span className="font-bold text-sm text-[var(--color-gold)]">
-                  {r.reference}
+                  {localizedReference(r.reference, r.book_id, r.chapter, r.verse, locale)}
                 </span>
-                <span
-                  className={`text-xs px-2 py-0.5 rounded shrink-0 ${sClass}`}
-                  aria-label={t("search.sentimentLabel").replace("{label}", r.sentiment_label)}
-                >
-                  <span aria-hidden className="mr-1">{sIcon}</span>
-                  {t(SENTIMENT_I18N[r.sentiment_label] ?? "") || r.sentiment_label}
-                </span>
+                {showSentiment && (
+                  <span
+                    className={`text-xs px-2 py-0.5 rounded shrink-0 ${sClass}`}
+                    aria-label={t("search.sentimentLabel").replace("{label}", r.sentiment_label)}
+                  >
+                    <span aria-hidden className="mr-1">{sIcon}</span>
+                    {t(SENTIMENT_I18N[r.sentiment_label] ?? "") || r.sentiment_label}
+                  </span>
+                )}
               </div>
               <p
                 className="text-sm leading-relaxed break-words"
