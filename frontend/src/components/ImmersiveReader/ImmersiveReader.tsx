@@ -280,34 +280,22 @@ export default function ImmersiveReader() {
   }, [bookId, chapter, translation]);
 
   // When the content under the FlipBook changes (new book or chapter), the
-  // library's internal currentPageIndex still points at wherever the user
-  // left the previous chapter — e.g. page 5 of Gen 1, then Gen 2 loads with
-  // only 4 pages and the book appears to skip text. Force the library back
-  // to page 0 after React has committed the new children to the DOM.
-  const prevContentRef = useRef<{ book: string; chapter: number } | null>(null);
+  // library's internal currentPageIndex can point at wherever the user left
+  // the previous chapter — if the new chapter has fewer pages the book
+  // lands on an empty slot. Experiments with turnToPage(0) after paint
+  // were unreliable (first-visit blank spreads, Gen1→Gen2). The robust
+  // solution is to give the FlipBook a React key tied to the content, so
+  // it remounts cleanly on every chapter swap. With the pageCache, the
+  // new data is already available synchronously, so remount is fast and
+  // a 300ms fade smooths the handoff.
+  const flipBookKey = data
+    ? `${data.book_id}-${data.chapter}-${translation}`
+    : "empty";
+  // Reset the React-level page counter on remount so the footer "page N/M"
+  // indicator stays correct.
   useEffect(() => {
-    if (!data) return;
-    const prev = prevContentRef.current;
-    const isNewContent =
-      !prev || prev.book !== data.book_id || prev.chapter !== data.chapter;
-    prevContentRef.current = { book: data.book_id, chapter: data.chapter };
-    if (!isNewContent) return;
-    // Next frame: children have been painted, so .pageFlip() knows the real
-    // page count and turnToPage(0) lands correctly without animation glitch.
-    const raf = requestAnimationFrame(() => {
-      try {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const pf = (flipBookRef.current as any)?.pageFlip?.();
-        if (pf && typeof pf.turnToPage === "function") {
-          pf.turnToPage(0);
-        }
-      } catch {
-        /* ref not ready yet — next render of FlipBook will render at 0 anyway */
-      }
-      setCurrentPage(0);
-    });
-    return () => cancelAnimationFrame(raf);
-  }, [data]);
+    setCurrentPage(0);
+  }, [flipBookKey]);
 
   // Prefetch adjacent chapters so the next click has zero latency.
   useEffect(() => {
@@ -518,8 +506,14 @@ export default function ImmersiveReader() {
             </span>
           </div>
 
-          {/* ── FlipBook ── */}
-          <div className="flex justify-center">
+          {/* ── FlipBook ──
+               key forces the lib to remount on chapter change so its
+               internal pageIndex is always reset to 0, preventing the
+               "skip to mid-chapter" bug. Data comes from pageCache so
+               this is effectively synchronous; the fade-in wrapper makes
+               the remount feel like a smooth replacement instead of a
+               rip-and-rebuild. */}
+          <div key={flipBookKey} className="flex justify-center fade-in">
             <HTMLFlipBook
               ref={flipBookRef}
               width={550}
