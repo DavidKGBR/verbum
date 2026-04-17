@@ -4,9 +4,18 @@ import {
   type ParallelPage,
 } from "../services/api";
 import LoadingSpinner from "./common/LoadingSpinner";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext";
 import { useBooks, localizeBookName } from "../i18n/bookNames";
 import { useTranslationIds } from "../hooks/useTranslations";
+
+// Complement for the right-side parallel column — pairs each locale's
+// native default with a contrasting English edition so the user sees
+// both at a glance.
+const LOCALE_PARALLEL_SECOND: Record<Locale, string> = {
+  en: "nvi",
+  pt: "kjv",
+  es: "kjv",
+};
 
 export default function ParallelView() {
   const { t, locale } = useI18n();
@@ -16,8 +25,14 @@ export default function ParallelView() {
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState("GEN");
   const [chapter, setChapter] = useState(1);
-  const [left, setLeft] = useState("kjv");
-  const [right, setRight] = useState("nvi");
+  const [left, setLeft] = useState(() => defaultTranslationFor(locale));
+  const [right, setRight] = useState(() => LOCALE_PARALLEL_SECOND[locale]);
+
+  // Sync parallel sides with UI locale changes.
+  useEffect(() => {
+    setLeft(defaultTranslationFor(locale));
+    setRight(LOCALE_PARALLEL_SECOND[locale]);
+  }, [locale]);
 
   useEffect(() => {
     setLoading(true);
@@ -35,7 +50,11 @@ export default function ParallelView() {
       <div className="flex flex-wrap gap-3 mb-6 items-center">
         <select
           value={bookId}
-          onChange={(e) => { setBookId(e.target.value); setChapter(1); }}
+          onChange={(e) => {
+            setBookId(e.target.value);
+            setChapter(1);
+            e.target.blur();
+          }}
           className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {books.map((b) => (
@@ -45,7 +64,10 @@ export default function ParallelView() {
 
         <select
           value={chapter}
-          onChange={(e) => setChapter(Number(e.target.value))}
+          onChange={(e) => {
+            setChapter(Number(e.target.value));
+            e.target.blur();
+          }}
           className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {Array.from({ length: totalChapters }, (_, i) => i + 1).map((ch) => (
@@ -56,7 +78,10 @@ export default function ParallelView() {
         <div className="flex items-center gap-2 text-sm">
           <select
             value={left}
-            onChange={(e) => setLeft(e.target.value)}
+            onChange={(e) => {
+              setLeft(e.target.value);
+              e.target.blur();
+            }}
             className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
           >
             {translationIds.map((t) => (
@@ -66,7 +91,10 @@ export default function ParallelView() {
           <span className="text-[var(--color-gold)] font-bold">{t("reader.vs")}</span>
           <select
             value={right}
-            onChange={(e) => setRight(e.target.value)}
+            onChange={(e) => {
+              setRight(e.target.value);
+              e.target.blur();
+            }}
             className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
           >
             {translationIds.map((t) => (

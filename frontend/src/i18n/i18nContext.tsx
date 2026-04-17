@@ -13,6 +13,22 @@ export const LOCALES: { code: Locale; label: string }[] = [
   { code: "es", label: "Español" },
 ];
 
+/**
+ * Preferred Bible translation per UI locale. Used as the default on mount
+ * and whenever the user switches languages — so reading in PT starts on
+ * NVI, in ES on RVR, in EN on KJV. Users can always override via the
+ * per-reader translation dropdown; the change is session-local.
+ */
+export const LOCALE_DEFAULT_TRANSLATION: Record<Locale, string> = {
+  en: "kjv",
+  pt: "nvi",
+  es: "rvr",
+};
+
+export function defaultTranslationFor(locale: Locale): string {
+  return LOCALE_DEFAULT_TRANSLATION[locale];
+}
+
 interface I18nContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
@@ -33,11 +49,13 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     if (saved && (saved === "en" || saved === "pt" || saved === "es")) {
       return saved as Locale;
     }
-    // Auto-detect from browser
+    // Auto-detect from browser. Verbum is a Brazilian-first product, so
+    // any language we can't confidently map to EN or ES falls back to PT.
     const lang = navigator.language.slice(0, 2).toLowerCase();
     if (lang === "pt") return "pt";
     if (lang === "es") return "es";
-    return "en";
+    if (lang === "en") return "en";
+    return "pt";
   });
 
   const setLocale = (newLocale: Locale) => {

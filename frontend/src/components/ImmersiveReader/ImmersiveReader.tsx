@@ -11,7 +11,7 @@ import DropCap from "./DropCap";
 import { useTranslatorNotes } from "../../hooks/useTranslatorNotes";
 import { useVerseNotes } from "../../hooks/useVerseNotes";
 import { parseKjvAnnotations } from "../reader/kjvAnnotations";
-import { useI18n } from "../../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../../i18n/i18nContext";
 import { useTranslationIds } from "../../hooks/useTranslations";
 
 /** Approximate max chars per page — keeps pages balanced. */
@@ -206,7 +206,12 @@ export default function ImmersiveReader() {
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState("GEN");
   const [chapter, setChapter] = useState(1);
-  const [translation, setTranslation] = useState("kjv");
+  const [translation, setTranslation] = useState(() => defaultTranslationFor(locale));
+
+  // Translation follows UI locale: PT → NVI, ES → RVR, EN → KJV.
+  useEffect(() => {
+    setTranslation(defaultTranslationFor(locale));
+  }, [locale]);
   const books = useBooks(translation);
   const [currentPage, setCurrentPage] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -416,6 +421,7 @@ export default function ImmersiveReader() {
           onChange={(e) => {
             setBookId(e.target.value);
             setChapter(1);
+            e.target.blur(); // release focus so arrow keys drive the page flip, not the select
           }}
           className="border border-[var(--color-gold-dark)]/30 rounded px-3 py-1.5
                      bg-[var(--bg-ambient)] text-[var(--color-parchment)] text-sm
@@ -430,7 +436,10 @@ export default function ImmersiveReader() {
 
         <select
           value={chapter}
-          onChange={(e) => setChapter(Number(e.target.value))}
+          onChange={(e) => {
+            setChapter(Number(e.target.value));
+            e.target.blur();
+          }}
           className="border border-[var(--color-gold-dark)]/30 rounded px-3 py-1.5
                      bg-[var(--bg-ambient)] text-[var(--color-parchment)] text-sm
                      focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50"
@@ -444,7 +453,10 @@ export default function ImmersiveReader() {
 
         <select
           value={translation}
-          onChange={(e) => setTranslation(e.target.value)}
+          onChange={(e) => {
+            setTranslation(e.target.value);
+            e.target.blur();
+          }}
           className="border border-[var(--color-gold-dark)]/30 rounded px-3 py-1.5
                      bg-[var(--bg-ambient)] text-[var(--color-parchment)] text-sm
                      focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50"

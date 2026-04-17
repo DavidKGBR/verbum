@@ -14,7 +14,7 @@ import { useVerseNotes } from "../hooks/useVerseNotes";
 import { useReadingPlans, recordPlanAutoMark } from "../hooks/useReadingPlans";
 import { getPlanById } from "./plans/plansData";
 import { parseKjvAnnotations } from "./reader/kjvAnnotations";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { useTranslationIds } from "../hooks/useTranslations";
 
 type InitialTab = "none" | "crossrefs" | "notes";
@@ -28,7 +28,15 @@ export default function BibleReader() {
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState(searchParams.get("book") || "GEN");
   const [chapter, setChapter] = useState(Number(searchParams.get("chapter")) || 1);
-  const [translation, setTranslation] = useState(searchParams.get("translation") || "kjv");
+  const [translation, setTranslation] = useState(
+    searchParams.get("translation") || defaultTranslationFor(locale)
+  );
+
+  // Follow UI locale: PT → NVI, ES → RVR, EN → KJV unless the URL pins it.
+  useEffect(() => {
+    if (searchParams.get("translation")) return;
+    setTranslation(defaultTranslationFor(locale));
+  }, [locale, searchParams]);
   const books = useBooks(translation);
   const [activeVerse, setActiveVerse] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<InitialTab>("none");
@@ -179,7 +187,11 @@ export default function BibleReader() {
       <div className="flex flex-wrap gap-3 mb-6 items-center">
         <select
           value={bookId}
-          onChange={(e) => { setBookId(e.target.value); setChapter(1); }}
+          onChange={(e) => {
+            setBookId(e.target.value);
+            setChapter(1);
+            e.target.blur(); // release focus so arrow keys drive the reader, not the select
+          }}
           className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {books.map((b) => (
@@ -189,7 +201,10 @@ export default function BibleReader() {
 
         <select
           value={chapter}
-          onChange={(e) => setChapter(Number(e.target.value))}
+          onChange={(e) => {
+            setChapter(Number(e.target.value));
+            e.target.blur();
+          }}
           className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {Array.from({ length: totalChapters }, (_, i) => i + 1).map((ch) => (
@@ -199,7 +214,10 @@ export default function BibleReader() {
 
         <select
           value={translation}
-          onChange={(e) => setTranslation(e.target.value)}
+          onChange={(e) => {
+            setTranslation(e.target.value);
+            e.target.blur();
+          }}
           className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
         >
           {translationIds.map((t) => (
