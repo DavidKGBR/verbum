@@ -280,22 +280,39 @@ export default function ImmersiveReader() {
   }, [bookId, chapter, translation]);
 
   // When the content under the FlipBook changes (new book or chapter), the
-  // library's internal currentPageIndex can point at wherever the user left
-  // the previous chapter — if the new chapter has fewer pages the book
-  // lands on an empty slot. Experiments with turnToPage(0) after paint
-  // were unreliable (first-visit blank spreads, Gen1→Gen2). The robust
-  // solution is to give the FlipBook a React key tied to the content, so
-  // it remounts cleanly on every chapter swap. With the pageCache, the
-  // new data is already available synchronously, so remount is fast and
-  // a 300ms fade smooths the handoff.
-  const flipBookKey = data
-    ? `${data.book_id}-${data.chapter}-${translation}`
-    : "empty";
-  // Reset the React-level page counter on remount so the footer "page N/M"
-  // indicator stays correct.
+  // library's internal currentPageIndex is left wherever the user last
+  // flipped. If the new chapter has fewer pages the book lands past the
+  // end → blank spread. We can't use a React key on HTMLFlipBook because
+  // that either (a) collides with an in-flight flip animation and makes
+  // the book replay the same spread, or (b) visibly pops when keyed on
+  // the wrapper. Solution: detect genuine content changes (different
+  // book or chapter), then imperatively call pageFlip().turnToPage(0)
+  // AFTER the library has had time to process the new children.
+  const prevContentRef = useRef<{ book: string; chapter: number } | null>(null);
   useEffect(() => {
-    setCurrentPage(0);
-  }, [flipBookKey]);
+    if (!data) return;
+    const prev = prevContentRef.current;
+    const isNewContent =
+      !prev || prev.book !== data.book_id || prev.chapter !== data.chapter;
+    prevContentRef.current = { book: data.book_id, chapter: data.chapter };
+    if (!isNewContent) return;
+    // 50ms gives react-pageflip enough time to reconcile new children;
+    // requestAnimationFrame alone fired before the lib's internal
+    // useEffect ran and turnToPage landed on stale page count.
+    const timer = window.setTimeout(() => {
+      try {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const pf = (flipBookRef.current as any)?.pageFlip?.();
+        if (pf && typeof pf.turnToPage === "function") {
+          pf.turnToPage(0);
+        }
+      } catch {
+        /* swallow — worst case first-spread render already looks right */
+      }
+      setCurrentPage(0);
+    }, 50);
+    return () => window.clearTimeout(timer);
+  }, [data]);
 
   // Prefetch adjacent chapters so the next click has zero latency.
   useEffect(() => {
@@ -507,14 +524,13 @@ export default function ImmersiveReader() {
           </div>
 
           {/* ── FlipBook ──
-               `key` is on HTMLFlipBook itself (not the wrapper) so only
-               the library remounts on chapter change. Remounting the
-               wrapper caused a visual glitch where a flip animation would
-               sometimes land back on the same spread. With the pageCache
-               populating `data` synchronously, this remount is imperceptible. */}
+               No React `key` here: remounting the lib mid-flip caused the
+               "flip lands on same spread" bug. Instead we keep the lib
+               mounted for the entire session and reset its internal
+               currentPageIndex via pageFlip().turnToPage(0) inside the
+               useEffect above whenever data.book_id or data.chapter change. */}
           <div className="flex justify-center">
             <HTMLFlipBook
-              key={flipBookKey}
               ref={flipBookRef}
               width={550}
               height={720}
