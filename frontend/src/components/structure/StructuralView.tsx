@@ -17,6 +17,7 @@ import {
 } from "../../services/api";
 import ChiasmDiagram from "./ChiasmDiagram";
 import LoadingSpinner from "../common/LoadingSpinner";
+import { useI18n } from "../../i18n/i18nContext";
 
 interface Props {
   book: string;
@@ -164,27 +165,61 @@ function AnnotatedVerse({
 }
 
 // ── NoStructure placeholder ────────────────────────────────────────────────
+// Curated examples that ALWAYS have a mapped structure — mirror the entries
+// in data/static/literary_structures.json. Used in the empty-state quicklinks.
+const EMPTY_STATE_EXAMPLES = [
+  { book: "GEN", chapter: 1,  titleKey: "reader.structural.example.gen1.title",  kindKey: "reader.structural.example.gen1.kind"  },
+  { book: "PSA", chapter: 23, titleKey: "reader.structural.example.psa23.title", kindKey: "reader.structural.example.psa23.kind" },
+  { book: "PHP", chapter: 2,  titleKey: "reader.structural.example.php2.title",  kindKey: "reader.structural.example.php2.kind"  },
+  { book: "MAT", chapter: 6,  titleKey: "reader.structural.example.mat6.title",  kindKey: "reader.structural.example.mat6.kind"  },
+] as const;
 
 function NoStructurePlaceholder({ book, chapter }: { book: string; chapter: number }) {
+  const { t } = useI18n();
   return (
-    <div className="flex flex-col items-center gap-4 py-16 text-center max-w-md mx-auto">
+    <div className="flex flex-col items-center gap-5 py-12 text-center max-w-xl mx-auto">
       <div className="text-4xl opacity-30">𓂀</div>
-      <div className="flex flex-col gap-1">
-        <h3 className="font-semibold text-[var(--color-text-primary)]">
-          Sem estrutura mapeada
+      <div className="flex flex-col gap-2">
+        <h3 className="font-display font-semibold text-lg text-[var(--color-ink)]">
+          {t("reader.structural.empty.title")}
         </h3>
-        <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-          {book} {chapter} ainda não possui estruturas literárias documentadas
-          no Verbum. Use o modo <strong>Single</strong> para ler o texto completo.
+        <p className="text-sm leading-relaxed opacity-70 max-w-md mx-auto">
+          {t("reader.structural.empty.whatIsIt")}
+        </p>
+        <p className="text-[13px] leading-relaxed opacity-60 mt-3 max-w-md mx-auto">
+          {t("reader.structural.empty.context")
+            .replace("{book}", book)
+            .replace("{chapter}", String(chapter))}
         </p>
       </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-md">
+        {EMPTY_STATE_EXAMPLES.map((ex) => (
+          <Link
+            key={`${ex.book}-${ex.chapter}`}
+            to={`/reader?mode=structural&book=${ex.book}&chapter=${ex.chapter}`}
+            className="flex flex-col gap-0.5 text-left px-4 py-3 rounded-lg border
+                       border-[var(--color-gold)]/20 bg-white
+                       hover:border-[var(--color-gold)] hover:bg-[var(--color-gold)]/5
+                       transition group"
+          >
+            <span className="font-display font-bold text-sm text-[var(--color-ink)]
+                             group-hover:text-[var(--color-gold-dark)] transition">
+              {t(ex.titleKey)}
+            </span>
+            <span className="text-[11px] opacity-50">
+              {ex.book} {ex.chapter} · {t(ex.kindKey)}
+            </span>
+          </Link>
+        ))}
+      </div>
+
       <Link
         to="/structure"
-        className="text-xs px-4 py-2 rounded-lg border border-[var(--color-border)]
-                   hover:bg-[var(--color-surface-hover)] transition-colors
-                   text-[var(--color-text-secondary)]"
+        className="text-xs mt-2 text-[var(--color-gold-dark)] hover:text-[var(--color-gold)]
+                   font-bold hover:underline transition"
       >
-        Ver todas as estruturas →
+        {t("reader.structural.empty.viewAll")} →
       </Link>
     </div>
   );

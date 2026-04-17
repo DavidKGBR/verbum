@@ -701,5 +701,22 @@
   "emotional.label.negative": "Negative",
   "emotional.label.neutral": "Neutral",
   "community.category.textual": "Textual",
-  "community.category.historical": "Historical"
+  "community.category.historical": "Historical",
+  "reader.structural.empty.title": "No structure mapped here yet",
+  "reader.structural.empty.whatIsIt": "Literary structures are hidden patterns — chiasms, parallelisms, inclusios — that biblical writing uses to highlight central ideas.",
+  "reader.structural.empty.context": "{book} {chapter} doesn't have a catalogued structure in Verbum yet. Try one of these mapped examples:",
+  "reader.structural.empty.viewAll": "See all mapped structures",
+  "reader.structural.example.gen1.title": "Creation Week",
+  "reader.structural.example.gen1.kind": "Parallelism",
+  "reader.structural.example.psa23.title": "The Shepherd Psalm",
+  "reader.structural.example.psa23.kind": "Chiasm",
+  "reader.structural.example.php2.title": "Carmen Christi",
+  "reader.structural.example.php2.kind": "Chiasm (Hymn)",
+  "reader.structural.example.mat6.title": "The Lord's Prayer",
+  "reader.structural.example.mat6.kind": "Chiasm",
+  "sharing.bgLabel": "Background",
+  "sharing.bg.parchment": "Parchment",
+  "sharing.bg.sunrise": "Sunrise",
+  "sharing.bg.scroll": "Scroll",
+  "sharing.bg.stars": "Starry night"
 }

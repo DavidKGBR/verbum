@@ -291,20 +291,31 @@ export default function BibleReader() {
                 <div
                   key={v.verse}
                   ref={(el) => { if (el) verseRefs.current.set(v.verse, el); }}
-                  className={`rounded-sm py-1 px-2 ${rowStateClass} ${highlightClass}`}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openVerse(v.verse, "none")}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      openVerse(v.verse, "none");
+                    }
+                  }}
+                  className={`rounded-sm py-1 px-2 cursor-pointer
+                              focus:outline-none focus-visible:ring-2
+                              focus-visible:ring-[var(--color-gold)]/40
+                              ${rowStateClass} ${highlightClass}`}
                 >
                   <div className="flex gap-3 items-start">
-                    <span
-                      onClick={() => openVerse(v.verse, "none")}
-                      className="verse-number text-sm pt-0.5 w-7 shrink-0
-                                 text-right cursor-pointer hover:text-[var(--color-ink)] transition"
-                    >
+                    <span className="verse-number text-sm pt-0.5 w-7 shrink-0 text-right">
                       {v.verse}
                     </span>
                     <p className="verse-text flex-1">{renderVerseText(v)}</p>
                     {hasNoteText && (
                       <button
-                        onClick={() => openVerse(v.verse, "notes")}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openVerse(v.verse, "notes");
+                        }}
                         title="Open note"
                         aria-label="Open note"
                         className="text-[11px] shrink-0 pt-1 pr-1
@@ -317,7 +328,10 @@ export default function BibleReader() {
                     )}
                     {xrefCount > 0 && (
                       <button
-                        onClick={() => openVerse(v.verse, "crossrefs")}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openVerse(v.verse, "crossrefs");
+                        }}
                         title={`${xrefCount} cross-references`}
                         aria-label={`${xrefCount} cross-references`}
                         className="text-[11px] font-mono tabular-nums shrink-0 pt-1 pr-1
@@ -331,17 +345,19 @@ export default function BibleReader() {
                   </div>
 
                   {isActive && (
-                    <VerseActions
-                      verseId={v.verse_id}
-                      text={v.text_clean ?? v.text}
-                      translation={translation}
-                      reference={v.reference}
-                      bookId={page.book_id}
-                      bookName={localizeBookName(page.book_id, locale, page.book_name)}
-                      chapter={page.chapter}
-                      verse={v.verse}
-                      initialTab={activeTab}
-                    />
+                    <div onClick={(e) => e.stopPropagation()}>
+                      <VerseActions
+                        verseId={v.verse_id}
+                        text={v.text_clean ?? v.text}
+                        translation={translation}
+                        reference={v.reference}
+                        bookId={page.book_id}
+                        bookName={localizeBookName(page.book_id, locale, page.book_name)}
+                        chapter={page.chapter}
+                        verse={v.verse}
+                        initialTab={activeTab}
+                      />
+                    </div>
                   )}
                 </div>
               );

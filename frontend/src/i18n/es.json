@@ -701,5 +701,22 @@
   "emotional.label.negative": "Negativo",
   "emotional.label.neutral": "Neutro",
   "community.category.textual": "Textual",
-  "community.category.historical": "Histórica"
+  "community.category.historical": "Histórica",
+  "reader.structural.empty.title": "Sin estructura mapeada aquí aún",
+  "reader.structural.empty.whatIsIt": "Las estructuras literarias son patrones ocultos — quiasmos, paralelismos, inclusiones — que la escritura bíblica usa para destacar ideas centrales.",
+  "reader.structural.empty.context": "{book} {chapter} aún no tiene una estructura catalogada en Verbum. Prueba uno de estos ejemplos mapeados:",
+  "reader.structural.empty.viewAll": "Ver todas las estructuras mapeadas",
+  "reader.structural.example.gen1.title": "Semana de la Creación",
+  "reader.structural.example.gen1.kind": "Paralelismo",
+  "reader.structural.example.psa23.title": "El Salmo del Pastor",
+  "reader.structural.example.psa23.kind": "Quiasmo",
+  "reader.structural.example.php2.title": "Carmen Christi",
+  "reader.structural.example.php2.kind": "Quiasmo (Himno)",
+  "reader.structural.example.mat6.title": "Oración del Padre Nuestro",
+  "reader.structural.example.mat6.kind": "Quiasmo",
+  "sharing.bgLabel": "Fondo",
+  "sharing.bg.parchment": "Pergamino",
+  "sharing.bg.sunrise": "Amanecer",
+  "sharing.bg.scroll": "Rollo",
+  "sharing.bg.stars": "Noche estrellada"
 }

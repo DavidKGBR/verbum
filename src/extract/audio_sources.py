@@ -76,6 +76,12 @@ VOICE_CONFIG: dict[str, dict[str, str]] = {
 HEBREW_TTS_OVERRIDES: dict[str, str] = {
     "H3068": "יֶהוֹבַה",  # Yᵉhôvâh — patach (ַ) em vez de qamatz: força "va" claro
     "H3069": "יֶהוֹבִה",  # Yᵉhôvih — variante com hireq
+    # H430 — ʼĕlôhîym. A grafia canônica אֱלֹהִים faz o Chirp3-HD colapsar em
+    # algo como "alerrim" (o holam [ֹ] no lamed é curto e a tônica vai pro final).
+    # Grafando com vav-holam explícito (וֹ) forçamos o modelo a marcar o "ho"
+    # como sílaba longa, resultando em "eh-lo-HEEM" — mesmo som que o Bing
+    # Translator entrega pra essa palavra.
+    "H430": "אֱלוֹהִים",
 }
 
 AUDIO_DIR = Path("data/audio")
