@@ -718,5 +718,17 @@
   "sharing.bg.parchment": "Parchment",
   "sharing.bg.sunrise": "Sunrise",
   "sharing.bg.scroll": "Scroll",
-  "sharing.bg.stars": "Starry night"
+  "sharing.bg.stars": "Starry night",
+  "book.testament.ot": "Old Testament",
+  "book.testament.nt": "New Testament",
+  "book.category.law": "Law",
+  "book.category.history": "History",
+  "book.category.poetry": "Poetry",
+  "book.category.majorProphets": "Major Prophets",
+  "book.category.minorProphets": "Minor Prophets",
+  "book.category.gospels": "Gospels",
+  "book.category.acts": "Acts",
+  "book.category.paulineEpistles": "Pauline Epistles",
+  "book.category.generalEpistles": "General Epistles",
+  "book.category.apocalyptic": "Apocalyptic"
 }

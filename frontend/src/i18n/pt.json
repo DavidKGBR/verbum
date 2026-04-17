@@ -718,5 +718,17 @@
   "sharing.bg.parchment": "Pergaminho",
   "sharing.bg.sunrise": "Amanhecer",
   "sharing.bg.scroll": "Rolo",
-  "sharing.bg.stars": "Noite estrelada"
+  "sharing.bg.stars": "Noite estrelada",
+  "book.testament.ot": "Antigo Testamento",
+  "book.testament.nt": "Novo Testamento",
+  "book.category.law": "Lei",
+  "book.category.history": "História",
+  "book.category.poetry": "Poesia",
+  "book.category.majorProphets": "Profetas Maiores",
+  "book.category.minorProphets": "Profetas Menores",
+  "book.category.gospels": "Evangelhos",
+  "book.category.acts": "Atos",
+  "book.category.paulineEpistles": "Epístolas Paulinas",
+  "book.category.generalEpistles": "Epístolas Gerais",
+  "book.category.apocalyptic": "Apocalíptica"
 }

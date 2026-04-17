@@ -17,6 +17,25 @@ import { parseKjvAnnotations } from "./reader/kjvAnnotations";
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { useTranslationIds } from "../hooks/useTranslations";
 
+// Backend returns the English canonical testament/category on ReaderPage; this
+// lookup maps those strings to i18n keys for localized display in the header.
+const TESTAMENT_I18N: Record<string, string> = {
+  "Old Testament": "book.testament.ot",
+  "New Testament": "book.testament.nt",
+};
+const CATEGORY_I18N: Record<string, string> = {
+  "Law":               "book.category.law",
+  "History":           "book.category.history",
+  "Poetry":            "book.category.poetry",
+  "Major Prophets":    "book.category.majorProphets",
+  "Minor Prophets":    "book.category.minorProphets",
+  "Gospels":           "book.category.gospels",
+  "Acts":              "book.category.acts",
+  "Pauline Epistles":  "book.category.paulineEpistles",
+  "General Epistles":  "book.category.generalEpistles",
+  "Apocalyptic":       "book.category.apocalyptic",
+};
+
 type InitialTab = "none" | "crossrefs" | "notes";
 
 export default function BibleReader() {
@@ -251,7 +270,10 @@ export default function BibleReader() {
               {localizeBookName(page.book_id, locale, page.book_name)} {page.chapter}
             </h2>
             <p className="text-xs opacity-50 mt-1">
-              {page.testament} &middot; {page.category} &middot;{" "}
+              {t(TESTAMENT_I18N[page.testament] ?? "") || page.testament}
+              {" "}&middot;{" "}
+              {t(CATEGORY_I18N[page.category] ?? "") || page.category}
+              {" "}&middot;{" "}
               {page.translation.toUpperCase()} &middot; {page.verse_count} {t("common.verses")}
             </p>
           </div>
