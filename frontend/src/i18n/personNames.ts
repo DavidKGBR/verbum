@@ -3171,8 +3171,34 @@ const PERSONS: Record<string, PersonEntry> = {
 // ─── Helper functions ────────────────────────────────────────────────────────
 
 /**
+ * Derive a readable English name from a slug when the API didn't give us
+ * `person.name`. Strips the trailing numeric id and Title-cases the words.
+ *
+ *   god_1324           -> "God"
+ *   holy_spirit_7400   -> "Holy Spirit"
+ *   mary_magdalene_42  -> "Mary Magdalene"
+ *
+ * Kept deliberately generous — if there's no underscore or no numeric tail
+ * we still try to prettify the rest. Last resort returns the raw slug so
+ * the caller at least doesn't crash.
+ */
+export function slugToEnName(slug: string): string {
+  if (!slug) return "";
+  // Drop trailing _<digits>
+  const core = slug.replace(/_\d+$/, "");
+  if (!core) return slug;
+  return core
+    .split(/[\s_]+/)
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+/**
  * Translate a person slug to the localized name.
- * Falls back to `fallback` (typically `person.name` from the API).
+ * Falls back to `fallback` (typically `person.name` from the API). When no
+ * fallback is given, derives one from the slug via `slugToEnName()` so raw
+ * strings like "god_1324" never reach the UI.
  */
 export function personName(
   slug: string | null | undefined,
@@ -3180,12 +3206,13 @@ export function personName(
   fallback?: string,
 ): string {
   if (!slug) return fallback ?? "";
-  if (locale === "en") return fallback ?? slug;
+  const safeFallback = fallback ?? slugToEnName(slug);
+  if (locale === "en") return safeFallback;
   const entry = PERSONS[slug];
-  if (!entry) return fallback ?? slug;
+  if (!entry) return safeFallback;
   if (locale === "pt") return entry.pt;
   if (locale === "es") return entry.es;
-  return fallback ?? slug;
+  return safeFallback;
 }
 
 /**
@@ -3212,7 +3239,8 @@ export function personNamesJoin(
   separator = ", ",
 ): string {
   if (!slugs || slugs.length === 0) return "";
-  return slugs.map((s) => personName(s, locale, s)).join(separator);
+  // Pass slugToEnName as fallback — never leak raw slugs to the UI.
+  return slugs.map((s) => personName(s, locale, slugToEnName(s))).join(separator);
 }
 
 export { PERSONS };

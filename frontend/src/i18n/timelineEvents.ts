@@ -503,7 +503,8 @@ export function eventParticipants(
   locale: Locale,
 ): string {
   if (!slugs || slugs.length === 0) return "";
-  return slugs.map((s) => personName(s, locale, s)).join(", ");
+  // personName derives "god_1324" -> "God" when no curated entry exists.
+  return slugs.map((s) => personName(s, locale)).join(", ");
 }
 
 export { SPECIFIC_EVENTS, PATTERN_TEMPLATES };

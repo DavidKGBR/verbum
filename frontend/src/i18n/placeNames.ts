@@ -1866,8 +1866,29 @@ const PLACES: Record<string, PlaceEntry> = {
 // ─── Helper functions ────────────────────────────────────────────────────────
 
 /**
+ * Derive a readable English name from a slug when the API didn't give us
+ * `place.name`. Strips the trailing numeric id and Title-cases the words.
+ *
+ *   eden_354         -> "Eden"
+ *   red_sea_1842     -> "Red Sea"
+ *   jerusalem_1702   -> "Jerusalem"
+ */
+export function slugToEnPlace(slug: string): string {
+  if (!slug) return "";
+  const core = slug.replace(/_\d+$/, "");
+  if (!core) return slug;
+  return core
+    .split(/[\s_]+/)
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+/**
  * Translate a place slug to the localized name.
- * Falls back to `fallback` (typically `place.name` from the API).
+ * Falls back to `fallback` (typically `place.name` from the API). When no
+ * fallback is given, derives one from the slug via `slugToEnPlace()` so
+ * raw strings like "eden_354" never reach the UI.
  */
 export function placeName(
   slug: string | null | undefined,
@@ -1875,12 +1896,13 @@ export function placeName(
   fallback?: string,
 ): string {
   if (!slug) return fallback ?? "";
-  if (locale === "en") return fallback ?? slug;
+  const safeFallback = fallback ?? slugToEnPlace(slug);
+  if (locale === "en") return safeFallback;
   const entry = PLACES[slug];
-  if (!entry) return fallback ?? slug;
+  if (!entry) return safeFallback;
   if (locale === "pt") return entry.pt;
   if (locale === "es") return entry.es;
-  return fallback ?? slug;
+  return safeFallback;
 }
 
 /** Look up a place's curated type i18n key (city / mountain / water / etc.). */
@@ -1900,7 +1922,7 @@ export function placeNamesJoin(
   separator = ", ",
 ): string {
   if (!slugs || slugs.length === 0) return "";
-  return slugs.map((s) => placeName(s, locale, s)).join(separator);
+  return slugs.map((s) => placeName(s, locale, slugToEnPlace(s))).join(separator);
 }
 
 export { PLACES };

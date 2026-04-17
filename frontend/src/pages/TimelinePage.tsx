@@ -273,7 +273,7 @@ export default function TimelinePage() {
                   <span className="text-[9px] uppercase tracking-wider opacity-50">{t("timeline.participants")} </span>
                   <span className="text-xs">
                     {selectedEvent.participants
-                      .map((slug) => personName(slug, locale, slug))
+                      .map((slug) => personName(slug, locale))
                       .join(", ")}
                   </span>
                 </div>
@@ -284,7 +284,7 @@ export default function TimelinePage() {
                   <span className="text-[9px] uppercase tracking-wider opacity-50">{t("timeline.locations")} </span>
                   <span className="text-xs">
                     {selectedEvent.locations
-                      .map((slug) => placeName(slug, locale, slug))
+                      .map((slug) => placeName(slug, locale))
                       .join(", ")}
                   </span>
                 </div>
