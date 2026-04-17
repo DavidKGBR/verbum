@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   fetchParallelPage,
   type ParallelPage,
@@ -22,10 +23,13 @@ export default function ParallelView() {
   const { t, locale } = useI18n();
   const books = useBooks("kjv");
   const translationIds = useTranslationIds();
+  const [searchParams] = useSearchParams();
   const [page, setPage] = useState<ParallelPage | null>(null);
   const [loading, setLoading] = useState(true);
-  const [bookId, setBookId] = useState("GEN");
-  const [chapter, setChapter] = useState(1);
+  const [bookId, setBookId] = useState(searchParams.get("book") || "GEN");
+  const [chapter, setChapter] = useState(
+    Number(searchParams.get("chapter")) || 1,
+  );
   const [left, setLeft] = useState(() => defaultTranslationFor(locale));
   const [right, setRight] = useState(() => LOCALE_PARALLEL_SECOND[locale]);
 
@@ -34,6 +38,19 @@ export default function ParallelView() {
     setLeft(defaultTranslationFor(locale));
     setRight(LOCALE_PARALLEL_SECOND[locale]);
   }, [locale]);
+
+  // Sync book/chapter with URL so ActivePlanIndicator pills (and any other
+  // deep-link into ?book=&chapter=) actually navigate the parallel view.
+  useEffect(() => {
+    const b = searchParams.get("book");
+    const c = searchParams.get("chapter");
+    if (b && b !== bookId) setBookId(b);
+    if (c) {
+      const n = Number(c);
+      if (n && n !== chapter) setChapter(n);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   useEffect(() => {
     setLoading(true);

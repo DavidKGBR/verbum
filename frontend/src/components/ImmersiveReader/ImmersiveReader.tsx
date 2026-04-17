@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef, forwardRef, useMemo } from "react";
+import { useSearchParams } from "react-router-dom";
 import HTMLFlipBook from "react-pageflip-enhanced";
 import {
   fetchReaderPage,
@@ -203,16 +204,37 @@ const BookPage = forwardRef<HTMLDivElement, BookPageProps>(function BookPage(
 export default function ImmersiveReader() {
   const { t, locale } = useI18n();
   const translationIds = useTranslationIds();
+  const [searchParams] = useSearchParams();
   const [data, setData] = useState<ReaderPage | null>(null);
   const [loading, setLoading] = useState(true);
-  const [bookId, setBookId] = useState("GEN");
-  const [chapter, setChapter] = useState(1);
-  const [translation, setTranslation] = useState(() => defaultTranslationFor(locale));
+  const [bookId, setBookId] = useState(searchParams.get("book") || "GEN");
+  const [chapter, setChapter] = useState(
+    Number(searchParams.get("chapter")) || 1,
+  );
+  const [translation, setTranslation] = useState(
+    searchParams.get("translation") || defaultTranslationFor(locale),
+  );
 
-  // Translation follows UI locale: PT → NVI, ES → RVR, EN → KJV.
+  // Translation follows UI locale: PT → NVI, ES → RVR, EN → KJV — unless the
+  // URL pins it.
   useEffect(() => {
+    if (searchParams.get("translation")) return;
     setTranslation(defaultTranslationFor(locale));
-  }, [locale]);
+  }, [locale, searchParams]);
+
+  // Sync state with URL params so that deep-links and banner pill clicks
+  // (e.g. from ActivePlanIndicator) actually navigate the book, not just
+  // update the address bar.
+  useEffect(() => {
+    const b = searchParams.get("book");
+    const c = searchParams.get("chapter");
+    if (b && b !== bookId) setBookId(b);
+    if (c) {
+      const n = Number(c);
+      if (n && n !== chapter) setChapter(n);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
   const books = useBooks(translation);
   const [currentPage, setCurrentPage] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
