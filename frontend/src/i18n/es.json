@@ -423,7 +423,7 @@
   "arc.minConnections": "Mín. conexiones: {n}",
   "arc.loading": "Cargando referencias cruzadas...",
   "notes.title": "Notas",
-  "notes.emptyHint": "Todavía no hay notas. Abre el Lector, haz clic en un versículo y elige ✍️ Nota.",
+  "notes.emptyHint": "Todavía no hay notas. Abre el Lector, haz clic en un versículo y elige Nota.",
   "notes.summary": "{filtered} {noun} en {bookCount} {bookNoun}",
   "notes.summaryFiltered": "{filtered} {noun} (filtradas) en {bookCount} {bookNoun}",
   "notes.note": "nota",
@@ -733,5 +733,10 @@
   "book.category.apocalyptic": "Apocalíptica",
   "search.sentiment.positive": "Positivo",
   "search.sentiment.negative": "Negativo",
-  "search.sentiment.neutral": "Neutro"
+  "search.sentiment.neutral": "Neutro",
+  "notes.category.promise": "Promesa",
+  "notes.category.warning": "Advertencia",
+  "notes.category.fulfillment": "Cumplimiento",
+  "notes.category.question": "Duda",
+  "notes.category.prayer": "Oración"
 }

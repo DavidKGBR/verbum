@@ -423,7 +423,7 @@
   "arc.minConnections": "Min connections: {n}",
   "arc.loading": "Loading cross-references...",
   "notes.title": "Notes",
-  "notes.emptyHint": "No notes yet. Open the Reader, click a verse, and pick ✍️ Note.",
+  "notes.emptyHint": "No notes yet. Open the Reader, click a verse, and pick Note.",
   "notes.summary": "{filtered} {noun} in {bookCount} {bookNoun}",
   "notes.summaryFiltered": "{filtered} {noun} (filtered) in {bookCount} {bookNoun}",
   "notes.note": "note",
@@ -733,5 +733,10 @@
   "book.category.apocalyptic": "Apocalyptic",
   "search.sentiment.positive": "Positive",
   "search.sentiment.negative": "Negative",
-  "search.sentiment.neutral": "Neutral"
+  "search.sentiment.neutral": "Neutral",
+  "notes.category.promise": "Promise",
+  "notes.category.warning": "Warning",
+  "notes.category.fulfillment": "Fulfillment",
+  "notes.category.question": "Question",
+  "notes.category.prayer": "Prayer"
 }

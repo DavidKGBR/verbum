@@ -385,7 +385,14 @@ export default function BibleReader() {
                   </div>
 
                   {isActive && (
-                    <div onClick={(e) => e.stopPropagation()}>
+                    <div
+                      onClick={(e) => e.stopPropagation()}
+                      // Space/Enter inside a textarea/input must NOT bubble up
+                      // to the row's button handler (which re-toggles the menu).
+                      // Without this, typing a space in the Note editor closed
+                      // the editor every time.
+                      onKeyDown={(e) => e.stopPropagation()}
+                    >
                       <VerseActions
                         verseId={v.verse_id}
                         text={v.text_clean ?? v.text}

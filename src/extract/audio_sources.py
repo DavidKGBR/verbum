@@ -82,6 +82,8 @@ HEBREW_TTS_OVERRIDES: dict[str, str] = {
     # israelense é normalmente escrito sem vogais, e nesse modo o Chirp3-HD
     # cai na heurística nativa do speaker, que pronuncia "elohim" como
     # qualquer israelense faria no dia-a-dia (eh-lo-HEEM, tônica no "him").
+    # ✅ CONFIRMADO 17/abr/2026 — David escutou e aprovou.
+    # Padrão pra futuros overrides de palavras comuns: comece sem niqqud.
     "H430": "אלוהים",
 }
 
