@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import {
   useVerseNotes,
   HIGHLIGHT_CATEGORIES,
-  CATEGORY_LABELS,
-  CATEGORY_EMOJIS,
   type HighlightCategory,
   type VerseNote,
 } from "../hooks/useVerseNotes";
@@ -13,8 +11,24 @@ import {
   downloadMarkdown,
 } from "../components/notes/notesExport";
 import { formatDate } from "../utils/dateFormat";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, type Locale } from "../i18n/i18nContext";
 import { localizeBookName } from "../i18n/bookNames";
+
+/**
+ * Reference is stored in whatever language was active at save time (usually
+ * English because KJV was the old default). Re-derive in the user's current
+ * locale from verse_id/book_id so a note saved as "Genesis 1:1" reads as
+ * "Gênesis 1:1" today without mutating localStorage.
+ */
+function localizedNoteRef(n: VerseNote, locale: Locale): string {
+  const parts = n.verse_id.split(".");
+  const bookId = n.book_id ?? parts[0];
+  const chapter = n.chapter ?? (Number(parts[1]) || 1);
+  const verse = n.verse ?? (Number(parts[2]) || 1);
+  const m = (n.reference ?? "").match(/^(.+?)\s+\d+:\d+$/);
+  const enBookName = m?.[1] ?? n.book_name ?? bookId;
+  return `${localizeBookName(bookId, locale, enBookName)} ${chapter}:${verse}`;
+}
 
 type Filter = "all" | HighlightCategory | "uncategorised";
 
@@ -100,7 +114,7 @@ export default function NotesPage() {
                 key={cat}
                 active={filter === cat}
                 onClick={() => setFilter(cat)}
-                label={`${CATEGORY_EMOJIS[cat]} ${CATEGORY_LABELS[cat]} (${count})`}
+                label={`${t(`notes.category.${cat}`)} (${count})`}
                 color={`var(--hl-${cat})`}
               />
             );
@@ -259,7 +273,7 @@ function FilterChip({
 }
 
 function NoteCard({ note, onDelete }: { note: VerseNote; onDelete: () => void }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const cat = note.category;
   return (
     <div
@@ -278,14 +292,14 @@ function NoteCard({ note, onDelete }: { note: VerseNote; onDelete: () => void })
             to={readerLinkFor(note)}
             className="font-display font-bold text-[var(--color-ink)] hover:text-[var(--color-gold)] transition"
           >
-            {note.reference ?? note.verse_id}
+            {localizedNoteRef(note, locale)}
           </Link>
           {cat && (
             <span
               className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full text-white"
               style={{ backgroundColor: `var(--hl-${cat})` }}
             >
-              {CATEGORY_LABELS[cat]}
+              {t(`notes.category.${cat}`)}
             </span>
           )}
           {note.translation && (
