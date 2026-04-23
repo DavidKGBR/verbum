@@ -125,9 +125,48 @@ Total: 3.173 versos · 26 batches · gerada 2026-04-23.
 
 ---
 
+## Fase F6 — Profetas (maior fase)
+
+Total: 5.336 versos · 30 batches · gerada 2026-04-23.
+
+**Distribuição:** A2 = Isaías + menores antigos · A3 = Jeremias + Daniel · A4 = Ezequiel + menores tardios + Jonas.
+
+| Batch                           | Verses | Agent | Status | Started | Finished |
+|---------------------------------|-------:|-------|--------|---------|----------|
+| ISA/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ISA/batch_002_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ISA/batch_003_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ISA/batch_004_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ISA/batch_005_input.tsv         |    92  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| HOS/batch_001_input.tsv         |   197  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOL/batch_001_input.tsv         |    73  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| AMO/batch_001_input.tsv         |   146  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| OBA/batch_001_input.tsv         |    21  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MIC/batch_001_input.tsv         |   105  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JER/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JER/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JER/batch_003_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JER/batch_004_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JER/batch_005_input.tsv         |   164  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| DAN/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| DAN/batch_002_input.tsv         |    57  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EZK/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EZK/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EZK/batch_003_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EZK/batch_004_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EZK/batch_005_input.tsv         |    73  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JON/batch_001_input.tsv         |    48  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NAM/batch_001_input.tsv         |    47  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| HAB/batch_001_input.tsv         |    56  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ZEP/batch_001_input.tsv         |    53  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| HAG/batch_001_input.tsv         |    38  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ZEC/batch_001_input.tsv         |   211  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MAL/batch_001_input.tsv         |    55  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+
+---
+
 ## Próximas fases (ainda não preparadas)
 
-- **F6** — Profetas: `ISA`, `JER`, `EZK`, `DAN`, menores
 - **F7** — Histórico + legal: `LEV`…`EST`
 
 ---
