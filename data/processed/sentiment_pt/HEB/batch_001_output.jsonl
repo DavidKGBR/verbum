@@ -1,0 +1,300 @@
+{"verse_id": "HEB.1.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": "header"}
+{"verse_id": "HEB.1.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.1.3", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.1.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.1.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.1.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.1.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.1.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.1.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.1.10", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.1.11", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.1.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.1.13", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.1.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.2.1", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.2.2", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.2.3", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.2.4", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.2.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.2.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.2.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.2.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.2.9", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed suffering+glory"}
+{"verse_id": "HEB.2.10", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed"}
+{"verse_id": "HEB.2.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.2.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.2.13", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.2.14", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed death+victory"}
+{"verse_id": "HEB.2.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.2.16", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.2.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.2.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.3.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.3.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.3.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.3.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.3.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.3.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.3.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.3.8", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.3.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.3.10", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.3.11", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.3.12", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8}
+{"verse_id": "HEB.3.13", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed encourage+sin"}
+{"verse_id": "HEB.3.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.3.15", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.3.16", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.3.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.3.18", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.3.19", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.4.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.4.2", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.4.3", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.4.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.4.5", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.4.6", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.4.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.4.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.4.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.4.10", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.4.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed effort+disobedience"}
+{"verse_id": "HEB.4.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.4.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.4.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.4.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.4.16", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.5.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.5.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.5.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.5.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.5.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.5.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.5.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed tears+heard"}
+{"verse_id": "HEB.5.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.5.9", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.5.10", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.5.11", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.5.12", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.5.13", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.5.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.6.1", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.6.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.6.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.6.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.6.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.6.6", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8}
+{"verse_id": "HEB.6.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.6.8", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.6.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.6.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.6.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.6.12", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.6.13", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.6.14", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.6.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.6.16", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.6.17", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.6.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.6.19", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.6.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.3", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.7.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.7.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.7.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.7.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.7.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.7.14", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.15", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.16", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.17", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.18", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.7.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.20", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.7.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.22", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.23", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.7.24", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.25", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.7.26", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.7.27", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.7.28", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.8.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.8.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.8.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.8.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.8.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.8.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.8.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.8.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.8.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.8.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.8.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.8.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.8.13", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.9.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "tabernacle spec"}
+{"verse_id": "HEB.9.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "tabernacle spec"}
+{"verse_id": "HEB.9.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "tabernacle spec"}
+{"verse_id": "HEB.9.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "tabernacle spec"}
+{"verse_id": "HEB.9.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.9.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "ritual spec"}
+{"verse_id": "HEB.9.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.9.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.9.12", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.9.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.9.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.9.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.18", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.19", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "ritual spec"}
+{"verse_id": "HEB.9.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.23", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.9.24", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.9.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.9.26", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.9.27", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.9.28", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.10.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed"}
+{"verse_id": "HEB.10.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.10.4", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.10.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.10.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.10.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.10.9", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.10.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.11", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.10.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.10.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.15", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.10.16", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.10.18", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.10.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.21", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.10.22", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.23", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.24", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.10.25", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.26", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.10.27", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8}
+{"verse_id": "HEB.10.28", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.10.29", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.10.30", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.10.31", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8}
+{"verse_id": "HEB.10.32", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5, "notes": "mixed endurance"}
+{"verse_id": "HEB.10.33", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.10.34", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.35", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.10.36", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.10.37", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.10.38", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed"}
+{"verse_id": "HEB.10.39", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.2", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.11.3", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed"}
+{"verse_id": "HEB.11.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed"}
+{"verse_id": "HEB.11.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.11.10", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.11.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed died+saw"}
+{"verse_id": "HEB.11.14", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.11.16", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.11.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed test+sacrifice"}
+{"verse_id": "HEB.11.18", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.11.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.11.23", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.24", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.11.25", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed suffering+choice"}
+{"verse_id": "HEB.11.26", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.27", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.28", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.29", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed deliverance+drowning"}
+{"verse_id": "HEB.11.30", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.11.31", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.32", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.11.33", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.11.34", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.11.35", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed life+torture"}
+{"verse_id": "HEB.11.36", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8}
+{"verse_id": "HEB.11.37", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8}
+{"verse_id": "HEB.11.38", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed honor+hardship"}
+{"verse_id": "HEB.11.39", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.11.40", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.12.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.12.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.12.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5, "notes": "mixed opposition+encouragement"}
+{"verse_id": "HEB.12.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.12.5", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.12.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.12.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.12.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.12.9", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.12.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.12.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed grief+fruit"}
+{"verse_id": "HEB.12.12", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.12.13", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.12.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.12.15", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.12.16", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.12.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7}
+{"verse_id": "HEB.12.18", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.12.19", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.12.20", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.12.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": "Sinai awe"}
+{"verse_id": "HEB.12.22", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.12.23", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.12.24", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.12.25", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.12.26", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5}
+{"verse_id": "HEB.12.27", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.12.28", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN/PT divergence"}
+{"verse_id": "HEB.12.29", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6}
+{"verse_id": "HEB.13.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.13.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.13.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed remember"}
+{"verse_id": "HEB.13.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.13.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.13.6", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.13.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.13.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.13.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.13.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.13.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.13.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.13.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5}
+{"verse_id": "HEB.13.14", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.13.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.13.16", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.13.17", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.13.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7}
+{"verse_id": "HEB.13.19", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6}
+{"verse_id": "HEB.13.20", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.13.21", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9}
+{"verse_id": "HEB.13.22", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.5}

@@ -88,9 +88,45 @@ Total: 1.137 versos · 5 batches · gerada 2026-04-23.
 
 ---
 
+## Fase F5 — Epístolas + Apocalipse
+
+Total: 3.173 versos · 26 batches · gerada 2026-04-23.
+
+**Distribuição:** A2 = Paulinas maiores (ROM/1CO/2CO/GAL) · A3 = Paulinas menores + HEB · A4 = Cartas gerais + Apocalipse.
+
+| Batch                           | Verses | Agent | Status | Started | Finished |
+|---------------------------------|-------:|-------|--------|---------|----------|
+| ROM/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ROM/batch_002_input.tsv         |   133  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1CO/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1CO/batch_002_input.tsv         |   137  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2CO/batch_001_input.tsv         |   257  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| GAL/batch_001_input.tsv         |   149  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EPH/batch_001_input.tsv         |   155  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| PHP/batch_001_input.tsv         |   104  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| COL/batch_001_input.tsv         |    95  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1TH/batch_001_input.tsv         |    89  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2TH/batch_001_input.tsv         |    47  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1TI/batch_001_input.tsv         |   113  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2TI/batch_001_input.tsv         |    83  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| TIT/batch_001_input.tsv         |    46  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| PHM/batch_001_input.tsv         |    25  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| HEB/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| HEB/batch_002_input.tsv         |     3  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JAS/batch_001_input.tsv         |   108  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1PE/batch_001_input.tsv         |   105  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2PE/batch_001_input.tsv         |    61  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1JN/batch_001_input.tsv         |   105  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2JN/batch_001_input.tsv         |    13  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 3JN/batch_001_input.tsv         |    15  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JUD/batch_001_input.tsv         |    25  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| REV/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| REV/batch_002_input.tsv         |   105  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+
+---
+
 ## Próximas fases (ainda não preparadas)
 
-- **F5** — Epístolas + Apocalipse: `ROM`…`REV`
 - **F6** — Profetas: `ISA`, `JER`, `EZK`, `DAN`, menores
 - **F7** — Histórico + legal: `LEV`…`EST`
 
