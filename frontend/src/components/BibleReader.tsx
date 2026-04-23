@@ -323,8 +323,8 @@ export default function BibleReader() {
                           e.stopPropagation();
                           openVerse(v.verse, "notes");
                         }}
-                        title="Open note"
-                        aria-label="Open note"
+                        title={t("reader.openNote")}
+                        aria-label={t("reader.openNote")}
                         className="text-[11px] shrink-0 pt-1 pr-1
                                    text-[var(--color-gold-dark)] opacity-30 hover:opacity-70
                                    transition-opacity focus:outline-none focus:ring-1
@@ -339,8 +339,8 @@ export default function BibleReader() {
                           e.stopPropagation();
                           openVerse(v.verse, "crossrefs");
                         }}
-                        title={`${xrefCount} cross-references`}
-                        aria-label={`${xrefCount} cross-references`}
+                        title={t("reader.crossrefs").replace("{n}", String(xrefCount))}
+                        aria-label={t("reader.crossrefs").replace("{n}", String(xrefCount))}
                         className="text-[11px] font-mono tabular-nums shrink-0 pt-1 pr-1
                                    text-[var(--color-gold-dark)] opacity-25 hover:opacity-60
                                    transition-opacity focus:outline-none focus:ring-1

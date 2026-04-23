@@ -72,6 +72,7 @@ def get_arcs(
 def get_crossrefs_between(
     source_book: str = Query(..., description="Source book ID (e.g., GEN)"),
     target_book: str = Query(..., description="Target book ID (e.g., PSA)"),
+    translation: str = Query("kjv", description="Translation for verse text"),
     limit: int = Query(50, ge=1, le=200),
 ) -> dict:
     """Get detailed cross-references between two specific books."""
@@ -86,14 +87,14 @@ def get_crossrefs_between(
                 tv.text AS target_text, tv.reference AS target_ref
             FROM cross_references cr
             LEFT JOIN verses sv ON cr.source_verse_id = sv.verse_id
-                AND sv.translation_id = 'kjv'
+                AND sv.translation_id = ?
             LEFT JOIN verses tv ON cr.target_verse_id = tv.verse_id
-                AND tv.translation_id = 'kjv'
+                AND tv.translation_id = ?
             WHERE cr.source_book_id = ? AND cr.target_book_id = ?
             ORDER BY cr.votes DESC
             LIMIT ?
             """,
-            [source_book.upper(), target_book.upper(), limit],
+            [translation, translation, source_book.upper(), target_book.upper(), limit],
         ).fetchdf()
 
         return {

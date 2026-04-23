@@ -124,6 +124,7 @@ def discover_thread(
 @router.get("/threads/{thread_id}")
 def get_thread(
     thread_id: str,
+    translation: str = Query("kjv", description="Translation for verse preview"),
     limit: int = Query(100, ge=1, le=500, description="Max verses to return"),
 ) -> dict:
     """Get full verse chain for a semantic thread."""
@@ -148,12 +149,12 @@ def get_thread(
                 v.verse,
                 v.book_position
             FROM interlinear i
-            LEFT JOIN verses v ON i.verse_id = v.verse_id AND v.translation_id = 'kjv'
+            LEFT JOIN verses v ON i.verse_id = v.verse_id AND v.translation_id = ?
             WHERE i.semantic_tag ILIKE ?
             ORDER BY v.book_position, v.chapter, v.verse
             LIMIT ?
             """,
-            [f"%{tag_pattern}%", limit],
+            [translation, f"%{tag_pattern}%", limit],
         ).fetchdf()
 
         if df.empty:

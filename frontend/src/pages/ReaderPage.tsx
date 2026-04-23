@@ -6,7 +6,7 @@ import ImmersiveReader from "../components/ImmersiveReader/ImmersiveReader";
 import InterlinearView from "../components/reader/InterlinearView";
 import StructuralView from "../components/structure/StructuralView";
 import ActivePlanIndicator from "../components/plans/ActivePlanIndicator";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 
 type Mode = "single" | "parallel" | "immersive" | "interlinear" | "structural";
 
@@ -19,13 +19,14 @@ const MODE_KEYS: { key: Mode; i18nKey: string }[] = [
 ];
 
 export default function ReaderPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [searchParams] = useSearchParams();
 
-  // URL params: ?mode=structural&book=MAT&chapter=6
+  // URL params: ?mode=structural&book=MAT&chapter=6&translation=nvi
   const urlMode = searchParams.get("mode") as Mode | null;
   const urlBook = searchParams.get("book") ?? "MAT";
   const urlChapter = parseInt(searchParams.get("chapter") ?? "1", 10);
+  const urlTranslation = searchParams.get("translation") ?? defaultTranslationFor(locale);
 
   const [mode, setMode] = useState<Mode>(
     urlMode && MODE_KEYS.some((m) => m.key === urlMode) ? urlMode : "single"
@@ -47,7 +48,7 @@ export default function ReaderPage() {
               }`}
               title={
                 m.key === "structural"
-                  ? "Visualize quiasmos e paralelismos literários"
+                  ? t("reader.structuralTooltip")
                   : undefined
               }
             >
@@ -68,7 +69,7 @@ export default function ReaderPage() {
         <StructuralView
           book={urlBook}
           chapter={urlChapter}
-          translation="kjv"
+          translation={urlTranslation}
         />
       )}
     </div>

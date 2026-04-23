@@ -126,8 +126,11 @@ _PASSAGE_VERSES: dict[str, dict[str, object]] = {
     },
 }
 
-# Translation sets
+# Translation sets — vernacular slot accepts both Portuguese and Spanish.
+# When Spanish is selected the layer label reflects it ("Español (RVR)").
 _PT_TRANSLATIONS = {"nvi", "ra", "acf"}
+_ES_TRANSLATIONS = {"rvr"}
+_VERNACULAR_TRANSLATIONS = _PT_TRANSLATIONS | _ES_TRANSLATIONS
 _EN_TRANSLATIONS = {"kjv", "bbe", "asv", "web", "darby"}
 
 
@@ -195,7 +198,7 @@ def get_catalog() -> dict:
 @router.get("/special-passages/{passage_id}")
 def get_special_passage(
     passage_id: str,
-    translation: str = Query("nvi", description="Tradução portuguesa (nvi, ra, acf)"),
+    translation: str = Query("nvi", description="Tradução moderna (nvi, ra, acf, rvr)"),
     translation_en: str = Query("kjv", description="Tradução inglesa (kjv, bbe, asv, web, darby)"),
 ) -> dict:
     """
@@ -218,7 +221,8 @@ def get_special_passage(
     orig_lang: str = info["original_language"]  # type: ignore[assignment]
     has_aramaic: bool = info["has_aramaic"]  # type: ignore[assignment]
 
-    pt_trans = _pick_translation(translation, _PT_TRANSLATIONS, "nvi")
+    pt_trans = _pick_translation(translation, _VERNACULAR_TRANSLATIONS, "nvi")
+    pt_is_spanish = pt_trans in _ES_TRANSLATIONS
     en_trans = _pick_translation(translation_en, _EN_TRANSLATIONS, "kjv")
 
     db = get_db()
@@ -340,8 +344,12 @@ def get_special_passage(
     en_sorted = sorted(en_verses, key=lambda v: v["verse_number"])
 
     layers["portuguese"] = {
-        "label": f"Português ({pt_trans.upper()})",
-        "language_code": "pt",
+        "label": (
+            f"Español ({pt_trans.upper()})"
+            if pt_is_spanish
+            else f"Português ({pt_trans.upper()})"
+        ),
+        "language_code": "es" if pt_is_spanish else "pt",
         "direction": "ltr",
         "source": pt_trans,
         "audio_note": None,

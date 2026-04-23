@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -69,9 +69,32 @@ const smallIcon = new L.Icon({
   shadowSize: [24, 24],
 });
 
+const highlightedIcon = new L.DivIcon({
+  html: `<div style="
+    width:20px;height:20px;border-radius:50%;
+    background:var(--color-gold,#b8860b);
+    border:3px solid white;
+    box-shadow:0 0 0 2px var(--color-gold,#b8860b),0 2px 8px rgba(0,0,0,.4);
+  "></div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -12],
+});
+
+// ── Fly to a place when navigating from /places ──────────────────────────
+
+function FlyToPlace({ lat, lng, zoom }: { lat: number; lng: number; zoom: number }) {
+  const map = useMap();
+  useEffect(() => {
+    map.flyTo([lat, lng], zoom, { duration: 1.2 });
+  }, [map, lat, lng, zoom]);
+  return null;
+}
+
 // ── Zoom-aware marker layer ────────────────────────────────────────────────
 
-function MarkerLayer({ features }: { features: GeoFeature[] }) {
+function MarkerLayer({ features, highlightSlug }: { features: GeoFeature[]; highlightSlug: string | null }) {
   const { t, locale } = useI18n();
   const map = useMap();
   const [zoom, setZoom] = useState(map.getZoom());
@@ -91,11 +114,14 @@ function MarkerLayer({ features }: { features: GeoFeature[] }) {
     <>
       {visible.map((f) => {
         const localizedName = placeName(f.properties.slug, locale, f.properties.name);
+        const isHighlighted = highlightSlug === f.properties.slug;
         return (
-          <Marker
+          <HighlightableMarker
             key={f.properties.slug}
             position={[f.geometry.coordinates[1], f.geometry.coordinates[0]]}
-            icon={icon}
+            icon={isHighlighted ? highlightedIcon : icon}
+            zIndexOffset={isHighlighted ? 1000 : 0}
+            autoOpen={isHighlighted}
           >
             <Popup>
               <div className="text-sm min-w-[140px]">
@@ -128,17 +154,33 @@ function MarkerLayer({ features }: { features: GeoFeature[] }) {
                 </Link>
               </div>
             </Popup>
-          </Marker>
+          </HighlightableMarker>
         );
       })}
     </>
   );
 }
 
+function HighlightableMarker({
+  autoOpen,
+  children,
+  ...props
+}: { autoOpen?: boolean } & React.ComponentProps<typeof Marker>) {
+  const markerRef = useRef<L.Marker>(null);
+  useEffect(() => {
+    if (autoOpen && markerRef.current) {
+      setTimeout(() => markerRef.current?.openPopup(), 600);
+    }
+  }, [autoOpen]);
+  return <Marker ref={markerRef} {...props}>{children}</Marker>;
+}
+
 // ── Main Map Page ──────────────────────────────────────────────────────────
 
 export default function MapPage() {
   const { t, locale } = useI18n();
+  const [searchParams] = useSearchParams();
+  const highlightSlug = searchParams.get("place");
   const [geojson, setGeojson] = useState<GeoJSON | null>(null);
   const [routes, setRoutes] = useState<BibleRoute[]>([]);
   const [activeRoutes, setActiveRoutes] = useState<Set<string>>(new Set());
@@ -174,8 +216,11 @@ export default function MapPage() {
       )
     : [];
 
-  // Center on Israel/Middle East
   const center: [number, number] = [31.5, 35.5];
+
+  const highlightedFeature = highlightSlug
+    ? sortedFeatures.find((f) => f.properties.slug === highlightSlug)
+    : undefined;
 
   return (
     <div className="flex flex-col h-[calc(100vh-4rem)]">
@@ -289,9 +334,17 @@ export default function MapPage() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
+            {highlightedFeature && (
+              <FlyToPlace
+                lat={highlightedFeature.geometry.coordinates[1]}
+                lng={highlightedFeature.geometry.coordinates[0]}
+                zoom={10}
+              />
+            )}
+
             {/* Place markers */}
             {showPlaces && sortedFeatures.length > 0 && (
-              <MarkerLayer features={sortedFeatures} />
+              <MarkerLayer features={sortedFeatures} highlightSlug={highlightSlug} />
             )}
 
             {/* Journey routes */}

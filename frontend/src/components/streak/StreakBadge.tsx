@@ -1,15 +1,9 @@
 import { useReadingStreak } from "../../hooks/useReadingStreak";
+import { useI18n } from "../../i18n/i18nContext";
 
-/**
- * Small streak indicator for the sidebar. Renders nothing until the user
- * has read at least one chapter. Tone adapts to the streak status:
- *
- *   alive    : 🔥 N days · full gold
- *   at-risk  : 🔥 N days · muted, tooltip reminding to read today
- *   broken   : ❄️ Start again today? · very muted
- */
 export default function StreakBadge() {
   const { state, status } = useReadingStreak();
+  const { t } = useI18n();
 
   if (status === "empty") return null;
 
@@ -19,10 +13,10 @@ export default function StreakBadge() {
 
   const tooltip =
     status === "alive"
-      ? "Your reading streak — keep it going!"
+      ? t("streak.alive")
       : status === "at-risk"
-        ? "Read any chapter today to keep your streak alive."
-        : "Streak broken. Start a new one today.";
+        ? t("streak.atRisk")
+        : t("streak.broken");
 
   const containerClass = [
     "mt-3 mx-1 px-3 py-2 rounded border transition",
@@ -33,9 +27,11 @@ export default function StreakBadge() {
     isBroken ? "border-white/10 bg-white/5 opacity-60" : "",
   ].join(" ");
 
+  const daysLabel = (state.current === 1 ? t("streak.days") : t("streak.days_plural"))
+    .replace("{n}", String(state.current));
   const headerText = isBroken
-    ? "❄️ Start again today?"
-    : `🔥 ${state.current} ${state.current === 1 ? "day" : "days"}`;
+    ? `❄️ ${t("streak.brokenHeader")}`
+    : `🔥 ${daysLabel}`;
 
   return (
     <div className={containerClass} title={tooltip}>
@@ -47,7 +43,8 @@ export default function StreakBadge() {
         {headerText}
       </div>
       <div className="text-[10px] opacity-60 mt-0.5 tabular-nums">
-        Best: {state.longest} · Total: {state.total_chapters} ch
+        {t("streak.best").replace("{n}", String(state.longest))} ·{" "}
+        {t("streak.total").replace("{n}", String(state.total_chapters))}
       </div>
     </div>
   );

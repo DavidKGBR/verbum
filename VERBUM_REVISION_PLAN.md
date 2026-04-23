@@ -556,21 +556,89 @@ python scripts/load_sentiment_batch.py data/processed/sentiment_pt/PSA/batch_001
 
 ### Sessão R8 — Dicionário Bíblico multilingual (Easton + Smith) — pré-launch, **100%**
 
-**Entrega:** As ~6.000 entradas combinadas de Easton (1897) + Smith (1863) traduzidas para PT-BR e ES, sem fallback para inglês na interface nesses idiomas. Hoje (R6) a DictionaryPage mostra um disclaimer discreto avisando que o conteúdo segue em inglês; R8 remove esse disclaimer porque passa a ser verdadeiro PT/ES de ponta a ponta.
+**Entrega:** As ~6.000 entradas combinadas de Easton (1897) + Smith (1863) traduzidas para PT-BR e ES, sem fallback para inglês na interface nesses idiomas.
 
-**Por que após R7:** mesmo padrão do R3.6 (Strong's) — a R3.6 estabeleceu o workflow (schema multilang + UPSERT idempotent + coverage script + frontend fallback indicator). Reaplicamos aqui:
+**Status (19 abr 2026):**
 
-**Subsessões:**
-- **R8.0** — Infra (schema `dictionary_entries_multilang`, router `/dictionary/search?lang=` + `/dictionary/{slug}?lang=`, frontend `is_translated` flag, fallback para EN quando faltar). Script `scripts/prep_dict_batch.py` + `scripts/load_dict_batch.py` + `scripts/dictionary_coverage.py` — mesma pegada do R3.6.
-- **R8.1-N** — Batches. ~6.000 entradas ÷ 1.000 por batch = ~6 batches × 2 idiomas. Poderia ser rule-based (tradutor) como o R3.6 Strong's; talvez com pós-edição humana em nomes de lugares ambíguos.
-- **Spot-check** como no R3.6.
+#### R8.0 — Infra ✅ (commit `da49e86`)
+- Schema `dictionary_entries_multilang` (PK: slug+lang) com upsert ON CONFLICT DO UPDATE
+- Scripts: `prep_dictionary_batch.py`, `prep_dictionary_turns.py`, `load_dictionary_batch.py`, `audit_dictionary_quality.py`, `translate_dictionary_gemini.py`
+- Router `/dictionary/search?lang=` + `/dictionary/{slug}?lang=` + frontend `is_translated` flag
 
-**Critério de done R8:**
-- Coverage 100% PT-BR + ES em `dictionary_coverage.py`
-- Remover o banner `dictionary.englishNotice` em PT/ES (ou torná-lo condicional a entradas ainda sem tradução)
-- Testar "babilônia" em PT → retorna entrada `Babylon` já em português
+#### R8.1 — Marathon inicial ✅ (sessões anteriores a 19 abr)
+- **5.965 entries × 2 langs = 11.930 rows** traduzidas via Claude Opus em ~79 marathon turns
+- Cobertura: 99% com tradução >10 chars
 
-**Decisão data-driven:** R8 pode rodar depois do launch se a janela apertar — o disclaimer atual é honesto e o reverse-lookup já entrega a entrada certa. Mas deixar registrado aqui pra não virar "surpresa post-launch".
+#### R8.2 — Fix EN upstream + Re-tradução onda 1 ✅ (19 abr 2026)
+- Dataset upstream truncava entries em 5000 chars → corrigido re-parseando XMLs ThML originais (688 entries estendidas)
+- **314 entries** com ratio EN/trad >3:1 re-traduzidas via Opus em 17 turns (2 sessões paralelas)
+- Session A: turns 001-007 (380 rows), Session B: turns 008-017 (248 rows)
+- **628 rows carregadas, 0 remaining (ratio >3:1)**
+
+#### R8.3 — Re-tradução onda 2 (ratio 2-3x) ✅
+- **92 entries** com EN >2000 chars e ratio 2-3x (não capturadas pelo filtro >3:1)
+- Inclui entries críticas: moses (32%), solomon (41%), pharaoh (39%), tabernacle (36%), temple (33%)
+- **EN total: ~465k chars** em 10 turns de ~40-56k
+- Estratégia: mesma mecânica — tradução Opus, JSONL upsert
+- **Concluída (19 abr 2026):**
+  - Session A: W2-001 (13 slugs), W2-002 (15), W2-003 (15) ✅
+  - Session B: W2-008 (4 slugs), W2-009 (5) ✅
+  - Session C: W2-004 (10), W2-005 (5), W2-006 (11), W2-007 (7), W2-008b (11) ✅
+  - **92/92 slugs = 100%, 0 remaining (ratio >2:1 com EN >2000 chars)**
+
+#### R8.4 — Stubs (50 PT + 45 ES com <=10 chars) ✅
+- Entries minúsculas (EN também <=21 chars) — cross-references tipo "See X"
+- **Concluída (20 abr 2026):** mojibake corrigido em 11 PT + 7 ES; 40 PT + 37 ES stubs restantes são legítimos (EN <=21 chars)
+- Cobertura final: 5965/5965 = 100% PT e ES, 0 mojibake, 0 ratio>2:1
+
+#### R8.5 — Nomes localizados no dicionário ✅
+- Coluna `name` adicionada a `dictionary_entries_multilang`
+- **5965/5965 nomes preenchidos** para PT e ES (0 null):
+  - 2523 via lookup tables existentes (PERSONS + PLACES)
+  - 641 traduzidos via mapeamento rule-based (nomes bíblicos consagrados + termos teológicos + padrões "Book of" → "Livro de")
+  - 2801 nomes próprios mantidos como estão (iguais em todas as línguas)
+- **Backend:** `/dictionary/search` busca tanto pelo nome EN quanto pelo nome localizado; busca accent-insensitive (via `translate()` no DuckDB — "Babilonia" e "Babilônia" encontram o mesmo resultado)
+- **Backend:** `/dictionary/{slug}` retorna `name` localizado quando `lang` é PT/ES
+- **Frontend:** chips de sugestão localizados (PT: Jerusalém, Davi, Sábado… / ES: Jerusalén, David, Sábado…); busca envia termo original sem forçar conversão EN
+- **Concluída (20 abr 2026)**
+
+**Critério de done R8 completa:** ✅
+- `audit_dictionary_quality.py` mostra 0 critical failures
+- Zero entry com ratio >2:1 e EN >2000 chars
+- Banner `dictionary.refinementInProgress` removido (código + chaves i18n) — 100% traduzido ✅
+- Testar "babilônia" em PT → retorna entrada `Babylon` já em português ✅ (accent-insensitive)
+
+---
+
+### Sessão R9 — Semantic Explorer i18n completa (20 abr 2026)
+
+**Entrega:** Semantic Explorer (`/semantic-graph`) totalmente localizado em PT e ES.
+
+**Fase 1 — Fixes imediatos (frontend + backend):**
+- Removido badge "Definição original (inglês) · tradução em refinamento" dos nós Strong's (já 100% traduzidos)
+- Backend `/explorer/expand` aceita `lang` param; overlay `short_definition` de `strongs_lexicon_multilang`
+- Painel de detalhes de tópicos enriquecido: mostra `verse_count` ("Abrange N versículos")
+- Chaves i18n: removida `explorer.strongsDef.original`, adicionada `explorer.topicVerseCount`
+
+**Fase 2 — Tabela `topics_multilang` + tradução dos 4.673 tópicos:**
+- Criada tabela `topics_multilang (topic_id, lang, name, confidence)` PK `(topic_id, lang)` em `duckdb_loader.py`
+- Seed: 463 traduções extraídas de `topicNames.ts` → inseridas no DB
+- Rule-based: `translate_topic_names.py` — 358 matches via KNOWN_PT/KNOWN_ES (total parcial: 821)
+- Abrangente: `translate_topic_names_claude.py` — 1.882 traduções específicas (termos teológicos + nomes bíblicos consagrados) + 1.970 nomes próprios obscuros mantidos como estão
+- **Final: 4.673/4.673 PT + 4.673/4.673 ES (100%)**
+
+**Fase 3 — Backend serve nomes localizados de tópicos:**
+- `_build_center_node` (topic): consulta `topics_multilang` e overlay label quando `lang` é PT/ES
+- `_expand_topics_for_strongs`: batch overlay de labels localizados via `topics_multilang`
+- `/explorer/search`: aceita `lang` param; busca em `topics_multilang.name` além de `topics.name` (LEFT JOIN)
+- Frontend: `ExplorerSearchBar` envia `locale` como `lang`; `SemanticExplorerPage` já envia `lang` no expand
+
+**Critério de done R9:** ✅
+- Abrir `/semantic-graph` em PT → labels de tópicos em PT ("ORAÇÃO", "BABILÔNIA") em vez de EN
+- Buscar "oração" na search bar → encontra tópico pelo nome PT
+- Strong's mostram definição em PT, sem badge "refinamento"
+- `npx tsc --noEmit` sem erros ✅
+- **Concluída (20 abr 2026)**
 
 ---
 
@@ -593,10 +661,13 @@ Quando as 7 sessões R1–R7 estiverem ✅:
 ✅ R3.6.0 — Strong's multilingual setup (schema + scripts + backend + indicator)
 ✅ R3.6.1-16 — Strong's labeling 100% (14.178 × 2 línguas = 28.356 definições) — 1 sessão (rule-based)
 ✅ R3.7 — Compare/Authors data fixes (Luther reg., darby/web gap fix, authors translation param, genealogy layout)
-Sessão R4 — Bugs F1-F6 + G1/G2 imediatos (intertextuality interatividade, emotional flow vazio)
-Sessão R5 — Limpeza strings cruas + IDs resolvidos
-Sessão R6 — Audit trilíngue final
-Sessão R7.0 — Sentiment multilingual setup (schema + scripts + frontend marker)
+✅ R8 — Dictionary multilang (5965 nomes, wave1+2 traduções, accent-insensitive search, banner removed)
+✅ R9 — Semantic Explorer i18n (4673 topics × 2 langs, localized search + expand, Strong's overlay)
+✅ R4 — Bugs F1-F6 + G1/G2 (21 abr 2026): F1 timeline overflow clamp+overflow-hidden, F3 graph input design system, F6 dictionary canonical query fix, G1.a heatmap header repositioned, G2.b emotional toggle positive/negative + translation param. F2 FOUC already mitigated (font preload). F4 emojis→SVG already done (PresetIcon). F5 search?q= already working. G1.b interactivity already implemented. G2.a SVG renders correctly with h-32 fixed height.
+✅ R5 — Limpeza strings cruas + IDs resolvidos (21 abr 2026): _clean_gloss filtra tokens [Obj.]/»/@; timeline participants retornam {slug,name} com JOIN biblical_people; explorer search secondary_label limpo para Strong's
+✅ R6 — Audit trilíngue final (21 abr 2026): ~35 hardcoded EN strings localizadas em 10 arquivos (WordStudyPage, CommunityPage, StreakBadge, Layout, BibleReader, ImmersiveReader, ReaderPage, HomePage, PeoplePage). 785 chaves i18n em paridade EN/PT/ES. Missing key explorer.strongsDef.original adicionada. Zero strings EN hardcoded user-visible remanescentes.
+✅ R7.0 — Sentiment multilingual setup (21 abr 2026): tabela verses_sentiment_multilang (PK verse_id+lang) criada em duckdb_loader.py; 3 scripts (prep_sentiment_batch.py, load_sentiment_batch.py, sentiment_status.py) testados end-to-end; emotional.py reescrito com LEFT JOIN + COALESCE overlay para PT/ES; sentimentCoverage.ts auto-gerado; EmotionalLandscapePage.tsx com indicador "em refinamento" + toggle positive/negative + defaultTranslationFor(locale)
+⚠️ BLOQUEANTE PRÉ-R7.1 — Auditoria visual+código de 13 páginas (decidido 22 abr 2026): David pediu revisão pessoal (visual na mão) + análise de código de TODAS as páginas restantes antes de iniciar os batches de sentiment. Páginas: /timeline, /compare, /topics, /devotional, /analytics, /citations, /open-questions, /threads, /structure, /emotional, /community, /special-passages, /genealogy. NÃO PULAR PARA R7.1 SEM COMPLETAR ESTA REVISÃO.
 Sessões R7.1-113 — Sentiment labeling 100% PT-BR (66 livros NVI = ~113 batches)
 ─────────── REVISION CLOSED (100% cobertura atingida) ───────────
 Sessão L2 — README de produto
@@ -642,6 +713,8 @@ Em cadência sustentável (~2-3 batches/semana), ~161 batches = ~13-15 meses de 
   - Melhorou feedback visual no `/compare` quando tradução não tem livro (label + tradução visível)
   - Fix layout `/genealogy`: header "NT — Grego" alinhado com colunas de conteúdo (`w-fit` + spacer `w-[140px]`)
   - **Pendente Luther NT:** cache original (BibleSuperSearch, removida) tem 26 livros NT vazios. Fonte necessária: Zefania XML Luther 1912 (disponível em SourceForge: `zefania-sharp/Bibles/GER/Lutherbibel/Luther 1912/`)
+- ✅ R8 (Dictionary multilang — 20 abr 2026): 5965 entry names PT+ES, wave1+2 translations (92 slugs), mojibake fix, accent-insensitive search, refinement banner removed
+- ✅ R9 (Semantic Explorer i18n — 20 abr 2026): 4673 topics × PT+ES (100%), localized topic search + expand, Strong's definition overlay, verse_count in topic panel
 
 **Custo:** $0 (sem API externa). Tokens consumidos do plano Claude MAX do David — sem custo marginal.
 

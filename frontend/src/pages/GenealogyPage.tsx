@@ -17,6 +17,7 @@ import {
   type GenealogyConcept,
 } from "../services/api";
 import ConceptFlow from "../components/genealogy/ConceptFlow";
+import ConceptIcon from "../components/genealogy/ConceptIcon";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import { useI18n } from "../i18n/i18nContext";
 
@@ -118,7 +119,15 @@ function CatalogPage() {
           >
             {/* Icon + concept name */}
             <div className="flex items-start gap-3">
-              <span className="text-2xl leading-none shrink-0 mt-0.5">{c.icon}</span>
+              <span
+                className={[
+                  "shrink-0 mt-0.5",
+                  COLOR_DOT[c.color]?.replace("bg-", "text-") ?? "text-[var(--color-gold-dark)]",
+                ].join(" ")}
+                style={{ color: "currentColor" }}
+              >
+                <ConceptIcon id={c.id} size={26} />
+              </span>
               <div className="flex flex-col gap-0.5">
                 <h2 className="font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-gold-dark)] transition-colors">
                   {c.concept}
@@ -193,7 +202,9 @@ function DetailPage({ conceptId }: { conceptId: string }) {
       {concept && (
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-3">
-            <span className="text-3xl leading-none">{concept.icon}</span>
+            <span className="text-[var(--color-gold-dark)]">
+              <ConceptIcon id={concept.id} size={36} />
+            </span>
             <div>
               <h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
                 {concept.concept}

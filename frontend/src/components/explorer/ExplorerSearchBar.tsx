@@ -23,7 +23,7 @@ const TYPE_COLORS: Record<string, string> = {
 };
 
 export default function ExplorerSearchBar({ onSelect }: Props) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<ExplorerSearchResult[]>([]);
   const [open, setOpen] = useState(false);
@@ -39,7 +39,8 @@ export default function ExplorerSearchBar({ onSelect }: Props) {
     }
     setLoading(true);
     try {
-      const data = await fetchExplorerSearch(q, 12);
+      const lang = locale !== "en" ? locale : undefined;
+      const data = await fetchExplorerSearch(q, 12, lang);
       setResults(data.results);
       setOpen(true);
     } catch {
@@ -47,7 +48,7 @@ export default function ExplorerSearchBar({ onSelect }: Props) {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
     clearTimeout(timerRef.current);

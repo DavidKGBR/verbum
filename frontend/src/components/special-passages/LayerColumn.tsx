@@ -5,10 +5,11 @@
  * Português / Inglês: exibe texto completo por verso.
  */
 
+import { Link } from "react-router-dom";
 import AudioButton from "../common/AudioButton";
 import type { PassageLayer, PassageLayerKey, PassageWord } from "../../services/api";
 import type { BiblicalLanguage } from "../../hooks/useWordAudio";
-import { useI18n } from "../../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../../i18n/i18nContext";
 import { localized } from "../../i18n/localized";
 
 interface Props {
@@ -81,12 +82,27 @@ export default function LayerColumn({ layerKey, layer, onWordClick }: Props) {
 
       {/* Verses */}
       <div className="flex flex-col gap-5">
-        {layer.verses.map((verse) => (
+        {layer.verses.map((verse) => {
+          const parts = verse.verse_ref.split(".");
+          const readerTo = parts.length === 3
+            ? `/reader?book=${parts[0]}&chapter=${parts[1]}&verse=${parts[2]}&translation=${defaultTranslationFor(locale)}`
+            : null;
+          return (
           <div key={verse.verse_ref} className="flex flex-col gap-1.5">
-            {/* Verse number label */}
-            <span className="text-[11px] font-mono text-[var(--color-text-muted)]">
-              v.{verse.verse_number}
-            </span>
+            {/* Verse number label — clickable to Reader when verse_ref is structured */}
+            {readerTo ? (
+              <Link
+                to={readerTo}
+                className="self-start text-[11px] font-mono text-[var(--color-text-muted)] hover:text-[var(--color-gold-dark)] hover:underline"
+                title={verse.verse_ref}
+              >
+                v.{verse.verse_number}
+              </Link>
+            ) : (
+              <span className="text-[11px] font-mono text-[var(--color-text-muted)]">
+                v.{verse.verse_number}
+              </span>
+            )}
 
             {isWordLevel && verse.words ? (
               /* Word-by-word grid */
@@ -161,7 +177,8 @@ export default function LayerColumn({ layerKey, layer, onWordClick }: Props) {
               </p>
             )}
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

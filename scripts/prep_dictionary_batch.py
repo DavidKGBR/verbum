@@ -39,6 +39,13 @@ def main() -> None:
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--limit", type=int, default=300)
     parser.add_argument("--skip-translated", action="store_true", default=False)
+    parser.add_argument(
+        "--bucket",
+        choices=["short", "medium", "long", "all"],
+        default="all",
+        help="Size bucket by LENGTH(text_easton)+LENGTH(text_smith): "
+             "short <300, medium 300-2000, long >=2000",
+    )
     parser.add_argument("--out", default=None, help="Output TSV path (default: stdout)")
     parser.add_argument("--db", default=str(DB_DEFAULT))
     args = parser.parse_args()
@@ -50,16 +57,26 @@ def main() -> None:
 
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
-        skip_clause = ""
-        params: list = [args.limit, args.offset]
+        where_clauses: list[str] = []
+        params: list = []
 
         if args.skip_translated:
-            skip_clause = """
-                WHERE d.slug NOT IN (
-                    SELECT slug FROM dictionary_entries_multilang WHERE lang = ?
-                )
-            """
-            params = [args.lang, args.limit, args.offset]
+            where_clauses.append(
+                "d.slug NOT IN (SELECT slug FROM dictionary_entries_multilang WHERE lang = ?)"
+            )
+            params.append(args.lang)
+
+        if args.bucket != "all":
+            size_expr = "LENGTH(COALESCE(d.text_easton,'')) + LENGTH(COALESCE(d.text_smith,''))"
+            if args.bucket == "short":
+                where_clauses.append(f"{size_expr} < 300")
+            elif args.bucket == "medium":
+                where_clauses.append(f"{size_expr} >= 300 AND {size_expr} < 2000")
+            elif args.bucket == "long":
+                where_clauses.append(f"{size_expr} >= 2000")
+
+        where_sql = ("WHERE " + " AND ".join(where_clauses)) if where_clauses else ""
+        params.extend([args.limit, args.offset])
 
         rows = conn.execute(
             f"""
@@ -67,7 +84,7 @@ def main() -> None:
                    d.text_easton AS text_easton_en,
                    d.text_smith  AS text_smith_en
             FROM dictionary_entries d
-            {skip_clause}
+            {where_sql}
             ORDER BY LOWER(d.slug)
             LIMIT ? OFFSET ?
             """,

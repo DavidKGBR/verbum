@@ -1058,6 +1058,31 @@ class DuckDBLoader:
             "CREATE INDEX IF NOT EXISTS idx_topic_verses_verse ON topic_verses(verse_id);"
         )
 
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS topics_multilang (
+                topic_id        VARCHAR NOT NULL,
+                lang            VARCHAR NOT NULL,
+                name            VARCHAR NOT NULL,
+                confidence      REAL,
+                notes           VARCHAR,
+                labeled_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (topic_id, lang)
+            );
+        """)
+
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS verses_sentiment_multilang (
+                verse_id        VARCHAR NOT NULL,
+                lang            VARCHAR NOT NULL,
+                polarity        DOUBLE NOT NULL,
+                label           VARCHAR NOT NULL,
+                confidence      REAL,
+                notes           VARCHAR,
+                labeled_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (verse_id, lang)
+            );
+        """)
+
     def load_topics(self, df: pd.DataFrame) -> int:
         """Replace all topics rows."""
         if df.empty:

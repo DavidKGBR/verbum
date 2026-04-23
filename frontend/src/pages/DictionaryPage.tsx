@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { searchDictionary, type DictEntry } from "../services/api";
 import { useI18n, type Locale } from "../i18n/i18nContext";
 import { PERSONS } from "../i18n/personNames";
+import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 import { PLACES } from "../i18n/placeNames";
 
 /**
@@ -42,6 +43,7 @@ export default function DictionaryPage() {
   const [results, setResults] = useState<DictEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const registerCardRef = useScrollToExpanded(expanded);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -58,10 +60,10 @@ export default function DictionaryPage() {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       setLoading(true);
-      const canonicalQuery = toCanonicalEnglishQuery(query, locale);
-      // Pass the active locale so the backend overlays translated previews
-      // from dictionary_entries_multilang when available.
       const lang = locale !== "en" ? locale : undefined;
+      const canonicalQuery = lang
+        ? toCanonicalEnglishQuery(query, locale)
+        : query;
       searchDictionary(canonicalQuery, 100, lang)
         .then((d) => setResults(d.results))
         .catch(() => setResults([]))
@@ -104,7 +106,12 @@ export default function DictionaryPage() {
         <div className="rounded-lg border border-dashed border-[var(--color-gold-dark)]/30 p-8 text-center">
           <p className="opacity-60 mb-3">{t("dictionary.typeHint")}</p>
           <div className="flex flex-wrap justify-center gap-2">
-            {["Jerusalem", "David", "Sabbath", "Passover", "Tabernacle", "Covenant"].map(
+            {(locale === "pt"
+              ? ["Jerusalém", "Davi", "Sábado", "Páscoa", "Tabernáculo", "Aliança"]
+              : locale === "es"
+                ? ["Jerusalén", "David", "Sábado", "Pascua", "Tabernáculo", "Pacto"]
+                : ["Jerusalem", "David", "Sabbath", "Passover", "Tabernacle", "Covenant"]
+            ).map(
               (w) => (
                 <button
                   key={w}
@@ -127,6 +134,7 @@ export default function DictionaryPage() {
           return (
             <div
               key={entry.slug}
+              ref={registerCardRef(entry.slug)}
               className="rounded-lg border border-[var(--color-gold-dark)]/15 bg-white overflow-hidden"
             >
               <button
@@ -169,14 +177,6 @@ export default function DictionaryPage() {
 
               {isOpen && (
                 <div className="px-4 pb-4 space-y-4 border-t border-[var(--color-gold-dark)]/10">
-                  {/* Per-entry "original English · translation in progress" notice
-                      — only shown when a locale translation was requested but the
-                      multilang table had no row (or an empty row) for this slug.  */}
-                  {locale !== "en" && entry.is_translated === false && (
-                    <p className="text-[10px] italic opacity-50 mt-3">
-                      {t("dictionary.refinementInProgress")}
-                    </p>
-                  )}
                   {entry.text_easton && (
                     <div className="mt-3">
                       <h4 className="text-[10px] uppercase tracking-wider font-bold text-[var(--color-gold-dark)] opacity-60 mb-1">

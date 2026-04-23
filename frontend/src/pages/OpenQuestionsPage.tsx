@@ -7,8 +7,10 @@ import {
   type OpenQuestionDetail,
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
+import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 import { localized } from "../i18n/localized";
+import { localizeBookName } from "../i18n/bookNames";
 
 /** Turn "Textual Criticism" into "textual_criticism" for i18n key lookup. */
 const slug = (s: string) => s.toLowerCase().replace(/\s+/g, "_");
@@ -20,6 +22,7 @@ export default function OpenQuestionsPage() {
   const [catFilter, setCatFilter] = useState("");
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const registerCardRef = useScrollToExpanded(expanded);
   const [detail, setDetail] = useState<OpenQuestionDetail | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
 
@@ -89,6 +92,7 @@ export default function OpenQuestionsPage() {
           {questions.map((q) => (
             <div
               key={q.id}
+              ref={registerCardRef(q.id)}
               className="rounded-lg border border-[var(--color-gold)]/15 bg-white overflow-hidden"
             >
               <button
@@ -148,13 +152,17 @@ export default function OpenQuestionsPage() {
                         <div className="flex flex-wrap gap-1.5">
                           {detail.verse_refs.map((v) => {
                             const parts = v.split(".");
+                            const label =
+                              parts.length === 3
+                                ? `${localizeBookName(parts[0], locale, parts[0])} ${parts[1]}:${parts[2]}`
+                                : v;
                             return (
                               <Link
                                 key={v}
-                                to={`/reader?book=${parts[0]}&chapter=${parts[1]}&verse=${parts[2]}&translation=kjv`}
+                                to={`/reader?book=${parts[0]}&chapter=${parts[1]}&verse=${parts[2]}&translation=${defaultTranslationFor(locale)}`}
                                 className="text-[10px] px-2 py-1 rounded bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] hover:bg-[var(--color-gold)]/20 transition"
                               >
-                                {v}
+                                {label}
                               </Link>
                             );
                           })}

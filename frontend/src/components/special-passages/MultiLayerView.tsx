@@ -95,6 +95,13 @@ export default function MultiLayerView({ passage, onWordClick }: Props) {
         {availableLayers.map((key) => {
           const isActive = visibleLayers.has(key);
           const styles = LAYER_PILL[key];
+          // For the vernacular slot, prefer the backend-provided label so Spanish
+          // (RVR) vs Portuguese (NVI/RA/ACF) is reflected correctly in the pill.
+          const layer = passage.layers[key];
+          const pillLabel =
+            key === "portuguese" && layer?.language_code === "es"
+              ? t("specialPassage.layer.spanish")
+              : t(PILL_LABEL_KEYS[key]);
           return (
             <button
               key={key}
@@ -106,7 +113,7 @@ export default function MultiLayerView({ passage, onWordClick }: Props) {
               ].join(" ")}
             >
               <span className={["w-2 h-2 rounded-full", styles.dot].join(" ")} />
-              {t(PILL_LABEL_KEYS[key])}
+              {pillLabel}
             </button>
           );
         })}

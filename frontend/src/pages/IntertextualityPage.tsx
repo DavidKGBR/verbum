@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   fetchCitationHeatmap,
@@ -9,7 +9,8 @@ import {
   type QuotationEdge,
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
+import { localizeBookName, localizeBookAbbrev } from "../i18n/bookNames";
 
 type Tab = "heatmap" | "graph";
 
@@ -47,7 +48,7 @@ export default function IntertextualityPage() {
 }
 
 function HeatmapTab() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [cells, setCells] = useState<HeatmapCell[]>([]);
   const [otBooks, setOtBooks] = useState<string[]>([]);
   const [ntBooks, setNtBooks] = useState<string[]>([]);
@@ -67,20 +68,28 @@ function HeatmapTab() {
       .finally(() => setLoading(false));
   }, []);
 
+  // Memoize lookup + max + visible axes so filter changes shrink the matrix.
+  const { lookup, maxCount, visibleOt, visibleNt } = useMemo(() => {
+    const lookupMap: Record<string, number> = {};
+    cells.forEach((c) => {
+      lookupMap[`${c.source}-${c.target}`] = c.count;
+    });
+    const max = Math.max(...cells.map((c) => c.count), 1);
+    const vOt = otBooks.filter((ot) =>
+      ntBooks.some((nt) => (lookupMap[`${ot}-${nt}`] || 0) >= minRefs),
+    );
+    const vNt = ntBooks.filter((nt) =>
+      otBooks.some((ot) => (lookupMap[`${ot}-${nt}`] || 0) >= minRefs),
+    );
+    return { lookup: lookupMap, maxCount: max, visibleOt: vOt, visibleNt: vNt };
+  }, [cells, otBooks, ntBooks, minRefs]);
+
   if (loading) return <LoadingSpinner text={t("intertextuality.heatmap.loading")} />;
-
-  const maxCount = Math.max(...cells.map((c) => c.count), 1);
-
-  // Build lookup
-  const lookup: Record<string, number> = {};
-  cells.forEach((c) => {
-    lookup[`${c.source}-${c.target}`] = c.count;
-  });
 
   return (
     <div>
       {/* Filter + hint row */}
-      <div className="flex flex-wrap items-center gap-4 mb-4 text-xs">
+      <div className="flex flex-wrap items-center gap-4 mb-3 text-xs">
         <label className="flex items-center gap-2">
           <span className="opacity-60">{t("intertextuality.heatmap.minRefs")}:</span>
           <input
@@ -96,77 +105,103 @@ function HeatmapTab() {
         <span className="opacity-40 italic">{t("intertextuality.heatmap.clickHint")}</span>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="text-[10px] border-collapse">
-          <thead>
-            <tr>
-              {/* Corner cell — same height as rotated headers, diagonal divider for clarity */}
-              <th
-                className="sticky left-0 top-0 bg-white z-20 h-16 align-bottom p-1 whitespace-nowrap
-                           border-b border-[var(--color-gold-dark)]/10"
-              >
-                <div className="flex justify-between items-end h-full">
-                  <span className="text-[9px] opacity-60">
-                    {t("intertextuality.heatmap.otAxis")}
-                  </span>
-                  <span className="text-[9px] opacity-60 self-start">
-                    {t("intertextuality.heatmap.ntAxis")}
-                  </span>
-                </div>
-              </th>
-              {ntBooks.map((nt) => (
-                <th
-                  key={nt}
-                  className="p-1 font-normal -rotate-45 origin-bottom-left h-16 whitespace-nowrap"
-                >
-                  {nt}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {otBooks.map((ot) => (
-              <tr key={ot}>
-                <td className="p-1 font-medium sticky left-0 bg-white z-10 whitespace-nowrap">
-                  {ot}
-                </td>
-                {ntBooks.map((nt) => {
-                  const count = lookup[`${ot}-${nt}`] || 0;
-                  const intensity = count > 0 ? Math.max(0.1, count / maxCount) : 0;
-                  const passesFilter = count >= minRefs;
-                  const visible = count > 0 && passesFilter;
-                  return (
-                    <td
-                      key={nt}
-                      className={`p-0 w-5 h-5 ${
-                        visible ? "cursor-pointer hover:outline hover:outline-2 hover:outline-[var(--color-gold)]" : ""
-                      }`}
-                      title={
-                        count > 0
-                          ? t("intertextuality.heatmap.tooltip")
-                              .replace("{ot}", ot)
-                              .replace("{nt}", nt)
-                              .replace("{count}", String(count))
-                          : ""
-                      }
-                      onClick={visible ? () => setSelectedPair({ ot, nt }) : undefined}
-                    >
-                      {visible && (
-                        <div
-                          className="w-full h-full"
-                          style={{
-                            backgroundColor: `rgba(196, 162, 101, ${intensity})`,
-                          }}
-                        />
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Intensity legend */}
+      <div className="flex items-center gap-2 mb-4 text-[10px] opacity-60">
+        <span>{t("intertextuality.heatmap.legend")}</span>
+        <div className="flex items-center gap-0.5">
+          {[0.15, 0.35, 0.6, 0.85, 1.0].map((o) => (
+            <span
+              key={o}
+              className="w-3.5 h-3.5 inline-block"
+              style={{ backgroundColor: `rgba(196, 162, 101, ${o})` }}
+            />
+          ))}
+        </div>
+        <span className="tabular-nums">1 – {maxCount}</span>
       </div>
+
+      {visibleOt.length === 0 || visibleNt.length === 0 ? (
+        <p className="text-sm italic opacity-50">
+          {t("intertextuality.heatmap.noMatches")}
+        </p>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="text-[10px] border-collapse">
+            <thead>
+              <tr>
+                <th
+                  className="sticky left-0 top-0 bg-white z-20 h-11 align-bottom p-1
+                             border-b border-[var(--color-gold-dark)]/10"
+                >
+                  <div className="relative w-full h-full overflow-hidden">
+                    <span className="absolute bottom-0 left-0.5 text-[9px] opacity-60 leading-none">
+                      {t("intertextuality.heatmap.ntAxis")}
+                    </span>
+                    <span className="absolute top-0 right-0.5 text-[9px] opacity-60 leading-none">
+                      {t("intertextuality.heatmap.otAxis")}
+                    </span>
+                  </div>
+                </th>
+                {visibleOt.map((ot) => (
+                  <th
+                    key={ot}
+                    title={localizeBookName(ot, locale, ot)}
+                    className="p-0.5 font-normal -rotate-45 origin-bottom-left h-11 whitespace-nowrap cursor-help"
+                  >
+                    {localizeBookAbbrev(ot, locale).toUpperCase()}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {visibleNt.map((nt) => (
+                <tr key={nt}>
+                  <td
+                    title={localizeBookName(nt, locale, nt)}
+                    className="px-1 py-0 font-medium sticky left-0 bg-white z-10 whitespace-nowrap cursor-help"
+                  >
+                    {localizeBookAbbrev(nt, locale).toUpperCase()}
+                  </td>
+                  {visibleOt.map((ot) => {
+                    const count = lookup[`${ot}-${nt}`] || 0;
+                    const intensity = count > 0 ? Math.max(0.1, count / maxCount) : 0;
+                    const passesFilter = count >= minRefs;
+                    const visible = count > 0 && passesFilter;
+                    return (
+                      <td
+                        key={ot}
+                        className={`p-0 w-3.5 h-3.5 ${
+                          visible
+                            ? "cursor-pointer hover:outline hover:outline-2 hover:outline-[var(--color-gold)]"
+                            : ""
+                        }`}
+                        title={
+                          count > 0
+                            ? t("intertextuality.heatmap.tooltip")
+                                .replace("{ot}", localizeBookName(ot, locale, ot))
+                                .replace("{nt}", localizeBookName(nt, locale, nt))
+                                .replace("{count}", String(count))
+                            : ""
+                        }
+                        onClick={visible ? () => setSelectedPair({ ot, nt }) : undefined}
+                      >
+                        {visible && (
+                          <div
+                            className="w-full h-full"
+                            style={{
+                              backgroundColor: `rgba(196, 162, 101, ${intensity})`,
+                            }}
+                          />
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
 
       {selectedPair && (
         <CrossRefPanel
@@ -190,19 +225,27 @@ interface CrossRefPanelProps {
 }
 
 function CrossRefPanel({ sourceBook, targetBook, totalCount, onClose }: CrossRefPanelProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [refs, setRefs] = useState<DetailedCrossRef[]>([]);
   const [loading, setLoading] = useState(true);
   const LIMIT = 50;
 
+  // Build a localized "Book ch:vs" ref from a verse_id like "GEN.1.1".
+  const localizeRef = (verseId: string, fallback?: string | null): string => {
+    const parts = verseId.split(".");
+    if (parts.length !== 3) return fallback ?? verseId;
+    const [bookId, ch, vs] = parts;
+    return `${localizeBookName(bookId, locale, bookId)} ${ch}:${vs}`;
+  };
+
   useEffect(() => {
     setLoading(true);
     setRefs([]);
-    fetchCrossrefsBetween(sourceBook, targetBook, LIMIT)
+    fetchCrossrefsBetween(sourceBook, targetBook, LIMIT, defaultTranslationFor(locale))
       .then((d) => setRefs(d.crossrefs))
       .catch(() => setRefs([]))
       .finally(() => setLoading(false));
-  }, [sourceBook, targetBook]);
+  }, [sourceBook, targetBook, locale]);
 
   return (
     <div
@@ -216,9 +259,13 @@ function CrossRefPanel({ sourceBook, targetBook, totalCount, onClose }: CrossRef
             {t("intertextuality.panel.title")}
           </span>
           <h2 className="text-2xl font-display mt-1">
-            <span className="text-amber-800">{sourceBook}</span>
+            <span className="text-amber-800" title={sourceBook}>
+              {localizeBookName(sourceBook, locale, sourceBook)}
+            </span>
             <span className="opacity-30 mx-2">→</span>
-            <span className="text-blue-800">{targetBook}</span>
+            <span className="text-blue-800" title={targetBook}>
+              {localizeBookName(targetBook, locale, targetBook)}
+            </span>
           </h2>
           <p className="text-[11px] opacity-50 mt-1">
             {t("intertextuality.panel.showing")
@@ -254,14 +301,14 @@ function CrossRefPanel({ sourceBook, targetBook, totalCount, onClose }: CrossRef
                   to={`/reader?book=${r.source_verse_id.split(".")[0]}&chapter=${r.source_verse_id.split(".")[1]}&verse=${r.source_verse_id.split(".")[2]}`}
                   className="text-xs font-sans font-bold text-amber-800 hover:underline"
                 >
-                  {r.source_ref ?? r.source_verse_id}
+                  {localizeRef(r.source_verse_id, r.source_ref)}
                 </Link>
                 <span className="opacity-30 text-xs">→</span>
                 <Link
                   to={`/reader?book=${r.target_verse_id.split(".")[0]}&chapter=${r.target_verse_id.split(".")[1]}&verse=${r.target_verse_id.split(".")[2]}`}
                   className="text-xs font-sans font-bold text-blue-800 hover:underline"
                 >
-                  {r.target_ref ?? r.target_verse_id}
+                  {localizeRef(r.target_verse_id, r.target_ref)}
                 </Link>
               </div>
               {r.source_text && (
@@ -284,9 +331,14 @@ function CrossRefPanel({ sourceBook, targetBook, totalCount, onClose }: CrossRef
 }
 
 function GraphTab() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [edges, setEdges] = useState<QuotationEdge[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedPair, setSelectedPair] = useState<{
+    source: string;
+    target: string;
+    count: number;
+  } | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -312,24 +364,36 @@ function GraphTab() {
 
   const sorted = Object.values(pairs).sort((a, b) => b.count - a.count);
   const maxCount = sorted[0]?.count || 1;
+  const topN = 50;
+  const shown = Math.min(topN, sorted.length);
 
   return (
     <div>
-      <p className="text-xs opacity-50 mb-4">
+      <p className="text-xs opacity-50 mb-2">
         {t("intertextuality.graph.summary").replace("{total}", String(edges.length))}
       </p>
+      <p className="text-xs opacity-50 mb-4">
+        {t("intertextuality.graph.showing")
+          .replace("{shown}", String(shown))
+          .replace("{total}", String(sorted.length))}
+      </p>
       <div className="space-y-1.5">
-        {sorted.slice(0, 50).map((p) => (
-          <div
+        {sorted.slice(0, topN).map((p) => (
+          <button
             key={`${p.source}-${p.target}`}
-            className="flex items-center gap-3 text-sm"
+            type="button"
+            onClick={() =>
+              setSelectedPair({ source: p.source, target: p.target, count: p.count })
+            }
+            title={`${localizeBookName(p.source, locale, p.source)} → ${localizeBookName(p.target, locale, p.target)}`}
+            className="w-full flex items-center gap-3 text-sm hover:bg-black/[0.02] rounded px-1 -mx-1 transition"
           >
             <span className="w-12 text-right text-xs font-mono opacity-70 text-amber-800">
-              {p.source}
+              {localizeBookAbbrev(p.source, locale).toUpperCase()}
             </span>
             <span className="text-xs opacity-30">→</span>
             <span className="w-12 text-xs font-mono opacity-70 text-blue-800">
-              {p.target}
+              {localizeBookAbbrev(p.target, locale).toUpperCase()}
             </span>
             <div className="flex-1 h-4 bg-black/5 rounded overflow-hidden">
               <div
@@ -340,12 +404,19 @@ function GraphTab() {
                 }}
               />
             </div>
-            <span className="text-xs tabular-nums opacity-50 w-10 text-right">
-              {p.count}
-            </span>
-          </div>
+            <span className="text-xs tabular-nums opacity-50 w-10 text-right">{p.count}</span>
+          </button>
         ))}
       </div>
+
+      {selectedPair && (
+        <CrossRefPanel
+          sourceBook={selectedPair.source}
+          targetBook={selectedPair.target}
+          totalCount={selectedPair.count}
+          onClose={() => setSelectedPair(null)}
+        />
+      )}
     </div>
   );
 }

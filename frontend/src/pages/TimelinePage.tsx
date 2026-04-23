@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { useScrollIntoViewOnChange } from "../hooks/useScrollIntoViewOnChange";
 import {
   fetchCombinedTimeline,
   type CombinedTimeline,
   type TimelineEvent,
   type TimelineEra,
 } from "../services/api";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, type Locale } from "../i18n/i18nContext";
 import { personName } from "../i18n/personNames";
 import { placeName } from "../i18n/placeNames";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
@@ -32,9 +34,11 @@ function EraBar({
   return (
     <div className="relative h-6 rounded-full overflow-hidden bg-gray-100 mb-6">
       {eras.map((era) => {
-        const left = Math.max(0, ((era.start - yearMin) / span) * 100);
-        const width = Math.min(100 - left, ((era.end - era.start) / span) * 100);
-        if (width <= 0) return null;
+        const visibleStart = Math.max(era.start, yearMin);
+        const visibleEnd = Math.min(era.end, yearMax);
+        if (visibleEnd <= visibleStart) return null;
+        const left = ((visibleStart - yearMin) / span) * 100;
+        const width = ((visibleEnd - visibleStart) / span) * 100;
         const label = eraName(era.id, locale, era.name);
         return (
           <div
@@ -95,6 +99,31 @@ function EventDot({
   );
 }
 
+function resolveParticipant(p: string | { slug: string; name: string }, locale: Locale) {
+  if (typeof p === "string") {
+    return { slug: p, display: personName(p, locale) };
+  }
+  return { slug: p.slug, display: personName(p.slug, locale, p.name) };
+}
+
+function localizeCategory(category: string | null | undefined, t: (k: string) => string): string {
+  if (!category) return "";
+  const key = `timeline.category.${category}`;
+  const val = t(key);
+  return val !== key ? val : category;
+}
+
+// Map secular event categories to place slugs that exist in biblical_places
+const CATEGORY_TO_PLACE: Record<string, string> = {
+  Rome: "rome_1013",
+  Egypt: "egypt_362",
+  Babylon: "babylon_151",
+  Persia: "persia_938",
+  Greece: "greece_495",
+  Assyria: "assyria_111",
+  Judea: "judea_657",
+};
+
 export default function TimelinePage() {
   const { t, locale } = useI18n();
   const [data, setData] = useState<CombinedTimeline | null>(null);
@@ -103,14 +132,16 @@ export default function TimelinePage() {
   const [showBiblical, setShowBiblical] = useState(true);
   const [showSecular, setShowSecular] = useState(true);
   const [yearRange, setYearRange] = useState<[number, number]>([-2200, 100]);
+  const detailRef = useRef<HTMLDivElement>(null);
+  useScrollIntoViewOnChange(detailRef, selectedEvent?.id);
 
   useEffect(() => {
     setLoading(true);
-    fetchCombinedTimeline(yearRange[0], yearRange[1])
+    fetchCombinedTimeline(yearRange[0], yearRange[1], locale)
       .then(setData)
       .catch(() => setData(null))
       .finally(() => setLoading(false));
-  }, [yearRange]);
+  }, [yearRange, locale]);
 
   const allEvents: TimelineEvent[] = [];
   if (data) {
@@ -233,7 +264,7 @@ export default function TimelinePage() {
 
           {/* Selected event detail */}
           {selectedEvent && (
-            <div className="rounded-lg border border-[var(--color-gold-dark)]/15 bg-white p-4 mb-4">
+            <div ref={detailRef} className="rounded-lg border border-[var(--color-gold-dark)]/15 bg-white p-4 mb-4">
               <div className="flex items-start justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
@@ -242,15 +273,35 @@ export default function TimelinePage() {
                         ? eventTitle(selectedEvent.id, selectedEvent.title, locale)
                         : selectedEvent.title}
                     </h3>
-                    <span className={`text-[9px] px-1.5 py-0.5 rounded ${
-                      selectedEvent.type === "biblical"
-                        ? "bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)]"
-                        : "bg-gray-100 text-gray-600"
-                    }`}>
-                      {selectedEvent.type === "biblical"
+                    {(() => {
+                      const catSlug = selectedEvent.type === "secular" && selectedEvent.category
+                        ? CATEGORY_TO_PLACE[selectedEvent.category]
+                        : null;
+                      const badgeClass = `text-[9px] px-1.5 py-0.5 rounded ${
+                        selectedEvent.type === "biblical"
+                          ? "bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)]"
+                          : "bg-gray-100 text-gray-600"
+                      }`;
+                      const content = selectedEvent.type === "biblical"
                         ? eraName(selectedEvent.era, locale, selectedEvent.era ?? "")
-                        : selectedEvent.category}
-                    </span>
+                        : localizeCategory(selectedEvent.category, t);
+                      if (catSlug) {
+                        return (
+                          <Link
+                            to={`/map?place=${encodeURIComponent(catSlug)}`}
+                            className={`${badgeClass} hover:bg-blue-100 hover:text-blue-700 transition inline-flex items-center gap-1`}
+                            title={t("timeline.viewOnMap")}
+                          >
+                            {content}
+                            <svg className="w-2.5 h-2.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                          </Link>
+                        );
+                      }
+                      return <span className={badgeClass}>{content}</span>;
+                    })()}
                   </div>
                   <p className="text-sm opacity-60">{yearLabel(selectedEvent.year, t)}</p>
                 </div>
@@ -268,24 +319,80 @@ export default function TimelinePage() {
                 </p>
               )}
 
+              {/* Participants — clickable links to /people */}
               {selectedEvent.participants && selectedEvent.participants.length > 0 && (
-                <div className="mt-2">
-                  <span className="text-[9px] uppercase tracking-wider opacity-50">{t("timeline.participants")} </span>
-                  <span className="text-xs">
-                    {selectedEvent.participants
-                      .map((slug) => personName(slug, locale))
-                      .join(", ")}
+                <div className="mt-3">
+                  <span className="text-[9px] uppercase tracking-wider opacity-50">
+                    {t("timeline.participants")}{" "}
+                  </span>
+                  <span className="text-xs flex flex-wrap gap-1.5 mt-1">
+                    {selectedEvent.participants.map((p) => {
+                      const { slug, display } = resolveParticipant(p, locale);
+                      return (
+                        <Link
+                          key={slug}
+                          to={`/people?highlight=${encodeURIComponent(slug)}`}
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] hover:bg-[var(--color-gold)]/20 transition"
+                          title={t("timeline.viewPerson")}
+                        >
+                          <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                          {display}
+                        </Link>
+                      );
+                    })}
                   </span>
                 </div>
               )}
 
+              {/* Locations — clickable links to /map */}
               {selectedEvent.locations && selectedEvent.locations.length > 0 && (
-                <div className="mt-1">
-                  <span className="text-[9px] uppercase tracking-wider opacity-50">{t("timeline.locations")} </span>
-                  <span className="text-xs">
-                    {selectedEvent.locations
-                      .map((slug) => placeName(slug, locale))
-                      .join(", ")}
+                <div className="mt-2">
+                  <span className="text-[9px] uppercase tracking-wider opacity-50">
+                    {t("timeline.locations")}{" "}
+                  </span>
+                  <span className="text-xs flex flex-wrap gap-1.5 mt-1">
+                    {selectedEvent.locations.map((slug) => {
+                      const display = placeName(slug, locale);
+                      return (
+                        <Link
+                          key={slug}
+                          to={`/map?place=${encodeURIComponent(slug)}`}
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 hover:bg-blue-100 transition"
+                          title={t("timeline.viewOnMap")}
+                        >
+                          <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          {display}
+                        </Link>
+                      );
+                    })}
+                  </span>
+                </div>
+              )}
+
+              {/* Verse references — clickable links to /reader */}
+              {selectedEvent.verse_refs && selectedEvent.verse_refs.length > 0 && (
+                <div className="mt-2">
+                  <span className="text-[9px] uppercase tracking-wider opacity-50">
+                    {t("timeline.verseRefs")}{" "}
+                  </span>
+                  <span className="text-xs flex flex-wrap gap-1.5 mt-1">
+                    {selectedEvent.verse_refs.map((ref) => (
+                      <Link
+                        key={ref}
+                        to={`/reader?ref=${encodeURIComponent(ref)}`}
+                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-700 hover:bg-green-100 transition"
+                      >
+                        <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        {ref}
+                      </Link>
+                    ))}
                   </span>
                 </div>
               )}
@@ -304,29 +411,58 @@ export default function TimelinePage() {
               {allEvents
                 .sort((a, b) => a.year - b.year)
                 .slice(0, 60)
-                .map((evt) => (
-                  <button
-                    key={evt.id}
-                    onClick={() => setSelectedEvent(evt)}
-                    className={`text-left p-2 rounded border transition text-xs ${
-                      selectedEvent?.id === evt.id
-                        ? "border-[var(--color-gold)] bg-[var(--color-gold)]/10"
-                        : "border-[var(--color-gold-dark)]/10 hover:bg-[var(--color-gold)]/5"
-                    }`}
-                  >
-                    <span className="font-medium">
-                      {evt.type === "biblical" ? eventTitle(evt.id, evt.title, locale) : evt.title}
-                    </span>
-                    <span className="opacity-40 ml-1">{yearLabel(evt.year, t)}</span>
-                    <span className={`ml-1 text-[8px] px-1 rounded ${
-                      evt.type === "biblical"
-                        ? "bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)]"
-                        : "bg-gray-100 text-gray-500"
-                    }`}>
-                      {evt.type === "biblical" ? t("timeline.typeBiblicalShort") : t("timeline.typeSecularShort")}
-                    </span>
-                  </button>
-                ))}
+                .map((evt) => {
+                  const partCount = evt.participants?.length ?? 0;
+                  const locCount = evt.locations?.length ?? 0;
+                  return (
+                    <button
+                      key={evt.id}
+                      onClick={() => setSelectedEvent(evt)}
+                      className={`text-left p-2 rounded border transition text-xs ${
+                        selectedEvent?.id === evt.id
+                          ? "border-[var(--color-gold)] bg-[var(--color-gold)]/10"
+                          : "border-[var(--color-gold-dark)]/10 hover:bg-[var(--color-gold)]/5"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-1">
+                        <div>
+                          <span className="font-medium">
+                            {evt.type === "biblical" ? eventTitle(evt.id, evt.title, locale) : evt.title}
+                          </span>
+                          <span className="opacity-40 ml-1">{yearLabel(evt.year, t)}</span>
+                        </div>
+                        <span className={`shrink-0 text-[8px] px-1 rounded ${
+                          evt.type === "biblical"
+                            ? "bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)]"
+                            : "bg-gray-100 text-gray-500"
+                        }`}>
+                          {evt.type === "biblical" ? t("timeline.typeBiblicalShort") : t("timeline.typeSecularShort")}
+                        </span>
+                      </div>
+                      {(partCount > 0 || locCount > 0) && (
+                        <div className="flex items-center gap-2 mt-1 opacity-40">
+                          {partCount > 0 && (
+                            <span className="flex items-center gap-0.5 text-[9px]">
+                              <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                              </svg>
+                              {partCount}
+                            </span>
+                          )}
+                          {locCount > 0 && (
+                            <span className="flex items-center gap-0.5 text-[9px]">
+                              <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                              {locCount}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
             </div>
           </div>
         </>

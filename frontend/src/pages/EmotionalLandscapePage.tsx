@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   fetchEmotionalLandscape,
   fetchEmotionalPeaks,
   fetchBookProfiles,
 } from "../services/api";
-import { useBooks, localizeBookName } from "../i18n/bookNames";
-import { useI18n } from "../i18n/i18nContext";
+import { useBooks, localizeBookName, localizeBookAbbrev } from "../i18n/bookNames";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
+import { SENTIMENT_COVERED_PT } from "../i18n/sentimentCoverage";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 
 interface SentimentPoint {
@@ -41,23 +43,26 @@ interface BookProfile {
 
 type Tab = "landscape" | "profiles";
 
+type Emotion = "positive" | "negative";
+
 export default function EmotionalLandscapePage() {
   const { t, locale } = useI18n();
+  const translation = defaultTranslationFor(locale);
   const [tab, setTab] = useState<Tab>("landscape");
-  const books = useBooks("kjv");
+  const books = useBooks(translation);
   const [selectedBook, setSelectedBook] = useState("PSA");
   const [series, setSeries] = useState<SentimentPoint[]>([]);
   const [peaks, setPeaks] = useState<PeakVerse[]>([]);
+  const [emotion, setEmotion] = useState<Emotion>("positive");
   const [profiles, setProfiles] = useState<BookProfile[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Load landscape data when book changes
   useEffect(() => {
     if (tab !== "landscape") return;
     setLoading(true);
     Promise.all([
-      fetchEmotionalLandscape(selectedBook),
-      fetchEmotionalPeaks(selectedBook, "positive", 10),
+      fetchEmotionalLandscape(selectedBook, translation),
+      fetchEmotionalPeaks(selectedBook, emotion, 10, translation),
     ])
       .then(([land, pk]) => {
         setSeries(land.series);
@@ -65,7 +70,7 @@ export default function EmotionalLandscapePage() {
       })
       .catch(() => {})
       .finally(() => setLoading(false));
-  }, [selectedBook, tab]);
+  }, [selectedBook, tab, emotion, translation]);
 
   // Load profiles
   useEffect(() => {
@@ -99,7 +104,7 @@ export default function EmotionalLandscapePage() {
                 : "bg-black/5 hover:bg-black/10"
             }`}
           >
-            {tb === "landscape" ? t("emotional.title") : t("emotional.profiles")}
+            {tb === "landscape" ? t("emotional.tab.landscape") : t("emotional.profiles")}
           </button>
         ))}
       </div>
@@ -121,15 +126,29 @@ export default function EmotionalLandscapePage() {
             </select>
           </div>
 
+          {/* Fallback indicator moved to inline info icon on the chart title (less noisy). */}
+
           {loading ? (
             <LoadingSpinner text={t("common.loading")} />
           ) : (
             <>
               {/* Sentiment terrain — SVG scales responsively regardless of verse count */}
               <div className="mb-8 rounded-lg border bg-white p-4 overflow-hidden">
-                <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40 mb-3">
-                  {t("emotional.sentimentFlow")} —{" "}
-                  {t("emotional.versesCount").replace("{n}", String(series.length))}
+                <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40 mb-3 flex items-center gap-2">
+                  <span>
+                    {t("emotional.sentimentFlow")} —{" "}
+                    {t("emotional.versesCount").replace("{n}", String(series.length))}
+                  </span>
+                  {locale !== "en" && !SENTIMENT_COVERED_PT.has(selectedBook) && (
+                    <span
+                      title={t("emotional.sentimentFallback")}
+                      className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-current opacity-50 cursor-help normal-case tracking-normal"
+                    >
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 8v5M12 17h.01" />
+                      </svg>
+                    </span>
+                  )}
                 </h3>
                 <svg
                   viewBox={`0 0 ${Math.max(series.length, 1)} 100`}
@@ -162,7 +181,9 @@ export default function EmotionalLandscapePage() {
                         fill={norm >= 0 ? "rgb(34, 197, 94)" : "rgb(239, 68, 68)"}
                         opacity={0.7}
                       >
-                        <title>{`${s.verse_id}: ${s.polarity.toFixed(3)} (${s.label})`}</title>
+                        <title>
+                          {`${localizeBookAbbrev(selectedBook, locale).toUpperCase()} ${s.chapter}:${s.verse} — ${s.polarity.toFixed(3)} (${t(`emotional.label.${s.label}`)})`}
+                        </title>
                       </rect>
                     );
                   })}
@@ -176,43 +197,78 @@ export default function EmotionalLandscapePage() {
                     )}
                   </span>
                 </div>
+                {series.length > 0 && series.every((s) => Math.abs(s.polarity) < 0.05) && (
+                  <p className="text-[11px] italic opacity-60 mt-3 text-center">
+                    {t("emotional.noVariation")}
+                  </p>
+                )}
               </div>
 
               {/* Peaks */}
-              {peaks.length > 0 && (
-                <div className="mb-8">
-                  <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40 mb-3">
-                    {t("emotional.peaks")} — {t("emotional.peaks.mostPositive")}
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40">
+                    {t("emotional.peaks")} —{" "}
+                    {emotion === "positive"
+                      ? t("emotional.peaks.mostPositive")
+                      : t("emotional.peaks.mostNegative")}
                   </h3>
-                  <div className="space-y-2">
-                    {peaks.map((p) => (
-                      <div
-                        key={p.verse_id}
-                        className="flex items-start gap-3 p-3 rounded-lg border bg-white"
+                  <div className="flex gap-1">
+                    {(["positive", "negative"] as Emotion[]).map((em) => (
+                      <button
+                        key={em}
+                        onClick={() => setEmotion(em)}
+                        className={`px-2 py-0.5 rounded text-[10px] font-medium transition ${
+                          emotion === em
+                            ? em === "positive"
+                              ? "bg-green-500/20 text-green-700"
+                              : "bg-red-500/20 text-red-700"
+                            : "bg-black/5 hover:bg-black/10 opacity-50"
+                        }`}
                       >
-                        <span
-                          className="text-xs font-mono font-bold shrink-0 w-16 text-right"
-                          style={{
-                            color:
-                              p.polarity >= 0
-                                ? "rgb(34, 197, 94)"
-                                : "rgb(239, 68, 68)",
-                          }}
-                        >
-                          {p.polarity > 0 ? "+" : ""}
-                          {p.polarity.toFixed(3)}
-                        </span>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-bold">{p.reference}</div>
-                          <div className="text-xs opacity-60 mt-0.5 line-clamp-2">
-                            {p.text}
-                          </div>
-                        </div>
-                      </div>
+                        {em === "positive"
+                          ? t("emotional.peaks.mostPositive")
+                          : t("emotional.peaks.mostNegative")}
+                      </button>
                     ))}
                   </div>
                 </div>
-              )}
+                {peaks.length > 0 && (
+                  <div className="space-y-2">
+                    {peaks.map((p) => {
+                      const bookId = p.verse_id.split(".")[0] ?? selectedBook;
+                      const localizedRef = `${localizeBookName(bookId, locale, bookId)} ${p.chapter}:${p.verse}`;
+                      return (
+                        <Link
+                          key={p.verse_id}
+                          to={`/reader?book=${bookId}&chapter=${p.chapter}&verse=${p.verse}&translation=${translation}`}
+                          title={t("emotional.viewInReader")}
+                          className="flex items-start gap-3 p-3 rounded-lg border bg-white hover:border-[var(--color-gold)]/40 hover:bg-[var(--color-gold)]/5 transition"
+                        >
+                          <span
+                            className="text-xs font-mono font-bold shrink-0 w-16 text-right"
+                            style={{
+                              color:
+                                p.polarity >= 0
+                                  ? "rgb(34, 197, 94)"
+                                  : "rgb(239, 68, 68)",
+                            }}
+                          >
+                            {p.polarity > 0 ? "+" : ""}
+                            {p.polarity.toFixed(3)}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-bold">{localizedRef}</div>
+                            <div className="text-xs opacity-60 mt-0.5 line-clamp-2">
+                              {p.text}
+                            </div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </>
           )}
         </>

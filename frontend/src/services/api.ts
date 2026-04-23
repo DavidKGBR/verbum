@@ -129,11 +129,12 @@ export interface VocabRichnessBook {
 }
 
 export async function fetchHapax(
-  params?: { book?: string; language?: string; limit?: number }
+  params?: { book?: string; language?: string; translation?: string; limit?: number }
 ): Promise<HapaxResult[]> {
   const sp = new URLSearchParams();
   if (params?.book) sp.set("book", params.book);
   if (params?.language) sp.set("language", params.language);
+  if (params?.translation) sp.set("translation", params.translation);
   if (params?.limit) sp.set("limit", String(params.limit));
   const qs = sp.toString();
   const data = await fetchJson<{ results: HapaxResult[] }>(
@@ -147,6 +148,21 @@ export async function fetchVocabularyRichness(): Promise<VocabRichnessBook[]> {
     `${BASE}/analytics/vocabulary-richness`
   );
   return data.books;
+}
+
+export interface ChapterDensity {
+  chapter: number;
+  unique_words: number;
+  total_words: number;
+  verse_count: number;
+  density: number;
+}
+
+export async function fetchVocabularyDensity(book: string): Promise<ChapterDensity[]> {
+  const data = await fetchJson<{ chapters: ChapterDensity[] }>(
+    `${BASE}/analytics/density?book=${encodeURIComponent(book)}`
+  );
+  return data.chapters;
 }
 
 // ── Intertextuality ────────────────────────────────────────────────────────
@@ -261,8 +277,9 @@ export async function fetchThreads(
   return data.threads;
 }
 
-export async function fetchThread(id: string): Promise<ThreadDetail> {
-  return fetchJson(`${BASE}/threads/${id}`);
+export async function fetchThread(id: string, translation?: string): Promise<ThreadDetail> {
+  const qs = translation ? `?translation=${encodeURIComponent(translation)}` : "";
+  return fetchJson(`${BASE}/threads/${id}${qs}`);
 }
 
 // ── Literary Structure ─────────────────────────────────────────────────────
@@ -424,12 +441,13 @@ export interface TopicDetail extends Topic {
 }
 
 export async function fetchTopics(
-  params?: { q?: string; limit?: number; offset?: number }
+  params?: { q?: string; limit?: number; offset?: number; lang?: string }
 ): Promise<{ total: number; results: Topic[] }> {
   const sp = new URLSearchParams();
   if (params?.q) sp.set("q", params.q);
   if (params?.limit) sp.set("limit", String(params.limit));
   if (params?.offset) sp.set("offset", String(params.offset));
+  if (params?.lang && params.lang !== "en") sp.set("lang", params.lang);
   const qs = sp.toString();
   return fetchJson(`${BASE}/topics${qs ? `?${qs}` : ""}`);
 }
@@ -438,8 +456,25 @@ export async function fetchPopularTopics(limit = 20): Promise<{ results: Topic[]
   return fetchJson(`${BASE}/topics/popular?limit=${limit}`);
 }
 
-export async function fetchTopic(slug: string, translation = "kjv"): Promise<TopicDetail> {
-  return fetchJson(`${BASE}/topics/${slug}?translation=${translation}`);
+export async function fetchTopic(
+  slug: string,
+  translation = "kjv",
+  limit = 50,
+): Promise<TopicDetail> {
+  return fetchJson(`${BASE}/topics/${slug}?translation=${translation}&limit=${limit}`);
+}
+
+export interface TopicRelated {
+  person: { slug: string; name: string } | null;
+  place: { slug: string; name: string } | null;
+  related_topics: { slug: string; name: string; shared_verses: number }[];
+}
+
+export async function fetchTopicRelated(slug: string, lang?: string): Promise<TopicRelated> {
+  const sp = new URLSearchParams();
+  if (lang && lang !== "en") sp.set("lang", lang);
+  const qs = sp.toString();
+  return fetchJson(`${BASE}/topics/${slug}/related${qs ? `?${qs}` : ""}`);
 }
 
 // ── Compare ─────────────────────────────────────────────────────────────────
@@ -451,6 +486,7 @@ export interface ComparePreset {
   title_es?: string;
   passage_count: number;
   labels: string[];
+  passages: { label: string; range: string }[];
 }
 
 export interface CompareVerse {
@@ -518,8 +554,9 @@ export interface TimelineEvent {
   category?: string | null;
   description?: string | null;
   type: "biblical" | "secular";
-  participants?: string[];
+  participants?: (string | { slug: string; name: string })[];
   locations?: string[];
+  verse_refs?: string[];
 }
 
 export interface CombinedTimeline {
@@ -532,11 +569,15 @@ export interface CombinedTimeline {
 
 export async function fetchCombinedTimeline(
   yearMin = -2200,
-  yearMax = 100
+  yearMax = 100,
+  lang?: string
 ): Promise<CombinedTimeline> {
-  return fetchJson<CombinedTimeline>(
-    `${BASE}/timeline/combined?year_min=${yearMin}&year_max=${yearMax}`
-  );
+  const params = new URLSearchParams({
+    year_min: String(yearMin),
+    year_max: String(yearMax),
+  });
+  if (lang && lang !== "en") params.set("lang", lang);
+  return fetchJson<CombinedTimeline>(`${BASE}/timeline/combined?${params}`);
 }
 
 // ── Places ──────────────────────────────────────────────────────────────────
@@ -961,9 +1002,20 @@ export interface VerseCrossRef {
   reference_type: string;
 }
 
-export function fetchCrossrefsBetween(sourceBook: string, targetBook: string, limit = 50) {
+export function fetchCrossrefsBetween(
+  sourceBook: string,
+  targetBook: string,
+  limit = 50,
+  translation?: string,
+) {
+  const sp = new URLSearchParams({
+    source_book: sourceBook,
+    target_book: targetBook,
+    limit: String(limit),
+  });
+  if (translation) sp.set("translation", translation);
   return fetchJson<{ source_book: string; target_book: string; total: number; crossrefs: DetailedCrossRef[] }>(
-    `${BASE}/crossrefs/between?source_book=${sourceBook}&target_book=${targetBook}&limit=${limit}`
+    `${BASE}/crossrefs/between?${sp.toString()}`
   );
 }
 
@@ -1194,6 +1246,7 @@ export interface ExplorerNodeData {
   gloss?: string;
   language?: string;
   shared?: number;
+  verse_count?: number;
 }
 
 export interface ExplorerEdgeData {
@@ -1242,9 +1295,10 @@ export interface ExplorerPreset {
   entry_nodes: ExplorerPresetEntry[];
 }
 
-export function fetchExplorerSearch(q: string, limit = 20) {
+export function fetchExplorerSearch(q: string, limit = 20, lang?: string) {
+  const langParam = lang ? `&lang=${lang}` : "";
   return fetchJson<{ results: ExplorerSearchResult[] }>(
-    `${BASE}/explorer/search?q=${encodeURIComponent(q)}&limit=${limit}`
+    `${BASE}/explorer/search?q=${encodeURIComponent(q)}&limit=${limit}${langParam}`
   );
 }
 
@@ -1252,11 +1306,12 @@ export function fetchExplorerExpand(
   nodeType: string,
   nodeId: string,
   layers = "lexical,topics",
-  limit = 30
+  limit = 30,
+  lang?: string
 ) {
-  return fetchJson<ExplorerExpandResponse>(
-    `${BASE}/explorer/expand?node_type=${nodeType}&node_id=${encodeURIComponent(nodeId)}&layers=${layers}&limit=${limit}`
-  );
+  let url = `${BASE}/explorer/expand?node_type=${nodeType}&node_id=${encodeURIComponent(nodeId)}&layers=${layers}&limit=${limit}`;
+  if (lang) url += `&lang=${lang}`;
+  return fetchJson<ExplorerExpandResponse>(url);
 }
 
 export function fetchExplorerEdgeEvidence(

@@ -73,7 +73,8 @@ export default function SemanticExplorerPage() {
     async (type: string, id: string, isCenter: boolean) => {
       setLoading(true);
       try {
-        const data = await fetchExplorerExpand(type, id, layersCsv, 25);
+        const lang = locale !== "en" ? locale : undefined;
+        const data = await fetchExplorerExpand(type, id, layersCsv, 25, lang);
 
         const center: ExplorerNode = {
           type: data.center.type as NodeType,
@@ -81,6 +82,7 @@ export default function SemanticExplorerPage() {
           label: localizeNodeLabel(data.center.type as NodeType, data.center.id, data.center.label, locale),
           gloss: data.center.gloss,
           language: data.center.language,
+          verse_count: data.center.verse_count,
         };
 
         const nodes: ExplorerNode[] = data.nodes.map((n) => ({
@@ -90,6 +92,7 @@ export default function SemanticExplorerPage() {
           gloss: n.gloss,
           language: n.language,
           shared: n.shared,
+          verse_count: n.verse_count,
         }));
 
         const edges: ExplorerEdge[] = data.edges.map((e) => ({

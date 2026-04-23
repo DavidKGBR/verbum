@@ -126,8 +126,8 @@ export default function HomePage() {
       icon: ICONS.link,
       titleKey: "home.crossrefs",
       subtitle: totalCrossrefs
-        ? `${totalCrossrefs.toLocaleString()} connections`
-        : "Arc Diagram",
+        ? t("home.connections").replace("{n}", totalCrossrefs.toLocaleString())
+        : t("home.crossrefs"),
     },
     {
       to: "/bookmarks",

@@ -109,37 +109,53 @@ def get_day_reading(
             detail=f"Day {day} not found in plan '{plan_id}'",
         )
 
-    # Fetch verse texts
+    # Fetch verse texts. Single-chapter ranges need separate query —
+    # the 3-branch OR returns the entire chapter when ch_start == ch_end.
     parsed = _parse_range(reading["passage"])
     verses: list[dict] = []
     if parsed:
         book_id, ch_start, vs_start, ch_end, vs_end = parsed
         conn = get_db()
         try:
-            df = conn.execute(
-                """
-                SELECT verse_id, book_name, chapter, verse, text, reference
-                FROM verses
-                WHERE book_id = ?
-                  AND translation_id = ?
-                  AND (
-                    (chapter = ? AND verse >= ?)
-                    OR (chapter > ? AND chapter < ?)
-                    OR (chapter = ? AND verse <= ?)
-                  )
-                ORDER BY chapter, verse
-                """,
-                [
-                    book_id,
-                    translation,
-                    ch_start,
-                    vs_start,
-                    ch_start,
-                    ch_end,
-                    ch_end,
-                    vs_end,
-                ],
-            ).fetchdf()
+            if ch_start == ch_end:
+                df = conn.execute(
+                    """
+                    SELECT verse_id, book_name, chapter, verse, text, reference
+                    FROM verses
+                    WHERE book_id = ?
+                      AND translation_id = ?
+                      AND chapter = ?
+                      AND verse >= ?
+                      AND verse <= ?
+                    ORDER BY verse
+                    """,
+                    [book_id, translation, ch_start, vs_start, vs_end],
+                ).fetchdf()
+            else:
+                df = conn.execute(
+                    """
+                    SELECT verse_id, book_name, chapter, verse, text, reference
+                    FROM verses
+                    WHERE book_id = ?
+                      AND translation_id = ?
+                      AND (
+                        (chapter = ? AND verse >= ?)
+                        OR (chapter > ? AND chapter < ?)
+                        OR (chapter = ? AND verse <= ?)
+                      )
+                    ORDER BY chapter, verse
+                    """,
+                    [
+                        book_id,
+                        translation,
+                        ch_start,
+                        vs_start,
+                        ch_start,
+                        ch_end,
+                        ch_end,
+                        vs_end,
+                    ],
+                ).fetchdf()
             verses = df.to_dict(orient="records")
         finally:
             conn.close()

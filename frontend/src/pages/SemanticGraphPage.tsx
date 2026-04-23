@@ -198,8 +198,9 @@ export default function SemanticGraphPage() {
             onChange={(e) => setQuery(e.target.value.toUpperCase())}
             onKeyDown={(e) => e.key === "Enter" && loadGraph(query)}
             placeholder={t("graph.centerPlaceholder")}
-            className="border rounded px-2 py-1 w-28 text-sm bg-white
-                       focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
+            className="border border-[var(--color-gold-dark)]/20 rounded-lg px-3 py-1.5 w-32 text-sm
+                       bg-white text-[var(--color-ink)] focus:outline-none focus:ring-2
+                       focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/50"
           />
         </label>
         <button

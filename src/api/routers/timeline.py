@@ -127,10 +127,17 @@ def list_secular_events(
     return {"count": len(events), "events": events}
 
 
+def _lang_suffix(lang: str | None) -> str:
+    if lang in ("pt", "es"):
+        return f"_{lang}"
+    return ""
+
+
 @router.get("/timeline/combined")
 def combined_timeline(
     year_min: int = Query(-2200, description="Min year"),
     year_max: int = Query(100, description="Max year"),
+    lang: str | None = Query(None, description="Language code (pt, es) for localized fields"),
 ) -> dict:
     """Get both biblical and secular events in one response for the timeline view."""
     conn = get_db()
@@ -138,7 +145,8 @@ def combined_timeline(
         # Biblical events
         df = conn.execute(
             """
-            SELECT event_id, title, start_year, era, participants, locations
+            SELECT event_id, title, description, start_year, era,
+                   participants, locations, verse_refs
             FROM biblical_events
             WHERE start_year IS NOT NULL
               AND start_year >= ? AND start_year <= ?
@@ -147,7 +155,8 @@ def combined_timeline(
             [year_min, year_max],
         ).fetchdf()
 
-        biblical = []
+        all_slugs: set[str] = set()
+        raw_biblical = []
         for _, row in df.iterrows():
             evt: dict = {
                 "id": row["event_id"],
@@ -156,22 +165,48 @@ def combined_timeline(
                 "era": row["era"],
                 "type": "biblical",
             }
+            if row.get("description"):
+                evt["description"] = row["description"]
+            if row.get("verse_refs"):
+                with contextlib.suppress(json.JSONDecodeError, TypeError):
+                    evt["verse_refs"] = json.loads(row["verse_refs"])
             if row.get("participants"):
                 with contextlib.suppress(json.JSONDecodeError, TypeError):
-                    evt["participants"] = json.loads(row["participants"])
+                    slugs = json.loads(row["participants"])
+                    evt["participants"] = slugs
+                    all_slugs.update(slugs)
             if row.get("locations"):
                 with contextlib.suppress(json.JSONDecodeError, TypeError):
                     evt["locations"] = json.loads(row["locations"])
+            raw_biblical.append(evt)
+
+        slug_to_name: dict[str, str] = {}
+        if all_slugs:
+            placeholders = ",".join(["?"] * len(all_slugs))
+            name_rows = conn.execute(
+                f"SELECT slug, name FROM biblical_people WHERE slug IN ({placeholders})",
+                list(all_slugs),
+            ).fetchall()
+            slug_to_name = {s: n for s, n in name_rows}
+
+        biblical = []
+        for evt in raw_biblical:
+            if "participants" in evt:
+                evt["participants"] = [
+                    {"slug": s, "name": slug_to_name.get(s, s.split("_")[0].title())}
+                    for s in evt["participants"]
+                ]
             biblical.append(evt)
 
-        # Secular events
+        # Secular events — pick localized title/description when available
+        sfx = _lang_suffix(lang)
         secular = [
             {
                 "id": f"secular_{i}",
-                "title": e["title"],
+                "title": e.get(f"title{sfx}") or e["title"],
                 "year": e["year"],
                 "category": e.get("category"),
-                "description": e.get("description"),
+                "description": e.get(f"description{sfx}") or e.get("description"),
                 "type": "secular",
             }
             for i, e in enumerate(_SECULAR_EVENTS)

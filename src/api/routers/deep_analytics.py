@@ -22,6 +22,7 @@ _BOOK_ORDER_SQL = """
 def get_hapax(
     book: str | None = Query(None, description="Filter by book ID (e.g. PSA, JHN)"),
     language: str | None = Query(None, description="Filter by language (hebrew, greek)"),
+    translation: str = Query("kjv", description="Translation for verse preview"),
     limit: int = Query(100, ge=1, le=500, description="Max results"),
 ) -> dict:
     """Find hapax legomena — words appearing exactly once in the entire Bible."""
@@ -29,7 +30,7 @@ def get_hapax(
     try:
         # Find Strong's IDs that appear exactly once across all interlinear data
         where_clauses: list[str] = []
-        params: list[object] = []
+        params: list[object] = [translation]
 
         base_query = """
             WITH hapax AS (
@@ -52,7 +53,7 @@ def get_hapax(
                 v.book_id
             FROM hapax h
             JOIN interlinear i ON i.strongs_id = h.strongs_id
-            LEFT JOIN verses v ON i.verse_id = v.verse_id AND v.translation_id = 'kjv'
+            LEFT JOIN verses v ON i.verse_id = v.verse_id AND v.translation_id = ?
         """
 
         if book:

@@ -7,13 +7,46 @@ import {
   type ThreadDetail,
 } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
+import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
+import { localizeBookAbbrev, localizeBookName } from "../i18n/bookNames";
+
+// Semantic tags come from STEPBible morphology in raw form, e.g.
+// "{H8354=שָׁתָה=to drink}" or "H9001=ו=&/{H1980G=הָלַךְ=: went»to go:...}".
+// Extract just the readable gloss (last "=" segment inside the first {...}).
+function cleanSemanticTag(raw: string): string {
+  const braceMatch = raw.match(/\{([^}]+)\}/);
+  const inner = (braceMatch ? braceMatch[1] : raw).trim();
+  const eqParts = inner.split("=");
+  const glossRaw = eqParts[eqParts.length - 1].trim();
+  const segments = glossRaw
+    .split(/[:;»]/)
+    .map((s) => s.replace(/_/g, " ").trim())
+    .filter(Boolean);
+  return segments[0] || glossRaw || raw;
+}
+
+// STEPBible transliteration uses dots (syllable) and slashes (morpheme),
+// e.g. "va/i.Ye.shet" or "ve./'esh.Teh". Collapse to plain lowercase.
+function cleanTransliteration(raw: string): string {
+  if (!raw) return "";
+  return raw.replace(/[./\\`'"]+/g, "").toLowerCase();
+}
+
+// Truncate at word boundary within maxChars.
+function truncateAtWord(text: string, maxChars: number): string {
+  if (text.length <= maxChars) return text;
+  const slice = text.slice(0, maxChars);
+  const lastSpace = slice.lastIndexOf(" ");
+  return (lastSpace > maxChars * 0.6 ? slice.slice(0, lastSpace) : slice) + "…";
+}
 
 export default function ThreadsPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [threads, setThreads] = useState<SemanticThread[]>([]);
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const registerCardRef = useScrollToExpanded(expanded);
   const [detail, setDetail] = useState<ThreadDetail | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
   const [minBooks, setMinBooks] = useState(3);
@@ -34,11 +67,22 @@ export default function ThreadsPage() {
     }
     setExpanded(id);
     setDetailLoading(true);
-    fetchThread(id)
+    fetchThread(id, defaultTranslationFor(locale))
       .then(setDetail)
       .catch(() => setDetail(null))
       .finally(() => setDetailLoading(false));
   };
+
+  // Re-fetch detail when locale changes while a thread is expanded.
+  useEffect(() => {
+    if (!expanded) return;
+    setDetailLoading(true);
+    fetchThread(expanded, defaultTranslationFor(locale))
+      .then(setDetail)
+      .catch(() => setDetail(null))
+      .finally(() => setDetailLoading(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locale]);
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -78,6 +122,7 @@ export default function ThreadsPage() {
           {threads.map((th) => (
             <div
               key={th.id}
+              ref={registerCardRef(th.id)}
               className="rounded-lg border border-[var(--color-gold)]/15 bg-white overflow-hidden"
             >
               <button
@@ -89,8 +134,11 @@ export default function ThreadsPage() {
                     {expanded === th.id ? "▾" : "▸"}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-display font-bold text-sm">
-                      {th.semantic_tag}
+                    <h3
+                      className="font-display font-bold text-sm"
+                      title={th.semantic_tag}
+                    >
+                      {cleanSemanticTag(th.semantic_tag)}
                     </h3>
                     <div className="flex items-center gap-3 mt-1">
                       <span className="text-[10px] opacity-50">
@@ -131,46 +179,92 @@ export default function ThreadsPage() {
                         {detail.books.map((b) => (
                           <span
                             key={b.book_id}
-                            className="text-[10px] px-2 py-1 rounded bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)]"
+                            title={localizeBookName(b.book_id, locale, b.book_id)}
+                            className="text-[10px] px-2 py-1 rounded bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] cursor-help"
                           >
-                            {b.book_id}{" "}
+                            {localizeBookAbbrev(b.book_id, locale).toUpperCase()}{" "}
                             <span className="opacity-50">({b.count})</span>
                           </span>
                         ))}
                       </div>
 
-                      {/* Verses */}
-                      <div className="space-y-2 max-h-96 overflow-y-auto">
-                        {detail.verses.slice(0, 30).map((v) => (
-                          <div
-                            key={v.verse_id}
-                            className="flex items-start gap-3 p-2 rounded bg-black/[0.02]"
-                          >
-                            <Link
-                              to={`/reader?book=${v.book_id}&chapter=${v.chapter}&verse=${v.verse}&translation=kjv`}
-                              className="text-xs font-mono text-[var(--color-gold-dark)] hover:underline shrink-0 w-20"
-                            >
-                              {v.reference || v.verse_id}
-                            </Link>
-                            <div className="text-xs opacity-70 flex-1">
-                              <span className="font-bold opacity-50 mr-1">
-                                {v.transliteration}
-                              </span>
-                              ({v.gloss})
-                              {v.verse_text && (
-                                <span className="block mt-0.5 opacity-60">
-                                  {v.verse_text.slice(0, 120)}...
-                                </span>
-                              )}
-                            </div>
+                      {/* Verses — grouped by verse_id (same verse may have multiple hits) */}
+                      {(() => {
+                        const grouped: Array<{
+                          verse_id: string;
+                          book_id: string;
+                          chapter: number;
+                          verse: number;
+                          verse_text: string | null;
+                          hits: Array<{ transliteration: string; gloss: string }>;
+                        }> = [];
+                        const indexByVid: Record<string, number> = {};
+                        for (const v of detail.verses) {
+                          if (!(v.verse_id in indexByVid)) {
+                            indexByVid[v.verse_id] = grouped.length;
+                            grouped.push({
+                              verse_id: v.verse_id,
+                              book_id: v.book_id,
+                              chapter: v.chapter,
+                              verse: v.verse,
+                              verse_text: v.verse_text ?? null,
+                              hits: [],
+                            });
+                          }
+                          grouped[indexByVid[v.verse_id]].hits.push({
+                            transliteration: cleanTransliteration(v.transliteration),
+                            gloss: v.gloss,
+                          });
+                        }
+                        const shown = grouped.slice(0, 30);
+                        return (
+                          <div className="space-y-2 max-h-96 overflow-y-auto">
+                            {shown.map((g) => (
+                              <div
+                                key={g.verse_id}
+                                className="flex items-start gap-3 p-2 rounded bg-black/[0.02]"
+                              >
+                                <Link
+                                  to={`/reader?book=${g.book_id}&chapter=${g.chapter}&verse=${g.verse}&translation=${defaultTranslationFor(locale)}`}
+                                  className="text-xs font-mono text-[var(--color-gold-dark)] hover:underline shrink-0 w-20"
+                                >
+                                  {`${localizeBookAbbrev(g.book_id, locale).toUpperCase()} ${g.chapter}:${g.verse}`}
+                                </Link>
+                                <div className="text-xs opacity-70 flex-1 min-w-0">
+                                  <div className="flex flex-wrap gap-1.5 mb-0.5">
+                                    {g.hits.map((h, i) => (
+                                      <span
+                                        key={i}
+                                        className="font-bold opacity-60"
+                                        title={h.gloss}
+                                      >
+                                        {h.transliteration}
+                                        {g.hits.length > 1 && i < g.hits.length - 1 ? " ·" : ""}
+                                      </span>
+                                    ))}
+                                    <span className="opacity-40">
+                                      ×{g.hits.length > 1 ? g.hits.length : 1}
+                                    </span>
+                                  </div>
+                                  {g.verse_text && (
+                                    <span className="block opacity-70 leading-snug">
+                                      {truncateAtWord(g.verse_text, 180)}
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                            {grouped.length > 30 && (
+                              <p className="text-xs text-center opacity-40 py-2">
+                                {t("threads.moreVerses").replace(
+                                  "{n}",
+                                  String(grouped.length - 30),
+                                )}
+                              </p>
+                            )}
                           </div>
-                        ))}
-                        {detail.verses.length > 30 && (
-                          <p className="text-xs text-center opacity-40 py-2">
-                            {t("threads.moreVerses").replace("{n}", String(detail.verses.length - 30))}
-                          </p>
-                        )}
-                      </div>
+                        );
+                      })()}
                     </div>
                   ) : null}
                 </div>

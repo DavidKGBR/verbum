@@ -42,6 +42,9 @@ TOP_WORD_GLOSS_OVERRIDES: dict[str, str] = {
 _PAREN_RE = re.compile(r"\s*\([^)]*\)")
 
 
+_INTERLINEAR_JUNK_RE = re.compile(r"[\[»@]")
+
+
 def _clean_gloss(strongs_id: str, short_def: str | None) -> str:
     """Extrai gloss curta e legível a partir de short_definition do Strong's."""
     if strongs_id in TOP_WORD_GLOSS_OVERRIDES:
@@ -55,16 +58,15 @@ def _clean_gloss(strongs_id: str, short_def: str | None) -> str:
         if new == text:
             break
         text = new
-    # Limpa ')' residuais de parênteses aninhados (ex: G3361 (μή)) → sobra ')')
     text = text.replace(")", "")
-    # Remove aspas
     text = text.replace('"', "").replace("'", "")
-    # Divide em , ou ; e filtra tokens inúteis
     parts = re.split(r"[,;]", text)
     parts = [
         p.strip().rstrip(".")
         for p in parts
-        if p.strip() and p.strip().lower() not in ("properly", "etc", "etc.")
+        if p.strip()
+        and p.strip().lower() not in ("properly", "etc", "etc.")
+        and not _INTERLINEAR_JUNK_RE.search(p)
     ]
     return parts[0] if parts else "?"
 

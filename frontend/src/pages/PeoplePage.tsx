@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import {
   fetchPeople,
+  fetchPerson,
   fetchPersonFamily,
   fetchPersonEvents,
   type BiblicalPerson,
@@ -12,6 +13,8 @@ import { useI18n } from "../i18n/i18nContext";
 import { personName, personOccupationKey } from "../i18n/personNames";
 import { placeName } from "../i18n/placeNames";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
+import { tribeName } from "../i18n/tribeNames";
+import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 
 const RELATION_ORDER = ["father", "mother", "spouse", "sibling", "half_sibling", "child"];
 
@@ -75,7 +78,7 @@ export default function PeoplePage() {
   const [query, setQuery] = useState(searchParams.get("q") || "");
   const [people, setPeople] = useState<BiblicalPerson[]>([]);
   const [total, setTotal] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState<string | null>(null);
   const [family, setFamily] = useState<Record<string, FamilyMember[]> | null>(null);
   const [events, setEvents] = useState<PersonEvent[]>([]);
@@ -84,14 +87,30 @@ export default function PeoplePage() {
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   // Track slug to auto-expand after search results load
   const pendingExpandRef = useRef<string | null>(null);
+  const registerCardRef = useScrollToExpanded(expanded);
 
   useEffect(() => {
     const q = searchParams.get("q");
     if (q && q !== query) setQuery(q);
+
+    const highlightSlug = searchParams.get("highlight");
+    if (highlightSlug && highlightSlug !== pendingExpandRef.current) {
+      pendingExpandRef.current = highlightSlug;
+      setLoading(true);
+      fetchPerson(highlightSlug)
+        .then((person) => {
+          setPeople([person]);
+          setTotal(1);
+          setTimeout(() => handleExpand(highlightSlug), 50);
+        })
+        .catch(() => {})
+        .finally(() => setLoading(false));
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   useEffect(() => {
+    if (searchParams.get("highlight")) return;
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       setLoading(true);
@@ -103,7 +122,6 @@ export default function PeoplePage() {
         .then((data) => {
           setPeople(data.results);
           setTotal(data.total);
-          // Auto-expand if pending
           if (pendingExpandRef.current) {
             const slug = pendingExpandRef.current;
             pendingExpandRef.current = null;
@@ -172,6 +190,26 @@ export default function PeoplePage() {
           {t("people.subtitle")}
         </p>
       </div>
+
+      {/* Highlight mode banner */}
+      {searchParams.get("highlight") && (
+        <div className="mb-4 flex items-center gap-2 text-xs p-2 rounded-lg bg-[var(--color-gold)]/10 border border-[var(--color-gold)]/20">
+          <span className="opacity-60">{t("people.highlightFrom")}</span>
+          <button
+            onClick={() => {
+              setSearchParams({}, { replace: true });
+              setExpanded(null);
+              setFamily(null);
+              setEvents([]);
+              setQuery("");
+              pendingExpandRef.current = null;
+            }}
+            className="text-[var(--color-gold-dark)] hover:underline font-medium"
+          >
+            {t("people.showAll")}
+          </button>
+        </div>
+      )}
 
       {/* Search */}
       <div className="mb-4">
@@ -278,6 +316,7 @@ export default function PeoplePage() {
           return (
             <div
               key={person.slug}
+              ref={registerCardRef(person.slug)}
               className="rounded-lg border border-[var(--color-gold-dark)]/15 bg-white overflow-hidden"
             >
               <button
@@ -303,9 +342,9 @@ export default function PeoplePage() {
                             : person.gender}
                       </span>
                     )}
-                    {person.tribe && (
+                    {person.tribe && tribeName(person.tribe, locale) && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700">
-                        {person.tribe}
+                        {tribeName(person.tribe, locale)}
                       </span>
                     )}
                   </div>
@@ -554,7 +593,7 @@ function EventsTimeline({ events }: { events: PersonEvent[] }) {
                     })}
                     {evt.verse_refs.length > 3 && (
                       <span className="text-[10px] opacity-40">
-                        +{evt.verse_refs.length - 3} more
+                        {t("people.eventsMore").replace("{n}", String(evt.verse_refs.length - 3))}
                       </span>
                     )}
                   </div>

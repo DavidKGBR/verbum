@@ -7,12 +7,19 @@ import {
   type CommunityNote,
   type CommunityStats,
 } from "../services/api";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { localized } from "../i18n/localized";
+import { localizeBookName } from "../i18n/bookNames";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 
+function formatVerseId(verseId: string, locale: string): string {
+  const parts = verseId.split(".");
+  if (parts.length !== 3) return verseId;
+  return `${localizeBookName(parts[0], locale, parts[0])} ${parts[1]}:${parts[2]}`;
+}
+
 export default function CommunityPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [notes, setNotes] = useState<CommunityNote[]>([]);
   const [stats, setStats] = useState<CommunityStats | null>(null);
   const [loading, setLoading] = useState(true);
@@ -52,13 +59,13 @@ export default function CommunityPage() {
           <div className="rounded-lg border border-[var(--color-gold)]/15 bg-white p-4 text-center">
             <div className="text-2xl font-bold">{stats.total_notes}</div>
             <div className="text-[10px] uppercase tracking-wider opacity-50 mt-1">
-              Total Notes
+              {t("community.totalNotes")}
             </div>
           </div>
           <div className="rounded-lg border border-[var(--color-gold)]/15 bg-white p-4 text-center">
             <div className="text-2xl font-bold">{stats.unique_verses}</div>
             <div className="text-[10px] uppercase tracking-wider opacity-50 mt-1">
-              Verses Covered
+              {t("community.versesCovered")}
             </div>
           </div>
           <div className="rounded-lg border border-[var(--color-gold)]/15 bg-white p-4 text-center">
@@ -66,7 +73,7 @@ export default function CommunityPage() {
               {Object.keys(stats.categories).length}
             </div>
             <div className="text-[10px] uppercase tracking-wider opacity-50 mt-1">
-              Categories
+              {t("community.categories")}
             </div>
           </div>
         </div>
@@ -79,14 +86,14 @@ export default function CommunityPage() {
           value={searchVerse}
           onChange={(e) => setSearchVerse(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-          placeholder="Search by verse (e.g. JHN.3.16)"
+          placeholder={t("community.searchPlaceholder")}
           className="flex-1 px-3 py-2 rounded-lg border border-[var(--color-gold)]/30 bg-white text-sm"
         />
         <button
           onClick={handleSearch}
           className="px-4 py-2 rounded-lg bg-[var(--color-gold)] text-white text-sm font-medium"
         >
-          Search
+          {t("community.search")}
         </button>
       </div>
 
@@ -94,11 +101,11 @@ export default function CommunityPage() {
       {searchResults !== null && (
         <div className="mb-8">
           <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40 mb-3">
-            {t("community.forVerse")} — {searchVerse.toUpperCase()} (
+            {t("community.forVerse")} — {formatVerseId(searchVerse.trim().toUpperCase(), locale)} (
             {searchResults.length})
           </h3>
           {searchResults.length === 0 ? (
-            <p className="text-sm opacity-50">No notes found for this verse.</p>
+            <p className="text-sm opacity-50">{t("community.noNotesForVerse")}</p>
           ) : (
             <NoteList
               notes={searchResults}
@@ -128,7 +135,7 @@ export default function CommunityPage() {
       {/* Submit link */}
       <div className="mt-8 p-4 rounded-lg border border-dashed border-[var(--color-gold)]/30 text-center">
         <p className="text-sm opacity-60 mb-2">
-          Want to contribute a scholarly observation?
+          {t("community.contributionPrompt")}
         </p>
         <a
           href="https://github.com/DavidKGBR/verbum/issues/new?template=community-note.md"
@@ -136,7 +143,7 @@ export default function CommunityPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-lg bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] hover:bg-[var(--color-gold)]/20 transition"
         >
-          Submit via GitHub Issue
+          {t("community.submitViaGithub")}
         </a>
       </div>
     </div>
@@ -180,11 +187,11 @@ function NoteList({
                 <h3 className="font-display font-bold text-sm">{localized(note, locale, "title")}</h3>
                 <div className="flex items-center gap-2 mt-1">
                   <Link
-                    to={`/reader?book=${note.verse_id.split(".")[0]}&chapter=${note.verse_id.split(".")[1]}&verse=${note.verse_id.split(".")[2]}&translation=kjv`}
+                    to={`/reader?book=${note.verse_id.split(".")[0]}&chapter=${note.verse_id.split(".")[1]}&verse=${note.verse_id.split(".")[2]}&translation=${defaultTranslationFor(locale)}`}
                     className="text-[10px] px-2 py-0.5 rounded bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] hover:bg-[var(--color-gold)]/20"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    {note.verse_id}
+                    {formatVerseId(note.verse_id, locale)}
                   </Link>
                   <span
                     className="text-[10px] px-2 py-0.5 rounded-full"

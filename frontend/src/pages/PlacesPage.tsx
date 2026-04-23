@@ -10,6 +10,7 @@ import {
 } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
 import { placeName } from "../i18n/placeNames";
+import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
 
 /* ── Lightbox overlay for full-res image ─────────────────────────────────── */
@@ -185,7 +186,7 @@ function PlaceDetail({ detail }: { detail: BiblicalPlace }) {
         )}
         {detail.latitude && detail.longitude && (
           <Link
-            to="/map"
+            to={`/map?place=${detail.slug}`}
             className="text-[10px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-600 hover:bg-emerald-100 transition"
           >
             {t("places.coordsOpenMap")
@@ -304,7 +305,7 @@ function PlaceDetail({ detail }: { detail: BiblicalPlace }) {
         </Link>
         {detail.latitude && (
           <Link
-            to="/map"
+            to={`/map?place=${detail.slug}`}
             className="text-[var(--color-gold-dark)] hover:underline"
           >
             {t("places.actionMap")}
@@ -325,6 +326,7 @@ export default function PlacesPage() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const registerCardRef = useScrollToExpanded(expanded);
   const [detail, setDetail] = useState<BiblicalPlace | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
   const [placeTypes, setPlaceTypes] = useState<PlaceTypeCount[]>([]);
@@ -481,6 +483,7 @@ export default function PlacesPage() {
           return (
             <div
               key={place.slug}
+              ref={registerCardRef(place.slug)}
               className={`rounded-lg border bg-white overflow-hidden transition-shadow ${
                 isOpen
                   ? "border-[var(--color-gold)]/40 shadow-lg shadow-[var(--color-gold)]/5"

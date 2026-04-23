@@ -10,6 +10,9 @@
 
 import { Link } from "react-router-dom";
 import type { GenealogyConcept, GenealogyNode, GenealogyBridge } from "../../services/api";
+import { useI18n, defaultTranslationFor } from "../../i18n/i18nContext";
+import { localizeBookAbbrev, localizeBookName } from "../../i18n/bookNames";
+import ConceptIcon from "./ConceptIcon";
 
 // ── Color themes ──────────────────────────────────────────────────────────
 
@@ -30,13 +33,13 @@ function getColors(color: string) {
   return COLOR_MAP[color] ?? COLOR_MAP["amber"];
 }
 
-// ── Bridge type labels ────────────────────────────────────────────────────
+// ── Bridge type style (label is i18n-driven inside the component) ────────
 
-const BRIDGE_LABELS: Record<GenealogyBridge["type"], string> = {
-  lxx_translation:        "LXX →",
-  theological_development: "Teologia NT →",
-  semantic_equivalence:   "Equivalente →",
-  root_cognate:           "Cognato →",
+const BRIDGE_LABEL_KEYS: Record<GenealogyBridge["type"], string> = {
+  lxx_translation:         "genealogy.bridge.lxx",
+  theological_development: "genealogy.bridge.theological",
+  semantic_equivalence:    "genealogy.bridge.equivalent",
+  root_cognate:            "genealogy.bridge.cognate",
 };
 
 const BRIDGE_STYLE: Record<GenealogyBridge["type"], string> = {
@@ -46,19 +49,22 @@ const BRIDGE_STYLE: Record<GenealogyBridge["type"], string> = {
   root_cognate:           "border-solid border-emerald-400/60",
 };
 
-// ── Language headers ──────────────────────────────────────────────────────
+// ── Language metadata (font + direction only; labels via i18n) ───────────
 
-const LANG_LABEL: Record<"hebrew" | "greek", { lang: string; testament: string; font: string; dir: "rtl" | "ltr" }> = {
-  hebrew: { lang: "Hebraico", testament: "Antigo Testamento", font: "font-hebrew", dir: "rtl" },
-  greek:  { lang: "Grego Koiné", testament: "Novo Testamento", font: "font-greek", dir: "ltr" },
+const LANG_META: Record<"hebrew" | "greek", { font: string; dir: "rtl" | "ltr" }> = {
+  hebrew: { font: "font-hebrew", dir: "rtl" },
+  greek:  { font: "font-greek",  dir: "ltr" },
 };
 
 // ── WordNode card ─────────────────────────────────────────────────────────
 
 function WordNode({ node, color }: { node: GenealogyNode; color: string }) {
+  const { t, locale } = useI18n();
   const colors = getColors(color);
-  const langMeta = LANG_LABEL[node.language];
+  const langMeta = LANG_META[node.language];
   const isHebrew = node.language === "hebrew";
+  const langLabel = t(`genealogy.lang.${node.language}`);
+  const testamentLabel = t(`genealogy.testament.${node.testament.toLowerCase()}`);
 
   return (
     <div
@@ -74,10 +80,10 @@ function WordNode({ node, color }: { node: GenealogyNode; color: string }) {
       <div className="flex items-center gap-1.5">
         <div className={["w-2 h-2 rounded-full shrink-0", colors.dot].join(" ")} />
         <span className={["text-[10px] font-semibold tracking-wide", colors.text].join(" ")}>
-          {langMeta.lang}
+          {langLabel}
         </span>
         <span className="text-[9px] text-[var(--color-text-muted)]">
-          ({node.testament})
+          ({testamentLabel})
         </span>
       </div>
 
@@ -106,7 +112,7 @@ function WordNode({ node, color }: { node: GenealogyNode; color: string }) {
             colors.badge,
             "hover:opacity-80 transition-opacity",
           ].join(" ")}
-          title={`Abrir estudo de ${node.strongs_id}`}
+          title={t("genealogy.openStudy").replace("{strong}", node.strongs_id)}
         >
           {node.strongs_id}
         </Link>
@@ -119,17 +125,18 @@ function WordNode({ node, color }: { node: GenealogyNode; color: string }) {
       {node.occurrence_count !== undefined && node.occurrence_count > 0 && (
         <div className="flex flex-col gap-1 border-t border-[var(--color-border)] pt-2">
           <span className="text-[10px] text-[var(--color-text-muted)]">
-            {node.occurrence_count.toLocaleString()} ocorrências
+            {t("genealogy.occurrences").replace("{n}", node.occurrence_count.toLocaleString())}
           </span>
           {node.top_books && node.top_books.length > 0 && (
             <div className="flex gap-1 flex-wrap">
               {node.top_books.slice(0, 3).map((b) => (
                 <span
                   key={b.book_id}
+                  title={localizeBookName(b.book_id, locale, b.book_id)}
                   className="text-[9px] px-1.5 py-0.5 rounded bg-[var(--color-surface-hover)]
-                             text-[var(--color-text-muted)]"
+                             text-[var(--color-text-muted)] cursor-help"
                 >
-                  {b.book_id} ({b.count})
+                  {localizeBookAbbrev(b.book_id, locale).toUpperCase()} ({b.count})
                 </span>
               ))}
             </div>
@@ -150,19 +157,22 @@ function WordNode({ node, color }: { node: GenealogyNode; color: string }) {
 // ── Bridge connector ──────────────────────────────────────────────────────
 
 function BridgeConnector({ bridge, color }: { bridge: GenealogyBridge; color: string }) {
+  const { t } = useI18n();
   const colors = getColors(color);
 
   return (
     <div className="flex flex-col items-center gap-1 px-2 py-4 shrink-0 min-w-[100px] max-w-[120px]">
       {/* Type label */}
       <span className={["text-[10px] font-semibold", colors.text].join(" ")}>
-        {BRIDGE_LABELS[bridge.type]}
+        {t(BRIDGE_LABEL_KEYS[bridge.type])}
       </span>
 
       {/* Arrow line */}
       <div className="w-full flex items-center">
         <div className={["flex-1 border-t-2", BRIDGE_STYLE[bridge.type]].join(" ")} />
-        <span className={["text-xs", colors.text].join(" ")}>▶</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={colors.text}>
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
       </div>
 
       {/* Bridge note */}
@@ -178,20 +188,28 @@ function BridgeConnector({ bridge, color }: { bridge: GenealogyBridge; color: st
 // ── Key verse chip ────────────────────────────────────────────────────────
 
 function VerseChip({ verseRef, color }: { verseRef: string; color: string }) {
+  const { t, locale } = useI18n();
   const colors = getColors(color);
-  // Format "JHN.3.16" → "Jo 3:16"
   const parts = verseRef.split(".");
-  const display = parts.length === 3 ? `${parts[0]} ${parts[1]}:${parts[2]}` : verseRef;
+  const display =
+    parts.length === 3
+      ? `${localizeBookAbbrev(parts[0], locale).toUpperCase()} ${parts[1]}:${parts[2]}`
+      : verseRef;
+  const fullName = parts.length === 3 ? localizeBookName(parts[0], locale, parts[0]) : verseRef;
+  const readerTo =
+    parts.length === 3
+      ? `/reader?book=${parts[0]}&chapter=${parts[1]}&verse=${parts[2]}&translation=${defaultTranslationFor(locale)}`
+      : `/reader?book=${parts[0]}`;
 
   return (
     <Link
-      to={`/reader?book=${parts[0]}&chapter=${parts[1]}`}
+      to={readerTo}
       className={[
         "text-[10px] px-2 py-0.5 rounded-full border transition-opacity hover:opacity-70",
         colors.badge,
         colors.border,
       ].join(" ")}
-      title={`Abrir ${display} no leitor`}
+      title={t("genealogy.openReader").replace("{ref}", `${fullName} ${parts[1]}:${parts[2]}`)}
     >
       {display}
     </Link>
@@ -205,6 +223,7 @@ interface Props {
 }
 
 export default function ConceptFlow({ concept }: Props) {
+  const { t } = useI18n();
   const colors = getColors(concept.color);
 
   const hebrewNodes = concept.nodes.filter((n) => n.language === "hebrew");
@@ -224,14 +243,14 @@ export default function ConceptFlow({ concept }: Props) {
             <div className="flex items-center gap-2 shrink-0 min-w-[200px] max-w-[240px]">
               <div className="w-2 h-2 rounded-full bg-sky-500 shrink-0" />
               <span className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
-                Antigo Testamento — Hebraico
+                {t("genealogy.columnOt")}
               </span>
             </div>
             <div className="shrink-0 w-[140px]" />
             <div className="flex items-center gap-2 shrink-0">
               <div className="w-2 h-2 rounded-full bg-purple-500 shrink-0" />
               <span className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
-                Novo Testamento — Grego
+                {t("genealogy.columnNt")}
               </span>
             </div>
           </div>
@@ -271,11 +290,11 @@ export default function ConceptFlow({ concept }: Props) {
         ].join(" ")}
       >
         <div className="flex items-center gap-2">
-          <span className={["text-base font-bold", colors.text].join(" ")}>
-            {concept.icon}
+          <span className={colors.text}>
+            <ConceptIcon id={concept.id} size={18} />
           </span>
           <span className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
-            A Jornada do Conceito
+            {t("genealogy.narrativeTitle")}
           </span>
         </div>
         <p className="text-sm text-[var(--color-text-primary)] leading-relaxed">
@@ -287,7 +306,7 @@ export default function ConceptFlow({ concept }: Props) {
       {allKeyVerses.length > 0 && (
         <div className="flex flex-col gap-2">
           <span className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wide">
-            Versículos-Chave
+            {t("genealogy.keyVerses")}
           </span>
           <div className="flex gap-2 flex-wrap">
             {allKeyVerses.map((vref) => (
@@ -307,11 +326,11 @@ export default function ConceptFlow({ concept }: Props) {
                        border border-[var(--color-border)] hover:bg-[var(--color-surface-hover)]
                        transition-colors text-[var(--color-text-secondary)]"
           >
-            <span className={["text-xs", LANG_LABEL[node.language].font].join(" ")}>
+            <span className={["text-xs", LANG_META[node.language].font].join(" ")}>
               {node.word}
             </span>
             <span>({node.strongs_id})</span>
-            <span>→ Estudo →</span>
+            <span>→ {t("genealogy.studyLink")}</span>
           </Link>
         ))}
       </div>

@@ -87,9 +87,10 @@ function NodeDetail({
           </div>
         )}
 
-        {node.type === "strongs" && node.gloss && (
-          <div className="text-[10px] opacity-40 italic mt-1">
-            {t("explorer.strongsDef.original")}
+        {node.type === "topic" && node.verse_count != null && (
+          <div className="text-xs">
+            <span className="opacity-50">{t("explorer.topicVerseCount")}</span>{" "}
+            <span className="font-medium">{node.verse_count}</span>
           </div>
         )}
 

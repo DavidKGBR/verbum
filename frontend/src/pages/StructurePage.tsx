@@ -13,7 +13,8 @@ import {
 } from "../services/api";
 import ChiasmDiagram from "../components/structure/ChiasmDiagram";
 import LoadingSpinner from "../components/common/LoadingSpinner";
-import { useI18n } from "../i18n/i18nContext";
+import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { localizeBookName } from "../i18n/bookNames";
 import { localized } from "../i18n/localized";
 
@@ -50,6 +51,7 @@ export default function StructurePage() {
   const [typeFilter, setTypeFilter] = useState<string>("");
   const [bookFilter, setBookFilter] = useState<string>("");
   const [expanded, setExpanded] = useState<string | null>(null);
+  const registerCardRef = useScrollToExpanded(expanded);
 
   useEffect(() => {
     setLoading(true);
@@ -175,6 +177,7 @@ export default function StructurePage() {
             return (
               <div
                 key={s.structure_id}
+                ref={registerCardRef(s.structure_id)}
                 className={[
                   "rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]",
                   "overflow-hidden border-l-4 transition-shadow",
@@ -233,20 +236,18 @@ export default function StructurePage() {
                   <div className="border-t border-[var(--color-border)] px-5 py-5">
                     <ChiasmDiagram structure={s} showTextPreview={false} />
 
-                    {/* Reader link */}
-                    {s.chapter_start === s.chapter_end && (
-                      <div className="mt-5 pt-4 border-t border-[var(--color-border)]">
-                        <Link
-                          to={`/reader?book=${s.book_id}&chapter=${s.chapter_start}&mode=structural`}
-                          className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg
-                                     border border-[var(--color-border)] hover:bg-[var(--color-surface-hover)]
-                                     transition-colors text-[var(--color-text-secondary)]"
-                        >
-                          <span>{t("structure.openStructural")}</span>
-                          <span>→</span>
-                        </Link>
-                      </div>
-                    )}
+                    {/* Reader link — always opens in structural mode on the structure's first chapter */}
+                    <div className="mt-5 pt-4 border-t border-[var(--color-border)]">
+                      <Link
+                        to={`/reader?book=${s.book_id}&chapter=${s.chapter_start}&verse=${s.elements?.[0]?.verse_start ?? 1}&translation=${defaultTranslationFor(locale)}&mode=structural`}
+                        className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg
+                                   border border-[var(--color-border)] hover:bg-[var(--color-surface-hover)]
+                                   transition-colors text-[var(--color-text-secondary)]"
+                      >
+                        <span>{t("structure.openStructural")}</span>
+                        <span>→</span>
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>

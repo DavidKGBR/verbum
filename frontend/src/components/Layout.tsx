@@ -42,9 +42,10 @@ export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
-  // Auto-close drawer on route change
+  // Auto-close drawer on route change + scroll to top
   useEffect(() => {
     setMobileOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
   // Close on Escape
@@ -62,11 +63,11 @@ export default function Layout() {
       <Link
         to="/"
         className="block mb-6 px-1 text-[var(--color-gold)] focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 rounded"
-        aria-label="Verbum — home"
+        aria-label={t("nav.home")}
       >
         <VerbumLogo variant="wordmark" className="h-7 w-auto" />
         <p className="text-[9px] uppercase tracking-[0.3em] opacity-40 mt-1.5 font-display">
-          Bible Data Pipeline
+          {t("nav.tagline")}
         </p>
       </Link>
       {/* Language selector */}
@@ -84,7 +85,7 @@ export default function Layout() {
                 ? "bg-[var(--color-gold)]/20 text-[var(--color-gold)] ring-1 ring-[var(--color-gold)]/40"
                 : "opacity-60 hover:opacity-100"
             }`}
-            aria-label={`Switch to ${loc.label}`}
+            aria-label={t("nav.switchTo").replace("{lang}", loc.label)}
             aria-pressed={locale === loc.code}
             title={loc.label}
           >
@@ -117,7 +118,7 @@ export default function Layout() {
           to={`/reader?book=${last.book_id}&chapter=${last.chapter}&translation=${last.translation}`}
           className="mt-4 mx-1 p-3 rounded border border-[var(--color-gold)]/20
                      bg-[var(--color-gold)]/5 hover:bg-[var(--color-gold)]/15 transition group"
-          title="Continue where you left off"
+          title={t("nav.continueTooltip")}
         >
           <div className="text-[10px] uppercase tracking-wider opacity-50 mb-1">
             {t("nav.continue")}
@@ -141,14 +142,14 @@ export default function Layout() {
       <header className="md:hidden flex items-center justify-between px-4 py-3 bg-[var(--color-ink)] text-[var(--color-parchment)] sticky top-0 z-30">
         <button
           onClick={() => setMobileOpen(true)}
-          aria-label="Open navigation"
+          aria-label={t("nav.openNav")}
           className="p-1 -ml-1 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <Link to="/" aria-label="Verbum — home" className="text-[var(--color-gold)] flex items-center">
+        <Link to="/" aria-label={t("nav.home")} className="text-[var(--color-gold)] flex items-center">
           <VerbumLogo variant="wordmark" className="h-5 w-auto" />
         </Link>
         <span className="w-8" aria-hidden /> {/* spacer for centering */}
@@ -174,7 +175,7 @@ export default function Layout() {
           >
             <button
               onClick={() => setMobileOpen(false)}
-              aria-label="Close navigation"
+              aria-label={t("nav.closeNav")}
               className="absolute top-3 right-3 p-1 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

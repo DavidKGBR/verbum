@@ -122,14 +122,19 @@ function CatalogPage() {
 /* ── Passage detail page ──────────────────────────────────────────────────── */
 
 const PT_TRANSLATIONS = ["nvi", "ra", "acf"] as const;
+const ES_TRANSLATIONS = ["rvr"] as const;
 const EN_TRANSLATIONS = ["kjv", "bbe", "asv", "web", "darby"] as const;
 
 function PassageDetailPage({ passageId }: { passageId: string }) {
   const { t, locale } = useI18n();
+  // Vernacular options reflect the user's locale: ES sees Spanish first, PT/EN see Portuguese options.
+  const vernacularOptions: readonly string[] =
+    locale === "es" ? [...ES_TRANSLATIONS, ...PT_TRANSLATIONS] : [...PT_TRANSLATIONS, ...ES_TRANSLATIONS];
+  const defaultVernacular = locale === "es" ? "rvr" : "nvi";
   const [passage, setPassage] = useState<SpecialPassageResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [translation, setTranslation] = useState("nvi");
+  const [translation, setTranslation] = useState(defaultVernacular);
   const [translationEn, setTranslationEn] = useState("kjv");
   const [selectedStrongs, setSelectedStrongs] = useState<string | null>(null);
   const [selectedWord, setSelectedWord] = useState<{ word: PassageWord; layerKey: PassageLayerKey } | null>(null);
@@ -188,7 +193,7 @@ function PassageDetailPage({ passageId }: { passageId: string }) {
       <div className="flex gap-4 flex-wrap">
         <div className="flex items-center gap-2">
           <label className="text-xs text-[var(--color-text-muted)] font-medium">
-            {t("specialPassage.ptLabel")}
+            {t("specialPassage.vernacularLabel")}
           </label>
           <select
             value={translation}
@@ -197,7 +202,7 @@ function PassageDetailPage({ passageId }: { passageId: string }) {
                        text-[var(--color-text-primary)] px-2 py-1 focus:outline-none
                        focus:ring-1 focus:ring-[var(--color-gold)]/60"
           >
-            {PT_TRANSLATIONS.map((tr) => (
+            {vernacularOptions.map((tr) => (
               <option key={tr} value={tr}>{tr.toUpperCase()}</option>
             ))}
           </select>

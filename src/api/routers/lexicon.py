@@ -455,52 +455,70 @@ def search_dictionary(
 ) -> dict:
     """Search the Bible dictionary (Easton's + Smith's) by name.
 
-    When `lang` is provided and a translation exists in
-    `dictionary_entries_multilang`, the preview snippet uses the
-    translated body. Results still come from `name` matching on the
-    English source because user-friendly name search is already handled
-    upstream by the frontend's toCanonicalEnglishQuery() helper.
+    When `lang` is provided, searches both the English name and the
+    localized name in `dictionary_entries_multilang`. Translated preview
+    snippets and localized names are overlaid when available.
     """
+    _ACCENT_FROM = "àáâãäåèéêëìíîïòóôõöùúûüñçÀÁÂÃÄÅÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÑÇ"
+    _ACCENT_TO   = "aaaaaaeeeeiiiiooooouuuuncAAAAAAEEEEIIIIOOOOOUUUUNC"
+
     conn = get_db()
     try:
-        df = conn.execute(
-            """
-            SELECT slug, name, source, text_easton, text_smith,
-                   LEFT(COALESCE(text_easton, text_smith, ''), 200) AS preview
-            FROM dictionary_entries
-            WHERE name ILIKE ?
-            ORDER BY LENGTH(name), name
-            LIMIT ?
-            """,
-            [f"%{q}%", limit],
-        ).fetchdf()
+        target = lang.lower() if lang and lang.lower() in ("pt", "es") else None
+
+        if target:
+            df = conn.execute(
+                f"""
+                SELECT DISTINCT e.slug, e.name, e.source,
+                       e.text_easton, e.text_smith,
+                       LEFT(COALESCE(e.text_easton, e.text_smith, ''), 200) AS preview
+                FROM dictionary_entries e
+                LEFT JOIN dictionary_entries_multilang m
+                    ON m.slug = e.slug AND m.lang = ?
+                WHERE e.name ILIKE ?
+                   OR translate(lower(m.name), '{_ACCENT_FROM}', '{_ACCENT_TO}')
+                      ILIKE translate(lower(?), '{_ACCENT_FROM}', '{_ACCENT_TO}')
+                ORDER BY LENGTH(e.name), e.name
+                LIMIT ?
+                """,
+                [target, f"%{q}%", f"%{q}%", limit],
+            ).fetchdf()
+        else:
+            df = conn.execute(
+                """
+                SELECT slug, name, source, text_easton, text_smith,
+                       LEFT(COALESCE(text_easton, text_smith, ''), 200) AS preview
+                FROM dictionary_entries
+                WHERE name ILIKE ?
+                ORDER BY LENGTH(name), name
+                LIMIT ?
+                """,
+                [f"%{q}%", limit],
+            ).fetchdf()
 
         records = df.to_dict(orient="records")
 
-        # Overlay the returned text + preview with the translated version
-        # when a language is asked for and we have a translation for that slug.
-        # Per-source fallback — a slug may have only Easton translated, not
-        # Smith (or vice versa). Missing side keeps the English original.
-        if lang and lang.lower() in ("pt", "es") and records:
-            target = lang.lower()
+        if target and records:
             slugs = [r["slug"] for r in records]
             placeholders = ",".join("?" * len(slugs))
             ml_rows = conn.execute(
                 f"""
-                SELECT slug, text_easton, text_smith
+                SELECT slug, name, text_easton, text_smith
                 FROM dictionary_entries_multilang
                 WHERE lang = ? AND slug IN ({placeholders})
                 """,
                 [target, *slugs],
             ).fetchall()
             ml_map = {
-                row[0]: {"text_easton": row[1], "text_smith": row[2]}
+                row[0]: {"name": row[1], "text_easton": row[2], "text_smith": row[3]}
                 for row in ml_rows
             }
             for r in records:
                 ml = ml_map.get(r["slug"])
                 any_translated = False
                 if ml:
+                    if ml["name"]:
+                        r["name"] = ml["name"]
                     if r.get("text_easton") and ml["text_easton"]:
                         r["text_easton"] = ml["text_easton"]
                         any_translated = True
@@ -550,17 +568,18 @@ def get_dictionary_entry(
             target = lang.lower()
             ml_row = conn.execute(
                 """
-                SELECT text_easton, text_smith
+                SELECT name, text_easton, text_smith
                 FROM dictionary_entries_multilang
                 WHERE slug = ? AND lang = ?
                 """,
                 [slug.lower(), target],
             ).fetchone()
             if ml_row:
-                translated_easton = ml_row[0]
-                translated_smith = ml_row[1]
-                # Only overlay when the source had that body to begin with,
-                # so a spurious translation row can't introduce ghost text.
+                localized_name = ml_row[0]
+                translated_easton = ml_row[1]
+                translated_smith = ml_row[2]
+                if localized_name:
+                    entry["name"] = localized_name
                 has_any_translation = False
                 if entry.get("text_easton") and translated_easton:
                     entry["text_easton"] = translated_easton

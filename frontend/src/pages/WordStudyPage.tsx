@@ -17,7 +17,7 @@ const PAGE_SIZE = 20;
 
 export default function WordStudyPage() {
   const { strongsId } = useParams<{ strongsId: string }>();
-  const { locale } = useI18n();
+  const { t, locale } = useI18n();
   const [entry, setEntry] = useState<StrongsEntry | null>(null);
   const [distribution, setDistribution] = useState<BookFrequency[]>([]);
   const [totalOccurrences, setTotalOccurrences] = useState(0);
@@ -115,10 +115,10 @@ export default function WordStudyPage() {
 
       {/* Stats row */}
       <div className="grid grid-cols-3 gap-4 mb-8">
-        <StatCard label="Occurrences" value={totalOccurrences.toLocaleString()} />
-        <StatCard label="Books" value={String(booksCount)} />
+        <StatCard label={t("wordStudy.occurrences")} value={totalOccurrences.toLocaleString()} />
+        <StatCard label={t("wordStudy.books")} value={String(booksCount)} />
         <StatCard
-          label="Most frequent"
+          label={t("wordStudy.mostFrequent")}
           value={topBook ? localizeBookName(topBook.book_id, locale, topBook.book_name) : "—"}
           sub={topBook ? `${topBook.frequency}×` : ""}
         />
@@ -126,7 +126,7 @@ export default function WordStudyPage() {
 
       {/* Definition */}
       <section className="mb-8">
-        <SectionTitle>Definition</SectionTitle>
+        <SectionTitle>{t("wordStudy.definition")}</SectionTitle>
         <p className="text-lg font-body font-bold leading-snug mb-3">
           {entry.short_definition}
         </p>
@@ -140,7 +140,7 @@ export default function WordStudyPage() {
       {/* Related words */}
       {relatedIds.length > 0 && (
         <section className="mb-8">
-          <SectionTitle>Related Words</SectionTitle>
+          <SectionTitle>{t("wordStudy.relatedWords")}</SectionTitle>
           <div className="flex flex-wrap gap-2">
             {relatedIds.map((rid) => (
               <Link
@@ -164,13 +164,13 @@ export default function WordStudyPage() {
                      border-[var(--color-gold)]/30 hover:bg-[var(--color-gold)]/10
                      transition text-[var(--color-gold-dark)]"
         >
-          🔀 Compare translations of this word →
+          {t("wordStudy.compareTranslations")} →
         </Link>
       </section>
 
       {/* Word Journey — usage across eras */}
       <section className="mb-8">
-        <SectionTitle>Word Journey Across Eras</SectionTitle>
+        <SectionTitle>{t("wordStudy.wordJourney")}</SectionTitle>
         <WordJourney strongsId={strongsId} />
       </section>
 
@@ -178,7 +178,9 @@ export default function WordStudyPage() {
       {distribution.length > 0 && (
         <section className="mb-8">
           <SectionTitle>
-            Distribution by Book ({booksCount} {booksCount === 1 ? "book" : "books"})
+            {t("wordStudy.distributionByBook")
+              .replace("{n}", String(booksCount))
+              .replace("{noun}", booksCount === 1 ? t("wordStudy.book") : t("wordStudy.books_plural"))}
           </SectionTitle>
           <div className="space-y-1.5">
             {distribution.map((d) => (
@@ -212,7 +214,7 @@ export default function WordStudyPage() {
       {/* All occurrences */}
       <section>
         <SectionTitle>
-          Occurrences ({totalVerses.toLocaleString()} verses)
+          {t("wordStudy.occurrencesCount").replace("{n}", totalVerses.toLocaleString())}
         </SectionTitle>
         <div className="space-y-3">
           {visibleVerses.map((v: any) => (
@@ -244,7 +246,7 @@ export default function WordStudyPage() {
                        text-sm text-[var(--color-gold-dark)] hover:bg-[var(--color-gold)]/5
                        transition"
           >
-            Show all {verses.length} occurrences
+            {t("wordStudy.showAll").replace("{n}", String(verses.length))}
           </button>
         )}
       </section>

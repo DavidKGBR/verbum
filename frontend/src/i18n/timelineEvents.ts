@@ -23,10 +23,13 @@ import { PERSONS, personName } from "./personNames";
 
 export const ERA_KEYS: Record<string, { pt: string; es: string; en?: string }> = {
   patriarchs: { pt: "Patriarcas", es: "Patriarcas", en: "Patriarchs" },
+  exodus: { pt: "Êxodo e Conquista", es: "Éxodo y Conquista", en: "Exodus & Conquest" },
   "exodus & conquest": { pt: "Êxodo e Conquista", es: "Éxodo y Conquista", en: "Exodus & Conquest" },
   monarchy: { pt: "Monarquia", es: "Monarquía", en: "Monarchy" },
+  exile: { pt: "Exílio e Retorno", es: "Exilio y Retorno", en: "Exile & Return" },
   "exile & return": { pt: "Exílio e Retorno", es: "Exilio y Retorno", en: "Exile & Return" },
   intertestamental: { pt: "Intertestamentário", es: "Intertestamentario", en: "Intertestamental" },
+  nt: { pt: "Novo Testamento", es: "Nuevo Testamento", en: "New Testament" },
   "new testament": { pt: "Novo Testamento", es: "Nuevo Testamento", en: "New Testament" },
 };
 

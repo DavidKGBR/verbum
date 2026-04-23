@@ -514,8 +514,8 @@ export default function ImmersiveReader() {
 
         <button
           onClick={toggleFullscreen}
-          title={isFullscreen ? "Exit fullscreen (F)" : "Enter fullscreen (F)"}
-          aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+          title={isFullscreen ? t("reader.exitFullscreen") : t("reader.enterFullscreen")}
+          aria-label={isFullscreen ? t("reader.exitFullscreen") : t("reader.enterFullscreen")}
           className="ml-auto md:ml-0 shrink-0 border border-[var(--color-gold-dark)]/40
                      rounded px-2 py-1.5 text-[var(--color-gold)]
                      hover:bg-[var(--color-gold)]/10 transition

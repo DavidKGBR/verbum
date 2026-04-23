@@ -64,7 +64,7 @@ const TOPICS: Record<string, TopicEntry> = {
   righteous: { pt: "JUSTO", es: "JUSTO" },
 
   // Sin / suffering / negative
-  "sin-1": { pt: "PECADO (1)", es: "PECADO (1)" },
+  "sin-1": { pt: "PECADO", es: "PECADO" },
   "afflictions-and-adversities": { pt: "AFLIÇÕES E ADVERSIDADES", es: "AFLICCIONES Y ADVERSIDADES" },
   "wicked-people": { pt: "ÍMPIOS (PESSOAS)", es: "IMPÍOS (PERSONAS)" },
   backsliders: { pt: "APÓSTATAS", es: "APÓSTATAS" },
@@ -783,7 +783,7 @@ const TOPICS: Record<string, TopicEntry> = {
   "absalom-3": { pt: "ABSALÃO (3)", es: "ABSALÓN (3)" },
   "rab-shakeh-rabshakeh-2": { pt: "RABSAQUÉ (RABSAQUÉ) (2)", es: "RABSACES (RABSACES) (2)" },
   balaam: { pt: "BALAÃO", es: "BALAAM" },
-  "sin-2": { pt: "PECADO (2)", es: "PECADO (2)" },
+  "sin-2": { pt: "SIM (DESERTO)", es: "SIN (DESIERTO)" },
   uzziah: { pt: "UZIAS", es: "UZÍAS" },
   "abed-nego": { pt: "ABEDE-NEGO", es: "ABED-NEGO" },
   leviathan: { pt: "LEVIATÃ", es: "LEVIATÁN" },

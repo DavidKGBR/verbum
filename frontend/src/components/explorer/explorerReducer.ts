@@ -16,6 +16,7 @@ export interface ExplorerNode {
   gloss?: string;
   language?: string;
   shared?: number;
+  verse_count?: number;
   /** secondary label from search (e.g., definition) */
   secondary?: string;
   /** x/y positions set by D3 simulation */

@@ -9,8 +9,10 @@ import {
   type AuthorBookStats,
 } from "../services/api";
 import AuthorCompare from "../components/authors/AuthorCompare";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext";
 import { localized } from "../i18n/localized";
+import { localizeBookAbbrev, localizeBookName } from "../i18n/bookNames";
+import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 
 // ── Period parser ──────────────────────────────────────────────────────────
 
@@ -45,6 +47,7 @@ export default function AuthorsPage() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<"all" | "OT" | "NT">("all");
   const [expanded, setExpanded] = useState<string | null>(null);
+  const registerCardRef = useScrollToExpanded(expanded);
   const [detail, setDetail] = useState<AuthorDetail | null>(null);
   const [bookStats, setBookStats] = useState<AuthorBookStats[]>([]);
   const [detailLoading, setDetailLoading] = useState(false);
@@ -189,6 +192,7 @@ export default function AuthorsPage() {
           return (
             <div
               key={author.author_id}
+              ref={registerCardRef(author.author_id)}
               className={`rounded-lg border bg-white overflow-hidden transition ${
                 isSelected
                   ? "border-blue-400 ring-2 ring-blue-200"
@@ -233,7 +237,7 @@ export default function AuthorsPage() {
                         ? "bg-emerald-100 text-emerald-700"
                         : "bg-[var(--color-new-testament)]/10 text-[var(--color-new-testament)]"
                     }`}>
-                      {author.testament}
+                      {t(`authors.testament.${author.testament.toLowerCase()}`)}
                     </span>
                   </div>
                   <p className="text-xs opacity-50 mt-0.5">
@@ -241,7 +245,7 @@ export default function AuthorsPage() {
                   </p>
                   {!isOpen && (
                     <p className="text-sm opacity-60 mt-1 line-clamp-1">
-                      {author.books.length} {author.books.length !== 1 ? t("authors.books") : t("authors.book")}: {author.books.join(", ")}
+                      {author.books.length} {author.books.length !== 1 ? t("authors.books") : t("authors.book")}: {author.books.map((b) => localizeBookAbbrev(b, locale).toUpperCase()).join(", ")}
                     </p>
                   )}
                 </div>
@@ -270,11 +274,12 @@ export default function AuthorsPage() {
                       {author.books.map((bookId) => (
                         <Link
                           key={bookId}
-                          to={`/reader?book=${bookId}&chapter=1`}
+                          to={`/reader?book=${bookId}&chapter=1&verse=1&translation=${defaultTranslationFor(locale)}`}
+                          title={localizeBookName(bookId, locale, bookId)}
                           className="text-xs px-2.5 py-1 rounded border border-[var(--color-gold)]/30
                                      hover:bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] transition"
                         >
-                          {bookId}
+                          {localizeBookAbbrev(bookId, locale).toUpperCase()}
                         </Link>
                       ))}
                     </div>
@@ -354,7 +359,7 @@ export default function AuthorsPage() {
 
                   {/* Book stats breakdown */}
                   {!detailLoading && bookStats.length > 0 && (
-                    <BookStatsBreakdown books={bookStats} />
+                    <BookStatsBreakdown books={bookStats} locale={locale} />
                   )}
                 </div>
               )}
@@ -410,22 +415,21 @@ function AuthorTimeline({ authors }: { authors: Author[] }) {
       </h4>
 
       {/* Era markers — alignment adjusts at edges so labels don't overflow the container */}
-      <div className="relative h-4 mb-1">
+      <div className="relative h-4 mb-1 overflow-hidden mx-2">
         {eras.map((era) => {
           const leftPct = yearToPercent(era.year);
-          // Near the left edge: left-align. Near the right edge: right-align.
-          // Middle: centered (the classic translateX(-50%) behavior).
+          const clampedPct = Math.max(2, Math.min(98, leftPct));
           const transform =
-            leftPct <= 5
+            clampedPct <= 5
               ? "translateX(0%)"
-              : leftPct >= 95
+              : clampedPct >= 95
                 ? "translateX(-100%)"
                 : "translateX(-50%)";
           return (
             <span
               key={era.label}
               className="absolute text-[8px] uppercase tracking-wider opacity-30 whitespace-nowrap"
-              style={{ left: `${leftPct}%`, transform }}
+              style={{ left: `${clampedPct}%`, transform }}
             >
               {era.label}
             </span>
@@ -484,8 +488,9 @@ function AuthorTimeline({ authors }: { authors: Author[] }) {
 
 // ── Book Stats Breakdown Component ─────────────────────────────────────────
 
-function BookStatsBreakdown({ books }: { books: AuthorBookStats[] }) {
+function BookStatsBreakdown({ books, locale }: { books: AuthorBookStats[]; locale: Locale }) {
   const { t } = useI18n();
+  const sentimentFromKjv = locale !== "en" ? t("authors.sentimentFromKjv") : undefined;
   const maxWords = Math.max(...books.map((b) => b.total_words), 1);
 
   function sentimentColor(s: number): string {
@@ -512,11 +517,12 @@ function BookStatsBreakdown({ books }: { books: AuthorBookStats[] }) {
             <div key={b.book_id} className="group">
               <div className="flex items-center gap-3">
                 <Link
-                  to={`/reader?book=${b.book_id}&chapter=1`}
+                  to={`/reader?book=${b.book_id}&chapter=1&verse=1&translation=${defaultTranslationFor(locale)}`}
+                  title={localizeBookName(b.book_id, locale, b.book_name)}
                   className="text-xs font-bold w-12 shrink-0 text-[var(--color-gold-dark)]
                              hover:underline"
                 >
-                  {b.book_id}
+                  {localizeBookAbbrev(b.book_id, locale).toUpperCase()}
                 </Link>
                 <div className="flex-1 h-5 bg-gray-50 rounded overflow-hidden relative">
                   <div
@@ -534,7 +540,10 @@ function BookStatsBreakdown({ books }: { books: AuthorBookStats[] }) {
               {/* Hover detail */}
               <div className="hidden group-hover:flex gap-4 ml-15 mt-0.5 text-[10px] opacity-50 pl-15">
                 <span>{b.avg_words_per_verse?.toFixed(1)} {t("authors.wordsPerVerseUnit")}</span>
-                <span>{t("authors.sentimentLabel")}: {sentimentLabel(b.avg_sentiment)} ({b.avg_sentiment?.toFixed(3)})</span>
+                <span title={sentimentFromKjv}>
+                  {t("authors.sentimentLabel")}: {sentimentLabel(b.avg_sentiment)} ({b.avg_sentiment?.toFixed(3)})
+                  {sentimentFromKjv && <span className="ml-1 opacity-60">ⓘ</span>}
+                </span>
                 <span>{b.category}</span>
               </div>
             </div>

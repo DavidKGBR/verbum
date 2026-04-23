@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   fetchDevotionalPlans,
   fetchDevotionalPlan,
@@ -8,7 +9,30 @@ import {
   type DevotionalDayReading,
   type OriginalTerm,
 } from "../services/api";
-import { useI18n } from "../i18n/i18nContext";
+import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
+import { localizeBookName } from "../i18n/bookNames";
+
+// Format a passage string "GEN.1.1-GEN.1.5" as "Gênesis 1:1-5" localized.
+function formatPassage(passage: string, locale: string): { label: string; bookId: string; chapter: number; verse: number } | null {
+  const parts = passage.split("-");
+  if (parts.length !== 2) return null;
+  const start = parts[0].split(".");
+  const end = parts[1].split(".");
+  if (start.length !== 3 || end.length !== 3) return null;
+  const bookId = start[0];
+  const chStart = Number(start[1]);
+  const vsStart = Number(start[2]);
+  const chEnd = Number(end[1]);
+  const vsEnd = Number(end[2]);
+  const bookName = localizeBookName(bookId, locale, bookId);
+  let range: string;
+  if (chStart === chEnd) {
+    range = vsStart === vsEnd ? `${chStart}:${vsStart}` : `${chStart}:${vsStart}-${vsEnd}`;
+  } else {
+    range = `${chStart}:${vsStart}-${chEnd}:${vsEnd}`;
+  }
+  return { label: `${bookName} ${range}`, bookId, chapter: chStart, verse: vsStart };
+}
 
 function OriginalTermCard({ term }: { term: OriginalTerm }) {
   const { t } = useI18n();
@@ -48,37 +72,50 @@ function OriginalTermCard({ term }: { term: OriginalTerm }) {
 
 export default function DevotionalPage() {
   const { t, locale } = useI18n();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [plans, setPlans] = useState<DevotionalPlan[]>([]);
   const [selectedPlan, setSelectedPlan] = useState<DevotionalPlanFull | null>(null);
   const [dayReading, setDayReading] = useState<DevotionalDayReading | null>(null);
   const [loading, setLoading] = useState(false);
   const [dayLoading, setDayLoading] = useState(false);
 
+  const planIdInUrl = searchParams.get("plan");
+
   useEffect(() => {
     fetchDevotionalPlans(locale).then(setPlans).catch(() => {});
-    // Reset any open plan when locale changes so we refetch in the new language
-    setSelectedPlan(null);
-    setDayReading(null);
   }, [locale]);
 
-  const handleSelectPlan = (planId: string) => {
+  // Plan state is derived from URL. When ?plan=xxx present, fetch it;
+  // when absent (incl. after navbar click resets URL), show plan list.
+  useEffect(() => {
+    if (!planIdInUrl) {
+      setSelectedPlan(null);
+      setDayReading(null);
+      return;
+    }
     setLoading(true);
     setDayReading(null);
-    fetchDevotionalPlan(planId, locale)
+    fetchDevotionalPlan(planIdInUrl, locale)
       .then((plan) => {
         setSelectedPlan(plan);
-        // Auto-load day 1
-        return fetchDevotionalDay(planId, 1, "kjv", locale);
+        return fetchDevotionalDay(planIdInUrl, 1, defaultTranslationFor(locale), locale);
       })
-      .then(setDayReading)
-      .catch(() => {})
+      .then((d) => d && setDayReading(d))
+      .catch(() => {
+        setSelectedPlan(null);
+        setDayReading(null);
+      })
       .finally(() => setLoading(false));
+  }, [planIdInUrl, locale]);
+
+  const handleSelectPlan = (planId: string) => {
+    setSearchParams({ plan: planId });
   };
 
   const handleSelectDay = (day: number) => {
     if (!selectedPlan) return;
     setDayLoading(true);
-    fetchDevotionalDay(selectedPlan.id, day, "kjv", locale)
+    fetchDevotionalDay(selectedPlan.id, day, defaultTranslationFor(locale), locale)
       .then(setDayReading)
       .catch(() => setDayReading(null))
       .finally(() => setDayLoading(false));
@@ -130,10 +167,7 @@ export default function DevotionalPage() {
               <p className="text-sm opacity-50">{selectedPlan.description}</p>
             </div>
             <button
-              onClick={() => {
-                setSelectedPlan(null);
-                setDayReading(null);
-              }}
+              onClick={() => setSearchParams({})}
               className="text-xs px-3 py-1.5 rounded border border-[var(--color-gold)]/30
                          hover:bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)] transition"
             >
@@ -174,7 +208,24 @@ export default function DevotionalPage() {
                 <h3 className="font-display font-bold text-lg text-[var(--color-ink)]">
                   {dayReading.title}
                 </h3>
-                <div className="text-xs opacity-50 mt-1">{dayReading.passage}</div>
+                {(() => {
+                  const p = formatPassage(dayReading.passage, locale);
+                  if (!p) {
+                    return <div className="text-xs opacity-50 mt-1">{dayReading.passage}</div>;
+                  }
+                  return (
+                    <Link
+                      to={`/reader?book=${p.bookId}&chapter=${p.chapter}&verse=${p.verse}&translation=${dayReading.translation}`}
+                      className="text-xs opacity-60 hover:opacity-100 hover:underline mt-1 inline-flex items-center gap-1 text-[var(--color-gold-dark)]"
+                      title={t("devotional.openInReader")}
+                    >
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                      {p.label}
+                    </Link>
+                  );
+                })()}
               </div>
 
               {/* Original term spotlight */}
@@ -184,14 +235,21 @@ export default function DevotionalPage() {
 
               {/* Verse text */}
               <div className="px-5 py-4 space-y-2">
-                {dayReading.verses.map((v) => (
-                  <div key={v.verse_id} className="text-sm leading-relaxed">
-                    <span className="text-[10px] font-bold opacity-40 mr-1">
-                      {v.chapter}:{v.verse}
-                    </span>
-                    <span className="font-body">{v.text}</span>
-                  </div>
-                ))}
+                {dayReading.verses.map((v) => {
+                  const bookId = v.verse_id.split(".")[0] ?? "";
+                  return (
+                    <div key={v.verse_id} className="text-sm leading-relaxed">
+                      <Link
+                        to={`/reader?book=${bookId}&chapter=${v.chapter}&verse=${v.verse}&translation=${dayReading.translation}`}
+                        className="text-[10px] font-bold text-[var(--color-gold-dark)] opacity-60 hover:opacity-100 hover:underline mr-1"
+                        title={t("devotional.openInReader")}
+                      >
+                        {v.chapter}:{v.verse}
+                      </Link>
+                      <span className="font-body">{v.text}</span>
+                    </div>
+                  );
+                })}
                 {dayReading.verses.length === 0 && (
                   <p className="text-xs opacity-40 italic">
                     {t("devotional.noVerses")}
