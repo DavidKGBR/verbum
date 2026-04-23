@@ -1,0 +1,300 @@
+{"verse_id": "EXO.1.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.1.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.1.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.1.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.1.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.1.6", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.1.7", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.1.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.1.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.1.10", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.1.11", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.1.12", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed oppression + multiplication"}
+{"verse_id": "EXO.1.13", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.1.14", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.1.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.1.16", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.1.17", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.1.18", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.1.19", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.1.20", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.1.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.1.22", "polarity_pt": -0.8, "label_pt": "negative", "confidence": 0.95, "notes": null}
+{"verse_id": "EXO.2.1", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.2.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.2.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.2.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.2.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.2.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.2.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.2.9", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.2.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.11", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.2.12", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.13", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.14", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.15", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.2.17", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.2.18", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.2.19", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.2.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.2.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.2.23", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": "mixed death + cry to God"}
+{"verse_id": "EXO.2.24", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.2.25", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.1", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.3.2", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.3.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.3.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "reverential awe"}
+{"verse_id": "EXO.3.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.3.9", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.3.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.11", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.3.12", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.3.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.3.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.16", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.17", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.3.18", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.3.19", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.3.20", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed plague + release"}
+{"verse_id": "EXO.3.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.3.22", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.10", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.13", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.14", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "mixed divine anger + Aaron's joy"}
+{"verse_id": "EXO.4.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.16", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.17", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.19", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed return + death of enemies"}
+{"verse_id": "EXO.4.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.21", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.22", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.23", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.4.24", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.4.25", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.26", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.27", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.4.28", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.4.29", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.30", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.4.31", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.5.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.5.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.4", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.5.5", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.5.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.5.7", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.8", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.10", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.12", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.5.13", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.14", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.5.15", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.16", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.5.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.18", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.5.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.5.22", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.5.23", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.6.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.6.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.3", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.6.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.6", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.6.7", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.6.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.6.9", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.6.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.6.12", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.6.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.6.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.18", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.19", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": "genealogy list"}
+{"verse_id": "EXO.6.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": "genealogy list"}
+{"verse_id": "EXO.6.24", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.9, "notes": "genealogy list"}
+{"verse_id": "EXO.6.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": "genealogy list"}
+{"verse_id": "EXO.6.26", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.28", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.29", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.6.30", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.7.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed judgment + deliverance"}
+{"verse_id": "EXO.7.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.7.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.7.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.7.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.7.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.11", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.12", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.7.13", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.14", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.7.18", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.7.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.7.20", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.7.21", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.7.22", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.23", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.7.24", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.7.25", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.4", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.5", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.7", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.11", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.8.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.13", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.14", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.15", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.16", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.18", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.19", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.22", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.8.23", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.8.24", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.8.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.26", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.28", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.29", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.30", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.8.31", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.8.32", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.2", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.3", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.9.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": "mixed plague + distinction"}
+{"verse_id": "EXO.9.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.6", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.9.7", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.9", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.9.10", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.9.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.12", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.14", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.15", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.16", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.17", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.18", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.9.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.20", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.9.21", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.22", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.23", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.24", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.9.25", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.9.26", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.27", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed confession + justice"}
+{"verse_id": "EXO.9.28", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.29", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.30", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.9.31", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.32", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.9.33", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.34", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.9.35", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.10.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.4", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.7", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.9", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.10.10", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.12", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.13", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.14", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.10.15", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "EXO.10.16", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.18", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.20", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.22", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.23", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": "contrast: darkness for Egypt + light for Israel"}
+{"verse_id": "EXO.10.24", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.27", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.10.28", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.10.29", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.11.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "mixed plague + expulsion"}
+{"verse_id": "EXO.11.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.11.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.11.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.11.5", "polarity_pt": -0.8, "label_pt": "negative", "confidence": 0.95, "notes": null}
+{"verse_id": "EXO.11.6", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.11.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.11.8", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.11.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.11.10", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.12.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": "ritual instruction"}
+{"verse_id": "EXO.12.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": "ritual instruction"}
+{"verse_id": "EXO.12.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": "ritual instruction"}
+{"verse_id": "EXO.12.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.11", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "EXO.12.12", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "EXO.12.13", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.12.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "EXO.12.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "EXO.12.16", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}

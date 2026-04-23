@@ -27,12 +27,55 @@ Total: 2.732 versos · ~11 batches.
 
 ---
 
+## Fase F2 — Evangelhos (narrativa emocional)
+
+Total: 3.773 versos · 14 batches · gerada 2026-04-23.
+
+| Batch                           | Verses | Agent | Status | Started | Finished |
+|---------------------------------|-------:|-------|--------|---------|----------|
+| MAT/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MAT/batch_002_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MAT/batch_003_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MAT/batch_004_input.tsv         |   168  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MRK/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MRK/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| MRK/batch_003_input.tsv         |    75  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| LUK/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| LUK/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| LUK/batch_003_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| LUK/batch_004_input.tsv         |   251  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JHN/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JHN/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JHN/batch_003_input.tsv         |   279  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+
+---
+
+## Fase F3 — Narrativa AT (Gênesis + Êxodo + Jó)
+
+Total: 3.816 versos · 15 batches · gerada 2026-04-23.
+
+| Batch                           | Verses | Agent | Status | Started | Finished |
+|---------------------------------|-------:|-------|--------|---------|----------|
+| GEN/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| GEN/batch_002_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| GEN/batch_003_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| GEN/batch_004_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| GEN/batch_005_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| GEN/batch_006_input.tsv         |    33  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EXO/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EXO/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EXO/batch_003_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EXO/batch_004_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EXO/batch_005_input.tsv         |    13  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOB/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOB/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOB/batch_003_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOB/batch_004_input.tsv         |   170  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+
+---
+
 ## Próximas fases (ainda não preparadas)
 
-Gerar com `prep_sentiment_batch.py` quando F1 estiver a ≥60% de conclusão:
-
-- **F2** — Evangelhos: `MAT` (~13 batches), `MRK` (~3), `LUK` (~4), `JHN` (~3)
-- **F3** — Narrativa AT: `GEN` (~5), `EXO` (~4), `JOB` (~4)
 - **F4** — Sapienciais: `PRO` (~3), `ECC` (~1)
 - **F5** — Epístolas + Apocalipse: `ROM`…`REV`
 - **F6** — Profetas: `ISA`, `JER`, `EZK`, `DAN`, menores
