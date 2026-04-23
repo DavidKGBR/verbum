@@ -1,0 +1,301 @@
+verse_id	chapter	verse	text_en	polarity_en	label_en	text_es
+PRO.1.1	1	1	The proverbs of Solomon the son of David, king of Israel;	0.0	neutral	LOS proverbios de Salomón, hijo de David, rey de Israel:
+PRO.1.2	1	2	To know wisdom and instruction; to perceive the words of understanding;	0.0	neutral	Para entender sabiduría y doctrina; Para conocer las razones prudentes;
+PRO.1.3	1	3	To receive the instruction of wisdom, justice, and judgment, and equity; {equity: Heb. equities}	0.0	neutral	Para recibir el consejo de prudencia, Justicia, y juicio y equidad;
+PRO.1.4	1	4	To give subtilty to the simple, to the young man knowledge and discretion. {discretion: or, advisement}	0.05	neutral	Para dar sagacidad á los simples, Y á los jóvenes inteligencia y cordura.
+PRO.1.5	1	5	A wise {man} will hear, and will increase learning; and a man of understanding shall attain unto wise counsels:	0.7	positive	Oirá el sabio, y aumentará el saber; Y el entendido adquirirá consejo;
+PRO.1.6	1	6	To understand a proverb, and the interpretation; the words of the wise, and their dark sayings. {the interpretation: or, an eloquent speech}	0.275	positive	Para entender parábola y declaración; Palabras de sabios, y sus dichos oscuros.
+PRO.1.7	1	7	The fear of the LORD {is} the beginning of knowledge: {but} fools despise wisdom and instruction. {the beginning: or, the principal part}	-0.75	negative	El principio de la sabiduría es el temor de Jehová: Los insensatos desprecian la sabiduría y la enseñanza.
+PRO.1.8	1	8	My son, hear the instruction of thy father, and forsake not the law of thy mother:	0.0	neutral	Oye, hijo mío, la doctrina de tu padre, Y no desprecies la dirección de tu madre:
+PRO.1.9	1	9	For they {shall be} an ornament of grace unto thy head, and chains about thy neck. {an...: Heb. an adding}	0.0	neutral	Porque adorno de gracia serán á tu cabeza, Y collares á tu cuello.
+PRO.1.10	1	10	My son, if sinners entice thee, consent thou not.	0.0	neutral	Hijo mío, si los pecadores te quisieren engañar, No consientas.
+PRO.1.11	1	11	If they say, Come with us, let us lay wait for blood, let us lurk privily for the innocent without cause:	0.5	positive	Si dijeren: Ven con nosotros, Pongamos asechanzas á la sangre, Acechemos sin motivo al inocente;
+PRO.1.12	1	12	Let us swallow them up alive as the grave; and whole, as those that go down into the pit:	0.0481	neutral	Los tragaremos vivos como el sepulcro, Y enteros, como los que caen en sima;
+PRO.1.13	1	13	We shall find all precious substance, we shall fill our houses with spoil:	0.5	positive	Hallaremos riquezas de todas suertes, Henchiremos nuestras casas de despojos;
+PRO.1.14	1	14	Cast in thy lot among us; let us all have one purse:	0.0	neutral	Echa tu suerte entre nosotros; Tengamos todos una bolsa:
+PRO.1.15	1	15	My son, walk not thou in the way with them; refrain thy foot from their path:	0.0	neutral	Hijo mío, no andes en camino con ellos; Aparta tu pie de sus veredas:
+PRO.1.16	1	16	For their feet run to evil, and make haste to shed blood.	-1.0	negative	Porque sus pies correrán al mal, E irán presurosos á derramar sangre.
+PRO.1.17	1	17	Surely in vain the net is spread in the sight of any bird. {in the...: Heb. in the eyes of every thing that hath a wing}	0.25	positive	Porque en vano se tenderá la red Ante los ojos de toda ave;
+PRO.1.18	1	18	And they lay wait for their {own} blood; they lurk privily for their {own} lives.	0.6	positive	Mas ellos á su propia sangre ponen asechanzas, Y á sus almas tienden lazo.
+PRO.1.19	1	19	So {are} the ways of every one that is greedy of gain; {which} taketh away the life of the owners thereof.	0.0	neutral	Tales son las sendas de todo el que es dado á la codicia, La cual prenderá el alma de sus poseedores.
+PRO.1.20	1	20	Wisdom crieth without; she uttereth her voice in the streets: {Wisdom: Heb. Wisdoms, that is, Excellent wisdom}	0.125	positive	La sabiduría clama de fuera, Da su voz en las plazas:
+PRO.1.21	1	21	She crieth in the chief place of concourse, in the openings of the gates: in the city she uttereth her words, {saying},	0.0	neutral	Clama en los principales lugares de concurso; En las entradas de las puertas de la ciudad dice sus razones:
+PRO.1.22	1	22	How long, ye simple ones, will ye love simplicity? and the scorners delight in their scorning, and fools hate knowledge?	-0.0875	neutral	¿Hasta cuándo, oh simples, amaréis la simpleza, Y los burladores desearán el burlar, Y los insensatos aborrecerán la ciencia?
+PRO.1.23	1	23	Turn you at my reproof: behold, I will pour out my spirit unto you, I will make known my words unto you.	0.0	neutral	Volveos á mi reprensión: He aquí yo os derramaré mi espíritu, Y os haré saber mis palabras.
+PRO.1.24	1	24	Because I have called, and ye refused; I have stretched out my hand, and no man regarded;	-0.05	neutral	Por cuanto llamé, y no quisisteis: Extendí mi mano, y no hubo quien escuchase;
+PRO.1.25	1	25	But ye have set at nought all my counsel, and would none of my reproof:	0.0	neutral	Antes desechasteis todo consejo mío, Y mi reprensión no quisisteis:
+PRO.1.26	1	26	I also will laugh at your calamity; I will mock when your fear cometh;	0.3	positive	También yo me reiré en vuestra calamidad, Y me burlaré cuando os viniere lo que teméis;
+PRO.1.27	1	27	When your fear cometh as desolation, and your destruction cometh as a whirlwind; when distress and anguish cometh upon you.	0.0	neutral	Cuando viniere como una destrucción lo que teméis, Y vuestra calamidad llegare como un torbellino; Cuando sobre vosotros viniere tribulación y angustia.
+PRO.1.28	1	28	Then shall they call upon me, but I will not answer; they shall seek me early, but they shall not find me:	0.1	neutral	Entonces me llamarán, y no responderé; Buscarme han de mañana, y no me hallarán:
+PRO.1.29	1	29	For that they hated knowledge, and did not choose the fear of the LORD:	-0.9	negative	Por cuanto aborrecieron la sabiduría, Y no escogieron el temor de Jehová,
+PRO.1.30	1	30	They would none of my counsel: they despised all my reproof.	0.0	neutral	Ni quisieron mi consejo, Y menospreciaron toda reprensión mía:
+PRO.1.31	1	31	Therefore shall they eat of the fruit of their own way, and be filled with their own devices.	0.5333	positive	Comerán pues del fruto de su camino, Y se hartarán de sus consejos.
+PRO.1.32	1	32	For the turning away of the simple shall slay them, and the prosperity of fools shall destroy them. {turning...: or, ease of the simple}	-0.0667	neutral	Porque el reposo de los ignorantes los matará, Y la prosperidad de los necios los echará á perder.
+PRO.1.33	1	33	But whoso hearkeneth unto me shall dwell safely, and shall be quiet from fear of evil.	-0.1667	negative	Mas el que me oyere, habitará confiadamente, Y vivirá reposado, sin temor de mal.
+PRO.2.1	2	1	My son, if thou wilt receive my words, and hide my commandments with thee;	0.0	neutral	HIJO mío, si tomares mis palabras, Y mis mandamientos guardares dentro de ti,
+PRO.2.2	2	2	So that thou incline thine ear unto wisdom, {and} apply thine heart to understanding;	0.0	neutral	Haciendo estar atento tu oído á la sabiduría; Si inclinares tu corazón á la prudencia;
+PRO.2.3	2	3	Yea, if thou criest after knowledge, {and} liftest up thy voice for understanding; {liftest...: Heb. givest thy voice}	0.0	neutral	Si clamares á la inteligencia, Y á la prudencia dieres tu voz;
+PRO.2.4	2	4	If thou seekest her as silver, and searchest for her as {for} hid treasures;	0.0	neutral	Si como á la plata la buscares, Y la escudriñares como á tesoros;
+PRO.2.5	2	5	Then shalt thou understand the fear of the LORD, and find the knowledge of God.	0.0	neutral	Entonces entenderás el temor de Jehová, Y hallarás el conocimiento de Dios.
+PRO.2.6	2	6	For the LORD giveth wisdom: out of his mouth {cometh} knowledge and understanding.	0.0	neutral	Porque Jehová da la sabiduría, Y de su boca viene el conocimiento y la inteligencia.
+PRO.2.7	2	7	He layeth up sound wisdom for the righteous: {he is} a buckler to them that walk uprightly.	-0.175	negative	El provee de sólida sabiduría á los rectos: Es escudo á los que caminan rectamente.
+PRO.2.8	2	8	He keepeth the paths of judgment, and preserveth the way of his saints.	0.0	neutral	Es el que guarda las veredas del juicio, Y preserva el camino de sus santos.
+PRO.2.9	2	9	Then shalt thou understand righteousness, and judgment, and equity; {yea}, every good path.	0.7	positive	Entonces entenderás justicia, juicio, Y equidad, y todo buen camino.
+PRO.2.10	2	10	When wisdom entereth into thine heart, and knowledge is pleasant unto thy soul;	0.7333	positive	Cuando la sabiduría entrare en tu corazón, Y la ciencia fuere dulce á tu alma,
+PRO.2.11	2	11	Discretion shall preserve thee, understanding shall keep thee:	0.0	neutral	El consejo te guardará, Te preservará la inteligencia:
+PRO.2.12	2	12	To deliver thee from the way of the evil {man}, from the man that speaketh froward things;	-1.0	negative	Para librarte del mal camino, De los hombres que hablan perversidades;
+PRO.2.13	2	13	Who leave the paths of uprightness, to walk in the ways of darkness;	0.0	neutral	Que dejan las veredas derechas, Por andar en caminos tenebrosos;
+PRO.2.14	2	14	Who rejoice to do evil, {and} delight in the frowardness of the wicked;	-1.0	negative	Que se alegran haciendo mal, Que se huelgan en las perversidades del vicio;
+PRO.2.15	2	15	Whose ways {are} crooked, and {they} froward in their paths:	0.0	neutral	Cuyas veredas son torcidas, Y torcidos sus caminos.
+PRO.2.16	2	16	To deliver thee from the strange woman, {even} from the stranger {which} flattereth with her words;	-0.05	neutral	Para librarte de la mujer extraña, De la ajena que halaga con sus palabras;
+PRO.2.17	2	17	Which forsaketh the guide of her youth, and forgetteth the covenant of her God.	0.0	neutral	Que desampara el príncipe de su mocedad, Y se olvida del pacto de su Dios.
+PRO.2.18	2	18	For her house inclineth unto death, and her paths unto the dead.	-0.2	negative	Por lo cual su casa está inclinada á la muerte, Y sus veredas hacia los muertos:
+PRO.2.19	2	19	None that go unto her return again, neither take they hold of the paths of life.	0.0	neutral	Todos los que á ella entraren, no volverán, Ni tomarán las veredas de la vida.
+PRO.2.20	2	20	That thou mayest walk in the way of good {men}, and keep the paths of the righteous.	0.7	positive	Para que andes por el camino de los buenos, Y guardes las veredas de los justos.
+PRO.2.21	2	21	For the upright shall dwell in the land, and the perfect shall remain in it.	1.0	positive	Porque los rectos habitarán la tierra, Y los perfectos permanecerán en ella;
+PRO.2.22	2	22	But the wicked shall be cut off from the earth, and the transgressors shall be rooted out of it. {rooted: or, plucked up}	0.0	neutral	Mas los impíos serán cortados de la tierra, Y los prevaricadores serán de ella desarraigados.
+PRO.3.1	3	1	My son, forget not my law; but let thine heart keep my commandments:	0.0	neutral	HIJO mío, no te olvides de mi ley; Y tu corazón guarde mis mandamientos:
+PRO.3.2	3	2	For length of days, and long life, and peace, shall they add to thee. {long...: Heb. years of life}	-0.05	neutral	Porque largura de días, y años de vida Y paz te aumentarán.
+PRO.3.3	3	3	Let not mercy and truth forsake thee: bind them about thy neck; write them upon the table of thine heart:	0.0	neutral	Misericordia y verdad no te desamparen; Atalas á tu cuello, Escríbelas en la tabla de tu corazón:
+PRO.3.4	3	4	So shalt thou find favour and good understanding in the sight of God and man. {good...: or, good success}	0.6	positive	Y hallarás gracia y buena opinión En los ojos de Dios y de los hombres.
+PRO.3.5	3	5	Trust in the LORD with all thine heart; and lean not unto thine own understanding.	0.6	positive	Fíate de Jehová de todo tu corazón, Y no estribes en tu prudencia.
+PRO.3.6	3	6	In all thy ways acknowledge him, and he shall direct thy paths.	0.1	neutral	Reconócelo en todos tus caminos, Y él enderezará tus veredas.
+PRO.3.7	3	7	Be not wise in thine own eyes: fear the LORD, and depart from evil.	-0.25	negative	No seas sabio en tu opinión: Teme á Jehová, y apártate del mal;
+PRO.3.8	3	8	It shall be health to thy navel, and marrow to thy bones. {health: Heb. medicine} {marrow: Heb. watering, or, moistening}	0.0	neutral	Porque será medicina á tu ombligo, Y tuétano á tus huesos.
+PRO.3.9	3	9	Honour the LORD with thy substance, and with the firstfruits of all thine increase:	0.0	neutral	Honra á Jehová de tu sustancia, Y de las primicias de todos tus frutos;
+PRO.3.10	3	10	So shall thy barns be filled with plenty, and thy presses shall burst out with new wine.	0.2682	positive	Y serán llenas tus trojes con abundancia, Y tus lagares rebosarán de mosto.
+PRO.3.11	3	11	My son, despise not the chastening of the LORD; neither be weary of his correction:	0.0	neutral	No deseches, hijo mío, el castigo de Jehová; Ni te fatigues de su corrección:
+PRO.3.12	3	12	For whom the LORD loveth he correcteth; even as a father the son {in whom} he delighteth.	0.0	neutral	Porque al que ama castiga, Como el padre al hijo á quien quiere.
+PRO.3.13	3	13	Happy {is} the man {that} findeth wisdom, and the man {that} getteth understanding. {that getteth...: Heb. that draweth out understanding}	0.8	positive	Bienaventurado el hombre que halla la sabiduría, Y que obtiene la inteligencia:
+PRO.3.14	3	14	For the merchandise of it {is} better than the merchandise of silver, and the gain thereof than fine gold.	0.4583	positive	Porque su mercadería es mejor que la mercadería de la plata, Y sus frutos más que el oro fino.
+PRO.3.15	3	15	She {is} more precious than rubies: and all the things thou canst desire are not to be compared unto her.	0.5	positive	Más preciosa es que las piedras preciosas; Y todo lo que puedes desear, no se puede comparar á ella.
+PRO.3.16	3	16	Length of days {is} in her right hand; {and} in her left hand riches and honour.	0.1429	positive	Largura de días está en su mano derecha; En su izquierda riquezas y honra.
+PRO.3.17	3	17	Her ways {are} ways of pleasantness, and all her paths {are} peace.	0.0	neutral	Sus caminos son caminos deleitosos, Y todas sus veredas paz.
+PRO.3.18	3	18	She {is} a tree of life to them that lay hold upon her: and happy {is every one} that retaineth her.	0.8	positive	Ella es árbol de vida á los que de ella asen: Y bienaventurados son los que la mantienen.
+PRO.3.19	3	19	The LORD by wisdom hath founded the earth; by understanding hath he established the heavens. {established: or, prepared}	0.0	neutral	Jehová con sabiduría fundó la tierra; Afirmó los cielos con inteligencia.
+PRO.3.20	3	20	By his knowledge the depths are broken up, and the clouds drop down the dew.	-0.2778	negative	Con su ciencia se partieron los abismos, Y destilan el rocío los cielos.
+PRO.3.21	3	21	My son, let not them depart from thine eyes: keep sound wisdom and discretion:	0.4	positive	Hijo mío, no se aparten estas cosas de tus ojos; Guarda la ley y el consejo;
+PRO.3.22	3	22	So shall they be life unto thy soul, and grace to thy neck.	0.0	neutral	Y serán vida á tu alma, Y gracia á tu cuello.
+PRO.3.23	3	23	Then shalt thou walk in thy way safely, and thy foot shall not stumble.	0.2625	positive	Entonces andarás por tu camino confiadamente, Y tu pie no tropezará.
+PRO.3.24	3	24	When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet.	-0.1403	negative	Cuando te acostares, no tendrás temor; Antes te acostarás, y tu sueño será suave.
+PRO.3.25	3	25	Be not afraid of sudden fear, neither of the desolation of the wicked, when it cometh.	0.15	positive	No tendrás temor de pavor repentino, Ni de la ruina de los impíos cuando viniere:
+PRO.3.26	3	26	For the LORD shall be thy confidence, and shall keep thy foot from being taken.	0.0	neutral	Porque Jehová será tu confianza, Y él preservará tu pie de ser preso.
+PRO.3.27	3	27	Withhold not good from them to whom it is due, when it is in the power of thine hand to do {it}. {them...: Heb. the owners thereof}	-0.2375	negative	No detengas el bien de sus dueños, Cuando tuvieres poder para hacerlo.
+PRO.3.28	3	28	Say not unto thy neighbour, Go, and come again, and to morrow I will give; when thou hast it by thee.	0.0	neutral	No digas á tu prójimo: Ve, y vuelve, Y mañana te daré; Cuando tienes contigo qué darle.
+PRO.3.29	3	29	Devise not evil against thy neighbour, seeing he dwelleth securely by thee. {Devise...: or, Practise no evil}	0.4667	positive	No intentes mal contra tu prójimo, Estando él confiado de ti.
+PRO.3.30	3	30	Strive not with a man without cause, if he have done thee no harm.	0.0	neutral	No pleitees con alguno sin razón, Si él no te ha hecho agravio.
+PRO.3.31	3	31	Envy thou not the oppressor, and choose none of his ways. {the oppressor: Heb. a man of violence}	0.0	neutral	No envidies al hombre injusto, Ni escojas alguno de sus caminos.
+PRO.3.32	3	32	For the froward {is} abomination to the LORD: but his secret {is} with the righteous.	-0.4	negative	Porque el perverso es abominado de Jehová: Mas su secreto es con los rectos.
+PRO.3.33	3	33	The curse of the LORD {is} in the house of the wicked: but he blesseth the habitation of the just.	0.0	neutral	La maldición de Jehová está en la casa del impío; Mas él bendecirá la morada de los justos.
+PRO.3.34	3	34	Surely he scorneth the scorners: but he giveth grace unto the lowly.	0.25	positive	Ciertamente él escarnecerá á los escarnecedores, Y á los humildes dará gracia.
+PRO.3.35	3	35	The wise shall inherit glory: but shame shall be the promotion of fools. {shall be...: Heb. exalteth the fools}	0.7	positive	Los sabios heredarán honra: Mas los necios sostendrán ignominia.
+PRO.4.1	4	1	Hear, ye children, the instruction of a father, and attend to know understanding.	0.0	neutral	OID, hijos, la doctrina de un padre, Y estad atentos para que conozcáis cordura.
+PRO.4.2	4	2	For I give you good doctrine, forsake ye not my law.	0.7	positive	Porque os doy buena enseñanza; No desamparéis mi ley.
+PRO.4.3	4	3	For I was my father's son, tender and only {beloved} in the sight of my mother.	0.35	positive	Porque yo fuí hijo de mi padre, Delicado y único delante de mi madre.
+PRO.4.4	4	4	He taught me also, and said unto me, Let thine heart retain my words: keep my commandments, and live.	0.1364	positive	Y él me enseñaba, y me decía: Mantenga tu corazón mis razones, Guarda mis mandamientos, y vivirás:
+PRO.4.5	4	5	Get wisdom, get understanding: forget {it} not; neither decline from the words of my mouth.	0.0	neutral	Adquiere sabiduría, adquiere inteligencia; No te olvides ni te apartes de las razones de mi boca;
+PRO.4.6	4	6	Forsake her not, and she shall preserve thee: love her, and she shall keep thee.	0.5	positive	No la dejes, y ella te guardará; Amala, y te conservará.
+PRO.4.7	4	7	Wisdom {is} the principal thing; {therefore} get wisdom: and with all thy getting get understanding.	0.0	neutral	Sabiduría ante todo: adquiere sabiduría: Y ante toda tu posesión adquiere inteligencia.
+PRO.4.8	4	8	Exalt her, and she shall promote thee: she shall bring thee to honour, when thou dost embrace her.	0.0	neutral	Engrandécela, y ella te engrandecerá: Ella te honrará, cuando tú la hubieres abrazado.
+PRO.4.9	4	9	She shall give to thine head an ornament of grace: a crown of glory shall she deliver to thee. {a crown...: or, she shall compass thee with a crown of glory}	0.0	neutral	Adorno de gracia dará á tu cabeza: Corona de hermosura te entregará.
+PRO.4.10	4	10	Hear, O my son, and receive my sayings; and the years of thy life shall be many.	0.5	positive	Oye, hijo mío, y recibe mis razones; Y se te multiplicarán años de vida.
+PRO.4.11	4	11	I have taught thee in the way of wisdom; I have led thee in right paths.	0.2857	positive	Por el camino de la sabiduría te he encaminado, Y por veredas derechas te he hecho andar.
+PRO.4.12	4	12	When thou goest, thy steps shall not be straitened; and when thou runnest, thou shalt not stumble.	0.025	neutral	Cuando anduvieres no se estrecharán tus pasos; Y si corrieres, no tropezarás.
+PRO.4.13	4	13	Take fast hold of instruction; let {her} not go: keep her; for she {is} thy life.	0.2	positive	Ten el consejo, no lo dejes; Guárdalo, porque eso es tu vida.
+PRO.4.14	4	14	Enter not into the path of the wicked, and go not in the way of evil {men}.	-1.0	negative	No entres por la vereda de los impíos, Ni vayas por el camino de los malos.
+PRO.4.15	4	15	Avoid it, pass not by it, turn from it, and pass away.	0.0	neutral	Desampárala, no pases por ella; Apártate de ella, pasa.
+PRO.4.16	4	16	For they sleep not, except they have done mischief; and their sleep is taken away, unless they cause {some} to fall.	0.0	neutral	Porque no duermen ellos, si no hicieren mal; Y pierden su sueño, si no han hecho caer.
+PRO.4.17	4	17	For they eat the bread of wickedness, and drink the wine of violence.	0.0	neutral	Porque comen pan de maldad, y beben vino de robos.
+PRO.4.18	4	18	But the path of the just {is} as the shining light, that shineth more and more unto the perfect day.	0.6	positive	Mas la senda de los justos es como la luz de la aurora, Que va en aumento hasta que el día es perfecto.
+PRO.4.19	4	19	The way of the wicked {is} as darkness: they know not at what they stumble.	-0.05	neutral	El camino de los impíos es como la oscuridad: No saben en qué tropiezan.
+PRO.4.20	4	20	My son, attend to my words; incline thine ear unto my sayings.	0.0	neutral	Hijo mío, está atento á mis palabras; Inclina tu oído á mis razones.
+PRO.4.21	4	21	Let them not depart from thine eyes; keep them in the midst of thine heart.	0.0	neutral	No se aparten de tus ojos; Guárdalas en medio de tu corazón.
+PRO.4.22	4	22	For they {are} life unto those that find them, and health to all their flesh. {health: Heb. medicine}	0.0	neutral	Porque son vida á los que las hallan, Y medicina á toda su carne.
+PRO.4.23	4	23	Keep thy heart with all diligence; for out of it {are} the issues of life. {with...: Heb. above all keeping}	0.0	neutral	Sobre toda cosa guardada guarda tu corazón; Porque de él mana la vida.
+PRO.4.24	4	24	Put away from thee a froward mouth, and perverse lips put far from thee. {a froward...: Heb. frowardness of mouth and perverseness of lips}	0.1	neutral	Aparta de ti la perversidad de la boca, Y aleja de ti la iniquidad de labios.
+PRO.4.25	4	25	Let thine eyes look right on, and let thine eyelids look straight before thee.	0.2429	positive	Tus ojos miren lo recto, Y tus párpados en derechura delante de ti.
+PRO.4.26	4	26	Ponder the path of thy feet, and let all thy ways be established. {let...: or, all thy ways shall be ordered aright}	0.0	neutral	Examina la senda de tus pies, Y todos tus caminos sean ordenados.
+PRO.4.27	4	27	Turn not to the right hand nor to the left: remove thy foot from evil.	-0.2381	negative	No te apartes á diestra, ni á siniestra: Aparta tu pie del mal.
+PRO.5.1	5	1	My son, attend unto my wisdom, {and} bow thine ear to my understanding:	0.0	neutral	HIJO mío, está atento á mi sabiduría, Y á mi inteligencia inclina tu oído;
+PRO.5.2	5	2	That thou mayest regard discretion, and {that} thy lips may keep knowledge.	0.0	neutral	Para que guardes consejo, Y tus labios conserven la ciencia.
+PRO.5.3	5	3	For the lips of a strange woman drop {as} an honeycomb, and her mouth {is} smoother than oil: {mouth: Heb. palate}	-0.4	negative	Porque los labios de la extraña destilan miel, Y su paladar es más blando que el aceite;
+PRO.5.4	5	4	But her end is bitter as wormwood, sharp as a twoedged sword.	-0.1125	negative	Mas su fin es amargo como el ajenjo, Agudo como cuchillo de dos filos.
+PRO.5.5	5	5	Her feet go down to death; her steps take hold on hell.	-0.1556	negative	Sus pies descienden á la muerte; Sus pasos sustentan el sepulcro:
+PRO.5.6	5	6	Lest thou shouldest ponder the path of life, her ways are moveable, {that} thou canst not know {them}.	0.0	neutral	Sus caminos son instables; no los conocerás, Si no considerares el camino de vida.
+PRO.5.7	5	7	Hear me now therefore, O ye children, and depart not from the words of my mouth.	0.0	neutral	Ahora pues, hijos, oidme, Y no os apartéis de las razones de mi boca.
+PRO.5.8	5	8	Remove thy way far from her, and come not nigh the door of her house:	0.1	neutral	Aleja de ella tu camino, Y no te acerques á la puerta de su casa;
+PRO.5.9	5	9	Lest thou give thine honour unto others, and thy years unto the cruel:	-1.0	negative	Porque no des á los extraños tu honor, Y tus años á cruel;
+PRO.5.10	5	10	Lest strangers be filled with thy wealth; and thy labours {be} in the house of a stranger; {thy wealth: Heb. thy strength}	0.4	positive	Porque no se harten los extraños de tu fuerza, Y tus trabajos estén en casa del extraño;
+PRO.5.11	5	11	And thou mourn at the last, when thy flesh and thy body are consumed,	0.0	neutral	Y gimas en tus postrimerías, Cuando se consumiere tu carne y tu cuerpo,
+PRO.5.12	5	12	And say, How have I hated instruction, and my heart despised reproof;	-0.9	negative	Y digas: ¡Cómo aborrecí el consejo, Y mi corazón menospreció la reprensión;
+PRO.5.13	5	13	And have not obeyed the voice of my teachers, nor inclined mine ear to them that instructed me!	0.0	neutral	Y no oí la voz de los que me adoctrinaban, Y á los que me enseñaban no incliné mi oído!
+PRO.5.14	5	14	I was almost in all evil in the midst of the congregation and assembly.	-1.0	negative	Casi en todo mal he estado, En medio de la sociedad y de la congregación.
+PRO.5.15	5	15	Drink waters out of thine own cistern, and running waters out of thine own well.	0.6	positive	Bebe el agua de tu cisterna, Y los raudales de tu pozo.
+PRO.5.16	5	16	Let thy fountains be dispersed abroad, {and} rivers of waters in the streets.	0.0	neutral	Derrámense por de fuera tus fuentes, En las plazas los ríos de aguas.
+PRO.5.17	5	17	Let them be only thine own, and not strangers' with thee.	0.3	positive	Sean para ti solo, Y no para los extraños contigo.
+PRO.5.18	5	18	Let thy fountain be blessed: and rejoice with the wife of thy youth.	0.0	neutral	Sea bendito tu manantial; Y alégrate con la mujer de tu mocedad.
+PRO.5.19	5	19	{Let her be as} the loving hind and pleasant roe; let her breasts satisfy thee at all times; and be thou ravished always with her love. {satisfy...: Heb. water thee} {be thou...: Heb. err thou always in her love}	0.5833	positive	Como cierva amada y graciosa corza, Sus pechos te satisfagan en todo tiempo; Y en su amor recréate siempre.
+PRO.5.20	5	20	And why wilt thou, my son, be ravished with a strange woman, and embrace the bosom of a stranger?	-0.05	neutral	¿Y por qué, hijo mío, andarás ciego con la ajena, Y abrazarás el seno de la extraña?
+PRO.5.21	5	21	For the ways of man {are} before the eyes of the LORD, and he pondereth all his goings.	0.0	neutral	Pues que los caminos del hombre están ante los ojos de Jehová, Y él considera todas sus veredas.
+PRO.5.22	5	22	His own iniquities shall take the wicked himself, and he shall be holden with the cords of his sins. {sins: Heb. sin}	0.6	positive	Prenderán al impío sus propias iniquidades, Y detenido será con las cuerdas de su pecado.
+PRO.5.23	5	23	He shall die without instruction; and in the greatness of his folly he shall go astray.	0.0	neutral	El morirá por falta de corrección; Y errará por la grandeza de su locura.
+PRO.6.1	6	1	My son, if thou be surety for thy friend, {if} thou hast stricken thy hand with a stranger,	0.0	neutral	HIJO mío, si salieres fiador por tu amigo, Si tocaste tu mano por el extraño,
+PRO.6.2	6	2	Thou art snared with the words of thy mouth, thou art taken with the words of thy mouth.	0.0	neutral	Enlazado eres con las palabras de tu boca, Y preso con las razones de tu boca.
+PRO.6.3	6	3	Do this now, my son, and deliver thyself, when thou art come into the hand of thy friend; go, humble thyself, and make sure thy friend. {and make...: or, so shalt thou prevail with thy friend}	0.15	positive	Haz esto ahora, hijo mío, y líbrate, Ya que has caído en la mano de tu prójimo: Ve, humíllate, y asegúrate de tu amigo.
+PRO.6.4	6	4	Give not sleep to thine eyes, nor slumber to thine eyelids.	0.0	neutral	No des sueño á tus ojos, Ni á tus párpados adormecimiento.
+PRO.6.5	6	5	Deliver thyself as a roe from the hand {of the hunter}, and as a bird from the hand of the fowler.	0.0	neutral	Escápate como el corzo de la mano del cazador, Y como el ave de la mano del parancero.
+PRO.6.6	6	6	Go to the ant, thou sluggard; consider her ways, and be wise:	0.7	positive	Ve á la hormiga, oh perezoso Mira sus caminos, y sé sabio;
+PRO.6.7	6	7	Which having no guide, overseer, or ruler,	0.0	neutral	La cual no teniendo capitán, Ni gobernador, ni señor,
+PRO.6.8	6	8	Provideth her meat in the summer, {and} gathereth her food in the harvest.	0.0	neutral	Prepara en el verano su comida Y allega en el tiempo de la siega su mantenimiento.
+PRO.6.9	6	9	How long wilt thou sleep, O sluggard? when wilt thou arise out of thy sleep?	-0.05	neutral	Perezoso, ¿hasta cuándo has de dormir? ¿Cuándo te levantarás de tu sueño?
+PRO.6.10	6	10	{Yet} a little sleep, a little slumber, a little folding of the hands to sleep:	-0.1875	negative	Un poco de sueño, un poco de dormitar, Y cruzar por un poco las manos para reposo:
+PRO.6.11	6	11	So shall thy poverty come as one that travelleth, and thy want as an armed man.	0.0	neutral	Así vendrá tu necesidad como caminante, Y tu pobreza como hombre de escudo.
+PRO.6.12	6	12	A naughty person, a wicked man, walketh with a froward mouth.	-0.15	negative	El hombre malo, el hombre depravado, Anda en perversidad de boca;
+PRO.6.13	6	13	He winketh with his eyes, he speaketh with his feet, he teacheth with his fingers;	0.0	neutral	Guiña de sus ojos, habla con sus pies, Indica con sus dedos;
+PRO.6.14	6	14	Frowardness {is} in his heart, he deviseth mischief continually; he soweth discord. {soweth: Heb. casteth forth}	0.0	neutral	Perversidades hay en su corazón, anda pensando mal en todo tiempo; Enciende rencillas.
+PRO.6.15	6	15	Therefore shall his calamity come suddenly; suddenly shall he be broken without remedy.	-0.2	negative	Por tanto su calamidad vendrá de repente; Súbitamente será quebrantado, y no habrá remedio.
+PRO.6.16	6	16	These six {things} doth the LORD hate: yea, seven {are} an abomination unto him: {unto...: Heb. of his soul}	-0.775	negative	Seis cosas aborrece Jehová, Y aun siete abomina su alma:
+PRO.6.17	6	17	A proud look, a lying tongue, and hands that shed innocent blood, {A proud...: Heb. Haughty eyes}	0.7	positive	Los ojos altivos, la lengua mentirosa, Las manos derramadoras de sangre inocente,
+PRO.6.18	6	18	An heart that deviseth wicked imaginations, feet that be swift in running to mischief,	0.0	neutral	El corazón que maquina pensamientos inicuos, Los pies presurosos para correr al mal,
+PRO.6.19	6	19	A false witness {that} speaketh lies, and he that soweth discord among brethren.	-0.4	negative	El testigo falso que habla mentiras, Y el que enciende rencillas entre los hermanos.
+PRO.6.20	6	20	My son, keep thy father's commandment, and forsake not the law of thy mother:	0.0	neutral	Guarda, hijo mío, el mandamiento de tu padre, Y no dejes la enseñanza de tu madre:
+PRO.6.21	6	21	Bind them continually upon thine heart, {and} tie them about thy neck.	0.0	neutral	Atalos siempre en tu corazón, Enlázalos á tu cuello.
+PRO.6.22	6	22	When thou goest, it shall lead thee; when thou sleepest, it shall keep thee; and {when} thou awakest, it shall talk with thee.	0.0	neutral	Te guiarán cuando anduvieres; cuando durmieres te guardarán; Hablarán contigo cuando despertares.
+PRO.6.23	6	23	For the commandment {is} a lamp; and the law {is} light; and reproofs of instruction {are} the way of life: {lamp: or, candle}	-0.175	negative	Porque el mandamiento es antorcha, y la enseñanza luz; Y camino de vida las reprensiones de la enseñanza:
+PRO.6.24	6	24	To keep thee from the evil woman, from the flattery of the tongue of a strange woman. {of the...: or, of the strange tongue}	-0.3667	negative	Para que te guarden de la mala mujer, De la blandura de la lengua de la extraña.
+PRO.6.25	6	25	Lust not after her beauty in thine heart; neither let her take thee with her eyelids.	0.0	neutral	No codicies su hermosura en tu corazón, Ni ella te prenda con sus ojos:
+PRO.6.26	6	26	For by means of a whorish woman {a man is brought} to a piece of bread: and the adulteress will hunt for the precious life. {the adulteress: Heb. the woman of a man, or, a man's wife}	0.5	positive	Porque á causa de la mujer ramera es reducido el hombre á un bocado de pan; Y la mujer caza la preciosa alma del varón.
+PRO.6.27	6	27	Can a man take fire in his bosom, and his clothes not be burned?	0.0	neutral	¿Tomará el hombre fuego en su seno, Sin que sus vestidos se quemen?
+PRO.6.28	6	28	Can one go upon hot coals, and his feet not be burned?	0.25	positive	¿Andará el hombre sobre las brasas, Sin que sus pies se abrasen?
+PRO.6.29	6	29	So he that goeth in to his neighbour's wife; whosoever toucheth her shall not be innocent.	0.5	positive	Así el que entrare á la mujer de su prójimo; No será sin culpa cualquiera que la tocare.
+PRO.6.30	6	30	{Men} do not despise a thief, if he steal to satisfy his soul when he is hungry;	0.0	neutral	No tienen en poco al ladrón, cuando hurtare Para saciar su alma teniendo hambre:
+PRO.6.31	6	31	But {if} he be found, he shall restore sevenfold; he shall give all the substance of his house.	0.0	neutral	Empero tomado, paga las setenas, Da toda la sustancia de su casa.
+PRO.6.32	6	32	{But} whoso committeth adultery with a woman lacketh understanding: he {that} doeth it destroyeth his own soul. {understanding: Heb. heart}	0.6	positive	Mas el que comete adulterio con la mujer, es falto de entendimiento: Corrompe su alma el que tal hace.
+PRO.6.33	6	33	A wound and dishonour shall he get; and his reproach shall not be wiped away.	0.0	neutral	Plaga y vergüenza hallará; Y su afrenta nunca será raída.
+PRO.6.34	6	34	For jealousy {is} the rage of a man: therefore he will not spare in the day of vengeance.	0.0	neutral	Porque los celos son el furor del hombre, Y no perdonará en el día de la venganza.
+PRO.6.35	6	35	He will not regard any ransom; neither will he rest content, though thou givest many gifts. {He will...: Heb. He will not accept the face of any ransom}	0.5	positive	No tendrá respeto á ninguna redención; Ni querrá perdonar, aunque multipliques los dones.
+PRO.7.1	7	1	My son, keep my words, and lay up my commandments with thee.	0.0	neutral	HIJO mío, guarda mis razones, Y encierra contigo mis mandamientos.
+PRO.7.2	7	2	Keep my commandments, and live; and my law as the apple of thine eye.	0.1364	positive	Guarda mis mandamientos, y vivirás; Y mi ley como las niñas de tus ojos.
+PRO.7.3	7	3	Bind them upon thy fingers, write them upon the table of thine heart.	0.0	neutral	Lígalos á tus dedos; Escríbelos en la tabla de tu corazón.
+PRO.7.4	7	4	Say unto wisdom, Thou {art} my sister; and call understanding {thy} kinswoman:	0.0	neutral	Di á la sabiduría: Tú eres mi hermana; Y á la inteligencia llama parienta:
+PRO.7.5	7	5	That they may keep thee from the strange woman, from the stranger {which} flattereth with her words.	-0.05	neutral	Para que te guarden de la mujer ajena, Y de la extraña que ablanda sus palabras.
+PRO.7.6	7	6	For at the window of my house I looked through my casement,	0.0	neutral	Porque mirando yo por la ventana de mi casa, Por mi celosía,
+PRO.7.7	7	7	And beheld among the simple ones, I discerned among the youths, a young man void of understanding, {the youths: Heb. the sons}	0.05	neutral	Vi entre los simples, Consideré entre los jóvenes, Un mancebo falto de entendimiento,
+PRO.7.8	7	8	Passing through the street near her corner; and he went the way to her house,	0.1	neutral	El cual pasaba por la calle, junto á la esquina de aquella, E iba camino de su casa,
+PRO.7.9	7	9	In the twilight, in the evening, in the black and dark night: {in the evening: Heb. in the evening of days}	-0.3556	negative	A la tarde del día, ya que oscurecía, En la oscuridad y tiniebla de la noche.
+PRO.7.10	7	10	And, behold, there met him a woman {with} the attire of an harlot, and subtil of heart.	0.0	neutral	Y he aquí, una mujer que le sale al encuentro Con atavío de ramera, astuta de corazón,
+PRO.7.11	7	11	(She {is} loud and stubborn; her feet abide not in her house:	0.1	neutral	Alborotadora y rencillosa, Sus pies no pueden estar en casa;
+PRO.7.12	7	12	Now {is she} without, now in the streets, and lieth in wait at every corner.)	0.0	neutral	Unas veces de fuera, ó bien por las plazas, Acechando por todas las esquinas.
+PRO.7.13	7	13	So she caught him, and kissed him, {and} with an impudent face said unto him, {with...: Heb. she strengthened her face and said}	0.0	neutral	Y traba de él, y bésalo; Desvergonzó su rostro, y díjole:
+PRO.7.14	7	14	{I have} peace offerings with me; this day have I payed my vows. {I have...: Heb. Peace offerings are upon me}	0.0	neutral	Sacrificios de paz había prometido, Hoy he pagado mis votos;
+PRO.7.15	7	15	Therefore came I forth to meet thee, diligently to seek thy face, and I have found thee.	0.0	neutral	Por tanto he salido á encontrarte, Buscando diligentemente tu rostro, y te he hallado.
+PRO.7.16	7	16	I have decked my bed with coverings of tapestry, with carved {works}, with fine linen of Egypt.	0.4167	positive	Con paramentos he ataviado mi cama, Recamados con cordoncillo de Egipto.
+PRO.7.17	7	17	I have perfumed my bed with myrrh, aloes, and cinnamon.	0.0	neutral	He sahumado mi cámara Con mirra, áloes, y cinamomo.
+PRO.7.18	7	18	Come, let us take our fill of love until the morning: let us solace ourselves with loves.	0.5	positive	Ven, embriaguémonos de amores hasta la mañana; Alegrémonos en amores.
+PRO.7.19	7	19	For the goodman {is} not at home, he is gone a long journey:	-0.05	neutral	Porque el marido no está en casa, Hase ido á un largo viaje:
+PRO.7.20	7	20	He hath taken a bag of money with him, {and} will come home at the day appointed. {with...: Heb. in his hand} {the day...: or, the new moon}	0.1364	positive	El saco de dinero llevó en su mano; El día señalado volverá á su casa.
+PRO.7.21	7	21	With her much fair speech she caused him to yield, with the flattering of her lips she forced him.	0.2	positive	Rindiólo con la mucha suavidad de sus palabras, Obligóle con la blandura de sus labios.
+PRO.7.22	7	22	He goeth after her straightway, as an ox goeth to the slaughter, or as a fool to the correction of the stocks; {straightway: Heb. suddenly}	0.0	neutral	Vase en pos de ella luego, Como va el buey al degolladero, Y como el loco á las prisiones para ser castigado;
+PRO.7.23	7	23	Till a dart strike through his liver; as a bird hasteth to the snare, and knoweth not that it {is} for his life.	0.0	neutral	Como el ave que se apresura al lazo, Y no sabe que es contra su vida, Hasta que la saeta traspasó su hígado.
+PRO.7.24	7	24	Hearken unto me now therefore, O ye children, and attend to the words of my mouth.	0.0	neutral	Ahora pues, hijos, oidme, Y estad atentos á las razones de mi boca.
+PRO.7.25	7	25	Let not thine heart decline to her ways, go not astray in her paths.	0.0	neutral	No se aparte á sus caminos tu corazón; No yerres en sus veredas.
+PRO.7.26	7	26	For she hath cast down many wounded: yea, many strong {men} have been slain by her.	0.3194	positive	Porque á muchos ha hecho caer heridos; Y aun los más fuertes han sido muertos por ella.
+PRO.7.27	7	27	Her house {is} the way to hell, going down to the chambers of death.	-0.1556	negative	Caminos del sepulcro son su casa, Que descienden á las cámaras de la muerte.
+PRO.8.1	8	1	Doth not wisdom cry? and understanding put forth her voice?	0.0	neutral	¿NO clama la sabiduría, Y da su voz la inteligencia?
+PRO.8.2	8	2	She standeth in the top of high places, by the way in the places of the paths.	0.33	positive	En los altos cabezos, junto al camino, A las encrucijadas de las veredas se para;
+PRO.8.3	8	3	She crieth at the gates, at the entry of the city, at the coming in at the doors.	0.0	neutral	En el lugar de las puertas, á la entrada de la ciudad, A la entrada de las puertas da voces:
+PRO.8.4	8	4	Unto you, O men, I call; and my voice {is} to the sons of man.	0.0	neutral	Oh hombres, á vosotros clamo; Y mi voz es á los hijos de los hombres.
+PRO.8.5	8	5	O ye simple, understand wisdom: and, ye fools, be ye of an understanding heart.	0.0	neutral	Entended, simples, discreción; Y vosotros, locos, entrad en cordura.
+PRO.8.6	8	6	Hear; for I will speak of excellent things; and the opening of my lips {shall be} right things.	0.6429	positive	Oid, porque hablaré cosas excelentes; Y abriré mis labios para cosas rectas.
+PRO.8.7	8	7	For my mouth shall speak truth; and wickedness {is} an abomination to my lips. {an...: Heb. the abomination of my lips}	0.0	neutral	Porque mi boca hablará verdad, Y la impiedad abominan mis labios.
+PRO.8.8	8	8	All the words of my mouth {are} in righteousness; {there is} nothing froward or perverse in them. {froward: Heb. wreathed}	0.0	neutral	En justicia son todas las razones de mi boca; No hay en ellas cosa perversa ni torcida.
+PRO.8.9	8	9	They {are} all plain to him that understandeth, and right to them that find knowledge.	0.0357	neutral	Todas ellas son rectas al que entiende, Y razonables á los que han hallado sabiduría.
+PRO.8.10	8	10	Receive my instruction, and not silver; and knowledge rather than choice gold.	0.0	neutral	Recibid mi enseñanza, y no plata; Y ciencia antes que el oro escogido.
+PRO.8.11	8	11	For wisdom {is} better than rubies; and all the things that may be desired are not to be compared to it.	0.5	positive	Porque mejor es la sabiduría que las piedras preciosas; Y todas las cosas que se pueden desear, no son de comparar con ella.
+PRO.8.12	8	12	I wisdom dwell with prudence, and find out knowledge of witty inventions. {prudence: or, subtilty}	0.5	positive	Yo, la sabiduría, habito con la discreción, Y hallo la ciencia de los consejos.
+PRO.8.13	8	13	The fear of the LORD {is} to hate evil: pride, and arrogancy, and the evil way, and the froward mouth, do I hate.	-0.9	negative	El temor de Jehová es aborrecer el mal; La soberbia y la arrogancia, y el mal camino Y la boca perversa, aborrezco.
+PRO.8.14	8	14	Counsel {is} mine, and sound wisdom: I {am} understanding; I have strength.	0.4	positive	Conmigo está el consejo y el ser; Yo soy la inteligencia; mía es la fortaleza.
+PRO.8.15	8	15	By me kings reign, and princes decree justice.	0.0	neutral	Por mí reinan los reyes, Y los príncipes determinan justicia.
+PRO.8.16	8	16	By me princes rule, and nobles, {even} all the judges of the earth.	0.0	neutral	Por mí dominan los príncipes, Y todos los gobernadores juzgan la tierra.
+PRO.8.17	8	17	I love them that love me; and those that seek me early shall find me.	0.3667	positive	Yo amo á los que me aman; Y me hallan los que madrugando me buscan.
+PRO.8.18	8	18	Riches and honour {are} with me; {yea}, durable riches and righteousness.	0.0	neutral	Las riquezas y la honra están conmigo; Sólidas riquezas, y justicia.
+PRO.8.19	8	19	My fruit {is} better than gold, yea, than fine gold; and my revenue than choice silver.	0.4583	positive	Mejor es mi fruto que el oro, y que el oro refinado; Y mi rédito mejor que la plata escogida.
+PRO.8.20	8	20	I lead in the way of righteousness, in the midst of the paths of judgment: {lead: or, walk}	-0.75	negative	Por vereda de justicia guiaré, Por en medio de sendas de juicio;
+PRO.8.21	8	21	That I may cause those that love me to inherit substance; and I will fill their treasures.	0.5	positive	Para hacer heredar á mis amigos el ser, Y que yo hincha sus tesoros.
+PRO.8.22	8	22	The LORD possessed me in the beginning of his way, before his works of old.	0.1	neutral	Jehová me poseía en el principio de su camino, Ya de antiguo, antes de sus obras.
+PRO.8.23	8	23	I was set up from everlasting, from the beginning, or ever the earth was.	0.0	neutral	Eternalmente tuve el principado, desde el principio, Antes de la tierra.
+PRO.8.24	8	24	When {there were} no depths, I was brought forth; when {there were} no fountains abounding with water.	0.0	neutral	Antes de los abismos fuí engendrada; Antes que fuesen las fuentes de las muchas aguas.
+PRO.8.25	8	25	Before the mountains were settled, before the hills was I brought forth:	0.0	neutral	Antes que los montes fuesen fundados, Antes de los collados, era yo engendrada:
+PRO.8.26	8	26	While as yet he had not made the earth, nor the fields, nor the highest part of the dust of the world. {fields: or, open places} {the highest...: or, the chief part}	0.0	neutral	No había aún hecho la tierra, ni las campiñas, Ni el principio del polvo del mundo.
+PRO.8.27	8	27	When he prepared the heavens, I {was} there: when he set a compass upon the face of the depth: {a compass: or, a circle}	-0.75	negative	Cuando formaba los cielos, allí estaba yo; Cuando señalaba por compás la sobrefaz del abismo;
+PRO.8.28	8	28	When he established the clouds above: when he strengthened the fountains of the deep:	0.0	neutral	Cuando afirmaba los cielos arriba, Cuando afirmaba las fuentes del abismo;
+PRO.8.29	8	29	When he gave to the sea his decree, that the waters should not pass his commandment: when he appointed the foundations of the earth:	0.0	neutral	Cuando ponía á la mar su estatuto, Y á las aguas, que no pasasen su mandamiento; Cuando establecía los fundamentos de la tierra;
+PRO.8.30	8	30	Then I was by him, {as} one brought up {with him}: and I was daily {his} delight, rejoicing always before him;	0.0	neutral	Con él estaba yo ordenándolo todo; Y fuí su delicia todos los días, Teniendo solaz delante de él en todo tiempo.
+PRO.8.31	8	31	Rejoicing in the habitable part of his earth; and my delights {were} with the sons of men.	0.0	neutral	Huélgome en la parte habitable de su tierra; Y mis delicias son con los hijos de los hombres.
+PRO.8.32	8	32	Now therefore hearken unto me, O ye children: for blessed {are they that} keep my ways.	0.0	neutral	Ahora pues, hijos, oidme: Y bienaventurados los que guardaren mis caminos.
+PRO.8.33	8	33	Hear instruction, and be wise, and refuse it not.	0.7	positive	Atended el consejo, y sed sabios, Y no lo menospreciéis.
+PRO.8.34	8	34	Blessed {is} the man that heareth me, watching daily at my gates, waiting at the posts of my doors.	0.0	neutral	Bienaventurado el hombre que me oye, Velando á mis puertas cada día, Guardando los umbrales de mis entradas.
+PRO.8.35	8	35	For whoso findeth me findeth life, and shall obtain favour of the LORD. {obtain: Heb. bring forth}	0.0	neutral	Porque el que me hallare, hallará la vida, Y alcanzará el favor de Jehová.
+PRO.8.36	8	36	But he that sinneth against me wrongeth his own soul: all they that hate me love death.	0.1	neutral	Mas el que peca contra mí, defrauda su alma: Todos los que me aborrecen, aman la muerte.
+PRO.9.1	9	1	Wisdom hath builded her house, she hath hewn out her seven pillars:	0.0	neutral	LA sabiduría edificó su casa, Labró sus siete columnas;
+PRO.9.2	9	2	She hath killed her beasts; she hath mingled her wine; she hath also furnished her table. {her beasts: Heb. her killing}	-0.2	negative	Mató sus víctimas, templó su vino, Y puso su mesa.
+PRO.9.3	9	3	She hath sent forth her maidens: she crieth upon the highest places of the city,	0.0	neutral	Envió sus criadas; Sobre lo más alto de la ciudad clamó:
+PRO.9.4	9	4	Whoso {is} simple, let him turn in hither: {as for} him that wanteth understanding, she saith to him,	-0.375	negative	Cualquiera simple, venga acá. A los faltos de cordura dijo:
+PRO.9.5	9	5	Come, eat of my bread, and drink of the wine {which} I have mingled.	0.0	neutral	Venid, comed mi pan, Y bebed del vino que yo he templado.
+PRO.9.6	9	6	Forsake the foolish, and live; and go in the way of understanding.	0.1364	positive	Dejad las simplezas, y vivid; Y andad por el camino de la inteligencia.
+PRO.9.7	9	7	He that reproveth a scorner getteth to himself shame: and he that rebuketh a wicked {man getteth} himself a blot.	0.0	neutral	El que corrige al escarnecedor, afrenta se acarrea: El que reprende al impío, se atrae mancha.
+PRO.9.8	9	8	Reprove not a scorner, lest he hate thee: rebuke a wise man, and he will love thee.	0.1333	positive	No reprendas al escarnecedor, porque no te aborrezca: Corrige al sabio, y te amará.
+PRO.9.9	9	9	Give {instruction} to a wise {man}, and he will be yet wiser: teach a just {man}, and he will increase in learning.	0.7	positive	Da al sabio, y será más sabio: Enseña al justo, y acrecerá su saber.
+PRO.9.10	9	10	The fear of the LORD {is} the beginning of wisdom: and the knowledge of the holy {is} understanding.	0.0	neutral	El temor de Jehová es el principio de la sabiduría; Y la ciencia de los santos es inteligencia.
+PRO.9.11	9	11	For by me thy days shall be multiplied, and the years of thy life shall be increased.	0.0	neutral	Porque por mí se aumentarán tus días, Y años de vida se te añadirán.
+PRO.9.12	9	12	If thou be wise, thou shalt be wise for thyself: but {if} thou scornest, thou alone shalt bear {it}.	0.7	positive	Si fueres sabio, para ti lo serás: Mas si fueres escarnecedor, pagarás tú solo.
+PRO.9.13	9	13	A foolish woman {is} clamorous: {she is} simple, and knoweth nothing.	-0.375	negative	La mujer loca es alborotadora; Es simple é ignorante.
+PRO.9.14	9	14	For she sitteth at the door of her house, on a seat in the high places of the city,	0.16	positive	Siéntase en una silla á la puerta de su casa, En lo alto de la ciudad,
+PRO.9.15	9	15	To call passengers who go right on their ways:	0.2857	positive	Para llamar á los que pasan por el camino, Que van por sus caminos derechos.
+PRO.9.16	9	16	Whoso {is} simple, let him turn in hither: and {as for} him that wanteth understanding, she saith to him,	0.0	neutral	Cualquiera simple, dice, venga acá. A los faltos de cordura dijo:
+PRO.9.17	9	17	Stolen waters are sweet, and bread {eaten} in secret is pleasant. {eaten...: Heb. of secrecies}	0.2278	positive	Las aguas hurtadas son dulces, Y el pan comido en oculto es suave.
+PRO.9.18	9	18	But he knoweth not that the dead {are} there; {and that} her guests {are} in the depths of hell.	-0.2	negative	Y no saben que allí están los muertos; Que sus convidados están en los profundos de la sepultura.
+PRO.10.1	10	1	The proverbs of Solomon. A wise son maketh a glad father: but a foolish son {is} the heaviness of his mother.	0.6	positive	- Las sentencias de Salomón. - EL hijo sabio alegra al padre; Y el hijo necio es tristeza de su madre.
+PRO.10.2	10	2	Treasures of wickedness profit nothing: but righteousness delivereth from death.	0.0	neutral	Los tesoros de maldad no serán de provecho: Mas la justicia libra de muerte.
+PRO.10.3	10	3	The LORD will not suffer the soul of the righteous to famish: but he casteth away the substance of the wicked. {the substance...: or, the wicked for their wickedness}	0.0	neutral	Jehová no dejará hambrear el alma del justo: Mas la iniquidad lanzará á los impíos.
+PRO.10.4	10	4	He becometh poor that dealeth {with} a slack hand: but the hand of the diligent maketh rich.	-0.0125	neutral	La mano negligente hace pobre: Mas la mano de los diligentes enriquece.
+PRO.10.5	10	5	He that gathereth in summer {is} a wise son: {but} he that sleepeth in harvest {is} a son that causeth shame.	-0.025	neutral	El que recoge en el estío es hombre entendido: El que duerme en el tiempo de la siega es hombre afrentoso.
+PRO.10.6	10	6	Blessings {are} upon the head of the just: but violence covereth the mouth of the wicked.	0.0	neutral	Bendiciones sobre la cabeza del justo: Mas violencia cubrirá la boca de los impíos.
+PRO.10.7	10	7	The memory of the just {is} blessed: but the name of the wicked shall rot.	0.0	neutral	La memoria del justo será bendita: Mas el nombre de los impíos se pudrirá.
+PRO.10.8	10	8	The wise in heart will receive commandments: but a prating fool shall fall. {a prating...: Heb. a fool of lips} {fall: Heb. be beaten}	0.7	positive	El sabio de corazón recibirá los mandamientos: Mas el loco de labios caerá.
+PRO.10.9	10	9	He that walketh uprightly walketh surely: but he that perverteth his ways shall be known.	0.5	positive	El que camina en integridad, anda confiado: Mas el que pervierte sus caminos, será quebrantado.
+PRO.10.10	10	10	He that winketh with the eye causeth sorrow: but a prating fool shall fall. {fall: Heb. be beaten}	0.0	neutral	El que guiña del ojo acarrea tristeza; Y el loco de labios será castigado.
+PRO.10.11	10	11	The mouth of a righteous {man is} a well of life: but violence covereth the mouth of the wicked.	0.0	neutral	Vena de vida es la boca del justo: Mas violencia cubrirá la boca de los impíos.
+PRO.10.12	10	12	Hatred stirreth up strifes: but love covereth all sins.	0.5	positive	El odio despierta rencillas: Mas la caridad cubrirá todas las faltas.
+PRO.10.13	10	13	In the lips of him that hath understanding wisdom is found: but a rod {is} for the back of him that is void of understanding. {of understanding: Heb. of heart}	0.0	neutral	En los labios del prudente se halla sabiduría: Y vara á las espaldas del falto de cordura.
+PRO.10.14	10	14	Wise {men} lay up knowledge: but the mouth of the foolish {is} near destruction.	0.4	positive	Los sabios guardan la sabiduría: Mas la boca del loco es calamidad cercana.
+PRO.10.15	10	15	The rich man's wealth {is} his strong city: the destruction of the poor {is} their poverty.	0.1361	positive	Las riquezas del rico son su ciudad fuerte; Y el desmayo de los pobres es su pobreza.
+PRO.10.16	10	16	The labour of the righteous {tendeth} to life: the fruit of the wicked to sin.	0.0	neutral	La obra del justo es para vida; Mas el fruto del impío es para pecado.
+PRO.10.17	10	17	He {is in} the way of life that keepeth instruction: but he that refuseth reproof erreth. {erreth: or, causeth to err}	0.0	neutral	Camino á la vida es guardar la corrección: Mas el que deja la reprensión, yerra.
+PRO.10.18	10	18	He that hideth hatred {with} lying lips, and he that uttereth a slander, {is} a fool.	0.0	neutral	El que encubre el odio es de labios mentirosos; Y el que echa mala fama es necio.
+PRO.10.19	10	19	In the multitude of words there wanteth not sin: but he that refraineth his lips {is} wise.	0.7	positive	En las muchas palabras no falta pecado: Mas el que refrena sus labios es prudente.
+PRO.10.20	10	20	The tongue of the just {is as} choice silver: the heart of the wicked {is} little worth.	0.0562	neutral	Plata escogida es la lengua del justo: Mas el entendimiento de los impíos es como nada.
+PRO.10.21	10	21	The lips of the righteous feed many: but fools die for want of wisdom. {of wisdom: Heb. of heart}	0.5	positive	Los labios del justo apacientan á muchos: Mas los necios por falta de entendimiento mueren.
+PRO.10.22	10	22	The blessing of the LORD, it maketh rich, and he addeth no sorrow with it.	0.375	positive	La bendición de Jehová es la que enriquece, Y no añade tristeza con ella.
+PRO.10.23	10	23	{It is} as sport to a fool to do mischief: but a man of understanding hath wisdom.	0.0	neutral	Hacer abominación es como risa al insensato: Mas el hombre entendido sabe.
+PRO.10.24	10	24	The fear of the wicked, it shall come upon him: but the desire of the righteous shall be granted.	0.0	neutral	Lo que el impío teme, eso le vendrá: Mas á los justos les será dado lo que desean.
+PRO.10.25	10	25	As the whirlwind passeth, so {is} the wicked no {more}: but the righteous {is} an everlasting foundation.	-0.25	negative	Como pasa el torbellino, así el malo no permanece: Mas el justo, fundado para siempre.
+PRO.10.26	10	26	As vinegar to the teeth, and as smoke to the eyes, so {is} the sluggard to them that send him.	0.0	neutral	Como el vinagre á los dientes, y como el humo á los ojos, Así es el perezoso á los que lo envían.
+PRO.10.27	10	27	The fear of the LORD prolongeth days: but the years of the wicked shall be shortened. {prolongeth: Heb. addeth}	0.0	neutral	El temor de Jehová aumentará los días: Mas los años de los impíos serán acortados.
+PRO.10.28	10	28	The hope of the righteous {shall be} gladness: but the expectation of the wicked shall perish.	0.0	neutral	La esperanza de los justos es alegría; Mas la esperanza de los impíos perecerá.
+PRO.10.29	10	29	The way of the LORD {is} strength to the upright: but destruction {shall be} to the workers of iniquity.	0.0	neutral	Fortaleza es al perfecto el camino de Jehová: Mas espanto es á los que obran maldad.
+PRO.10.30	10	30	The righteous shall never be removed: but the wicked shall not inhabit the earth.	0.0	neutral	El justo eternalmente no será removido: Mas los impíos no habitarán la tierra.
+PRO.10.31	10	31	The mouth of the just bringeth forth wisdom: but the froward tongue shall be cut out.	0.0	neutral	La boca del justo producirá sabiduría: Mas la lengua perversa será cortada.
+PRO.10.32	10	32	The lips of the righteous know what is acceptable: but the mouth of the wicked {speaketh} frowardness. {frowardness: Heb. frowardnesses}	0.0	neutral	Los labios del justo conocerán lo que agrada: Mas la boca de los impíos habla perversidades.
+PRO.11.1	11	1	A false balance {is} abomination to the LORD: but a just weight {is} his delight. {A false...: Heb. Balances of deceit} {just...: Heb. perfect stone}	0.0667	neutral	EL peso falso abominación es á Jehová: Mas la pesa cabal le agrada.
+PRO.11.2	11	2	{When} pride cometh, then cometh shame: but with the lowly {is} wisdom.	0.0	neutral	Cuando viene la soberbia, viene también la deshonra: Mas con los humildes es la sabiduría.
+PRO.11.3	11	3	The integrity of the upright shall guide them: but the perverseness of transgressors shall destroy them.	-0.2	negative	La integridad de los rectos los encaminará: Mas destruirá á los pecadores la perversidad de ellos.
+PRO.11.4	11	4	Riches profit not in the day of wrath: but righteousness delivereth from death.	0.0	neutral	No aprovecharán las riquezas en el día de la ira: Mas la justicia librará de muerte.
+PRO.11.5	11	5	The righteousness of the perfect shall direct his way: but the wicked shall fall by his own wickedness. {direct: Heb. rectify}	0.45	positive	La justicia del perfecto enderezará su camino: mas el impío por su impiedad caerá.
+PRO.11.6	11	6	The righteousness of the upright shall deliver them: but transgressors shall be taken in {their own} naughtiness.	0.6	positive	La justicia de los rectos los librará: Mas los pecadores en su pecado serán presos.
+PRO.11.7	11	7	When a wicked man dieth, {his} expectation shall perish: and the hope of unjust {men} perisheth.	0.0	neutral	Cuando muere el hombre impío, perece su esperanza; Y la espectativa de los malos perecerá.
+PRO.11.8	11	8	The righteous is delivered out of trouble, and the wicked cometh in his stead.	-0.2	negative	El justo es librado de la tribulación: Mas el impío viene en lugar suyo.
+PRO.11.9	11	9	An hypocrite with {his} mouth destroyeth his neighbour: but through knowledge shall the just be delivered.	0.0	neutral	El hipócrita con la boca daña á su prójimo: Mas los justos son librados con la sabiduría.
+PRO.11.10	11	10	When it goeth well with the righteous, the city rejoiceth: and when the wicked perish, {there is} shouting.	0.0	neutral	En el bien de los justos la ciudad se alegra: Mas cuando los impíos perecen, hay fiestas.
+PRO.11.11	11	11	By the blessing of the upright the city is exalted: but it is overthrown by the mouth of the wicked.	0.0	neutral	Por la bendición de los rectos la ciudad será engrandecida: Mas por la boca de los impíos ella será trastornada.
+PRO.11.12	11	12	He that is void of wisdom despiseth his neighbour: but a man of understanding holdeth his peace. {void...: Heb. destitute of heart}	0.0	neutral	El que carece de entendimiento, menosprecia á su prójimo: Mas el hombre prudente calla.

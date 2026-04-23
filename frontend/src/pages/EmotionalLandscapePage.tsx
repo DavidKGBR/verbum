@@ -7,7 +7,7 @@ import {
 } from "../services/api";
 import { useBooks, localizeBookName, localizeBookAbbrev } from "../i18n/bookNames";
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
-import { SENTIMENT_COVERED_PT } from "../i18n/sentimentCoverage";
+import { SENTIMENT_COVERED_PT, SENTIMENT_COVERED_ES } from "../i18n/sentimentCoverage";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 
 interface SentimentPoint {
@@ -139,7 +139,7 @@ export default function EmotionalLandscapePage() {
                     {t("emotional.sentimentFlow")} —{" "}
                     {t("emotional.versesCount").replace("{n}", String(series.length))}
                   </span>
-                  {locale !== "en" && !SENTIMENT_COVERED_PT.has(selectedBook) && (
+                  {locale !== "en" && !(locale === "pt" ? SENTIMENT_COVERED_PT : SENTIMENT_COVERED_ES).has(selectedBook) && (
                     <span
                       title={t("emotional.sentimentFallback")}
                       className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-current opacity-50 cursor-help normal-case tracking-normal"

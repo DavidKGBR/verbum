@@ -1,0 +1,300 @@
+{"verse_id": "LUK.6.48", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.6.49", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.7.1", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.2", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.3", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.4", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.5", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.6", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.7", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.7.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.9", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.7.11", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.13", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.14", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.15", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.16", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.7.17", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.19", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.20", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.21", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.7.22", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.7.23", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.7.24", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.25", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.26", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.27", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.28", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.7.29", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.7.30", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.7.31", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.32", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.33", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.34", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.35", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.7.36", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.7.37", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.7.38", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.7.39", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.7.40", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.41", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.42", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.7.43", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.7.44", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.45", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.46", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.7.47", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.7.48", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.49", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.7.50", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.8.1", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.8.2", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.8.3", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.4", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.5", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.8", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.10", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.11", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.8.13", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.8.14", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.15", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.8.16", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.17", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.18", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.19", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.21", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.22", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.23", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.24", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.8.25", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.26", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.27", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.28", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.8.29", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.8.30", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.8.31", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.32", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.33", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.8.34", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.35", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.8.36", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.8.37", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.38", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.39", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.40", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.41", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.42", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.43", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.44", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.8.45", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.8.46", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.47", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.8.48", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.8.49", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.50", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.8.51", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.52", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.53", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.8.54", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.8.55", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.8.56", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.1", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.9.2", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.9.3", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.5", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.6", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.9.7", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
+{"verse_id": "LUK.9.8", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
+{"verse_id": "LUK.9.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.11", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.9.12", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.13", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.14", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.15", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.16", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.9.17", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.19", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
+{"verse_id": "LUK.9.20", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.21", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.22", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.9.23", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.24", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.9.25", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.26", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.9.27", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.9.28", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.9.29", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.31", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.32", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.33", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.34", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.35", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.36", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.37", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.38", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.39", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.40", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.41", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.9.42", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.9.43", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.44", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.9.45", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.9.46", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.47", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.48", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.49", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.9.50", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.51", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.52", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.53", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.54", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.55", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.56", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.9.57", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.58", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.9.59", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.60", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.9.61", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.9.62", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.10.1", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.2", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.3", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.5", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.6", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.7", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.9", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.10.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.11", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.13", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.10.14", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.15", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.16", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.17", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.10.18", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.10.19", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.21", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.10.22", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.23", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.10.24", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.25", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.10.26", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.27", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.10.28", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.29", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.30", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.31", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.32", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.33", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.10.34", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.35", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.36", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.37", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.10.38", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.10.39", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.10.40", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.41", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.10.42", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.1", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.2", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.3", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.4", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.5", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.7", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.8", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.11", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.13", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.14", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.11.15", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.16", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.17", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.18", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.19", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.20", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.21", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.22", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.23", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.24", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.25", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.26", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.27", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.28", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.29", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.11.31", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.32", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.33", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.34", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.35", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.36", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.37", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.38", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.39", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.40", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.11.41", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.42", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.43", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.44", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.45", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.46", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "LUK.11.47", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.48", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.11.49", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.11.50", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.51", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "LUK.11.52", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.11.53", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.11.54", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.1", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.12.2", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.3", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "LUK.12.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.5", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.6", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.7", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.10", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "LUK.12.11", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.13", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.14", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.15", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.12.16", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.17", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.12.19", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.20", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.21", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.22", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.23", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.24", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.25", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.26", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.27", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "LUK.12.28", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.29", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.31", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "LUK.12.32", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "LUK.12.33", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "LUK.12.34", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}

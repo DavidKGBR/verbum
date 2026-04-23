@@ -2,9 +2,14 @@
 
 Usage:
     python scripts/load_sentiment_batch.py data/processed/sentiment_pt/PSA/batch_001_output.jsonl
+    python scripts/load_sentiment_batch.py --lang es data/processed/sentiment_es/PSA/*.jsonl
 
 Each line must be JSON with at least:
     { "verse_id": "PSA.23.1", "polarity_pt": 0.85, "label_pt": "positive" }
+    or
+    { "verse_id": "PSA.23.1", "polarity_es": 0.85, "label_es": "positive" }
+    or generic:
+    { "verse_id": "PSA.23.1", "polarity": 0.85, "label": "positive" }
 
 Optional fields: confidence (0-1), notes (str).
 """
@@ -21,8 +26,10 @@ DB_PATH = "data/analytics/bible.duckdb"
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Load sentiment JSONL into DuckDB")
+    parser.add_argument("--lang", default="pt", choices=["pt", "es"], help="Target language")
     parser.add_argument("files", nargs="+", help="JSONL file(s) to load")
     args = parser.parse_args()
+    lang = args.lang
 
     conn = duckdb.connect(DB_PATH)
     conn.execute("""
@@ -53,10 +60,12 @@ def main() -> None:
             obj = json.loads(line)
             rows.append(obj)
 
+        lang_key = f"polarity_{lang}"
+        label_key = f"label_{lang}"
         for r in rows:
             verse_id = r["verse_id"]
-            polarity = float(r.get("polarity_pt", r.get("polarity", 0)))
-            label = r.get("label_pt", r.get("label", "neutral"))
+            polarity = float(r.get(lang_key, r.get("polarity", 0)))
+            label = r.get(label_key, r.get("label", "neutral"))
             confidence = r.get("confidence")
             notes = r.get("notes")
 
@@ -64,7 +73,7 @@ def main() -> None:
                 """
                 INSERT INTO verses_sentiment_multilang
                     (verse_id, lang, polarity, label, confidence, notes)
-                VALUES (?, 'pt', ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?)
                 ON CONFLICT (verse_id, lang)
                 DO UPDATE SET
                     polarity   = EXCLUDED.polarity,
@@ -73,7 +82,7 @@ def main() -> None:
                     notes      = EXCLUDED.notes,
                     labeled_at = now()
                 """,
-                [verse_id, polarity, label, confidence, notes],
+                [verse_id, lang, polarity, label, confidence, notes],
             )
 
         total += len(rows)
