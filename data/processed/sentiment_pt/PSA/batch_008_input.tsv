@@ -1,0 +1,301 @@
+verse_id	chapter	verse	text_en	polarity_en	label_en	text_pt
+PSA.107.41	107	41	Yet setteth he the poor on high from affliction, and maketh {him} families like a flock. {from: or, after}	-0.12	negative	Mas tira os pobres da miséria e aumenta as suas famílias como rebanhos.
+PSA.107.42	107	42	The righteous shall see {it}, and rejoice: and all iniquity shall stop her mouth.	0.0	neutral	Os justos vêem tudo isso e se alegram, mas todos os perversos se calam.
+PSA.107.43	107	43	Whoso {is} wise, and will observe these {things}, even they shall understand the lovingkindness of the LORD.	0.7	positive	Reflitam nisso os sábios e considerem a bondade do Senhor.
+PSA.108.1	108	1	[A Song {or} Psalm of David.] O God, my heart is fixed; I will sing and give praise, even with my glory.	0.1	neutral	Meu coração está firme, ó Deus! Cantarei e louvarei, ó Glória minha!
+PSA.108.2	108	2	Awake, psaltery and harp: I {myself} will awake early.	0.1	neutral	Acordem, harpa e lira! Despertarei a alvorada.
+PSA.108.3	108	3	I will praise thee, O LORD, among the people: and I will sing praises unto thee among the nations.	0.0	neutral	Eu te darei graças, ó Senhor, entre os povos; cantarei louvores entre as nações,
+PSA.108.4	108	4	For thy mercy {is} great above the heavens: and thy truth {reacheth} unto the clouds. {clouds: or, skies}	0.4	positive	porque o teu amor leal se eleva muito acima dos céus; a tua fidelidade alcança as nuvens!
+PSA.108.5	108	5	Be thou exalted, O God, above the heavens: and thy glory above all the earth;	0.0	neutral	Exalta-te, ó Deus, acima dos céus; estenda-se a tua glória sobre toda a terra!
+PSA.108.6	108	6	That thy beloved may be delivered: save {with} thy right hand, and answer me.	0.4929	positive	Salva-nos com a tua mão direita e responde-nos, para que sejam libertos aqueles a quem amas.
+PSA.108.7	108	7	God hath spoken in his holiness; I will rejoice, I will divide Shechem, and mete out the valley of Succoth.	0.0	neutral	"Do seu santuário Deus falou: ""No meu triunfo dividirei Siquém e repartirei o vale de Sucote."
+PSA.108.8	108	8	Gilead {is} mine; Manasseh {is} mine; Ephraim also {is} the strength of mine head; Judah {is} my lawgiver;	0.0	neutral	Gileade me pertence, e Manassés também; Efraim é o meu capacete, Judá é o meu cetro.
+PSA.108.9	108	9	Moab {is} my washpot; over Edom will I cast out my shoe; over Philistia will I triumph.	0.0	neutral	"Moabe é a pia em que me lavo, em Edom atiro a minha sandália, sobre a Filístia dou meu brado de vitória! """
+PSA.108.10	108	10	Who will bring me into the strong city? who will lead me into Edom?	0.4333	positive	Quem me levará à cidade fortificada? Quem me guiará a Edom?
+PSA.108.11	108	11	{Wilt} not {thou}, O God, {who} hast cast us off? and wilt not thou, O God, go forth with our hosts?	0.0	neutral	Não foste tu, ó Deus, que nos rejeitaste e deixaste de sair com os nossos exércitos?
+PSA.108.12	108	12	Give us help from trouble: for vain {is} the help of man.	-0.2	negative	Dá-nos ajuda contra os adversários, pois inútil é o socorro do homem.
+PSA.108.13	108	13	Through God we shall do valiantly: for he {it is that} shall tread down our enemies.	-0.1556	negative	Com Deus conquistaremos a vitória, e ele pisará os nossos adversários.
+PSA.109.1	109	1	[To the chief Musician, A Psalm of David.] Hold not thy peace, O God of my praise;	0.0	neutral	Ó Deus, a quem louvo, não fiques indiferente,
+PSA.109.2	109	2	For the mouth of the wicked and the mouth of the deceitful are opened against me: they have spoken against me with a lying tongue. {of the deceitful: Heb. of deceit} {are opened: Heb. have opened themselves}	0.0	neutral	pois homens ímpios e falsos dizem calúnias contra mim, e falam mentiras a meu respeito.
+PSA.109.3	109	3	They compassed me about also with words of hatred; and fought against me without a cause.	0.0	neutral	Eles me cercaram com palavras carregadas de ódio; atacaram-me sem motivo.
+PSA.109.4	109	4	For my love they are my adversaries: but I {give myself unto} prayer.	0.5	positive	Em troca da minha amizade eles me acusam, mas eu permaneço em oração.
+PSA.109.5	109	5	And they have rewarded me evil for good, and hatred for my love.	0.0667	neutral	Retribuem-me o bem com o mal, e a minha amizade com ódio.
+PSA.109.6	109	6	Set thou a wicked man over him: and let Satan stand at his right hand. {Satan: or, an adversary}	0.2857	positive	Designe-se um ímpio como seu oponente; à sua direita esteja um acusador.
+PSA.109.7	109	7	When he shall be judged, let him be condemned: and let his prayer become sin. {be condemned: Heb. go out guilty, or, wicked}	-0.5	negative	Seja declarado culpado no julgamento, e que até a sua oração seja considerada pecado.
+PSA.109.8	109	8	Let his days be few; {and} let another take his office. {office: or, charge}	-0.2	negative	Seja a sua vida curta, e outro ocupe o seu lugar.
+PSA.109.9	109	9	Let his children be fatherless, and his wife a widow.	0.0	neutral	Fiquem órfãos os seus filhos e a sua esposa, viúva.
+PSA.109.10	109	10	Let his children be continually vagabonds, and beg: let them seek {their bread} also out of their desolate places.	0.0	neutral	Vivam os seus filhos vagando como mendigos, e saiam rebuscando o pão longe de suas casas em ruínas.
+PSA.109.11	109	11	Let the extortioner catch all that he hath; and let the strangers spoil his labour.	0.0	neutral	Que um credor se aposse de todos os seus bens, e estranhos saqueiem o fruto do seu trabalho.
+PSA.109.12	109	12	Let there be none to extend mercy unto him: neither let there be any to favour his fatherless children.	0.0	neutral	Que ninguém o trate com bondade nem tenha misericórdia dos seus filhos órfãos.
+PSA.109.13	109	13	Let his posterity be cut off; {and} in the generation following let their name be blotted out.	0.0	neutral	Sejam exterminados os seus descendentes e desapareçam os seus nomes na geração seguinte.
+PSA.109.14	109	14	Let the iniquity of his fathers be remembered with the LORD; and let not the sin of his mother be blotted out.	0.0	neutral	Que o Senhor se lembre da iniqüidade dos seus antepassados, e não se apague o pecado de sua mãe.
+PSA.109.15	109	15	Let them be before the LORD continually, that he may cut off the memory of them from the earth.	0.0	neutral	Estejam os seus pecados sempre perante o Senhor, e na terra ninguém jamais se lembre da sua família.
+PSA.109.16	109	16	Because that he remembered not to shew mercy, but persecuted the poor and needy man, that he might even slay the broken in heart.	-0.4	negative	Pois ele jamais pensou em praticar um ato de bondade, mas perseguiu até à morte o pobre, o necessitado e o de coração partido.
+PSA.109.17	109	17	As he loved cursing, so let it come unto him: as he delighted not in blessing, so let it be far from him.	0.5	positive	Ele gostava de amaldiçoar: venha sobre ele a maldição! Não tinha prazer em abençoar: afaste-se dele a bênção!
+PSA.109.18	109	18	As he clothed himself with cursing like as with his garment, so let it come into his bowels like water, and like oil into his bones. {into his bowels: Heb. within him}	0.0	neutral	Ele vestia a maldição como uma roupa: entre ela em seu corpo como água e em seus ossos como óleo.
+PSA.109.19	109	19	Let it be unto him as the garment {which} covereth him, and for a girdle wherewith he is girded continually.	0.0	neutral	Envolva-o como um manto e aperte-o sempre como um cinto.
+PSA.109.20	109	20	{Let} this {be} the reward of mine adversaries from the LORD, and of them that speak evil against my soul.	-1.0	negative	Assim retribua o Senhor aos meus acusadores, aos que me caluniam.
+PSA.109.21	109	21	But do thou for me, O GOD the Lord, for thy name's sake: because thy mercy {is} good, deliver thou me.	0.7	positive	Mas tu, Soberano Senhor, intervém em meu favor, por causa do teu nome. Livra-me, pois é sublime o teu amor leal!
+PSA.109.22	109	22	For I {am} poor and needy, and my heart is wounded within me.	-0.4	negative	Sou pobre e necessitado e, no íntimo, o meu coração está abatido.
+PSA.109.23	109	23	I am gone like the shadow when it declineth: I am tossed up and down as the locust.	-0.1556	negative	Vou definhando como a sombra vespertina; para longe sou lançado, como um gafanhoto.
+PSA.109.24	109	24	My knees are weak through fasting; and my flesh faileth of fatness.	-0.375	negative	De tanto jejuar os meus joelhos fraquejam e o meu corpo definha de magreza.
+PSA.109.25	109	25	I became also a reproach unto them: {when} they looked upon me they shaked their heads.	-0.75	negative	Sou motivo de zombaria para os meus acusadores; logo que me vêem, meneiam a cabeça.
+PSA.109.26	109	26	Help me, O LORD my God: O save me according to thy mercy:	0.05	neutral	Socorro, Senhor, meu Deus! Salva-me pelo teu amor leal!
+PSA.109.27	109	27	That they may know that this {is} thy hand; {that} thou, LORD, hast done it.	0.0	neutral	Que eles reconheçam que foi a tua mão, que foste tu, Senhor, que o fizeste.
+PSA.109.28	109	28	Let them curse, but bless thou: when they arise, let them be ashamed; but let thy servant rejoice.	0.0	neutral	Eles podem amaldiçoar, tu, porém, me abençoas. Quando atacarem, serão humilhados, mas o teu servo se alegrará.
+PSA.109.29	109	29	Let mine adversaries be clothed with shame, and let them cover themselves with their own confusion, as with a mantle.	0.6	positive	Sejam os meus acusadores vestidos de desonra; que a vergonha os cubra como um manto.
+PSA.109.30	109	30	I will greatly praise the LORD with my mouth; yea, I will praise him among the multitude.	0.8	positive	Em alta voz, darei muitas graças ao Senhor; no meio da assembléia eu o louvarei,
+PSA.109.31	109	31	For he shall stand at the right hand of the poor, to save {him} from those that condemn his soul. {those...: Heb. the judges of}	-0.0571	neutral	pois ele se põe ao lado do pobre para salvá-lo daqueles que o condenam.
+PSA.110.1	110	1	[A Psalm of David.] The LORD said unto my Lord, Sit thou at my right hand, until I make thine enemies thy footstool.	0.2857	positive	"O Senhor disse ao meu Senhor: ""Senta-te à minha direita até que eu faça dos teus inimigos um estrado para os teus pés""."
+PSA.110.2	110	2	The LORD shall send the rod of thy strength out of Zion: rule thou in the midst of thine enemies.	0.0	neutral	O Senhor estenderá o cetro de teu poder desde Sião, e dominarás sobre os teus inimigos!
+PSA.110.3	110	3	Thy people {shall be} willing in the day of thy power, in the beauties of holiness from the womb of the morning: thou hast the dew of thy youth. {from...: or, more than the womb of the morning: thou shalt have, etc}	0.375	positive	Quando convocares as tuas tropas, o teu povo se apresentará voluntariamente. Trajando vestes santas, desde o romper da alvorada os teus jovens virão como o orvalho.
+PSA.110.4	110	4	The LORD hath sworn, and will not repent, Thou {art} a priest for ever after the order of Melchizedek.	0.0	neutral	"O Senhor jurou e não se arrependerá: ""Tu és sacerdote para sempre, segundo a ordem de Melquisedeque""."
+PSA.110.5	110	5	The Lord at thy right hand shall strike through kings in the day of his wrath.	0.2857	positive	O Senhor está à tua direita; ele esmagará reis no dia da sua ira.
+PSA.110.6	110	6	He shall judge among the heathen, he shall fill {the places} with the dead bodies; he shall wound the heads over many countries. {many: or, great}	0.4	positive	Julgará as nações, amontoando os mortos e esmagando governantes em toda a extensão da terra.
+PSA.110.7	110	7	He shall drink of the brook in the way: therefore shall he lift up the head.	0.0	neutral	No caminho beberá de um ribeiro, e então erguerá a cabeça.
+PSA.111.1	111	1	Praise ye the LORD. I will praise the LORD with {my} whole heart, in the assembly of the upright, and {in} the congregation. {Praise ye...: Heb. Hallelujah}	0.2	positive	Aleluia! Darei graças ao Senhor de todo o coração na reunião da congregação dos justos.
+PSA.111.2	111	2	The works of the LORD {are} great, sought out of all them that have pleasure therein.	0.8	positive	Grandes são as obras do Senhor; nelas meditam todos os que as apreciam.
+PSA.111.3	111	3	His work {is} honourable and glorious: and his righteousness endureth for ever.	0.0	neutral	Os seus feitos manifestam majestade e esplendor, e a sua justiça dura para sempre.
+PSA.111.4	111	4	He hath made his wonderful works to be remembered: the LORD {is} gracious and full of compassion.	0.675	positive	Ele fez proclamar as suas maravilhas; o Senhor é misericordioso e compassivo.
+PSA.111.5	111	5	He hath given meat unto them that fear him: he will ever be mindful of his covenant. {meat: Heb. prey}	0.0	neutral	Deu alimento aos que o temiam, pois sempre se lembra de sua aliança.
+PSA.111.6	111	6	He hath shewed his people the power of his works, that he may give them the heritage of the heathen.	0.0	neutral	Mostrou ao seu povo os seus feitos poderosos, dando-lhes as terras das nações.
+PSA.111.7	111	7	The works of his hands {are} verity and judgment; all his commandments {are} sure.	0.5	positive	As obras das suas mãos são fiéis e justas; todos os seus preceitos merecem confiança.
+PSA.111.8	111	8	They stand fast for ever and ever, {and are} done in truth and uprightness. {stand...: Heb. are established}	0.2	positive	Estão firmes para sempre, estabelecidos com fidelidade e retidão.
+PSA.111.9	111	9	He sent redemption unto his people: he hath commanded his covenant for ever: holy and reverend {is} his name.	0.0	neutral	Ele trouxe redenção ao seu povo e firmou a sua aliança para sempre. Santo e temível é o seu nome!
+PSA.111.10	111	10	The fear of the LORD {is} the beginning of wisdom: a good understanding have all they that do {his commandments}: his praise endureth for ever. {a good...: or, good success} {his commandments: Heb. them}	0.6	positive	O temor do Senhor é o princípio da sabedoria; todos os que cumprem os seus preceitos revelam bom senso. Ele será louvado para sempre!
+PSA.112.1	112	1	Praise ye the LORD. Blessed {is} the man {that} feareth the LORD, {that} delighteth greatly in his commandments. {Praise...: Heb. Hallelujah}	0.8	positive	Aleluia! Como é feliz o homem que teme o Senhor e tem grande prazer em seus mandamentos!
+PSA.112.2	112	2	His seed shall be mighty upon earth: the generation of the upright shall be blessed.	0.4	positive	Seus descendentes serão poderosos na terra, serão uma geração abençoada, de homens íntegros.
+PSA.112.3	112	3	Wealth and riches {shall be} in his house: and his righteousness endureth for ever.	0.0	neutral	Grande riqueza há em sua casa, e a sua justiça dura para sempre.
+PSA.112.4	112	4	Unto the upright there ariseth light in the darkness: {he is} gracious, and full of compassion, and righteous.	0.0	neutral	A luz raia nas trevas para o íntegro, para quem é misericordioso, compassivo e justo.
+PSA.112.5	112	5	A good man sheweth favour, and lendeth: he will guide his affairs with discretion. {discretion: Heb. judgment}	0.7	positive	Feliz é o homem que empresta com generosidade e que com honestidade conduz os seus negócios.
+PSA.112.6	112	6	Surely he shall not be moved for ever: the righteous shall be in everlasting remembrance.	0.5	positive	O justo jamais será abalado; para sempre se lembrarão dele.
+PSA.112.7	112	7	He shall not be afraid of evil tidings: his heart is fixed, trusting in the LORD.	-0.5	negative	Não temerá más notícias; seu coração está firme, confiante no Senhor.
+PSA.112.8	112	8	His heart {is} established, he shall not be afraid, until he see {his desire} upon his enemies.	-0.6	negative	O seu coração está seguro e nada temerá. No final, verá a derrota dos seus adversários.
+PSA.112.9	112	9	He hath dispersed, he hath given to the poor; his righteousness endureth for ever; his horn shall be exalted with honour.	-0.4	negative	Reparte generosamente com os pobres; a sua justiça dura para sempre; seu poder será exaltado em honra.
+PSA.112.10	112	10	The wicked shall see {it}, and be grieved; he shall gnash with his teeth, and melt away: the desire of the wicked shall perish.	0.0	neutral	O ímpio o vê e fica irado, range os dentes e definha. O desejo dos ímpios se frustrará.
+PSA.113.1	113	1	Praise ye the LORD. Praise, O ye servants of the LORD, praise the name of the LORD. {Praise ye...: Heb. Hallelujah}	0.0	neutral	Aleluia! Louvem, ó servos do Senhor, louvem o nome do Senhor!
+PSA.113.2	113	2	Blessed be the name of the LORD from this time forth and for evermore.	0.0	neutral	Seja bendito o nome do Senhor, desde agora e para sempre!
+PSA.113.3	113	3	From the rising of the sun unto the going down of the same the LORD'S name {is} to be praised.	-0.0778	neutral	Do nascente ao poente, seja louvado o nome do Senhor!
+PSA.113.4	113	4	The LORD {is} high above all nations, {and} his glory above the heavens.	0.0533	neutral	O Senhor está exaltado acima de todas as nações; e acima dos céus está a sua glória.
+PSA.113.5	113	5	Who {is} like unto the LORD our God, who dwelleth on high, {dwelleth...: Heb. exalteth himself to dwell}	0.16	positive	Quem é como o Senhor, o nosso Deus, que reina em seu trono nas alturas,
+PSA.113.6	113	6	Who humbleth {himself} to behold {the things that are} in heaven, and in the earth!	0.0	neutral	mas se inclina para contemplar o que acontece nos céus e na terra?
+PSA.113.7	113	7	He raiseth up the poor out of the dust, {and} lifteth the needy out of the dunghill;	-0.4	negative	Ele levanta do pó o necessitado e ergue do lixo o pobre,
+PSA.113.8	113	8	That he may set {him} with princes, {even} with the princes of his people.	0.0	neutral	para fazê-los sentar-se com príncipes, com os príncipes do seu povo.
+PSA.113.9	113	9	He maketh the barren woman to keep house, {and to be} a joyful mother of children. Praise ye the LORD. {to keep...: Heb. to dwell in an house}	0.0	neutral	Dá um lar à estéril, e dela faz uma feliz mãe de filhos. Aleluia!
+PSA.114.1	114	1	When Israel went out of Egypt, the house of Jacob from a people of strange language;	-0.05	neutral	Quando Israel saiu do Egito, e a casa de Jacó saiu do meio de um povo de língua estrangeira,
+PSA.114.2	114	2	Judah was his sanctuary, {and} Israel his dominion.	0.0	neutral	Judá tornou-se o santuário de Deus, Israel o seu domínio.
+PSA.114.3	114	3	The sea saw {it}, and fled: Jordan was driven back.	0.0	neutral	O mar olhou e fugiu, o Jordão retrocedeu;
+PSA.114.4	114	4	The mountains skipped like rams, {and} the little hills like lambs.	-0.1875	negative	os montes saltaram como carneiros, as colinas, como cordeiros.
+PSA.114.5	114	5	What {ailed} thee, O thou sea, that thou fleddest? thou Jordan, {that} thou wast driven back?	0.0	neutral	Por que fugir, ó mar? E você, Jordão, por que retroceder?
+PSA.114.6	114	6	Ye mountains, {that} ye skipped like rams; {and} ye little hills, like lambs?	-0.1875	negative	Por que vocês saltaram como carneiros, ó montes? E vocês, colinas, porque saltaram como cordeiros?
+PSA.114.7	114	7	Tremble, thou earth, at the presence of the Lord, at the presence of the God of Jacob;	0.0	neutral	Estremeça na presença do Soberano, ó terra, na presença do Deus de Jacó!
+PSA.114.8	114	8	Which turned the rock {into} a standing water, the flint into a fountain of waters.	0.0	neutral	Ele fez da rocha um açude, do rochedo uma fonte.
+PSA.115.1	115	1	Not unto us, O LORD, not unto us, but unto thy name give glory, for thy mercy, {and} for thy truth's sake.	0.0	neutral	Não a nós, Senhor, nenhuma glória para nós, mas sim ao teu nome, por teu amor e por tua fidelidade!
+PSA.115.2	115	2	Wherefore should the heathen say, Where {is} now their God?	0.0	neutral	"Por que perguntam as nações: ""Onde está o Deus deles? """
+PSA.115.3	115	3	But our God {is} in the heavens: he hath done whatsoever he hath pleased.	0.5	positive	O nosso Deus está nos céus, e pode fazer tudo o que lhe agrada.
+PSA.115.4	115	4	Their idols {are} silver and gold, the work of men's hands.	0.0	neutral	Os ídolos deles, de prata e ouro, são feitos por mãos humanas.
+PSA.115.5	115	5	They have mouths, but they speak not: eyes have they, but they see not:	0.0	neutral	Têm boca, mas não podem falar, olhos, mas não podem ver;
+PSA.115.6	115	6	They have ears, but they hear not: noses have they, but they smell not:	0.0	neutral	têm ouvidos, mas não podem ouvir, nariz, mas não podem sentir cheiro;
+PSA.115.7	115	7	They have hands, but they handle not: feet have they, but they walk not: neither speak they through their throat.	0.0	neutral	têm mãos, mas nada podem apalpar, pés, mas não podem andar; nem emitem som algum com a garganta.
+PSA.115.8	115	8	They that make them are like unto them; {so is} every one that trusteth in them.	0.0	neutral	Tornem-se como eles aqueles que os fazem e todos os que neles confiam.
+PSA.115.9	115	9	O Israel, trust thou in the LORD: he {is} their help and their shield.	0.0	neutral	Confie no Senhor, ó Israel! Ele é o seu socorro e o seu escudo.
+PSA.115.10	115	10	O house of Aaron, trust in the LORD: he {is} their help and their shield.	0.0	neutral	Confiem no Senhor, sacerdotes! Ele é o seu socorro e o seu escudo.
+PSA.115.11	115	11	Ye that fear the LORD, trust in the LORD: he {is} their help and their shield.	0.0	neutral	Vocês que temem ao Senhor, confiem no Senhor! Ele é o seu socorro e o seu escudo.
+PSA.115.12	115	12	The LORD hath been mindful of us: he will bless {us}; he will bless the house of Israel; he will bless the house of Aaron.	0.0	neutral	O Senhor lembra-se de nós e nos abençoará: Abençoará os israelitas, abençoará os sacerdotes,
+PSA.115.13	115	13	He will bless them that fear the LORD, {both} small and great. {and: Heb. with}	0.275	positive	abençoará os que temem o Senhor, do menor ao maior.
+PSA.115.14	115	14	The LORD shall increase you more and more, you and your children.	0.5	positive	Que o Senhor os multiplique, a vocês e aos seus filhos.
+PSA.115.15	115	15	Ye {are} blessed of the LORD which made heaven and earth.	0.0	neutral	Sejam vocês abençoados pelo Senhor, que fez os céus e a terra.
+PSA.115.16	115	16	The heaven, {even} the heavens, {are} the LORD'S: but the earth hath he given to the children of men.	0.0	neutral	Os mais altos céus pertencem ao Senhor, mas a terra ele a confiou ao homem.
+PSA.115.17	115	17	The dead praise not the LORD, neither any that go down into silence.	-0.1778	negative	Os mortos não louvam o Senhor, tampouco nenhum dos que descem ao silêncio.
+PSA.115.18	115	18	But we will bless the LORD from this time forth and for evermore. Praise the LORD.	0.0	neutral	Mas nós bendiremos o Senhor, desde agora e para sempre! Aleluia!
+PSA.116.1	116	1	I love the LORD, because he hath heard my voice {and} my supplications.	0.5	positive	Eu amo o Senhor, porque ele me ouviu quando lhe fiz a minha súplica.
+PSA.116.2	116	2	Because he hath inclined his ear unto me, therefore will I call upon {him} as long as I live. {as long...: Heb. in my days}	0.0121	neutral	Ele inclinou os seus ouvidos para mim; eu o invocarei toda a minha vida.
+PSA.116.3	116	3	The sorrows of death compassed me, and the pains of hell gat hold upon me: I found trouble and sorrow. {gat...: Heb. found me}	-0.2	negative	As cordas da morte me envolveram, as angústias do Sheol vieram sobre mim; aflição e tristeza me dominaram.
+PSA.116.4	116	4	Then called I upon the name of the LORD; O LORD, I beseech thee, deliver my soul.	0.0	neutral	"Então clamei pelo nome do Senhor: ""Livra-me, Senhor! """
+PSA.116.5	116	5	Gracious {is} the LORD, and righteous; yea, our God {is} merciful.	0.0	neutral	O Senhor é misericordioso e justo; o nosso Deus é compassivo.
+PSA.116.6	116	6	The LORD preserveth the simple: I was brought low, and he helped me.	0.0	neutral	O Senhor protege os simples; quando eu já estava sem forças, ele me salvou.
+PSA.116.7	116	7	Return unto thy rest, O my soul; for the LORD hath dealt bountifully with thee.	0.0	neutral	Retorne ao seu descanso, ó minha alma, porque o Senhor tem sido bom para você!
+PSA.116.8	116	8	For thou hast delivered my soul from death, mine eyes from tears, {and} my feet from falling.	0.0	neutral	Pois tu me livraste da morte, os meus olhos, das lágrimas e os meus pés, de tropeçar,
+PSA.116.9	116	9	I will walk before the LORD in the land of the living.	0.0	neutral	para que eu pudesse andar diante do Senhor na terra dos viventes.
+PSA.116.10	116	10	I believed, therefore have I spoken: I was greatly afflicted:	0.8	positive	"Eu cri, ainda que tenha dito: ""Estou muito aflito""."
+PSA.116.11	116	11	I said in my haste, All men {are} liars.	0.0	neutral	"Em pânico eu disse: ""Ninguém merece confiança""."
+PSA.116.12	116	12	What shall I render unto the LORD {for} all his benefits toward me?	0.0	neutral	Como posso retribuir ao Senhor toda a sua bondade para comigo?
+PSA.116.13	116	13	I will take the cup of salvation, and call upon the name of the LORD.	0.0	neutral	Erguerei o cálice da salvação e invocarei o nome do Senhor.
+PSA.116.14	116	14	I will pay my vows unto the LORD now in the presence of all his people.	0.0	neutral	Cumprirei para com o Senhor os meus votos, na presença de todo o seu povo.
+PSA.116.15	116	15	Precious in the sight of the LORD {is} the death of his saints.	0.5	positive	O Senhor vê com pesar a morte de seus fiéis.
+PSA.116.16	116	16	O LORD, truly I {am} thy servant; I {am} thy servant, {and} the son of thine handmaid: thou hast loosed my bonds.	0.0	neutral	Senhor, sou teu servo, Sim, sou teu servo, filho da tua serva; livraste-me das minhas correntes.
+PSA.116.17	116	17	I will offer to thee the sacrifice of thanksgiving, and will call upon the name of the LORD.	0.0	neutral	Oferecerei a ti um sacrifício de gratidão e invocarei o nome do Senhor.
+PSA.116.18	116	18	I will pay my vows unto the LORD now in the presence of all his people,	0.0	neutral	Cumprirei para com o Senhor os meus votos, na presença de todo o seu povo,
+PSA.116.19	116	19	In the courts of the LORD'S house, in the midst of thee, O Jerusalem. Praise ye the LORD.	0.0	neutral	nos pátios da casa do Senhor, no seu interior, ó Jerusalém! Aleluia!
+PSA.117.1	117	1	O praise the LORD, all ye nations: praise him, all ye people.	0.0	neutral	Louvem o Senhor, todas as nações; exaltem-no, todos os povos!
+PSA.117.2	117	2	For his merciful kindness is great toward us: and the truth of the LORD {endureth} for ever. Praise ye the LORD.	0.8	positive	Porque imenso é o seu amor leal por nós, e a fidelidade do Senhor dura para sempre. Aleluia!
+PSA.118.1	118	1	O give thanks unto the LORD; for {he is} good: because his mercy {endureth} for ever.	0.45	positive	Dêem graças ao Senhor porque ele é bom; o seu amor dura para sempre.
+PSA.118.2	118	2	Let Israel now say, that his mercy {endureth} for ever.	0.0	neutral	"Que Israel diga: ""O seu amor dura para sempre! """
+PSA.118.3	118	3	Let the house of Aaron now say, that his mercy {endureth} for ever.	0.0	neutral	"Os sacerdotes digam: ""O seu amor dura para sempre! """
+PSA.118.4	118	4	Let them now that fear the LORD say, that his mercy {endureth} for ever.	0.0	neutral	"Os que temem o Senhor digam: ""O seu amor dura para sempre! """
+PSA.118.5	118	5	I called upon the LORD in distress: the LORD answered me, {and set me} in a large place. {in distress: Heb. out of distress}	0.2143	positive	Na minha angústia clamei ao Senhor; e o Senhor me respondeu, dando-me ampla liberdade.
+PSA.118.6	118	6	The LORD {is} on my side; I will not fear: what can man do unto me? {on...: Heb. for me}	0.0	neutral	O Senhor está comigo, não temerei. O que me podem fazer os homens?
+PSA.118.7	118	7	The LORD taketh my part with them that help me: therefore shall I see {my desire} upon them that hate me.	-0.8	negative	O Senhor está comigo; ele é o meu ajudador. Verei a derrota dos meus inimigos.
+PSA.118.8	118	8	{It is} better to trust in the LORD than to put confidence in man.	0.5	positive	É melhor buscar refúgio no Senhor do que confiar nos homens.
+PSA.118.9	118	9	{It is} better to trust in the LORD than to put confidence in princes.	0.5	positive	É melhor buscar refúgio no Senhor do que confiar em príncipes.
+PSA.118.10	118	10	All nations compassed me about: but in the name of the LORD will I destroy them. {destroy...: Heb. cut them off}	-0.2	negative	Todas as nações me cercaram, mas em nome do Senhor eu as derrotei.
+PSA.118.11	118	11	They compassed me about; yea, they compassed me about: but in the name of the LORD I will destroy them.	-0.2	negative	Cercaram-me por todos os lados, mas em nome do Senhor eu as derrotei.
+PSA.118.12	118	12	They compassed me about like bees; they are quenched as the fire of thorns: for in the name of the LORD I will destroy them. {destroy: Heb. cut down}	-0.1852	negative	Cercaram-me como um enxame de abelhas, mas logo se extinguiram como espinheiros em chamas. Em nome do Senhor eu as derrotei!
+PSA.118.13	118	13	Thou hast thrust sore at me that I might fall: but the LORD helped me.	0.0	neutral	Empurraram-me para forçar a minha queda, mas o Senhor me ajudou.
+PSA.118.14	118	14	The LORD {is} my strength and song, and is become my salvation.	0.0	neutral	O Senhor é a minha força e o meu cântico; ele é a minha salvação.
+PSA.118.15	118	15	The voice of rejoicing and salvation {is} in the tabernacles of the righteous: the right hand of the LORD doeth valiantly.	0.2857	positive	"Alegres brados de vitória ressoam nas tendas dos justos: ""A mão direita do Senhor age com poder!"
+PSA.118.16	118	16	The right hand of the LORD is exalted: the right hand of the LORD doeth valiantly.	0.2857	positive	"A mão direita do Senhor é exaltada! A mão direita do Senhor age com poder! """
+PSA.118.17	118	17	I shall not die, but live, and declare the works of the LORD.	0.1364	positive	Não morrerei; mas vivo ficarei para anunciar os feitos do Senhor.
+PSA.118.18	118	18	The LORD hath chastened me sore: but he hath not given me over unto death.	0.0	neutral	O Senhor me castigou com severidade, mas não me entregou à morte.
+PSA.118.19	118	19	Open to me the gates of righteousness: I will go into them, {and} I will praise the LORD:	0.0	neutral	Abram as portas da justiça para mim, pois quero entrar para dar graças ao Senhor.
+PSA.118.20	118	20	This gate of the LORD, into which the righteous shall enter.	0.0	neutral	Esta é a porta do Senhor, pela qual entram os justos.
+PSA.118.21	118	21	I will praise thee: for thou hast heard me, and art become my salvation.	0.0	neutral	Dou-te graças, porque me respondeste e foste a minha salvação.
+PSA.118.22	118	22	The stone {which} the builders refused is become the head {stone} of the corner.	0.0	neutral	A pedra que os construtores rejeitaram tornou-se a pedra angular.
+PSA.118.23	118	23	This is the LORD'S doing; it {is} marvellous in our eyes. {the LORD's...: Heb. from the LORD}	0.0	neutral	Isso vem do Senhor, e é algo maravilhoso para nós.
+PSA.118.24	118	24	This {is} the day {which} the LORD hath made; we will rejoice and be glad in it.	0.5	positive	Este é o dia em que o Senhor agiu; alegremo-nos e exultemos neste dia.
+PSA.118.25	118	25	Save now, I beseech thee, O LORD: O LORD, I beseech thee, send now prosperity.	0.05	neutral	Salva-nos, Senhor! Nós imploramos. Faze-nos prosperar, Senhor! Nós suplicamos.
+PSA.118.26	118	26	Blessed {be} he that cometh in the name of the LORD: we have blessed you out of the house of the LORD.	0.0	neutral	Bendito é o que vem em nome do Senhor. Da casa do Senhor nós os abençoamos.
+PSA.118.27	118	27	God {is} the LORD, which hath shewed us light: bind the sacrifice with cords, {even} unto the horns of the altar.	0.4	positive	O Senhor é Deus, fez resplandecer sobre nós a sua luz. Juntem-se ao cortejo festivo, levando ramos até as pontas do altar.
+PSA.118.28	118	28	Thou {art} my God, and I will praise thee: {thou art} my God, I will exalt thee.	-0.75	negative	Tu és o meu Deus; graças te darei! Ó meu Deus, eu te exaltarei!
+PSA.118.29	118	29	O give thanks unto the LORD; for {he is} good: for his mercy {endureth} for ever.	0.45	positive	Dêem graças ao Senhor, porque ele é bom; o seu amor dura para sempre.
+PSA.119.1	119	1	ALEPH. Blessed {are} the undefiled in the way, who walk in the law of the LORD. {undefiled: or, perfect, or, sincere}	0.75	positive	Como são felizes os que andam em caminhos irrepreensíveis, que vivem conforme a lei do Senhor!
+PSA.119.2	119	2	Blessed {are} they that keep his testimonies, {and that} seek him with the whole heart.	0.2	positive	Como são felizes os que obedecem aos seus estatutos e de todo o coração o buscam!
+PSA.119.3	119	3	They also do no iniquity: they walk in his ways.	0.0	neutral	Não praticam o mal e andam nos caminhos do Senhor.
+PSA.119.4	119	4	Thou hast commanded {us} to keep thy precepts diligently.	0.0	neutral	Tu mesmo ordenaste os teus preceitos para que sejam fielmente obedecidos.
+PSA.119.5	119	5	O that my ways were directed to keep thy statutes!	0.0	neutral	Quem dera fossem firmados os meus caminhos na obediência aos teus decretos.
+PSA.119.6	119	6	Then shall I not be ashamed, when I have respect unto all thy commandments.	0.0	neutral	Então não ficaria decepcionado ao considerar todos os teus mandamentos.
+PSA.119.7	119	7	I will praise thee with uprightness of heart, when I shall have learned thy righteous judgments. {thy...: Heb. judgments of thy righteousness}	0.0	neutral	Eu te louvarei de coração sincero quando aprender as tuas justas ordenanças.
+PSA.119.8	119	8	I will keep thy statutes: O forsake me not utterly.	0.025	neutral	Obedecerei aos teus decretos; nunca me abandones.
+PSA.119.9	119	9	BETH. Wherewithal shall a young man cleanse his way? by taking heed {thereto} according to thy word.	0.1	neutral	Como pode o jovem manter pura a sua conduta? Vivendo de acordo com a tua palavra.
+PSA.119.10	119	10	With my whole heart have I sought thee: O let me not wander from thy commandments.	0.125	positive	Eu te busco de todo o coração; não permitas que eu me desvie dos teus mandamentos.
+PSA.119.11	119	11	Thy word have I hid in mine heart, that I might not sin against thee.	0.0	neutral	Guardei no coração a tua palavra para não pecar contra ti.
+PSA.119.12	119	12	Blessed {art} thou, O LORD: teach me thy statutes.	0.0	neutral	Bendito sejas, Senhor! Ensina-me os teus decretos.
+PSA.119.13	119	13	With my lips have I declared all the judgments of thy mouth.	0.0	neutral	Com os lábios repito todas as leis que promulgaste.
+PSA.119.14	119	14	I have rejoiced in the way of thy testimonies, as {much as} in all riches.	0.2	positive	Regozijo-me em seguir os teus testemunhos como o que se regozija com grandes riquezas.
+PSA.119.15	119	15	I will meditate in thy precepts, and have respect unto thy ways.	0.0	neutral	Meditarei nos teus preceitos e darei atenção às tuas veredas.
+PSA.119.16	119	16	I will delight myself in thy statutes: I will not forget thy word.	0.0	neutral	Tenho prazer nos teus decretos; não me esqueço da tua palavra.
+PSA.119.17	119	17	GIMEL. Deal bountifully with thy servant, {that} I may live, and keep thy word.	0.1364	positive	Trata com bondade o teu servo para que eu viva e obedeça à tua palavra.
+PSA.119.18	119	18	Open thou mine eyes, that I may behold wondrous things out of thy law. {Open: Heb. Reveal}	0.0	neutral	Abre os meus olhos para que eu veja as maravilhas da tua lei.
+PSA.119.19	119	19	I {am} a stranger in the earth: hide not thy commandments from me.	0.0	neutral	Sou peregrino na terra; não escondas de mim os teus mandamentos.
+PSA.119.20	119	20	My soul breaketh for the longing {that it hath} unto thy judgments at all times.	0.0	neutral	A minha alma consome-se de perene desejo das tuas ordenanças.
+PSA.119.21	119	21	Thou hast rebuked the proud {that are} cursed, which do err from thy commandments.	0.8	positive	Tu repreendes os arrogantes; malditos os que se desviam dos teus mandamentos!
+PSA.119.22	119	22	Remove from me reproach and contempt; for I have kept thy testimonies.	0.0	neutral	Tira de mim a afronta e o desprezo, pois obedeço aos teus estatutos.
+PSA.119.23	119	23	Princes also did sit {and} speak against me: {but} thy servant did meditate in thy statutes.	-0.75	negative	Mesmo que os poderosos se reúnam para conspirar contra mim, ainda assim o teu servo meditará nos teus decretos.
+PSA.119.24	119	24	Thy testimonies also {are} my delight {and} my counsellors. {my counsellors: Heb. men of my counsel}	0.0	neutral	Sim, os teus testemunhos são o meu prazer; eles são os meus conselheiros.
+PSA.119.25	119	25	DALETH. My soul cleaveth unto the dust: quicken thou me according to thy word.	0.0	neutral	Agora estou prostrado no pó; preserva a minha vida conforme a tua promessa.
+PSA.119.26	119	26	I have declared my ways, and thou heardest me: teach me thy statutes.	0.0	neutral	A ti relatei os meus caminhos e tu me respondeste; ensina-me os teus decretos.
+PSA.119.27	119	27	Make me to understand the way of thy precepts: so shall I talk of thy wondrous works.	0.0	neutral	Faze-me discernir o propósito dos teus preceitos, então meditarei nas tuas maravilhas.
+PSA.119.28	119	28	My soul melteth for heaviness: strengthen thou me according unto thy word. {melteth: Heb. droppeth}	0.0	neutral	A minha alma se consome de tristeza; fortalece-me conforme a tua promessa.
+PSA.119.29	119	29	Remove from me the way of lying: and grant me thy law graciously.	0.0	neutral	Desvia-me dos caminhos enganosos; por tua graça, ensina-me a tua lei.
+PSA.119.30	119	30	I have chosen the way of truth: thy judgments have I laid {before me}.	0.0	neutral	Escolhi o caminho da fidelidade; decidi seguir as tuas ordenanças.
+PSA.119.31	119	31	I have stuck unto thy testimonies: O LORD, put me not to shame.	0.05	neutral	Apego-me aos teus testemunhos, ó Senhor; não permitas que eu fique decepcionado.
+PSA.119.32	119	32	I will run the way of thy commandments, when thou shalt enlarge my heart.	0.0	neutral	Corro pelo caminho que os teus mandamentos apontam, pois me deste maior entendimento.
+PSA.119.33	119	33	HE. Teach me, O LORD, the way of thy statutes; and I shall keep it {unto} the end.	0.0	neutral	Ensina-me, Senhor, o caminho dos teus decretos, e a eles obedecerei até o fim.
+PSA.119.34	119	34	Give me understanding, and I shall keep thy law; yea, I shall observe it with {my} whole heart.	0.2	positive	Dá-me entendimento, para que eu guarde a tua lei e a ela obedeça de todo o coração.
+PSA.119.35	119	35	Make me to go in the path of thy commandments; for therein do I delight.	0.0	neutral	Dirige-me pelo caminho dos teus mandamentos, pois nele encontro satisfação.
+PSA.119.36	119	36	Incline my heart unto thy testimonies, and not to covetousness.	0.0	neutral	Inclina o meu coração para os teus estatutos, e não para a ganância.
+PSA.119.37	119	37	Turn away mine eyes from beholding vanity; {and} quicken thou me in thy way. {Turn...: Heb. Make to pass}	0.0	neutral	Desvia os meus olhos das coisas inúteis; faze-me viver nos caminhos que traçaste.
+PSA.119.38	119	38	Stablish thy word unto thy servant, who {is devoted} to thy fear.	0.0	neutral	Cumpre a tua promessa para com o teu servo, para que sejas temido.
+PSA.119.39	119	39	Turn away my reproach which I fear: for thy judgments {are} good.	0.7	positive	Livra-me da afronta que me apavora, pois as tuas ordenanças são boas.
+PSA.119.40	119	40	Behold, I have longed after thy precepts: quicken me in thy righteousness.	0.0	neutral	Como anseio pelos teus preceitos! Preserva a minha vida por tua justiça!
+PSA.119.41	119	41	VAU. Let thy mercies come also unto me, O LORD, {even} thy salvation, according to thy word.	0.0	neutral	Que o teu amor alcance-me, Senhor, e a tua salvação, segundo a tua promessa;
+PSA.119.42	119	42	So shall I have wherewith to answer him that reproacheth me: for I trust in thy word. {So...: or, So shall I answer him that reproveth me in a thing}	0.0	neutral	então responderei aos que me afrontam, pois confio na tua palavra.
+PSA.119.43	119	43	And take not the word of truth utterly out of my mouth; for I have hoped in thy judgments.	0.0	neutral	Jamais tires da minha boca a palavra da verdade, pois nas tuas ordenanças coloquei a minha esperança.
+PSA.119.44	119	44	So shall I keep thy law continually for ever and ever.	0.0	neutral	Obedecerei constantemente à tua lei, para todo o sempre.
+PSA.119.45	119	45	And I will walk at liberty: for I seek thy precepts. {at liberty: Heb. at large}	0.2143	positive	Andarei em verdadeira liberdade, pois tenho buscado os teus preceitos.
+PSA.119.46	119	46	I will speak of thy testimonies also before kings, and will not be ashamed.	0.0	neutral	Falarei dos teus testemunhos diante de reis, sem ser envergonhado.
+PSA.119.47	119	47	And I will delight myself in thy commandments, which I have loved.	0.7	positive	Tenho prazer nos teus mandamentos; eu os amo.
+PSA.119.48	119	48	My hands also will I lift up unto thy commandments, which I have loved; and I will meditate in thy statutes.	0.7	positive	A ti levanto minhas mãos e medito nos teus decretos.
+PSA.119.49	119	49	ZAIN. Remember the word unto thy servant, upon which thou hast caused me to hope.	0.0	neutral	Lembra-te da tua palavra ao teu servo, pela qual me deste esperança.
+PSA.119.50	119	50	This {is} my comfort in my affliction: for thy word hath quickened me.	0.0	neutral	Este é o meu consolo no meu sofrimento: A tua promessa dá-me vida.
+PSA.119.51	119	51	The proud have had me greatly in derision: {yet} have I not declined from thy law.	0.2833	positive	Os arrogantes zombam de mim o tempo todo, mas eu não me desvio da tua lei.
+PSA.119.52	119	52	I remembered thy judgments of old, O LORD; and have comforted myself.	0.1	neutral	Lembro-me, Senhor, das tuas ordenanças do passado e nelas acho consolo.
+PSA.119.53	119	53	Horror hath taken hold upon me because of the wicked that forsake thy law.	0.0	neutral	Fui tomado de ira tremenda por causa dos ímpios que rejeitaram a tua lei.
+PSA.119.54	119	54	Thy statutes have been my songs in the house of my pilgrimage.	0.0	neutral	Os teus decretos são o tema da minha canção em minha peregrinação.
+PSA.119.55	119	55	I have remembered thy name, O LORD, in the night, and have kept thy law.	0.0	neutral	De noite lembro-me do teu nome, Senhor! Vou obedecer à tua lei.
+PSA.119.56	119	56	This I had, because I kept thy precepts.	0.0	neutral	Esta tem sido a minha prática: Obedecer aos teus preceitos.
+PSA.119.57	119	57	CHETH. {Thou art} my portion, O LORD: I have said that I would keep thy words.	0.0	neutral	Tu és a minha herança, Senhor; prometi obedecer às tuas palavras.
+PSA.119.58	119	58	I intreated thy favour with {my} whole heart: be merciful unto me according to thy word. {favour: Heb. face}	0.2	positive	De todo o coração suplico a tua graça; tem misericórdia de mim, conforme a tua promessa.
+PSA.119.59	119	59	I thought on my ways, and turned my feet unto thy testimonies.	0.0	neutral	Refleti em meus caminhos e voltei os meus passos para os teus testemunhos.
+PSA.119.60	119	60	I made haste, and delayed not to keep thy commandments.	0.0	neutral	Eu me apressarei e não hesitarei em obedecer aos teus mandamentos.
+PSA.119.61	119	61	The bands of the wicked have robbed me: {but} I have not forgotten thy law. {bands: or, companies}	-0.75	negative	Embora as cordas dos ímpios queiram prender-me, eu não me esqueço da tua lei.
+PSA.119.62	119	62	At midnight I will rise to give thanks unto thee because of thy righteous judgments.	0.2	positive	À meia-noite me levanto para dar-te graças pelas tuas justas ordenanças.
+PSA.119.63	119	63	I {am} a companion of all {them} that fear thee, and of them that keep thy precepts.	0.0	neutral	Sou amigo de todos os que te temem e obedecem aos teus preceitos.
+PSA.119.64	119	64	The earth, O LORD, is full of thy mercy: teach me thy statutes.	0.35	positive	A terra está cheia do teu amor, Senhor; ensina-me os teus decretos.
+PSA.119.65	119	65	TETH. Thou hast dealt well with thy servant, O LORD, according unto thy word.	0.0	neutral	Trata com bondade o teu servo, Senhor, conforme a tua promessa.
+PSA.119.66	119	66	Teach me good judgment and knowledge: for I have believed thy commandments.	0.7	positive	Ensina-me o bom senso e o conhecimento, pois confio em teus mandamentos.
+PSA.119.67	119	67	Before I was afflicted I went astray: but now have I kept thy word.	0.0	neutral	Antes de ser castigado, eu andava desviado, mas agora obedeço à tua palavra.
+PSA.119.68	119	68	Thou {art} good, and doest good; teach me thy statutes.	0.7	positive	Tu és bom, e o que fazes é bom; ensina-me os teus decretos.
+PSA.119.69	119	69	The proud have forged a lie against me: {but} I will keep thy precepts with {my} whole heart.	0.0833	neutral	Os arrogantes mancharam o meu nome com mentiras, mas eu obedeço aos teus preceitos de todo o coração.
+PSA.119.70	119	70	Their heart is as fat as grease; {but} I delight in thy law.	0.0	neutral	O coração deles é insensível, eu, porém, tenho prazer na tua lei.
+PSA.119.71	119	71	{It is} good for me that I have been afflicted; that I might learn thy statutes.	0.7	positive	Foi bom para mim ter sido castigado, para que aprendesse os teus decretos.
+PSA.119.72	119	72	The law of thy mouth {is} better unto me than thousands of gold and silver.	0.5	positive	Para mim vale mais a lei que decretaste do que milhares de peças de prata e ouro.
+PSA.119.73	119	73	JOD. Thy hands have made me and fashioned me: give me understanding, that I may learn thy commandments.	0.0	neutral	As tuas mãos me fizeram e me formaram; dá-me entendimento para aprender os teus mandamentos.
+PSA.119.74	119	74	They that fear thee will be glad when they see me; because I have hoped in thy word.	0.5	positive	Quando os que têm temor de ti me virem, se alegrarão, pois na tua palavra coloquei a minha esperança.
+PSA.119.75	119	75	I know, O LORD, that thy judgments {are} right, and {that} thou in faithfulness hast afflicted me. {right: Heb. righteousness}	0.2857	positive	Sei, Senhor, que as tuas ordenanças são justas, e que por tua fidelidade me castigaste.
+PSA.119.76	119	76	Let, I pray thee, thy merciful kindness be for my comfort, according to thy word unto thy servant. {for...: Heb. to comfort me}	0.0	neutral	Seja o teu amor o meu consolo, conforme a tua promessa ao teu servo.
+PSA.119.77	119	77	Let thy tender mercies come unto me, that I may live: for thy law {is} my delight.	0.1364	positive	Alcance-me a tua misericórdia para que eu tenha vida, porque a tua lei é o meu prazer.
+PSA.119.78	119	78	Let the proud be ashamed; for they dealt perversely with me without a cause: {but} I will meditate in thy precepts.	0.025	neutral	Sejam humilhados os arrogantes, pois prejudicaram-me sem motivo; mas eu meditarei nos teus preceitos.
+PSA.119.79	119	79	Let those that fear thee turn unto me, and those that have known thy testimonies.	0.0	neutral	Venham apoiar-me aqueles que te temem, aqueles que entendem os teus estatutos.
+PSA.119.80	119	80	Let my heart be sound in thy statutes; that I be not ashamed.	0.4	positive	Seja o meu coração íntegro para com os teus decretos, para que eu não seja humilhado.
+PSA.119.81	119	81	CAPH. My soul fainteth for thy salvation: {but} I hope in thy word.	-0.75	negative	Estou quase desfalecido, aguardando a tua salvação, mas na tua palavra coloquei a esperança.
+PSA.119.82	119	82	Mine eyes fail for thy word, saying, When wilt thou comfort me?	-0.5	negative	"Os meus olhos fraquejam de tanto esperar pela tua promessa, e pergunto: ""Quando me consolarás? """
+PSA.119.83	119	83	For I am become like a bottle in the smoke; {yet} do I not forget thy statutes.	0.0	neutral	Embora eu seja como uma vasilha inútil, não me esqueço dos teus decretos.
+PSA.119.84	119	84	How many {are} the days of thy servant? when wilt thou execute judgment on them that persecute me?	0.5	positive	Até quando o teu servo deverá esperar para que castigues os meus perseguidores?
+PSA.119.85	119	85	The proud have digged pits for me, which {are} not after thy law.	0.8	positive	Cavaram uma armadilha contra mim os arrogantes, os que não seguem a tua lei.
+PSA.119.86	119	86	All thy commandments {are} faithful: they persecute me wrongfully; help thou me. {faithful: Heb. faithfulness}	0.0	neutral	Todos os teus mandamentos merecem confiança; ajuda-me, pois sou perseguido com mentiras.
+PSA.119.87	119	87	They had almost consumed me upon earth; but I forsook not thy precepts.	0.0	neutral	Quase acabaram com a minha vida na terra, mas não abandonei os teus preceitos.
+PSA.119.88	119	88	Quicken me after thy lovingkindness; so shall I keep the testimony of thy mouth.	0.0	neutral	Preserva a minha vida pelo teu amor, e obedecerei aos estatutos que decretaste.
+PSA.119.89	119	89	LAMED. For ever, O LORD, thy word is settled in heaven.	0.0	neutral	A tua palavra, Senhor, para sempre está firmada nos céus.
+PSA.119.90	119	90	Thy faithfulness {is} unto all generations: thou hast established the earth, and it abideth. {unto...: Heb. to generation and generation} {abideth: Heb. standeth}	0.0	neutral	A tua fidelidade é constante por todas as gerações; estabeleceste a terra, que firme subsiste.
+PSA.119.91	119	91	They continue this day according to thine ordinances: for all {are} thy servants.	0.0	neutral	Conforme as tuas ordens, tudo permanece até hoje, pois não há nada que não esteja a teu serviço.
+PSA.119.92	119	92	Unless thy law {had been} my delights, I should then have perished in mine affliction.	0.0	neutral	Se a tua lei não fosse o meu prazer, o sofrimento já me teria destruído.
+PSA.119.93	119	93	I will never forget thy precepts: for with them thou hast quickened me.	0.0	neutral	Jamais me esquecerei dos teus preceitos, pois é por meio deles que preservas a minha vida.
+PSA.119.94	119	94	I {am} thine, save me; for I have sought thy precepts.	0.0	neutral	Salva-me, pois a ti pertenço e busco os teus preceitos!
+PSA.119.95	119	95	The wicked have waited for me to destroy me: {but} I will consider thy testimonies.	-0.475	negative	Os ímpios estão à espera para destruir-me, mas eu considero os teus testemunhos.
+PSA.119.96	119	96	I have seen an end of all perfection: {but} thy commandment {is} exceeding broad.	-0.3438	negative	Tenho constatado que toda perfeição tem limite; mas não há limite para o teu mandamento.
+PSA.119.97	119	97	MEM. O how love I thy law! it {is} my meditation all the day.	0.625	positive	Como eu amo a tua lei! Medito nela o dia inteiro.
+PSA.119.98	119	98	Thou through thy commandments hast made me wiser than mine enemies: for they {are} ever with me. {they...: Heb. it is ever with me}	0.0	neutral	Os teus mandamentos me tornam mais sábio que os meus inimigos, porquanto estão sempre comigo.
+PSA.119.99	119	99	I have more understanding than all my teachers: for thy testimonies {are} my meditation.	0.5	positive	Tenho mais discernimento que todos os meus mestres, pois medito nos teus testemunhos.
+PSA.119.100	119	100	I understand more than the ancients, because I keep thy precepts.	0.5	positive	Tenho mais entendimento que os anciãos, pois obedeço aos teus preceitos.
+PSA.119.101	119	101	I have refrained my feet from every evil way, that I might keep thy word.	-1.0	negative	Afasto os pés de todo caminho mau para obedecer à tua palavra.
+PSA.119.102	119	102	I have not departed from thy judgments: for thou hast taught me.	0.0	neutral	Não me afasto das tuas ordenanças, pois tu mesmo me ensinas.
+PSA.119.103	119	103	How sweet are thy words unto my taste! {yea, sweeter} than honey to my mouth! {taste: Heb. palate}	0.5469	positive	Como são doces para o meu paladar as tuas palavras! Mais do que o mel para a minha boca!
+PSA.119.104	119	104	Through thy precepts I get understanding: therefore I hate every false way.	-0.6	negative	Ganho entendimento por meio dos teus preceitos; por isso odeio todo caminho de falsidade.
+PSA.119.105	119	105	NUN. Thy word {is} a lamp unto my feet, and a light unto my path. {lamp: or, candle}	0.4	positive	A tua palavra é lâmpada que ilumina os meus passos e luz que clareia o meu caminho.
+PSA.119.106	119	106	I have sworn, and I will perform {it}, that I will keep thy righteous judgments.	0.0	neutral	Prometi sob juramento e o cumprirei: vou obedecer às tuas justas ordenanças.
+PSA.119.107	119	107	I am afflicted very much: quicken me, O LORD, according unto thy word.	0.26	positive	Passei por muito sofrimento; preserva, Senhor, a minha vida, conforme a tua promessa.
+PSA.119.108	119	108	Accept, I beseech thee, the freewill offerings of my mouth, O LORD, and teach me thy judgments.	0.0	neutral	Aceita, Senhor, a minha oferta de louvor dos meus lábios, e ensina-me as tuas ordenanças.
+PSA.119.109	119	109	My soul {is} continually in my hand: yet do I not forget thy law.	0.0	neutral	A minha vida está sempre em perigo, mas não me esqueço da tua lei.
+PSA.119.110	119	110	The wicked have laid a snare for me: yet I erred not from thy precepts.	0.0	neutral	Os ímpios prepararam uma armadilha contra mim, mas não me desviei dos teus preceitos.
+PSA.119.111	119	111	Thy testimonies have I taken as an heritage for ever: for they {are} the rejoicing of my heart.	0.0	neutral	Os teus testemunhos são a minha herança permanente; são a alegria do meu coração.
+PSA.119.112	119	112	I have inclined mine heart to perform thy statutes alway, {even unto} the end. {to perform: Heb. to do}	0.0	neutral	Dispus o meu coração para cumprir os teus decretos até o fim.
+PSA.119.113	119	113	SAMECH. I hate {vain} thoughts: but thy law do I love.	-0.15	negative	Odeio os que são inconstantes, mas amo a tua lei.
+PSA.119.114	119	114	Thou {art} my hiding place and my shield: I hope in thy word.	0.0	neutral	Tu és o meu abrigo e o meu escudo; e na tua palavra coloquei a minha esperança.
+PSA.119.115	119	115	Depart from me, ye evildoers: for I will keep the commandments of my God.	0.0	neutral	Afastem-se de mim os que praticam o mal! Quero obedecer aos mandamentos do meu Deus!
+PSA.119.116	119	116	Uphold me according unto thy word, that I may live: and let me not be ashamed of my hope.	0.1364	positive	Sustenta-me, segundo a tua promessa, e eu viverei; não permitas que se frustrem as minhas esperanças.
+PSA.119.117	119	117	Hold thou me up, and I shall be safe: and I will have respect unto thy statutes continually.	0.5	positive	Ampara-me, e estarei seguro; sempre estarei atento aos teus decretos.
+PSA.119.118	119	118	Thou hast trodden down all them that err from thy statutes: for their deceit {is} falsehood.	-0.1556	negative	Tu rejeitas todos os que se desviam dos teus decretos, pois os seus planos enganosos são inúteis.
+PSA.119.119	119	119	Thou puttest away all the wicked of the earth {like} dross: therefore I love thy testimonies. {puttest...: Heb. causest to cease}	0.5	positive	Tu destróis como refugo todos os ímpios da terra; por isso amo os teus testemunhos.
+PSA.119.120	119	120	My flesh trembleth for fear of thee; and I am afraid of thy judgments.	-0.6	negative	O meu corpo estremece diante de ti; as tuas ordenanças enchem-me de temor.
+PSA.119.121	119	121	AIN. I have done judgment and justice: leave me not to mine oppressors.	0.0	neutral	Tenho vivido com justiça e retidão; não me abandones nas mãos dos meus opressores.
+PSA.119.122	119	122	Be surety for thy servant for good: let not the proud oppress me.	0.75	positive	Garante o bem-estar do teu servo; não permitas que os arrogantes me oprimam.
+PSA.119.123	119	123	Mine eyes fail for thy salvation, and for the word of thy righteousness.	-0.5	negative	Os meus olhos fraquejam, aguardando a tua salvação e o cumprimento da tua justiça.
+PSA.119.124	119	124	Deal with thy servant according unto thy mercy, and teach me thy statutes.	0.0	neutral	Trata o teu servo conforme o teu amor leal e ensina-me os teus decretos.
+PSA.119.125	119	125	I {am} thy servant; give me understanding, that I may know thy testimonies.	0.0	neutral	Sou teu servo; dá-me discernimento para compreender os teus testemunhos.
+PSA.119.126	119	126	{It is} time for {thee}, LORD, to work: {for} they have made void thy law.	-0.75	negative	Já é tempo de agires, Senhor, pois a tua lei está sendo desrespeitada.
+PSA.119.127	119	127	Therefore I love thy commandments above gold; yea, above fine gold.	0.2292	positive	Eu amo os teus mandamentos mais do que o ouro, mais do que o ouro puro.
+PSA.119.128	119	128	Therefore I esteem all {thy} precepts {concerning} all {things to be} right; {and} I hate every false way.	-0.3048	negative	Por isso considero justos os teus preceitos e odeio todo caminho de falsidade.
+PSA.119.129	119	129	PE. Thy testimonies {are} wonderful: therefore doth my soul keep them.	1.0	positive	Os teus testemunhos são maravilhosos; por isso lhes obedeço.
+PSA.119.130	119	130	The entrance of thy words giveth light; it giveth understanding unto the simple.	0.2	positive	A explicação das tuas palavras ilumina e dá discernimento aos inexperientes.
+PSA.119.131	119	131	I opened my mouth, and panted: for I longed for thy commandments.	0.0	neutral	Abro a boca e suspiro, ansiando por teus mandamentos.
+PSA.119.132	119	132	Look thou upon me, and be merciful unto me, as thou usest to do unto those that love thy name. {as thou...: Heb. according to the custom toward those, etc}	0.5	positive	Volta-te para mim e tem misericórdia de mim, como sempre fazes aos que amam o teu nome.
+PSA.119.133	119	133	Order my steps in thy word: and let not any iniquity have dominion over me.	0.0	neutral	Dirige os meus passos, conforme a tua palavra; não permitas que nenhum pecado me domine.
+PSA.119.134	119	134	Deliver me from the oppression of man: so will I keep thy precepts.	0.0	neutral	Resgata-me da opressão dos homens, para que eu obedeça aos teus preceitos.
+PSA.119.135	119	135	Make thy face to shine upon thy servant; and teach me thy statutes.	0.0	neutral	Faze o teu rosto resplandecer sobre o teu servo, e ensina-me os teus decretos.
+PSA.119.136	119	136	Rivers of waters run down mine eyes, because they keep not thy law.	-0.1556	negative	Rios de lágrimas correm dos meus olhos, porque a tua lei não é obedecida.
+PSA.119.137	119	137	TZADDI. Righteous {art} thou, O LORD, and upright {are} thy judgments.	0.0	neutral	Justo és, Senhor, e retas são as tuas ordenanças.
+PSA.119.138	119	138	Thy testimonies {that} thou hast commanded {are} righteous and very faithful. {righteous: Heb. righteousness} {faithful: Heb. faithfulness}	0.2	positive	Ordenaste os teus testemunhos com justiça; dignos são de inteira confiança!
+PSA.119.139	119	139	My zeal hath consumed me, because mine enemies have forgotten thy words. {consumed...: Heb. cut me off}	0.0	neutral	O meu zelo me consome, pois os meus adversários se esquecem das tuas palavras.
+PSA.119.140	119	140	Thy word {is} very pure: therefore thy servant loveth it. {pure: Heb. tried, or, refined}	0.2464	positive	A tua promessa foi plenamente comprovada, e, por isso, o teu servo a ama.
+PSA.119.141	119	141	I {am} small and despised: {yet} do not I forget thy precepts.	-0.5	negative	Sou pequeno e desprezado, mas não esqueço os teus preceitos.

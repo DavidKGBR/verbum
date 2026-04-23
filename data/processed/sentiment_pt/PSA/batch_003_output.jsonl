@@ -1,0 +1,300 @@
+{"verse_id": "PSA.23.5", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.23.6", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.24.1", "polarity_pt": 0.1, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.24.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.24.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.24.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.24.5", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.24.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.24.7", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.24.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.24.9", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.24.10", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.25.1", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.25.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "mixed: trust + fear of enemies"}
+{"verse_id": "PSA.25.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.25.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.25.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.25.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.25.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "penitent plea"}
+{"verse_id": "PSA.25.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.25.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.25.10", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.25.11", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "confession of great sin"}
+{"verse_id": "PSA.25.12", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.25.13", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.25.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.25.15", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.25.16", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.25.17", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.25.18", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.25.19", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.25.20", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.25.21", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.25.22", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.26.1", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.26.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.26.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.26.4", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.26.5", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.26.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.26.7", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.26.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.26.9", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.26.10", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": "EN↔PT diverge: EN positive but PT describes evil hands/bribes"}
+{"verse_id": "PSA.26.11", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.26.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.27.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.27.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed threat + triumph"}
+{"verse_id": "PSA.27.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.27.4", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.27.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "protection amid adversity"}
+{"verse_id": "PSA.27.6", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.27.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.27.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.27.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.27.10", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed abandonment + hope"}
+{"verse_id": "PSA.27.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.27.12", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.27.13", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.27.14", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.28.1", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.28.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.28.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.28.4", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.28.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.28.6", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.28.7", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.28.8", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.28.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.29.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.29.2", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.29.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.75, "notes": "awe/theophany"}
+{"verse_id": "PSA.29.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.29.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "awe-inspiring but destructive imagery"}
+{"verse_id": "PSA.29.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.29.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "PSA.29.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "PSA.29.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.29.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.29.11", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.30.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.30.2", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.30.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.30.4", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.30.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": "mixed grief + joy"}
+{"verse_id": "PSA.30.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.30.7", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": "mixed firmness + terror"}
+{"verse_id": "PSA.30.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.30.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.30.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.30.11", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.30.12", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.31.1", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.31.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.31.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.31.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.31.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.31.6", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": "mixed hatred of idolaters + trust"}
+{"verse_id": "PSA.31.7", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.31.8", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.31.9", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.31.10", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.31.11", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.31.12", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.31.13", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": "EN↔PT diverge: EN scored positive but PT is clearly fear/conspiracy"}
+{"verse_id": "PSA.31.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.31.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.31.16", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.31.17", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.31.18", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.31.19", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.31.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.75, "notes": null}
+{"verse_id": "PSA.31.21", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.31.22", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed despair + deliverance"}
+{"verse_id": "PSA.31.23", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.31.24", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.32.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.32.2", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.32.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.32.4", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.32.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": "confession + forgiveness"}
+{"verse_id": "PSA.32.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.32.7", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.32.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.32.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.32.10", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed pain of wicked + mercy for trusting"}
+{"verse_id": "PSA.32.11", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.33.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": "EN↔PT diverge: EN very negative but PT clearly joyful"}
+{"verse_id": "PSA.33.2", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.33.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.33.4", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.33.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.33.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.33.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.33.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "reverential awe"}
+{"verse_id": "PSA.33.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.33.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.33.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.33.12", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.33.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.33.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.33.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.33.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.33.17", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.33.18", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.33.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.33.20", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.33.21", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.33.22", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.34.2", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.34.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.34.4", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.34.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.34.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.7", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.34.8", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.34.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.11", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.34.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.13", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "EN scored -1.0 but PT is didactic, mild negative"}
+{"verse_id": "PSA.34.14", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.34.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.16", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.34.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.18", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed compassion + suffering"}
+{"verse_id": "PSA.34.19", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed affliction + deliverance"}
+{"verse_id": "PSA.34.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.34.21", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.34.22", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.35.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.35.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.35.4", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.35.6", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.7", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.35.8", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.9", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.35.10", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.11", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.12", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.13", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.75, "notes": null}
+{"verse_id": "PSA.35.14", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.15", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.35.16", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.35.18", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.35.20", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.35.21", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.22", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.35.23", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": "urgent supplication"}
+{"verse_id": "PSA.35.24", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.35.25", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.35.26", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.35.27", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.35.28", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.36.1", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.36.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.36.3", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": "EN↔PT diverge: EN positive but PT clearly negative (evil/deceit)"}
+{"verse_id": "PSA.36.4", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.36.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.36.6", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.36.7", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.36.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.36.9", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.36.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.36.11", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.36.12", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "ambiguous: downfall of evildoers"}
+{"verse_id": "PSA.37.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.37.2", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.37.3", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.37.4", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.37.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.37.8", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.37.9", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed wicked cut off + righteous inherit"}
+{"verse_id": "PSA.37.10", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.37.11", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.37.12", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.13", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.37.14", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.37.15", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "justice on wicked"}
+{"verse_id": "PSA.37.16", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.17", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed"}
+{"verse_id": "PSA.37.18", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.37.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.20", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.21", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed"}
+{"verse_id": "PSA.37.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": "mixed blessing/curse"}
+{"verse_id": "PSA.37.23", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.24", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.37.25", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.26", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.37.27", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.37.28", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed"}
+{"verse_id": "PSA.37.29", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.37.30", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.31", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.32", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.37.33", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.34", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.35", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.37.36", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.37.37", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.37.38", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.37.39", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": "EN↔PT diverge: EN negative but PT positive (salvation)"}
+{"verse_id": "PSA.37.40", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.38.1", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": "EN↔PT diverge; PT is plea against wrath"}
+{"verse_id": "PSA.38.2", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": "EN↔PT diverge: EN positive but PT clearly negative (arrows/wounds)"}
+{"verse_id": "PSA.38.3", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.4", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.5", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.6", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.7", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.8", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.9", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.38.10", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.11", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.38.12", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.38.13", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.75, "notes": null}
+{"verse_id": "PSA.38.14", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.38.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.38.16", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.38.17", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.38.18", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.38.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.38.20", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.38.21", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.38.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.39.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.39.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.39.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.39.4", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": "melancholy on mortality"}
+{"verse_id": "PSA.39.5", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT diverge: EN very positive but PT is melancholy on mortality"}
+{"verse_id": "PSA.39.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.39.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.39.8", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.39.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.75, "notes": null}
+{"verse_id": "PSA.39.10", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.39.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.39.12", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.39.13", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.40.1", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.40.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": "EN↔PT diverge: EN very negative but PT is rescue (positive)"}
+{"verse_id": "PSA.40.3", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.40.4", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.40.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.40.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.40.7", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.40.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.40.9", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.40.10", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.40.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.40.12", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": "EN↔PT diverge: EN positive but PT is overwhelming distress"}
+{"verse_id": "PSA.40.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.40.14", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.85, "notes": null}
