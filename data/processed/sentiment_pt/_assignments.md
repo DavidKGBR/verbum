@@ -74,9 +74,22 @@ Total: 3.816 versos · 15 batches · gerada 2026-04-23.
 
 ---
 
+## Fase F4 — Sapienciais (Provérbios + Eclesiastes)
+
+Total: 1.137 versos · 5 batches · gerada 2026-04-23.
+
+| Batch                           | Verses | Agent | Status | Started | Finished |
+|---------------------------------|-------:|-------|--------|---------|----------|
+| PRO/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| PRO/batch_002_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| PRO/batch_003_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| PRO/batch_004_input.tsv         |    15  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ECC/batch_001_input.tsv         |   222  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+
+---
+
 ## Próximas fases (ainda não preparadas)
 
-- **F4** — Sapienciais: `PRO` (~3), `ECC` (~1)
 - **F5** — Epístolas + Apocalipse: `ROM`…`REV`
 - **F6** — Profetas: `ISA`, `JER`, `EZK`, `DAN`, menores
 - **F7** — Histórico + legal: `LEV`…`EST`
