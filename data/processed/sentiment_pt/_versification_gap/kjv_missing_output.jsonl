@@ -1,0 +1,6 @@
+{"verse_id": "MAT.2.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.7, "notes": "cumprimento profético declarativo (KJV versification gap, labeled directly)"}
+{"verse_id": "MAT.22.46", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.5, "notes": "silêncio triunfal dos oponentes (KJV versification gap)"}
+{"verse_id": "MAT.26.75", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": "'chorou amargamente' — Pedro negação âncora (KJV versification gap)"}
+{"verse_id": "MRK.4.41", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.5, "notes": "mixed awe/fear after miracle (KJV versification gap)"}
+{"verse_id": "MRK.7.37", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": "'simplesmente maravilhado' + louvor explícito (KJV versification gap)"}
+{"verse_id": "MRK.8.38", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": "advertência sobre juízo escatológico (KJV versification gap)"}

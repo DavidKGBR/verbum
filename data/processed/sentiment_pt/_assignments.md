@@ -165,9 +165,69 @@ Total: 5.336 versos · 30 batches · gerada 2026-04-23.
 
 ---
 
-## Próximas fases (ainda não preparadas)
+## Fase F7b — Atos (esquecido entre F2 e F5)
 
-- **F7** — Histórico + legal: `LEV`…`EST`
+Total: 1.007 versos · 4 batches · gerada 2026-04-23.
+
+| Batch                           | Verses | Agent | Status | Started | Finished |
+|---------------------------------|-------:|-------|--------|---------|----------|
+| ACT/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ACT/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ACT/batch_003_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| ACT/batch_004_input.tsv         |   107  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+
+---
+
+## Fase F7 — Histórico + legal (última fase)
+
+Total: 10.127 versos · 42 batches · gerada 2026-04-23.
+
+**Distribuição:** A2 = Torah legal (LEV/NUM/DEU) · A3 = pré-monarquia + Ester (JOS/JDG/RUT/1SA/2SA/EST) · A4 = monarquia + pós-exílio (1-2KI/1-2CH/EZR/NEH).
+
+| Batch                           | Verses | Agent | Status | Started | Finished |
+|---------------------------------|-------:|-------|--------|---------|----------|
+| LEV/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| LEV/batch_002_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| LEV/batch_003_input.tsv         |   259  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NUM/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NUM/batch_002_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NUM/batch_003_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NUM/batch_004_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NUM/batch_005_input.tsv         |    88  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| DEU/batch_001_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| DEU/batch_002_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| DEU/batch_003_input.tsv         |   300  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| DEU/batch_004_input.tsv         |    59  |   A2  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOS/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOS/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JOS/batch_003_input.tsv         |    58  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JDG/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JDG/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| JDG/batch_003_input.tsv         |    19  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| RUT/batch_001_input.tsv         |    85  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1SA/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1SA/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1SA/batch_003_input.tsv         |   211  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2SA/batch_001_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2SA/batch_002_input.tsv         |   300  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2SA/batch_003_input.tsv         |    95  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EST/batch_001_input.tsv         |   167  |   A3  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1KI/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1KI/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1KI/batch_003_input.tsv         |   217  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2KI/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2KI/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2KI/batch_003_input.tsv         |   119  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1CH/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1CH/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1CH/batch_003_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 1CH/batch_004_input.tsv         |    42  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2CH/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2CH/batch_002_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| 2CH/batch_003_input.tsv         |   222  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| EZR/batch_001_input.tsv         |   280  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NEH/batch_001_input.tsv         |   300  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
+| NEH/batch_002_input.tsv         |   106  |   A4  | ✅ done | 2026-04-23 | 2026-04-23 |
 
 ---
 
