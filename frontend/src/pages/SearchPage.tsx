@@ -250,13 +250,14 @@ export default function SearchPage() {
               : r.sentiment_label === "negative"
                 ? "bg-red-100 text-red-700"
                 : "bg-gray-100 text-gray-600";
-          // The sentiment polarity on every row was computed once with TextBlob
-          // on the KJV text. It doesn't reflect the PT/ES corpus shown to the
-          // user (e.g. "queima esterco" reads as Neutral only because KJV's
-          // "burns dung" was classified that way). Hide the badge until R7
-          // recomputes sentiment per translation.  TODO(R7): re-enable for
-          // all translations once the multilingual sentiment job lands.
-          const showSentiment = translation === "kjv";
+          // Sentiment badge now supported on any translation with labeled
+          // multilang coverage (PT via NVI/RA/ACF, ES via RVR) — the backend
+          // COALESCEs manual labels over the KJV-TextBlob fallback. For
+          // translations without multilang mapping (BBE, ASV, WEB, DARBY,
+          // LUTHER, NEUE), the column still carries KJV TextBlob noise, so
+          // we suppress the badge there to avoid misleading signals.
+          const SENTIMENT_SUPPORTED = new Set(["kjv", "nvi", "ra", "acf", "rvr"]);
+          const showSentiment = SENTIMENT_SUPPORTED.has(translation);
           return (
             <div
               key={r.verse_id}

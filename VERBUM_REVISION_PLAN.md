@@ -667,9 +667,17 @@ Quando as 7 sessões R1–R7 estiverem ✅:
 ✅ R5 — Limpeza strings cruas + IDs resolvidos (21 abr 2026): _clean_gloss filtra tokens [Obj.]/»/@; timeline participants retornam {slug,name} com JOIN biblical_people; explorer search secondary_label limpo para Strong's
 ✅ R6 — Audit trilíngue final (21 abr 2026): ~35 hardcoded EN strings localizadas em 10 arquivos (WordStudyPage, CommunityPage, StreakBadge, Layout, BibleReader, ImmersiveReader, ReaderPage, HomePage, PeoplePage). 785 chaves i18n em paridade EN/PT/ES. Missing key explorer.strongsDef.original adicionada. Zero strings EN hardcoded user-visible remanescentes.
 ✅ R7.0 — Sentiment multilingual setup (21 abr 2026): tabela verses_sentiment_multilang (PK verse_id+lang) criada em duckdb_loader.py; 3 scripts (prep_sentiment_batch.py, load_sentiment_batch.py, sentiment_status.py) testados end-to-end; emotional.py reescrito com LEFT JOIN + COALESCE overlay para PT/ES; sentimentCoverage.ts auto-gerado; EmotionalLandscapePage.tsx com indicador "em refinamento" + toggle positive/negative + defaultTranslationFor(locale)
-⚠️ BLOQUEANTE PRÉ-R7.1 — Auditoria visual+código de 13 páginas (decidido 22 abr 2026): David pediu revisão pessoal (visual na mão) + análise de código de TODAS as páginas restantes antes de iniciar os batches de sentiment. Páginas: /timeline, /compare, /topics, /devotional, /analytics, /citations, /open-questions, /threads, /structure, /emotional, /community, /special-passages, /genealogy. NÃO PULAR PARA R7.1 SEM COMPLETAR ESTA REVISÃO.
-Sessões R7.1-113 — Sentiment labeling 100% PT-BR (66 livros NVI = ~113 batches)
-─────────── REVISION CLOSED (100% cobertura atingida) ───────────
+✅ Auditoria pré-R7.1 (23 abr 2026): 13/13 páginas revisadas com i18n+conexões fechadas (/timeline, /compare, /topics, /devotional, /deep-analytics, /citations, /open-questions, /threads, /structure, /emotional, /community, /special-passages, /genealogy, /authors). Cross-cutting fixes: helper defaultTranslationFor centralizado, useScrollIntoViewOnChange hook, ConceptIcon SVG library (10 conceitos), localizeBookAbbrev adotado em toda app, Reader links completos com verse+translation. Commits 731d7d1, 9c4a245, cdf540b.
+✅ R7.1 — Sentiment labeling 100% PT-BR + ES (23 abr 2026): 3 agentes Claude paralelos (A2/A3/A4) + maestro em 7 fases (F1-F7+F7b) rotularam 31107 versos PT (100%) e 31102 versos ES (100%) em uma tarde. Infra multilang parametrizada (prep/load/status scripts aceitam --lang). ES audit secundário (JER/EZK/ROM/1CO/2CO) subiu confidence de 0.58→0.75. Commits 4cdf886, a82b24f, 59a81c2.
+✅ R7.2 — Emotional arc KPIs (23 abr 2026): novo endpoint /emotional/arc/{book_id} + componente BookEmotionalArc com 5 KPIs (direção, pico, vale, volatilidade, dominância), curva com gradient verde→dourado→vermelho, marcadores HTML, legenda vertical +1/0/-1, tooltips localizados. Commits 59a81c2, ec6efe5.
+✅ R7.3 — Search sentiment badge multilang (23 abr 2026): badge re-habilitado pra NVI/RA/ACF/RVR via COALESCE com verses_sentiment_multilang no backend /verses/search. Frontend whitelist SENTIMENT_SUPPORTED = {kjv, nvi, ra, acf, rvr}.
+─────────── R7 CLOSED — Launch-ready multilingual sentiment ───────────
+⏳ Pendências opcionais pós-launch (memórias registradas):
+  - ES secondary audit pra livros poéticos (LAM ES = -0.02 sugere programmatic lexical imperfeito; ideal rodar audit A2-style em LAM/ISA/PSA/PRO/ECC/SNG/JOB/minor prophets)
+  - KPI "arc comparativo" (overlay de 2-3 livros no mesmo gráfico)
+  - Tribes + family tree feature (/tribes)
+  - Tuning heurística arc_direction (min(first_half) vs avg(last_q) pra capturar Jó como ascending)
+─────────────────────────────────────────────────────────────────────
 Sessão L2 — README de produto
 Sessão L3 — GCP backend
 Sessão L4 — BigQuery
