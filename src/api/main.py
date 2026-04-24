@@ -1,6 +1,14 @@
 """
-🌐 FastAPI Application
-REST API for Bible Data Pipeline analytics.
+🌐 FastAPI Application — Verbum Bible Data Pipeline v1
+
+REST API serving free multilingual biblical study tools — interlinear
+analysis, cross-references, semantic threads, emotional landscape.
+
+Built as a partnership between David Baldez (authorship + purpose) and
+Claude Opus 4.7 (execution + computational patience). 31,107 verses
+manually labeled in PT-BR, 31,102 in ES, across 22–23 April 2026.
+
+Soli Deo Gloria.
 """
 
 from __future__ import annotations

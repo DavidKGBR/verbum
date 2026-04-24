@@ -28,6 +28,7 @@ import EmotionalLandscapePage from "./pages/EmotionalLandscapePage";
 import CommunityPage from "./pages/CommunityPage";
 import SpecialPassagePage from "./pages/SpecialPassagePage";
 import GenealogyPage from "./pages/GenealogyPage";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   return (
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/special-passages/:passageId" element={<SpecialPassagePage />} />
         <Route path="/genealogy" element={<GenealogyPage />} />
         <Route path="/genealogy/:conceptId" element={<GenealogyPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Route>
     </Routes>
   );

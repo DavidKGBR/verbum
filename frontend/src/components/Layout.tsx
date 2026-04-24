@@ -133,6 +133,19 @@ export default function Layout() {
       )}
 
       <StreakBadge />
+
+      {/* Subtle "about" link at the very bottom of the sidebar.
+          Kept separate from the main nav so it doesn't clutter the
+          discovery flow — it's a footer-note, not a feature. */}
+      <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between text-[10px] opacity-50">
+        <Link
+          to="/about"
+          className="hover:opacity-100 hover:text-[var(--color-gold)] transition"
+        >
+          {t("nav.about")}
+        </Link>
+        <span className="italic">Verbum</span>
+      </div>
     </>
   );
 
