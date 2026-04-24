@@ -845,5 +845,21 @@
   "streak.best": "Melhor: {n}",
   "streak.total": "Total: {n} cap",
   "explorer.strongsDef.original": "Definição original (inglês) · tradução em andamento",
-  "emotional.sentimentFallback": "Sentiment baseado no texto em inglês (KJV) · refinamento em andamento"
+  "emotional.sentimentFallback": "Sentiment baseado no texto em inglês (KJV) · refinamento em andamento",
+  "arc.title": "Arco Emocional",
+  "arc.direction": "Direção",
+  "arc.direction.ascending": "ascendente",
+  "arc.direction.descending": "descendente",
+  "arc.direction.stable": "estável",
+  "arc.direction.u_shape": "em U",
+  "arc.direction.inverted_u": "U invertido",
+  "arc.peak": "Pico",
+  "arc.valley": "Vale",
+  "arc.volatility": "Volatilidade",
+  "arc.volatility.low": "baixa",
+  "arc.volatility.medium": "média",
+  "arc.volatility.high": "alta",
+  "arc.dominance": "Dominância",
+  "arc.turnPoint": "Ponto de virada",
+  "arc.chapters": "{n} capítulos"
 }

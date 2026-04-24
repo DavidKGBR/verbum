@@ -64,6 +64,58 @@ export async function fetchBookProfiles(
   return fetchJson(`${BASE}/emotional/book-profiles?translation=${translation}`);
 }
 
+export interface ArcSeriesPoint {
+  chapter: number;
+  avg_polarity: number;
+  verse_count: number;
+  min_polarity: number;
+  max_polarity: number;
+  stddev_polarity: number;
+}
+
+export interface ArcVerseRef {
+  verse_id: string;
+  reference: string;
+  chapter: number;
+  verse: number;
+  text: string;
+  polarity: number;
+}
+
+export interface ArcTurnPoint {
+  chapter: number;
+  delta: number;
+  direction: "upward" | "downward";
+}
+
+export interface BookArcKpis {
+  arc_direction: "ascending" | "descending" | "stable" | "u_shape" | "inverted_u";
+  arc_delta: number;
+  peak: ArcVerseRef | null;
+  valley: ArcVerseRef | null;
+  volatility: number;
+  positive_pct: number;
+  negative_pct: number;
+  neutral_pct: number;
+  turn_points: ArcTurnPoint[];
+}
+
+export interface BookArc {
+  book_id: string;
+  translation: string;
+  lang: string;
+  chapter_count: number;
+  kpis: BookArcKpis;
+  series: ArcSeriesPoint[];
+}
+
+export async function fetchBookArc(
+  bookId: string,
+  translation = "kjv"
+): Promise<BookArc> {
+  return fetchJson(`${BASE}/emotional/arc/${bookId}?translation=${translation}`);
+}
+
 // ── Community Notes ────────────────────────────────────────────────────────
 
 export interface CommunityNote {

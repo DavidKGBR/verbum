@@ -845,5 +845,21 @@
   "streak.best": "Best: {n}",
   "streak.total": "Total: {n} ch",
   "explorer.strongsDef.original": "Original definition (English) · translation in progress",
-  "emotional.sentimentFallback": "Sentiment based on English text (KJV) · refinement in progress"
+  "emotional.sentimentFallback": "Sentiment based on English text (KJV) · refinement in progress",
+  "arc.title": "Emotional Arc",
+  "arc.direction": "Direction",
+  "arc.direction.ascending": "ascending",
+  "arc.direction.descending": "descending",
+  "arc.direction.stable": "stable",
+  "arc.direction.u_shape": "U-shaped",
+  "arc.direction.inverted_u": "inverted U",
+  "arc.peak": "Peak",
+  "arc.valley": "Valley",
+  "arc.volatility": "Volatility",
+  "arc.volatility.low": "low",
+  "arc.volatility.medium": "medium",
+  "arc.volatility.high": "high",
+  "arc.dominance": "Dominance",
+  "arc.turnPoint": "Turn point",
+  "arc.chapters": "{n} chapters"
 }

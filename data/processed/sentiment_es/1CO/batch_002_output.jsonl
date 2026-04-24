@@ -1,137 +1,137 @@
-{"verse_id": "1CO.12.30", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.12.31", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.13.1", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.13.2", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.13.3", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.13.4", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.13.5", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.13.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
-{"verse_id": "1CO.13.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
-{"verse_id": "1CO.13.8", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.13.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.13.10", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.13.11", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.13.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.13.13", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
-{"verse_id": "1CO.14.1", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.2", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.3", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.14.4", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.5", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.7", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.8", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.9", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.8, "notes": null}
-{"verse_id": "1CO.14.10", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.11", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.14", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.15", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.14.16", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
-{"verse_id": "1CO.14.17", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
-{"verse_id": "1CO.14.18", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
-{"verse_id": "1CO.14.19", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.14.20", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.21", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.22", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.14.23", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.14.24", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.25", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.14.26", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.27", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.28", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.29", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.30", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.31", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.32", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.33", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.14.34", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.35", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.36", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.14.37", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.14.38", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.39", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.14.40", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.1", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.15.2", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
-{"verse_id": "1CO.15.3", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.15.4", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
-{"verse_id": "1CO.15.5", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.6", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
-{"verse_id": "1CO.15.10", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.11", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.12", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
-{"verse_id": "1CO.15.13", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
-{"verse_id": "1CO.15.14", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
-{"verse_id": "1CO.15.15", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
-{"verse_id": "1CO.15.16", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
-{"verse_id": "1CO.15.17", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
-{"verse_id": "1CO.15.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.19", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
-{"verse_id": "1CO.15.20", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
-{"verse_id": "1CO.15.21", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.7, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.15.22", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.23", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.24", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.25", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.26", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
-{"verse_id": "1CO.15.27", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.28", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.29", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.15.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.31", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.15.32", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
-{"verse_id": "1CO.15.33", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.34", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.15.35", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.15.36", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.37", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.38", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.39", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.40", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.15.41", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.15.42", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.7, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.15.43", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
-{"verse_id": "1CO.15.44", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.15.45", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.46", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.47", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.48", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.49", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.50", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.9, "notes": null}
-{"verse_id": "1CO.15.51", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.15.52", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
-{"verse_id": "1CO.15.53", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.15.54", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
-{"verse_id": "1CO.15.55", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
-{"verse_id": "1CO.15.56", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
-{"verse_id": "1CO.15.57", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
-{"verse_id": "1CO.15.58", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
-{"verse_id": "1CO.16.1", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.2", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
-{"verse_id": "1CO.16.3", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.16.4", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.16.5", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.16.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.16.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.16.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.16.9", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.10", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
-{"verse_id": "1CO.16.11", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.13", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.14", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.16.15", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.16", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.17", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
-{"verse_id": "1CO.16.19", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.21", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.22", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.23", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
-{"verse_id": "1CO.16.24", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "1CO.12.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.12.31", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.13.1", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.88, "notes": "himno al amor — sin caridad, metal que resuena"}
+{"verse_id": "1CO.13.2", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.88, "notes": "himno al amor — sin caridad, nada soy"}
+{"verse_id": "1CO.13.3", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.88, "notes": "himno al amor — sin caridad, de nada sirve"}
+{"verse_id": "1CO.13.4", "polarity_es": 0.8, "label_es": "positive", "confidence": 0.88, "notes": "himno al amor — sufrida, benigna"}
+{"verse_id": "1CO.13.5", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.88, "notes": "himno al amor — no se irrita"}
+{"verse_id": "1CO.13.6", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.88, "notes": "himno al amor — se huelga de la verdad"}
+{"verse_id": "1CO.13.7", "polarity_es": 0.9, "label_es": "positive", "confidence": 0.88, "notes": "himno al amor — todo lo sufre, cree, espera, soporta"}
+{"verse_id": "1CO.13.8", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.88, "notes": "himno al amor — nunca deja de ser"}
+{"verse_id": "1CO.13.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.13.10", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.13.11", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.13.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.13.13", "polarity_es": 0.9, "label_es": "positive", "confidence": 0.88, "notes": "himno al amor — la mayor es la caridad"}
+{"verse_id": "1CO.14.1", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.2", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.3", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.4", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.5", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.8", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.11", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.14", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.15", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.16", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.17", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.18", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.19", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.20", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.21", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.22", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.23", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.24", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.25", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.26", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.27", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.28", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.29", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.31", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.32", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.33", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.34", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.35", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.36", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.37", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.38", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.39", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.14.40", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.1", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.2", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.3", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.4", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.5", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.7", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.9", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.10", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.11", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.12", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.13", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.14", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.15", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.16", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.17", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.18", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.19", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.20", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.21", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.22", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.23", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.24", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.25", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.26", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.27", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.28", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.29", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.30", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.31", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.32", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.33", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.34", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.35", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.36", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.37", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.38", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.39", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.40", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.41", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.42", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.43", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.44", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.45", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.46", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.47", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.48", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.49", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.50", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.51", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.52", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.53", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.54", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.55", "polarity_es": 0.8, "label_es": "positive", "confidence": 0.88, "notes": "triunfo: ¿dónde, oh muerte, tu aguijón?"}
+{"verse_id": "1CO.15.56", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.15.57", "polarity_es": 0.8, "label_es": "positive", "confidence": 0.88, "notes": "gracias a Dios, nos da la victoria"}
+{"verse_id": "1CO.15.58", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.1", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.2", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.3", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.5", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.6", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.7", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.9", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.10", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.11", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.7, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.13", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.14", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.15", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.16", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.17", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.18", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.19", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.21", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.72, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.22", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.23", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.76, "notes": "per-verse LLM judgment on RVR text_es"}
+{"verse_id": "1CO.16.24", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.82, "notes": "per-verse LLM judgment on RVR text_es"}

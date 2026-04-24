@@ -45,9 +45,9 @@ Para economia de espaço, agentes ficam donos de TODOS os batches dos seus livro
 | ECC   | 1       | ✅ done |
 | SNG   | 1       | ✅ done |
 | ISA   | 5       | ✅ done |
-| JER   | 5       | ✅ done |
+| JER   | 5       | ✅ done (001 [A2-audit], 002+003 [A3-audit], 004+005 [A4-audit]) |
 | LAM   | 1       | ✅ done |
-| EZK   | 5       | ✅ done |
+| EZK   | 5       | ✅ done (001+002 [A4-audit], 003+004+005 [A2-audit]) |
 | DAN   | 2       | ✅ done |
 | HOS   | 1       | ✅ done |
 | JOL   | 1       | ✅ done |
@@ -71,9 +71,9 @@ Para economia de espaço, agentes ficam donos de TODOS os batches dos seus livro
 | LUK   | 4       | ✅ done |
 | JHN   | 3       | ✅ done |
 | ACT   | 4       | ✅ done |
-| ROM   | 2       | ✅ done |
-| 1CO   | 2       | ✅ done |
-| 2CO   | 1       | ✅ done |
+| ROM   | 2       | ✅ done [A3-audit] |
+| 1CO   | 2       | ✅ done [A3-audit] |
+| 2CO   | 1       | ✅ done [A3-audit] |
 | GAL   | 1       | ✅ done |
 | EPH   | 1       | ✅ done |
 | PHP   | 1       | ✅ done |

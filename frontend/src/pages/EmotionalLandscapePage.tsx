@@ -9,6 +9,7 @@ import { useBooks, localizeBookName, localizeBookAbbrev } from "../i18n/bookName
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { SENTIMENT_COVERED_PT, SENTIMENT_COVERED_ES } from "../i18n/sentimentCoverage";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+import BookEmotionalArc from "../components/emotional/BookEmotionalArc";
 
 interface SentimentPoint {
   verse_id: string;
@@ -132,6 +133,7 @@ export default function EmotionalLandscapePage() {
             <LoadingSpinner text={t("common.loading")} />
           ) : (
             <>
+              <BookEmotionalArc bookId={selectedBook} translation={translation} />
               {/* Sentiment terrain — SVG scales responsively regardless of verse count */}
               <div className="mb-8 rounded-lg border bg-white p-4 overflow-hidden">
                 <h3 className="text-[10px] uppercase tracking-wider font-bold opacity-40 mb-3 flex items-center gap-2">
