@@ -100,6 +100,11 @@ export default function BookEmotionalArc({ bookId, translation }: Props) {
   const peak = k.peak;
   const valley = k.valley;
 
+  // Limit turn points to the 8 with largest |delta| to avoid visual clutter.
+  const topTurnPoints = [...k.turn_points]
+    .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
+    .slice(0, 8);
+
   return (
     <div className="rounded-lg border bg-white p-4 mb-8">
       <h3 className="text-sm font-display font-bold mb-3">
@@ -163,8 +168,25 @@ export default function BookEmotionalArc({ bookId, translation }: Props) {
         </div>
       </div>
 
-      {/* SVG curve */}
-      <div className="relative">
+      {/* SVG curve with gradient (green top → gold mid → red bottom) */}
+      <div className="flex gap-2">
+        {/* Vertical color legend */}
+        <div className="flex flex-col items-end justify-between h-40 shrink-0 text-[9px] opacity-60 tabular-nums">
+          <span className="text-green-600 font-bold">+1</span>
+          <span className="opacity-50">0</span>
+          <span className="text-red-600 font-bold">−1</span>
+        </div>
+        <div
+          className="w-1.5 h-40 shrink-0 rounded-full"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgb(34,197,94), rgb(34,197,94) 40%, var(--color-gold) 50%, rgb(239,68,68) 60%, rgb(239,68,68))",
+            opacity: 0.7,
+          }}
+          aria-hidden="true"
+        />
+      <div className="flex-1 min-w-0">
+        <div className="relative h-40">
         <svg
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
@@ -172,6 +194,24 @@ export default function BookEmotionalArc({ bookId, translation }: Props) {
           role="img"
           aria-label={t("arc.title")}
         >
+          <defs>
+            <linearGradient id="arcGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="rgb(34,197,94)" />
+              <stop offset="45%" stopColor="rgb(34,197,94)" stopOpacity="0.7" />
+              <stop offset="50%" stopColor="var(--color-gold)" stopOpacity="0.5" />
+              <stop offset="55%" stopColor="rgb(239,68,68)" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="rgb(239,68,68)" />
+            </linearGradient>
+            <linearGradient id="arcShadow" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="rgb(34,197,94)" stopOpacity="0.18" />
+              <stop offset="50%" stopColor="var(--color-gold)" stopOpacity="0.18" />
+              <stop offset="100%" stopColor="rgb(239,68,68)" stopOpacity="0.18" />
+            </linearGradient>
+          </defs>
+          {/* Positive zone (subtle green wash above zero line) */}
+          <rect x="0" y="0" width="100" height="50" fill="rgb(34,197,94)" opacity="0.04" />
+          {/* Negative zone (subtle red wash below zero line) */}
+          <rect x="0" y="50" width="100" height="50" fill="rgb(239,68,68)" opacity="0.04" />
           {/* Zero baseline */}
           <line
             x1="0"
@@ -180,91 +220,79 @@ export default function BookEmotionalArc({ bookId, translation }: Props) {
             y2="50"
             stroke="currentColor"
             strokeWidth="0.2"
-            className="opacity-20"
+            className="opacity-30"
             strokeDasharray="1,1"
           />
           {/* Curve drop-shadow */}
           <path
             d={path}
             fill="none"
-            stroke="var(--color-gold)"
-            strokeOpacity="0.25"
+            stroke="url(#arcShadow)"
             strokeWidth="2.4"
             strokeLinecap="round"
             strokeLinejoin="round"
             transform="translate(0,0.6)"
+            vectorEffect="non-scaling-stroke"
           />
+          {/* Main curve with green→gold→red gradient */}
           <path
             d={path}
             fill="none"
-            stroke="var(--color-gold)"
-            strokeWidth="1.2"
+            stroke="url(#arcGradient)"
+            strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
             vectorEffect="non-scaling-stroke"
           />
-          {/* Turn point markers */}
-          {k.turn_points.map((tp) => {
+        </svg>
+
+        {/* Markers in HTML absolute layer (immune to SVG aspect-ratio stretch) */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Turn points (top 8 by |delta|) */}
+          {topTurnPoints.map((tp) => {
             const pt = arc.series.find((s) => s.chapter === tp.chapter);
             if (!pt) return null;
+            const left = xForChapter(tp.chapter);
+            const top = yForPolarity(pt.avg_polarity);
             return (
-              <circle
+              <span
                 key={`tp-${tp.chapter}`}
-                cx={xForChapter(tp.chapter)}
-                cy={yForPolarity(pt.avg_polarity)}
-                r="1.2"
-                fill="var(--color-gold)"
-                stroke="white"
-                strokeWidth="0.3"
-              >
-                <title>
-                  {t("arc.turnPoint")} — {t("emotional.chapter").replace("{n}", String(tp.chapter))} (Δ
-                  {tp.delta > 0 ? "+" : ""}
-                  {tp.delta.toFixed(2)})
-                </title>
-              </circle>
+                className="absolute w-2 h-2 rounded-full bg-[var(--color-gold)] ring-1 ring-white shadow-sm pointer-events-auto -translate-x-1/2 -translate-y-1/2"
+                style={{ left: `${left}%`, top: `${top}%` }}
+                title={`${t("arc.turnPoint")} — ${t("emotional.chapter").replace("{n}", String(tp.chapter))} (Δ${tp.delta > 0 ? "+" : ""}${tp.delta.toFixed(2)})`}
+              />
             );
           })}
-          {/* Peak marker */}
+          {/* Peak (green) */}
           {peak && (
-            <g>
-              <circle
-                cx={xForChapter(peak.chapter)}
-                cy={yForPolarity(peak.polarity)}
-                r="1.8"
-                fill="rgb(34,197,94)"
-                stroke="white"
-                strokeWidth="0.4"
-              >
-                <title>
-                  {t("arc.peak")} — {peak.reference} ({peak.polarity > 0 ? "+" : ""}
-                  {peak.polarity.toFixed(2)})
-                </title>
-              </circle>
-            </g>
+            <span
+              className="absolute w-3 h-3 rounded-full bg-green-500 ring-2 ring-white shadow pointer-events-auto -translate-x-1/2 -translate-y-1/2 z-10"
+              style={{
+                left: `${xForChapter(peak.chapter)}%`,
+                top: `${yForPolarity(peak.polarity)}%`,
+              }}
+              title={`${t("arc.peak")} — ${localizeBookName(arc.book_id, locale, arc.book_id)} ${peak.chapter}:${peak.verse} (${peak.polarity > 0 ? "+" : ""}${peak.polarity.toFixed(2)})`}
+            />
           )}
-          {/* Valley marker */}
+          {/* Valley (red) */}
           {valley && (
-            <g>
-              <circle
-                cx={xForChapter(valley.chapter)}
-                cy={yForPolarity(valley.polarity)}
-                r="1.8"
-                fill="rgb(239,68,68)"
-                stroke="white"
-                strokeWidth="0.4"
-              >
-                <title>
-                  {t("arc.valley")} — {valley.reference} ({valley.polarity.toFixed(2)})
-                </title>
-              </circle>
-            </g>
+            <span
+              className="absolute w-3 h-3 rounded-full bg-red-500 ring-2 ring-white shadow pointer-events-auto -translate-x-1/2 -translate-y-1/2 z-10"
+              style={{
+                left: `${xForChapter(valley.chapter)}%`,
+                top: `${yForPolarity(valley.polarity)}%`,
+              }}
+              title={`${t("arc.valley")} — ${localizeBookName(arc.book_id, locale, arc.book_id)} ${valley.chapter}:${valley.verse} (${valley.polarity.toFixed(2)})`}
+            />
           )}
-        </svg>
+        </div>
+
+        </div>
         <div className="flex justify-between text-[10px] opacity-40 mt-1">
           <span>{t("emotional.chapter").replace("{n}", "1")}</span>
           <span>{t("arc.chapters").replace("{n}", String(arc.chapter_count))}</span>
         </div>
+      </div>
       </div>
     </div>
   );
