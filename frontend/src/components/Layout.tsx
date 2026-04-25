@@ -5,6 +5,7 @@ import { useI18n, LOCALES } from "../i18n/i18nContext";
 import { localizeBookName } from "../i18n/bookNames";
 import VerbumLogo from "./common/VerbumLogo";
 import StreakBadge from "./streak/StreakBadge";
+import CookieBanner from "./CookieBanner";
 
 type NavItem = {
   to: string;
@@ -260,17 +261,30 @@ export default function Layout() {
 
       <StreakBadge />
 
-      {/* Subtle "about" link at the very bottom of the sidebar.
-          Kept separate from the main nav so it doesn't clutter the
-          discovery flow — it's a footer-note, not a feature. */}
-      <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between text-[10px] opacity-50">
-        <Link
-          to="/about"
-          className="hover:opacity-100 hover:text-[var(--color-gold)] transition"
-        >
-          {t("nav.about")}
-        </Link>
-        <span className="italic">Verbum</span>
+      {/* Subtle footer-note links at the very bottom of the sidebar.
+          Kept separate from the main nav so they don't clutter the
+          discovery flow. */}
+      <div className="mt-auto pt-4 border-t border-white/10 text-[10px] opacity-50 space-y-1">
+        <div className="flex items-center justify-between">
+          <Link to="/about" className="hover:opacity-100 hover:text-[var(--color-gold)] transition">
+            {t("nav.about")}
+          </Link>
+          <span className="italic">Verbum</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Link to="/privacy" className="hover:opacity-100 hover:text-[var(--color-gold)] transition">
+            {t("nav.privacy")}
+          </Link>
+          <span aria-hidden>·</span>
+          <a
+            href="https://github.com/DavidKGBR/verbum"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-100 hover:text-[var(--color-gold)] transition"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </>
   );
@@ -326,10 +340,61 @@ export default function Layout() {
         </>
       )}
 
-      {/* Main content */}
-      <main className="flex-1 overflow-auto p-4 md:p-6">
-        <Outlet />
+      {/* Main content + page footer */}
+      <main className="flex-1 overflow-auto flex flex-col">
+        <div className="flex-1 p-4 md:p-6">
+          <Outlet />
+        </div>
+
+        <footer
+          className="mt-auto px-4 md:px-6 py-6 border-t border-[var(--color-ink)]/10
+                     text-[11px] text-[var(--color-ink)]/60 leading-relaxed"
+        >
+          <div className="flex flex-wrap gap-4 items-center justify-between max-w-5xl mx-auto">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <Link to="/about" className="hover:text-[var(--color-gold)] transition">
+                {t("footer.about")}
+              </Link>
+              <span aria-hidden>·</span>
+              <Link to="/privacy" className="hover:text-[var(--color-gold)] transition">
+                {t("footer.privacy")}
+              </Link>
+              <span aria-hidden>·</span>
+              <a
+                href="https://github.com/DavidKGBR/verbum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--color-gold)] transition"
+              >
+                GitHub
+              </a>
+              <span aria-hidden>·</span>
+              <a
+                href="https://github.com/DavidKGBR/verbum/issues/new"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--color-gold)] transition"
+              >
+                {t("footer.reportBug")}
+              </a>
+              <span aria-hidden>·</span>
+              <a
+                href="https://github.com/DavidKGBR/verbum/blob/main/LICENSE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--color-gold)] transition"
+              >
+                MIT
+              </a>
+            </div>
+            <div className="text-[10px] opacity-70 italic">
+              {t("footer.credits")}
+            </div>
+          </div>
+        </footer>
       </main>
+
+      <CookieBanner />
     </div>
   );
 }

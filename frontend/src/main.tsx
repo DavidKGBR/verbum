@@ -5,6 +5,7 @@ import * as Sentry from "@sentry/react";
 import { I18nProvider } from "./i18n/i18nContext";
 import App from "./App";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { getConsent, onConsentChange } from "./lib/consent";
 import "./index.css";
 
 // ── Sentry (optional, gated by VITE_SENTRY_DSN) ─────────────────────────────
@@ -20,11 +21,15 @@ if (SENTRY_DSN) {
   });
 }
 
-// ── GA4 (optional, gated by VITE_GA4_MEASUREMENT_ID) ─────────────────────────
-// Loads gtag.js only if the measurement ID is set. Anonymizes IP and disables
+// ── GA4 (optional, gated by VITE_GA4_MEASUREMENT_ID + LGPD consent) ─────────
+// Loads gtag.js only if (a) the measurement ID is set AND (b) the user
+// has explicitly granted analytics consent. Anonymizes IP and disables
 // ad personalization signals — Verbum has no ads and shouldn't feed any.
 const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID as string | undefined;
-if (GA4_ID) {
+let ga4Loaded = false;
+function bootGA4() {
+  if (ga4Loaded || !GA4_ID) return;
+  ga4Loaded = true;
   const s = document.createElement("script");
   s.async = true;
   s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
@@ -41,6 +46,14 @@ if (GA4_ID) {
     anonymize_ip: true,
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
+  });
+}
+if (getConsent() === "granted") {
+  bootGA4();
+} else {
+  // Boot lazily once the user grants consent (banner sets it).
+  onConsentChange((status) => {
+    if (status === "granted") bootGA4();
   });
 }
 

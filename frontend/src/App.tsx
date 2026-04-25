@@ -25,6 +25,8 @@ import SpecialPassagePage from "./pages/SpecialPassagePage";
 import GenealogyPage from "./pages/GenealogyPage";
 import TopicsPage from "./pages/TopicsPage";
 import AboutPage from "./pages/AboutPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import NotFoundPage from "./pages/NotFoundPage";
 import ConnectionsPage from "./pages/ConnectionsPage";
 import ConceptsPage from "./pages/ConceptsPage";
 
@@ -57,6 +59,7 @@ export default function App() {
         <Route path="/special-passages" element={<SpecialPassagePage />} />
         <Route path="/special-passages/:passageId" element={<SpecialPassagePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
 
         {/* Consolidated wrappers (Entregável 2) */}
         <Route path="/connections" element={<ConnectionsPage />} />
@@ -72,6 +75,9 @@ export default function App() {
         {/* Deep-link to a specific concept keeps rendering GenealogyPage so
             existing bookmarks like /genealogy/chesed continue to work. */}
         <Route path="/genealogy/:conceptId" element={<GenealogyPage />} />
+
+        {/* 404 — must be last so all other routes win first. */}
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
