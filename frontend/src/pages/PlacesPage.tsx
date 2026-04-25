@@ -9,7 +9,7 @@ import {
   type PlaceTypeCount,
 } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
-import { placeName } from "../i18n/placeNames";
+import { placeName, resolvePlaceSlugsByLocaleQuery } from "../i18n/placeNames";
 import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
 
@@ -347,8 +347,12 @@ export default function PlacesPage() {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       setLoading(true);
+      // PT/ES queries: also resolve to slugs locally so PT names like "Belém"
+      // (which the EN-only biblical_places table doesn't carry) still match.
+      const resolvedSlugs = resolvePlaceSlugsByLocaleQuery(query, locale);
       fetchPlaces({
         q: query || undefined,
+        slugs: resolvedSlugs.length ? resolvedSlugs.join(",") : undefined,
         place_type: typeFilter || undefined,
         limit: 50,
       })

@@ -676,10 +676,11 @@ export interface PlaceTypeCount {
 }
 
 export async function fetchPlaces(
-  params?: { q?: string; place_type?: string; has_coords?: boolean; limit?: number; offset?: number }
+  params?: { q?: string; slugs?: string; place_type?: string; has_coords?: boolean; limit?: number; offset?: number }
 ): Promise<PlacesListResponse> {
   const sp = new URLSearchParams();
   if (params?.q) sp.set("q", params.q);
+  if (params?.slugs) sp.set("slugs", params.slugs);
   if (params?.place_type) sp.set("place_type", params.place_type);
   if (params?.has_coords !== undefined) sp.set("has_coords", String(params.has_coords));
   if (params?.limit) sp.set("limit", String(params.limit));

@@ -38,6 +38,16 @@ if _ROUTES_PATH.exists():
 @router.get("/places")
 def list_places(
     q: str | None = Query(None, min_length=2, description="Search by name"),
+    slugs: str | None = Query(
+        None,
+        max_length=4000,
+        description=(
+            "Comma-separated slug list to filter by. Used by the frontend "
+            "to forward locale-resolved matches (e.g. user types 'Belém' in "
+            "PT, frontend resolves it to bethlehem_xxxx via placeNames.ts "
+            "and sends the slug here)."
+        ),
+    ),
     place_type: str | None = Query(None, description="Filter: city, region, mountain, river, etc."),
     has_coords: bool | None = Query(None, description="Filter: only places with coordinates"),
     limit: int = Query(50, ge=1, le=500, description="Max results"),
@@ -49,10 +59,23 @@ def list_places(
         conditions: list[str] = []
         params: list[object] = []
 
+        # `q` and `slugs` combine with OR — a hit on either passes. This lets
+        # the frontend send both the raw query (matches English-name places)
+        # and the locale-resolved slug list (matches places named in PT/ES)
+        # in a single request, returning the union.
+        text_conditions: list[str] = []
         if q:
-            conditions.append("(LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?)")
+            text_conditions.append("(LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?)")
             like = f"%{q.lower()}%"
             params.extend([like, like])
+        if slugs:
+            slug_list = [s.strip() for s in slugs.split(",") if s.strip()][:200]
+            if slug_list:
+                placeholders = ",".join(["?"] * len(slug_list))
+                text_conditions.append(f"slug IN ({placeholders})")
+                params.extend(slug_list)
+        if text_conditions:
+            conditions.append(f"({' OR '.join(text_conditions)})")
         if place_type:
             conditions.append("LOWER(place_type) = ?")
             params.append(place_type.lower().strip())
@@ -204,22 +227,43 @@ def get_routes(
 
 @router.get("/places/search")
 def search_places(
-    q: str = Query(..., min_length=2, description="Search query"),
+    q: str | None = Query(None, min_length=2, description="Search query"),
+    slugs: str | None = Query(None, max_length=4000, description="Slugs forwarded by the frontend after locale resolution"),
     limit: int = Query(20, ge=1, le=100),
 ) -> dict:
-    """Quick search for places by name or alias."""
+    """Quick search for places by name or alias.
+
+    Mirrors `/places` semantics: `q` and `slugs` combine via OR so a single
+    autocomplete keystroke can match both the English-named places (server
+    side) and the locale-resolved slugs the frontend computed locally from
+    placeNames.ts. At least one of `q` or `slugs` must be present.
+    """
+    if not q and not slugs:
+        return {"results": []}
     conn = get_db()
     try:
-        like = f"%{q.lower()}%"
+        conditions: list[str] = []
+        params: list[object] = []
+        if q:
+            conditions.append("(LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?)")
+            like = f"%{q.lower()}%"
+            params.extend([like, like])
+        if slugs:
+            slug_list = [s.strip() for s in slugs.split(",") if s.strip()][:200]
+            if slug_list:
+                placeholders = ",".join(["?"] * len(slug_list))
+                conditions.append(f"slug IN ({placeholders})")
+                params.extend(slug_list)
+        where = " OR ".join(conditions) if conditions else "1=0"
         df = conn.execute(
-            """
+            f"""
             SELECT slug, name, place_type, latitude, longitude, verse_count
             FROM biblical_places
-            WHERE LOWER(name) LIKE ? OR LOWER(also_called) LIKE ?
+            WHERE {where}
             ORDER BY verse_count DESC
             LIMIT ?
             """,
-            [like, like, limit],
+            [*params, limit],
         ).fetchdf()
         return {"query": q, "results": df.to_dict(orient="records")}
     finally:

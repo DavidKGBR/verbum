@@ -1915,6 +1915,36 @@ export function hasPlaceTranslation(slug: string | null | undefined): boolean {
   return !!slug && slug in PLACES;
 }
 
+/** Strip accents + lowercase for accent-insensitive matching. */
+function normalize(s: string): string {
+  return s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+}
+
+/**
+ * Reverse-lookup: given a query in PT or ES, return slugs whose localized
+ * name matches (substring, accent-insensitive). Used by PlacesPage to
+ * resolve user queries the backend can't see (the English-only
+ * biblical_places table doesn't carry "Belém", "Jerusalén", etc.).
+ *
+ * Returns up to 200 slugs to keep the URL bounded.
+ */
+export function resolvePlaceSlugsByLocaleQuery(
+  query: string,
+  locale: Locale,
+): string[] {
+  const q = normalize(query.trim());
+  if (q.length < 2 || locale === "en") return [];
+  const out: string[] = [];
+  for (const [slug, entry] of Object.entries(PLACES)) {
+    const localized = locale === "pt" ? entry.pt : entry.es;
+    if (normalize(localized).includes(q)) {
+      out.push(slug);
+      if (out.length >= 200) break;
+    }
+  }
+  return out;
+}
+
 /** Translate a list of place slugs into a comma-joined string. */
 export function placeNamesJoin(
   slugs: string[] | undefined | null,
