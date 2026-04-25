@@ -87,6 +87,27 @@ for secret in GEMINI_API_KEY ABIBLIA_DIGITAL_TOKEN; do
         --quiet
 done
 
+# ─── 5. Cloud Build permissions ──────────────────────────────────────────────
+# Since 2024, `gcloud builds submit` runs as the Compute Engine default SA
+# rather than the legacy <project_number>@cloudbuild.gserviceaccount.com.
+# That SA does NOT inherit the build-time permissions automatically; we
+# have to grant them explicitly or every `gcloud builds submit` 403s on
+# the source upload bucket.
+PROJECT_NUMBER=$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')
+COMPUTE_SA="${PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
+
+echo "==> Granting Cloud Build runtime roles to $COMPUTE_SA..."
+for role in \
+    roles/storage.objectViewer \
+    roles/artifactregistry.writer \
+    roles/logging.logWriter; do
+    gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+        --member="serviceAccount:${COMPUTE_SA}" \
+        --role="$role" \
+        --condition=None \
+        --quiet >/dev/null
+done
+
 echo
 echo "==> Setup complete."
 echo "==> Next: populate the secrets (above), then run infra/scripts/deploy.sh"
