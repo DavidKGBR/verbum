@@ -60,16 +60,17 @@ The AI is not a co-author of the Gospel. The Gospel exists without it. But a too
 
 | | |
 |---|---|
-| **333,657 verses** | 11 translations across 5 languages (EN, PT, ES, FR, DE) |
+| **372,308 verses** | 12 translations across 5 languages (EN, PT, ES, FR, DE) |
+| **62,209 manually-labeled verses** | LLM-annotated sentiment in PT (31,107) and ES (31,102) |
 | **344,754 cross-references** | Full intertextual mapping from OpenBible.info |
 | **800,000+ interlinear words** | Greek (TAGNT) and Hebrew (TAHOT) with morphology |
 | **14,870 Strong's entries** | Complete Hebrew + Greek lexicon |
 | **3,000+ biblical people** | Family trees, timelines, tribe and gender filters |
 | **1,600+ biblical places** | Coordinates, events, interactive maps |
 | **20,000+ topics** | Nave's Topical Bible, searchable |
-| **82 API endpoints** | 22 RESTful routers powered by DuckDB |
-| **26 frontend pages** | React 19 + Tailwind, fully responsive |
-| **385 test cases** | pytest with seeded fixtures |
+| **93 API endpoints** | 27 RESTful routers powered by DuckDB |
+| **32 frontend pages** | React 19 + Tailwind v4, fully responsive |
+| **392 test cases** | pytest with seeded fixtures (387 fast + 4 integration/slow) |
 | **3 languages (UI)** | English, Portuguese, Spanish |
 
 ### Translations
@@ -80,6 +81,7 @@ The AI is not a co-author of the Gospel. The Gospel exists without it. But a too
 | Portuguese | NVI, RA, ACF |
 | Spanish | RVR |
 | French | APEE |
+| German | LUTHER, NEUE |
 
 ---
 
@@ -87,11 +89,13 @@ The AI is not a co-author of the Gospel. The Gospel exists without it. But a too
 
 ### The Reader — the heart of the platform
 
-Three reading modes designed for different depths of focus:
+Five reading modes designed for different depths of focus:
 
-- **Single view** — full text with per-verse actions (cross-refs, AI, compare, save, copy)
+- **Single view** — full text with per-verse actions (cross-refs, AI, compare, save, copy + Word/Emotion/Topics hover tools)
 - **Parallel view** — two translations side by side for comparative study
 - **Immersive mode** — a 3D book spread with page-flip animation, designed for contemplation
+- **Interlinear** — Greek/Hebrew word-by-word with Strong's IDs and morphology
+- **Structural** — chiasms and literary geometry rendered visually
 
 ### Languages & Interlinear
 
@@ -130,9 +134,8 @@ Three reading modes designed for different depths of focus:
 |---------|-------------|
 | **AI Explain** (in Reader) | Google Gemini per-verse explanations (EN/PT), cached on disk |
 | **Emotional Landscape** (`/emotional`) | Per-verse NLP sentiment flow + book emotional profiles |
-| **Semantic Threads** (`/threads`) | Auto-discovered thematic threads spanning distant books |
-| **Arc Diagram** (`/arc-diagram`) | 344K cross-refs as canvas arcs at 60fps |
-| **Intertextuality** (`/intertextuality`) | OT→NT citation heatmap + quotation graph |
+| **Connections** (`/connections`) | 3 lenses on cross-refs: arc diagram (canvas) · semantic graph (D3) · OT→NT intertextuality |
+| **Concepts** (`/concepts`) | 2 lenses on themes: semantic threads · HEB→GR genealogy of words |
 | **Deep Analytics** (`/deep-analytics`) | Hapax legomena, vocabulary richness, lexical density |
 | **Literary Structure** (`/structure`) | Chiasms, parallelisms, inclusio |
 | **Open Questions** (`/open-questions`) | 15 curated scholarly debates with multiple perspectives |
@@ -163,8 +166,8 @@ cp .env.example .env          # fill in ABIBLIA_DIGITAL_TOKEN, GEMINI_API_KEY (o
 ### 2. Run the pipeline
 
 ```bash
-# All 10 translations + cross-refs (cached runs ~2 min; first fetch longer)
-python -m src.cli run --translations kjv,nvi,bbe,ra,acf,rvr,apee,asv,web,darby
+# All 12 translations + cross-refs (cached runs ~2 min; first fetch longer)
+python -m src.cli run --translations kjv,nvi,bbe,ra,acf,rvr,apee,asv,web,darby,luther,neue
 
 # Single translation, specific books
 python -m src.cli run --books "GEN,PSA,JHN" --translations kjv
@@ -198,11 +201,12 @@ cd frontend && npm run dev
 ┌──────────────────┐    ┌──────────────┐    ┌─────────────┐    ┌──────────────────┐
 │     EXTRACT      │───▶│  TRANSFORM   │───▶│    LOAD     │───▶│      SERVE       │
 ├──────────────────┤    ├──────────────┤    ├─────────────┤    ├──────────────────┤
-│ bible-api.com    │    │ Clean + HTML │    │ DuckDB      │    │ FastAPI (82 API) │
-│ abibliadigital   │    │ TextBlob NLP │    │ 15+ tables  │    │ React 19 SPA     │
-│ STEPBible TAGNT  │    │ Dedup + KJV  │    │ 344K xrefs  │    │ 26 pages         │
-│ Theographic      │    │ annotations  │    │ 800K interl. │    │ Gemini AI        │
-│ OpenBible refs   │    │ Sentiment    │    │ 14K Strong's │    │ i18n (EN/PT/ES)  │
+│ bible-api.com    │    │ Clean + HTML │    │ DuckDB      │    │ FastAPI (93 API) │
+│ abibliadigital   │    │ TextBlob NLP │    │ 32 tables   │    │ React 19 SPA     │
+│ Zefania-XML (DE) │    │ LLM labels   │    │ 372K verses │    │ 32 pages         │
+│ STEPBible TAGNT  │    │ Dedup + KJV  │    │ 344K xrefs  │    │ Gemini AI        │
+│ Theographic      │    │ annotations  │    │ 800K interl. │    │ i18n (EN/PT/ES)  │
+│ OpenBible refs   │    │ Sentiment    │    │ 14K Strong's │    │                  │
 │ Nave's Topical   │    │ enrichment   │    │             │    │                  │
 │ OpenBible Geo    │    │              │    │             │    │                  │
 └──────────────────┘    └──────────────┘    └─────────────┘    └──────────────────┘
@@ -214,12 +218,12 @@ cd frontend && npm run dev
 |-------|-------|
 | **Extract** | `httpx`, per-translation JSON cache, STEPBible parsers, Theographic, Nave's |
 | **Transform** | `pandas`, `textblob`, `html.unescape`, KJV annotation stripper, sentiment enrichment |
-| **Load** | `duckdb` (analytical views, parameterised inserts, 15+ tables) |
-| **API** | `fastapi`, `pydantic v2`, `typer` CLI, 22 routers, 82 endpoints |
+| **Load** | `duckdb` (analytical views, parameterised inserts, 32 tables) |
+| **API** | `fastapi`, `pydantic v2`, `typer` CLI, 27 routers, 93 endpoints |
 | **Frontend** | `react 19`, `vite 6`, `typescript`, `tailwind v4`, `d3`, `leaflet`, `react-router` |
 | **AI** | `google-generativeai` (Gemini 2.0 Flash), disk cache with rate limiting |
 | **i18n** | React Context + `useI18n()` hook, 3 languages, localStorage persistence |
-| **Quality** | `ruff`, `mypy`, `pytest` (385 tests), `tsc --noEmit` |
+| **Quality** | `ruff`, `mypy`, `pytest` (392 tests), `tsc --noEmit` |
 
 ### Source layout
 
@@ -230,7 +234,7 @@ src/
   config.py               # Dataclass config + env overrides
   extract/
     bible_sources.py      # BibleSource ABC + 2 implementations
-    translations.py       # 10 translations registry
+    translations.py       # 12 translations registry
     crossref_extractor.py # OpenBible 344K cross-refs
     strongs_extractor.py  # 14,870 Strong's entries
     stepbible_extractor.py # TAGNT + TAHOT interlinear
@@ -247,12 +251,12 @@ src/
     multilang_aligner.py  # align verses across translations
     crossref_mapper.py    # map cross-refs to verse IDs
   load/
-    duckdb_loader.py      # schema, views, 15+ tables
+    duckdb_loader.py      # schema, views, 32 tables
     gcs_loader.py         # optional GCS + BigQuery
   api/
-    main.py               # FastAPI app + CORS + 22 routers
+    main.py               # FastAPI app + CORS + 27 routers
     dependencies.py       # per-request DuckDB connection
-    routers/              # 22 router modules (see API Reference)
+    routers/              # 27 router modules (see API Reference)
   ai/
     gemini_client.py      # rate-limited + cached
     passage_explainer.py  # prompts for explain + compare
@@ -261,24 +265,25 @@ src/
     theographic.py        # BiblicalPerson, BiblicalPlace, etc.
 
 frontend/src/
-  App.tsx                 # 26 routes
+  App.tsx                 # 32 routes (incl. consolidated wrappers /connections, /concepts)
   main.tsx                # BrowserRouter + I18nProvider
-  i18n/                   # i18nContext.tsx + en/pt/es.json
-  pages/                  # 26 page components
-  components/             # BibleReader, ParallelView, ImmersiveReader/,
-                          # ArcDiagram/, VerseActions, FamilyTree, etc.
+  i18n/                   # i18nContext.tsx + en/pt/es.json + sentimentCoverage.ts
+  pages/                  # 32 page components
+  components/             # BibleReader, ParallelView, ImmersiveReader/, ArcDiagram/,
+                          # VerseActions, FamilyTree, home/HomeOnboarding,
+                          # emotional/BookEmotionalArc, etc.
   hooks/                  # useArcData, useBookmarks, useReadingHistory, etc.
-  services/api.ts         # typed fetch wrappers for all 82 endpoints
+  services/api.ts         # typed fetch wrappers for all 93 endpoints
 
-data/static/              # Curated JSON: authors, plans, questions, structures, etc.
-tests/                    # 32 test files, 385 test cases
+data/static/              # Curated JSON: authors, plans, questions, structures, community_notes, etc.
+tests/                    # ~32 test files, 392 test cases
 ```
 
 ---
 
 ## API Reference
 
-Full OpenAPI docs at `http://localhost:8000/docs`. Summary of all 22 routers:
+Full OpenAPI docs at `http://localhost:8000/docs`. Summary of all 27 routers:
 
 | Router | Endpoints | Description |
 |--------|-----------|-------------|
@@ -311,7 +316,7 @@ Full OpenAPI docs at `http://localhost:8000/docs`. Summary of all 22 routers:
 
 ```bash
 make test            # fast tests (excludes @slow, @integration)
-make test-all        # full suite (385 tests) with coverage HTML
+make test-all        # full suite (392 tests) with coverage HTML
 make lint            # ruff check
 make typecheck       # mypy
 make quality         # lint + typecheck + test
@@ -323,8 +328,8 @@ cd frontend && npm run build       # production build
 
 ### Test coverage
 
-- **32 test files** covering all API routers, extractors, transforms, and loaders
-- **385 test cases** with parameterised fixtures and seeded DuckDB
+- ~32 test files covering all API routers, extractors, transforms, and loaders
+- **392 test cases** with parameterised fixtures and seeded DuckDB (387 fast + 4 deselected via @integration/@slow)
 - Markers: `@pytest.mark.integration`, `@pytest.mark.slow`
 
 ---
@@ -354,14 +359,16 @@ cd frontend && npm run build       # production build
 - **v2.0** — The foundation: FastAPI + React reader (single/parallel/immersive) + arc diagram + search
 - **v3.0** — Academic tools: Strong's concordance + interlinear + semantic graph + dictionary + word study
 - **v4.0** — The full ecosystem: 17 new features across geography, AI analysis, devotional content, and community — built with [Claude Code](https://claude.ai/code) as a pair programmer
+- **v4.1** — Verbum identity: 62K manually-labeled verses (PT+ES), emotional arc KPIs, 30 curated community notes (3 languages), nav consolidation (6 collapsible sidebar sections + /connections + /concepts wrappers), Home onboarding tour, /about page with AI-partnership note
 
 ### What's next
 
 - Cloud deployment (GCP Cloud Run + BigQuery)
+- ES second-pass quality audit (LAM, PSA, JOB, ISA — programmatically labeled in first pass)
+- Tribes + family-tree page
 - Three.js 3D emotional terrain visualization
 - User accounts + community note submissions
 - Mobile PWA optimization
-- More translations and languages
 
 ---
 
