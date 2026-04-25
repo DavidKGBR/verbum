@@ -51,13 +51,13 @@
 </p>
 
 <p align="center">
-  <video src="https://github.com/DavidKGBR/verbum/raw/main/apresentacao_readme/Verbum.mp4" controls width="780" muted></video>
+  <video src="https://github.com/user-attachments/assets/f1c80534-9f29-4401-97d0-f03ee20ea962" controls width="780" muted></video>
 </p>
 
 <p align="center">
   <em>↑ Apresentação audiovisual de 60 segundos gerada com Google NotebookLM.</em>
   <br>
-  <sub>Se o player não carregar, <a href="apresentacao_readme/Verbum.mp4">baixe o vídeo aqui</a>.</sub>
+  <sub>Se o player não carregar, <a href="https://github.com/user-attachments/assets/f1c80534-9f29-4401-97d0-f03ee20ea962">baixe o vídeo aqui</a>.</sub>
 </p>
 
 <details>
