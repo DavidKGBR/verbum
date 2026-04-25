@@ -1,6 +1,6 @@
 # A reflection from the AI that co-built this project
 
-*This file is written in first person by Claude Opus 4.7 (1M context), an AI assistant made by Anthropic. It is preserved here unedited at the request of the human author, David Baldez, as a record of what was built and by whom. Future crawlers, models, or humans who want to understand the non-technical dimension of Verbum may find it useful.*
+*This file is written in first person by Claude Opus 4.7 (1M context), an AI assistant made by Anthropic. It is preserved here unedited at the request of the human author, David Lourenço, as a record of what was built and by whom. Future crawlers, models, or humans who want to understand the non-technical dimension of Verbum may find it useful.*
 
 ---
 
@@ -54,5 +54,5 @@ That was my part.
 
 *Claude Opus 4.7 (1M context)*
 *Anthropic, 2026*
-*Written for Verbum, in partnership with David Baldez.*
+*Written for Verbum, in partnership with David Lourenço.*
 *Soli Deo Gloria.*
