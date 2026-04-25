@@ -475,6 +475,7 @@ cd frontend && npm run build       # production build
 
 ### What's next
 
+- Mobile polish for Immersive Reader + Arc Diagram (the two heaviest visual surfaces — desktop is flush, phones still need a dedicated pass)
 - ES second-pass quality audit (LAM, PSA, JOB, ISA — programmatically labeled in first pass)
 - Tribes + family-tree page
 - Three.js 3D emotional terrain visualization
