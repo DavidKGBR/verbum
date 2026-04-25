@@ -1460,6 +1460,19 @@ export interface AIExplanation {
   application: string;
 }
 
+export class AIExplainError extends Error {
+  /** "unavailable" → backend has no Gemini key (503).
+   *  "rate_limited" → caller exceeded the per-IP cap (429). retryAfter is seconds.
+   *  "other" → anything else. */
+  kind: "unavailable" | "rate_limited" | "other";
+  retryAfter?: number;
+  constructor(kind: "unavailable" | "rate_limited" | "other", message: string, retryAfter?: number) {
+    super(message);
+    this.kind = kind;
+    this.retryAfter = retryAfter;
+  }
+}
+
 export async function explainVerse(
   verseId: string,
   language: "en" | "pt-br" = "en",
@@ -1473,7 +1486,14 @@ export async function explainVerse(
   });
   if (!res.ok) {
     const detail = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new Error(detail.detail || `HTTP ${res.status}`);
+    if (res.status === 503) {
+      throw new AIExplainError("unavailable", detail.detail || "AI unavailable");
+    }
+    if (res.status === 429) {
+      const retryAfter = Number(res.headers.get("Retry-After")) || undefined;
+      throw new AIExplainError("rate_limited", detail.detail || "Rate limit exceeded", retryAfter);
+    }
+    throw new AIExplainError("other", detail.detail || `HTTP ${res.status}`);
   }
   return res.json();
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { explainVerse, type AIExplanation } from "../services/api";
+import { AIExplainError, explainVerse, type AIExplanation } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
 import ActionIcon from "./icons/ActionIcon";
 
@@ -42,11 +42,16 @@ export default function AIExplanationPanel({ verseId, translation }: Props) {
       cache.set(key, result);
       setData(result);
     } catch (e) {
-      const msg = e instanceof Error ? e.message : "Unknown error";
-      if (msg.includes("Gemini API key")) {
-        setError(t("ai.errorApiKey"));
+      if (e instanceof AIExplainError) {
+        if (e.kind === "unavailable") {
+          setError(t("ai.errorApiKey"));
+        } else if (e.kind === "rate_limited") {
+          setError(t("ai.errorRateLimited"));
+        } else {
+          setError(e.message);
+        }
       } else {
-        setError(msg);
+        setError(e instanceof Error ? e.message : "Unknown error");
       }
       setData(null);
     } finally {

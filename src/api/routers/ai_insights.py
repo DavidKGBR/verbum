@@ -7,11 +7,22 @@ from __future__ import annotations
 
 import logging
 import os
+from typing import Literal
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel, Field
 
 from src.api.dependencies import get_db
+from src.api.rate_limit import check_ai_rate_limit
+
+# Whitelists — locked at compile-time so user-supplied params can't be used
+# as prompt-injection vectors when interpolated into the Gemini template.
+Language = Literal["en", "pt-br", "es"]
+Style = Literal["simple", "academic", "devotional"]
+Translation = Literal[
+    "kjv", "nvi", "ra", "acf", "rvr", "apee",
+    "asv", "web", "darby", "bbe", "luther", "neue",
+]
 
 logger = logging.getLogger(__name__)
 
@@ -19,16 +30,16 @@ router = APIRouter()
 
 
 class ExplainRequest(BaseModel):
-    verse_id: str = Field(..., description="Verse ID (e.g., 'GEN.1.1')")
-    language: str = Field("en", description="Response language (en, pt-br, es)")
-    style: str = Field("simple", description="Style: simple, academic, devotional")
-    translation: str = Field("kjv", description="Translation ID for verse text")
+    verse_id: str = Field(..., description="Verse ID (e.g., 'GEN.1.1')", max_length=20)
+    language: Language = Field("en", description="Response language")
+    style: Style = Field("simple", description="Explanation style")
+    translation: Translation = Field("kjv", description="Translation ID for verse text")
 
 
 class CompareRequest(BaseModel):
-    verse_id: str = Field(..., description="Verse ID (e.g., 'GEN.1.1')")
-    translations: list[str] = Field(..., description="Translation IDs to compare")
-    language: str = Field("en", description="Response language")
+    verse_id: str = Field(..., description="Verse ID (e.g., 'GEN.1.1')", max_length=20)
+    translations: list[Translation] = Field(..., description="Translation IDs to compare", min_length=2, max_length=6)
+    language: Language = Field("en", description="Response language")
 
 
 def _get_explainer():  # type: ignore[no-untyped-def]
@@ -50,8 +61,9 @@ def _get_explainer():  # type: ignore[no-untyped-def]
 
 
 @router.post("/ai/explain")
-def explain_passage(req: ExplainRequest) -> dict:
+def explain_passage(req: ExplainRequest, request: Request) -> dict:
     """Explain a Bible passage using Gemini AI (cache-first)."""
+    check_ai_rate_limit(request)
     explainer = _get_explainer()
 
     # Fetch verse text from DB
@@ -90,8 +102,9 @@ def explain_passage(req: ExplainRequest) -> dict:
 
 
 @router.post("/ai/compare")
-def compare_translations(req: CompareRequest) -> dict:
+def compare_translations(req: CompareRequest, request: Request) -> dict:
     """Compare a verse across translations using Gemini AI (cache-first)."""
+    check_ai_rate_limit(request)
     explainer = _get_explainer()
 
     conn = get_db()

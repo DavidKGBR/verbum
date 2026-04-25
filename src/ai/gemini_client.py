@@ -15,7 +15,7 @@ import google.generativeai as genai
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_MODEL = "gemini-2.0-flash"
+DEFAULT_MODEL = "gemini-2.5-flash-lite"
 DEFAULT_RPM = 15  # Free tier rate limit
 
 
