@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Outlet, Link, useLocation } from "react-router-dom";
 import { useReadingHistory } from "../hooks/useReadingHistory";
 import { useI18n, LOCALES } from "../i18n/i18nContext";
@@ -10,8 +10,6 @@ type NavItem = {
   to: string;
   i18nKey: string;
   icon: string;
-  /** Optional explicit tab match (for deep-linked items like Tópicos → /concepts?tab=topics) */
-  matchTab?: string;
 };
 
 type NavSection = {
@@ -39,7 +37,7 @@ const NAV_SECTIONS: NavSection[] = [
     items: [
       { to: "/search", i18nKey: "nav.search", icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" },
       { to: "/compare", i18nKey: "nav.compare", icon: "M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" },
-      { to: "/concepts?tab=topics", i18nKey: "nav.topics", matchTab: "topics", icon: "M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z M6 6h.008v.008H6V6z" },
+      { to: "/topics", i18nKey: "nav.topics", icon: "M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z M6 6h.008v.008H6V6z" },
     ],
   },
   {
@@ -129,21 +127,15 @@ export default function Layout() {
 
   // Auto-open the section that contains the active route, on first navigation
   useEffect(() => {
-    const currentTab = new URLSearchParams(location.search).get("tab");
     for (const section of NAV_SECTIONS) {
-      const hit = section.items.find((it) => {
-        const itPath = it.to.split("?")[0];
-        if (itPath !== location.pathname) return false;
-        if (it.matchTab) return it.matchTab === currentTab;
-        return true;
-      });
+      const hit = section.items.find((it) => it.to.split("?")[0] === location.pathname);
       if (hit && !sectionsOpen[section.id]) {
         setSectionsOpen((prev) => ({ ...prev, [section.id]: true }));
         break;
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname, location.search]);
+  }, [location.pathname]);
 
   // Close on Escape
   useEffect(() => {
@@ -155,54 +147,22 @@ export default function Layout() {
     return () => window.removeEventListener("keydown", handler);
   }, [mobileOpen]);
 
-  const currentTab = useMemo(
-    () => new URLSearchParams(location.search).get("tab"),
-    [location.search],
-  );
-
   const toggleSection = (id: string) =>
     setSectionsOpen((prev) => ({ ...prev, [id]: !prev[id] }));
 
   const renderItem = (item: NavItem) => {
-    const itemPath = item.to.split("?")[0];
-    // Default NavLink active matching for plain items; custom for tab-deep-linked items.
-    if (item.matchTab) {
-      const isActive = location.pathname === itemPath && currentTab === item.matchTab;
-      return (
-        <Link
-          key={item.to + ":" + item.matchTab}
-          to={item.to}
-          className={`flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
-            isActive
-              ? "bg-[var(--color-gold)]/20 text-[var(--color-gold)]"
-              : "hover:bg-white/10"
-          }`}
-        >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-          </svg>
-          {t(item.i18nKey)}
-        </Link>
-      );
-    }
-    // Conceitos / Conexões: only active when on the wrapper route AND no specific deep-linked tab claim conflicts.
-    // (Tópicos deep-link sets tab=topics → we want Conceitos NOT highlighted in that case.)
-    const isHighlightedDeepLink =
-      (itemPath === "/concepts" && currentTab === "topics") ||
-      false;
     return (
       <NavLink
         key={item.to}
         to={item.to}
         end={item.to === "/"}
-        className={({ isActive }) => {
-          const active = isActive && !isHighlightedDeepLink;
-          return `flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
-            active
+        className={({ isActive }) =>
+          `flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
+            isActive
               ? "bg-[var(--color-gold)]/20 text-[var(--color-gold)]"
               : "hover:bg-white/10"
-          }`;
-        }}
+          }`
+        }
       >
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />

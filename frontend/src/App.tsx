@@ -23,6 +23,7 @@ import EmotionalLandscapePage from "./pages/EmotionalLandscapePage";
 import CommunityPage from "./pages/CommunityPage";
 import SpecialPassagePage from "./pages/SpecialPassagePage";
 import GenealogyPage from "./pages/GenealogyPage";
+import TopicsPage from "./pages/TopicsPage";
 import AboutPage from "./pages/AboutPage";
 import ConnectionsPage from "./pages/ConnectionsPage";
 import ConceptsPage from "./pages/ConceptsPage";
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/map" element={<MapPage />} />
         <Route path="/timeline" element={<TimelinePage />} />
         <Route path="/compare" element={<ComparePage />} />
+        <Route path="/topics" element={<TopicsPage />} />
         <Route path="/devotional" element={<DevotionalPage />} />
         <Route path="/deep-analytics" element={<DeepAnalyticsPage />} />
         <Route path="/open-questions" element={<OpenQuestionsPage />} />
@@ -65,7 +67,6 @@ export default function App() {
         <Route path="/arc-diagram" element={<Navigate to="/connections?tab=arc" replace />} />
         <Route path="/semantic-graph" element={<Navigate to="/connections?tab=graph" replace />} />
         <Route path="/intertextuality" element={<Navigate to="/connections?tab=citations" replace />} />
-        <Route path="/topics" element={<Navigate to="/concepts?tab=topics" replace />} />
         <Route path="/threads" element={<Navigate to="/concepts?tab=threads" replace />} />
         <Route path="/genealogy" element={<Navigate to="/concepts?tab=genealogy" replace />} />
         {/* Deep-link to a specific concept keeps rendering GenealogyPage so

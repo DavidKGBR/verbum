@@ -1,10 +1,9 @@
 import { useSearchParams } from "react-router-dom";
-import TopicsPage from "./TopicsPage";
 import ThreadsPage from "./ThreadsPage";
 import GenealogyPage from "./GenealogyPage";
 import { useI18n } from "../i18n/i18nContext";
 
-const TABS = ["topics", "threads", "genealogy"] as const;
+const TABS = ["threads", "genealogy"] as const;
 type Tab = (typeof TABS)[number];
 
 function isTab(v: string | null): v is Tab {
@@ -15,7 +14,7 @@ export default function ConceptsPage() {
   const [params, setParams] = useSearchParams();
   const { t } = useI18n();
   const raw = params.get("tab");
-  const active: Tab = isTab(raw) ? raw : "topics";
+  const active: Tab = isTab(raw) ? raw : "threads";
 
   const setTab = (tab: Tab) => {
     const next = new URLSearchParams(params);
@@ -48,7 +47,6 @@ export default function ConceptsPage() {
         })}
       </div>
       <div role="tabpanel">
-        {active === "topics" && <TopicsPage />}
         {active === "threads" && <ThreadsPage />}
         {active === "genealogy" && <GenealogyPage />}
       </div>
