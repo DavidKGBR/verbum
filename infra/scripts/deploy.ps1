@@ -1,4 +1,4 @@
-# ─────────────────────────────────────────────────────────────────────────────
+# =============================================================================
 # Build + push + deploy the Verbum API to Cloud Run (PowerShell version).
 #
 # Prerequisites:
@@ -6,7 +6,7 @@
 #   - Both secrets (GEMINI_API_KEY, ABIBLIA_DIGITAL_TOKEN) populated
 #   - data/analytics/bible.duckdb is up to date (~270 MB)
 #   - data/audio/ contains the MP3 corpus (~119 MB)
-# ─────────────────────────────────────────────────────────────────────────────
+# =============================================================================
 
 $ErrorActionPreference = 'Stop'
 
@@ -19,7 +19,7 @@ $ImageUri    = "$Region-docker.pkg.dev/$ProjectId/$RepoName/${ServiceName}:lates
 
 gcloud config set project $ProjectId | Out-Null
 
-# ─── 1. Build + push via Cloud Build ─────────────────────────────────────────
+# --- 1. Build + push via Cloud Build -----------------------------------------
 Write-Host "==> Building image via Cloud Build (target: api stage)..."
 Write-Host "==> Image: $ImageUri"
 
@@ -35,7 +35,7 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
-# ─── 2. Deploy to Cloud Run ──────────────────────────────────────────────────
+# --- 2. Deploy to Cloud Run --------------------------------------------------
 Write-Host "==> Deploying to Cloud Run service $ServiceName..."
 
 gcloud run deploy $ServiceName `
@@ -58,7 +58,7 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
-# ─── 3. Smoke test ───────────────────────────────────────────────────────────
+# --- 3. Smoke test -----------------------------------------------------------
 $Url = gcloud run services describe $ServiceName --region=$Region --format='value(status.url)'
 Write-Host ""
 Write-Host "==> Deployed: $Url" -ForegroundColor Green

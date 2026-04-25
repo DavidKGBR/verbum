@@ -1,8 +1,8 @@
-# ─────────────────────────────────────────────────────────────────────────────
+# =============================================================================
 # One-time GCP bootstrap for Verbum (PowerShell version).
 #
 # Run once after `gcloud auth login` and after creating the GCP project in
-# the Console. This script is idempotent — re-running won't break anything.
+# the Console. This script is idempotent -- re-running won't break anything.
 #
 # What it does:
 #   1. Enables required APIs
@@ -10,11 +10,11 @@
 #   3. Creates secrets for GEMINI_API_KEY and ABIBLIA_DIGITAL_TOKEN
 #   4. Creates the verbum-api-runtime service account and grants it
 #      Secret Manager Accessor role
-# ─────────────────────────────────────────────────────────────────────────────
+# =============================================================================
 
 $ErrorActionPreference = 'Stop'
 
-# ─── Config ──────────────────────────────────────────────────────────────────
+# --- Config ------------------------------------------------------------------
 $ProjectId = if ($env:GCP_PROJECT_ID) { $env:GCP_PROJECT_ID } else { 'verbum-app-bible' }
 $Region    = if ($env:GCP_REGION)     { $env:GCP_REGION }     else { 'us-central1' }
 $RepoName  = 'verbum-images'
@@ -33,7 +33,7 @@ function Test-GcloudResource {
     return $LASTEXITCODE -eq 0
 }
 
-# ─── 1. Enable APIs ──────────────────────────────────────────────────────────
+# --- 1. Enable APIs ----------------------------------------------------------
 Write-Host "==> Enabling APIs (run, artifactregistry, secretmanager, cloudbuild)..."
 gcloud services enable `
     run.googleapis.com `
@@ -41,7 +41,7 @@ gcloud services enable `
     secretmanager.googleapis.com `
     cloudbuild.googleapis.com
 
-# ─── 2. Artifact Registry repo ───────────────────────────────────────────────
+# --- 2. Artifact Registry repo -----------------------------------------------
 $repoExists = Test-GcloudResource { gcloud artifacts repositories describe $RepoName --location=$Region }
 if (-not $repoExists) {
     Write-Host "==> Creating Artifact Registry repo $RepoName..."
@@ -50,17 +50,17 @@ if (-not $repoExists) {
         --location=$Region `
         --description='Verbum container images'
 } else {
-    Write-Host "==> Artifact Registry repo $RepoName already exists — skipping."
+    Write-Host "==> Artifact Registry repo $RepoName already exists, skipping."
 }
 
-# ─── 3. Secrets ──────────────────────────────────────────────────────────────
+# --- 3. Secrets --------------------------------------------------------------
 function New-SecretIfMissing {
     param([string]$Name)
     $exists = Test-GcloudResource { gcloud secrets describe $Name }
     if ($exists) {
-        Write-Host "==> Secret $Name already exists — skipping creation."
+        Write-Host "==> Secret $Name already exists, skipping creation."
     } else {
-        Write-Host "==> Creating secret $Name (empty — populate with: gcloud secrets versions add)..."
+        Write-Host "==> Creating secret $Name (empty; populate with gcloud secrets versions add)..."
         gcloud secrets create $Name --replication-policy=automatic
     }
 }
@@ -75,13 +75,13 @@ Write-Host "    'YOUR_GEMINI_KEY'  | gcloud secrets versions add GEMINI_API_KEY 
 Write-Host "    'YOUR_ABIBLIA_JWT' | gcloud secrets versions add ABIBLIA_DIGITAL_TOKEN --data-file=-"
 Write-Host ""
 
-# ─── 4. Service account ──────────────────────────────────────────────────────
+# --- 4. Service account ------------------------------------------------------
 $saExists = Test-GcloudResource { gcloud iam service-accounts describe $SaEmail }
 if (-not $saExists) {
     Write-Host "==> Creating service account $SaName..."
     gcloud iam service-accounts create $SaName --display-name='Verbum API runtime'
 } else {
-    Write-Host "==> Service account $SaName already exists — skipping creation."
+    Write-Host "==> Service account $SaName already exists, skipping creation."
 }
 
 Write-Host "==> Granting Secret Manager Accessor on each secret to $SaEmail..."
@@ -94,4 +94,4 @@ foreach ($secret in @('GEMINI_API_KEY', 'ABIBLIA_DIGITAL_TOKEN')) {
 
 Write-Host ""
 Write-Host "==> Setup complete." -ForegroundColor Green
-Write-Host "==> Next: populate the secrets (above), then run infra/scripts/deploy.ps1"
+Write-Host "==> Next: populate the secrets (above), then run infra\scripts\deploy.ps1"
