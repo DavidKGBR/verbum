@@ -19,17 +19,27 @@ gcloud config set project verbum-app-bible
 #    Console → Billing → Link billing account
 
 # 3. Run the bootstrap script
+#    macOS/Linux/Git Bash:
 bash infra/scripts/setup-gcp.sh
+#    Windows PowerShell:
+.\infra\scripts\setup-gcp.ps1
 
 # 4. Populate the secrets (the script tells you the exact commands)
+#    Bash:
 printf 'YOUR_GEMINI_KEY'  | gcloud secrets versions add GEMINI_API_KEY        --data-file=-
 printf 'YOUR_ABIBLIA_JWT' | gcloud secrets versions add ABIBLIA_DIGITAL_TOKEN --data-file=-
+#    PowerShell:
+'YOUR_GEMINI_KEY'  | gcloud secrets versions add GEMINI_API_KEY        --data-file=-
+'YOUR_ABIBLIA_JWT' | gcloud secrets versions add ABIBLIA_DIGITAL_TOKEN --data-file=-
 ```
 
 ## Deploy
 
 ```bash
+# macOS/Linux/Git Bash:
 bash infra/scripts/deploy.sh
+# Windows PowerShell:
+.\infra\scripts\deploy.ps1
 ```
 
 Builds via Cloud Build (no local Docker needed), pushes to Artifact Registry,
