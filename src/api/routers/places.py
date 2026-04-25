@@ -18,6 +18,16 @@ from src.api.dependencies import get_db
 router = APIRouter()
 logger = logging.getLogger(__name__)
 
+
+def _img_url(tp: object, size: str = "330") -> str | None:
+    """Build an image URL from a Wikimedia pattern (####-substituted).
+
+    DataFrame columns can yield NaN (a float) for missing values, and
+    `if tp` is truthy for NaN — so the naive `tp.replace(...)` blows up
+    with AttributeError. Guard explicitly for the string type.
+    """
+    return tp.replace("####", size) if isinstance(tp, str) and tp else None
+
 # Load static routes data once at import time
 _ROUTES_PATH = Path(__file__).resolve().parents[3] / "data" / "static" / "routes" / "routes.json"
 _ROUTES: list[dict] = []
@@ -81,8 +91,7 @@ def list_places(
             if r.get("also_called"):
                 with contextlib.suppress(json.JSONDecodeError, TypeError):
                     r["also_called"] = json.loads(r["also_called"])
-            tp = r.pop("thumbnail_pattern", None)
-            r["thumbnail_url"] = tp.replace("####", "330") if tp else None
+            r["thumbnail_url"] = _img_url(r.pop("thumbnail_pattern", None))
 
         return {
             "total": total,
@@ -151,8 +160,7 @@ def get_places_geojson(
 
         features = []
         for _, row in df.iterrows():
-            tp = row.get("thumbnail_pattern")
-            thumb = tp.replace("####", "330") if tp else None
+            thumb = _img_url(row.get("thumbnail_pattern"))
             features.append(
                 {
                     "type": "Feature",
@@ -281,13 +289,12 @@ def get_place(slug: str) -> dict:
 
         images = []
         for _, img in img_df.iterrows():
-            tp = img.get("thumbnail_pattern", "")
             images.append(
                 {
                     "image_id": img["image_id"],
                     "file_url": img["file_url"],
-                    "thumbnail_url": tp.replace("####", "330") if tp else None,
-                    "hero_url": tp.replace("####", "960") if tp else None,
+                    "thumbnail_url": _img_url(img.get("thumbnail_pattern")),
+                    "hero_url": _img_url(img.get("thumbnail_pattern"), "960"),
                     "description": img["description"],
                     "license": img["license"],
                     "credit": img["credit"],
