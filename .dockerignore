@@ -1,0 +1,58 @@
+# Build artifacts
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+.tox/
+
+# Frontend (built separately, deployed to Firebase Hosting)
+frontend/
+
+# Docs / planning
+docs/
+*.md
+!data/PUBLIC_DATASET.md
+
+# Data the API does NOT need at runtime — these are workspace artifacts
+data/raw/                  # Per-translation JSON cache from extraction (~GB)
+data/processed/            # Sentiment/strongs labeling JSONLs already loaded into DuckDB
+data/cache/                # Local dev cache
+data/ai_cache/             # Created at runtime
+data/*.csv
+data/*.duckdb.wal
+
+# Tests
+tests/
+
+# Dev tooling
+.git/
+.github/
+.gitignore
+.gitattributes
+.editorconfig
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Misc
+*.log
+.DS_Store
+tmp_turns/
+infra/
+Makefile
+pre-commit*
+.pre-commit-config.yaml

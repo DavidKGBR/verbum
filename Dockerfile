@@ -45,6 +45,36 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 ENTRYPOINT ["python", "-m", "src.cli"]
 CMD ["run"]
 
+# ─── API stage (Cloud Run target) ────────────────────────────────────────────
+
+FROM deps AS api
+
+# Source code
+COPY src/ src/
+
+# Data baked into image:
+#   - DuckDB analytics (~270 MB) — primary read store
+#   - Audio MP3s (~119 MB)        — TTS for interlinear (Strong's HE+GR)
+#   - Static JSONs (~512 KB)      — devotional plans, special passages, etc.
+# AI cache (data/ai_cache/) is created at runtime and ephemeral per instance.
+# That's acceptable for v1 because Pydantic Literal whitelists make the
+# prompt space finite — same (verse, lang, style, tx) hits cache fast.
+COPY data/analytics/bible.duckdb data/analytics/bible.duckdb
+COPY data/audio/ data/audio/
+COPY data/static/ data/static/
+
+# Cloud Run injects PORT (default 8080). Bind to 0.0.0.0.
+ENV PORT=8080 \
+    PYTHONIOENCODING=utf-8
+
+EXPOSE 8080
+
+# Use exec form so SIGTERM reaches uvicorn cleanly (graceful shutdown).
+# `--workers 1` is intentional: Cloud Run fronts requests with a single
+# instance and handles concurrency at its layer; multi-worker doubles
+# memory for a 270MB DuckDB file with no upside.
+CMD exec uvicorn src.api.main:app --host 0.0.0.0 --port ${PORT} --workers 1
+
 # ─── Dashboard stage ──────────────────────────────────────────────────────────
 
 FROM deps AS dashboard
