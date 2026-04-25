@@ -13,6 +13,7 @@ import VerseOfTheDay from "../components/VerseOfTheDay";
 import TranslationPreview from "../components/TranslationPreview";
 import DiscoverGrid from "../components/home/DiscoverGrid";
 import CommunityPreview from "../components/home/CommunityPreview";
+import HomeOnboarding from "../components/home/HomeOnboarding";
 import VerbumLogo from "../components/common/VerbumLogo";
 import { useReadingHistory } from "../hooks/useReadingHistory";
 import { useReadingPlans } from "../hooks/useReadingPlans";
@@ -268,6 +269,9 @@ export default function HomePage() {
           </Link>
         ))}
       </section>
+
+      {/* ─── ONBOARDING TOUR (first-time visitors only) ─── */}
+      {!last && <HomeOnboarding />}
 
       {/* ─── VERSE OF THE DAY ─── */}
       <VerseOfTheDay />

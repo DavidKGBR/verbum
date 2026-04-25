@@ -123,6 +123,30 @@ const ICONS: Record<string, IconRenderer> = {
       <path d="M8 7l4-4 4 4" />
     </svg>
   ),
+
+  // 🔤  Word study — stylized aleph (Hebrew first letter)
+  aleph: (props) => (
+    <svg {...baseSvgProps(props)}>
+      <path d="M5 6.5l9 11" />
+      <path d="M19 6.5l-9 11" />
+      <path d="M9 8.5l5 7" />
+    </svg>
+  ),
+
+  // 💛  Emotion — wave / pulse line
+  wave: (props) => (
+    <svg {...baseSvgProps(props)}>
+      <path d="M3 12c2.5 0 2.5-5 5-5s2.5 10 5 10 2.5-7 5-7 2.5 2 3 2" />
+    </svg>
+  ),
+
+  // 📚  Topics — tag
+  tag: (props) => (
+    <svg {...baseSvgProps(props)}>
+      <path d="M9.5 3H4a1 1 0 00-1 1v5.5a1 1 0 00.3.7l9.5 9.5a1 1 0 001.4 0l5.5-5.5a1 1 0 000-1.4L10.2 3.3a1 1 0 00-.7-.3z" />
+      <circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none" />
+    </svg>
+  ),
 };
 
 interface ActionIconProps {

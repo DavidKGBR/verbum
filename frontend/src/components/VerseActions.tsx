@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
+  fetchEmotionalLandscape,
+  fetchInterlinearChapter,
   fetchVerseCrossrefs,
   fetchVerseTranslations,
+  type EmotionalPoint,
+  type InterlinearWord,
   type VerseCrossRef,
 } from "../services/api";
 import { useBookmarks } from "../hooks/useBookmarks";
@@ -27,7 +31,23 @@ interface Props {
   initialTab?: Tab;
 }
 
-export type Tab = "none" | "crossrefs" | "compare" | "explain" | "notes" | "commentary";
+export type Tab =
+  | "none"
+  | "crossrefs"
+  | "compare"
+  | "explain"
+  | "notes"
+  | "commentary"
+  | "wordStudy"
+  | "emotion"
+  | "topics";
+
+interface VerseTopic {
+  topic_id: number;
+  name: string;
+  slug: string;
+  verse_count: number;
+}
 
 export default function VerseActions({
   verseId,
@@ -54,6 +74,9 @@ export default function VerseActions({
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
+  const [wordStudyWord, setWordStudyWord] = useState<InterlinearWord | null>(null);
+  const [emotionSeries, setEmotionSeries] = useState<EmotionalPoint[]>([]);
+  const [verseTopics, setVerseTopics] = useState<VerseTopic[]>([]);
 
   // Auto-load if initialTab requests data
   useEffect(() => {
@@ -102,6 +125,68 @@ export default function VerseActions({
 
   function loadExplain() {
     setTab(tab === "explain" ? "none" : "explain");
+  }
+
+  async function loadWordStudy() {
+    if (tab === "wordStudy") {
+      setTab("none");
+      return;
+    }
+    setTab("wordStudy");
+    if (wordStudyWord || !bookId || !chapter || !verse) return;
+    setLoading(true);
+    try {
+      const data = await fetchInterlinearChapter(bookId, chapter);
+      // Pick first noun in this verse, fall back to any word
+      const inVerse = data.words.filter((w) => w.verse_id === verseId);
+      const firstNoun = inVerse.find((w) => /noun|N-/i.test(w.grammar)) ?? inVerse[0] ?? null;
+      setWordStudyWord(firstNoun);
+    } catch {
+      setWordStudyWord(null);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function loadEmotion() {
+    if (tab === "emotion") {
+      setTab("none");
+      return;
+    }
+    setTab("emotion");
+    if (emotionSeries.length > 0 || !bookId) return;
+    setLoading(true);
+    try {
+      const data = await fetchEmotionalLandscape(bookId, translation);
+      setEmotionSeries(data.series.filter((s) => s.chapter === chapter));
+    } catch {
+      setEmotionSeries([]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function loadTopics() {
+    if (tab === "topics") {
+      setTab("none");
+      return;
+    }
+    setTab("topics");
+    if (verseTopics.length > 0) return;
+    setLoading(true);
+    try {
+      const res = await fetch(`/api/v1/topics/for-verse/${verseId}`);
+      if (res.ok) {
+        const data = await res.json();
+        setVerseTopics(data.topics ?? []);
+      } else {
+        setVerseTopics([]);
+      }
+    } catch {
+      setVerseTopics([]);
+    } finally {
+      setLoading(false);
+    }
   }
 
   function copyVerse() {
@@ -169,6 +254,39 @@ export default function VerseActions({
           }`}
         >
           <ActionIcon name="compare" /> {t("verseActions.btn.compare")}
+        </button>
+        <button
+          onClick={loadWordStudy}
+          title={t("verseActions.wordStudy.title")}
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
+            tab === "wordStudy"
+              ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
+              : "hover:bg-gray-100"
+          }`}
+        >
+          <ActionIcon name="aleph" /> {t("verseActions.btn.wordStudy")}
+        </button>
+        <button
+          onClick={loadEmotion}
+          title={t("verseActions.emotion.title")}
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
+            tab === "emotion"
+              ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
+              : "hover:bg-gray-100"
+          }`}
+        >
+          <ActionIcon name="wave" /> {t("verseActions.btn.emotion")}
+        </button>
+        <button
+          onClick={loadTopics}
+          title={t("verseActions.topics.title")}
+          className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded border transition ${
+            tab === "topics"
+              ? "bg-[var(--color-gold)] text-white border-[var(--color-gold)]"
+              : "hover:bg-gray-100"
+          }`}
+        >
+          <ActionIcon name="tag" /> {t("verseActions.btn.topics")}
         </button>
       </div>
 
@@ -291,6 +409,147 @@ export default function VerseActions({
           chapter={chapter}
           verse={verse}
         />
+      )}
+
+      {/* Word study panel */}
+      {tab === "wordStudy" && (
+        <div className="bg-white border rounded p-3 text-sm">
+          {loading ? (
+            <p className="opacity-50">{t("common.loading")}</p>
+          ) : !wordStudyWord ? (
+            <p className="opacity-50">{t("verseActions.wordStudy.none")}</p>
+          ) : (
+            <div className="flex flex-col gap-2">
+              <div className="flex items-baseline gap-3">
+                <span
+                  className="text-xl font-bold text-[var(--color-gold)]"
+                  lang={wordStudyWord.language === "hebrew" ? "he" : "el"}
+                >
+                  {wordStudyWord.original_word}
+                </span>
+                <span className="text-xs italic opacity-70">
+                  {wordStudyWord.transliteration}
+                </span>
+                <span className="text-[10px] uppercase tracking-wider opacity-50">
+                  {wordStudyWord.strongs_id}
+                </span>
+              </div>
+              <p className="text-xs opacity-80">
+                {wordStudyWord.gloss || wordStudyWord.english}
+              </p>
+              <div className="flex gap-3 mt-1 text-xs">
+                <Link
+                  to={`/word-study/${wordStudyWord.strongs_id}`}
+                  className="text-[var(--color-gold)] hover:underline"
+                >
+                  {t("verseActions.wordStudy.openStudy")} →
+                </Link>
+                {bookId && chapter && (
+                  <Link
+                    to={`/reader?book=${bookId}&chapter=${chapter}&verse=${verse}&mode=interlinear&translation=${translation}`}
+                    className="text-[var(--color-gold)] hover:underline"
+                  >
+                    {t("verseActions.wordStudy.openInterlinear")} →
+                  </Link>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Emotion panel */}
+      {tab === "emotion" && (
+        <div className="bg-white border rounded p-3 text-sm">
+          {loading ? (
+            <p className="opacity-50">{t("common.loading")}</p>
+          ) : emotionSeries.length === 0 ? (
+            <p className="opacity-50">{t("verseActions.emotion.none")}</p>
+          ) : (
+            <div>
+              <p className="text-[10px] uppercase tracking-wider opacity-50 mb-2">
+                {t("verseActions.emotion.chapterFlow").replace("{n}", String(chapter ?? ""))}
+              </p>
+              <svg
+                viewBox={`0 0 ${Math.max(emotionSeries.length, 1)} 40`}
+                preserveAspectRatio="none"
+                className="w-full h-12 block"
+                role="img"
+                aria-label={t("verseActions.btn.emotion")}
+              >
+                <line
+                  x1="0"
+                  y1="20"
+                  x2={Math.max(emotionSeries.length, 1)}
+                  y2="20"
+                  stroke="currentColor"
+                  strokeWidth="0.1"
+                  className="opacity-20"
+                />
+                {emotionSeries.map((s, i) => {
+                  const h = Math.max(Math.abs(s.polarity) * 18, 0.5);
+                  const y = s.polarity >= 0 ? 20 - h : 20;
+                  const isCurrent = s.verse === verse;
+                  return (
+                    <rect
+                      key={i}
+                      x={i}
+                      y={y}
+                      width={1}
+                      height={h}
+                      fill={
+                        isCurrent
+                          ? "var(--color-gold)"
+                          : s.polarity >= 0
+                            ? "rgb(34,197,94)"
+                            : "rgb(239,68,68)"
+                      }
+                      opacity={isCurrent ? 1 : 0.6}
+                    >
+                      <title>{`v${s.verse}: ${s.polarity.toFixed(2)}`}</title>
+                    </rect>
+                  );
+                })}
+              </svg>
+              <div className="flex justify-between text-[10px] opacity-40 mt-1">
+                <span>v1</span>
+                <span>v{emotionSeries[emotionSeries.length - 1]?.verse ?? "?"}</span>
+              </div>
+              {bookId && (
+                <Link
+                  to={`/emotional?book=${bookId}&translation=${translation}`}
+                  className="text-xs text-[var(--color-gold)] hover:underline mt-2 inline-block"
+                >
+                  {t("verseActions.emotion.openLandscape")} →
+                </Link>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Topics panel */}
+      {tab === "topics" && (
+        <div className="bg-white border rounded p-3 text-sm">
+          {loading ? (
+            <p className="opacity-50">{t("common.loading")}</p>
+          ) : verseTopics.length === 0 ? (
+            <p className="opacity-50">{t("verseActions.topics.none")}</p>
+          ) : (
+            <div className="flex flex-wrap gap-1.5">
+              {verseTopics.map((tp) => (
+                <Link
+                  key={tp.topic_id}
+                  to={`/topics/${tp.slug}`}
+                  className="text-xs px-2 py-1 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/5 hover:bg-[var(--color-gold)]/15 transition"
+                  title={t("verseActions.topics.versesIn").replace("{n}", String(tp.verse_count))}
+                >
+                  {tp.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       )}
 
       {/* Compare panel */}
