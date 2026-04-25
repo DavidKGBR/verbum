@@ -1,3 +1,7 @@
+
+
+
+
 <h1 align="center">
   <br>
   <img src="verbum.svg" alt="Verbum" width="360">
@@ -51,13 +55,13 @@
 </p>
 
 <p align="center">
-  <video src="apresentacao_readme/Verbum.mp4" controls width="780" muted type="video/mp4"></video>
+  <video src="https://github.com/user-attachments/assets/f1c80534-9f29-4401-97d0-f03ee20ea962" controls width="780" muted type="video/mp4"></video>
 </p>
 
 <p align="center">
   <em>↑ Presentación audiovisual de 60 segundos generada con Google NotebookLM (en portugués).</em>
   <br>
-  <sub>Si el reproductor no carga, <a href="apresentacao_readme/Verbum.mp4">descarga el video aquí</a>.</sub>
+  <sub>Si el reproductor no carga, <a href="https://github.com/user-attachments/assets/f1c80534-9f29-4401-97d0-f03ee20ea962">descarga el video aquí</a>.</sub>
 </p>
 
 <details>
