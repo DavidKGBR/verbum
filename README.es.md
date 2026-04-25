@@ -51,8 +51,13 @@
 </p>
 
 <p align="center">
-  🎬 <a href="apresentacao_readme/Verbum.mp4"><strong>Mira la presentación en video de 60 segundos</strong></a> &nbsp;·&nbsp;
-  <em>Narrativa audiovisual generada con Google NotebookLM (en portugués)</em>
+  <video src="https://github.com/DavidKGBR/verbum/raw/main/apresentacao_readme/Verbum.mp4" controls width="780" muted></video>
+</p>
+
+<p align="center">
+  <em>↑ Presentación audiovisual de 60 segundos generada con Google NotebookLM (en portugués).</em>
+  <br>
+  <sub>Si el reproductor no carga, <a href="apresentacao_readme/Verbum.mp4">descarga el video aquí</a>.</sub>
 </p>
 
 <details>
