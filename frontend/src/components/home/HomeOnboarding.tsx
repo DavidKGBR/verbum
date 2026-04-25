@@ -46,7 +46,7 @@ export default function HomeOnboarding() {
           <li>→ 1 John 1:1</li>
         </ul>
       ),
-      to: `/arc-diagram?source=JHN`,
+      to: `/connections?tab=arc&sourceBook=JHN`,
     },
     {
       key: "emotional",

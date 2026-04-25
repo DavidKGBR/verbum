@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   fetchEmotionalLandscape,
   fetchEmotionalPeaks,
@@ -49,9 +49,13 @@ type Emotion = "positive" | "negative";
 export default function EmotionalLandscapePage() {
   const { t, locale } = useI18n();
   const translation = defaultTranslationFor(locale);
-  const [tab, setTab] = useState<Tab>("landscape");
+  const [params] = useSearchParams();
+  // Seed initial state from URL so deep-links like /emotional?book=JHN&tab=profiles land correctly.
+  const initialTab: Tab = params.get("tab") === "profiles" ? "profiles" : "landscape";
+  const initialBook = (params.get("book") ?? "PSA").toUpperCase();
+  const [tab, setTab] = useState<Tab>(initialTab);
   const books = useBooks(translation);
-  const [selectedBook, setSelectedBook] = useState("PSA");
+  const [selectedBook, setSelectedBook] = useState(initialBook);
   const [series, setSeries] = useState<SentimentPoint[]>([]);
   const [peaks, setPeaks] = useState<PeakVerse[]>([]);
   const [emotion, setEmotion] = useState<Emotion>("positive");

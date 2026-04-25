@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { fetchBooks, fetchArcs, type Book, type Arc } from "../services/api";
 import { localizeBooks } from "../i18n/bookNames";
 import { useI18n } from "../i18n/i18nContext";
@@ -27,15 +28,31 @@ const DEFAULT_FILTERS: ArcFilters = {
   colorBy: "distance",
 };
 
+const VALID_COLOR_BY = ["distance", "testament", "category"] as const;
+type ColorBy = (typeof VALID_COLOR_BY)[number];
+
 export function useArcData(): ArcData {
   const { locale } = useI18n();
+  const [params] = useSearchParams();
   const [raw, setRaw] = useState<Book[]>([]);
   const [books, setBooks] = useState<Book[]>([]);
   const [arcs, setArcs] = useState<Arc[]>([]);
   const [totalCrossrefs, setTotalCrossrefs] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [filters, setFiltersState] = useState<ArcFilters>(DEFAULT_FILTERS);
+  // Seed filters from the URL on first mount so deep-links like
+  // /connections?tab=arc&sourceBook=JHN land on the right pre-selection.
+  const [filters, setFiltersState] = useState<ArcFilters>(() => {
+    const colorBy = params.get("colorBy");
+    return {
+      sourceBook: (params.get("sourceBook") ?? "").toUpperCase(),
+      targetBook: (params.get("targetBook") ?? "").toUpperCase(),
+      minConnections: Number(params.get("minConnections")) || DEFAULT_FILTERS.minConnections,
+      colorBy: (VALID_COLOR_BY as readonly string[]).includes(colorBy ?? "")
+        ? (colorBy as ColorBy)
+        : DEFAULT_FILTERS.colorBy,
+    };
+  });
 
   const setFilters = (partial: Partial<ArcFilters>) => {
     setFiltersState((prev) => ({ ...prev, ...partial }));
