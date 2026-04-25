@@ -38,13 +38,28 @@ if ($LASTEXITCODE -ne 0) {
 # --- 2. Deploy to Cloud Run --------------------------------------------------
 Write-Host "==> Deploying to Cloud Run service $ServiceName..."
 
+# Build the secrets list. SENTRY_DSN is optional — only mount it if the secret
+# exists; otherwise the backend just runs without Sentry telemetry.
+$Secrets = 'GEMINI_API_KEY=GEMINI_API_KEY:latest,ABIBLIA_DIGITAL_TOKEN=ABIBLIA_DIGITAL_TOKEN:latest'
+$prev = $ErrorActionPreference
+$ErrorActionPreference = 'SilentlyContinue'
+$null = gcloud secrets describe SENTRY_DSN 2>&1
+$sentryExists = ($LASTEXITCODE -eq 0)
+$ErrorActionPreference = $prev
+if ($sentryExists) {
+    Write-Host "==> SENTRY_DSN secret found, mounting it."
+    $Secrets = "$Secrets,SENTRY_DSN=SENTRY_DSN:latest"
+} else {
+    Write-Host "==> SENTRY_DSN secret not found, skipping (backend will run without telemetry)."
+}
+
 gcloud run deploy $ServiceName `
     --image=$ImageUri `
     --region=$Region `
     --platform=managed `
     --allow-unauthenticated `
     --service-account=$SaEmail `
-    --set-secrets='GEMINI_API_KEY=GEMINI_API_KEY:latest,ABIBLIA_DIGITAL_TOKEN=ABIBLIA_DIGITAL_TOKEN:latest' `
+    --set-secrets=$Secrets `
     --memory=1Gi `
     --cpu=1 `
     --concurrency=40 `

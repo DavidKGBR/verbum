@@ -13,11 +13,31 @@ Soli Deo Gloria.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+
+# ── Sentry (optional, gated by SENTRY_DSN) ────────────────────────────────────
+# Initialize BEFORE creating the FastAPI app so the integration captures startup
+# errors. No-op when the DSN is missing — keeps local dev free of telemetry.
+_SENTRY_DSN = os.getenv("SENTRY_DSN", "").strip()
+if _SENTRY_DSN:
+    import sentry_sdk
+    from sentry_sdk.integrations.fastapi import FastApiIntegration
+    from sentry_sdk.integrations.starlette import StarletteIntegration
+
+    sentry_sdk.init(
+        dsn=_SENTRY_DSN,
+        integrations=[StarletteIntegration(), FastApiIntegration()],
+        traces_sample_rate=0.05,    # 5% of requests get a perf trace; cheap on free tier
+        profiles_sample_rate=0.0,   # Profiling off — too costly on Cloud Run cold starts
+        send_default_pii=False,     # Don't capture IP / cookies / user identifiers
+        environment=os.getenv("SENTRY_ENV", "production"),
+        release=os.getenv("VERBUM_RELEASE", "verbum-api@2.0.0"),
+    )
 
 from src.api.routers import (
     ai_insights,
@@ -93,8 +113,31 @@ app.include_router(community.router, prefix="/api/v1", tags=["Community Notes"])
 
 @app.get("/health")
 def health_check() -> dict:
-    """Health check endpoint."""
-    return {"status": "ok", "version": "2.0.0"}
+    """Health check + cheap DB probe.
+
+    Returns 200 with a verse count when DuckDB is reachable; useful for Cloud
+    Run uptime checks and Sentry release verification. The COUNT is fast
+    (DuckDB keeps a stats cache), so this stays sub-10ms.
+    """
+    from src.api.dependencies import get_db
+
+    payload: dict = {
+        "status": "ok",
+        "version": "2.0.0",
+        "release": os.getenv("VERBUM_RELEASE", "verbum-api@2.0.0"),
+        "sentry": bool(_SENTRY_DSN),
+    }
+    try:
+        conn = get_db()
+        try:
+            row = conn.execute("SELECT COUNT(*) FROM verses").fetchone()
+            payload["db_verses_count"] = int(row[0]) if row else 0
+        finally:
+            conn.close()
+    except Exception as exc:  # noqa: BLE001 — health check must never raise
+        payload["status"] = "degraded"
+        payload["db_error"] = str(exc)[:120]
+    return payload
 
 
 # ── Static audio files (Fase 5A — Neural2 pronunciations) ───────────────────

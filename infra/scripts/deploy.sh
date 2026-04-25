@@ -40,13 +40,23 @@ gcloud builds submit \
 # ─── 2. Deploy to Cloud Run ──────────────────────────────────────────────────
 echo "==> Deploying to Cloud Run service $SERVICE_NAME..."
 
+# Build the secrets list. SENTRY_DSN is optional — only mount it if the secret
+# exists; otherwise the backend just runs without Sentry telemetry.
+SECRETS="GEMINI_API_KEY=GEMINI_API_KEY:latest,ABIBLIA_DIGITAL_TOKEN=ABIBLIA_DIGITAL_TOKEN:latest"
+if gcloud secrets describe SENTRY_DSN >/dev/null 2>&1; then
+    echo "==> SENTRY_DSN secret found, mounting it."
+    SECRETS="$SECRETS,SENTRY_DSN=SENTRY_DSN:latest"
+else
+    echo "==> SENTRY_DSN secret not found, skipping (backend will run without telemetry)."
+fi
+
 gcloud run deploy "$SERVICE_NAME" \
     --image="$IMAGE_URI" \
     --region="$REGION" \
     --platform=managed \
     --allow-unauthenticated \
     --service-account="$SA_EMAIL" \
-    --set-secrets="GEMINI_API_KEY=GEMINI_API_KEY:latest,ABIBLIA_DIGITAL_TOKEN=ABIBLIA_DIGITAL_TOKEN:latest" \
+    --set-secrets="$SECRETS" \
     --memory=1Gi \
     --cpu=1 \
     --concurrency=40 \

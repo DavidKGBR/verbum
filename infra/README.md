@@ -74,6 +74,65 @@ shipped in the image. The secret is wired up for completeness in case future
 endpoints need live extraction; consider removing it from `deploy.sh` if it
 stays unused after launch.
 
+## Observability (Sessão 8)
+
+All telemetry is **opt-in**. The app runs identically without it; populate the
+secrets / env vars below to start collecting signal.
+
+### Backend — Sentry (errors + traces)
+
+1. Create a free project at [sentry.io](https://sentry.io). Pick "FastAPI"
+   when prompted; copy the DSN.
+2. Push the DSN as a new secret:
+   ```bash
+   printf 'https://...@sentry.io/123' | gcloud secrets create SENTRY_DSN --replication-policy=automatic --data-file=-
+   gcloud secrets add-iam-policy-binding SENTRY_DSN \
+       --member="serviceAccount:verbum-api-runtime@verbum-app-bible.iam.gserviceaccount.com" \
+       --role="roles/secretmanager.secretAccessor"
+   ```
+3. Re-run `deploy.ps1` / `deploy.sh`. The deploy scripts auto-detect the
+   secret and mount it. Backend boot logs `Sentry initialized` once it's live.
+4. Verify: `curl https://.../health` should return `"sentry": true`.
+
+PII is intentionally **not** captured (`send_default_pii=False`). Trace
+sample rate is 5% — adjust in `src/api/main.py` if you need more.
+
+### Frontend — Sentry + GA4
+
+Vite reads env vars at build time, so set them before `npm run build`:
+
+```bash
+# frontend/.env.production (gitignored)
+VITE_SENTRY_DSN=https://...@sentry.io/456
+VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+Then re-run `firebase deploy --only hosting`. Both are no-ops when blank.
+
+GA4 setup: Firebase Console → Project settings → Integrations → Google
+Analytics → enable. Copy the Measurement ID (format `G-XXXXXXXXXX`).
+The integration auto-creates the GA4 property linked to Firebase Hosting,
+so realtime traffic shows up in both consoles.
+
+### Cloud Run uptime check (free)
+
+After the first deploy, in GCP Console:
+
+1. Monitoring → Uptime checks → Create
+2. Target: HTTPS, hostname `verbum-api-219759089368.us-central1.run.app`,
+   path `/health`, every 5 min from 3 regions
+3. Alert: notify on email when 2 of 3 regions fail
+4. Free tier: up to 3 endpoints
+
+### What good looks like
+
+- `/health` returns `{"status": "ok", "db_verses_count": 372308, "sentry": true}`
+- Sentry dashboard shows release `verbum-api@2.0.0` and `verbum-frontend@2.0.0`
+- GA4 Realtime shows your own visit
+- Uptime check is green
+
+---
+
 ## Cost guardrails
 
 Set up manually in the GCP Console after the first deploy:
