@@ -187,7 +187,7 @@ def combined_timeline(
                 f"SELECT slug, name FROM biblical_people WHERE slug IN ({placeholders})",
                 list(all_slugs),
             ).fetchall()
-            slug_to_name = {s: n for s, n in name_rows}
+            slug_to_name = dict(name_rows)
 
         biblical = []
         for evt in raw_biblical:

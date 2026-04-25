@@ -236,7 +236,7 @@ def get_topic_related(
                 """,
                 [*slugs, lang],
             ).fetchall()
-            name_map = {s: n for s, n in localized}
+            name_map = dict(localized)
             for rt in related_topics:
                 if rt["slug"] in name_map:
                     rt["name"] = name_map[rt["slug"]]

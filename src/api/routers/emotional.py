@@ -88,7 +88,8 @@ def get_emotional_peaks(
 
         where_label = ""
         if emotion in ("positive", "negative", "neutral"):
-            where_label = f"AND {'COALESCE(m.label, v.sentiment_label)' if lang else 'sentiment_label'} = ?"
+            label_expr = "COALESCE(m.label, v.sentiment_label)" if lang else "sentiment_label"
+            where_label = f"AND {label_expr} = ?"
 
         params: list[object] = []
         if lang:
@@ -151,7 +152,10 @@ def get_book_arc(
     book_id: str,
     translation: str = Query("kjv", description="Translation ID"),
 ) -> dict:
-    """Book-level emotional arc: per-chapter aggregates + derived KPIs (direction, peak, valley, volatility, turn points)."""
+    """Book-level emotional arc: per-chapter aggregates + derived KPIs.
+
+    KPIs include direction, peak, valley, volatility, and turn points.
+    """
     conn = get_db()
     try:
         book_upper = book_id.upper()

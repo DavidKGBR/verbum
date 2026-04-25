@@ -459,8 +459,8 @@ def search_dictionary(
     localized name in `dictionary_entries_multilang`. Translated preview
     snippets and localized names are overlaid when available.
     """
-    _ACCENT_FROM = "àáâãäåèéêëìíîïòóôõöùúûüñçÀÁÂÃÄÅÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÑÇ"
-    _ACCENT_TO   = "aaaaaaeeeeiiiiooooouuuuncAAAAAAEEEEIIIIOOOOOUUUUNC"
+    accent_from = "àáâãäåèéêëìíîïòóôõöùúûüñçÀÁÂÃÄÅÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÑÇ"
+    accent_to = "aaaaaaeeeeiiiiooooouuuuncAAAAAAEEEEIIIIOOOOOUUUUNC"
 
     conn = get_db()
     try:
@@ -476,8 +476,8 @@ def search_dictionary(
                 LEFT JOIN dictionary_entries_multilang m
                     ON m.slug = e.slug AND m.lang = ?
                 WHERE e.name ILIKE ?
-                   OR translate(lower(m.name), '{_ACCENT_FROM}', '{_ACCENT_TO}')
-                      ILIKE translate(lower(?), '{_ACCENT_FROM}', '{_ACCENT_TO}')
+                   OR translate(lower(m.name), '{accent_from}', '{accent_to}')
+                      ILIKE translate(lower(?), '{accent_from}', '{accent_to}')
                 ORDER BY LENGTH(e.name), e.name
                 LIMIT ?
                 """,

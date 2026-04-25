@@ -14,9 +14,9 @@ from pathlib import Path
 
 from fastapi import APIRouter, HTTPException, Query
 
-_INTERLINEAR_JUNK_RE = re.compile(r"[\[»@]")
-
 from src.api.dependencies import get_db
+
+_INTERLINEAR_JUNK_RE = re.compile(r"[\[»@]")
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -262,8 +262,11 @@ def explorer_search(
 
             sec = r[3]
             if sec and r[0] == "strongs" and _INTERLINEAR_JUNK_RE.search(sec):
-                parts = re.split(r"[,;]", sec)
-                parts = [p.strip() for p in parts if p.strip() and not _INTERLINEAR_JUNK_RE.search(p)]
+                parts = [
+                    p.strip()
+                    for p in re.split(r"[,;]", sec)
+                    if p.strip() and not _INTERLINEAR_JUNK_RE.search(p)
+                ]
                 sec = parts[0] if parts else None
 
             results.append(

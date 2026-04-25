@@ -116,7 +116,8 @@ def search_verses(
                    END AS match_rank
             FROM verses v
             {join_clause}
-            WHERE v.text ILIKE ? AND v.translation_id = ? {book_filter.replace("book_id", "v.book_id")}
+            WHERE v.text ILIKE ? AND v.translation_id = ?
+              {book_filter.replace("book_id", "v.book_id")}
             ORDER BY match_rank ASC, v.book_position, v.chapter, v.verse
             LIMIT ?
             """,
