@@ -92,6 +92,53 @@
 <p><em>Las diapositivas están en portugués. La interfaz completa de la app está disponible en EN, PT y ES.</em></p>
 </details>
 
+### Capturas en producción
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/home_inteira.jpeg" alt="Home"><br>
+      <sub><strong>Inicio</strong> — landing en PT</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/leitor_simples.png" alt="Lector (simple)"><br>
+      <sub><strong>Lector</strong> — modo simple</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/leitor_interlinear.png" alt="Lector (interlineal)"><br>
+      <sub><strong>Lector</strong> — interlineal griego/hebreo</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="apresentacao_readme/prints/leitor_imersivo.png" alt="Lector (inmersivo 3D)"><br>
+      <sub><strong>Lector</strong> — modo inmersivo 3D</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/arco.png" alt="Diagrama de Arcos"><br>
+      <sub><strong>Conexiones</strong> — 344K cross-refs en arcos</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/mapa.png" alt="Mapa"><br>
+      <sub><strong>Mapa</strong> — 1.600+ lugares bíblicos</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="apresentacao_readme/prints/busca.png" alt="Búsqueda"><br>
+      <sub><strong>Búsqueda</strong> — full-text con sentimiento</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/planos.png" alt="Planes de Lectura"><br>
+      <sub><strong>Planes</strong> — lectura multi-día</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/home.jpeg" alt="Home (hero)"><br>
+      <sub><strong>Inicio</strong> — detalle del hero</sub>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## Por qué existe Verbum

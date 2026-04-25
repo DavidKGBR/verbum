@@ -87,6 +87,53 @@
 </table>
 </details>
 
+### Capturas em produção
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/home_inteira.jpeg" alt="Home"><br>
+      <sub><strong>Início</strong> — landing em PT</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/leitor_simples.png" alt="Leitor (simples)"><br>
+      <sub><strong>Leitor</strong> — modo simples</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/leitor_interlinear.png" alt="Leitor (interlinear)"><br>
+      <sub><strong>Leitor</strong> — interlinear grego/hebraico</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="apresentacao_readme/prints/leitor_imersivo.png" alt="Leitor (imersivo 3D)"><br>
+      <sub><strong>Leitor</strong> — modo imersivo 3D</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/arco.png" alt="Diagrama de Arcos"><br>
+      <sub><strong>Conexões</strong> — 344K cross-refs em arcos</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/mapa.png" alt="Mapa"><br>
+      <sub><strong>Mapa</strong> — 1.600+ lugares bíblicos</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="apresentacao_readme/prints/busca.png" alt="Busca"><br>
+      <sub><strong>Busca</strong> — full-text com sentimento</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/planos.png" alt="Planos de Leitura"><br>
+      <sub><strong>Planos</strong> — leitura multi-dia</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/home.jpeg" alt="Home (hero)"><br>
+      <sub><strong>Início</strong> — detalhe do hero</sub>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## Por que o Verbum existe

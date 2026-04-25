@@ -88,6 +88,53 @@
 <p><em>Slides are in Portuguese. The full app interface is available in EN, PT, and ES.</em></p>
 </details>
 
+### Screenshots from production
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/home_inteira.jpeg" alt="Home"><br>
+      <sub><strong>Home</strong> — landing in PT</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/leitor_simples.png" alt="Reader (single)"><br>
+      <sub><strong>Reader</strong> — single view</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="apresentacao_readme/prints/leitor_interlinear.png" alt="Reader (interlinear)"><br>
+      <sub><strong>Reader</strong> — Greek/Hebrew interlinear</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="apresentacao_readme/prints/leitor_imersivo.png" alt="Reader (immersive 3D)"><br>
+      <sub><strong>Reader</strong> — immersive 3D book spread</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/arco.png" alt="Arc Diagram"><br>
+      <sub><strong>Connections</strong> — 344K cross-refs as arcs</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/mapa.png" alt="Map"><br>
+      <sub><strong>Map</strong> — 1,600+ biblical places</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="apresentacao_readme/prints/busca.png" alt="Search"><br>
+      <sub><strong>Search</strong> — full-text with sentiment</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/planos.png" alt="Reading Plans"><br>
+      <sub><strong>Plans</strong> — multi-day reading plans</sub>
+    </td>
+    <td align="center">
+      <img src="apresentacao_readme/prints/home.jpeg" alt="Home (hero)"><br>
+      <sub><strong>Home</strong> — hero detail</sub>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## Why Verbum exists
