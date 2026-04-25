@@ -45,7 +45,27 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 ENTRYPOINT ["python", "-m", "src.cli"]
 CMD ["run"]
 
-# ─── API stage (Cloud Run target) ────────────────────────────────────────────
+# ─── Dashboard stage ──────────────────────────────────────────────────────────
+
+FROM deps AS dashboard
+
+COPY src/ src/
+COPY dashboard/ dashboard/
+
+RUN mkdir -p data/raw data/processed data/analytics
+
+EXPOSE 8501
+
+ENTRYPOINT ["streamlit", "run", "dashboard/app.py", \
+            "--server.port=8501", \
+            "--server.address=0.0.0.0", \
+            "--server.headless=true"]
+
+# ─── API stage (Cloud Run target — MUST be last) ─────────────────────────────
+#
+# `gcloud builds submit --tag` doesn't accept --target, so it tags whatever
+# the FINAL stage produces. Keep `api` last so the deploy script tags the
+# right image without needing a cloudbuild.yaml.
 
 FROM deps AS api
 
@@ -74,19 +94,3 @@ EXPOSE 8080
 # instance and handles concurrency at its layer; multi-worker doubles
 # memory for a 270MB DuckDB file with no upside.
 CMD exec uvicorn src.api.main:app --host 0.0.0.0 --port ${PORT} --workers 1
-
-# ─── Dashboard stage ──────────────────────────────────────────────────────────
-
-FROM deps AS dashboard
-
-COPY src/ src/
-COPY dashboard/ dashboard/
-
-RUN mkdir -p data/raw data/processed data/analytics
-
-EXPOSE 8501
-
-ENTRYPOINT ["streamlit", "run", "dashboard/app.py", \
-            "--server.port=8501", \
-            "--server.address=0.0.0.0", \
-            "--server.headless=true"]
