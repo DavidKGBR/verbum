@@ -5,7 +5,17 @@
 </h1>
 
 <p align="center">
-  <em>"No princípio era o Verbo." — João 1:1</em>
+  <em>"In the beginning was the Word." — John 1:1</em>
+</p>
+
+<p align="center">
+  <strong>🌐 English</strong> ·
+  <a href="README.pt.md">Português</a> ·
+  <a href="README.es.md">Español</a>
+</p>
+
+<p align="center">
+  <a href="https://verbum-app-bible.web.app"><img src="https://img.shields.io/badge/▶️%20live-verbum--app--bible.web.app-gold?style=for-the-badge" alt="Live"></a>
 </p>
 
 <p align="center">
@@ -19,14 +29,59 @@
 </p>
 
 <p align="center">
-  <a href="#-why-verbum-exists">Why it exists</a> •
-  <a href="#-what-you-get">What you get</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-quick-start">Quick start</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-api-reference">API</a> •
-  <a href="#-testing--quality">Testing</a>
+  <a href="#-presentation">Presentation</a> •
+  <a href="#why-verbum-exists">Why it exists</a> •
+  <a href="#what-you-get">What you get</a> •
+  <a href="#features">Features</a> •
+  <a href="#quick-start">Quick start</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#api-reference">API</a>
 </p>
+
+---
+
+## ✨ Presentation
+
+<p align="center">
+  <a href="https://verbum-app-bible.web.app">
+    <img src="apresentacao_readme/Slide-0001.jpg" alt="Verbum — The Purpose of the Biblical Text in the Era of Data" width="780">
+  </a>
+  <br>
+  <em>↑ Click to open Verbum live</em>
+</p>
+
+<p align="center">
+  🎬 <a href="apresentacao_readme/Verbum.mp4"><strong>Watch the 60-second video presentation</strong></a> &nbsp;·&nbsp;
+  <em>Audio-visual narrative generated with Google NotebookLM (in Portuguese)</em>
+</p>
+
+<details>
+<summary><strong>📑 View all 12 presentation slides</strong></summary>
+<br>
+<table>
+  <tr>
+    <td><img src="apresentacao_readme/Slide-0001.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0002.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0003.jpg"></td>
+  </tr>
+  <tr>
+    <td><img src="apresentacao_readme/Slide-0004.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0005.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0006.jpg"></td>
+  </tr>
+  <tr>
+    <td><img src="apresentacao_readme/Slide-0007.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0008.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0009.jpg"></td>
+  </tr>
+  <tr>
+    <td><img src="apresentacao_readme/Slide-0010.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0011.jpg"></td>
+    <td><img src="apresentacao_readme/Slide-0012.jpg"></td>
+  </tr>
+</table>
+<p><em>Slides are in Portuguese. The full app interface is available in EN, PT, and ES.</em></p>
+</details>
 
 ---
 
@@ -146,7 +201,7 @@ Five reading modes designed for different depths of focus:
 |---------|-------------|
 | **Community Notes** (`/community`) | Curated scholarly observations per verse |
 | **Commentary** (in Reader) | 6 external commentaries via HelloAO |
-| **i18n** (sidebar) | Flag selector for EN/PT/ES, auto-detects browser language |
+| **i18n** (sidebar) | Language selector for EN/PT/ES, auto-detects browser language |
 | **Streak** (sidebar) | Reading streak tracker with daily badge |
 
 ---
@@ -221,9 +276,10 @@ cd frontend && npm run dev
 | **Load** | `duckdb` (analytical views, parameterised inserts, 32 tables) |
 | **API** | `fastapi`, `pydantic v2`, `typer` CLI, 27 routers, 93 endpoints |
 | **Frontend** | `react 19`, `vite 6`, `typescript`, `tailwind v4`, `d3`, `leaflet`, `react-router` |
-| **AI** | `google-generativeai` (Gemini 2.0 Flash), disk cache with rate limiting |
+| **AI** | `google-generativeai` (Gemini 2.5 Flash Lite), disk cache + per-IP rate limit + Pydantic Literal whitelists |
 | **i18n** | React Context + `useI18n()` hook, 3 languages, localStorage persistence |
 | **Quality** | `ruff`, `mypy`, `pytest` (392 tests), `tsc --noEmit` |
+| **Deploy** | Firebase Hosting (frontend) + Cloud Run (backend) + Secret Manager + Artifact Registry |
 
 ### Source layout
 
@@ -256,13 +312,11 @@ src/
   api/
     main.py               # FastAPI app + CORS + 27 routers
     dependencies.py       # per-request DuckDB connection
+    rate_limit.py         # in-memory sliding window for /ai/* endpoints
     routers/              # 27 router modules (see API Reference)
   ai/
     gemini_client.py      # rate-limited + cached
     passage_explainer.py  # prompts for explain + compare
-  models/
-    schemas.py            # Pydantic v2: RawVerse, EnrichedVerse, etc.
-    theographic.py        # BiblicalPerson, BiblicalPlace, etc.
 
 frontend/src/
   App.tsx                 # 32 routes (incl. consolidated wrappers /connections, /concepts)
@@ -275,6 +329,10 @@ frontend/src/
   hooks/                  # useArcData, useBookmarks, useReadingHistory, etc.
   services/api.ts         # typed fetch wrappers for all 93 endpoints
 
+infra/
+  README.md               # deploy runbook
+  scripts/                # setup-gcp + deploy (.sh and .ps1 variants)
+
 data/static/              # Curated JSON: authors, plans, questions, structures, community_notes, etc.
 tests/                    # ~32 test files, 392 test cases
 ```
@@ -283,7 +341,7 @@ tests/                    # ~32 test files, 392 test cases
 
 ## API Reference
 
-Full OpenAPI docs at `http://localhost:8000/docs`. Summary of all 27 routers:
+Full OpenAPI docs at `http://localhost:8000/docs` (local) or via Cloud Run (production). Summary of all 27 routers:
 
 | Router | Endpoints | Description |
 |--------|-----------|-------------|
@@ -292,7 +350,7 @@ Full OpenAPI docs at `http://localhost:8000/docs`. Summary of all 27 routers:
 | **search** | 1 | Full-text search with translation/book filters |
 | **analytics** | 3 | Sentiment by group, translation stats, heatmap |
 | **crossrefs** | 5 | Arcs, between books, per-verse, counts, network |
-| **ai_insights** | 2 | Gemini explain + compare |
+| **ai_insights** | 2 | Gemini explain + compare (Pydantic Literal whitelists prevent prompt injection) |
 | **lexicon** | 8 | Strong's lookup, interlinear chapter, word distribution, journey |
 | **semantic** | 3 | Co-occurrence graph, divergence analysis |
 | **authors** | 2 | Author list, detail with vocab stats |
@@ -350,6 +408,7 @@ cd frontend && npm run build       # production build
 | [TextBlob](https://textblob.readthedocs.io/) | NLP sentiment analysis | MIT |
 | [DuckDB](https://duckdb.org/) | Analytical database | MIT |
 | [Google Gemini](https://ai.google.dev/) | AI explanations | API terms |
+| [Google NotebookLM](https://notebooklm.google.com/) | Audio-visual presentation | Google terms |
 
 ---
 
@@ -360,15 +419,16 @@ cd frontend && npm run build       # production build
 - **v3.0** — Academic tools: Strong's concordance + interlinear + semantic graph + dictionary + word study
 - **v4.0** — The full ecosystem: 17 new features across geography, AI analysis, devotional content, and community — built with [Claude Code](https://claude.ai/code) as a pair programmer
 - **v4.1** — Verbum identity: 62K manually-labeled verses (PT+ES), emotional arc KPIs, 30 curated community notes (3 languages), nav consolidation (6 collapsible sidebar sections + /connections + /concepts wrappers), Home onboarding tour, /about page with AI-partnership note
+- **v4.2** — **Live in production** at [verbum-app-bible.web.app](https://verbum-app-bible.web.app) on Firebase Hosting + Cloud Run, with Gemini hardened (Pydantic Literal whitelists, per-IP rate limit, gemini-2.5-flash-lite + daily quota cap)
 
 ### What's next
 
-- Cloud deployment (GCP Cloud Run + BigQuery)
 - ES second-pass quality audit (LAM, PSA, JOB, ISA — programmatically labeled in first pass)
 - Tribes + family-tree page
 - Three.js 3D emotional terrain visualization
-- User accounts + community note submissions
+- BigQuery public dataset + HuggingFace bonus datasets
 - Mobile PWA optimization
+- Custom domain (verbum.app or similar)
 
 ---
 
