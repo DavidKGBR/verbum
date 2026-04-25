@@ -39,6 +39,9 @@ CLAUDE.md
 
 # ─── Environment ──────────────────────────────────────────────────────────────
 .env
+.env.local
+.env.production
+.env.development
 .venv/
 venv/
 env/
