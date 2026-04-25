@@ -27,10 +27,21 @@ Write-Host "==> Region:  $Region"
 gcloud config set project $ProjectId | Out-Null
 
 # Helper: run a gcloud "describe" and return $true if exists, $false if not.
+# Uses try/catch + temporary SilentlyContinue because PowerShell 5.1 turns any
+# native-command stderr into a terminating error when $ErrorActionPreference
+# is 'Stop' -- and a NOT_FOUND from gcloud writes to stderr by design.
 function Test-GcloudResource {
     param([scriptblock]$DescribeCmd)
-    & $DescribeCmd 2>$null | Out-Null
-    return $LASTEXITCODE -eq 0
+    $prev = $ErrorActionPreference
+    $ErrorActionPreference = 'SilentlyContinue'
+    try {
+        $null = & $DescribeCmd 2>&1
+        return $LASTEXITCODE -eq 0
+    } catch {
+        return $false
+    } finally {
+        $ErrorActionPreference = $prev
+    }
 }
 
 # --- 1. Enable APIs ----------------------------------------------------------
