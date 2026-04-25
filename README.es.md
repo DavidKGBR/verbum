@@ -51,7 +51,7 @@
 </p>
 
 <p align="center">
-  <video src="https://github.com/DavidKGBR/verbum/raw/main/apresentacao_readme/Verbum.mp4" controls width="780" muted></video>
+  <video src="apresentacao_readme/Verbum.mp4" controls width="780" muted type="video/mp4"></video>
 </p>
 
 <p align="center">
