@@ -1,8 +1,15 @@
 name: Deploy
 
+# Auto-trigger on push is disabled until secrets are configured (see
+# infra/README.md → "GitHub Actions deploy"). Once GCP_WIF_PROVIDER,
+# FIREBASE_SERVICE_ACCOUNT, VITE_SENTRY_DSN, VITE_GA4_MEASUREMENT_ID
+# are set, restore:
+#
+#   on:
+#     push:
+#       branches: [main]
+#     workflow_dispatch:
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
