@@ -99,7 +99,7 @@ $WifProvider = "projects/$ProjNum/locations/global/workloadIdentityPools/$PoolNa
 Write-Host ""
 Write-Host "==> Done." -ForegroundColor Green
 Write-Host ""
-Write-Host "Next: set the following GitHub secrets in $Repo:" -ForegroundColor Yellow
+Write-Host "Next: set the following GitHub secrets in ${Repo}:" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "  gh secret set GCP_WIF_PROVIDER --body '$WifProvider'"
 Write-Host "  gh secret set FIREBASE_SERVICE_ACCOUNT < firebase-sa.json"
