@@ -429,10 +429,10 @@ export default function ImmersiveReader() {
   return (
     <div
       ref={containerRef}
-      className={`relative book-ambient-glow ${
+      className={`relative book-ambient-glow max-w-full overflow-x-hidden ${
         isFullscreen
           ? "w-screen h-screen overflow-auto p-8"
-          : "min-h-[80vh] rounded-xl p-4 md:p-8"
+          : "md:min-h-[80vh] rounded-xl p-3 md:p-8"
       }`}
       style={{
         backgroundColor: "var(--bg-void)",
@@ -566,15 +566,15 @@ export default function ImmersiveReader() {
                mounted for the entire session and reset its internal
                currentPageIndex via pageFlip().turnToPage(0) inside the
                useEffect above whenever data.book_id or data.chapter change. */}
-          <div className="flex justify-center">
+          <div className="flex justify-center w-full overflow-hidden">
             <HTMLFlipBook
               ref={flipBookRef}
-              width={550}
-              height={720}
+              width={isMobile ? 320 : 550}
+              height={isMobile ? 480 : 720}
               size="stretch"
-              minWidth={280}
+              minWidth={260}
               maxWidth={600}
-              minHeight={400}
+              minHeight={380}
               maxHeight={850}
               showCover={false}
               mobileScrollSupport={false}

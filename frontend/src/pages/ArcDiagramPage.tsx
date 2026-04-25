@@ -141,7 +141,9 @@ export default function ArcDiagramPage() {
       ) : (
         <div className="flex flex-col lg:flex-row border rounded bg-white overflow-hidden"
              style={{ height: "calc(100vh - 200px)", minHeight: 500 }}>
-          <div className="flex-1 min-w-0 overflow-hidden">
+          {/* Mobile: ArcDiagram has minWidth=720, so wrap in a horizontal
+              scroller. lg:overflow-hidden keeps the diagram flush at desktop. */}
+          <div className="flex-1 min-w-0 overflow-x-auto overflow-y-hidden lg:overflow-hidden">
             <ArcDiagram
               books={books}
               arcs={arcs}
