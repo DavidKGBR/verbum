@@ -63,3 +63,7 @@ Thumbs.db
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/analytics/.gitkeep
+!firebase.json
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/tsconfig*.json
