@@ -19,24 +19,25 @@ export default function NotFoundPage() {
 
   return (
     <article className="max-w-2xl mx-auto px-4 py-12 text-center text-[var(--color-ink)]">
+      <p className="text-7xl font-bold text-[var(--color-gold)] mb-2 leading-none">404</p>
+      <h1 className="text-2xl font-bold mb-4">{t("notFound.title")}</h1>
+      <p className="opacity-70 mb-8 leading-relaxed">{t("notFound.body")}</p>
+
+      <blockquote className="italic opacity-60 mb-6">
+        {verseText}
+        <br />
+        <span className="text-xs not-italic">— {verseRef}</span>
+      </blockquote>
+
       <img
         src="/404.png"
         alt=""
         aria-hidden
         width={220}
         height={220}
-        className="mx-auto mb-4 select-none"
+        className="mx-auto mb-8 select-none"
         draggable={false}
       />
-      <p className="text-6xl font-bold text-[var(--color-gold)] mb-2 leading-none">404</p>
-      <h1 className="text-2xl font-bold mb-4">{t("notFound.title")}</h1>
-      <p className="opacity-70 mb-8 leading-relaxed">{t("notFound.body")}</p>
-
-      <blockquote className="italic opacity-60 mb-10">
-        {verseText}
-        <br />
-        <span className="text-xs not-italic">— {verseRef}</span>
-      </blockquote>
 
       <div className="flex flex-wrap gap-3 justify-center">
         <Link
