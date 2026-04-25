@@ -19,6 +19,11 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/DavidKGBR/verbum/actions/workflows/ci.yml"><img src="https://github.com/DavidKGBR/verbum/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/DavidKGBR/verbum/actions/workflows/deploy.yml"><img src="https://github.com/DavidKGBR/verbum/actions/workflows/deploy.yml/badge.svg" alt="Deploy"></a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white" alt="FastAPI">
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white" alt="React">
@@ -44,7 +49,7 @@
 
 <p align="center">
   <a href="https://verbum-app-bible.web.app">
-    <img src="apresentacao_readme/Slide-0001.jpg" alt="Verbum — The Purpose of the Biblical Text in the Era of Data" width="780">
+    <img src="docs/presentation/Slide-0001.jpg" alt="Verbum — The Purpose of the Biblical Text in the Era of Data" width="780">
   </a>
   <br>
   <em>↑ Click to open Verbum live</em>
@@ -65,24 +70,24 @@
 <br>
 <table>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0001.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0002.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0003.jpg"></td>
+    <td><img src="docs/presentation/Slide-0001.jpg"></td>
+    <td><img src="docs/presentation/Slide-0002.jpg"></td>
+    <td><img src="docs/presentation/Slide-0003.jpg"></td>
   </tr>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0004.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0005.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0006.jpg"></td>
+    <td><img src="docs/presentation/Slide-0004.jpg"></td>
+    <td><img src="docs/presentation/Slide-0005.jpg"></td>
+    <td><img src="docs/presentation/Slide-0006.jpg"></td>
   </tr>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0007.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0008.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0009.jpg"></td>
+    <td><img src="docs/presentation/Slide-0007.jpg"></td>
+    <td><img src="docs/presentation/Slide-0008.jpg"></td>
+    <td><img src="docs/presentation/Slide-0009.jpg"></td>
   </tr>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0010.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0011.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0012.jpg"></td>
+    <td><img src="docs/presentation/Slide-0010.jpg"></td>
+    <td><img src="docs/presentation/Slide-0011.jpg"></td>
+    <td><img src="docs/presentation/Slide-0012.jpg"></td>
   </tr>
 </table>
 <p><em>Slides are in Portuguese. The full app interface is available in EN, PT, and ES.</em></p>
@@ -93,43 +98,43 @@
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="apresentacao_readme/prints/home_inteira.jpeg" alt="Home"><br>
+      <img src="docs/presentation/prints/home_inteira.jpeg" alt="Home"><br>
       <sub><strong>Home</strong> — landing in PT</sub>
     </td>
     <td align="center" width="33%">
-      <img src="apresentacao_readme/prints/leitor_simples.png" alt="Reader (single)"><br>
+      <img src="docs/presentation/prints/leitor_simples.png" alt="Reader (single)"><br>
       <sub><strong>Reader</strong> — single view</sub>
     </td>
     <td align="center" width="33%">
-      <img src="apresentacao_readme/prints/leitor_interlinear.png" alt="Reader (interlinear)"><br>
+      <img src="docs/presentation/prints/leitor_interlinear.png" alt="Reader (interlinear)"><br>
       <sub><strong>Reader</strong> — Greek/Hebrew interlinear</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="apresentacao_readme/prints/leitor_imersivo.png" alt="Reader (immersive 3D)"><br>
+      <img src="docs/presentation/prints/leitor_imersivo.png" alt="Reader (immersive 3D)"><br>
       <sub><strong>Reader</strong> — immersive 3D book spread</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/arco.png" alt="Arc Diagram"><br>
+      <img src="docs/presentation/prints/arco.png" alt="Arc Diagram"><br>
       <sub><strong>Connections</strong> — 344K cross-refs as arcs</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/mapa.png" alt="Map"><br>
+      <img src="docs/presentation/prints/mapa.png" alt="Map"><br>
       <sub><strong>Map</strong> — 1,600+ biblical places</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="apresentacao_readme/prints/busca.png" alt="Search"><br>
+      <img src="docs/presentation/prints/busca.png" alt="Search"><br>
       <sub><strong>Search</strong> — full-text with sentiment</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/planos.png" alt="Reading Plans"><br>
+      <img src="docs/presentation/prints/planos.png" alt="Reading Plans"><br>
       <sub><strong>Plans</strong> — multi-day reading plans</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/home.jpeg" alt="Home (hero)"><br>
+      <img src="docs/presentation/prints/home.jpeg" alt="Home (hero)"><br>
       <sub><strong>Home</strong> — hero detail</sub>
     </td>
   </tr>

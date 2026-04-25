@@ -27,7 +27,7 @@ RUN pip install --no-cache-dir ".[all]" && \
 FROM deps AS production
 
 COPY src/ src/
-COPY dashboard/ dashboard/
+COPY legacy/dashboard/ dashboard/
 COPY scripts/ scripts/
 
 # Create data directories
@@ -50,7 +50,7 @@ CMD ["run"]
 FROM deps AS dashboard
 
 COPY src/ src/
-COPY dashboard/ dashboard/
+COPY legacy/dashboard/ dashboard/
 
 RUN mkdir -p data/raw data/processed data/analytics
 

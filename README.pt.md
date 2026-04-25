@@ -19,6 +19,11 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/DavidKGBR/verbum/actions/workflows/ci.yml"><img src="https://github.com/DavidKGBR/verbum/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/DavidKGBR/verbum/actions/workflows/deploy.yml"><img src="https://github.com/DavidKGBR/verbum/actions/workflows/deploy.yml/badge.svg" alt="Deploy"></a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white" alt="FastAPI">
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white" alt="React">
@@ -44,7 +49,7 @@
 
 <p align="center">
   <a href="https://verbum-app-bible.web.app">
-    <img src="apresentacao_readme/Slide-0001.jpg" alt="Verbum — O Propósito do Texto Bíblico na Era dos Dados" width="780">
+    <img src="docs/presentation/Slide-0001.jpg" alt="Verbum — O Propósito do Texto Bíblico na Era dos Dados" width="780">
   </a>
   <br>
   <em>↑ Clique para abrir o Verbum no ar</em>
@@ -65,24 +70,24 @@
 <br>
 <table>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0001.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0002.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0003.jpg"></td>
+    <td><img src="docs/presentation/Slide-0001.jpg"></td>
+    <td><img src="docs/presentation/Slide-0002.jpg"></td>
+    <td><img src="docs/presentation/Slide-0003.jpg"></td>
   </tr>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0004.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0005.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0006.jpg"></td>
+    <td><img src="docs/presentation/Slide-0004.jpg"></td>
+    <td><img src="docs/presentation/Slide-0005.jpg"></td>
+    <td><img src="docs/presentation/Slide-0006.jpg"></td>
   </tr>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0007.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0008.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0009.jpg"></td>
+    <td><img src="docs/presentation/Slide-0007.jpg"></td>
+    <td><img src="docs/presentation/Slide-0008.jpg"></td>
+    <td><img src="docs/presentation/Slide-0009.jpg"></td>
   </tr>
   <tr>
-    <td><img src="apresentacao_readme/Slide-0010.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0011.jpg"></td>
-    <td><img src="apresentacao_readme/Slide-0012.jpg"></td>
+    <td><img src="docs/presentation/Slide-0010.jpg"></td>
+    <td><img src="docs/presentation/Slide-0011.jpg"></td>
+    <td><img src="docs/presentation/Slide-0012.jpg"></td>
   </tr>
 </table>
 </details>
@@ -92,43 +97,43 @@
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="apresentacao_readme/prints/home_inteira.jpeg" alt="Home"><br>
+      <img src="docs/presentation/prints/home_inteira.jpeg" alt="Home"><br>
       <sub><strong>Início</strong> — landing em PT</sub>
     </td>
     <td align="center" width="33%">
-      <img src="apresentacao_readme/prints/leitor_simples.png" alt="Leitor (simples)"><br>
+      <img src="docs/presentation/prints/leitor_simples.png" alt="Leitor (simples)"><br>
       <sub><strong>Leitor</strong> — modo simples</sub>
     </td>
     <td align="center" width="33%">
-      <img src="apresentacao_readme/prints/leitor_interlinear.png" alt="Leitor (interlinear)"><br>
+      <img src="docs/presentation/prints/leitor_interlinear.png" alt="Leitor (interlinear)"><br>
       <sub><strong>Leitor</strong> — interlinear grego/hebraico</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="apresentacao_readme/prints/leitor_imersivo.png" alt="Leitor (imersivo 3D)"><br>
+      <img src="docs/presentation/prints/leitor_imersivo.png" alt="Leitor (imersivo 3D)"><br>
       <sub><strong>Leitor</strong> — modo imersivo 3D</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/arco.png" alt="Diagrama de Arcos"><br>
+      <img src="docs/presentation/prints/arco.png" alt="Diagrama de Arcos"><br>
       <sub><strong>Conexões</strong> — 344K cross-refs em arcos</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/mapa.png" alt="Mapa"><br>
+      <img src="docs/presentation/prints/mapa.png" alt="Mapa"><br>
       <sub><strong>Mapa</strong> — 1.600+ lugares bíblicos</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="apresentacao_readme/prints/busca.png" alt="Busca"><br>
+      <img src="docs/presentation/prints/busca.png" alt="Busca"><br>
       <sub><strong>Busca</strong> — full-text com sentimento</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/planos.png" alt="Planos de Leitura"><br>
+      <img src="docs/presentation/prints/planos.png" alt="Planos de Leitura"><br>
       <sub><strong>Planos</strong> — leitura multi-dia</sub>
     </td>
     <td align="center">
-      <img src="apresentacao_readme/prints/home.jpeg" alt="Home (hero)"><br>
+      <img src="docs/presentation/prints/home.jpeg" alt="Home (hero)"><br>
       <sub><strong>Início</strong> — detalhe do hero</sub>
     </td>
   </tr>

@@ -240,7 +240,11 @@ def get_routes(
 @router.get("/places/search")
 def search_places(
     q: str | None = Query(None, min_length=2, description="Search query"),
-    slugs: str | None = Query(None, max_length=4000, description="Slugs forwarded by the frontend after locale resolution"),
+    slugs: str | None = Query(
+        None,
+        max_length=4000,
+        description="Slugs forwarded by the frontend after locale resolution",
+    ),
     limit: int = Query(20, ge=1, le=100),
 ) -> dict:
     """Quick search for places by name or alias.

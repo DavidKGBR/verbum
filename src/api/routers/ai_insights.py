@@ -38,7 +38,12 @@ class ExplainRequest(BaseModel):
 
 class CompareRequest(BaseModel):
     verse_id: str = Field(..., description="Verse ID (e.g., 'GEN.1.1')", max_length=20)
-    translations: list[Translation] = Field(..., description="Translation IDs to compare", min_length=2, max_length=6)
+    translations: list[Translation] = Field(
+        ...,
+        description="Translation IDs to compare",
+        min_length=2,
+        max_length=6,
+    )
     language: Language = Field("en", description="Response language")
 
 

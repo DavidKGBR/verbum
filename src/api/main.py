@@ -20,25 +20,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-# ── Sentry (optional, gated by SENTRY_DSN) ────────────────────────────────────
-# Initialize BEFORE creating the FastAPI app so the integration captures startup
-# errors. No-op when the DSN is missing — keeps local dev free of telemetry.
-_SENTRY_DSN = os.getenv("SENTRY_DSN", "").strip()
-if _SENTRY_DSN:
-    import sentry_sdk
-    from sentry_sdk.integrations.fastapi import FastApiIntegration
-    from sentry_sdk.integrations.starlette import StarletteIntegration
-
-    sentry_sdk.init(
-        dsn=_SENTRY_DSN,
-        integrations=[StarletteIntegration(), FastApiIntegration()],
-        traces_sample_rate=0.05,    # 5% of requests get a perf trace; cheap on free tier
-        profiles_sample_rate=0.0,   # Profiling off — too costly on Cloud Run cold starts
-        send_default_pii=False,     # Don't capture IP / cookies / user identifiers
-        environment=os.getenv("SENTRY_ENV", "production"),
-        release=os.getenv("VERBUM_RELEASE", "verbum-api@2.0.0"),
-    )
-
 from src.api.routers import (
     ai_insights,
     analytics,
@@ -67,6 +48,25 @@ from src.api.routers import (
     timeline,
     topics,
 )
+
+# ── Sentry (optional, gated by SENTRY_DSN) ────────────────────────────────────
+# Initialize BEFORE creating the FastAPI app so the integration captures startup
+# errors. No-op when the DSN is missing — keeps local dev free of telemetry.
+_SENTRY_DSN = os.getenv("SENTRY_DSN", "").strip()
+if _SENTRY_DSN:
+    import sentry_sdk
+    from sentry_sdk.integrations.fastapi import FastApiIntegration
+    from sentry_sdk.integrations.starlette import StarletteIntegration
+
+    sentry_sdk.init(
+        dsn=_SENTRY_DSN,
+        integrations=[StarletteIntegration(), FastApiIntegration()],
+        traces_sample_rate=0.05,    # 5% of requests get a perf trace; cheap on free tier
+        profiles_sample_rate=0.0,   # Profiling off — too costly on Cloud Run cold starts
+        send_default_pii=False,     # Don't capture IP / cookies / user identifiers
+        environment=os.getenv("SENTRY_ENV", "production"),
+        release=os.getenv("VERBUM_RELEASE", "verbum-api@2.0.0"),
+    )
 
 app = FastAPI(
     title="Bible Data Pipeline API",

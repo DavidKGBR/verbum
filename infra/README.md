@@ -133,6 +133,48 @@ After the first deploy, in GCP Console:
 
 ---
 
+## GitHub Actions deploy (Sessão 9)
+
+Push to `main` runs `.github/workflows/ci.yml` (ruff + pytest + tsc + vite
+build). A green CI then triggers `.github/workflows/deploy.yml`, which:
+
+1. Auths to GCP via Workload Identity Federation (no JSON key in the repo)
+2. Builds the API image via Cloud Build
+3. Deploys to Cloud Run with the same flags as `infra/scripts/deploy.ps1`
+4. Smoke-tests `/health` and fails the workflow if it doesn't return `"ok"`
+5. Builds the frontend with secret env vars (`VITE_SENTRY_DSN`,
+   `VITE_GA4_MEASUREMENT_ID`) and deploys to Firebase Hosting
+
+### One-time bootstrap
+
+```bash
+# Linux/macOS/Git Bash:
+bash infra/scripts/setup-github-actions.sh
+# PowerShell:
+.\infra\scripts\setup-github-actions.ps1
+```
+
+The script creates the workload identity pool, OIDC provider restricted to
+`DavidKGBR/verbum`, the `verbum-github-deploy` SA with roles for
+`run.admin / cloudbuild.builds.editor / artifactregistry.writer /
+storage.objectViewer / logging.logWriter / iam.serviceAccountUser`, and the
+binding that lets the GitHub repo impersonate the SA. Output ends with the
+`GCP_WIF_PROVIDER` value to paste into a GitHub secret.
+
+### GitHub repo secrets needed
+
+```bash
+gh secret set GCP_WIF_PROVIDER         --body "<from setup script output>"
+gh secret set FIREBASE_SERVICE_ACCOUNT < firebase-sa.json
+gh secret set VITE_SENTRY_DSN          --body "https://...@sentry.io/..."
+gh secret set VITE_GA4_MEASUREMENT_ID  --body "G-KM0HVG2QJY"
+```
+
+`firebase-sa.json` is a service account in `verbum-app-bible` with
+`roles/firebase.hostingAdmin`, JSON key downloaded from the GCP console.
+
+---
+
 ## Cost guardrails
 
 Set up manually in the GCP Console after the first deploy:
