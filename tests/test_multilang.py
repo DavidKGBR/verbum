@@ -71,10 +71,16 @@ class TestTranslationRegistry:
         assert get_source_type("asv") == "bible-api.com"
 
     def test_source_groupings_cover_all(self):
-        from src.extract.translations import ZEFANIA_XML_TRANSLATIONS
+        from src.extract.translations import (
+            PRE_CACHED_TRANSLATIONS,
+            ZEFANIA_XML_TRANSLATIONS,
+        )
 
         all_ids = (
-            BIBLE_API_COM_TRANSLATIONS | ABIBLIA_DIGITAL_TRANSLATIONS | ZEFANIA_XML_TRANSLATIONS
+            BIBLE_API_COM_TRANSLATIONS
+            | ABIBLIA_DIGITAL_TRANSLATIONS
+            | ZEFANIA_XML_TRANSLATIONS
+            | PRE_CACHED_TRANSLATIONS
         )
         assert all_ids == set(TRANSLATION_REGISTRY.keys())
 

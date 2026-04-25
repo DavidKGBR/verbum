@@ -361,6 +361,6 @@ def get_book_profiles(
             [translation],
         ).fetchdf()
 
-        return {"profiles": df.to_dict(orient="records")}
+        return {"translation": translation, "profiles": df.to_dict(orient="records")}
     finally:
         conn.close()
