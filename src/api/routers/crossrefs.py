@@ -1,0 +1,234 @@
+"""
+🔗 Cross-References Router
+Endpoints for cross-reference data and arc diagram visualization.
+"""
+
+from __future__ import annotations
+
+from fastapi import APIRouter, HTTPException, Query
+
+from src.api.dependencies import get_db
+
+router = APIRouter()
+
+
+@router.get("/crossrefs/arcs")
+def get_arcs(
+    source_book: str | None = Query(None, description="Filter by source book ID"),
+    target_book: str | None = Query(None, description="Filter by target book ID"),
+    min_connections: int = Query(1, ge=1, description="Minimum connections per book pair"),
+    color_by: str = Query("distance", description="Color scheme: distance, testament, type"),
+) -> dict:
+    """Get aggregated cross-reference arcs for arc diagram visualization."""
+    conn = get_db()
+    try:
+        params: list = []
+        where_parts: list[str] = []
+
+        if source_book:
+            where_parts.append("source_book_id = ?")
+            params.append(source_book.upper())
+        if target_book:
+            where_parts.append("target_book_id = ?")
+            params.append(target_book.upper())
+
+        where_clause = f"WHERE {' AND '.join(where_parts)}" if where_parts else ""
+        having_clause = f"HAVING COUNT(*) >= {min_connections}" if min_connections > 1 else ""
+
+        df = conn.execute(
+            f"""
+            SELECT
+                source_book_id, target_book_id,
+                source_book_position, target_book_position,
+                COUNT(*) AS connection_count,
+                ROUND(AVG(arc_distance), 2) AS avg_distance,
+                SUM(votes) AS total_votes
+            FROM cross_references
+            {where_clause}
+            GROUP BY source_book_id, target_book_id,
+                     source_book_position, target_book_position
+            {having_clause}
+            ORDER BY connection_count DESC
+            """,
+            params,
+        ).fetchdf()
+
+        row = conn.execute("SELECT COUNT(*) FROM cross_references").fetchone()
+        total = row[0] if row else 0
+
+        return {
+            "arcs": df.to_dict(orient="records"),
+            "metadata": {
+                "total_crossrefs": total,
+                "filtered_arcs": len(df),
+                "color_scheme": color_by,
+            },
+        }
+    finally:
+        conn.close()
+
+
+@router.get("/crossrefs/between")
+def get_crossrefs_between(
+    source_book: str = Query(..., description="Source book ID (e.g., GEN)"),
+    target_book: str = Query(..., description="Target book ID (e.g., PSA)"),
+    translation: str = Query("kjv", description="Translation for verse text"),
+    limit: int = Query(50, ge=1, le=200),
+) -> dict:
+    """Get detailed cross-references between two specific books."""
+    conn = get_db()
+    try:
+        df = conn.execute(
+            """
+            SELECT
+                cr.source_verse_id, cr.target_verse_id, cr.votes,
+                cr.reference_type, cr.arc_distance,
+                sv.text AS source_text, sv.reference AS source_ref,
+                tv.text AS target_text, tv.reference AS target_ref
+            FROM cross_references cr
+            LEFT JOIN verses sv ON cr.source_verse_id = sv.verse_id
+                AND sv.translation_id = ?
+            LEFT JOIN verses tv ON cr.target_verse_id = tv.verse_id
+                AND tv.translation_id = ?
+            WHERE cr.source_book_id = ? AND cr.target_book_id = ?
+            ORDER BY cr.votes DESC
+            LIMIT ?
+            """,
+            [translation, translation, source_book.upper(), target_book.upper(), limit],
+        ).fetchdf()
+
+        return {
+            "source_book": source_book.upper(),
+            "target_book": target_book.upper(),
+            "total": len(df),
+            "crossrefs": df.to_dict(orient="records"),
+        }
+    finally:
+        conn.close()
+
+
+@router.get("/crossrefs/network")
+def get_network(
+    books: str | None = Query(None, description="Comma-separated book IDs to include"),
+    min_weight: int = Query(5, ge=1, description="Minimum connections to include edge"),
+) -> dict:
+    """Get book-level network graph data (nodes = books, edges = cross-ref counts)."""
+    conn = get_db()
+    try:
+        params: list = []
+        where_clause = ""
+
+        if books:
+            book_list = [b.strip().upper() for b in books.split(",")]
+            placeholders = ", ".join(["?" for _ in book_list])
+            where_clause = (
+                f"WHERE source_book_id IN ({placeholders}) AND target_book_id IN ({placeholders})"
+            )
+            params = book_list + book_list
+
+        df = conn.execute(
+            f"""
+            SELECT
+                source_book_id AS source,
+                target_book_id AS target,
+                COUNT(*) AS weight
+            FROM cross_references
+            {where_clause}
+            GROUP BY source_book_id, target_book_id
+            HAVING COUNT(*) >= ?
+            ORDER BY weight DESC
+            """,
+            params + [min_weight],
+        ).fetchdf()
+
+        all_books = set(df["source"].tolist() + df["target"].tolist())
+
+        return {
+            "nodes": sorted(all_books),
+            "edges": df.to_dict(orient="records"),
+            "total_edges": len(df),
+        }
+    finally:
+        conn.close()
+
+
+@router.get("/crossrefs/counts")
+def get_crossref_counts(
+    book: str = Query(..., description="Book ID (e.g., GEN)"),
+    chapter: int = Query(..., ge=1, description="Chapter number"),
+) -> dict:
+    """Return cross-reference counts per verse for a given chapter.
+
+    Used by the Reader to render a small badge next to verses that have refs.
+    Counts only outgoing references (source_verse_id).
+    """
+    conn = get_db()
+    try:
+        prefix = f"{book.upper()}.{chapter}."
+        df = conn.execute(
+            """
+            SELECT source_verse_id AS verse_id, COUNT(*) AS count
+            FROM cross_references
+            WHERE source_book_id = ? AND source_verse_id LIKE ?
+            GROUP BY source_verse_id
+            """,
+            [book.upper(), f"{prefix}%"],
+        ).fetchdf()
+
+        counts = {row["verse_id"]: int(row["count"]) for _, row in df.iterrows()}
+        return {
+            "book": book.upper(),
+            "chapter": chapter,
+            "counts": counts,
+        }
+    finally:
+        conn.close()
+
+
+@router.get("/crossrefs/{verse_id}")
+def get_verse_crossrefs(verse_id: str) -> dict:
+    """Get all cross-references for a specific verse."""
+    conn = get_db()
+    try:
+        vid = verse_id.upper()
+
+        outgoing = conn.execute(
+            """
+            SELECT cr.target_verse_id, cr.target_book_id,
+                   cr.target_book_position, cr.votes,
+                   cr.reference_type, cr.arc_distance,
+                   v.text AS target_text, v.book_name AS target_book_name
+            FROM cross_references cr
+            LEFT JOIN verses v ON cr.target_verse_id = v.verse_id
+                AND v.translation_id = 'kjv'
+            WHERE cr.source_verse_id = ?
+            ORDER BY cr.votes DESC
+            """,
+            [vid],
+        ).fetchdf()
+
+        incoming = conn.execute(
+            """
+            SELECT source_verse_id, source_book_id, source_book_position,
+                   votes, reference_type, arc_distance
+            FROM cross_references
+            WHERE target_verse_id = ?
+            ORDER BY votes DESC
+            """,
+            [vid],
+        ).fetchdf()
+
+        if outgoing.empty and incoming.empty:
+            raise HTTPException(
+                status_code=404,
+                detail=f"No cross-references found for {vid}",
+            )
+
+        return {
+            "verse_id": vid,
+            "outgoing": outgoing.to_dict(orient="records"),
+            "incoming": incoming.to_dict(orient="records"),
+            "total": len(outgoing) + len(incoming),
+        }
+    finally:
+        conn.close()

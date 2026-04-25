@@ -1,0 +1,83 @@
+{
+  "passage_id": "john_1",
+  "source": "Peshitta",
+  "license": "Public Domain",
+  "language": "Syriac Aramaic",
+  "notes": "Eastern Peshitta (standard Syriac NT). Transliterations follow Aramaic Designs convention.",
+  "verses": [
+    {
+      "verse_ref": "JHN.1.1",
+      "verse_number": 1,
+      "words": [
+        { "word_position": 1,  "script": "ܒܪܫܝܬ",    "transliteration": "b'reshit",   "gloss": "In the beginning", "gloss_pt": "No princípio",   "gloss_es": "En el principio", "audio_url": null },
+        { "word_position": 2,  "script": "ܐܝܬܘܗܝ",   "transliteration": "ithawhy",    "gloss": "was",              "gloss_pt": "era",            "gloss_es": "era",             "audio_url": null },
+        { "word_position": 3,  "script": "ܗܘܐ",       "transliteration": "hwa",        "gloss": "(existing)",       "gloss_pt": "estava",         "gloss_es": "estaba",          "audio_url": null },
+        { "word_position": 4,  "script": "ܡܠܬܐ",      "transliteration": "Miltha",     "gloss": "the Word",         "gloss_pt": "o Verbo",        "gloss_es": "el Verbo",        "audio_url": null },
+        { "word_position": 5,  "script": "ܘܗܘ",       "transliteration": "w'hu",       "gloss": "and he",           "gloss_pt": "e ele",          "gloss_es": "y él",            "audio_url": null },
+        { "word_position": 6,  "script": "ܡܠܬܐ",      "transliteration": "Miltha",     "gloss": "the Word",         "gloss_pt": "o Verbo",        "gloss_es": "el Verbo",        "audio_url": null },
+        { "word_position": 7,  "script": "ܐܝܬܘܗܝ",   "transliteration": "ithawhy",    "gloss": "was",              "gloss_pt": "era",            "gloss_es": "era",             "audio_url": null },
+        { "word_position": 8,  "script": "ܗܘܐ",       "transliteration": "hwa",        "gloss": "(existing)",       "gloss_pt": "estava",         "gloss_es": "estaba",          "audio_url": null },
+        { "word_position": 9,  "script": "ܠܘܬ",       "transliteration": "lwath",      "gloss": "with",             "gloss_pt": "junto a",        "gloss_es": "junto a",         "audio_url": null },
+        { "word_position": 10, "script": "ܐܠܗܐ",     "transliteration": "Alaha",      "gloss": "God",              "gloss_pt": "Deus",           "gloss_es": "Dios",            "audio_url": null },
+        { "word_position": 11, "script": "ܘܐܠܗܐ",    "transliteration": "w'Alaha",    "gloss": "and God",          "gloss_pt": "e Deus",         "gloss_es": "y Dios",          "audio_url": null },
+        { "word_position": 12, "script": "ܐܝܬܘܗܝ",   "transliteration": "ithawhy",    "gloss": "was",              "gloss_pt": "era",            "gloss_es": "era",             "audio_url": null },
+        { "word_position": 13, "script": "ܗܘܐ",       "transliteration": "hwa",        "gloss": "(existing)",       "gloss_pt": "estava",         "gloss_es": "estaba",          "audio_url": null },
+        { "word_position": 14, "script": "ܗܘ",        "transliteration": "hu",         "gloss": "he",               "gloss_pt": "ele",            "gloss_es": "él",              "audio_url": null },
+        { "word_position": 15, "script": "ܡܠܬܐ",      "transliteration": "Miltha",     "gloss": "the Word",         "gloss_pt": "o Verbo",        "gloss_es": "el Verbo",        "audio_url": null }
+      ]
+    },
+    {
+      "verse_ref": "JHN.1.2",
+      "verse_number": 2,
+      "words": [
+        { "word_position": 1,  "script": "ܗܢܐ",       "transliteration": "hana",       "gloss": "This one",         "gloss_pt": "Este",           "gloss_es": "Este",            "audio_url": null },
+        { "word_position": 2,  "script": "ܐܝܬܘܗܝ",   "transliteration": "ithawhy",    "gloss": "was",              "gloss_pt": "era",            "gloss_es": "era",             "audio_url": null },
+        { "word_position": 3,  "script": "ܗܘܐ",       "transliteration": "hwa",        "gloss": "(existing)",       "gloss_pt": "estava",         "gloss_es": "estaba",          "audio_url": null },
+        { "word_position": 4,  "script": "ܒܪܫܝܬ",    "transliteration": "b'reshit",   "gloss": "in the beginning", "gloss_pt": "no princípio",   "gloss_es": "en el principio", "audio_url": null },
+        { "word_position": 5,  "script": "ܠܘܬ",       "transliteration": "lwath",      "gloss": "with",             "gloss_pt": "junto a",        "gloss_es": "junto a",         "audio_url": null },
+        { "word_position": 6,  "script": "ܐܠܗܐ",      "transliteration": "Alaha",      "gloss": "God",              "gloss_pt": "Deus",           "gloss_es": "Dios",            "audio_url": null }
+      ]
+    },
+    {
+      "verse_ref": "JHN.1.3",
+      "verse_number": 3,
+      "words": [
+        { "word_position": 1,  "script": "ܟܠ",        "transliteration": "kul",        "gloss": "All",              "gloss_pt": "Tudo",           "gloss_es": "Todo",            "audio_url": null },
+        { "word_position": 2,  "script": "ܒܐܝܕܗ",    "transliteration": "b'ideh",     "gloss": "through him",      "gloss_pt": "por meio dele",  "gloss_es": "por medio de él", "audio_url": null },
+        { "word_position": 3,  "script": "ܗܘܐ",       "transliteration": "hwa",        "gloss": "came to be",       "gloss_pt": "veio a ser",     "gloss_es": "llegó a ser",     "audio_url": null },
+        { "word_position": 4,  "script": "ܘܕܠܐ",      "transliteration": "w'dla",      "gloss": "and without",      "gloss_pt": "e sem",          "gloss_es": "y sin",           "audio_url": null },
+        { "word_position": 5,  "script": "ܗܘ",        "transliteration": "hu",         "gloss": "him",              "gloss_pt": "ele",            "gloss_es": "él",              "audio_url": null },
+        { "word_position": 6,  "script": "ܡܕܡ",       "transliteration": "medem",      "gloss": "anything",         "gloss_pt": "coisa alguma",   "gloss_es": "cosa alguna",     "audio_url": null },
+        { "word_position": 7,  "script": "ܠܐ",        "transliteration": "la",         "gloss": "not",              "gloss_pt": "não",            "gloss_es": "no",              "audio_url": null },
+        { "word_position": 8,  "script": "ܗܘܐ",       "transliteration": "hwa",        "gloss": "came to be",       "gloss_pt": "veio a ser",     "gloss_es": "llegó a ser",     "audio_url": null }
+      ]
+    },
+    {
+      "verse_ref": "JHN.1.4",
+      "verse_number": 4,
+      "words": [
+        { "word_position": 1,  "script": "ܒܗ",        "transliteration": "beh",        "gloss": "In him",           "gloss_pt": "Nele",           "gloss_es": "En él",           "audio_url": null },
+        { "word_position": 2,  "script": "ܚܝܐ",       "transliteration": "khaye",      "gloss": "life",             "gloss_pt": "vida",           "gloss_es": "vida",            "audio_url": null },
+        { "word_position": 3,  "script": "ܗܘܐ",       "transliteration": "hwa",        "gloss": "was",              "gloss_pt": "havia",          "gloss_es": "había",           "audio_url": null },
+        { "word_position": 4,  "script": "ܘܚܝܐ",      "transliteration": "w'khaye",    "gloss": "and the life",     "gloss_pt": "e a vida",       "gloss_es": "y la vida",       "audio_url": null },
+        { "word_position": 5,  "script": "ܐܝܬܝܗܘܢ",  "transliteration": "ithayhin",   "gloss": "were",             "gloss_pt": "era",            "gloss_es": "eran",            "audio_url": null },
+        { "word_position": 6,  "script": "ܗܘܘ",       "transliteration": "hwaw",       "gloss": "(becoming)",       "gloss_pt": "eram",           "gloss_es": "(siendo)",        "audio_url": null },
+        { "word_position": 7,  "script": "ܢܘܗܪܐ",     "transliteration": "nuhra",      "gloss": "the light",        "gloss_pt": "a luz",          "gloss_es": "la luz",          "audio_url": null },
+        { "word_position": 8,  "script": "ܕܒܢܝ",      "transliteration": "d'bnay",     "gloss": "of the sons",      "gloss_pt": "dos filhos",     "gloss_es": "de los hijos",    "audio_url": null },
+        { "word_position": 9,  "script": "ܐܢܫܐ",      "transliteration": "anasha",     "gloss": "of men",           "gloss_pt": "dos homens",     "gloss_es": "de los hombres",  "audio_url": null }
+      ]
+    },
+    {
+      "verse_ref": "JHN.1.5",
+      "verse_number": 5,
+      "words": [
+        { "word_position": 1,  "script": "ܘܢܘܗܪܐ",    "transliteration": "w'nuhra",    "gloss": "And the light",    "gloss_pt": "E a luz",        "gloss_es": "Y la luz",        "audio_url": null },
+        { "word_position": 2,  "script": "ܒܚܫܘܟܐ",    "transliteration": "b'kheshukha","gloss": "in the darkness",  "gloss_pt": "nas trevas",     "gloss_es": "en las tinieblas","audio_url": null },
+        { "word_position": 3,  "script": "ܡܢܗܪ",      "transliteration": "manhir",     "gloss": "shines",           "gloss_pt": "ilumina",        "gloss_es": "alumbra",         "audio_url": null },
+        { "word_position": 4,  "script": "ܘܚܫܘܟܐ",    "transliteration": "w'kheshukha","gloss": "and the darkness", "gloss_pt": "e as trevas",    "gloss_es": "y las tinieblas", "audio_url": null },
+        { "word_position": 5,  "script": "ܠܐ",        "transliteration": "la",         "gloss": "not",              "gloss_pt": "não",            "gloss_es": "no",              "audio_url": null },
+        { "word_position": 6,  "script": "ܐܕܪܟܗ",     "transliteration": "adrkeh",     "gloss": "comprehended it",  "gloss_pt": "a compreenderam","gloss_es": "la comprendieron","audio_url": null }
+      ]
+    }
+  ]
+}

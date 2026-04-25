@@ -1,0 +1,117 @@
+{
+  "presets": [
+    {
+      "id": "love-hebrew-greek",
+      "label": "Love in Hebrew & Greek",
+      "label_pt": "Amor em Hebraico e Grego",
+      "label_es": "Amor en Hebreo y Griego",
+      "description": "Explore how love is expressed across both Testaments — from chesed and ahab to agapē and phileō.",
+      "description_pt": "Explore como o amor é expresso em ambos os Testamentos — de chesed e ahab a agapē e phileō.",
+      "description_es": "Explora cómo el amor se expresa en ambos Testamentos — desde chesed y ahab hasta agapē y phileō.",
+      "icon": "heart",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H2617" },
+        { "type": "strongs", "id": "G25" }
+      ]
+    },
+    {
+      "id": "covenant-theology",
+      "label": "Covenant Theology",
+      "label_pt": "Teologia da Aliança",
+      "label_es": "Teología del Pacto",
+      "description": "Trace the thread of covenant (berith) through Scripture — from Noah to the New Covenant.",
+      "description_pt": "Trace o fio da aliança (berith) através da Escritura — de Noé até a Nova Aliança.",
+      "description_es": "Recorre el hilo del pacto (berith) a través de la Escritura — desde Noé hasta el Nuevo Pacto.",
+      "icon": "scroll",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H1285" },
+        { "type": "topic", "id": "covenant" }
+      ]
+    },
+    {
+      "id": "names-of-god",
+      "label": "Names of God",
+      "label_pt": "Nomes de Deus",
+      "label_es": "Nombres de Dios",
+      "description": "Discover the many names and titles used for God — Elohim, YHWH, Adonai, Theos, and more.",
+      "description_pt": "Descubra os muitos nomes e títulos usados para Deus — Elohim, YHWH, Adonai, Theos e outros.",
+      "description_es": "Descubre los muchos nombres y títulos usados para Dios — Elohim, YHWH, Adonai, Theos y más.",
+      "icon": "sparkles",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H430" },
+        { "type": "strongs", "id": "H3068" },
+        { "type": "strongs", "id": "G2316" }
+      ]
+    },
+    {
+      "id": "faith-trust",
+      "label": "Faith & Trust",
+      "label_pt": "Fé e Confiança",
+      "label_es": "Fe y Confianza",
+      "description": "How do the original languages express faith, belief, and trust — from batach and emunah to pistis?",
+      "description_pt": "Como as línguas originais expressam fé, crença e confiança — de batach e emunah a pistis?",
+      "description_es": "¿Cómo expresan las lenguas originales la fe, la creencia y la confianza — desde batach y emunah hasta pistis?",
+      "icon": "praying-hands",
+      "entry_nodes": [
+        { "type": "strongs", "id": "G4102" },
+        { "type": "strongs", "id": "H539" }
+      ]
+    },
+    {
+      "id": "suffering-hope",
+      "label": "Suffering & Hope",
+      "label_pt": "Sofrimento e Esperança",
+      "label_es": "Sufrimiento y Esperanza",
+      "description": "Explore the tension between affliction and expectation across Scripture.",
+      "description_pt": "Explore a tensão entre aflição e expectativa ao longo da Escritura.",
+      "description_es": "Explora la tensión entre aflicción y expectativa a lo largo de la Escritura.",
+      "icon": "sunrise",
+      "entry_nodes": [
+        { "type": "topic", "id": "suffering" },
+        { "type": "topic", "id": "hope" }
+      ]
+    },
+    {
+      "id": "word-logos",
+      "label": "The Word (Logos)",
+      "label_pt": "A Palavra (Logos)",
+      "label_es": "La Palabra (Logos)",
+      "description": "The rich concept of logos — word, reason, account — and its Hebrew counterpart dabar.",
+      "description_pt": "O rico conceito de logos — palavra, razão, relato — e seu equivalente hebraico dabar.",
+      "description_es": "El rico concepto de logos — palabra, razón, relato — y su equivalente hebreo dabar.",
+      "icon": "book-open",
+      "entry_nodes": [
+        { "type": "strongs", "id": "G3056" },
+        { "type": "strongs", "id": "H1697" }
+      ]
+    },
+    {
+      "id": "spirit-ruach-pneuma",
+      "label": "Spirit — Ruach & Pneuma",
+      "label_pt": "Espírito — Ruach e Pneuma",
+      "label_es": "Espíritu — Ruach y Pneuma",
+      "description": "Wind, breath, spirit — trace this concept from Genesis to Revelation.",
+      "description_pt": "Vento, sopro, espírito — trace esse conceito de Gênesis ao Apocalipse.",
+      "description_es": "Viento, aliento, espíritu — recorre este concepto desde Génesis hasta el Apocalipsis.",
+      "icon": "dove",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H7307" },
+        { "type": "strongs", "id": "G4151" }
+      ]
+    },
+    {
+      "id": "righteousness-justice",
+      "label": "Righteousness & Justice",
+      "label_pt": "Retidão e Justiça",
+      "label_es": "Rectitud y Justicia",
+      "description": "Tsedaqah and dikaiosynē — the intertwined concepts of righteousness and justice.",
+      "description_pt": "Tsedaqah e dikaiosynē — os conceitos entrelaçados de retidão e justiça.",
+      "description_es": "Tsedaqah y dikaiosynē — los conceptos entrelazados de rectitud y justicia.",
+      "icon": "scales",
+      "entry_nodes": [
+        { "type": "strongs", "id": "H6666" },
+        { "type": "strongs", "id": "G1343" }
+      ]
+    }
+  ]
+}

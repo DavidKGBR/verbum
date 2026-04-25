@@ -1,0 +1,300 @@
+{"verse_id": "MAT.10.29", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.10.30", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.10.31", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.10.32", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.10.33", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.10.34", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.10.35", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.10.36", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.10.37", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.10.38", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.10.39", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.10.40", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.10.41", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.10.42", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.11.1", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.2", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.11.3", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.5", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.11.6", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.11.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.9", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.11.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.11", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.11.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.11.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.14", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.15", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.16", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.17", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.11.18", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.11.19", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.11.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.11.21", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.11.22", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.11.23", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.24", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.11.25", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.11.26", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.11.27", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.28", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.11.29", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.11.30", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.1", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.2", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.12.3", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.5", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.6", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.7", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.12.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.12.11", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.13", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.12.14", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.12.15", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.16", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.17", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.18", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.19", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.20", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.12.21", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.22", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.12.23", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.24", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.12.25", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.26", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.12.27", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.12.28", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.12.29", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.12.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.31", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.12.32", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.12.33", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.34", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.35", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.12.36", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.12.37", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.12.38", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.12.39", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.40", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.41", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.12.42", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.12.43", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.12.44", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.45", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.46", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.47", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.48", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.49", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.12.50", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.1", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.2", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.3", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.5", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.8", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.11", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.12", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.14", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.13.15", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.16", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.13.17", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.19", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.13.20", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.13.21", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.13.22", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.13.23", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.13.24", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.25", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.26", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.27", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.28", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.29", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.30", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.31", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.32", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.13.33", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.34", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.35", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.36", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.37", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.38", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.39", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.13.40", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.41", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.13.42", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.43", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.13.44", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.13.45", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.46", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.47", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.48", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.49", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.50", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.51", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.52", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.13.53", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.54", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.13.55", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.56", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.13.57", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.13.58", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.1", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.2", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": "eschatological consolation"}
+{"verse_id": "MAT.14.3", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.14.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.5", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.14.6", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.9", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.11", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.14", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.14.15", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.16", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.17", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.19", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.14.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.21", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.22", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.23", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.24", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.14.25", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.26", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.27", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.14.28", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.29", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.30", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.31", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.32", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.33", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.14.34", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.14.35", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.14.36", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.15.1", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.15.2", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.3", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.4", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.15.5", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.6", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.7", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.15.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.10", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.11", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.15.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.14", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.15.15", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.16", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.17", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.19", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.15.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.21", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.22", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.15.23", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.15.24", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.25", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.26", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.27", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.28", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.29", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.30", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.15.31", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.15.32", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.33", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.34", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.35", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.15.36", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.15.37", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.38", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.15.39", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.1", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.16.2", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.3", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.16.4", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.5", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.6", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.16.7", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.8", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.9", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.10", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.11", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.16.12", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.16.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.14", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.15", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.16", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.17", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.16.18", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.19", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.20", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.21", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.16.22", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.16.23", "polarity_es": -0.7, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.16.24", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.25", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.16.26", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.16.27", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.16.28", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.17.1", "polarity_es": 0.2, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.2", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.3", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.17.4", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.5", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.17.6", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.7", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.8", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.17.9", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.17.10", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.11", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.17.12", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.17.13", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.17.14", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.17.15", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "MAT.17.16", "polarity_es": 1.0, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.17.17", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.17.18", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.7, "notes": "EN↔ES divergen"}
+{"verse_id": "MAT.17.19", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.17.20", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.21", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.22", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.17.23", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.17.24", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.25", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.26", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.17.27", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.18.1", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.18.2", "polarity_es": -0.2, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.18.3", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.18.4", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.18.5", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.18.6", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.18.7", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.18.8", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "MAT.18.9", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.4, "notes": "afectos mixtos"}
+{"verse_id": "MAT.18.10", "polarity_es": -1.0, "label_es": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.18.11", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "MAT.18.12", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.18.13", "polarity_es": 0.4, "label_es": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.18.14", "polarity_es": -0.4, "label_es": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "MAT.18.15", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.18.16", "polarity_es": 0.7, "label_es": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "MAT.18.17", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "MAT.18.18", "polarity_es": 0.0, "label_es": "neutral", "confidence": 0.5, "notes": null}

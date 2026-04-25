@@ -1,0 +1,61 @@
+{"verse_id": "PSA.145.20", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed preservation + destruction"}
+{"verse_id": "PSA.145.21", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.146.1", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.146.2", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.146.3", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.146.4", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.146.5", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.146.6", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.146.7", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.146.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": "EN↔PT diverge: EN negative but PT is purely positive (healing/love)"}
+{"verse_id": "PSA.146.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": "mixed protection + frustration of wicked"}
+{"verse_id": "PSA.146.10", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.147.1", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.147.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.147.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": "EN negative but PT is healing of broken hearts (positive)"}
+{"verse_id": "PSA.147.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.147.5", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.147.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed support + judgment"}
+{"verse_id": "PSA.147.7", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.147.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.147.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.147.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "PSA.147.11", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.147.12", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.147.13", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.147.14", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.147.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.147.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.147.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.75, "notes": null}
+{"verse_id": "PSA.147.18", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.147.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.147.20", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.148.1", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.148.2", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.148.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.148.4", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.148.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.148.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.148.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.148.8", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.148.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.148.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": "EN↔PT diverge: EN very negative but PT is call to praise (all creatures)"}
+{"verse_id": "PSA.148.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.148.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.148.13", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.148.14", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.149.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.149.2", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.149.3", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.85, "notes": null}
+{"verse_id": "PSA.149.4", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.149.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.149.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "mixed praise + sword of vengeance"}
+{"verse_id": "PSA.149.7", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.149.8", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.149.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": "mixed judgment + glory"}
+{"verse_id": "PSA.150.1", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.150.2", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}
+{"verse_id": "PSA.150.3", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.150.4", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.150.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.150.6", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.95, "notes": null}

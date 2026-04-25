@@ -1,0 +1,300 @@
+{"verse_id": "JHN.7.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.18", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.7.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.7.20", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.7.21", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.7.22", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.23", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.7.24", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.25", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.7.26", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.28", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.7.29", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.30", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.31", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.7.32", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.7.33", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.34", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.35", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.36", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.37", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.38", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.39", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.7.40", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.41", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.42", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.43", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.44", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.45", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.7.46", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.7.47", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.7.48", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.7.49", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.50", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.7.51", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.52", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.7.53", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.1", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.3", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.6", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.7", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.8.8", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.9", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.8.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.11", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.8.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.8.13", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.8.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.8.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.18", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.19", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.22", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.24", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.26", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.28", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.29", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.30", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.31", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.8.32", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.8.33", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.34", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.35", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.36", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.37", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.38", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.39", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.40", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.8.41", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.42", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.43", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.8.44", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.8.45", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.46", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.47", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.48", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.8.49", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.8.50", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.8.51", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "JHN.8.52", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.8.53", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.8.54", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.8.55", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.8.56", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.8.57", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.58", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.8.59", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.1", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.8", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.13", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.9.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.15", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.9.16", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.9.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.18", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.9.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.20", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.9.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.22", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.24", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "JHN.9.25", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.9.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.28", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.29", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.30", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.31", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.9.32", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.9.33", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.34", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.35", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.36", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.37", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.38", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.9.39", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.9.40", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.9.41", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.10.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.8", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.10.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.10", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.10.11", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.10.12", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.10.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.14", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.18", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.10.19", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.20", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.10.21", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.10.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.24", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.10.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.28", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "JHN.10.29", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.10.30", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.31", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.32", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.33", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.34", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.35", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.10.36", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.37", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.38", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.10.39", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.40", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.10.41", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.10.42", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.11.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "JHN.11.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.8", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.13", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.11.14", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.11.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.11.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.18", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.23", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.11.24", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.11.25", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.11.26", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.11.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.28", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.29", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.30", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.31", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.11.32", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.33", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.34", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.35", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.11.36", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.37", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.11.38", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.39", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.11.40", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.41", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.11.42", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.43", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.11.44", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.45", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.46", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.11.47", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.11.48", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.11.49", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.11.50", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.11.51", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.52", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.11.53", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.11.54", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.55", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.56", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.11.57", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.12.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.12.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.3", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.12.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.6", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.12.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.8", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.9", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.12.10", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.12.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.13", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "JHN.12.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.15", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.16", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.12.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.12.18", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.12.19", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.12.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.23", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.12.24", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.12.25", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.12.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.27", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.12.28", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.12.29", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.30", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.31", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.32", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.33", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "JHN.12.34", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.35", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.12.36", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.37", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.12.38", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.12.39", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.12.40", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "JHN.12.41", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.42", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.12.43", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.44", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.45", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.46", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "JHN.12.47", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.48", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.12.49", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.12.50", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.13.1", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "JHN.13.2", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.13.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.13.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.13.5", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "JHN.13.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.13.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.13.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.13.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.13.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.13.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.13.12", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "JHN.13.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "JHN.13.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}

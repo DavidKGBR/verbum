@@ -1,0 +1,188 @@
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import {
+  fetchParallelPage,
+  type ParallelPage,
+} from "../services/api";
+import LoadingSpinner from "./common/LoadingSpinner";
+import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext";
+import { useBooks, localizeBookName } from "../i18n/bookNames";
+import { useTranslationIds } from "../hooks/useTranslations";
+import { recordPlanAutoMark } from "../hooks/useReadingPlans";
+
+// Complement for the right-side parallel column — pairs each locale's
+// native default with a contrasting English edition so the user sees
+// both at a glance.
+const LOCALE_PARALLEL_SECOND: Record<Locale, string> = {
+  en: "nvi",
+  pt: "kjv",
+  es: "kjv",
+};
+
+export default function ParallelView() {
+  const { t, locale } = useI18n();
+  const books = useBooks("kjv");
+  const translationIds = useTranslationIds();
+  const [searchParams] = useSearchParams();
+  const [page, setPage] = useState<ParallelPage | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [bookId, setBookId] = useState(searchParams.get("book") || "GEN");
+  const [chapter, setChapter] = useState(
+    Number(searchParams.get("chapter")) || 1,
+  );
+  const [left, setLeft] = useState(() => defaultTranslationFor(locale));
+  const [right, setRight] = useState(() => LOCALE_PARALLEL_SECOND[locale]);
+
+  // Sync parallel sides with UI locale changes.
+  useEffect(() => {
+    setLeft(defaultTranslationFor(locale));
+    setRight(LOCALE_PARALLEL_SECOND[locale]);
+  }, [locale]);
+
+  // Sync book/chapter with URL so ActivePlanIndicator pills (and any other
+  // deep-link into ?book=&chapter=) actually navigate the parallel view.
+  useEffect(() => {
+    const b = searchParams.get("book");
+    const c = searchParams.get("chapter");
+    if (b && b !== bookId) setBookId(b);
+    if (c) {
+      const n = Number(c);
+      if (n && n !== chapter) setChapter(n);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
+
+  useEffect(() => {
+    setLoading(true);
+    fetchParallelPage(bookId, chapter, left, right)
+      .then((p) => {
+        setPage(p);
+        // Parallel reading counts toward an active plan — the chapter
+        // is still being read, just in two translations side by side.
+        recordPlanAutoMark(`${p.book_id}.${p.chapter}`, books);
+      })
+      .catch(() => setPage(null))
+      .finally(() => setLoading(false));
+  }, [bookId, chapter, left, right, books]);
+
+  const totalChapters = page?.total_chapters || 1;
+
+  return (
+    <div>
+      {/* Controls */}
+      <div className="flex flex-wrap gap-3 mb-6 items-center">
+        <select
+          value={bookId}
+          onChange={(e) => {
+            setBookId(e.target.value);
+            setChapter(1);
+            e.target.blur();
+          }}
+          className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
+        >
+          {books.map((b) => (
+            <option key={b.book_id} value={b.book_id}>{b.book_name}</option>
+          ))}
+        </select>
+
+        <select
+          value={chapter}
+          onChange={(e) => {
+            setChapter(Number(e.target.value));
+            e.target.blur();
+          }}
+          className="border rounded px-3 py-2 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
+        >
+          {Array.from({ length: totalChapters }, (_, i) => i + 1).map((ch) => (
+            <option key={ch} value={ch}>{t("reader.chapterN").replace("{n}", String(ch))}</option>
+          ))}
+        </select>
+
+        <div className="flex items-center gap-2 text-sm">
+          <select
+            value={left}
+            onChange={(e) => {
+              setLeft(e.target.value);
+              e.target.blur();
+            }}
+            className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
+          >
+            {translationIds.map((t) => (
+              <option key={t} value={t}>{t.toUpperCase()}</option>
+            ))}
+          </select>
+          <span className="text-[var(--color-gold)] font-bold">{t("reader.vs")}</span>
+          <select
+            value={right}
+            onChange={(e) => {
+              setRight(e.target.value);
+              e.target.blur();
+            }}
+            className="border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 focus:border-[var(--color-gold)]/60"
+          >
+            {translationIds.map((t) => (
+              <option key={t} value={t}>{t.toUpperCase()}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {loading ? (
+        <LoadingSpinner text={t("reader.loadingParallel")} />
+      ) : page ? (
+        <div>
+          <h2 className="text-xl font-bold mb-4 text-[var(--color-ink)]">
+            {localizeBookName(page.book_id, locale, page.book_name)} {page.chapter}
+            <span className="text-sm font-normal opacity-50 ml-2">
+              {page.left_translation.toUpperCase()} {t("reader.vs")} {page.right_translation.toUpperCase()}
+            </span>
+          </h2>
+
+          {/* Column headers (md+) */}
+          <div className="hidden md:grid grid-cols-[2rem_1fr_1fr] gap-3 pb-2 mb-2 border-b text-xs opacity-50 uppercase tracking-wider">
+            <span />
+            <span>{page.left_translation.toUpperCase()}</span>
+            <span>{page.right_translation.toUpperCase()}</span>
+          </div>
+          <div className="space-y-2">
+            {page.verses.map((v) => (
+              <div
+                key={v.verse}
+                className="border-b pb-2 grid gap-3
+                           grid-cols-[2rem_1fr]
+                           md:grid-cols-[2rem_1fr_1fr]"
+              >
+                <span className="text-xs font-bold text-[var(--color-gold)] pt-1 text-right">
+                  {v.verse}
+                </span>
+                <div>
+                  {/* Mobile label, hidden on md+ */}
+                  <span className="md:hidden text-[10px] uppercase tracking-wider opacity-40 font-bold">
+                    {page.left_translation.toUpperCase()}
+                  </span>
+                  <p className="text-sm leading-relaxed">
+                    {(v.left_text_clean ?? v.left_text) || (
+                      <span className="opacity-30 italic">{t("reader.missing")}</span>
+                    )}
+                  </p>
+                </div>
+                <div className="md:col-start-3 col-start-2 pt-2 md:pt-0 border-t md:border-t-0 border-dashed">
+                  <span className="md:hidden text-[10px] uppercase tracking-wider opacity-40 font-bold">
+                    {page.right_translation.toUpperCase()}
+                  </span>
+                  <p className="text-sm leading-relaxed">
+                    {(v.right_text_clean ?? v.right_text) || (
+                      <span className="opacity-30 italic">{t("reader.missing")}</span>
+                    )}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <p className="text-red-600">{t("reader.loadError")}</p>
+      )}
+    </div>
+  );
+}

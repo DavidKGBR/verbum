@@ -1,0 +1,62 @@
+verse_id	chapter	verse	text_en	polarity_en	label_en	text_pt
+PSA.145.20	145	20	The LORD preserveth all them that love him: but all the wicked will he destroy.	0.15	positive	O Senhor cuida de todos os que o amam, mas a todos os ímpios destruirá.
+PSA.145.21	145	21	My mouth shall speak the praise of the LORD: and let all flesh bless his holy name for ever and ever.	0.0	neutral	Com meus lábios louvarei ao Senhor. Que todo ser vivo bendiga o seu santo nome para todo o sempre!
+PSA.146.1	146	1	Praise ye the LORD. Praise the LORD, O my soul. {Praise ye...: Heb. Hallelujah}	0.0	neutral	Aleluia! Louve, ó minha alma ao Senhor.
+PSA.146.2	146	2	While I live will I praise the LORD: I will sing praises unto my God while I have any being.	0.1364	positive	Louvarei ao Senhor por toda a minha vida; cantarei louvores ao meu Deus enquanto eu viver.
+PSA.146.3	146	3	Put not your trust in princes, {nor} in the son of man, in whom {there is} no help. {help: or, salvation}	0.0	neutral	Não confiem em príncipes, em meros mortais, incapazes de salvar.
+PSA.146.4	146	4	His breath goeth forth, he returneth to his earth; in that very day his thoughts perish.	0.2	positive	Quando o espírito deles se vai, voltam ao pó; naquele mesmo dia acabam-se os seus planos.
+PSA.146.5	146	5	Happy {is he} that {hath} the God of Jacob for his help, whose hope {is} in the LORD his God:	0.8	positive	Como é feliz aquele cujo auxílio é o Deus de Jacó, cuja esperança está no Senhor, no seu Deus,
+PSA.146.6	146	6	Which made heaven, and earth, the sea, and all that therein {is}: which keepeth truth for ever:	0.0	neutral	que fez os céus e a terra, o mar e tudo o que neles há, e que mantém a sua fidelidade para sempre!
+PSA.146.7	146	7	Which executeth judgment for the oppressed: which giveth food to the hungry. The LORD looseth the prisoners:	0.0	neutral	Ele defende a causa dos oprimidos e dá alimento aos famintos. O Senhor liberta os presos,
+PSA.146.8	146	8	The LORD openeth {the eyes of} the blind: the LORD raiseth them that are bowed down: the LORD loveth the righteous:	-0.3278	negative	o Senhor dá vista aos cegos, o Senhor levanta os abatidos, o Senhor ama os justos.
+PSA.146.9	146	9	The LORD preserveth the strangers; he relieveth the fatherless and widow: but the way of the wicked he turneth upside down.	-0.1556	negative	O Senhor protege o estrangeiro e sustém o órfão e a viúva, mas frustra o propósito dos ímpios.
+PSA.146.10	146	10	The LORD shall reign for ever, {even} thy God, O Zion, unto all generations. Praise ye the LORD.	0.0	neutral	O Senhor reina para sempre! O teu Deus, ó Sião, reina de geração em geração. Aleluia!
+PSA.147.1	147	1	Praise ye the LORD: for {it is} good to sing praises unto our God; for {it is} pleasant; {and} praise is comely.	0.7167	positive	Aleluia! Como é bom cantar louvores ao nosso Deus! Como é agradável e próprio louvá-lo!
+PSA.147.2	147	2	The LORD doth build up Jerusalem: he gathereth together the outcasts of Israel.	0.0	neutral	O Senhor edifica Jerusalém; ele reúne os exilados de Israel.
+PSA.147.3	147	3	He healeth the broken in heart, and bindeth up their wounds. {wounds: Heb. griefs}	-0.4	negative	Só ele cura os de coração quebrantado e cuida das suas feridas.
+PSA.147.4	147	4	He telleth the number of the stars; he calleth them all by {their} names.	0.0	neutral	Ele determina o número de estrelas e chama cada uma pelo nome.
+PSA.147.5	147	5	Great {is} our Lord, and of great power: his understanding {is} infinite. {his...: Heb. of his understanding there is no number}	0.8	positive	Grande é o nosso Soberano e tremendo é o seu poder; é impossível medir o seu entendimento.
+PSA.147.6	147	6	The LORD lifteth up the meek: he casteth the wicked down to the ground.	-0.1556	negative	O Senhor sustém o oprimido, mas lança por terra o ímpio.
+PSA.147.7	147	7	Sing unto the LORD with thanksgiving; sing praise upon the harp unto our God:	0.0	neutral	Cantem ao Senhor com ações de graças; ao som da harpa façam música para o nosso Deus.
+PSA.147.8	147	8	Who covereth the heaven with clouds, who prepareth rain for the earth, who maketh grass to grow upon the mountains.	0.0	neutral	Ele cobre o céu de nuvens, concede chuvas à terra e faz crescer a relva nas colinas.
+PSA.147.9	147	9	He giveth to the beast his food, {and} to the young ravens which cry.	0.1	neutral	Ele dá alimento aos animais, e aos filhotes dos corvos quando gritam de fome.
+PSA.147.10	147	10	He delighteth not in the strength of the horse: he taketh not pleasure in the legs of a man.	0.0	neutral	Não é a força do cavalo que lhe dá satisfação, nem é a agilidade do homem que lhe agrada;
+PSA.147.11	147	11	The LORD taketh pleasure in them that fear him, in those that hope in his mercy.	0.0	neutral	o Senhor se agrada dos que o temem, dos que colocam a esperança no seu amor leal.
+PSA.147.12	147	12	Praise the LORD, O Jerusalem; praise thy God, O Zion.	0.0	neutral	Exalte ao Senhor, ó Jerusalém! Louve o seu Deus, ó Sião,
+PSA.147.13	147	13	For he hath strengthened the bars of thy gates; he hath blessed thy children within thee.	0.0	neutral	pois ele reforçou as trancas de suas portas e abençoou o seu povo, que lá habita.
+PSA.147.14	147	14	He maketh peace {in} thy borders, {and} filleth thee with the finest of the wheat. {He...: Heb. Who maketh thy border peace} {finest...: Heb. fat of wheat}	0.0	neutral	É ele que mantém as suas fronteiras em segurança e que a supre do melhor do trigo.
+PSA.147.15	147	15	He sendeth forth his commandment {upon} earth: his word runneth very swiftly.	0.2	positive	Ele envia sua ordem à terra, e sua palavra corre veloz.
+PSA.147.16	147	16	He giveth snow like wool: he scattereth the hoarfrost like ashes.	0.0	neutral	Faz cair a neve como lã, e espalha a geada como cinza.
+PSA.147.17	147	17	He casteth forth his ice like morsels: who can stand before his cold?	-0.6	negative	Faz cair o gelo como se fosse pedra. Quem pode suportar o seu frio?
+PSA.147.18	147	18	He sendeth out his word, and melteth them: he causeth his wind to blow, {and} the waters flow.	0.0	neutral	Ele envia a sua palavra, e o gelo derrete; envia o seu sopro, e as águas tornam a correr.
+PSA.147.19	147	19	He sheweth his word unto Jacob, his statutes and his judgments unto Israel. {his word: Heb. his words}	0.0	neutral	Ele revela a sua palavra a Jacó, os seus decretos e ordenanças a Israel.
+PSA.147.20	147	20	He hath not dealt so with any nation: and {as for his} judgments, they have not known them. Praise ye the LORD.	0.0	neutral	Ele não fez isso a nenhuma outra nação; todas as outras desconhecem as suas ordenanças. Aleluia!
+PSA.148.1	148	1	Praise ye the LORD. Praise ye the LORD from the heavens: praise him in the heights. {Praise ye the LORD. Praise: Heb. Hallelujah, etc}	0.0	neutral	Aleluia! Louvem o Senhor desde os céus, louvem-no nas alturas!
+PSA.148.2	148	2	Praise ye him, all his angels: praise ye him, all his hosts.	0.0	neutral	Louvem-no todos os seus anjos, louvem-no todos os seus exércitos celestiais.
+PSA.148.3	148	3	Praise ye him, sun and moon: praise him, all ye stars of light.	0.4	positive	Louvem-no sol e lua, louvem-no todas as estrelas cintilantes.
+PSA.148.4	148	4	Praise him, ye heavens of heavens, and ye waters that {be} above the heavens.	0.0	neutral	Louvem-no os mais altos céus e as águas acima do firmamento.
+PSA.148.5	148	5	Let them praise the name of the LORD: for he commanded, and they were created.	0.0	neutral	Louvem todos eles o nome do Senhor, pois ordenou, e eles foram criados.
+PSA.148.6	148	6	He hath also stablished them for ever and ever: he hath made a decree which shall not pass.	0.0	neutral	Ele os estabeleceu em seus lugares para todo o sempre; deu-lhes um decreto que jamais mudará.
+PSA.148.7	148	7	Praise the LORD from the earth, ye dragons, and all deeps:	0.0	neutral	Louvem o Senhor, vocês que estão na terra, serpentes marinhas e todas as profundezas,
+PSA.148.8	148	8	Fire, and hail; snow, and vapour; stormy wind fulfilling his word:	0.0	neutral	relâmpagos e granizo, neve e neblina, vendavais que cumprem o que ele determina,
+PSA.148.9	148	9	Mountains, and all hills; fruitful trees, and all cedars:	0.0	neutral	todas as montanhas e colinas, árvores frutíferas e todos os cedros,
+PSA.148.10	148	10	Beasts, and all cattle; creeping things, and flying fowl: {flying...: Heb. birds of wing}	-0.75	negative	todos os animais selvagens e os rebanhos domésticos, todos os demais seres vivos e as aves,
+PSA.148.11	148	11	Kings of the earth, and all people; princes, and all judges of the earth:	0.0	neutral	reis da terra e todas as nações, todos os governantes e juízes da terra,
+PSA.148.12	148	12	Both young men, and maidens; old men, and children:	0.1	neutral	moços e moças, velhos e crianças.
+PSA.148.13	148	13	Let them praise the name of the LORD: for his name alone is excellent; his glory {is} above the earth and heaven. {excellent: Heb. exalted}	0.6667	positive	Louvem todos o nome do Senhor, pois somente o seu nome é exaltado; a sua majestade está acima da terra e dos céus.
+PSA.148.14	148	14	He also exalteth the horn of his people, the praise of all his saints; {even} of the children of Israel, a people near unto him. Praise ye the LORD.	0.1	neutral	Ele concedeu poder ao seu povo, e recebeu louvor de todos os seus fiéis, dos israelitas, povo a quem tanto ama. Aleluia!
+PSA.149.1	149	1	Praise ye the LORD. Sing unto the LORD a new song, {and} his praise in the congregation of saints. {Praise...: Heb. Hallelujah}	0.1364	positive	Aleluia! Cantem ao Senhor uma nova canção, louvem-no na assembléia dos fiéis.
+PSA.149.2	149	2	Let Israel rejoice in him that made him: let the children of Zion be joyful in their King. {in him...: Heb. in his Makers}	0.0	neutral	Alegre-se Israel no seu criador, exulte o povo de Sião no seu rei!
+PSA.149.3	149	3	Let them praise his name in the dance: let them sing praises unto him with the timbrel and harp. {in...: or, with the pipe}	0.0	neutral	Louvem eles o seu nome com danças; ofereçam-lhe música com tamborim e harpa.
+PSA.149.4	149	4	For the LORD taketh pleasure in his people: he will beautify the meek with salvation.	0.0	neutral	O Senhor agrada-se do seu povo; ele coroa de vitória os oprimidos.
+PSA.149.5	149	5	Let the saints be joyful in glory: let them sing aloud upon their beds.	0.0	neutral	Regozijem-se os seus fiéis nessa glória e em seus leitos cantem alegremente!
+PSA.149.6	149	6	{Let} the high {praises} of God {be} in their mouth, and a twoedged sword in their hand; {mouth: Heb. throat}	0.16	positive	Altos louvores estejam em seus lábios e uma espada de dois gumes em suas mãos,
+PSA.149.7	149	7	To execute vengeance upon the heathen, {and} punishments upon the people;	0.0	neutral	para imporem vingança às nações e trazerem castigo aos povos,
+PSA.149.8	149	8	To bind their kings with chains, and their nobles with fetters of iron;	0.0	neutral	para prenderem os seus reis com grilhões e seus nobres com algemas de ferro,
+PSA.149.9	149	9	To execute upon them the judgment written: this honour have all his saints. Praise ye the LORD.	0.0	neutral	para executarem a sentença escrita contra eles. Esta é a glória de todos os seus fiéis. Aleluia!
+PSA.150.1	150	1	Praise ye the LORD. Praise God in his sanctuary: praise him in the firmament of his power. {Praise ye...: Heb. Hallelujah}	0.0	neutral	Aleluia! Louvem a Deus no seu santuário, louvem-no no seu poderoso firmamento.
+PSA.150.2	150	2	Praise him for his mighty acts: praise him according to his excellent greatness.	0.7	positive	Louvem-no pelos seus feitos poderosos, louvem-no segundo a imensidão de sua grandeza!
+PSA.150.3	150	3	Praise him with the sound of the trumpet: praise him with the psaltery and harp. {trumpet: or, cornet}	0.4	positive	Louvem-no ao som de trombeta, louvem-no com a lira e a harpa,
+PSA.150.4	150	4	Praise him with the timbrel and dance: praise him with stringed instruments and organs. {dance: or, pipe}	0.0	neutral	louvem-no com tamborins e danças, louvem-no com instrumentos de cordas e com flautas,
+PSA.150.5	150	5	Praise him upon the loud cymbals: praise him upon the high sounding cymbals.	0.13	positive	louvem-no com címbalos sonoros, louvem-no com címbalos ressonantes.
+PSA.150.6	150	6	Let every thing that hath breath praise the LORD. Praise ye the LORD.	0.0	neutral	Tudo o que tem vida louve o Senhor! Aleluia!

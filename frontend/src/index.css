@@ -1,0 +1,218 @@
+/* Fonts are loaded via <link rel="preload"/> and <link rel="stylesheet"/> in
+   frontend/index.html — avoids the render-blocking @import waterfall that
+   caused FOUC/FOUT on pages with autoFocus (e.g. PeoplePage). Keeping any
+   @import here would re-introduce the waterfall: HTML → main.css → @import
+   fetch → font. */
+@import "tailwindcss";
+
+:root {
+  /* ── Base palette (parchment theme) ─────────────────────────── */
+  --color-parchment: #f5f0e8;
+  --color-ink: #2c1810;
+  --color-gold: #c4a265;
+  --color-gold-dark: #8b7355;
+
+  /* ── Testament colors ───────────────────────────────────────── */
+  --color-old-testament: #4a7c59;
+  --color-new-testament: #6b4c9a;
+
+  /* ── Category colors ────────────────────────────────────────── */
+  --color-law: #2e5090;
+  --color-history: #8b6914;
+  --color-poetry: #9b2335;
+  --color-prophets: #5c4033;
+  --color-gospels: #c5a55a;
+  --color-epistles: #4682b4;
+  --color-apocalyptic: #8b0000;
+
+  /* ── Highlight categories (Verbum notes) ────────────────────── */
+  --hl-promise:     #4a6fa5;  /* azul — promessa */
+  --hl-warning:     #a94442;  /* vermelho tijolo — advertência */
+  --hl-fulfillment: #3e7d5a;  /* verde oliva — cumprimento */
+  --hl-question:    #b8872f;  /* âmbar — dúvida */
+  --hl-prayer:      #6b4c9a;  /* roxo — oração / adoração */
+
+  /* ── Immersive mode ─────────────────────────────────────────── */
+  --bg-void: #0d0a07;
+  --bg-ambient: #1a1410;
+
+  /* ── Typography ─────────────────────────────────────────────── */
+  --font-display: "Playfair Display", serif;
+  --font-body: "Cormorant Garamond", serif;
+  --font-ui: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ── Typography classes ─────────────────────────────────────────── */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-hebrew {
+  font-family: 'Frank Ruhl Libre', serif;
+  direction: rtl;
+}
+
+.font-greek {
+  font-family: 'GFS Didot', serif;
+}
+
+.font-aramaic {
+  font-family: 'Noto Sans Syriac', sans-serif;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* ── Verse text styling ─────────────────────────────────────────── */
+
+.verse-text {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.verse-number {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+/* ── Page titles ────────────────────────────────────────────────── */
+
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+/* ── Transitions ────────────────────────────────────────────────── */
+
+.fade-in {
+  animation: fadeIn 300ms ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Verse hover/active ─────────────────────────────────────────── */
+
+.verse-row {
+  transition: background-color 200ms ease, border-color 200ms ease;
+  border-left: 2px solid transparent;
+}
+
+.verse-row:hover {
+  background-color: rgba(196, 162, 101, 0.06);
+  border-left-color: rgba(196, 162, 101, 0.3);
+}
+
+.verse-row-active {
+  background-color: rgba(196, 162, 101, 0.1);
+  border-left-color: var(--color-gold);
+}
+
+/* ── Highlight categories (Verbum notes) ─────────────────────────
+ * Applied on top of .verse-row; keep subtle on the parchment theme.
+ * The border-left wins when the category is set, but .verse-row-active
+ * still paints its gold underline when the verse is the active one (via
+ * class ordering in the JSX). */
+.verse-highlight-promise {
+  background-color: color-mix(in srgb, var(--hl-promise) 12%, transparent);
+  border-left-color: var(--hl-promise);
+}
+.verse-highlight-warning {
+  background-color: color-mix(in srgb, var(--hl-warning) 12%, transparent);
+  border-left-color: var(--hl-warning);
+}
+.verse-highlight-fulfillment {
+  background-color: color-mix(in srgb, var(--hl-fulfillment) 12%, transparent);
+  border-left-color: var(--hl-fulfillment);
+}
+.verse-highlight-question {
+  background-color: color-mix(in srgb, var(--hl-question) 14%, transparent);
+  border-left-color: var(--hl-question);
+}
+.verse-highlight-prayer {
+  background-color: color-mix(in srgb, var(--hl-prayer) 12%, transparent);
+  border-left-color: var(--hl-prayer);
+}
+
+/* ── Immersive Reader 3D book ───────────────────────────────────── */
+
+.book-scene {
+  /* perspective handled by react-pageflip-enhanced internally */
+}
+
+/* Paper texture overlay — subtle SVG noise at low opacity */
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* react-pageflip-enhanced: match parchment theme */
+.book-flipbook {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.book-flipbook .stf__parent {
+  background: linear-gradient(135deg, #f5f0e8 0%, #ede5d8 100%);
+  border-radius: 4px;
+}
+
+.book-flipbook .stf__block {
+  background: linear-gradient(135deg, #f5f0e8 0%, #ede5d8 100%);
+}
+
+/* Ensure page items show their parchment background */
+.book-flipbook .stf__item {
+  background: linear-gradient(135deg, #f5f0e8 0%, #ede5d8 100%) !important;
+}
+
+/* Reduce shadow canvas opacity so parchment isn't darkened */
+.book-flipbook .stf__parent canvas {
+  opacity: 0.5;
+}
+
+/* Ambient glow behind the open book */
+.book-ambient-glow {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(196, 162, 101, 0.08) 0%,
+    rgba(196, 162, 101, 0.02) 40%,
+    transparent 70%
+  );
+}

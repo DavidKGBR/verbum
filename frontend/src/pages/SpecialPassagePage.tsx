@@ -1,0 +1,270 @@
+/**
+ * SpecialPassagePage — Catálogo + visualização de Passagens Especiais.
+ *
+ * /special-passages          → grid de cards do catálogo
+ * /special-passages/:id      → MultiLayerView da passagem selecionada
+ */
+
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import MultiLayerView from "../components/special-passages/MultiLayerView";
+import WordDetailPanel from "../components/lexicon/WordDetailPanel";
+import PassageWordPanel from "../components/special-passages/PassageWordPanel";
+import LoadingSpinner from "../components/common/LoadingSpinner";
+import {
+  fetchSpecialPassageCatalog,
+  fetchSpecialPassage,
+  type SpecialPassageMeta,
+  type SpecialPassageResult,
+  type PassageLayerKey,
+  type PassageWord,
+} from "../services/api";
+import { useI18n } from "../i18n/i18nContext";
+import { localized } from "../i18n/localized";
+
+/* ── Catalog page ─────────────────────────────────────────────────────────── */
+
+const LAYER_DOT: Record<PassageLayerKey, string> = {
+  aramaic:    "bg-amber-500",
+  hebrew:     "bg-sky-500",
+  greek:      "bg-purple-500",
+  portuguese: "bg-emerald-500",
+  english:    "bg-blue-400",
+};
+
+function layerLabel(key: PassageLayerKey, t: (k: string) => string): string {
+  return t(`specialPassage.layer.${key}`);
+}
+
+function CatalogPage() {
+  const { t, locale } = useI18n();
+  const [catalog, setCatalog] = useState<SpecialPassageMeta[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchSpecialPassageCatalog()
+      .then((d) => setCatalog(d.passages))
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <LoadingSpinner />;
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-8 flex flex-col gap-6">
+      <div className="flex flex-col gap-1">
+        <h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
+          {t("specialPassage.title")}
+        </h1>
+        <p className="text-sm text-[var(--color-text-muted)]">
+          {t("specialPassage.subtitle")}
+        </p>
+      </div>
+
+      {catalog.length === 0 ? (
+        <p className="text-[var(--color-text-muted)]">{t("specialPassage.none")}</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {catalog.map((p) => (
+            <Link
+              key={p.id}
+              to={`/special-passages/${p.id}`}
+              className="group flex flex-col gap-3 rounded-xl border border-[var(--color-border)]
+                         bg-[var(--color-surface)] hover:border-[var(--color-gold)]/60
+                         hover:shadow-md transition-all p-5"
+            >
+              {/* Badge */}
+              {p.badge && (
+                <span className="self-start text-[11px] px-2 py-0.5 rounded-full font-medium
+                                 bg-[var(--color-gold)]/15 text-[var(--color-gold-dark)]">
+                  {t(`specialPassage.badge.${p.badge}`)}
+                </span>
+              )}
+
+              {/* Title */}
+              <div>
+                <h2 className="font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-gold-dark)] transition-colors">
+                  {localized(p, locale, "title")}
+                </h2>
+                {/* Canonical EN title as subtitle when user is in PT/ES */}
+                {locale !== "en" && p.title && (
+                  <p className="text-xs text-[var(--color-text-muted)] italic">{p.title}</p>
+                )}
+                <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
+                  {localized(p, locale, "reference")}
+                </p>
+              </div>
+
+              {/* Description */}
+              {(p.description || p.description_pt || p.description_es) && (
+                <p className="text-xs text-[var(--color-text-muted)] line-clamp-2">
+                  {localized(p, locale, "description")}
+                </p>
+              )}
+
+              {/* Layer dots */}
+              <div className="flex gap-2 flex-wrap">
+                {p.layers.map((lk) => (
+                  <span key={lk} className="inline-flex items-center gap-1 text-[11px] text-[var(--color-text-muted)]">
+                    <span className={["w-2 h-2 rounded-full", LAYER_DOT[lk]].join(" ")} />
+                    {layerLabel(lk, t)}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ── Passage detail page ──────────────────────────────────────────────────── */
+
+const PT_TRANSLATIONS = ["nvi", "ra", "acf"] as const;
+const ES_TRANSLATIONS = ["rvr"] as const;
+const EN_TRANSLATIONS = ["kjv", "bbe", "asv", "web", "darby"] as const;
+
+function PassageDetailPage({ passageId }: { passageId: string }) {
+  const { t, locale } = useI18n();
+  // Vernacular options reflect the user's locale: ES sees Spanish first, PT/EN see Portuguese options.
+  const vernacularOptions: readonly string[] =
+    locale === "es" ? [...ES_TRANSLATIONS, ...PT_TRANSLATIONS] : [...PT_TRANSLATIONS, ...ES_TRANSLATIONS];
+  const defaultVernacular = locale === "es" ? "rvr" : "nvi";
+  const [passage, setPassage] = useState<SpecialPassageResult | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [translation, setTranslation] = useState(defaultVernacular);
+  const [translationEn, setTranslationEn] = useState("kjv");
+  const [selectedStrongs, setSelectedStrongs] = useState<string | null>(null);
+  const [selectedWord, setSelectedWord] = useState<{ word: PassageWord; layerKey: PassageLayerKey } | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    setError(null);
+    fetchSpecialPassage(passageId, translation, translationEn)
+      .then(setPassage)
+      .catch((e) => setError(e.message ?? t("specialPassage.loadError")))
+      .finally(() => setLoading(false));
+  }, [passageId, translation, translationEn, t]);
+
+  function handleWordClick(word: PassageWord, layerKey: PassageLayerKey) {
+    if (word.strongs_id) {
+      setSelectedWord(null);
+      setSelectedStrongs(word.strongs_id);
+    } else {
+      setSelectedStrongs(null);
+      setSelectedWord({ word, layerKey });
+    }
+  }
+
+  return (
+    <div className="max-w-screen-xl mx-auto px-4 py-8 flex flex-col gap-6">
+      {/* Breadcrumb */}
+      <nav className="text-xs text-[var(--color-text-muted)] flex gap-1 items-center">
+        <Link to="/special-passages" className="hover:text-[var(--color-gold-dark)] transition-colors">
+          {t("specialPassage.breadcrumb")}
+        </Link>
+        <span>›</span>
+        <span>{passage ? localized(passage, locale, "title") : passageId}</span>
+      </nav>
+
+      {/* Header */}
+      {passage && (
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center gap-3 flex-wrap">
+            <h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
+              {localized(passage, locale, "title")}
+            </h1>
+            {/* Canonical EN title as subtitle when user is in PT/ES */}
+            {locale !== "en" && passage.title && (
+              <span className="text-sm text-[var(--color-text-muted)] italic">
+                — {passage.title}
+              </span>
+            )}
+          </div>
+          <p className="text-sm text-[var(--color-text-secondary)]">
+            {localized(passage, locale, "reference")}
+          </p>
+        </div>
+      )}
+
+      {/* Translation selectors */}
+      <div className="flex gap-4 flex-wrap">
+        <div className="flex items-center gap-2">
+          <label className="text-xs text-[var(--color-text-muted)] font-medium">
+            {t("specialPassage.vernacularLabel")}
+          </label>
+          <select
+            value={translation}
+            onChange={(e) => setTranslation(e.target.value)}
+            className="text-xs rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]
+                       text-[var(--color-text-primary)] px-2 py-1 focus:outline-none
+                       focus:ring-1 focus:ring-[var(--color-gold)]/60"
+          >
+            {vernacularOptions.map((tr) => (
+              <option key={tr} value={tr}>{tr.toUpperCase()}</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <label className="text-xs text-[var(--color-text-muted)] font-medium">
+            {t("specialPassage.enLabel")}
+          </label>
+          <select
+            value={translationEn}
+            onChange={(e) => setTranslationEn(e.target.value)}
+            className="text-xs rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]
+                       text-[var(--color-text-primary)] px-2 py-1 focus:outline-none
+                       focus:ring-1 focus:ring-[var(--color-gold)]/60"
+          >
+            {EN_TRANSLATIONS.map((tr) => (
+              <option key={tr} value={tr}>{tr.toUpperCase()}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Content */}
+      {loading && <LoadingSpinner />}
+      {error && (
+        <div className="rounded-xl border border-red-200 bg-red-50 dark:bg-red-950/20 p-4 text-sm text-red-700 dark:text-red-300">
+          {error}
+        </div>
+      )}
+      {!loading && !error && passage && (
+        <MultiLayerView passage={passage} onWordClick={handleWordClick} />
+      )}
+
+      {/* Strong's panel (Greek / Hebrew words) */}
+      {selectedStrongs && (
+        <WordDetailPanel
+          strongsId={selectedStrongs}
+          onClose={() => setSelectedStrongs(null)}
+        />
+      )}
+
+      {/* Passage word panel (Aramaic / words without Strong's) */}
+      {selectedWord && passage && (
+        <PassageWordPanel
+          word={selectedWord.word}
+          layerKey={selectedWord.layerKey}
+          layerLabel={passage.layers[selectedWord.layerKey]?.label ?? selectedWord.layerKey}
+          onClose={() => setSelectedWord(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+/* ── Router entry point ───────────────────────────────────────────────────── */
+
+export default function SpecialPassagePage() {
+  const { passageId } = useParams<{ passageId?: string }>();
+  return passageId ? (
+    <PassageDetailPage passageId={passageId} />
+  ) : (
+    <CatalogPage />
+  );
+}

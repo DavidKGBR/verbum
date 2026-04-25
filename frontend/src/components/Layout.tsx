@@ -1,0 +1,400 @@
+import { useState, useEffect } from "react";
+import { NavLink, Outlet, Link, useLocation } from "react-router-dom";
+import { useReadingHistory } from "../hooks/useReadingHistory";
+import { useI18n, LOCALES } from "../i18n/i18nContext";
+import { localizeBookName } from "../i18n/bookNames";
+import VerbumLogo from "./common/VerbumLogo";
+import StreakBadge from "./streak/StreakBadge";
+import CookieBanner from "./CookieBanner";
+
+type NavItem = {
+  to: string;
+  i18nKey: string;
+  icon: string;
+};
+
+type NavSection = {
+  id: string;
+  i18nKey: string;
+  items: NavItem[];
+};
+
+const NAV_SECTIONS: NavSection[] = [
+  {
+    id: "read",
+    i18nKey: "nav.section.read",
+    items: [
+      { to: "/", i18nKey: "nav.home", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" },
+      { to: "/reader", i18nKey: "nav.reader", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
+      { to: "/plans", i18nKey: "nav.plans", icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" },
+      { to: "/devotional", i18nKey: "nav.devotional", icon: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" },
+      { to: "/bookmarks", i18nKey: "nav.bookmarks", icon: "M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" },
+      { to: "/notes", i18nKey: "nav.notes", icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z" },
+    ],
+  },
+  {
+    id: "search",
+    i18nKey: "nav.section.search",
+    items: [
+      { to: "/search", i18nKey: "nav.search", icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" },
+      { to: "/compare", i18nKey: "nav.compare", icon: "M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" },
+      { to: "/topics", i18nKey: "nav.topics", icon: "M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z M6 6h.008v.008H6V6z" },
+    ],
+  },
+  {
+    id: "people",
+    i18nKey: "nav.section.people",
+    items: [
+      { to: "/authors", i18nKey: "nav.authors", icon: "M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" },
+      { to: "/people", i18nKey: "nav.people", icon: "M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" },
+      { to: "/places", i18nKey: "nav.places", icon: "M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" },
+      { to: "/map", i18nKey: "nav.map", icon: "M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" },
+      { to: "/timeline", i18nKey: "nav.timeline", icon: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" },
+    ],
+  },
+  {
+    id: "study",
+    i18nKey: "nav.section.study",
+    items: [
+      { to: "/dictionary", i18nKey: "nav.dictionary", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
+      { to: "/special-passages", i18nKey: "nav.specialPassages", icon: "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" },
+      { to: "/open-questions", i18nKey: "nav.questions", icon: "M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" },
+    ],
+  },
+  {
+    id: "patterns",
+    i18nKey: "nav.section.patterns",
+    items: [
+      { to: "/connections", i18nKey: "nav.connections", icon: "M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" },
+      { to: "/concepts", i18nKey: "nav.concepts", icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" },
+      { to: "/structure", i18nKey: "nav.structure", icon: "M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" },
+      { to: "/deep-analytics", i18nKey: "nav.analytics", icon: "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" },
+      { to: "/emotional", i18nKey: "nav.emotional", icon: "M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" },
+    ],
+  },
+  {
+    id: "community",
+    i18nKey: "nav.section.community",
+    items: [
+      { to: "/community", i18nKey: "nav.community", icon: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" },
+    ],
+  },
+];
+
+const STORAGE_KEY = "verbum-nav-sections-open";
+const DEFAULT_OPEN: Record<string, boolean> = {
+  read: true,
+  search: false,
+  people: false,
+  study: false,
+  patterns: false,
+  community: false,
+};
+
+function loadOpenState(): Record<string, boolean> {
+  if (typeof window === "undefined") return DEFAULT_OPEN;
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (!raw) return DEFAULT_OPEN;
+    const parsed = JSON.parse(raw);
+    return { ...DEFAULT_OPEN, ...parsed };
+  } catch {
+    return DEFAULT_OPEN;
+  }
+}
+
+export default function Layout() {
+  const { getLastRead } = useReadingHistory();
+  const { t, locale, setLocale } = useI18n();
+  const last = getLastRead();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [sectionsOpen, setSectionsOpen] = useState<Record<string, boolean>>(loadOpenState);
+  const location = useLocation();
+
+  // Auto-close drawer on route change + scroll to top
+  useEffect(() => {
+    setMobileOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+
+  // Persist sections open/closed state
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(sectionsOpen));
+    } catch {
+      /* ignore */
+    }
+  }, [sectionsOpen]);
+
+  // Auto-open the section that contains the active route, on first navigation
+  useEffect(() => {
+    for (const section of NAV_SECTIONS) {
+      const hit = section.items.find((it) => it.to.split("?")[0] === location.pathname);
+      if (hit && !sectionsOpen[section.id]) {
+        setSectionsOpen((prev) => ({ ...prev, [section.id]: true }));
+        break;
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [mobileOpen]);
+
+  const toggleSection = (id: string) =>
+    setSectionsOpen((prev) => ({ ...prev, [id]: !prev[id] }));
+
+  const renderItem = (item: NavItem) => {
+    return (
+      <NavLink
+        key={item.to}
+        to={item.to}
+        end={item.to === "/"}
+        className={({ isActive }) =>
+          `flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
+            isActive
+              ? "bg-[var(--color-gold)]/20 text-[var(--color-gold)]"
+              : "hover:bg-white/10"
+          }`
+        }
+      >
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+        </svg>
+        {t(item.i18nKey)}
+      </NavLink>
+    );
+  };
+
+  const sidebarContent = (
+    <>
+      <Link
+        to="/"
+        className="block mb-6 px-1 text-[var(--color-gold)] focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/50 rounded"
+        aria-label={t("nav.home")}
+      >
+        <VerbumLogo variant="wordmark" className="h-7 w-auto" />
+        <p className="text-[9px] uppercase tracking-[0.3em] opacity-40 mt-1.5 font-display">
+          {t("nav.tagline")}
+        </p>
+      </Link>
+      {/* Language selector */}
+      <div
+        className="grid grid-cols-3 gap-1 mb-4 -ml-1"
+        role="group"
+        aria-label="Language"
+      >
+        {LOCALES.map((loc) => (
+          <button
+            key={loc.code}
+            onClick={() => setLocale(loc.code)}
+            className={`text-[11px] font-medium px-1 py-1.5 rounded text-center transition truncate ${
+              locale === loc.code
+                ? "bg-[var(--color-gold)]/20 text-[var(--color-gold)] ring-1 ring-[var(--color-gold)]/40"
+                : "opacity-60 hover:opacity-100"
+            }`}
+            aria-label={t("nav.switchTo").replace("{lang}", loc.label)}
+            aria-pressed={locale === loc.code}
+            title={loc.label}
+          >
+            {loc.label}
+          </button>
+        ))}
+      </div>
+
+      {NAV_SECTIONS.map((section) => {
+        const open = sectionsOpen[section.id] ?? false;
+        return (
+          <div key={section.id} className="flex flex-col">
+            <button
+              type="button"
+              onClick={() => toggleSection(section.id)}
+              aria-expanded={open}
+              aria-controls={`nav-section-${section.id}`}
+              className="flex items-center justify-between gap-2 px-2 py-1.5 mt-1 text-[10px] uppercase tracking-[0.18em] opacity-60 hover:opacity-100 transition"
+            >
+              <span>{t(section.i18nKey)}</span>
+              <svg
+                className={`w-3 h-3 transition-transform ${open ? "rotate-90" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            {open && (
+              <div id={`nav-section-${section.id}`} className="flex flex-col gap-0.5 pl-1 pb-1">
+                {section.items.map(renderItem)}
+              </div>
+            )}
+          </div>
+        );
+      })}
+
+      {last && (
+        <Link
+          to={`/reader?book=${last.book_id}&chapter=${last.chapter}&translation=${last.translation}`}
+          className="mt-4 mx-1 p-3 rounded border border-[var(--color-gold)]/20
+                     bg-[var(--color-gold)]/5 hover:bg-[var(--color-gold)]/15 transition group"
+          title={t("nav.continueTooltip")}
+        >
+          <div className="text-[10px] uppercase tracking-wider opacity-50 mb-1">
+            {t("nav.continue")}
+          </div>
+          <div className="text-sm font-bold text-[var(--color-gold)] truncate">
+            {localizeBookName(last.book_id, locale, last.book_name || last.book_id)} {last.chapter}
+          </div>
+          <div className="text-[10px] opacity-50 mt-0.5">
+            {last.translation.toUpperCase()}
+          </div>
+        </Link>
+      )}
+
+      <StreakBadge />
+
+      {/* Subtle footer-note links at the very bottom of the sidebar.
+          Kept separate from the main nav so they don't clutter the
+          discovery flow. */}
+      <div className="mt-auto pt-4 border-t border-white/10 text-[10px] opacity-50 space-y-1">
+        <div className="flex items-center justify-between">
+          <Link to="/about" className="hover:opacity-100 hover:text-[var(--color-gold)] transition">
+            {t("nav.about")}
+          </Link>
+          <span className="italic">Verbum</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Link to="/privacy" className="hover:opacity-100 hover:text-[var(--color-gold)] transition">
+            {t("nav.privacy")}
+          </Link>
+          <span aria-hidden>·</span>
+          <a
+            href="https://github.com/DavidKGBR/verbum"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-100 hover:text-[var(--color-gold)] transition"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </>
+  );
+
+  return (
+    <div className="flex flex-col md:flex-row min-h-screen w-full">
+      {/* Mobile top bar (visible < md) */}
+      <header className="md:hidden flex items-center justify-between px-4 py-3 bg-[var(--color-ink)] text-[var(--color-parchment)] sticky top-0 z-30">
+        <button
+          onClick={() => setMobileOpen(true)}
+          aria-label={t("nav.openNav")}
+          className="p-1 -ml-1 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
+        >
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <Link to="/" aria-label={t("nav.home")} className="text-[var(--color-gold)] flex items-center">
+          <VerbumLogo variant="wordmark" className="h-5 w-auto" />
+        </Link>
+        <span className="w-8" aria-hidden /> {/* spacer for centering */}
+      </header>
+
+      {/* Desktop sidebar (md+) */}
+      <nav className="hidden md:flex w-56 shrink-0 bg-[var(--color-ink)] text-[var(--color-parchment)] flex-col p-4 gap-1">
+        {sidebarContent}
+      </nav>
+
+      {/* Mobile drawer (< md) */}
+      {mobileOpen && (
+        <>
+          <div
+            className="md:hidden fixed inset-0 bg-black/60 z-40 fade-in"
+            onClick={() => setMobileOpen(false)}
+            aria-hidden
+          />
+          <nav
+            className="md:hidden fixed top-0 left-0 bottom-0 w-64 bg-[var(--color-ink)]
+                       text-[var(--color-parchment)] flex flex-col p-4 gap-1 z-50 shadow-2xl overflow-y-auto"
+            aria-label="Main navigation"
+          >
+            <button
+              onClick={() => setMobileOpen(false)}
+              aria-label={t("nav.closeNav")}
+              className="absolute top-3 right-3 p-1 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {sidebarContent}
+          </nav>
+        </>
+      )}
+
+      {/* Main content + page footer */}
+      <main className="flex-1 overflow-auto flex flex-col">
+        <div className="flex-1 p-4 md:p-6">
+          <Outlet />
+        </div>
+
+        <footer
+          className="mt-auto px-4 md:px-6 py-6 border-t border-[var(--color-ink)]/10
+                     text-[11px] text-[var(--color-ink)]/60 leading-relaxed"
+        >
+          <div className="flex flex-wrap gap-4 items-center justify-between max-w-5xl mx-auto">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <Link to="/about" className="hover:text-[var(--color-gold)] transition">
+                {t("footer.about")}
+              </Link>
+              <span aria-hidden>·</span>
+              <Link to="/privacy" className="hover:text-[var(--color-gold)] transition">
+                {t("footer.privacy")}
+              </Link>
+              <span aria-hidden>·</span>
+              <a
+                href="https://github.com/DavidKGBR/verbum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--color-gold)] transition"
+              >
+                GitHub
+              </a>
+              <span aria-hidden>·</span>
+              <a
+                href="https://github.com/DavidKGBR/verbum/issues/new"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--color-gold)] transition"
+              >
+                {t("footer.reportBug")}
+              </a>
+              <span aria-hidden>·</span>
+              <a
+                href="https://github.com/DavidKGBR/verbum/blob/main/LICENSE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--color-gold)] transition"
+              >
+                MIT
+              </a>
+            </div>
+            <div className="text-[10px] opacity-70 italic">
+              {t("footer.credits")}
+            </div>
+          </div>
+        </footer>
+      </main>
+
+      <CookieBanner />
+    </div>
+  );
+}

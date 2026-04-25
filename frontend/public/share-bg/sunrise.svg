@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c1810"/>
+      <stop offset="30%" stop-color="#6b4c55"/>
+      <stop offset="55%" stop-color="#c4a265"/>
+      <stop offset="78%" stop-color="#e8c98a"/>
+      <stop offset="100%" stop-color="#f5e8c8"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.72" r="0.25">
+      <stop offset="0%" stop-color="#fff3d9" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#f5c878" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#c4a265" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#sky)"/>
+  <rect width="1080" height="1080" fill="url(#sun)"/>
+  <!-- Distant hills silhouette -->
+  <path d="M0,820 Q180,760 360,790 T720,770 T1080,800 L1080,1080 L0,1080 Z" fill="#2c1810" opacity="0.55"/>
+  <path d="M0,880 Q220,850 440,875 T880,860 T1080,880 L1080,1080 L0,1080 Z" fill="#1a0f08" opacity="0.75"/>
+  <!-- Faint sun rays -->
+  <g stroke="#f5e8c8" stroke-width="1" opacity="0.15">
+    <line x1="540" y1="778" x2="540" y2="450"/>
+    <line x1="540" y1="778" x2="300" y2="520"/>
+    <line x1="540" y1="778" x2="780" y2="520"/>
+    <line x1="540" y1="778" x2="180" y2="640"/>
+    <line x1="540" y1="778" x2="900" y2="640"/>
+  </g>
+</svg>

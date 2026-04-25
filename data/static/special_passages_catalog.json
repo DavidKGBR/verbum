@@ -1,0 +1,300 @@
+{
+  "passages": [
+    {
+      "id": "lords_prayer",
+      "title": "The Lord's Prayer",
+      "title_pt": "O Pai-Nosso",
+      "title_es": "El Padrenuestro",
+      "reference": "Matthew 6:9-13",
+      "reference_pt": "Mateus 6:9-13",
+      "reference_es": "Mateo 6:9-13",
+      "badge": "feature",
+      "description": "The prayer Jesus taught his disciples, in the languages in which it was lived and transmitted.",
+      "description_pt": "A oração que Jesus ensinou aos discípulos, nas línguas em que foi vivida e transmitida.",
+      "description_es": "La oración que Jesús enseñó a sus discípulos, en las lenguas en que fue vivida y transmitida.",
+      "layers": ["aramaic", "greek", "portuguese", "english"],
+      "layer_notes": {
+        "aramaic": "Peshitta — the language Jesus spoke (Galilean Aramaic, 1st century)",
+        "greek": "SBLGNT — original Greek text of the NT (Koine, 1st century)",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "aramaic": "Peshitta — a língua que Jesus falava (Aramaico galileu, séc. I)",
+        "greek": "SBLGNT — texto grego original do NT (Koiné, séc. I)",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "aramaic": "Peshitta — la lengua que Jesús hablaba (Arameo galileo, siglo I)",
+        "greek": "SBLGNT — texto griego original del NT (Koiné, siglo I)",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "john_1",
+      "title": "The Word",
+      "title_pt": "O Logos",
+      "title_es": "El Logos",
+      "reference": "John 1:1-5",
+      "reference_pt": "João 1:1-5",
+      "reference_es": "Juan 1:1-5",
+      "badge": "foundation",
+      "description": "\"In the beginning was the Word\" — the prologue of John in original Aramaic, Koine Greek, and modern languages.",
+      "description_pt": "\"No princípio era o Verbo\" — o prólogo de João no Aramaico original, no Grego Koiné e em línguas modernas.",
+      "description_es": "\"En el principio era el Verbo\" — el prólogo de Juan en el Arameo original, en el Griego Koiné y en lenguas modernas.",
+      "layers": ["aramaic", "greek", "portuguese", "english"],
+      "layer_notes": {
+        "aramaic": "Peshitta — ܡܠܬܐ (Miltha), the Word incarnate in Aramaic",
+        "greek": "SBLGNT — ὁ Λόγος (ho Logos), the Word in Koine Greek",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "aramaic": "Peshitta — ܡܠܬܐ (Miltha), o Verbo encarnado em Aramaico",
+        "greek": "SBLGNT — ὁ Λόγος (ho Logos), o Verbo em Grego Koiné",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "aramaic": "Peshitta — ܡܠܬܐ (Miltha), el Verbo encarnado en Arameo",
+        "greek": "SBLGNT — ὁ Λόγος (ho Logos), el Verbo en Griego Koiné",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "genesis_1",
+      "title": "In the Beginning",
+      "title_pt": "A Criação",
+      "title_es": "La Creación",
+      "reference": "Genesis 1:1-5",
+      "reference_pt": "Gênesis 1:1-5",
+      "reference_es": "Génesis 1:1-5",
+      "badge": "origin",
+      "description": "The opening words of Scripture — בְּרֵאשִׁית בָּרָא אֱלֹהִים — in Biblical Hebrew and modern languages.",
+      "description_pt": "As primeiras palavras da Escritura — בְּרֵאשִׁית בָּרָא אֱלֹהִים — no Hebraico Bíblico e em línguas modernas.",
+      "description_es": "Las primeras palabras de la Escritura — בְּרֵאשִׁית בָּרָא אֱלֹהִים — en Hebreo Bíblico y en lenguas modernas.",
+      "layers": ["hebrew", "portuguese", "english"],
+      "layer_notes": {
+        "hebrew": "WLC — Masoretic Text (Biblical Hebrew, 10th century AD)",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "hebrew": "WLC — Texto Massorético (Hebraico Bíblico, séc. X d.C.)",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "hebrew": "WLC — Texto Masorético (Hebreo Bíblico, siglo X d.C.)",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "psalm_23",
+      "title": "The Lord Is My Shepherd",
+      "title_pt": "O Bom Pastor",
+      "title_es": "El Buen Pastor",
+      "reference": "Psalm 23",
+      "reference_pt": "Salmo 23",
+      "reference_es": "Salmo 23",
+      "badge": "classic",
+      "description": "\"The Lord is my shepherd\" — humanity's most beloved psalm, in the Hebrew of David and in translation.",
+      "description_pt": "\"O Senhor é meu pastor\" — o salmo mais amado da humanidade, no Hebraico de Davi e em traduções.",
+      "description_es": "\"El Señor es mi pastor\" — el salmo más amado de la humanidad, en el Hebreo de David y en traducciones.",
+      "layers": ["hebrew", "portuguese", "english"],
+      "layer_notes": {
+        "hebrew": "WLC — Masoretic Text with niqqud (Masoretic vowel pointing)",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "hebrew": "WLC — Texto Massorético com niqqud (pontuação vocálica massorética)",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "hebrew": "WLC — Texto Masorético con niqqud (puntuación vocálica masorética)",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "isaiah_53",
+      "title": "The Suffering Servant",
+      "title_pt": "O Servo Sofredor",
+      "title_es": "El Siervo Sufriente",
+      "reference": "Isaiah 53:1-6",
+      "reference_pt": "Isaías 53:1-6",
+      "reference_es": "Isaías 53:1-6",
+      "badge": "prophecy",
+      "description": "The most-cited prophecy in the Bible — \"He was wounded for our transgressions\" — in Isaiah's original Hebrew.",
+      "description_pt": "A profecia mais citada da Bíblia — \"Ele foi ferido por nossas transgressões\" — no Hebraico original de Isaías.",
+      "description_es": "La profecía más citada de la Biblia — \"Fue herido por nuestras transgresiones\" — en el Hebreo original de Isaías.",
+      "layers": ["hebrew", "portuguese", "english"],
+      "layer_notes": {
+        "hebrew": "WLC — Classical Biblical Hebrew from the pre-exilic period (8th century BC)",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "hebrew": "WLC — Hebraico Bíblico clássico do período do exílio (séc. VIII a.C.)",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "hebrew": "WLC — Hebreo Bíblico clásico del período del exilio (siglo VIII a.C.)",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "romans_8",
+      "title": "Nothing Shall Separate Us",
+      "title_pt": "Nada Nos Separará",
+      "title_es": "Nada Nos Separará",
+      "reference": "Romans 8:35-39",
+      "reference_pt": "Romanos 8:35-39",
+      "reference_es": "Romanos 8:35-39",
+      "badge": "consolation",
+      "description": "\"Who shall separate us from the love of Christ?\" — Paul's most powerful declaration of God's unconditional love.",
+      "description_pt": "\"Quem nos separará do amor de Cristo?\" — a declaração mais poderosa de Paulo sobre o amor incondicional de Deus.",
+      "description_es": "\"¿Quién nos separará del amor de Cristo?\" — la declaración más poderosa de Pablo sobre el amor incondicional de Dios.",
+      "layers": ["greek", "portuguese", "english"],
+      "layer_notes": {
+        "greek": "SBLGNT — Paul's Koine Greek (1st century AD)",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "greek": "SBLGNT — Grego Koiné de Paulo (séc. I d.C.)",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "greek": "SBLGNT — Griego Koiné de Pablo (siglo I d.C.)",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "corinthians_13",
+      "title": "The Love Chapter",
+      "title_pt": "O Hino do Amor",
+      "title_es": "El Himno del Amor",
+      "reference": "1 Corinthians 13:1-13",
+      "reference_pt": "1 Coríntios 13:1-13",
+      "reference_es": "1 Corintios 13:1-13",
+      "badge": "hymn",
+      "description": "\"Love is patient, love is kind\" — the most celebrated poem in history, in Paul's Koine Greek.",
+      "description_pt": "\"O amor é paciente, o amor é bondoso\" — o mais célebre poema da história, no Grego Koiné de Paulo.",
+      "description_es": "\"El amor es paciente, el amor es bondadoso\" — el más célebre poema de la historia, en el Griego Koiné de Pablo.",
+      "layers": ["greek", "portuguese", "english"],
+      "layer_notes": {
+        "greek": "SBLGNT — ἀγάπη (agápē), unconditional love in Koine Greek",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "greek": "SBLGNT — ἀγάπη (agápē), o amor incondicional em Grego Koiné",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "greek": "SBLGNT — ἀγάπη (agápē), el amor incondicional en Griego Koiné",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "revelation_1",
+      "title": "The Alpha and the Omega",
+      "title_pt": "O Alfa e o Ômega",
+      "title_es": "El Alfa y la Omega",
+      "reference": "Revelation 1:4-8",
+      "reference_pt": "Apocalipse 1:4-8",
+      "reference_es": "Apocalipsis 1:4-8",
+      "badge": "apocalypse",
+      "description": "\"I am the Alpha and the Omega\" — the revelation of Christ as the beginning and end of all things.",
+      "description_pt": "\"Eu sou o Alfa e o Ômega\" — a revelação de Cristo como princípio e fim de todas as coisas.",
+      "description_es": "\"Yo soy el Alfa y la Omega\" — la revelación de Cristo como principio y fin de todas las cosas.",
+      "layers": ["greek", "portuguese", "english"],
+      "layer_notes": {
+        "greek": "SBLGNT — τὸ Ἄλφα καὶ τὸ Ὦ (to Alpha kai to O), in Koine Greek",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "greek": "SBLGNT — τὸ Ἄλφα καὶ τὸ Ὦ (to Alpha kai to O), em Grego Koiné",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "greek": "SBLGNT — τὸ Ἄλφα καὶ τὸ Ὦ (to Alpha kai to O), en Griego Koiné",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    },
+    {
+      "id": "proverbs_8",
+      "title": "Wisdom as Co-Architect",
+      "title_pt": "A Sabedoria Viva",
+      "title_es": "La Sabiduría Viva",
+      "reference": "Proverbs 8:22-31",
+      "reference_pt": "Provérbios 8:22-31",
+      "reference_es": "Proverbios 8:22-31",
+      "badge": "wisdom",
+      "description": "Wisdom as co-architect of creation — present before the world, weaving order and beauty alongside the Creator.",
+      "description_pt": "A Sabedoria como co-arquiteta da criação — presente antes do mundo, tecendo ordem e beleza ao lado do Criador.",
+      "description_es": "La Sabiduría como co-arquitecta de la creación — presente antes del mundo, tejiendo orden y belleza junto al Creador.",
+      "layers": ["hebrew", "portuguese", "english"],
+      "layer_notes": {
+        "hebrew": "WLC — חׇכְמָה (ḥokmāh), personified Wisdom in Biblical Hebrew",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "hebrew": "WLC — חׇכְמָה (ḥokmāh), a Sabedoria personificada no Hebraico Bíblico",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "hebrew": "WLC — חׇכְמָה (ḥokmāh), la Sabiduría personificada en el Hebreo Bíblico",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clássica"
+      }
+    },
+    {
+      "id": "beatitudes",
+      "title": "The Beatitudes",
+      "title_pt": "As Bem-Aventuranças",
+      "title_es": "Las Bienaventuranzas",
+      "reference": "Matthew 5:3-12",
+      "reference_pt": "Mateus 5:3-12",
+      "reference_es": "Mateo 5:3-12",
+      "badge": "sermon",
+      "description": "The radical subversion of the world's values: the humble, those who mourn, and the persecuted as the truly blessed.",
+      "description_pt": "A subversão radical dos valores do mundo: os humildes, os que choram e os perseguidos como os verdadeiramente bem-aventurados.",
+      "description_es": "La subversión radical de los valores del mundo: los humildes, los que lloran y los perseguidos como los verdaderamente bienaventurados.",
+      "layers": ["greek", "portuguese", "english"],
+      "layer_notes": {
+        "greek": "SBLGNT — μακάριοι (makárioi), \"blessed\" in Koine Greek",
+        "portuguese": "Modern Portuguese translation",
+        "english": "Classical English translation"
+      },
+      "layer_notes_pt": {
+        "greek": "SBLGNT — μακάριοι (makárioi), \"bem-aventurados\" em Grego Koiné",
+        "portuguese": "Tradução portuguesa moderna",
+        "english": "Tradução inglesa clássica"
+      },
+      "layer_notes_es": {
+        "greek": "SBLGNT — μακάριοι (makárioi), \"bienaventurados\" en Griego Koiné",
+        "portuguese": "Traducción portuguesa moderna",
+        "english": "Traducción inglesa clásica"
+      }
+    }
+  ]
+}

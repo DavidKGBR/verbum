@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  # ─── ETL Pipeline ─────────────────────────────────────────────────────────
+  pipeline:
+    build:
+      context: .
+      target: production
+    container_name: bible-pipeline
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=INFO
+      - USE_GCP=${USE_GCP:-false}
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID:-}
+      - GCP_BUCKET_NAME=${GCP_BUCKET_NAME:-}
+      - BQ_DATASET=${BQ_DATASET:-bible_analytics}
+    command: ["run"]
+
+  # ─── Dashboard ────────────────────────────────────────────────────────────
+  dashboard:
+    build:
+      context: .
+      target: dashboard
+    container_name: bible-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data:ro
+    depends_on:
+      pipeline:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  # ─── Run tests ────────────────────────────────────────────────────────────
+  tests:
+    build:
+      context: .
+      target: production
+    container_name: bible-tests
+    volumes:
+      - ./tests:/app/tests:ro
+    entrypoint: ["pytest"]
+    command: ["-v", "--tb=short"]
+    profiles:
+      - test

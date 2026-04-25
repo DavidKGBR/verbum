@@ -1,0 +1,332 @@
+[
+  {
+    "year": -3100,
+    "title": "Egyptian civilization begins",
+    "title_pt": "Início da civilização egípcia",
+    "title_es": "Comienzo de la civilización egipcia",
+    "category": "Egypt",
+    "description": "Unification of Upper and Lower Egypt under the first pharaohs",
+    "description_pt": "Unificação do Alto e Baixo Egito sob os primeiros faraós",
+    "description_es": "Unificación del Alto y Bajo Egipto bajo los primeros faraones"
+  },
+  {
+    "year": -2560,
+    "title": "Great Pyramid of Giza built",
+    "title_pt": "Construção da Grande Pirâmide de Gizé",
+    "title_es": "Construcción de la Gran Pirámide de Giza",
+    "category": "Egypt",
+    "description": "Construction of Khufu's pyramid, one of the Seven Wonders",
+    "description_pt": "Construção da pirâmide de Quéops, uma das Sete Maravilhas",
+    "description_es": "Construcción de la pirámide de Keops, una de las Siete Maravillas"
+  },
+  {
+    "year": -2000,
+    "title": "Middle Kingdom of Egypt",
+    "title_pt": "Médio Império Egípcio",
+    "title_es": "Reino Medio de Egipto",
+    "category": "Egypt",
+    "description": "Egypt's golden age of art, literature, and expansion",
+    "description_pt": "A era de ouro do Egito em arte, literatura e expansão",
+    "description_es": "La edad de oro de Egipto en arte, literatura y expansión"
+  },
+  {
+    "year": -1792,
+    "title": "Code of Hammurabi",
+    "title_pt": "Código de Hamurabi",
+    "title_es": "Código de Hammurabi",
+    "category": "Babylon",
+    "description": "One of the oldest written legal codes, from Babylon",
+    "description_pt": "Um dos mais antigos códigos legais escritos, originário da Babilônia",
+    "description_es": "Uno de los códigos legales escritos más antiguos, procedente de Babilonia"
+  },
+  {
+    "year": -1550,
+    "title": "New Kingdom of Egypt begins",
+    "title_pt": "Início do Novo Império Egípcio",
+    "title_es": "Comienza el Reino Nuevo de Egipto",
+    "category": "Egypt",
+    "description": "Era of Thutmose III, Hatshepsut, and later Ramesses II",
+    "description_pt": "Era de Tutmés III, Hatshepsut e, posteriormente, Ramsés II",
+    "description_es": "Era de Tutmosis III, Hatshepsut y, más tarde, Ramsés II"
+  },
+  {
+    "year": -1274,
+    "title": "Battle of Kadesh",
+    "title_pt": "Batalha de Cades",
+    "title_es": "Batalla de Qadesh",
+    "category": "Egypt",
+    "description": "Ramesses II vs Hittites — one of the largest chariot battles in history",
+    "description_pt": "Ramsés II contra os hititas — uma das maiores batalhas de carros da história",
+    "description_es": "Ramsés II contra los hititas — una de las mayores batallas de carros de la historia"
+  },
+  {
+    "year": -1200,
+    "title": "Bronze Age Collapse",
+    "title_pt": "Colapso da Idade do Bronze",
+    "title_es": "Colapso de la Edad del Bronce",
+    "category": "Mediterranean",
+    "description": "Collapse of multiple civilizations across the eastern Mediterranean",
+    "description_pt": "Colapso de diversas civilizações no Mediterrâneo oriental",
+    "description_es": "Colapso de múltiples civilizaciones en el Mediterráneo oriental"
+  },
+  {
+    "year": -1000,
+    "title": "Phoenician alphabet spreads",
+    "title_pt": "Alfabeto fenício se difunde",
+    "title_es": "El alfabeto fenicio se expande",
+    "category": "Mediterranean",
+    "description": "Ancestor of Greek, Latin, Hebrew, and Arabic scripts",
+    "description_pt": "Ancestral das escritas grega, latina, hebraica e árabe",
+    "description_es": "Ancestro de las escrituras griega, latina, hebrea y árabe"
+  },
+  {
+    "year": -911,
+    "title": "Neo-Assyrian Empire rises",
+    "title_pt": "Ascensão do Império Neoassírio",
+    "title_es": "Surge el Imperio Neoasirio",
+    "category": "Assyria",
+    "description": "Assyria becomes the dominant power in Mesopotamia",
+    "description_pt": "A Assíria se torna a potência dominante na Mesopotâmia",
+    "description_es": "Asiria se convierte en la potencia dominante de Mesopotamia"
+  },
+  {
+    "year": -776,
+    "title": "First Olympic Games",
+    "title_pt": "Primeiros Jogos Olímpicos",
+    "title_es": "Primeros Juegos Olímpicos",
+    "category": "Greece",
+    "description": "Athletic competitions at Olympia, Greece",
+    "description_pt": "Competições atléticas em Olímpia, na Grécia",
+    "description_es": "Competiciones atléticas en Olimpia, Grecia"
+  },
+  {
+    "year": -753,
+    "title": "Founding of Rome",
+    "title_pt": "Fundação de Roma",
+    "title_es": "Fundación de Roma",
+    "category": "Rome",
+    "description": "Traditional date for the founding of Rome by Romulus",
+    "description_pt": "Data tradicional da fundação de Roma por Rômulo",
+    "description_es": "Fecha tradicional de la fundación de Roma por Rómulo"
+  },
+  {
+    "year": -722,
+    "title": "Fall of Samaria to Assyria",
+    "title_pt": "Queda de Samaria para a Assíria",
+    "title_es": "Caída de Samaria ante Asiria",
+    "category": "Assyria",
+    "description": "Northern Kingdom of Israel conquered by Sargon II",
+    "description_pt": "O Reino do Norte de Israel é conquistado por Sargão II",
+    "description_es": "El Reino del Norte de Israel es conquistado por Sargón II"
+  },
+  {
+    "year": -612,
+    "title": "Fall of Nineveh",
+    "title_pt": "Queda de Nínive",
+    "title_es": "Caída de Nínive",
+    "category": "Babylon",
+    "description": "Babylon and Medes destroy the Assyrian capital",
+    "description_pt": "Babilônia e medos destroem a capital assíria",
+    "description_es": "Babilonia y los medos destruyen la capital asiria"
+  },
+  {
+    "year": -605,
+    "title": "Neo-Babylonian Empire",
+    "title_pt": "Império Neobabilônico",
+    "title_es": "Imperio Neobabilónico",
+    "category": "Babylon",
+    "description": "Nebuchadnezzar II begins his reign, conquers Judah",
+    "description_pt": "Nabucodonosor II inicia seu reinado e conquista Judá",
+    "description_es": "Nabucodonosor II comienza su reinado y conquista Judá"
+  },
+  {
+    "year": -586,
+    "title": "Fall of Jerusalem to Babylon",
+    "title_pt": "Queda de Jerusalém para a Babilônia",
+    "title_es": "Caída de Jerusalén ante Babilonia",
+    "category": "Babylon",
+    "description": "Temple destroyed, Judah exiled to Babylon",
+    "description_pt": "O Templo é destruído e Judá é exilado para a Babilônia",
+    "description_es": "El Templo es destruido y Judá es exiliado a Babilonia"
+  },
+  {
+    "year": -539,
+    "title": "Cyrus conquers Babylon",
+    "title_pt": "Ciro conquista a Babilônia",
+    "title_es": "Ciro conquista Babilonia",
+    "category": "Persia",
+    "description": "Persian Empire begins, Jews allowed to return",
+    "description_pt": "Início do Império Persa; os judeus são autorizados a retornar",
+    "description_es": "Comienza el Imperio Persa; se permite a los judíos regresar"
+  },
+  {
+    "year": -509,
+    "title": "Roman Republic established",
+    "title_pt": "Estabelecimento da República Romana",
+    "title_es": "Se establece la República Romana",
+    "category": "Rome",
+    "description": "Rome overthrows its kings and becomes a republic",
+    "description_pt": "Roma derruba seus reis e se torna uma república",
+    "description_es": "Roma derroca a sus reyes y se convierte en república"
+  },
+  {
+    "year": -490,
+    "title": "Battle of Marathon",
+    "title_pt": "Batalha de Maratona",
+    "title_es": "Batalla de Maratón",
+    "category": "Greece",
+    "description": "Greeks defeat Persian invasion force",
+    "description_pt": "Os gregos derrotam a força invasora persa",
+    "description_es": "Los griegos derrotan la fuerza invasora persa"
+  },
+  {
+    "year": -480,
+    "title": "Battle of Thermopylae",
+    "title_pt": "Batalha das Termópilas",
+    "title_es": "Batalla de las Termópilas",
+    "category": "Greece",
+    "description": "300 Spartans' famous last stand against Xerxes",
+    "description_pt": "A célebre última resistência dos 300 espartanos contra Xerxes",
+    "description_es": "La célebre última resistencia de los 300 espartanos contra Jerjes"
+  },
+  {
+    "year": -447,
+    "title": "Parthenon construction begins",
+    "title_pt": "Início da construção do Partenon",
+    "title_es": "Comienza la construcción del Partenón",
+    "category": "Greece",
+    "description": "Temple to Athena on the Acropolis of Athens",
+    "description_pt": "Templo dedicado a Atena na Acrópole de Atenas",
+    "description_es": "Templo dedicado a Atenea en la Acrópolis de Atenas"
+  },
+  {
+    "year": -336,
+    "title": "Alexander the Great",
+    "title_pt": "Alexandre, o Grande",
+    "title_es": "Alejandro Magno",
+    "category": "Greece",
+    "description": "Alexander becomes king, conquers Persian Empire by 323 BC",
+    "description_pt": "Alexandre torna-se rei e conquista o Império Persa até 323 a.C.",
+    "description_es": "Alejandro se convierte en rey y conquista el Imperio Persa hacia 323 a.C."
+  },
+  {
+    "year": -323,
+    "title": "Death of Alexander",
+    "title_pt": "Morte de Alexandre",
+    "title_es": "Muerte de Alejandro",
+    "category": "Greece",
+    "description": "Empire splits among his generals (Ptolemies, Seleucids)",
+    "description_pt": "O império é dividido entre seus generais (Ptolomeus, Selêucidas)",
+    "description_es": "El imperio se divide entre sus generales (Ptolomeos, Seléucidas)"
+  },
+  {
+    "year": -167,
+    "title": "Maccabean Revolt",
+    "title_pt": "Revolta dos Macabeus",
+    "title_es": "Revuelta Macabea",
+    "category": "Judea",
+    "description": "Jewish revolt against Seleucid religious persecution",
+    "description_pt": "Revolta judaica contra a perseguição religiosa selêucida",
+    "description_es": "Revuelta judía contra la persecución religiosa seléucida"
+  },
+  {
+    "year": -63,
+    "title": "Rome conquers Jerusalem",
+    "title_pt": "Roma conquista Jerusalém",
+    "title_es": "Roma conquista Jerusalén",
+    "category": "Rome",
+    "description": "Pompey captures Jerusalem, Judea becomes Roman client state",
+    "description_pt": "Pompeu toma Jerusalém; a Judeia torna-se estado cliente romano",
+    "description_es": "Pompeyo toma Jerusalén; Judea se convierte en estado cliente romano"
+  },
+  {
+    "year": -44,
+    "title": "Assassination of Julius Caesar",
+    "title_pt": "Assassinato de Júlio César",
+    "title_es": "Asesinato de Julio César",
+    "category": "Rome",
+    "description": "End of the Roman Republic era",
+    "description_pt": "Fim da era da República Romana",
+    "description_es": "Fin de la era de la República Romana"
+  },
+  {
+    "year": -27,
+    "title": "Roman Empire begins",
+    "title_pt": "Início do Império Romano",
+    "title_es": "Comienza el Imperio Romano",
+    "category": "Rome",
+    "description": "Augustus becomes first Roman Emperor",
+    "description_pt": "Augusto torna-se o primeiro imperador romano",
+    "description_es": "Augusto se convierte en el primer emperador romano"
+  },
+  {
+    "year": -4,
+    "title": "Birth of Jesus (estimated)",
+    "title_pt": "Nascimento de Jesus (estimado)",
+    "title_es": "Nacimiento de Jesús (estimado)",
+    "category": "Judea",
+    "description": "Born in Bethlehem during reign of Herod the Great",
+    "description_pt": "Nasceu em Belém durante o reinado de Herodes, o Grande",
+    "description_es": "Nació en Belén durante el reinado de Herodes el Grande"
+  },
+  {
+    "year": 14,
+    "title": "Death of Augustus",
+    "title_pt": "Morte de Augusto",
+    "title_es": "Muerte de Augusto",
+    "category": "Rome",
+    "description": "Tiberius becomes emperor (Luke 3:1)",
+    "description_pt": "Tibério torna-se imperador (Lucas 3:1)",
+    "description_es": "Tiberio se convierte en emperador (Lucas 3:1)"
+  },
+  {
+    "year": 30,
+    "title": "Crucifixion of Jesus (estimated)",
+    "title_pt": "Crucificação de Jesus (estimada)",
+    "title_es": "Crucifixión de Jesús (estimada)",
+    "category": "Judea",
+    "description": "During governorship of Pontius Pilate",
+    "description_pt": "Durante o governo de Pôncio Pilatos",
+    "description_es": "Durante el gobierno de Poncio Pilato"
+  },
+  {
+    "year": 64,
+    "title": "Great Fire of Rome",
+    "title_pt": "Grande Incêndio de Roma",
+    "title_es": "Gran Incendio de Roma",
+    "category": "Rome",
+    "description": "Nero blames Christians, begins persecution",
+    "description_pt": "Nero culpa os cristãos e inicia a perseguição",
+    "description_es": "Nerón culpa a los cristianos e inicia la persecución"
+  },
+  {
+    "year": 70,
+    "title": "Destruction of the Second Temple",
+    "title_pt": "Destruição do Segundo Templo",
+    "title_es": "Destrucción del Segundo Templo",
+    "category": "Rome",
+    "description": "Titus destroys Jerusalem and the Temple",
+    "description_pt": "Tito destrói Jerusalém e o Templo",
+    "description_es": "Tito destruye Jerusalén y el Templo"
+  },
+  {
+    "year": 79,
+    "title": "Eruption of Vesuvius",
+    "title_pt": "Erupção do Vesúvio",
+    "title_es": "Erupción del Vesubio",
+    "category": "Rome",
+    "description": "Destroys Pompeii and Herculaneum",
+    "description_pt": "Destrói Pompeia e Herculano",
+    "description_es": "Destruye Pompeya y Herculano"
+  },
+  {
+    "year": 95,
+    "title": "Book of Revelation written",
+    "title_pt": "Livro do Apocalipse é escrito",
+    "title_es": "Se escribe el Libro del Apocalipsis",
+    "category": "Judea",
+    "description": "John writes from Patmos during Domitian's reign",
+    "description_pt": "João escreve de Patmos durante o reinado de Domiciano",
+    "description_es": "Juan escribe desde Patmos durante el reinado de Domiciano"
+  }
+]

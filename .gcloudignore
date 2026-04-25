@@ -1,0 +1,68 @@
+# gcloud upload exclusions (Cloud Build source).
+#
+# IMPORTANT: the existence of this file disables gcloud's fallback to
+# .gitignore. We need that fallback off because .gitignore excludes
+# data/analytics/*.duckdb and data/audio/ -- both of which the API
+# image MUST contain at build time.
+#
+# Keep this list aligned with .dockerignore so the build context that
+# Cloud Build uploads matches what the Dockerfile expects to COPY.
+
+# Build artifacts
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+.tox/
+
+# Frontend (deployed separately to Firebase Hosting)
+frontend/
+
+# Docs / planning
+docs/
+*.md
+!data/PUBLIC_DATASET.md
+
+# Data the API does NOT need at runtime
+data/raw/
+data/processed/
+data/cache/
+data/ai_cache/
+data/*.csv
+data/*.duckdb.wal
+
+# Tests
+tests/
+
+# Dev tooling
+.git/
+.github/
+.gitignore
+.gitattributes
+.editorconfig
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Misc
+*.log
+.DS_Store
+tmp_turns/
+infra/
+Makefile
+pre-commit*
+.pre-commit-config.yaml

@@ -1,0 +1,627 @@
+[
+  {
+    "id": "names-of-god",
+    "title": "Names of God",
+    "description": "Discover God through His names — 7 days exploring who He is",
+    "days": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "Elohim — The Creator",
+        "passage": "GEN.1.1-GEN.1.5",
+        "reflection": "What does it mean that God is the origin of everything?",
+        "original_term": {
+          "text": "אֱלֹהִים",
+          "transliteration": "Elohim",
+          "language": "hebrew",
+          "strong": "H430",
+          "meaning": "God (plural of majesty) — the Creator, the supreme deity"
+        }
+      },
+      {
+        "day": 2,
+        "title": "Yahweh — The Self-Existent One",
+        "passage": "EXO.3.13-EXO.3.15",
+        "reflection": "How does God's eternal nature affect your trust in Him?",
+        "original_term": {
+          "text": "יהוה",
+          "transliteration": "YHWH",
+          "language": "hebrew",
+          "strong": "H3068",
+          "meaning": "The LORD — the self-existent, eternal covenant name of God"
+        }
+      },
+      {
+        "day": 3,
+        "title": "El Shaddai — God Almighty",
+        "passage": "GEN.17.1-GEN.17.8",
+        "reflection": "Where do you need God's almighty power in your life today?",
+        "original_term": {
+          "text": "אֵל שַׁדַּי",
+          "transliteration": "El Shaddai",
+          "language": "hebrew",
+          "strong": "H410 + H7706",
+          "meaning": "God Almighty — the all-sufficient, overpowering God"
+        }
+      },
+      {
+        "day": 4,
+        "title": "Jehovah Jireh — The Lord Will Provide",
+        "passage": "GEN.22.9-GEN.22.14",
+        "reflection": "When has God provided for you in an unexpected way?",
+        "original_term": {
+          "text": "יהוה יִרְאֶה",
+          "transliteration": "YHWH Yir'eh",
+          "language": "hebrew",
+          "strong": "H3068 + H7200",
+          "meaning": "The LORD will see / provide — God who sees the need and meets it"
+        }
+      },
+      {
+        "day": 5,
+        "title": "Jehovah Rapha — The Lord Who Heals",
+        "passage": "EXO.15.22-EXO.15.27",
+        "reflection": "What areas of your life need God's healing touch?",
+        "original_term": {
+          "text": "יהוה רָפָא",
+          "transliteration": "YHWH Rapha",
+          "language": "hebrew",
+          "strong": "H3068 + H7495",
+          "meaning": "The LORD who heals — God the physician of body and soul"
+        }
+      },
+      {
+        "day": 6,
+        "title": "Jehovah Shalom — The Lord Is Peace",
+        "passage": "JDG.6.22-JDG.6.24",
+        "reflection": "How can you experience God's peace in times of anxiety?",
+        "original_term": {
+          "text": "יהוה שָׁלוֹם",
+          "transliteration": "YHWH Shalom",
+          "language": "hebrew",
+          "strong": "H3068 + H7965",
+          "meaning": "The LORD is peace — completeness, wholeness, well-being from God"
+        }
+      },
+      {
+        "day": 7,
+        "title": "Immanuel — God With Us",
+        "passage": "MAT.1.21-MAT.1.23",
+        "reflection": "How does knowing God is present change your perspective today?",
+        "original_term": {
+          "text": "עִמָּנוּאֵל",
+          "transliteration": "Immanuel",
+          "language": "hebrew",
+          "strong": "H6005",
+          "meaning": "God with us — the promise of divine presence among His people"
+        }
+      }
+    ]
+  },
+  {
+    "id": "psalms-of-comfort",
+    "title": "Psalms of Comfort",
+    "description": "10 days finding peace and strength in the Psalms",
+    "days": 10,
+    "readings": [
+      {
+        "day": 1,
+        "title": "The Lord Is My Shepherd",
+        "passage": "PSA.23.1-PSA.23.6",
+        "reflection": "What does it mean for God to be your shepherd today?",
+        "original_term": {
+          "text": "רֹעֶה",
+          "transliteration": "Ro'eh",
+          "language": "hebrew",
+          "strong": "H7462",
+          "meaning": "Shepherd — one who tends, feeds, and protects the flock"
+        }
+      },
+      {
+        "day": 2,
+        "title": "God Is Our Refuge",
+        "passage": "PSA.46.1-PSA.46.11",
+        "reflection": "Where do you run when life feels overwhelming?",
+        "original_term": {
+          "text": "מַחֲסֶה",
+          "transliteration": "Machaseh",
+          "language": "hebrew",
+          "strong": "H4268",
+          "meaning": "Refuge, shelter — a place of protection and trust"
+        }
+      },
+      {
+        "day": 3,
+        "title": "Create in Me a Clean Heart",
+        "passage": "PSA.51.1-PSA.51.17",
+        "reflection": "Is there something you need to confess and release to God?",
+        "original_term": {
+          "text": "טָהוֹר",
+          "transliteration": "Tahor",
+          "language": "hebrew",
+          "strong": "H2889",
+          "meaning": "Clean, pure — ceremonially and morally unblemished"
+        }
+      },
+      {
+        "day": 4,
+        "title": "My Soul Finds Rest in God",
+        "passage": "PSA.62.1-PSA.62.12",
+        "reflection": "What is stealing your rest, and can you surrender it?",
+        "original_term": {
+          "text": "דּוּמִיָּה",
+          "transliteration": "Dumiyyah",
+          "language": "hebrew",
+          "strong": "H1747",
+          "meaning": "Rest, silence, stillness — quiet waiting upon God"
+        }
+      },
+      {
+        "day": 5,
+        "title": "How Precious Are Your Thoughts",
+        "passage": "PSA.139.1-PSA.139.18",
+        "reflection": "How does it feel to know God knows everything about you and still loves you?",
+        "original_term": {
+          "text": "יָדַע",
+          "transliteration": "Yada",
+          "language": "hebrew",
+          "strong": "H3045",
+          "meaning": "To know — deep, intimate, relational knowledge"
+        }
+      },
+      {
+        "day": 6,
+        "title": "The Lord Is Near the Brokenhearted",
+        "passage": "PSA.34.1-PSA.34.22",
+        "reflection": "Have you experienced God's nearness in a difficult season?",
+        "original_term": {
+          "text": "קָרוֹב",
+          "transliteration": "Qarov",
+          "language": "hebrew",
+          "strong": "H7138",
+          "meaning": "Near, close — intimate proximity and presence"
+        }
+      },
+      {
+        "day": 7,
+        "title": "I Will Fear No Evil",
+        "passage": "PSA.27.1-PSA.27.14",
+        "reflection": "What fear can you bring to God today?",
+        "original_term": {
+          "text": "אוֹר",
+          "transliteration": "Or",
+          "language": "hebrew",
+          "strong": "H216",
+          "meaning": "Light — illumination, guidance, the opposite of darkness and fear"
+        }
+      },
+      {
+        "day": 8,
+        "title": "Great Is Thy Faithfulness",
+        "passage": "PSA.36.5-PSA.36.12",
+        "reflection": "List three ways God has been faithful to you.",
+        "original_term": {
+          "text": "חֶסֶד",
+          "transliteration": "Chesed",
+          "language": "hebrew",
+          "strong": "H2617",
+          "meaning": "Lovingkindness, steadfast love — God's covenantal, unfailing loyalty"
+        }
+      },
+      {
+        "day": 9,
+        "title": "He Heals the Brokenhearted",
+        "passage": "PSA.147.1-PSA.147.11",
+        "reflection": "What broken piece of your heart needs God's attention?",
+        "original_term": {
+          "text": "רָפָא",
+          "transliteration": "Rapha",
+          "language": "hebrew",
+          "strong": "H7495",
+          "meaning": "To heal, to mend — restoration of body and spirit"
+        }
+      },
+      {
+        "day": 10,
+        "title": "Let Everything Praise the Lord",
+        "passage": "PSA.150.1-PSA.150.6",
+        "reflection": "End this journey with gratitude — what will you praise God for today?",
+        "original_term": {
+          "text": "הָלַל",
+          "transliteration": "Halal",
+          "language": "hebrew",
+          "strong": "H1984",
+          "meaning": "To praise, to shine — the root of Hallelujah"
+        }
+      }
+    ]
+  },
+  {
+    "id": "parables-of-jesus",
+    "title": "Parables of Jesus",
+    "description": "14 days exploring Jesus' most powerful stories",
+    "days": 14,
+    "readings": [
+      {
+        "day": 1,
+        "title": "The Sower",
+        "passage": "MAT.13.1-MAT.13.9",
+        "reflection": "What kind of soil is your heart right now?",
+        "original_term": {
+          "text": "σπείρων",
+          "transliteration": "Speirōn",
+          "language": "greek",
+          "strong": "G4687",
+          "meaning": "The sower — one who scatters seed"
+        }
+      },
+      {
+        "day": 2,
+        "title": "The Mustard Seed",
+        "passage": "MAT.13.31-MAT.13.32",
+        "reflection": "Where have you seen small faith produce big results?",
+        "original_term": {
+          "text": "σίναπι",
+          "transliteration": "Sinapi",
+          "language": "greek",
+          "strong": "G4615",
+          "meaning": "Mustard — the smallest seed that grows into the greatest of herbs"
+        }
+      },
+      {
+        "day": 3,
+        "title": "The Good Samaritan",
+        "passage": "LUK.10.25-LUK.10.37",
+        "reflection": "Who is your neighbor that needs help today?",
+        "original_term": {
+          "text": "πλησίον",
+          "transliteration": "Plēsion",
+          "language": "greek",
+          "strong": "G4139",
+          "meaning": "Neighbor — anyone near, regardless of ethnic or social boundary"
+        }
+      },
+      {
+        "day": 4,
+        "title": "The Prodigal Son",
+        "passage": "LUK.15.11-LUK.15.32",
+        "reflection": "Do you identify more with the younger or older brother?",
+        "original_term": {
+          "text": "σπλαγχνίζομαι",
+          "transliteration": "Splanchnizomai",
+          "language": "greek",
+          "strong": "G4697",
+          "meaning": "To be moved with compassion — a visceral, gut-level mercy"
+        }
+      },
+      {
+        "day": 5,
+        "title": "The Lost Sheep",
+        "passage": "LUK.15.1-LUK.15.7",
+        "reflection": "How does it feel to know God pursues you personally?",
+        "original_term": {
+          "text": "ἀπολωλός",
+          "transliteration": "Apolōlos",
+          "language": "greek",
+          "strong": "G622",
+          "meaning": "The lost one — that which has perished or strayed away"
+        }
+      },
+      {
+        "day": 6,
+        "title": "The Talents",
+        "passage": "MAT.25.14-MAT.25.30",
+        "reflection": "What has God entrusted to you, and how are you using it?",
+        "original_term": {
+          "text": "τάλαντον",
+          "transliteration": "Talanton",
+          "language": "greek",
+          "strong": "G5007",
+          "meaning": "Talent — a weight of great value entrusted for stewardship"
+        }
+      },
+      {
+        "day": 7,
+        "title": "The Pharisee and Tax Collector",
+        "passage": "LUK.18.9-LUK.18.14",
+        "reflection": "When are you tempted to compare yourself to others spiritually?",
+        "original_term": {
+          "text": "ἱλάσθητι",
+          "transliteration": "Hilasthēti",
+          "language": "greek",
+          "strong": "G2433",
+          "meaning": "Be merciful — to make propitiation, to show atoning grace"
+        }
+      },
+      {
+        "day": 8,
+        "title": "The Rich Fool",
+        "passage": "LUK.12.13-LUK.12.21",
+        "reflection": "Are you rich toward God or toward possessions?",
+        "original_term": {
+          "text": "ἄφρων",
+          "transliteration": "Aphrōn",
+          "language": "greek",
+          "strong": "G878",
+          "meaning": "Fool — senseless, lacking moral and spiritual insight"
+        }
+      },
+      {
+        "day": 9,
+        "title": "The Pearl of Great Price",
+        "passage": "MAT.13.45-MAT.13.46",
+        "reflection": "What would you give up for the Kingdom?",
+        "original_term": {
+          "text": "μαργαρίτης",
+          "transliteration": "Margaritēs",
+          "language": "greek",
+          "strong": "G3135",
+          "meaning": "Pearl — a treasure of surpassing worth"
+        }
+      },
+      {
+        "day": 10,
+        "title": "The Wise and Foolish Builders",
+        "passage": "MAT.7.24-MAT.7.27",
+        "reflection": "Is your life built on rock or sand?",
+        "original_term": {
+          "text": "πέτρα",
+          "transliteration": "Petra",
+          "language": "greek",
+          "strong": "G4073",
+          "meaning": "Rock — a massive, immovable stone foundation"
+        }
+      },
+      {
+        "day": 11,
+        "title": "The Unforgiving Servant",
+        "passage": "MAT.18.21-MAT.18.35",
+        "reflection": "Is there someone you need to forgive?",
+        "original_term": {
+          "text": "ἀφίημι",
+          "transliteration": "Aphiēmi",
+          "language": "greek",
+          "strong": "G863",
+          "meaning": "To forgive, to release — letting go of a debt or offense"
+        }
+      },
+      {
+        "day": 12,
+        "title": "The Wedding Feast",
+        "passage": "MAT.22.1-MAT.22.14",
+        "reflection": "Are you living as if you've been invited to the feast?",
+        "original_term": {
+          "text": "γάμος",
+          "transliteration": "Gamos",
+          "language": "greek",
+          "strong": "G1062",
+          "meaning": "Wedding feast — the joyful celebration of covenant union"
+        }
+      },
+      {
+        "day": 13,
+        "title": "The Vine and Branches",
+        "passage": "JHN.15.1-JHN.15.11",
+        "reflection": "How connected do you feel to the Vine right now?",
+        "original_term": {
+          "text": "ἄμπελος",
+          "transliteration": "Ampelos",
+          "language": "greek",
+          "strong": "G288",
+          "meaning": "Vine — the source of life and fruitfulness"
+        }
+      },
+      {
+        "day": 14,
+        "title": "The Sheep and Goats",
+        "passage": "MAT.25.31-MAT.25.46",
+        "reflection": "How are you serving 'the least of these' in your community?",
+        "original_term": {
+          "text": "ἐλάχιστος",
+          "transliteration": "Elachistos",
+          "language": "greek",
+          "strong": "G1646",
+          "meaning": "The least — the smallest, most overlooked among us"
+        }
+      }
+    ]
+  },
+  {
+    "id": "women-of-faith",
+    "title": "Women of Faith",
+    "description": "7 days with remarkable women of the Bible",
+    "days": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "Sarah — Faith in the Impossible",
+        "passage": "GEN.18.10-GEN.18.14",
+        "reflection": "What promise from God seems impossible in your life?",
+        "original_term": {
+          "text": "שָׂרָה",
+          "transliteration": "Sarah",
+          "language": "hebrew",
+          "strong": "H8283",
+          "meaning": "Princess — a mother of nations, named by God Himself"
+        }
+      },
+      {
+        "day": 2,
+        "title": "Ruth — Loyalty and Redemption",
+        "passage": "RUT.1.16-RUT.1.18",
+        "reflection": "What does radical loyalty look like in your relationships?",
+        "original_term": {
+          "text": "רוּת",
+          "transliteration": "Ruth",
+          "language": "hebrew",
+          "strong": "H7327",
+          "meaning": "Friend, companion — loyalty that crosses every boundary"
+        }
+      },
+      {
+        "day": 3,
+        "title": "Esther — Courage for Such a Time",
+        "passage": "EST.4.12-EST.4.17",
+        "reflection": "Where has God placed you 'for such a time as this'?",
+        "original_term": {
+          "text": "אֶסְתֵּר",
+          "transliteration": "Esther",
+          "language": "hebrew",
+          "strong": "H635",
+          "meaning": "Star — hidden beauty and courage revealed at the right moment"
+        }
+      },
+      {
+        "day": 4,
+        "title": "Mary — Surrendered to God's Plan",
+        "passage": "LUK.1.26-LUK.1.38",
+        "reflection": "Can you say 'let it be to me according to your word' today?",
+        "original_term": {
+          "text": "Μαριάμ",
+          "transliteration": "Mariam",
+          "language": "greek",
+          "strong": "G3137",
+          "meaning": "From Hebrew Miriam — exalted one, chosen vessel of grace"
+        }
+      },
+      {
+        "day": 5,
+        "title": "Hannah — Prayer from the Heart",
+        "passage": "1SA.1.9-1SA.1.18",
+        "reflection": "What deep desire have you poured out before God?",
+        "original_term": {
+          "text": "חַנָּה",
+          "transliteration": "Channah",
+          "language": "hebrew",
+          "strong": "H2584",
+          "meaning": "Grace, favor — a heart poured out in prayer before God"
+        }
+      },
+      {
+        "day": 6,
+        "title": "Deborah — Leading with Wisdom",
+        "passage": "JDG.4.4-JDG.4.9",
+        "reflection": "How can you lead with courage and wisdom in your sphere?",
+        "original_term": {
+          "text": "דְּבוֹרָה",
+          "transliteration": "Devorah",
+          "language": "hebrew",
+          "strong": "H1683",
+          "meaning": "Bee — industrious, purposeful, a leader who brings order"
+        }
+      },
+      {
+        "day": 7,
+        "title": "Mary Magdalene — First Witness",
+        "passage": "JHN.20.11-JHN.20.18",
+        "reflection": "What has your encounter with the risen Christ meant to you?",
+        "original_term": {
+          "text": "Μαγδαληνή",
+          "transliteration": "Magdalēnē",
+          "language": "greek",
+          "strong": "G3094",
+          "meaning": "Of Magdala — the first witness to the resurrection"
+        }
+      }
+    ]
+  },
+  {
+    "id": "armor-of-god",
+    "title": "The Armor of God",
+    "description": "7 days studying spiritual warfare from Ephesians 6",
+    "days": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "The Battle Is Real",
+        "passage": "EPH.6.10-EPH.6.13",
+        "reflection": "Are you aware of the spiritual battle around you?",
+        "original_term": {
+          "text": "πανοπλία",
+          "transliteration": "Panoplia",
+          "language": "greek",
+          "strong": "G3833",
+          "meaning": "Full armor — the complete set of weapons for a soldier of God"
+        }
+      },
+      {
+        "day": 2,
+        "title": "Belt of Truth",
+        "passage": "EPH.6.14-EPH.6.14",
+        "reflection": "Where do you need to stand firm in truth today?",
+        "original_term": {
+          "text": "ἀλήθεια",
+          "transliteration": "Alētheia",
+          "language": "greek",
+          "strong": "G225",
+          "meaning": "Truth — reality as God sees it, the opposite of deception"
+        }
+      },
+      {
+        "day": 3,
+        "title": "Breastplate of Righteousness",
+        "passage": "EPH.6.14-EPH.6.14",
+        "reflection": "How does living righteously protect your heart?",
+        "original_term": {
+          "text": "δικαιοσύνη",
+          "transliteration": "Dikaiosynē",
+          "language": "greek",
+          "strong": "G1343",
+          "meaning": "Righteousness — right standing with God that guards the heart"
+        }
+      },
+      {
+        "day": 4,
+        "title": "Shoes of the Gospel of Peace",
+        "passage": "EPH.6.15-EPH.6.15",
+        "reflection": "Are you ready to share the peace of Christ with others?",
+        "original_term": {
+          "text": "εἰρήνη",
+          "transliteration": "Eirēnē",
+          "language": "greek",
+          "strong": "G1515",
+          "meaning": "Peace — wholeness and harmony, the gospel's firm footing"
+        }
+      },
+      {
+        "day": 5,
+        "title": "Shield of Faith",
+        "passage": "EPH.6.16-EPH.6.16",
+        "reflection": "What fiery darts has your faith extinguished recently?",
+        "original_term": {
+          "text": "πίστις",
+          "transliteration": "Pistis",
+          "language": "greek",
+          "strong": "G4102",
+          "meaning": "Faith — trust, conviction, reliance on God's promises"
+        }
+      },
+      {
+        "day": 6,
+        "title": "Helmet of Salvation",
+        "passage": "EPH.6.17-EPH.6.17",
+        "reflection": "How does the assurance of salvation protect your mind?",
+        "original_term": {
+          "text": "σωτηρία",
+          "transliteration": "Sōtēria",
+          "language": "greek",
+          "strong": "G4991",
+          "meaning": "Salvation — deliverance, preservation, the helmet that guards the mind"
+        }
+      },
+      {
+        "day": 7,
+        "title": "Sword of the Spirit",
+        "passage": "EPH.6.17-EPH.6.18",
+        "reflection": "How well do you know God's Word for when you need it most?",
+        "original_term": {
+          "text": "μάχαιρα",
+          "transliteration": "Machaira",
+          "language": "greek",
+          "strong": "G3162",
+          "meaning": "Sword — a short blade for close combat; the Word of God in action"
+        }
+      }
+    ]
+  }
+]

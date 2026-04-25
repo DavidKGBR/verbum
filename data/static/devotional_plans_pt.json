@@ -1,0 +1,627 @@
+[
+  {
+    "id": "names-of-god",
+    "title": "Nomes de Deus",
+    "description": "Conheça Deus através de seus nomes — 7 dias explorando quem Ele é",
+    "days": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "Elohim — O Criador",
+        "passage": "GEN.1.1-GEN.1.5",
+        "reflection": "O que significa que Deus é a origem de tudo?",
+        "original_term": {
+          "text": "אֱלֹהִים",
+          "transliteration": "Elohim",
+          "language": "hebrew",
+          "strong": "H430",
+          "meaning": "Deus (plural de majestade) — o Criador, a divindade suprema"
+        }
+      },
+      {
+        "day": 2,
+        "title": "Yahweh — O Auto-Existente",
+        "passage": "EXO.3.13-EXO.3.15",
+        "reflection": "Como a natureza eterna de Deus afeta a sua confiança Nele?",
+        "original_term": {
+          "text": "יהוה",
+          "transliteration": "YHWH",
+          "language": "hebrew",
+          "strong": "H3068",
+          "meaning": "O SENHOR — o nome eterno e auto-existente da aliança de Deus"
+        }
+      },
+      {
+        "day": 3,
+        "title": "El Shaddai — Deus Todo-Poderoso",
+        "passage": "GEN.17.1-GEN.17.8",
+        "reflection": "Onde você precisa hoje do poder todo-poderoso de Deus na sua vida?",
+        "original_term": {
+          "text": "אֵל שַׁדַּי",
+          "transliteration": "El Shaddai",
+          "language": "hebrew",
+          "strong": "H410 + H7706",
+          "meaning": "Deus Todo-Poderoso — o Deus totalmente suficiente e sobrepujante"
+        }
+      },
+      {
+        "day": 4,
+        "title": "Jeová Jiré — O SENHOR Proverá",
+        "passage": "GEN.22.9-GEN.22.14",
+        "reflection": "Quando Deus proveu para você de uma maneira inesperada?",
+        "original_term": {
+          "text": "יהוה יִרְאֶה",
+          "transliteration": "YHWH Yir'eh",
+          "language": "hebrew",
+          "strong": "H3068 + H7200",
+          "meaning": "O SENHOR verá / proverá — Deus que enxerga a necessidade e a supre"
+        }
+      },
+      {
+        "day": 5,
+        "title": "Jeová Rafa — O SENHOR Que Sara",
+        "passage": "EXO.15.22-EXO.15.27",
+        "reflection": "Que áreas da sua vida precisam do toque de cura de Deus?",
+        "original_term": {
+          "text": "יהוה רָפָא",
+          "transliteration": "YHWH Rapha",
+          "language": "hebrew",
+          "strong": "H3068 + H7495",
+          "meaning": "O SENHOR que sara — Deus médico do corpo e da alma"
+        }
+      },
+      {
+        "day": 6,
+        "title": "Jeová Shalom — O SENHOR É Paz",
+        "passage": "JDG.6.22-JDG.6.24",
+        "reflection": "Como você pode experimentar a paz de Deus em tempos de ansiedade?",
+        "original_term": {
+          "text": "יהוה שָׁלוֹם",
+          "transliteration": "YHWH Shalom",
+          "language": "hebrew",
+          "strong": "H3068 + H7965",
+          "meaning": "O SENHOR é paz — completude, integridade, bem-estar que vem de Deus"
+        }
+      },
+      {
+        "day": 7,
+        "title": "Emanuel — Deus Conosco",
+        "passage": "MAT.1.21-MAT.1.23",
+        "reflection": "Como saber que Deus está presente muda sua perspectiva hoje?",
+        "original_term": {
+          "text": "עִמָּנוּאֵל",
+          "transliteration": "Immanuel",
+          "language": "hebrew",
+          "strong": "H6005",
+          "meaning": "Deus conosco — a promessa da presença divina entre seu povo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "psalms-of-comfort",
+    "title": "Salmos de Conforto",
+    "description": "10 dias encontrando paz e força nos Salmos",
+    "days": 10,
+    "readings": [
+      {
+        "day": 1,
+        "title": "O SENHOR É Meu Pastor",
+        "passage": "PSA.23.1-PSA.23.6",
+        "reflection": "O que significa ter Deus como seu pastor hoje?",
+        "original_term": {
+          "text": "רֹעֶה",
+          "transliteration": "Ro'eh",
+          "language": "hebrew",
+          "strong": "H7462",
+          "meaning": "Pastor — aquele que cuida, alimenta e protege o rebanho"
+        }
+      },
+      {
+        "day": 2,
+        "title": "Deus É Nosso Refúgio",
+        "passage": "PSA.46.1-PSA.46.11",
+        "reflection": "Para onde você corre quando a vida parece esmagadora?",
+        "original_term": {
+          "text": "מַחֲסֶה",
+          "transliteration": "Machaseh",
+          "language": "hebrew",
+          "strong": "H4268",
+          "meaning": "Refúgio, abrigo — lugar de proteção e confiança"
+        }
+      },
+      {
+        "day": 3,
+        "title": "Cria em Mim um Coração Puro",
+        "passage": "PSA.51.1-PSA.51.17",
+        "reflection": "Há algo que você precisa confessar e entregar a Deus?",
+        "original_term": {
+          "text": "טָהוֹר",
+          "transliteration": "Tahor",
+          "language": "hebrew",
+          "strong": "H2889",
+          "meaning": "Limpo, puro — sem mácula cerimonial e moralmente"
+        }
+      },
+      {
+        "day": 4,
+        "title": "Minha Alma Descansa em Deus",
+        "passage": "PSA.62.1-PSA.62.12",
+        "reflection": "O que está roubando o seu descanso, e você consegue entregá-lo?",
+        "original_term": {
+          "text": "דּוּמִיָּה",
+          "transliteration": "Dumiyyah",
+          "language": "hebrew",
+          "strong": "H1747",
+          "meaning": "Descanso, silêncio, quietude — espera serena em Deus"
+        }
+      },
+      {
+        "day": 5,
+        "title": "Quão Preciosos São Teus Pensamentos",
+        "passage": "PSA.139.1-PSA.139.18",
+        "reflection": "Como é saber que Deus conhece tudo sobre você e ainda assim o ama?",
+        "original_term": {
+          "text": "יָדַע",
+          "transliteration": "Yada",
+          "language": "hebrew",
+          "strong": "H3045",
+          "meaning": "Conhecer — conhecimento profundo, íntimo, relacional"
+        }
+      },
+      {
+        "day": 6,
+        "title": "O SENHOR Está Perto dos de Coração Quebrantado",
+        "passage": "PSA.34.1-PSA.34.22",
+        "reflection": "Você já experimentou a proximidade de Deus em uma estação difícil?",
+        "original_term": {
+          "text": "קָרוֹב",
+          "transliteration": "Qarov",
+          "language": "hebrew",
+          "strong": "H7138",
+          "meaning": "Perto, próximo — proximidade e presença íntimas"
+        }
+      },
+      {
+        "day": 7,
+        "title": "Não Temerei Mal Algum",
+        "passage": "PSA.27.1-PSA.27.14",
+        "reflection": "Que medo você pode trazer a Deus hoje?",
+        "original_term": {
+          "text": "אוֹר",
+          "transliteration": "Or",
+          "language": "hebrew",
+          "strong": "H216",
+          "meaning": "Luz — iluminação, direção, o oposto das trevas e do medo"
+        }
+      },
+      {
+        "day": 8,
+        "title": "Grande É a Tua Fidelidade",
+        "passage": "PSA.36.5-PSA.36.12",
+        "reflection": "Liste três maneiras pelas quais Deus foi fiel a você.",
+        "original_term": {
+          "text": "חֶסֶד",
+          "transliteration": "Chesed",
+          "language": "hebrew",
+          "strong": "H2617",
+          "meaning": "Benignidade, amor leal — lealdade inabalável da aliança de Deus"
+        }
+      },
+      {
+        "day": 9,
+        "title": "Ele Sara os de Coração Quebrantado",
+        "passage": "PSA.147.1-PSA.147.11",
+        "reflection": "Que pedaço quebrado do seu coração precisa da atenção de Deus?",
+        "original_term": {
+          "text": "רָפָא",
+          "transliteration": "Rapha",
+          "language": "hebrew",
+          "strong": "H7495",
+          "meaning": "Sarar, restaurar — restauração do corpo e do espírito"
+        }
+      },
+      {
+        "day": 10,
+        "title": "Louve Tudo o Que Respira ao SENHOR",
+        "passage": "PSA.150.1-PSA.150.6",
+        "reflection": "Termine essa jornada com gratidão — por que você louvará a Deus hoje?",
+        "original_term": {
+          "text": "הָלַל",
+          "transliteration": "Halal",
+          "language": "hebrew",
+          "strong": "H1984",
+          "meaning": "Louvar, brilhar — a raiz de Aleluia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "parables-of-jesus",
+    "title": "Parábolas de Jesus",
+    "description": "14 dias explorando as histórias mais poderosas de Jesus",
+    "days": 14,
+    "readings": [
+      {
+        "day": 1,
+        "title": "O Semeador",
+        "passage": "MAT.13.1-MAT.13.9",
+        "reflection": "Que tipo de solo é o seu coração neste momento?",
+        "original_term": {
+          "text": "σπείρων",
+          "transliteration": "Speirōn",
+          "language": "greek",
+          "strong": "G4687",
+          "meaning": "O semeador — aquele que espalha a semente"
+        }
+      },
+      {
+        "day": 2,
+        "title": "O Grão de Mostarda",
+        "passage": "MAT.13.31-MAT.13.32",
+        "reflection": "Onde você viu uma fé pequena produzir grandes resultados?",
+        "original_term": {
+          "text": "σίναπι",
+          "transliteration": "Sinapi",
+          "language": "greek",
+          "strong": "G4615",
+          "meaning": "Mostarda — a menor semente que cresce até se tornar a maior das ervas"
+        }
+      },
+      {
+        "day": 3,
+        "title": "O Bom Samaritano",
+        "passage": "LUK.10.25-LUK.10.37",
+        "reflection": "Quem é o próximo que precisa de ajuda hoje?",
+        "original_term": {
+          "text": "πλησίον",
+          "transliteration": "Plēsion",
+          "language": "greek",
+          "strong": "G4139",
+          "meaning": "Próximo — qualquer um perto, sem distinção étnica ou social"
+        }
+      },
+      {
+        "day": 4,
+        "title": "O Filho Pródigo",
+        "passage": "LUK.15.11-LUK.15.32",
+        "reflection": "Você se identifica mais com o irmão mais novo ou com o mais velho?",
+        "original_term": {
+          "text": "σπλαγχνίζομαι",
+          "transliteration": "Splanchnizomai",
+          "language": "greek",
+          "strong": "G4697",
+          "meaning": "Ser movido de compaixão — misericórdia visceral, das entranhas"
+        }
+      },
+      {
+        "day": 5,
+        "title": "A Ovelha Perdida",
+        "passage": "LUK.15.1-LUK.15.7",
+        "reflection": "Como é saber que Deus o persegue pessoalmente?",
+        "original_term": {
+          "text": "ἀπολωλός",
+          "transliteration": "Apolōlos",
+          "language": "greek",
+          "strong": "G622",
+          "meaning": "O perdido — aquele que pereceu ou se desviou"
+        }
+      },
+      {
+        "day": 6,
+        "title": "Os Talentos",
+        "passage": "MAT.25.14-MAT.25.30",
+        "reflection": "O que Deus lhe confiou, e como você está usando?",
+        "original_term": {
+          "text": "τάλαντον",
+          "transliteration": "Talanton",
+          "language": "greek",
+          "strong": "G5007",
+          "meaning": "Talento — peso de grande valor confiado para mordomia"
+        }
+      },
+      {
+        "day": 7,
+        "title": "O Fariseu e o Publicano",
+        "passage": "LUK.18.9-LUK.18.14",
+        "reflection": "Quando você é tentado a se comparar espiritualmente aos outros?",
+        "original_term": {
+          "text": "ἱλάσθητι",
+          "transliteration": "Hilasthēti",
+          "language": "greek",
+          "strong": "G2433",
+          "meaning": "Sê propício — fazer propiciação, mostrar graça expiatória"
+        }
+      },
+      {
+        "day": 8,
+        "title": "O Rico Insensato",
+        "passage": "LUK.12.13-LUK.12.21",
+        "reflection": "Você é rico para com Deus ou para com as posses?",
+        "original_term": {
+          "text": "ἄφρων",
+          "transliteration": "Aphrōn",
+          "language": "greek",
+          "strong": "G878",
+          "meaning": "Insensato — sem juízo, carente de percepção moral e espiritual"
+        }
+      },
+      {
+        "day": 9,
+        "title": "A Pérola de Grande Valor",
+        "passage": "MAT.13.45-MAT.13.46",
+        "reflection": "Do que você abriria mão pelo Reino?",
+        "original_term": {
+          "text": "μαργαρίτης",
+          "transliteration": "Margaritēs",
+          "language": "greek",
+          "strong": "G3135",
+          "meaning": "Pérola — tesouro de valor superior"
+        }
+      },
+      {
+        "day": 10,
+        "title": "Os Construtores Sábio e Insensato",
+        "passage": "MAT.7.24-MAT.7.27",
+        "reflection": "A sua vida está construída sobre a rocha ou sobre a areia?",
+        "original_term": {
+          "text": "πέτρα",
+          "transliteration": "Petra",
+          "language": "greek",
+          "strong": "G4073",
+          "meaning": "Rocha — fundamento de pedra maciça e inamovível"
+        }
+      },
+      {
+        "day": 11,
+        "title": "O Servo Impiedoso",
+        "passage": "MAT.18.21-MAT.18.35",
+        "reflection": "Há alguém a quem você precisa perdoar?",
+        "original_term": {
+          "text": "ἀφίημι",
+          "transliteration": "Aphiēmi",
+          "language": "greek",
+          "strong": "G863",
+          "meaning": "Perdoar, libertar — soltar uma dívida ou ofensa"
+        }
+      },
+      {
+        "day": 12,
+        "title": "O Banquete do Casamento",
+        "passage": "MAT.22.1-MAT.22.14",
+        "reflection": "Você está vivendo como quem foi convidado para o banquete?",
+        "original_term": {
+          "text": "γάμος",
+          "transliteration": "Gamos",
+          "language": "greek",
+          "strong": "G1062",
+          "meaning": "Banquete de casamento — a celebração alegre da união pactual"
+        }
+      },
+      {
+        "day": 13,
+        "title": "A Videira e os Ramos",
+        "passage": "JHN.15.1-JHN.15.11",
+        "reflection": "Quão conectado você se sente à Videira neste momento?",
+        "original_term": {
+          "text": "ἄμπελος",
+          "transliteration": "Ampelos",
+          "language": "greek",
+          "strong": "G288",
+          "meaning": "Videira — fonte de vida e frutificação"
+        }
+      },
+      {
+        "day": 14,
+        "title": "As Ovelhas e os Bodes",
+        "passage": "MAT.25.31-MAT.25.46",
+        "reflection": "Como você está servindo 'aos menores' na sua comunidade?",
+        "original_term": {
+          "text": "ἐλάχιστος",
+          "transliteration": "Elachistos",
+          "language": "greek",
+          "strong": "G1646",
+          "meaning": "O menor — o mais pequeno, o mais esquecido entre nós"
+        }
+      }
+    ]
+  },
+  {
+    "id": "women-of-faith",
+    "title": "Mulheres de Fé",
+    "description": "7 dias com mulheres extraordinárias da Bíblia",
+    "days": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "Sara — Fé no Impossível",
+        "passage": "GEN.18.10-GEN.18.14",
+        "reflection": "Que promessa de Deus parece impossível na sua vida?",
+        "original_term": {
+          "text": "שָׂרָה",
+          "transliteration": "Sarah",
+          "language": "hebrew",
+          "strong": "H8283",
+          "meaning": "Princesa — mãe de nações, nomeada pelo próprio Deus"
+        }
+      },
+      {
+        "day": 2,
+        "title": "Rute — Lealdade e Redenção",
+        "passage": "RUT.1.16-RUT.1.18",
+        "reflection": "Como é a lealdade radical nos seus relacionamentos?",
+        "original_term": {
+          "text": "רוּת",
+          "transliteration": "Ruth",
+          "language": "hebrew",
+          "strong": "H7327",
+          "meaning": "Amiga, companheira — lealdade que atravessa toda fronteira"
+        }
+      },
+      {
+        "day": 3,
+        "title": "Ester — Coragem para uma Tal Hora",
+        "passage": "EST.4.12-EST.4.17",
+        "reflection": "Onde Deus te colocou 'para um tempo como este'?",
+        "original_term": {
+          "text": "אֶסְתֵּר",
+          "transliteration": "Esther",
+          "language": "hebrew",
+          "strong": "H635",
+          "meaning": "Estrela — beleza e coragem ocultas reveladas no momento certo"
+        }
+      },
+      {
+        "day": 4,
+        "title": "Maria — Rendida ao Plano de Deus",
+        "passage": "LUK.1.26-LUK.1.38",
+        "reflection": "Você consegue dizer 'faça-se em mim segundo a tua palavra' hoje?",
+        "original_term": {
+          "text": "Μαριάμ",
+          "transliteration": "Mariam",
+          "language": "greek",
+          "strong": "G3137",
+          "meaning": "Do hebraico Miriã — exaltada, vaso escolhido de graça"
+        }
+      },
+      {
+        "day": 5,
+        "title": "Ana — Oração do Coração",
+        "passage": "1SA.1.9-1SA.1.18",
+        "reflection": "Que desejo profundo você derramou diante de Deus?",
+        "original_term": {
+          "text": "חַנָּה",
+          "transliteration": "Channah",
+          "language": "hebrew",
+          "strong": "H2584",
+          "meaning": "Graça, favor — coração derramado em oração diante de Deus"
+        }
+      },
+      {
+        "day": 6,
+        "title": "Débora — Liderando com Sabedoria",
+        "passage": "JDG.4.4-JDG.4.9",
+        "reflection": "Como você pode liderar com coragem e sabedoria na sua esfera?",
+        "original_term": {
+          "text": "דְּבוֹרָה",
+          "transliteration": "Devorah",
+          "language": "hebrew",
+          "strong": "H1683",
+          "meaning": "Abelha — diligente, intencional, líder que traz ordem"
+        }
+      },
+      {
+        "day": 7,
+        "title": "Maria Madalena — Primeira Testemunha",
+        "passage": "JHN.20.11-JHN.20.18",
+        "reflection": "O que seu encontro com o Cristo ressuscitado significou para você?",
+        "original_term": {
+          "text": "Μαγδαληνή",
+          "transliteration": "Magdalēnē",
+          "language": "greek",
+          "strong": "G3094",
+          "meaning": "De Magdala — a primeira testemunha da ressurreição"
+        }
+      }
+    ]
+  },
+  {
+    "id": "armor-of-god",
+    "title": "A Armadura de Deus",
+    "description": "7 dias estudando a guerra espiritual em Efésios 6",
+    "days": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "A Batalha É Real",
+        "passage": "EPH.6.10-EPH.6.13",
+        "reflection": "Você está consciente da batalha espiritual ao seu redor?",
+        "original_term": {
+          "text": "πανοπλία",
+          "transliteration": "Panoplia",
+          "language": "greek",
+          "strong": "G3833",
+          "meaning": "Armadura completa — o conjunto pleno de armas do soldado de Deus"
+        }
+      },
+      {
+        "day": 2,
+        "title": "Cinto da Verdade",
+        "passage": "EPH.6.14-EPH.6.14",
+        "reflection": "Onde você precisa permanecer firme na verdade hoje?",
+        "original_term": {
+          "text": "ἀλήθεια",
+          "transliteration": "Alētheia",
+          "language": "greek",
+          "strong": "G225",
+          "meaning": "Verdade — a realidade como Deus a vê, o oposto da mentira"
+        }
+      },
+      {
+        "day": 3,
+        "title": "Couraça da Justiça",
+        "passage": "EPH.6.14-EPH.6.14",
+        "reflection": "Como viver com retidão protege o seu coração?",
+        "original_term": {
+          "text": "δικαιοσύνη",
+          "transliteration": "Dikaiosynē",
+          "language": "greek",
+          "strong": "G1343",
+          "meaning": "Justiça — a reta postura diante de Deus que guarda o coração"
+        }
+      },
+      {
+        "day": 4,
+        "title": "Sandálias do Evangelho da Paz",
+        "passage": "EPH.6.15-EPH.6.15",
+        "reflection": "Você está pronto para compartilhar a paz de Cristo com os outros?",
+        "original_term": {
+          "text": "εἰρήνη",
+          "transliteration": "Eirēnē",
+          "language": "greek",
+          "strong": "G1515",
+          "meaning": "Paz — integridade e harmonia, o firme pisar do evangelho"
+        }
+      },
+      {
+        "day": 5,
+        "title": "Escudo da Fé",
+        "passage": "EPH.6.16-EPH.6.16",
+        "reflection": "Que dardos inflamados a sua fé apagou recentemente?",
+        "original_term": {
+          "text": "πίστις",
+          "transliteration": "Pistis",
+          "language": "greek",
+          "strong": "G4102",
+          "meaning": "Fé — confiança, convicção, dependência nas promessas de Deus"
+        }
+      },
+      {
+        "day": 6,
+        "title": "Capacete da Salvação",
+        "passage": "EPH.6.17-EPH.6.17",
+        "reflection": "Como a certeza da salvação protege a sua mente?",
+        "original_term": {
+          "text": "σωτηρία",
+          "transliteration": "Sōtēria",
+          "language": "greek",
+          "strong": "G4991",
+          "meaning": "Salvação — libertação, preservação, o capacete que guarda a mente"
+        }
+      },
+      {
+        "day": 7,
+        "title": "Espada do Espírito",
+        "passage": "EPH.6.17-EPH.6.18",
+        "reflection": "Quão bem você conhece a Palavra de Deus para quando mais precisar?",
+        "original_term": {
+          "text": "μάχαιρα",
+          "transliteration": "Machaira",
+          "language": "greek",
+          "strong": "G3162",
+          "meaning": "Espada — lâmina curta para combate corpo a corpo; a Palavra de Deus em ação"
+        }
+      }
+    ]
+  }
+]

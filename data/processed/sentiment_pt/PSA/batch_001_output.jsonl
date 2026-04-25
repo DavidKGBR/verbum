@@ -1,0 +1,46 @@
+{"verse_id": "PSA.1.1", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.1.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.1.3", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.1.4", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.1.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.1.6", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5, "notes": "mixed: approval + destruction"}
+{"verse_id": "PSA.2.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.5, "notes": null}
+{"verse_id": "PSA.2.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.2.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.2.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.5, "notes": "divine mockery — ironic triumph"}
+{"verse_id": "PSA.2.5", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.2.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.2.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.2.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.2.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.2.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": "cautionary exhortation"}
+{"verse_id": "PSA.2.11", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.5, "notes": "mixed: exultation + awe"}
+{"verse_id": "PSA.2.12", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.5, "notes": "threat + closing blessing"}
+{"verse_id": "PSA.3.1", "polarity_pt": -0.6, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.3.2", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.3.3", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.3.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.3.5", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.3.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.3.7", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": "imprecatory + distressed cry"}
+{"verse_id": "PSA.3.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.4.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": "plea from distress w/ trust"}
+{"verse_id": "PSA.4.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.4.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.4.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.6, "notes": "moral instruction"}
+{"verse_id": "PSA.4.5", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.4.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": "doubt + plea for light"}
+{"verse_id": "PSA.4.7", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.4.8", "polarity_pt": 0.6, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.5.1", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.5.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "PSA.5.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "prayer with hope"}
+{"verse_id": "PSA.5.4", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "PSA.5.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "PSA.5.6", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.5.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "'temor' = reverential awe"}
+{"verse_id": "PSA.5.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "PSA.5.9", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.5.10", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": "imprecatory"}
+{"verse_id": "PSA.5.11", "polarity_pt": 0.8, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "PSA.5.12", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.9, "notes": null}

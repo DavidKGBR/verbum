@@ -1,0 +1,75 @@
+# ─── Frontend ─────────────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ─── Data (large files — downloaded at runtime, cached locally) ───────────────
+data/raw/
+data/processed/*.csv
+data/analytics/*.csv
+data/analytics/*.duckdb
+data/analytics/*.duckdb.wal
+data/audio/
+# Phantom DB files — the REAL database is data/analytics/bible.duckdb.
+# data/bible.db is an empty placeholder left by old scripts; never commit it.
+data/*.db
+data/*.duckdb
+data/*.duckdb.wal
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Claude Code local workspace ──────────────────────────────────────────────
+.claude/
+CLAUDE.md
+
+# ─── Firebase Hosting deploy cache ────────────────────────────────────────────
+.firebase/
+
+# ─── Environment ──────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.production
+.env.development
+.venv/
+venv/
+env/
+
+# ─── Testing ──────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+verbum_plan.md
+verbum_presentation.md
+
+# ─── Linting ──────────────────────────────────────────────────────────────────
+.mypy_cache/
+.ruff_cache/
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── GCP credentials ─────────────────────────────────────────────────────────
+*.json
+!frontend/src/i18n/*.json
+!data/static/**/*.json
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/analytics/.gitkeep
+!firebase.json
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/tsconfig*.json

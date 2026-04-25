@@ -1,0 +1,300 @@
+{"verse_id": "ACT.17.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "ACT.17.4", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.17.5", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.17.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.17.7", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.17.8", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.17.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.17.12", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.17.13", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.17.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.16", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.17.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.17.19", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.17.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.24", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.25", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.17.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.28", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.17.29", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.30", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.17.31", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.17.32", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "ACT.17.33", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.17.34", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.18.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.2", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.18.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.18.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.6", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.18.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.18.8", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.18.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.18.10", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.18.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.12", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.18.13", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.18.14", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.18.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.17", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.18.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.18.19", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.22", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.18.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.24", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.18.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.18.26", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.18.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.18.28", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.2", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.19.3", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.4", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.9", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.19.10", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.19.11", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.12", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.19.13", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.19.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.15", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.19.16", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.19.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.19", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.19.20", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.19.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.24", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.25", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.26", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.27", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.19.28", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.19.29", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.30", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.19.31", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.32", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.33", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.34", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.35", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.19.36", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.37", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.19.38", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.19.39", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.19.40", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.19.41", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.3", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.20.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.7", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.20.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.12", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.13", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.16", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.19", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.20.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.20.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.23", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.20.24", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.20.25", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.26", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.27", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.28", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.20.29", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.30", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.31", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.20.32", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.20.33", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.34", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.20.35", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.20.36", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.20.37", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.20.38", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.2", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.4", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.5", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.21.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.7", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.8", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.10", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.21.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.13", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.21.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.16", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.17", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.21.18", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.19", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.20", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.21.21", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.24", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.25", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.21.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.28", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.21.29", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.30", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.31", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.32", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.21.33", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.34", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.21.35", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.21.36", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.37", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.21.38", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.21.39", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.21.40", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.22.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.2", "polarity_pt": -0.2, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.22.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.22.4", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.22.5", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.22.6", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.22.7", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.22.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.22.12", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.22.13", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.14", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.22.15", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.16", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.22.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.22.19", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.22.20", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.22.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.22", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.22.23", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.22.24", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.22.25", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.22.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.22.28", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.22.29", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.22.30", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.23.1", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.2", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.3", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.4", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.6", "polarity_pt": 0.2, "label_pt": "positive", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.23.7", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.23.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.23.9", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.23.10", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.23.11", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.12", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.23.13", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.23.14", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.23.15", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.16", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "mixed grief + hope"}
+{"verse_id": "ACT.23.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.18", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.23.19", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.20", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.23.22", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.23", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.23.24", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.25", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.23.26", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.27", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.23.28", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.29", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.23.30", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.31", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.23.32", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.33", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.34", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.23.35", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.1", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.24.2", "polarity_pt": 1.0, "label_pt": "positive", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.24.3", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.4", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.5", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.24.6", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.7", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.24.9", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.24.10", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.4, "notes": "afetos mistos"}
+{"verse_id": "ACT.24.11", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.24.12", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.13", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.14", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.24.15", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.24.16", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.17", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.18", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.20", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.21", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.24.22", "polarity_pt": 0.7, "label_pt": "positive", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.24.23", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.24.24", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.25", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.24.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.24.27", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.1", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.2", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.3", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.25.4", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.5", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.6", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.7", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.8, "notes": null}
+{"verse_id": "ACT.25.8", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.9", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.10", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.11", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.25.12", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.13", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.14", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.15", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.7, "notes": null}
+{"verse_id": "ACT.25.16", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.9, "notes": null}
+{"verse_id": "ACT.25.17", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.18", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.19", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.20", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.21", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.22", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.23", "polarity_pt": 0.4, "label_pt": "positive", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.24", "polarity_pt": -0.4, "label_pt": "negative", "confidence": 0.6, "notes": null}
+{"verse_id": "ACT.25.25", "polarity_pt": -1.0, "label_pt": "negative", "confidence": 0.6, "notes": "EN↔PT divergem"}
+{"verse_id": "ACT.25.26", "polarity_pt": 0.0, "label_pt": "neutral", "confidence": 0.5, "notes": null}
+{"verse_id": "ACT.25.27", "polarity_pt": -0.7, "label_pt": "negative", "confidence": 0.7, "notes": null}

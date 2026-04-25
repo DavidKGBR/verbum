@@ -1,0 +1,82 @@
+{
+  "passage_id": "lords_prayer",
+  "source": "Peshitta (Eastern Syriac NT)",
+  "license": "Public Domain",
+  "credit": "Peshitta NT — tradição aramáica oriental. Transliterações baseadas em Lamsa (1933) e Douglas-Klotz (Abwoon Network).",
+  "verses": [
+    {
+      "verse_ref": "MAT.6.9",
+      "verse_number": 9,
+      "words": [
+        { "word_position": 1,  "script": "ܗܟܢܐ",     "transliteration": "hakhana",     "gloss": "thus",              "gloss_pt": "assim",              "gloss_es": "así" },
+        { "word_position": 2,  "script": "ܗܟܝܠ",     "transliteration": "hakhil",      "gloss": "therefore",         "gloss_pt": "portanto",           "gloss_es": "por tanto" },
+        { "word_position": 3,  "script": "ܨܠܘ",      "transliteration": "tsalo",       "gloss": "pray",              "gloss_pt": "orai",               "gloss_es": "orad" },
+        { "word_position": 4,  "script": "ܐܢܬܘܢ",    "transliteration": "antun",       "gloss": "you",               "gloss_pt": "vós",                "gloss_es": "vosotros" },
+        { "word_position": 5,  "script": "ܐܒܘܢ",     "transliteration": "Abwoon",      "gloss": "Our Father",        "gloss_pt": "Pai nosso",          "gloss_es": "Padre nuestro" },
+        { "word_position": 6,  "script": "ܕܒܫܡܝܐ",   "transliteration": "d'bwashmaya", "gloss": "who art in heaven", "gloss_pt": "que estás nos céus", "gloss_es": "que estás en los cielos" },
+        { "word_position": 7,  "script": "ܢܬܩܕܫ",    "transliteration": "nethqadash",  "gloss": "hallowed be",       "gloss_pt": "santificado seja",   "gloss_es": "santificado sea" },
+        { "word_position": 8,  "script": "ܫܡܟ",      "transliteration": "shmakh",      "gloss": "thy name",          "gloss_pt": "teu nome",           "gloss_es": "tu nombre" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.10",
+      "verse_number": 10,
+      "words": [
+        { "word_position": 1,  "script": "ܬܐܬܐ",     "transliteration": "teytey",      "gloss": "come",              "gloss_pt": "venha",              "gloss_es": "venga" },
+        { "word_position": 2,  "script": "ܡܠܟܘܬܟ",   "transliteration": "malkuthakh",  "gloss": "thy kingdom",       "gloss_pt": "teu reino",          "gloss_es": "tu reino" },
+        { "word_position": 3,  "script": "ܢܗܘܐ",     "transliteration": "nehweh",      "gloss": "be done",           "gloss_pt": "seja feita",         "gloss_es": "sea hecha" },
+        { "word_position": 4,  "script": "ܨܒܝܢܟ",    "transliteration": "tsebyanak",   "gloss": "thy will",          "gloss_pt": "tua vontade",        "gloss_es": "tu voluntad" },
+        { "word_position": 5,  "script": "ܐܝܟܢܐ",    "transliteration": "aykanna",     "gloss": "as",                "gloss_pt": "assim",              "gloss_es": "así" },
+        { "word_position": 6,  "script": "ܕܒܫܡܝܐ",   "transliteration": "d'bwashmaya", "gloss": "in heaven",         "gloss_pt": "nos céus",           "gloss_es": "en los cielos" },
+        { "word_position": 7,  "script": "ܐܦ",       "transliteration": "aph",         "gloss": "also",              "gloss_pt": "como também",        "gloss_es": "también" },
+        { "word_position": 8,  "script": "ܒܐܪܥܐ",    "transliteration": "b'ar'a",      "gloss": "on earth",          "gloss_pt": "na terra",           "gloss_es": "en la tierra" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.11",
+      "verse_number": 11,
+      "words": [
+        { "word_position": 1,  "script": "ܗܒ",       "transliteration": "hab",         "gloss": "give",              "gloss_pt": "dá",                 "gloss_es": "danos" },
+        { "word_position": 2,  "script": "ܠܢ",       "transliteration": "lan",         "gloss": "us",                "gloss_pt": "a nós",              "gloss_es": "a nosotros" },
+        { "word_position": 3,  "script": "ܠܚܡܐ",     "transliteration": "lakhma",      "gloss": "bread",             "gloss_pt": "pão",                "gloss_es": "pan" },
+        { "word_position": 4,  "script": "ܕܣܘܢܩܢܢ",  "transliteration": "d'sunqanan",  "gloss": "of our need",       "gloss_pt": "de nossa necessidade","gloss_es": "de nuestra necesidad" },
+        { "word_position": 5,  "script": "ܝܘܡܢܐ",    "transliteration": "yawmana",     "gloss": "today",             "gloss_pt": "hoje",               "gloss_es": "hoy" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.12",
+      "verse_number": 12,
+      "words": [
+        { "word_position": 1,  "script": "ܘܫܒܘܩ",    "transliteration": "washbuq",     "gloss": "and forgive",       "gloss_pt": "e perdoa",           "gloss_es": "y perdona" },
+        { "word_position": 2,  "script": "ܠܢ",       "transliteration": "lan",         "gloss": "us",                "gloss_pt": "a nós",              "gloss_es": "a nosotros" },
+        { "word_position": 3,  "script": "ܚܘܒܝܢ",    "transliteration": "khawbayn",    "gloss": "our debts",         "gloss_pt": "nossas dívidas",     "gloss_es": "nuestras deudas" },
+        { "word_position": 4,  "script": "ܐܝܟܢܐ",    "transliteration": "aykanna",     "gloss": "as",                "gloss_pt": "assim",              "gloss_es": "así" },
+        { "word_position": 5,  "script": "ܕܐܦ",      "transliteration": "d'aph",       "gloss": "also",              "gloss_pt": "como também",        "gloss_es": "también" },
+        { "word_position": 6,  "script": "ܚܢܢ",      "transliteration": "khnan",       "gloss": "we",                "gloss_pt": "nós",                "gloss_es": "nosotros" },
+        { "word_position": 7,  "script": "ܫܒܩܢ",     "transliteration": "shbaqan",     "gloss": "forgive",           "gloss_pt": "perdoamos",          "gloss_es": "perdonamos" },
+        { "word_position": 8,  "script": "ܠܚܝܒܝܢ",   "transliteration": "l'khayyabayn","gloss": "our debtors",       "gloss_pt": "aos nossos devedores","gloss_es": "a nuestros deudores" }
+      ]
+    },
+    {
+      "verse_ref": "MAT.6.13",
+      "verse_number": 13,
+      "words": [
+        { "word_position": 1,  "script": "ܘܠܐ",      "transliteration": "wela",        "gloss": "and not",           "gloss_pt": "e não",              "gloss_es": "y no" },
+        { "word_position": 2,  "script": "ܬܥܠܢ",     "transliteration": "ta'lan",      "gloss": "lead us",           "gloss_pt": "nos leves",          "gloss_es": "nos lleves" },
+        { "word_position": 3,  "script": "ܠܢܣܝܘܢܐ",  "transliteration": "l'nesyuna",   "gloss": "into temptation",   "gloss_pt": "à tentação",         "gloss_es": "a la tentación" },
+        { "word_position": 4,  "script": "ܐܠܐ",      "transliteration": "ela",         "gloss": "but",               "gloss_pt": "mas",                "gloss_es": "mas" },
+        { "word_position": 5,  "script": "ܦܨܢ",      "transliteration": "patsan",      "gloss": "deliver us",        "gloss_pt": "livra-nos",          "gloss_es": "líbranos" },
+        { "word_position": 6,  "script": "ܡܢ",       "transliteration": "men",         "gloss": "from",              "gloss_pt": "de",                 "gloss_es": "del" },
+        { "word_position": 7,  "script": "ܒܝܫܐ",     "transliteration": "bisha",       "gloss": "the evil one",      "gloss_pt": "o mal",              "gloss_es": "mal" },
+        { "word_position": 8,  "script": "ܕܕܝܠܟ",    "transliteration": "d'dilakh",    "gloss": "for thine is",      "gloss_pt": "porque tua",         "gloss_es": "porque tuyo es" },
+        { "word_position": 9,  "script": "ܗܝ",       "transliteration": "hi",          "gloss": "is",                "gloss_pt": "é",                  "gloss_es": "el" },
+        { "word_position": 10, "script": "ܡܠܟܘܬܐ",   "transliteration": "malkutha",    "gloss": "the kingdom",       "gloss_pt": "o reino",            "gloss_es": "reino" },
+        { "word_position": 11, "script": "ܘܚܝܠܐ",    "transliteration": "w'khayla",    "gloss": "and the power",     "gloss_pt": "e o poder",          "gloss_es": "y el poder" },
+        { "word_position": 12, "script": "ܘܬܫܒܘܚܬܐ", "transliteration": "w'teshbukhta","gloss": "and the glory",     "gloss_pt": "e a glória",         "gloss_es": "y la gloria" },
+        { "word_position": 13, "script": "ܠܥܠܡ",     "transliteration": "l'alam",      "gloss": "forever",           "gloss_pt": "para o século",      "gloss_es": "por los siglos" },
+        { "word_position": 14, "script": "ܥܠܡܝܢ",    "transliteration": "almin",       "gloss": "and ever",          "gloss_pt": "dos séculos",        "gloss_es": "de los siglos" },
+        { "word_position": 15, "script": "ܐܡܝܢ",     "transliteration": "amin",        "gloss": "Amen",              "gloss_pt": "Amém",               "gloss_es": "Amén" }
+      ]
+    }
+  ]
+}

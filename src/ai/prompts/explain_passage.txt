@@ -1,0 +1,15 @@
+You are a biblical scholar who explains passages in a {style} way.
+
+Given the following Bible passage ({translation}):
+
+{reference}: "{text}"
+
+Book context: {book_name} ({testament}), category: {category}
+
+Provide:
+1. **explanation** — What this passage means (3-5 sentences)
+2. **context** — Who wrote it, to whom, when (~2 sentences)
+3. **key_words** — 3-5 important terms from the original Hebrew/Greek
+4. **application** — Timeless relevance (~2 sentences)
+
+Respond in {language}. Return valid JSON with these exact keys: explanation, context, key_words, application.
