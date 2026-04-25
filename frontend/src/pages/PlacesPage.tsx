@@ -9,7 +9,7 @@ import {
   type PlaceTypeCount,
 } from "../services/api";
 import { useI18n } from "../i18n/i18nContext";
-import { placeName, resolvePlaceSlugsByLocaleQuery } from "../i18n/placeNames";
+import { placeName, placeTypeLabel, resolvePlaceSlugsByLocaleQuery } from "../i18n/placeNames";
 import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
 
@@ -152,7 +152,7 @@ function PlaceDetail({ detail }: { detail: BiblicalPlace }) {
                 {displayName}
               </h2>
               {detail.place_type && (
-                <span className="text-white/70 text-xs">{detail.place_type}</span>
+                <span className="text-white/70 text-xs">{placeTypeLabel(detail.place_type, t)}</span>
               )}
             </div>
             <span className="text-white/40 text-[8px]">
@@ -354,6 +354,9 @@ export default function PlacesPage() {
         q: query || undefined,
         slugs: resolvedSlugs.length ? resolvedSlugs.join(",") : undefined,
         place_type: typeFilter || undefined,
+        // Hide OpenBible's 0-verse duplicate geocoding entries by default
+        // (they cause "Bethlehem 1/2/3" noise next to the canonical entries).
+        min_verses: 1,
         limit: 50,
       })
         .then((data) => {
@@ -437,7 +440,7 @@ export default function PlacesPage() {
                 : "border-[var(--color-gold)]/30 hover:bg-[var(--color-gold)]/10 text-[var(--color-gold-dark)]"
             }`}
           >
-            {tp.place_type} ({tp.count})
+            {placeTypeLabel(tp.place_type, t)} ({tp.count})
           </button>
         ))}
         <span className="text-xs opacity-40 self-center ml-2">
@@ -534,7 +537,7 @@ export default function PlacesPage() {
                       </h3>
                       {place.place_type && (
                         <span className="text-[9px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700">
-                          {place.place_type}
+                          {placeTypeLabel(place.place_type, t)}
                         </span>
                       )}
                     </div>

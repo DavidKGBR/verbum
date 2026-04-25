@@ -50,6 +50,15 @@ def list_places(
     ),
     place_type: str | None = Query(None, description="Filter: city, region, mountain, river, etc."),
     has_coords: bool | None = Query(None, description="Filter: only places with coordinates"),
+    min_verses: int = Query(
+        0,
+        ge=0,
+        description=(
+            "Minimum verse_count. The frontend search defaults to 1 to hide "
+            "duplicate geocoding entries from OpenBible that have no biblical "
+            "references — they create noise (e.g. 'Bethlehem 1/2/3')."
+        ),
+    ),
     limit: int = Query(50, ge=1, le=500, description="Max results"),
     offset: int = Query(0, ge=0, description="Pagination offset"),
 ) -> dict:
@@ -76,6 +85,9 @@ def list_places(
                 params.extend(slug_list)
         if text_conditions:
             conditions.append(f"({' OR '.join(text_conditions)})")
+        if min_verses > 0:
+            conditions.append("verse_count >= ?")
+            params.append(min_verses)
         if place_type:
             conditions.append("LOWER(place_type) = ?")
             params.append(place_type.lower().strip())

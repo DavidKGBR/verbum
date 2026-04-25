@@ -1920,6 +1920,20 @@ function normalize(s: string): string {
   return s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 }
 
+/** Translate a backend place_type ("City", "Region", ...) to a localized
+ * label via the i18n `t` function. Falls back to the raw English type when
+ * no key matches (defensive — backend may add new types). */
+export function placeTypeLabel(
+  rawType: string | null | undefined,
+  t: (key: string) => string,
+): string {
+  if (!rawType) return t("places.type.unknown");
+  const key = `places.type.${rawType.toLowerCase()}`;
+  const localized = t(key);
+  // i18nContext.t returns the key when missing — detect that and fall back.
+  return localized === key ? rawType : localized;
+}
+
 /**
  * Reverse-lookup: given a query in PT or ES, return slugs whose localized
  * name matches (substring, accent-insensitive). Used by PlacesPage to
