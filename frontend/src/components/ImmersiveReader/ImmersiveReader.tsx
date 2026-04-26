@@ -258,11 +258,11 @@ export default function ImmersiveReader() {
   const isKjv = translation === "kjv";
 
   // On mobile, shrink the book so it never exceeds the viewport width.
-  // The FlipBook with size="stretch" expands to fill its container, which
-  // overflows the viewport on narrow screens. We pin it to innerWidth - 32px.
-  const [mobileBookWidth, setMobileBookWidth] = useState(
-    Math.min(320, window.innerWidth - 32)
-  );
+  // Normal mode has p-3 (12px/side = 24px), fullscreen has p-8 (32px/side = 64px).
+  function calcBookWidth(fs: boolean) {
+    return Math.min(320, window.innerWidth - (fs ? 80 : 32));
+  }
+  const [mobileBookWidth, setMobileBookWidth] = useState(() => calcBookWidth(false));
 
   function highlightBgFor(verseId: string): string | undefined {
     const cat = verseNotes[verseId]?.category;
@@ -270,15 +270,22 @@ export default function ImmersiveReader() {
     return `color-mix(in srgb, var(--hl-${cat}) 22%, transparent)`;
   }
 
+  // Recompute book width when fullscreen state changes (different padding)
+  useEffect(() => {
+    setMobileBookWidth(calcBookWidth(isFullscreen));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFullscreen]);
+
   // Responsive: detect mobile + compute safe book width
   useEffect(() => {
     const onResize = () => {
       setIsMobile(window.innerWidth < 768);
-      setMobileBookWidth(Math.min(320, window.innerWidth - 32));
+      setMobileBookWidth(calcBookWidth(isFullscreen));
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFullscreen]);
 
   const toggleFullscreen = useCallback(() => {
     if (!document.fullscreenElement) {
