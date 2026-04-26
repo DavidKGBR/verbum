@@ -1,8 +1,11 @@
 name: Deploy
 
+# Auto-trigger on push is disabled: data/analytics/bible.duckdb (~280 MB) is
+# gitignored, so the GitHub runner has no DB after checkout and Cloud Build
+# would package an incomplete image. Backend deploys run manually via
+# infra/scripts/deploy.ps1 from a workstation that has the DB on disk.
+# To re-enable auto-deploy, host the DB in GCS and add a fetch step here.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
