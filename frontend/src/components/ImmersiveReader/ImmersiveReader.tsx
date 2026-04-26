@@ -257,15 +257,25 @@ export default function ImmersiveReader() {
   const flipBookRef = useRef<any>(null);
   const isKjv = translation === "kjv";
 
+  // On mobile, shrink the book so it never exceeds the viewport width.
+  // The FlipBook with size="stretch" expands to fill its container, which
+  // overflows the viewport on narrow screens. We pin it to innerWidth - 32px.
+  const [mobileBookWidth, setMobileBookWidth] = useState(
+    Math.min(320, window.innerWidth - 32)
+  );
+
   function highlightBgFor(verseId: string): string | undefined {
     const cat = verseNotes[verseId]?.category;
     if (!cat) return undefined;
     return `color-mix(in srgb, var(--hl-${cat}) 22%, transparent)`;
   }
 
-  // Responsive: detect mobile
+  // Responsive: detect mobile + compute safe book width
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < 768);
+    const onResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      setMobileBookWidth(Math.min(320, window.innerWidth - 32));
+    };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
@@ -582,9 +592,9 @@ export default function ImmersiveReader() {
           <div className="flex justify-center w-full overflow-hidden">
             <HTMLFlipBook
               ref={flipBookRef}
-              width={isMobile ? 320 : 550}
-              height={isMobile ? 480 : 720}
-              size="stretch"
+              width={isMobile ? mobileBookWidth : 550}
+              height={isMobile ? Math.round(mobileBookWidth * 1.5) : 720}
+              size={isMobile ? "fixed" : "stretch"}
               minWidth={260}
               maxWidth={600}
               minHeight={380}
