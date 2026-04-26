@@ -99,7 +99,7 @@ export function useTranslationIdsCsv(): string {
  */
 const LANGUAGE_NAMES: Record<string, string> = {
   en: "English",
-  "pt-br": "Português",
+  "pt-br": "Português (Brasil)",
   es: "Español",
   fr: "Français",
   de: "Deutsch",

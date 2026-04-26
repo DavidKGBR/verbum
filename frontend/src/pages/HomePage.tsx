@@ -9,6 +9,7 @@ import {
 } from "../services/api";
 import { useBooks, localizeBookName } from "../i18n/bookNames";
 import { useI18n } from "../i18n/i18nContext";
+import { getLanguageName } from "../hooks/useTranslations";
 import SEO from "../components/SEO";
 import { ROUTE_META } from "../seoMeta";
 import VerseOfTheDay from "../components/VerseOfTheDay";
@@ -356,7 +357,7 @@ export default function HomePage() {
                     <td className="py-2 font-mono font-bold text-[var(--color-gold)]">
                       {tr.translation_id.toUpperCase()}
                     </td>
-                    <td className="py-2">{tr.language}</td>
+                    <td className="py-2">{getLanguageName(tr.language)}</td>
                     <td className="py-2">{tr.verses.toLocaleString()}</td>
                     <td className="py-2 text-right">
                       <Link

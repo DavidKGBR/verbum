@@ -26,6 +26,7 @@ import GenealogyPage from "./pages/GenealogyPage";
 import TopicsPage from "./pages/TopicsPage";
 import AboutPage from "./pages/AboutPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import DedicatoriaPage from "./pages/DedicatoriaPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ConnectionsPage from "./pages/ConnectionsPage";
 import ConceptsPage from "./pages/ConceptsPage";
@@ -62,6 +63,7 @@ export default function App() {
         <Route path="/special-passages/:passageId" element={<SpecialPassagePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/dedicatoria" element={<DedicatoriaPage />} />
 
         <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
