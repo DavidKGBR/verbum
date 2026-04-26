@@ -103,6 +103,8 @@ const LANGUAGE_NAMES: Record<string, string> = {
   es: "Español",
   fr: "Français",
   de: "Deutsch",
+  ar: "العربية",
+  zh: "中文",
 };
 
 export function getLanguageName(langCode: string): string {

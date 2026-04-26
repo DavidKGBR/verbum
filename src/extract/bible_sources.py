@@ -21,6 +21,7 @@ from src.extract.translations import (
     ABIBLIA_DIGITAL_TRANSLATIONS,
     BIBLE_API_COM_TRANSLATIONS,
     PRE_CACHED_TRANSLATIONS,
+    USFX_TRANSLATIONS,
     ZEFANIA_XML_TRANSLATIONS,
     get_translation,
 )
@@ -572,6 +573,171 @@ class ZefaniaXMLSource(BibleSource):
         return all_verses
 
 
+# ─── USFX Implementation ─────────────────────────────────────────────────────
+# USFX (Unified Scripture Format XML) from eBible.org.
+# Files live at data/raw/usfx/{translation_id}.xml
+
+# USFX uses standard USFM book codes, but some differ from our internal IDs.
+_USFX_TO_INTERNAL: dict[str, str] = {
+    "SON": "SNG",  # Song of Solomon (older USFM alias)
+    "EZE": "EZK",  # Ezekiel
+    "JOE": "JOL",  # Joel
+    "MAR": "MRK",  # Mark
+    "JOH": "JHN",  # John
+    "JMS": "JAS",  # James
+    "PHI": "PHP",  # Philippians
+    "COL": "COL",  # (same)
+    "PHM": "PHM",  # (same)
+    "JDE": "JUD",  # Jude
+}
+
+# book_id → canonical English name (built once from BOOK_CATALOG)
+_ID_TO_BOOK_NAME: dict[str, str] = {b["id"]: b["name"] for b in BOOK_CATALOG}
+
+
+class USFXSource(BibleSource):
+    """Reads Bible data from a local USFX XML file (eBible.org format)."""
+
+    def __init__(self, translation_id: str, config: ExtractConfig | None = None) -> None:
+        super().__init__(translation_id, config)
+        self.xml_path = Path("data/raw/usfx") / f"{translation_id}.xml"
+        self._parsed: dict[str, dict[int, list[RawVerse]]] | None = None
+
+    def close(self) -> None:
+        self._parsed = None
+
+    def _parse_xml(self) -> dict[str, dict[int, list[RawVerse]]]:
+        if self._parsed is not None:
+            return self._parsed
+
+        if not self.xml_path.exists():
+            raise FileNotFoundError(
+                f"USFX file not found: {self.xml_path}\n"
+                "Run: python scripts/download_usfx_translations.py"
+            )
+
+        tree = ET.parse(self.xml_path)  # noqa: S314
+        root = tree.getroot()
+
+        result: dict[str, dict[int, list[RawVerse]]] = {}
+
+        # USFX is a flat sequence of elements inside <book>.
+        # Verse text lives in element *tails*, not inside elements:
+        #   <v id="1"/>text here<ve/>   → v.tail = "text here"
+        # Inline markup (wj, nd, add…) are siblings between <v> and <ve>,
+        # so we accumulate tails of all siblings until <ve> is reached.
+
+        for book_el in root.findall(".//book"):
+            raw_id = book_el.get("id", "").upper()
+            book_id = _USFX_TO_INTERNAL.get(raw_id, raw_id)
+            book_name = _ID_TO_BOOK_NAME.get(book_id)
+            if not book_name:
+                continue  # deuterocanonical or unrecognised book
+
+            chapters: dict[int, list[RawVerse]] = {}
+            current_chapter = 0
+            current_verse: int | None = None
+            parts: list[str] = []
+
+            def _flush() -> None:
+                nonlocal current_verse, parts
+                if current_verse is not None and parts:
+                    text = " ".join("".join(parts).split()).strip()
+                    if text:
+                        chapters.setdefault(current_chapter, []).append(
+                            RawVerse(
+                                book_id=book_id,
+                                book_name=book_name,
+                                chapter=current_chapter,
+                                verse=current_verse,
+                                text=text,
+                                translation_id=self.translation_id,
+                                language=self.translation.language,
+                            )
+                        )
+                current_verse = None
+                parts = []
+
+            # iter() traverses ALL descendants in document order —
+            # handles both flat (Chinese) and paragraph-nested (Arabic) USFX.
+            for el in book_el.iter():
+                tag = el.tag.split("}")[-1] if "}" in el.tag else el.tag
+
+                if tag == "c":
+                    _flush()
+                    try:
+                        current_chapter = int(el.get("id", "0"))
+                    except ValueError:
+                        pass
+
+                elif tag == "v":
+                    _flush()
+                    try:
+                        current_verse = int(el.get("id", "0")) or None
+                    except ValueError:
+                        current_verse = None
+                    if current_verse and el.tail:
+                        parts.append(el.tail)
+
+                elif tag == "ve":
+                    _flush()
+
+                elif current_verse is not None:
+                    # Inline markup (wj, nd, add, it, …) — grab text and tail
+                    if el.text:
+                        parts.append(el.text)
+                    if el.tail:
+                        parts.append(el.tail)
+
+            _flush()
+
+            result[book_name] = {
+                ch: sorted(vs, key=lambda v: v.verse)
+                for ch, vs in chapters.items()
+                if vs
+            }
+
+        self._parsed = result
+        total = sum(len(v) for chs in result.values() for v in chs.values())
+        logger.info(f"📖 Parsed {total} verses from USFX: {self.xml_path.name}")
+        return result
+
+    def fetch_chapter(self, book_name: str, chapter: int) -> list[RawVerse]:
+        return self._parse_xml().get(book_name, {}).get(chapter, [])
+
+    def fetch_all(
+        self,
+        output_dir: Path | None = None,
+        books: list[str] | None = None,
+    ) -> list[RawVerse]:
+        data = self._parse_xml()
+        catalog = BOOK_CATALOG
+        if books:
+            catalog = [b for b in catalog if b["id"] in books]
+
+        all_verses: list[RawVerse] = []
+        for book in catalog:
+            book_name = book["name"]
+            book_id = book["id"]
+            chapters = data.get(book_name, {})
+            book_verses: list[RawVerse] = []
+            for _ch, ch_verses in sorted(chapters.items()):
+                book_verses.extend(ch_verses)
+
+            all_verses.extend(book_verses)
+
+            if output_dir:
+                output_dir.mkdir(parents=True, exist_ok=True)
+                book_file = output_dir / f"{book_id.lower()}.json"
+                book_file.write_text(
+                    json.dumps([v.model_dump() for v in book_verses], indent=2, ensure_ascii=False),
+                    encoding="utf-8",
+                )
+
+        logger.info(f"📂 Loaded {len(all_verses)} verses from USFX ({self.translation_id})")
+        return all_verses
+
+
 # ─── Pre-cached Implementation ────────────────────────────────────────────────
 
 
@@ -624,6 +790,8 @@ def create_source(
         return ABibliaDigitalSource(tid, config)
     if tid in ZEFANIA_XML_TRANSLATIONS:
         return ZefaniaXMLSource(tid, config)
+    if tid in USFX_TRANSLATIONS:
+        return USFXSource(tid, config)
     if tid in PRE_CACHED_TRANSLATIONS:
         return PreCachedSource(tid, config)
     available = ", ".join(
@@ -631,6 +799,7 @@ def create_source(
             BIBLE_API_COM_TRANSLATIONS
             | ABIBLIA_DIGITAL_TRANSLATIONS
             | ZEFANIA_XML_TRANSLATIONS
+            | USFX_TRANSLATIONS
             | PRE_CACHED_TRANSLATIONS
         )
     )

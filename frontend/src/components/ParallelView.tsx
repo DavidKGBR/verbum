@@ -160,7 +160,7 @@ export default function ParallelView() {
                   <span className="md:hidden text-[10px] uppercase tracking-wider opacity-40 font-bold">
                     {page.left_translation.toUpperCase()}
                   </span>
-                  <p className="text-sm leading-relaxed">
+                  <p className="text-sm leading-relaxed" dir={page.left_translation === "arb-vd" ? "rtl" : undefined}>
                     {(v.left_text_clean ?? v.left_text) || (
                       <span className="opacity-30 italic">{t("reader.missing")}</span>
                     )}
@@ -170,7 +170,7 @@ export default function ParallelView() {
                   <span className="md:hidden text-[10px] uppercase tracking-wider opacity-40 font-bold">
                     {page.right_translation.toUpperCase()}
                   </span>
-                  <p className="text-sm leading-relaxed">
+                  <p className="text-sm leading-relaxed" dir={page.right_translation === "arb-vd" ? "rtl" : undefined}>
                     {(v.right_text_clean ?? v.right_text) || (
                       <span className="opacity-30 italic">{t("reader.missing")}</span>
                     )}

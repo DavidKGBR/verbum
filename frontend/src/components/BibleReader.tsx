@@ -65,6 +65,7 @@ export default function BibleReader() {
   const highlightVerse = Number(searchParams.get("verse")) || null;
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const isKjv = translation === "kjv";
+  const isRtl = translation === "arb-vd";
 
   // Sync from URL params
   useEffect(() => {
@@ -320,11 +321,11 @@ export default function BibleReader() {
                               focus-visible:ring-[var(--color-gold)]/40
                               ${rowStateClass} ${highlightClass}`}
                 >
-                  <div className="flex gap-3 items-start">
+                  <div className={`flex gap-3 items-start${isRtl ? " flex-row-reverse" : ""}`}>
                     <span className="verse-number text-sm pt-0.5 w-7 shrink-0 text-right">
                       {v.verse}
                     </span>
-                    <p className="verse-text flex-1">{renderVerseText(v)}</p>
+                    <p className={`verse-text flex-1${isRtl ? " text-right" : ""}`} dir={isRtl ? "rtl" : undefined}>{renderVerseText(v)}</p>
                     {hasNoteText && (
                       <button
                         onClick={(e) => {

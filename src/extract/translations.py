@@ -118,6 +118,35 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
         license="Public Domain",
         source_api="bible-api.com",
     ),
+    # ── eBible.org USFX — Arabic ─────────────────────────────────────────
+    "arb-vd": Translation(
+        translation_id="arb-vd",
+        language="ar",
+        name="Smith & Van Dyke",
+        full_name="Smith & Van Dyke Arabic Bible (1865)",
+        year=1865,
+        license="Public Domain",
+        source_api="usfx",
+    ),
+    # ── eBible.org USFX — Chinese ────────────────────────────────────────
+    "cmn-cu89t": Translation(
+        translation_id="cmn-cu89t",
+        language="zh",
+        name="Chinese Union Version (Traditional)",
+        full_name="Chinese Union Version — Traditional Script (1919)",
+        year=1919,
+        license="Public Domain",
+        source_api="usfx",
+    ),
+    "cmn-cu89s": Translation(
+        translation_id="cmn-cu89s",
+        language="zh",
+        name="Chinese Union Version (Simplified)",
+        full_name="Chinese Union Version — Simplified Script (1919)",
+        year=1919,
+        license="Public Domain",
+        source_api="usfx",
+    ),
     # ── Pre-cached (extracted via removed BibleSuperSearch API) ──────────
     "luther": Translation(
         translation_id="luther",
@@ -135,6 +164,7 @@ TRANSLATION_REGISTRY: dict[str, Translation] = {
 BIBLE_API_COM_TRANSLATIONS = {"asv", "web", "darby"}
 ABIBLIA_DIGITAL_TRANSLATIONS = {"kjv", "bbe", "nvi", "ra", "acf", "rvr", "apee"}
 ZEFANIA_XML_TRANSLATIONS = {"neue"}
+USFX_TRANSLATIONS = {"arb-vd", "cmn-cu89t", "cmn-cu89s"}
 PRE_CACHED_TRANSLATIONS = {"luther"}
 
 
