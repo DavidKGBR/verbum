@@ -13,7 +13,7 @@ import { useTranslatorNotes } from "../hooks/useTranslatorNotes";
 import { useVerseNotes } from "../hooks/useVerseNotes";
 import { recordPlanAutoMark } from "../hooks/useReadingPlans";
 import { parseKjvAnnotations } from "./reader/kjvAnnotations";
-import ChapterAudioPlayer from "./ChapterAudioPlayer";
+// import ChapterAudioPlayer from "./ChapterAudioPlayer"; // re-enable when Bible Brain key arrives
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { useTranslationIds } from "../hooks/useTranslations";
 
@@ -278,12 +278,12 @@ export default function BibleReader() {
             </p>
           </div>
 
-          {/* Audio player — shown for translations with Bible Brain audio configured */}
+          {/* Audio player — hidden until Bible Brain API key is configured
           <ChapterAudioPlayer
             bookId={page.book_id}
             chapter={page.chapter}
             translation={page.translation}
-          />
+          /> */}
 
           {/* Plan banner moved to ReaderPage → <ActivePlanIndicator />, which
               now renders it once across every mode (Single/Parallel/Immersive/
