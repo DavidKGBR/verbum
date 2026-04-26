@@ -13,6 +13,7 @@ import { useTranslatorNotes } from "../hooks/useTranslatorNotes";
 import { useVerseNotes } from "../hooks/useVerseNotes";
 import { recordPlanAutoMark } from "../hooks/useReadingPlans";
 import { parseKjvAnnotations } from "./reader/kjvAnnotations";
+import ChapterAudioPlayer from "./ChapterAudioPlayer";
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { useTranslationIds } from "../hooks/useTranslations";
 
@@ -275,6 +276,11 @@ export default function BibleReader() {
               {page.translation.toUpperCase()} &middot; {page.verse_count} {t("common.verses")}
             </p>
           </div>
+
+          {/* Audio player — only for KJV (LibriVox public-domain recordings) */}
+          {page.translation === "kjv" && (
+            <ChapterAudioPlayer bookId={page.book_id} chapter={page.chapter} />
+          )}
 
           {/* Plan banner moved to ReaderPage → <ActivePlanIndicator />, which
               now renders it once across every mode (Single/Parallel/Immersive/
