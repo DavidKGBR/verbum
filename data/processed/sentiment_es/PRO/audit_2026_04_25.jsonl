@@ -1,0 +1,915 @@
+{"verse_id":"PRO.1.1","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"superscription"}
+{"verse_id":"PRO.1.2","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"purpose: to know wisdom and instruction"}
+{"verse_id":"PRO.1.3","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"to receive instruction of wisdom, justice"}
+{"verse_id":"PRO.1.4","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"to give subtilty to simple, knowledge to young"}
+{"verse_id":"PRO.1.5","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"wise hears and increases learning"}
+{"verse_id":"PRO.1.6","polarity":0.45,"label":"instruction","confidence":0.82,"notes":"to understand proverb and interpretation"}
+{"verse_id":"PRO.1.7","polarity":0.65,"label":"praise","confidence":0.92,"notes":"famous: fear of the LORD is beginning of knowledge"}
+{"verse_id":"PRO.1.8","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"hear instruction of father, do not forsake mother's teaching"}
+{"verse_id":"PRO.1.9","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"ornament of grace upon thy head"}
+{"verse_id":"PRO.1.10","polarity":-0.10,"label":"warning","confidence":0.85,"notes":"if sinners entice thee, consent not"}
+{"verse_id":"PRO.1.11","polarity":-0.55,"label":"warning","confidence":0.88,"notes":"if they say come, lay wait for blood, lurk privily"}
+{"verse_id":"PRO.1.12","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"swallow alive as grave; whole as those that go down to pit"}
+{"verse_id":"PRO.1.13","polarity":-0.50,"label":"warning","confidence":0.85,"notes":"find precious substance, fill houses with spoil"}
+{"verse_id":"PRO.1.14","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"cast in lot, one purse"}
+{"verse_id":"PRO.1.15","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"walk not in way with them, refrain foot from path"}
+{"verse_id":"PRO.1.16","polarity":-0.50,"label":"warning","confidence":0.85,"notes":"feet run to evil, hasten to shed blood"}
+{"verse_id":"PRO.1.17","polarity":-0.20,"label":"narrative","confidence":0.78,"notes":"net spread in vain in sight of any bird"}
+{"verse_id":"PRO.1.18","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"lie in wait for own blood, lurk privily for own lives"}
+{"verse_id":"PRO.1.19","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"ways of every one greedy of gain — takes life of owners"}
+{"verse_id":"PRO.1.20","polarity":0.55,"label":"praise","confidence":0.85,"notes":"wisdom cries without, gives voice in streets"}
+{"verse_id":"PRO.1.21","polarity":0.55,"label":"praise","confidence":0.85,"notes":"cries in chief place of concourse, in city"}
+{"verse_id":"PRO.1.22","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"how long simple love simplicity, scorners delight in scorning"}
+{"verse_id":"PRO.1.23","polarity":0.55,"label":"hope","confidence":0.85,"notes":"turn at my reproof, will pour out spirit, make known words"}
+{"verse_id":"PRO.1.24","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"called and refused; stretched out hand, none regarded"}
+{"verse_id":"PRO.1.25","polarity":-0.40,"label":"warning","confidence":0.85,"notes":"set at nought all my counsel"}
+{"verse_id":"PRO.1.26","polarity":-0.65,"label":"judgment","confidence":0.88,"notes":"I will laugh at your calamity, mock when fear comes"}
+{"verse_id":"PRO.1.27","polarity":-0.75,"label":"judgment","confidence":0.90,"notes":"when fear cometh as desolation, destruction as whirlwind, distress and anguish"}
+{"verse_id":"PRO.1.28","polarity":-0.65,"label":"judgment","confidence":0.88,"notes":"shall they call, but I will not answer; seek me but not find"}
+{"verse_id":"PRO.1.29","polarity":-0.50,"label":"judgment","confidence":0.85,"notes":"hated knowledge, did not choose fear of LORD"}
+{"verse_id":"PRO.1.30","polarity":-0.40,"label":"judgment","confidence":0.85,"notes":"would none of my counsel, despised reproof"}
+{"verse_id":"PRO.1.31","polarity":-0.55,"label":"judgment","confidence":0.85,"notes":"shall eat fruit of own way, filled with own devices"}
+{"verse_id":"PRO.1.32","polarity":-0.65,"label":"judgment","confidence":0.88,"notes":"turning away of simple slays them; prosperity of fools destroys"}
+{"verse_id":"PRO.1.33","polarity":0.75,"label":"hope","confidence":0.92,"notes":"whoso hearkeneth shall dwell safely, quiet from fear of evil"}
+{"verse_id":"PRO.2.1","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"my son, if receive my words, hide commandments"}
+{"verse_id":"PRO.2.2","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"incline ear to wisdom, apply heart to understanding"}
+{"verse_id":"PRO.2.3","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"if criest after knowledge, liftest up voice for understanding"}
+{"verse_id":"PRO.2.4","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"if seekest as silver, searchest as hidden treasures"}
+{"verse_id":"PRO.2.5","polarity":0.65,"label":"hope","confidence":0.88,"notes":"then shalt thou understand fear of LORD, find knowledge of God"}
+{"verse_id":"PRO.2.6","polarity":0.65,"label":"praise","confidence":0.88,"notes":"LORD giveth wisdom, out of his mouth knowledge"}
+{"verse_id":"PRO.2.7","polarity":0.65,"label":"hope","confidence":0.88,"notes":"layeth up sound wisdom for righteous, buckler to upright"}
+{"verse_id":"PRO.2.8","polarity":0.65,"label":"hope","confidence":0.88,"notes":"keepeth paths of judgment, preserveth way of saints"}
+{"verse_id":"PRO.2.9","polarity":0.55,"label":"hope","confidence":0.85,"notes":"then shalt thou understand righteousness, judgment, equity"}
+{"verse_id":"PRO.2.10","polarity":0.55,"label":"hope","confidence":0.85,"notes":"when wisdom entereth heart, knowledge pleasant to soul"}
+{"verse_id":"PRO.2.11","polarity":0.55,"label":"hope","confidence":0.85,"notes":"discretion shall preserve thee, understanding shall keep"}
+{"verse_id":"PRO.2.12","polarity":0.30,"label":"hope","confidence":0.82,"notes":"to deliver from way of evil man, from speaking froward things"}
+{"verse_id":"PRO.2.13","polarity":-0.40,"label":"warning","confidence":0.85,"notes":"who leave paths of uprightness, walk in ways of darkness"}
+{"verse_id":"PRO.2.14","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"rejoice to do evil, delight in frowardness of wicked"}
+{"verse_id":"PRO.2.15","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"ways crooked, paths froward"}
+{"verse_id":"PRO.2.16","polarity":0.30,"label":"hope","confidence":0.82,"notes":"to deliver from strange woman, stranger that flatters"}
+{"verse_id":"PRO.2.17","polarity":-0.40,"label":"warning","confidence":0.85,"notes":"forsakes guide of youth, forgets covenant of God"}
+{"verse_id":"PRO.2.18","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"her house inclineth unto death, paths to dead"}
+{"verse_id":"PRO.2.19","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"none that go to her return, neither take hold of paths of life"}
+{"verse_id":"PRO.2.20","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"that thou mayest walk in way of good, keep paths of righteous"}
+{"verse_id":"PRO.2.21","polarity":0.65,"label":"hope","confidence":0.88,"notes":"upright shall dwell in land, perfect remain"}
+{"verse_id":"PRO.2.22","polarity":-0.55,"label":"judgment","confidence":0.85,"notes":"wicked cut off from earth, transgressors rooted out"}
+{"verse_id":"PRO.3.1","polarity":0.50,"label":"instruction","confidence":0.88,"notes":"my son, forget not law, keep commandments"}
+{"verse_id":"PRO.3.2","polarity":0.75,"label":"hope","confidence":0.92,"notes":"length of days and long life and peace shall they add"}
+{"verse_id":"PRO.3.3","polarity":0.65,"label":"instruction","confidence":0.88,"notes":"mercy and truth not forsake; bind about neck, write on heart"}
+{"verse_id":"PRO.3.4","polarity":0.75,"label":"hope","confidence":0.88,"notes":"find favor and good understanding in sight of God and man"}
+{"verse_id":"PRO.3.5","polarity":0.85,"label":"hope","confidence":0.95,"notes":"famous: trust in LORD with all heart, lean not on understanding"}
+{"verse_id":"PRO.3.6","polarity":0.85,"label":"hope","confidence":0.95,"notes":"famous: in all thy ways acknowledge him, he shall direct paths"}
+{"verse_id":"PRO.3.7","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"be not wise in own eyes; fear LORD, depart from evil"}
+{"verse_id":"PRO.3.8","polarity":0.65,"label":"hope","confidence":0.85,"notes":"shall be health to navel, marrow to bones"}
+{"verse_id":"PRO.3.9","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"honor LORD with substance, with firstfruits"}
+{"verse_id":"PRO.3.10","polarity":0.75,"label":"hope","confidence":0.88,"notes":"so barns filled with plenty, presses burst with new wine"}
+{"verse_id":"PRO.3.11","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"despise not chastening of LORD, weary not of correction"}
+{"verse_id":"PRO.3.12","polarity":0.55,"label":"love","confidence":0.88,"notes":"whom LORD loves he correcteth, even as father son"}
+{"verse_id":"PRO.3.13","polarity":0.85,"label":"hope","confidence":0.92,"notes":"happy is man that finds wisdom, gets understanding"}
+{"verse_id":"PRO.3.14","polarity":0.75,"label":"praise","confidence":0.88,"notes":"merchandise better than silver, gain than fine gold"}
+{"verse_id":"PRO.3.15","polarity":0.85,"label":"praise","confidence":0.92,"notes":"more precious than rubies, all you can desire compare not"}
+{"verse_id":"PRO.3.16","polarity":0.85,"label":"praise","confidence":0.92,"notes":"length of days in right hand, riches and honor in left"}
+{"verse_id":"PRO.3.17","polarity":0.85,"label":"peace","confidence":0.95,"notes":"famous: her ways are pleasantness, all her paths peace"}
+{"verse_id":"PRO.3.18","polarity":0.85,"label":"praise","confidence":0.92,"notes":"tree of life to those who lay hold; happy that retain her"}
+{"verse_id":"PRO.3.19","polarity":0.65,"label":"praise","confidence":0.88,"notes":"LORD by wisdom founded earth; by understanding established heavens"}
+{"verse_id":"PRO.3.20","polarity":0.55,"label":"awe","confidence":0.85,"notes":"by knowledge depths broken up, clouds drop dew"}
+{"verse_id":"PRO.3.21","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"my son, let not them depart from eyes; keep sound wisdom"}
+{"verse_id":"PRO.3.22","polarity":0.65,"label":"hope","confidence":0.85,"notes":"life unto soul, grace to neck"}
+{"verse_id":"PRO.3.23","polarity":0.75,"label":"hope","confidence":0.88,"notes":"shalt walk in way safely, foot not stumble"}
+{"verse_id":"PRO.3.24","polarity":0.85,"label":"peace","confidence":0.92,"notes":"when liest down not afraid; sleep shall be sweet"}
+{"verse_id":"PRO.3.25","polarity":0.65,"label":"peace","confidence":0.88,"notes":"not afraid of sudden fear, of desolation of wicked"}
+{"verse_id":"PRO.3.26","polarity":0.85,"label":"hope","confidence":0.92,"notes":"LORD shall be thy confidence, keep foot from being taken"}
+{"verse_id":"PRO.3.27","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"withhold not good from them to whom due, when in power"}
+{"verse_id":"PRO.3.28","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"say not, go and come again tomorrow, when have it now"}
+{"verse_id":"PRO.3.29","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"devise not evil against neighbor, dwelleth securely"}
+{"verse_id":"PRO.3.30","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"strive not without cause, when has done no harm"}
+{"verse_id":"PRO.3.31","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"envy not oppressor, choose none of his ways"}
+{"verse_id":"PRO.3.32","polarity":-0.10,"label":"narrative","confidence":0.85,"notes":"froward is abomination to LORD; secret with righteous"}
+{"verse_id":"PRO.3.33","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"curse of LORD on house of wicked; blesses habitation of just"}
+{"verse_id":"PRO.3.34","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"surely scorneth scorners, gives grace to lowly"}
+{"verse_id":"PRO.3.35","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"wise inherit glory, fools shame"}
+{"verse_id":"PRO.4.1","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"hear, children, instruction of father, attend"}
+{"verse_id":"PRO.4.2","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"good doctrine, forsake not law"}
+{"verse_id":"PRO.4.3","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"I was father's son, only beloved before mother"}
+{"verse_id":"PRO.4.4","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"taught me: let heart retain, keep commandments, live"}
+{"verse_id":"PRO.4.5","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"get wisdom, get understanding; forget not"}
+{"verse_id":"PRO.4.6","polarity":0.65,"label":"praise","confidence":0.88,"notes":"forsake her not, she preserves; love her, she keeps"}
+{"verse_id":"PRO.4.7","polarity":0.65,"label":"praise","confidence":0.88,"notes":"famous: wisdom is principal thing, get wisdom"}
+{"verse_id":"PRO.4.8","polarity":0.75,"label":"praise","confidence":0.88,"notes":"exalt her, she shall promote; bring honor when embrace"}
+{"verse_id":"PRO.4.9","polarity":0.65,"label":"praise","confidence":0.88,"notes":"give head ornament of grace, deliver crown of glory"}
+{"verse_id":"PRO.4.10","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"hear, my son, receive sayings, years of life multiplied"}
+{"verse_id":"PRO.4.11","polarity":0.55,"label":"hope","confidence":0.85,"notes":"taught in way of wisdom, led in right paths"}
+{"verse_id":"PRO.4.12","polarity":0.65,"label":"hope","confidence":0.85,"notes":"steps not straitened, run not stumble"}
+{"verse_id":"PRO.4.13","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"hold fast instruction, let not go; she is thy life"}
+{"verse_id":"PRO.4.14","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"enter not into path of wicked, walk not in way of evil"}
+{"verse_id":"PRO.4.15","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"avoid it, pass not by it, turn from"}
+{"verse_id":"PRO.4.16","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"sleep not unless they have done mischief; sleep removed unless caused fall"}
+{"verse_id":"PRO.4.17","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"eat bread of wickedness, drink wine of violence"}
+{"verse_id":"PRO.4.18","polarity":0.85,"label":"hope","confidence":0.92,"notes":"famous: path of just is shining light, perfect day"}
+{"verse_id":"PRO.4.19","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"way of wicked is darkness, know not what they stumble at"}
+{"verse_id":"PRO.4.20","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"my son, attend to words, incline ear"}
+{"verse_id":"PRO.4.21","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"let not depart from eyes, keep in midst of heart"}
+{"verse_id":"PRO.4.22","polarity":0.75,"label":"hope","confidence":0.88,"notes":"life to those who find them, health to flesh"}
+{"verse_id":"PRO.4.23","polarity":0.75,"label":"instruction","confidence":0.92,"notes":"famous: keep heart with all diligence, out of it issues life"}
+{"verse_id":"PRO.4.24","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"put away froward mouth, perverse lips"}
+{"verse_id":"PRO.4.25","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"let eyes look right, eyelids straight"}
+{"verse_id":"PRO.4.26","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"ponder path of feet, all ways established"}
+{"verse_id":"PRO.4.27","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"turn not right or left, remove foot from evil"}
+{"verse_id":"PRO.5.1","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"my son, attend to wisdom, bow ear to understanding"}
+{"verse_id":"PRO.5.2","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"that thou mayest regard discretion, lips keep knowledge"}
+{"verse_id":"PRO.5.3","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"lips of strange woman drop honey, mouth smoother than oil"}
+{"verse_id":"PRO.5.4","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"end is bitter as wormwood, sharp as two-edged sword"}
+{"verse_id":"PRO.5.5","polarity":-0.75,"label":"warning","confidence":0.90,"notes":"feet go down to death, steps take hold on hell"}
+{"verse_id":"PRO.5.6","polarity":-0.40,"label":"warning","confidence":0.85,"notes":"ways are movable, knowest not"}
+{"verse_id":"PRO.5.7","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"hear me now, depart not from words"}
+{"verse_id":"PRO.5.8","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"remove way far from her, come not nigh door"}
+{"verse_id":"PRO.5.9","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"lest give honor to others, years to cruel"}
+{"verse_id":"PRO.5.10","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"strangers filled with wealth, labors in stranger's house"}
+{"verse_id":"PRO.5.11","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"mourn at last, when flesh consumed"}
+{"verse_id":"PRO.5.12","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"and say: how have I hated instruction, despised reproof"}
+{"verse_id":"PRO.5.13","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"obeyed not voice of teachers, inclined not ear"}
+{"verse_id":"PRO.5.14","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"almost in all evil in midst of congregation"}
+{"verse_id":"PRO.5.15","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"drink waters from own cistern, running waters out of own well"}
+{"verse_id":"PRO.5.16","polarity":0.40,"label":"instruction","confidence":0.82,"notes":"let fountains be dispersed abroad"}
+{"verse_id":"PRO.5.17","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"let them be only thine, not strangers"}
+{"verse_id":"PRO.5.18","polarity":0.85,"label":"love","confidence":0.92,"notes":"let fountain be blessed, rejoice with wife of youth"}
+{"verse_id":"PRO.5.19","polarity":0.85,"label":"love","confidence":0.92,"notes":"loving hind, pleasant roe; breasts satisfy, ravished with love"}
+{"verse_id":"PRO.5.20","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"why ravished with strange woman, embrace bosom of stranger"}
+{"verse_id":"PRO.5.21","polarity":0.30,"label":"awe","confidence":0.85,"notes":"ways of man before LORD's eyes, he ponders all paths"}
+{"verse_id":"PRO.5.22","polarity":-0.55,"label":"judgment","confidence":0.88,"notes":"own iniquities take wicked, holden with cords of sins"}
+{"verse_id":"PRO.5.23","polarity":-0.65,"label":"judgment","confidence":0.88,"notes":"shall die without instruction, in greatness of folly go astray"}
+{"verse_id":"PRO.6.1","polarity":-0.10,"label":"warning","confidence":0.82,"notes":"my son, if surety for friend, struck hand with stranger"}
+{"verse_id":"PRO.6.2","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"snared with words of mouth, taken with words"}
+{"verse_id":"PRO.6.3","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"do this, deliver thyself, humble, make sure friend"}
+{"verse_id":"PRO.6.4","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"give not sleep to eyes, slumber to eyelids"}
+{"verse_id":"PRO.6.5","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"deliver as roe from hand of hunter, bird from fowler"}
+{"verse_id":"PRO.6.6","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"go to ant, sluggard, consider ways and be wise"}
+{"verse_id":"PRO.6.7","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"having no guide, overseer, ruler"}
+{"verse_id":"PRO.6.8","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"provides meat in summer, gathers food in harvest"}
+{"verse_id":"PRO.6.9","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"how long sluggard, when wilt thou rise"}
+{"verse_id":"PRO.6.10","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"a little sleep, slumber, folding hands to sleep"}
+{"verse_id":"PRO.6.11","polarity":-0.55,"label":"judgment","confidence":0.85,"notes":"poverty come as one travels, want as armed man"}
+{"verse_id":"PRO.6.12","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"naughty person, wicked man, walks with froward mouth"}
+{"verse_id":"PRO.6.13","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"winks with eye, speaks with feet, teaches with fingers"}
+{"verse_id":"PRO.6.14","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"frowardness in heart, devises mischief, sows discord"}
+{"verse_id":"PRO.6.15","polarity":-0.65,"label":"judgment","confidence":0.88,"notes":"calamity come suddenly, broken without remedy"}
+{"verse_id":"PRO.6.16","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"six things LORD hates, seven abomination"}
+{"verse_id":"PRO.6.17","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"proud look, lying tongue, hands shed innocent blood"}
+{"verse_id":"PRO.6.18","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"heart deviseth wicked imaginations, feet swift to mischief"}
+{"verse_id":"PRO.6.19","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"false witness speaking lies, sows discord among brethren"}
+{"verse_id":"PRO.6.20","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"my son, keep father's commandment, forsake not mother's law"}
+{"verse_id":"PRO.6.21","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"bind continually on heart, tie about neck"}
+{"verse_id":"PRO.6.22","polarity":0.55,"label":"hope","confidence":0.85,"notes":"when goest, shall lead; when sleepest, keep; when wakest, talk"}
+{"verse_id":"PRO.6.23","polarity":0.65,"label":"praise","confidence":0.88,"notes":"famous: commandment is lamp, law is light, reproofs of instruction way of life"}
+{"verse_id":"PRO.6.24","polarity":0.20,"label":"hope","confidence":0.82,"notes":"keep from evil woman, flattery of strange woman"}
+{"verse_id":"PRO.6.25","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"lust not after beauty in heart, let her not take with eyelids"}
+{"verse_id":"PRO.6.26","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"by means of whorish woman brought to morsel; adulteress hunts precious life"}
+{"verse_id":"PRO.6.27","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"can man take fire in bosom and clothes not be burned"}
+{"verse_id":"PRO.6.28","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"can one walk on hot coals and feet not burned"}
+{"verse_id":"PRO.6.29","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"so he that goeth in to neighbor's wife; whoever toucheth not innocent"}
+{"verse_id":"PRO.6.30","polarity":-0.20,"label":"narrative","confidence":0.78,"notes":"men despise not thief if steals to satisfy hunger"}
+{"verse_id":"PRO.6.31","polarity":-0.30,"label":"narrative","confidence":0.80,"notes":"if found, restore sevenfold, give all substance"}
+{"verse_id":"PRO.6.32","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"adulterer with woman lacks understanding, destroys own soul"}
+{"verse_id":"PRO.6.33","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"wound and dishonor get, reproach not wiped away"}
+{"verse_id":"PRO.6.34","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"jealousy is rage of man, will not spare in day of vengeance"}
+{"verse_id":"PRO.6.35","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"no ransom, content though givest many gifts"}
+{"verse_id":"PRO.7.1","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"my son, keep my words, lay up commandments"}
+{"verse_id":"PRO.7.2","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"keep commandments and live; my law as apple of eye"}
+{"verse_id":"PRO.7.3","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"bind upon fingers, write on table of heart"}
+{"verse_id":"PRO.7.4","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"say to wisdom: thou art my sister; call understanding kinswoman"}
+{"verse_id":"PRO.7.5","polarity":0.30,"label":"hope","confidence":0.82,"notes":"to keep thee from strange woman, stranger flattering with words"}
+{"verse_id":"PRO.7.6","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"at window of house I looked through casement"}
+{"verse_id":"PRO.7.7","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"beheld among simple, young man void of understanding"}
+{"verse_id":"PRO.7.8","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"passing through street near her corner"}
+{"verse_id":"PRO.7.9","polarity":-0.40,"label":"narrative","confidence":0.82,"notes":"in twilight, in evening, in black and dark night"}
+{"verse_id":"PRO.7.10","polarity":-0.55,"label":"narrative","confidence":0.85,"notes":"woman met him with attire of harlot, subtle of heart"}
+{"verse_id":"PRO.7.11","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"loud and stubborn, feet abide not in house"}
+{"verse_id":"PRO.7.12","polarity":-0.45,"label":"narrative","confidence":0.82,"notes":"now without, now in streets, lying in wait at every corner"}
+{"verse_id":"PRO.7.13","polarity":-0.55,"label":"narrative","confidence":0.85,"notes":"caught him, kissed, with impudent face said"}
+{"verse_id":"PRO.7.14","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"peace offerings with me, this day I paid vows"}
+{"verse_id":"PRO.7.15","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"therefore came forth to meet, diligently sought, found"}
+{"verse_id":"PRO.7.16","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"decked bed with coverings, fine linen of Egypt"}
+{"verse_id":"PRO.7.17","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"perfumed bed with myrrh, aloes, cinnamon"}
+{"verse_id":"PRO.7.18","polarity":-0.45,"label":"narrative","confidence":0.85,"notes":"come, take fill of love until morning, solace ourselves"}
+{"verse_id":"PRO.7.19","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"goodman not at home, gone long journey"}
+{"verse_id":"PRO.7.20","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"taken bag of money, will come at appointed day"}
+{"verse_id":"PRO.7.21","polarity":-0.55,"label":"narrative","confidence":0.85,"notes":"with fair speech caused yield, with flattering of lips forced"}
+{"verse_id":"PRO.7.22","polarity":-0.65,"label":"narrative","confidence":0.88,"notes":"goes after her as ox to slaughter, fool to correction"}
+{"verse_id":"PRO.7.23","polarity":-0.75,"label":"warning","confidence":0.90,"notes":"as bird hastes to snare, knows not it is for life; dart strikes liver"}
+{"verse_id":"PRO.7.24","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"hearken, children, attend to words of mouth"}
+{"verse_id":"PRO.7.25","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"let not heart decline to ways, go not astray in paths"}
+{"verse_id":"PRO.7.26","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"cast down many wounded, strong men slain by her"}
+{"verse_id":"PRO.7.27","polarity":-0.75,"label":"warning","confidence":0.90,"notes":"her house way to hell, going down to chambers of death"}
+{"verse_id":"PRO.8.1","polarity":0.55,"label":"praise","confidence":0.88,"notes":"does not wisdom cry, understanding give voice"}
+{"verse_id":"PRO.8.2","polarity":0.45,"label":"narrative","confidence":0.85,"notes":"on top of high places, by ways at meeting of paths"}
+{"verse_id":"PRO.8.3","polarity":0.45,"label":"narrative","confidence":0.85,"notes":"at gates, entry of city, doors she cries"}
+{"verse_id":"PRO.8.4","polarity":0.55,"label":"praise","confidence":0.85,"notes":"unto you, O men, I call; voice to sons of men"}
+{"verse_id":"PRO.8.5","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"O simple, understand wisdom; fools, of understanding heart"}
+{"verse_id":"PRO.8.6","polarity":0.65,"label":"praise","confidence":0.88,"notes":"hear, will speak excellent things; opening of lips right things"}
+{"verse_id":"PRO.8.7","polarity":0.55,"label":"praise","confidence":0.85,"notes":"mouth speak truth, wickedness abomination to lips"}
+{"verse_id":"PRO.8.8","polarity":0.65,"label":"praise","confidence":0.88,"notes":"all words of mouth in righteousness, none froward"}
+{"verse_id":"PRO.8.9","polarity":0.65,"label":"praise","confidence":0.88,"notes":"all plain to him who understands, right to those who find knowledge"}
+{"verse_id":"PRO.8.10","polarity":0.65,"label":"praise","confidence":0.88,"notes":"receive instruction, not silver; knowledge rather than gold"}
+{"verse_id":"PRO.8.11","polarity":0.85,"label":"praise","confidence":0.92,"notes":"famous: wisdom is better than rubies, all things desired not compared"}
+{"verse_id":"PRO.8.12","polarity":0.65,"label":"praise","confidence":0.88,"notes":"I wisdom dwell with prudence, find out knowledge"}
+{"verse_id":"PRO.8.13","polarity":0.55,"label":"praise","confidence":0.85,"notes":"fear of LORD is to hate evil; pride and arrogance abhor"}
+{"verse_id":"PRO.8.14","polarity":0.65,"label":"praise","confidence":0.88,"notes":"counsel mine, sound wisdom; understanding, strength"}
+{"verse_id":"PRO.8.15","polarity":0.65,"label":"praise","confidence":0.88,"notes":"by me kings reign, princes decree justice"}
+{"verse_id":"PRO.8.16","polarity":0.55,"label":"praise","confidence":0.85,"notes":"by me princes rule, nobles, judges of earth"}
+{"verse_id":"PRO.8.17","polarity":0.85,"label":"love","confidence":0.92,"notes":"famous: I love them that love me, those who seek me early find"}
+{"verse_id":"PRO.8.18","polarity":0.75,"label":"praise","confidence":0.88,"notes":"riches and honor with me, durable riches and righteousness"}
+{"verse_id":"PRO.8.19","polarity":0.75,"label":"praise","confidence":0.88,"notes":"fruit better than gold, revenue than choice silver"}
+{"verse_id":"PRO.8.20","polarity":0.75,"label":"praise","confidence":0.88,"notes":"lead in way of righteousness, in midst of paths of judgment"}
+{"verse_id":"PRO.8.21","polarity":0.75,"label":"praise","confidence":0.88,"notes":"cause those who love me to inherit substance, fill treasures"}
+{"verse_id":"PRO.8.22","polarity":0.85,"label":"awe","confidence":0.92,"notes":"famous: LORD possessed me in beginning of way, before works of old"}
+{"verse_id":"PRO.8.23","polarity":0.85,"label":"awe","confidence":0.92,"notes":"set up from everlasting, from beginning, before earth was"}
+{"verse_id":"PRO.8.24","polarity":0.75,"label":"awe","confidence":0.88,"notes":"when no depths I was brought forth, no fountains abounding water"}
+{"verse_id":"PRO.8.25","polarity":0.75,"label":"awe","confidence":0.88,"notes":"before mountains settled, before hills, was I"}
+{"verse_id":"PRO.8.26","polarity":0.65,"label":"awe","confidence":0.85,"notes":"yet earth and fields not made, nor highest part of dust"}
+{"verse_id":"PRO.8.27","polarity":0.75,"label":"awe","confidence":0.88,"notes":"when prepared heavens, set compass on face of depth, I was there"}
+{"verse_id":"PRO.8.28","polarity":0.75,"label":"awe","confidence":0.88,"notes":"established clouds above, strengthened fountains of deep"}
+{"verse_id":"PRO.8.29","polarity":0.75,"label":"awe","confidence":0.88,"notes":"gave sea decree, not pass commandment; appointed foundations of earth"}
+{"verse_id":"PRO.8.30","polarity":0.85,"label":"joy","confidence":0.92,"notes":"famous: was by him as one brought up, daily his delight, rejoicing always"}
+{"verse_id":"PRO.8.31","polarity":0.85,"label":"joy","confidence":0.92,"notes":"rejoicing in habitable part of earth, delights with sons of men"}
+{"verse_id":"PRO.8.32","polarity":0.65,"label":"instruction","confidence":0.88,"notes":"hearken to me, blessed are those who keep my ways"}
+{"verse_id":"PRO.8.33","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"hear instruction, be wise, refuse not"}
+{"verse_id":"PRO.8.34","polarity":0.85,"label":"hope","confidence":0.92,"notes":"blessed is man who hears me, watching daily at gates"}
+{"verse_id":"PRO.8.35","polarity":0.85,"label":"hope","confidence":0.92,"notes":"famous: who finds me finds life, obtains favor of LORD"}
+{"verse_id":"PRO.8.36","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"sinning against me wrongs own soul; all who hate me love death"}
+{"verse_id":"PRO.9.1","polarity":0.65,"label":"praise","confidence":0.88,"notes":"wisdom builded house, hewn out seven pillars"}
+{"verse_id":"PRO.9.2","polarity":0.55,"label":"praise","confidence":0.85,"notes":"killed beasts, mingled wine, furnished table"}
+{"verse_id":"PRO.9.3","polarity":0.55,"label":"praise","confidence":0.85,"notes":"sent forth maidens, cries upon highest places"}
+{"verse_id":"PRO.9.4","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"whoever simple, turn in here; wants understanding, says"}
+{"verse_id":"PRO.9.5","polarity":0.65,"label":"hope","confidence":0.88,"notes":"come, eat my bread, drink wine I have mingled"}
+{"verse_id":"PRO.9.6","polarity":0.65,"label":"instruction","confidence":0.88,"notes":"forsake foolish, live; go in way of understanding"}
+{"verse_id":"PRO.9.7","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"reproves scorner gets shame; rebukes wicked gets blot"}
+{"verse_id":"PRO.9.8","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"reprove not scorner, lest hate; rebuke wise, will love thee"}
+{"verse_id":"PRO.9.9","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"give to wise, will be yet wiser; teach just, will increase learning"}
+{"verse_id":"PRO.9.10","polarity":0.85,"label":"praise","confidence":0.95,"notes":"famous: fear of LORD is beginning of wisdom, knowledge of holy is understanding"}
+{"verse_id":"PRO.9.11","polarity":0.75,"label":"hope","confidence":0.88,"notes":"by me thy days shall be multiplied, years of life increased"}
+{"verse_id":"PRO.9.12","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"if wise, wise for thyself; if scorn, alone shalt bear it"}
+{"verse_id":"PRO.9.13","polarity":-0.50,"label":"warning","confidence":0.85,"notes":"foolish woman is clamorous, simple, knows nothing"}
+{"verse_id":"PRO.9.14","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"sits at door of house, on seat in high places of city"}
+{"verse_id":"PRO.9.15","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"calls passengers who go right on their ways"}
+{"verse_id":"PRO.9.16","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"whoever simple, turn in here; wants understanding, says"}
+{"verse_id":"PRO.9.17","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"stolen waters are sweet, bread eaten in secret pleasant"}
+{"verse_id":"PRO.9.18","polarity":-0.75,"label":"warning","confidence":0.90,"notes":"knows not dead are there; guests in depths of hell"}
+{"verse_id":"PRO.10.1","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wise son glad father; foolish heaviness of mother"}
+{"verse_id":"PRO.10.2","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"treasures of wickedness profit nothing; righteousness delivers from death"}
+{"verse_id":"PRO.10.3","polarity":0.30,"label":"hope","confidence":0.85,"notes":"LORD not famish soul of righteous; casts away substance of wicked"}
+{"verse_id":"PRO.10.4","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"slack hand makes poor; hand of diligent makes rich"}
+{"verse_id":"PRO.10.5","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"gathers in summer is wise; sleeps in harvest causes shame"}
+{"verse_id":"PRO.10.6","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"blessings on head of just; violence covers mouth of wicked"}
+{"verse_id":"PRO.10.7","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"memory of just blessed; name of wicked shall rot"}
+{"verse_id":"PRO.10.8","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wise in heart receives commandments; prating fool falls"}
+{"verse_id":"PRO.10.9","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"walks uprightly walks surely; perverts ways shall be known"}
+{"verse_id":"PRO.10.10","polarity":-0.10,"label":"warning","confidence":0.82,"notes":"winks with eye causes sorrow; prating fool falls"}
+{"verse_id":"PRO.10.11","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"mouth of righteous well of life; violence covers mouth of wicked"}
+{"verse_id":"PRO.10.12","polarity":0.30,"label":"instruction","confidence":0.88,"notes":"famous: hatred stirs strife; love covers all sins"}
+{"verse_id":"PRO.10.13","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"in lips of him with understanding wisdom; rod for back of him void"}
+{"verse_id":"PRO.10.14","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wise lay up knowledge; mouth of foolish near destruction"}
+{"verse_id":"PRO.10.15","polarity":0.05,"label":"narrative","confidence":0.82,"notes":"rich man's wealth strong city; destruction of poor their poverty"}
+{"verse_id":"PRO.10.16","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"labor of righteous tends to life; fruit of wicked to sin"}
+{"verse_id":"PRO.10.17","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"in way of life keeps instruction; refuses reproof errs"}
+{"verse_id":"PRO.10.18","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"hides hatred with lying lips; utters slander is fool"}
+{"verse_id":"PRO.10.19","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"in multitude of words sin lacks not; refrains lips wise"}
+{"verse_id":"PRO.10.20","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"tongue of just choice silver; heart of wicked little worth"}
+{"verse_id":"PRO.10.21","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"lips of righteous feed many; fools die for want of wisdom"}
+{"verse_id":"PRO.10.22","polarity":0.65,"label":"praise","confidence":0.88,"notes":"famous: blessing of LORD makes rich, adds no sorrow"}
+{"verse_id":"PRO.10.23","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"sport for fool to do mischief; man of understanding has wisdom"}
+{"verse_id":"PRO.10.24","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"fear of wicked comes; desire of righteous granted"}
+{"verse_id":"PRO.10.25","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"as whirlwind passes wicked no more; righteous everlasting foundation"}
+{"verse_id":"PRO.10.26","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"as vinegar to teeth, smoke to eyes, sluggard to those who send"}
+{"verse_id":"PRO.10.27","polarity":0.30,"label":"hope","confidence":0.85,"notes":"fear of LORD prolongs days; years of wicked shortened"}
+{"verse_id":"PRO.10.28","polarity":0.30,"label":"hope","confidence":0.85,"notes":"hope of righteous gladness; expectation of wicked perish"}
+{"verse_id":"PRO.10.29","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"way of LORD strength to upright; destruction to workers of iniquity"}
+{"verse_id":"PRO.10.30","polarity":0.20,"label":"hope","confidence":0.85,"notes":"righteous never removed; wicked not inhabit earth"}
+{"verse_id":"PRO.10.31","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"mouth of just brings forth wisdom; froward tongue cut out"}
+{"verse_id":"PRO.10.32","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"lips of righteous know what acceptable; wicked frowardness"}
+{"verse_id":"PRO.11.1","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"false balance abomination to LORD; just weight delight"}
+{"verse_id":"PRO.11.2","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"pride comes shame; with lowly is wisdom"}
+{"verse_id":"PRO.11.3","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"integrity of upright guides; perverseness destroys transgressors"}
+{"verse_id":"PRO.11.4","polarity":0.20,"label":"hope","confidence":0.85,"notes":"riches profit not in day of wrath; righteousness delivers from death"}
+{"verse_id":"PRO.11.5","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"righteousness of perfect direct way; wicked fall by own wickedness"}
+{"verse_id":"PRO.11.6","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"righteousness of upright deliver; transgressors taken in own naughtiness"}
+{"verse_id":"PRO.11.7","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"when wicked man dies, expectation perish; hope of unjust perish"}
+{"verse_id":"PRO.11.8","polarity":0.20,"label":"hope","confidence":0.85,"notes":"righteous delivered from trouble; wicked comes in his stead"}
+{"verse_id":"PRO.11.9","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"hypocrite destroys neighbor with mouth; through knowledge just delivered"}
+{"verse_id":"PRO.11.10","polarity":0.20,"label":"narrative","confidence":0.85,"notes":"when goes well with righteous city rejoices; wicked perish, shouting"}
+{"verse_id":"PRO.11.11","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"by blessing of upright city exalted; mouth of wicked overthrown"}
+{"verse_id":"PRO.11.12","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"void of wisdom despises neighbor; man of understanding holds peace"}
+{"verse_id":"PRO.11.13","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"talebearer reveals secrets; faithful spirit conceals matter"}
+{"verse_id":"PRO.11.14","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"where no counsel people fall; in multitude of counsellors safety"}
+{"verse_id":"PRO.11.15","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"surety for stranger smart; hates suretiship sure"}
+{"verse_id":"PRO.11.16","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"gracious woman retains honor; strong men retain riches"}
+{"verse_id":"PRO.11.17","polarity":0.40,"label":"love","confidence":0.85,"notes":"merciful man does good to soul; cruel troubles flesh"}
+{"verse_id":"PRO.11.18","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wicked works deceitful work; sows righteousness sure reward"}
+{"verse_id":"PRO.11.19","polarity":0.30,"label":"hope","confidence":0.85,"notes":"as righteousness tends to life; pursues evil to own death"}
+{"verse_id":"PRO.11.20","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"froward in heart abomination to LORD; upright in way delight"}
+{"verse_id":"PRO.11.21","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"hand in hand wicked not unpunished; seed of righteous delivered"}
+{"verse_id":"PRO.11.22","polarity":-0.30,"label":"instruction","confidence":0.85,"notes":"as jewel of gold in swine's snout, fair woman without discretion"}
+{"verse_id":"PRO.11.23","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"desire of righteous only good; expectation of wicked wrath"}
+{"verse_id":"PRO.11.24","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"scatters and increases more; withholds tends to poverty"}
+{"verse_id":"PRO.11.25","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: liberal soul made fat; waters shall be watered also"}
+{"verse_id":"PRO.11.26","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"withholds corn people curse; blessing on head of him who sells"}
+{"verse_id":"PRO.11.27","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"diligently seeks good gets favor; seeks mischief comes to him"}
+{"verse_id":"PRO.11.28","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"trusts in riches falls; righteous flourish as branch"}
+{"verse_id":"PRO.11.29","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"troubles own house inherit wind; fool servant to wise"}
+{"verse_id":"PRO.11.30","polarity":0.55,"label":"praise","confidence":0.88,"notes":"famous: fruit of righteous tree of life; wins souls is wise"}
+{"verse_id":"PRO.11.31","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"righteous recompensed in earth; how much more wicked"}
+{"verse_id":"PRO.12.1","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"loves instruction loves knowledge; hates reproof brutish"}
+{"verse_id":"PRO.12.2","polarity":0.20,"label":"hope","confidence":0.85,"notes":"good man obtains favor of LORD; man of wicked devices condemned"}
+{"verse_id":"PRO.12.3","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"man not established by wickedness; root of righteous not moved"}
+{"verse_id":"PRO.12.4","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"virtuous woman crown to husband; makes ashamed rottenness in bones"}
+{"verse_id":"PRO.12.5","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"thoughts of righteous right; counsels of wicked deceit"}
+{"verse_id":"PRO.12.6","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"words of wicked lie in wait for blood; mouth of upright deliver"}
+{"verse_id":"PRO.12.7","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"wicked overthrown not; house of righteous shall stand"}
+{"verse_id":"PRO.12.8","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"praised according to wisdom; perverse heart despised"}
+{"verse_id":"PRO.12.9","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"better despised has servant than honored lacks bread"}
+{"verse_id":"PRO.12.10","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"righteous regards life of beast; tender mercies of wicked cruel"}
+{"verse_id":"PRO.12.11","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"tills land satisfied with bread; follows vain void of understanding"}
+{"verse_id":"PRO.12.12","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wicked desires net of evil; root of righteous yields fruit"}
+{"verse_id":"PRO.12.13","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wicked snared by transgression of lips; just come out of trouble"}
+{"verse_id":"PRO.12.14","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"satisfied with good by fruit of mouth; recompense of hands rendered"}
+{"verse_id":"PRO.12.15","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"way of fool right in own eyes; hearkens to counsel wise"}
+{"verse_id":"PRO.12.16","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"fool's wrath presently known; prudent covers shame"}
+{"verse_id":"PRO.12.17","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"speaks truth shows righteousness; false witness deceit"}
+{"verse_id":"PRO.12.18","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"speaks like piercings of sword; tongue of wise health"}
+{"verse_id":"PRO.12.19","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"lip of truth established forever; lying tongue but moment"}
+{"verse_id":"PRO.12.20","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"deceit in heart of imagine evil; counsellors of peace joy"}
+{"verse_id":"PRO.12.21","polarity":0.30,"label":"hope","confidence":0.85,"notes":"no evil happen to just; wicked filled with mischief"}
+{"verse_id":"PRO.12.22","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"lying lips abomination to LORD; deal truly delight"}
+{"verse_id":"PRO.12.23","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"prudent man conceals knowledge; heart of fools proclaims foolishness"}
+{"verse_id":"PRO.12.24","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"hand of diligent shall bear rule; slothful under tribute"}
+{"verse_id":"PRO.12.25","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"heaviness in heart makes stoop; good word makes glad"}
+{"verse_id":"PRO.12.26","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"righteous more excellent than neighbor; way of wicked seduces"}
+{"verse_id":"PRO.12.27","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"slothful roasts not what took; substance of diligent precious"}
+{"verse_id":"PRO.12.28","polarity":0.55,"label":"hope","confidence":0.88,"notes":"way of righteousness life; pathway thereof no death"}
+{"verse_id":"PRO.13.1","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wise son hears father's instruction; scorner not rebuke"}
+{"verse_id":"PRO.13.2","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"by fruit of mouth eat good; soul of transgressors violence"}
+{"verse_id":"PRO.13.3","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"keeps mouth keeps life; opens lips wide destruction"}
+{"verse_id":"PRO.13.4","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"sluggard desires nothing; soul of diligent fat"}
+{"verse_id":"PRO.13.5","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"righteous hates lying; wicked loathsome and shame"}
+{"verse_id":"PRO.13.6","polarity":0.20,"label":"hope","confidence":0.85,"notes":"righteousness keeps upright; wickedness overthrows sinner"}
+{"verse_id":"PRO.13.7","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"some make rich with nothing; some make poor great riches"}
+{"verse_id":"PRO.13.8","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"ransom of life riches; poor hears not rebuke"}
+{"verse_id":"PRO.13.9","polarity":0.20,"label":"hope","confidence":0.85,"notes":"light of righteous rejoices; lamp of wicked put out"}
+{"verse_id":"PRO.13.10","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"by pride contention; well advised wisdom"}
+{"verse_id":"PRO.13.11","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wealth gotten vanity diminished; gathers by labor increase"}
+{"verse_id":"PRO.13.12","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"hope deferred makes heart sick; desire come tree of life"}
+{"verse_id":"PRO.13.13","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"despises word destroyed; fears commandment rewarded"}
+{"verse_id":"PRO.13.14","polarity":0.55,"label":"praise","confidence":0.88,"notes":"law of wise fountain of life, depart from snares of death"}
+{"verse_id":"PRO.13.15","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"good understanding gives favor; way of transgressors hard"}
+{"verse_id":"PRO.13.16","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"prudent deals with knowledge; fool lays open folly"}
+{"verse_id":"PRO.13.17","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wicked messenger falls into mischief; faithful ambassador health"}
+{"verse_id":"PRO.13.18","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"refuses instruction poverty and shame; regards reproof honored"}
+{"verse_id":"PRO.13.19","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"desire accomplished sweet to soul; abomination to fools depart from evil"}
+{"verse_id":"PRO.13.20","polarity":0.30,"label":"instruction","confidence":0.92,"notes":"famous: walks with wise shall be wise; companion of fools destroyed"}
+{"verse_id":"PRO.13.21","polarity":0.20,"label":"hope","confidence":0.85,"notes":"evil pursues sinners; righteous good repaid"}
+{"verse_id":"PRO.13.22","polarity":0.30,"label":"hope","confidence":0.85,"notes":"good leaves inheritance to children's children; wealth of sinner laid up for just"}
+{"verse_id":"PRO.13.23","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"much food in tillage of poor; some destroyed for want of judgment"}
+{"verse_id":"PRO.13.24","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"famous: spares rod hates son; loves him chastens betimes"}
+{"verse_id":"PRO.13.25","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"righteous eats to satisfaction; belly of wicked shall want"}
+{"verse_id":"PRO.14.1","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"every wise woman builds house; foolish plucks down with hands"}
+{"verse_id":"PRO.14.2","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"walks in uprightness fears LORD; perverse ways despises"}
+{"verse_id":"PRO.14.3","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"in mouth of foolish rod of pride; lips of wise preserve"}
+{"verse_id":"PRO.14.4","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"where no oxen crib clean; much increase by strength of ox"}
+{"verse_id":"PRO.14.5","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"faithful witness not lie; false witness utters lies"}
+{"verse_id":"PRO.14.6","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"scorner seeks wisdom finds not; knowledge easy to him with understanding"}
+{"verse_id":"PRO.14.7","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"go from presence of foolish, perceive not knowledge in lips"}
+{"verse_id":"PRO.14.8","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wisdom of prudent to understand way; folly of fools deceit"}
+{"verse_id":"PRO.14.9","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"fools mock at sin; among righteous favor"}
+{"verse_id":"PRO.14.10","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"heart knows own bitterness; stranger not intermeddle with joy"}
+{"verse_id":"PRO.14.11","polarity":0.20,"label":"hope","confidence":0.85,"notes":"house of wicked overthrown; tabernacle of upright flourish"}
+{"verse_id":"PRO.14.12","polarity":-0.30,"label":"warning","confidence":0.92,"notes":"famous: way that seems right but end is death"}
+{"verse_id":"PRO.14.13","polarity":-0.10,"label":"narrative","confidence":0.82,"notes":"even in laughter heart sorrowful; end of mirth heaviness"}
+{"verse_id":"PRO.14.14","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"backslider in heart filled with own ways; good man satisfied with own"}
+{"verse_id":"PRO.14.15","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"simple believes every word; prudent looks well to going"}
+{"verse_id":"PRO.14.16","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wise man fears departs from evil; fool rages confident"}
+{"verse_id":"PRO.14.17","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"soon angry deals foolishly; man of wicked devices hated"}
+{"verse_id":"PRO.14.18","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"simple inherit folly; prudent crowned with knowledge"}
+{"verse_id":"PRO.14.19","polarity":0.30,"label":"hope","confidence":0.85,"notes":"evil bow before good; wicked at gates of righteous"}
+{"verse_id":"PRO.14.20","polarity":-0.10,"label":"narrative","confidence":0.82,"notes":"poor hated even of own neighbor; rich many friends"}
+{"verse_id":"PRO.14.21","polarity":0.45,"label":"love","confidence":0.85,"notes":"despises neighbor sins; mercy on poor blessed"}
+{"verse_id":"PRO.14.22","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"err devise evil; mercy and truth devise good"}
+{"verse_id":"PRO.14.23","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"in all labor profit; talk of lips tendency to penury"}
+{"verse_id":"PRO.14.24","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"crown of wise riches; foolishness of fools is folly"}
+{"verse_id":"PRO.14.25","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"true witness delivers souls; deceitful witness speaks lies"}
+{"verse_id":"PRO.14.26","polarity":0.55,"label":"hope","confidence":0.88,"notes":"in fear of LORD strong confidence; children shall have place of refuge"}
+{"verse_id":"PRO.14.27","polarity":0.55,"label":"hope","confidence":0.88,"notes":"fear of LORD fountain of life, depart from snares of death"}
+{"verse_id":"PRO.14.28","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"in multitude of people king's honor; want of people destruction"}
+{"verse_id":"PRO.14.29","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"slow to wrath great understanding; hasty of spirit exalts folly"}
+{"verse_id":"PRO.14.30","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"sound heart life of flesh; envy rottenness of bones"}
+{"verse_id":"PRO.14.31","polarity":0.40,"label":"love","confidence":0.85,"notes":"oppresses poor reproaches Maker; honors him has mercy on poor"}
+{"verse_id":"PRO.14.32","polarity":0.30,"label":"hope","confidence":0.85,"notes":"wicked driven away in wickedness; righteous has hope in death"}
+{"verse_id":"PRO.14.33","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wisdom rests in heart of understanding; in midst of fools made known"}
+{"verse_id":"PRO.14.34","polarity":0.30,"label":"instruction","confidence":0.92,"notes":"famous: righteousness exalts nation; sin reproach to any people"}
+{"verse_id":"PRO.14.35","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"king's favor toward wise servant; wrath against him causes shame"}
+{"verse_id":"PRO.15.1","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: soft answer turns away wrath; grievous words stir anger"}
+{"verse_id":"PRO.15.2","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"tongue of wise uses knowledge aright; mouth of fools pours foolishness"}
+{"verse_id":"PRO.15.3","polarity":0.30,"label":"awe","confidence":0.85,"notes":"eyes of LORD in every place, beholding evil and good"}
+{"verse_id":"PRO.15.4","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"wholesome tongue tree of life; perverseness breach in spirit"}
+{"verse_id":"PRO.15.5","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"fool despises father's instruction; regards reproof prudent"}
+{"verse_id":"PRO.15.6","polarity":0.20,"label":"hope","confidence":0.85,"notes":"in house of righteous much treasure; revenues of wicked trouble"}
+{"verse_id":"PRO.15.7","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"lips of wise disperse knowledge; heart of foolish does not so"}
+{"verse_id":"PRO.15.8","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"sacrifice of wicked abomination; prayer of upright his delight"}
+{"verse_id":"PRO.15.9","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"way of wicked abomination; loves him who follows righteousness"}
+{"verse_id":"PRO.15.10","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"grievous correction to him who forsakes way; hates reproof shall die"}
+{"verse_id":"PRO.15.11","polarity":0.30,"label":"awe","confidence":0.85,"notes":"hell and destruction before LORD; how much more hearts of children"}
+{"verse_id":"PRO.15.12","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"scorner loves not him that reproves; not go to wise"}
+{"verse_id":"PRO.15.13","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"merry heart cheerful countenance; sorrow of heart spirit broken"}
+{"verse_id":"PRO.15.14","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"heart of him who has understanding seeks knowledge; mouth of fools feeds on foolishness"}
+{"verse_id":"PRO.15.15","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"all days of afflicted evil; merry heart continual feast"}
+{"verse_id":"PRO.15.16","polarity":0.55,"label":"praise","confidence":0.88,"notes":"famous: better little with fear of LORD than great treasure with trouble"}
+{"verse_id":"PRO.15.17","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: better dinner of herbs with love than stalled ox with hatred"}
+{"verse_id":"PRO.15.18","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"wrathful man stirs strife; slow to anger appeases strife"}
+{"verse_id":"PRO.15.19","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"way of slothful as hedge of thorns; way of righteous made plain"}
+{"verse_id":"PRO.15.20","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wise son makes glad father; foolish despises mother"}
+{"verse_id":"PRO.15.21","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"folly joy to him destitute of wisdom; man of understanding walks uprightly"}
+{"verse_id":"PRO.15.22","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"without counsel purposes disappointed; multitude of counsellors established"}
+{"verse_id":"PRO.15.23","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"man has joy by answer of mouth; word in due season how good"}
+{"verse_id":"PRO.15.24","polarity":0.45,"label":"hope","confidence":0.85,"notes":"way of life above to wise, depart from hell beneath"}
+{"verse_id":"PRO.15.25","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"LORD destroys house of proud; establishes border of widow"}
+{"verse_id":"PRO.15.26","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"thoughts of wicked abomination; words of pure pleasant"}
+{"verse_id":"PRO.15.27","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"greedy of gain troubles own house; hates gifts shall live"}
+{"verse_id":"PRO.15.28","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"heart of righteous studies to answer; mouth of wicked pours evil"}
+{"verse_id":"PRO.15.29","polarity":0.40,"label":"hope","confidence":0.85,"notes":"LORD far from wicked; hears prayer of righteous"}
+{"verse_id":"PRO.15.30","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"light of eyes rejoices heart; good report makes bones fat"}
+{"verse_id":"PRO.15.31","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"hears reproof of life abides among wise"}
+{"verse_id":"PRO.15.32","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"refuses instruction despises own soul; hears reproof gets understanding"}
+{"verse_id":"PRO.15.33","polarity":0.65,"label":"praise","confidence":0.88,"notes":"famous: fear of LORD instruction of wisdom; before honor humility"}
+{"verse_id":"PRO.16.1","polarity":0.30,"label":"awe","confidence":0.85,"notes":"preparations of heart in man; answer of tongue from LORD"}
+{"verse_id":"PRO.16.2","polarity":0.30,"label":"awe","confidence":0.85,"notes":"all ways of man clean in own eyes; LORD weighs spirits"}
+{"verse_id":"PRO.16.3","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: commit thy works unto LORD, thoughts shall be established"}
+{"verse_id":"PRO.16.4","polarity":0.30,"label":"awe","confidence":0.85,"notes":"LORD made all for himself; even wicked for day of evil"}
+{"verse_id":"PRO.16.5","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"every proud abomination to LORD; not unpunished"}
+{"verse_id":"PRO.16.6","polarity":0.45,"label":"hope","confidence":0.85,"notes":"by mercy and truth iniquity purged; by fear of LORD depart from evil"}
+{"verse_id":"PRO.16.7","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: when ways please LORD, makes even enemies at peace"}
+{"verse_id":"PRO.16.8","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better little with righteousness than great revenues without right"}
+{"verse_id":"PRO.16.9","polarity":0.55,"label":"hope","confidence":0.88,"notes":"man's heart devises way; LORD directs steps"}
+{"verse_id":"PRO.16.10","polarity":0.20,"label":"narrative","confidence":0.82,"notes":"divine sentence in lips of king; mouth not transgress in judgment"}
+{"verse_id":"PRO.16.11","polarity":0.20,"label":"narrative","confidence":0.85,"notes":"just weight and balance of LORD; all weights of bag his work"}
+{"verse_id":"PRO.16.12","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"abomination to kings to commit wickedness; throne established by righteousness"}
+{"verse_id":"PRO.16.13","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"righteous lips delight of kings; love him who speaks right"}
+{"verse_id":"PRO.16.14","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"wrath of king messengers of death; wise man pacifies"}
+{"verse_id":"PRO.16.15","polarity":0.45,"label":"hope","confidence":0.85,"notes":"in light of king's countenance life; favor as cloud of latter rain"}
+{"verse_id":"PRO.16.16","polarity":0.65,"label":"praise","confidence":0.88,"notes":"famous: how much better get wisdom than gold; understanding rather than silver"}
+{"verse_id":"PRO.16.17","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"highway of upright depart from evil; keeps way preserves soul"}
+{"verse_id":"PRO.16.18","polarity":0.30,"label":"instruction","confidence":0.92,"notes":"famous: pride goes before destruction, haughty spirit before fall"}
+{"verse_id":"PRO.16.19","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better humble spirit with lowly than divide spoil with proud"}
+{"verse_id":"PRO.16.20","polarity":0.65,"label":"hope","confidence":0.88,"notes":"handles matter wisely finds good; trusts in LORD happy"}
+{"verse_id":"PRO.16.21","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wise in heart called prudent; sweetness of lips increases learning"}
+{"verse_id":"PRO.16.22","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"understanding wellspring of life; instruction of fools folly"}
+{"verse_id":"PRO.16.23","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"heart of wise teaches mouth, adds learning to lips"}
+{"verse_id":"PRO.16.24","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: pleasant words honeycomb, sweet to soul, health to bones"}
+{"verse_id":"PRO.16.25","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"way that seems right but end is death (parallel 14:12)"}
+{"verse_id":"PRO.16.26","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"he that labors labors for himself; mouth craves it"}
+{"verse_id":"PRO.16.27","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"ungodly man digs evil; in lips burning fire"}
+{"verse_id":"PRO.16.28","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"froward man sows strife; whisperer separates chief friends"}
+{"verse_id":"PRO.16.29","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"violent man entices neighbor, leads in not good way"}
+{"verse_id":"PRO.16.30","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"shuts eyes to devise froward things; moves lips brings evil"}
+{"verse_id":"PRO.16.31","polarity":0.55,"label":"praise","confidence":0.85,"notes":"hoary head crown of glory if found in way of righteousness"}
+{"verse_id":"PRO.16.32","polarity":0.55,"label":"praise","confidence":0.92,"notes":"famous: better slow to anger than mighty; rules spirit than takes city"}
+{"verse_id":"PRO.16.33","polarity":0.30,"label":"awe","confidence":0.85,"notes":"lot cast into lap; whole disposing of LORD"}
+{"verse_id":"PRO.17.1","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better dry morsel and quietness than house full of sacrifices with strife"}
+{"verse_id":"PRO.17.2","polarity":0.20,"label":"narrative","confidence":0.82,"notes":"wise servant rules over son who causes shame, share inheritance"}
+{"verse_id":"PRO.17.3","polarity":0.30,"label":"awe","confidence":0.85,"notes":"fining pot for silver, furnace for gold; LORD tries hearts"}
+{"verse_id":"PRO.17.4","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"wicked giver heed to false lips; liar gives ear to naughty tongue"}
+{"verse_id":"PRO.17.5","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"mocks poor reproaches Maker; glad at calamities not unpunished"}
+{"verse_id":"PRO.17.6","polarity":0.55,"label":"love","confidence":0.85,"notes":"children's children crown of old men; glory of children fathers"}
+{"verse_id":"PRO.17.7","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"excellent speech becomes not fool; much less lying lips a prince"}
+{"verse_id":"PRO.17.8","polarity":-0.10,"label":"narrative","confidence":0.82,"notes":"gift precious stone to him who has it; wherever turns prospers"}
+{"verse_id":"PRO.17.9","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"covers transgression seeks love; repeats matter separates friends"}
+{"verse_id":"PRO.17.10","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"reproof enters more into wise than hundred stripes into fool"}
+{"verse_id":"PRO.17.11","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"evil man seeks only rebellion; cruel messenger sent against him"}
+{"verse_id":"PRO.17.12","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"better meet bear robbed of whelps than fool in his folly"}
+{"verse_id":"PRO.17.13","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"rewards evil for good, evil shall not depart from house"}
+{"verse_id":"PRO.17.14","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"beginning of strife as letting out water; leave off before meddled with"}
+{"verse_id":"PRO.17.15","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"justifies wicked, condemns just, both abomination to LORD"}
+{"verse_id":"PRO.17.16","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"price in hand of fool to get wisdom, having no heart"}
+{"verse_id":"PRO.17.17","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: friend loves at all times; brother born for adversity"}
+{"verse_id":"PRO.17.18","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"void of understanding strikes hands becomes surety in presence of friend"}
+{"verse_id":"PRO.17.19","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"loves transgression loves strife; exalts gate seeks destruction"}
+{"verse_id":"PRO.17.20","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"froward heart finds no good; perverse tongue falls into mischief"}
+{"verse_id":"PRO.17.21","polarity":-0.30,"label":"narrative","confidence":0.85,"notes":"begets fool to own sorrow; father of fool no joy"}
+{"verse_id":"PRO.17.22","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: merry heart good medicine; broken spirit dries bones"}
+{"verse_id":"PRO.17.23","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"wicked takes gift out of bosom to pervert ways of judgment"}
+{"verse_id":"PRO.17.24","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"wisdom before face of him who has understanding; eyes of fool ends of earth"}
+{"verse_id":"PRO.17.25","polarity":-0.30,"label":"narrative","confidence":0.85,"notes":"foolish son grief to father; bitterness to mother who bore him"}
+{"verse_id":"PRO.17.26","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"not good to punish just; nor strike princes for equity"}
+{"verse_id":"PRO.17.27","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"has knowledge spares words; man of understanding excellent spirit"}
+{"verse_id":"PRO.17.28","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"even fool when holds peace counted wise; shuts lips understanding"}
+{"verse_id":"PRO.18.1","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"separates himself seeks own desire; intermeddles with all wisdom"}
+{"verse_id":"PRO.18.2","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"fool no delight in understanding, but heart discover itself"}
+{"verse_id":"PRO.18.3","polarity":-0.30,"label":"narrative","confidence":0.85,"notes":"when wicked comes, contempt; with ignominy reproach"}
+{"verse_id":"PRO.18.4","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"words of mouth deep waters; wellspring of wisdom flowing brook"}
+{"verse_id":"PRO.18.5","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"not good to accept person of wicked, to overthrow righteous in judgment"}
+{"verse_id":"PRO.18.6","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"fool's lips enter contention; mouth calls for strokes"}
+{"verse_id":"PRO.18.7","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"fool's mouth own destruction; lips snare of soul"}
+{"verse_id":"PRO.18.8","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"words of talebearer as wounds, go down to belly"}
+{"verse_id":"PRO.18.9","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"slothful in work brother to great waster"}
+{"verse_id":"PRO.18.10","polarity":0.85,"label":"hope","confidence":0.95,"notes":"famous: name of LORD strong tower; righteous run into it, safe"}
+{"verse_id":"PRO.18.11","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"rich man's wealth strong city; high wall in own conceit"}
+{"verse_id":"PRO.18.12","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"before destruction heart haughty; before honor humility"}
+{"verse_id":"PRO.18.13","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"answers matter before hears, folly and shame"}
+{"verse_id":"PRO.18.14","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"spirit of man sustains infirmity; wounded spirit who can bear"}
+{"verse_id":"PRO.18.15","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"heart of prudent gets knowledge; ear of wise seeks knowledge"}
+{"verse_id":"PRO.18.16","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"man's gift makes room, brings before great"}
+{"verse_id":"PRO.18.17","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"first in own cause seems just; neighbor comes searches"}
+{"verse_id":"PRO.18.18","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"lot causes contentions to cease; parts between mighty"}
+{"verse_id":"PRO.18.19","polarity":-0.30,"label":"narrative","confidence":0.85,"notes":"brother offended harder to win than strong city; contentions like bars of castle"}
+{"verse_id":"PRO.18.20","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"by fruit of mouth belly satisfied; with increase of lips filled"}
+{"verse_id":"PRO.18.21","polarity":0.45,"label":"instruction","confidence":0.92,"notes":"famous: death and life in power of tongue; love it eat fruit"}
+{"verse_id":"PRO.18.22","polarity":0.65,"label":"love","confidence":0.92,"notes":"famous: finds wife finds good thing, obtains favor of LORD"}
+{"verse_id":"PRO.18.23","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"poor uses entreaties; rich answers roughly"}
+{"verse_id":"PRO.18.24","polarity":0.45,"label":"love","confidence":0.92,"notes":"famous: man with friends must show himself friendly; friend sticks closer than brother"}
+{"verse_id":"PRO.19.1","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better poor walks in integrity than perverse in lips and fool"}
+{"verse_id":"PRO.19.2","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"soul without knowledge not good; hastes with feet sins"}
+{"verse_id":"PRO.19.3","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"foolishness of man perverts way; heart frets against LORD"}
+{"verse_id":"PRO.19.4","polarity":0.05,"label":"narrative","confidence":0.82,"notes":"wealth makes many friends; poor separated from neighbor"}
+{"verse_id":"PRO.19.5","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"false witness not unpunished; speaks lies not escape"}
+{"verse_id":"PRO.19.6","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"many will entreat favor of prince; every man friend to him who gives"}
+{"verse_id":"PRO.19.7","polarity":-0.30,"label":"narrative","confidence":0.85,"notes":"all brethren of poor hate him; how much friends go far"}
+{"verse_id":"PRO.19.8","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"gets wisdom loves own soul; keeps understanding finds good"}
+{"verse_id":"PRO.19.9","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"false witness not unpunished; speaks lies perish (parallel 19:5)"}
+{"verse_id":"PRO.19.10","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"delight not seemly for fool; servant to rule over princes"}
+{"verse_id":"PRO.19.11","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"discretion of man defers anger; glory to pass over transgression"}
+{"verse_id":"PRO.19.12","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"king's wrath as roaring of lion; favor as dew on grass"}
+{"verse_id":"PRO.19.13","polarity":-0.30,"label":"narrative","confidence":0.85,"notes":"foolish son calamity of father; contentions of wife continual dropping"}
+{"verse_id":"PRO.19.14","polarity":0.55,"label":"hope","confidence":0.88,"notes":"house and riches inheritance of fathers; prudent wife from LORD"}
+{"verse_id":"PRO.19.15","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"slothfulness casts into deep sleep; idle soul shall suffer hunger"}
+{"verse_id":"PRO.19.16","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"keeps commandment keeps own soul; despises ways shall die"}
+{"verse_id":"PRO.19.17","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: pities poor lends to LORD; that which has given will pay again"}
+{"verse_id":"PRO.19.18","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"chasten son while there is hope; let not soul spare for crying"}
+{"verse_id":"PRO.19.19","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"man of great wrath shall suffer punishment; if deliver, must do again"}
+{"verse_id":"PRO.19.20","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"hear counsel, receive instruction, may be wise in latter end"}
+{"verse_id":"PRO.19.21","polarity":0.55,"label":"hope","confidence":0.88,"notes":"many devices in heart of man; counsel of LORD shall stand"}
+{"verse_id":"PRO.19.22","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"desire of man kindness; better poor than liar"}
+{"verse_id":"PRO.19.23","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: fear of LORD tends to life; abide satisfied, not visited with evil"}
+{"verse_id":"PRO.19.24","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"slothful hides hand in bosom, will not bring back to mouth"}
+{"verse_id":"PRO.19.25","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"smite scorner, simple beware; reprove understanding, gain knowledge"}
+{"verse_id":"PRO.19.26","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"wastes father, chases mother, son causes shame, brings reproach"}
+{"verse_id":"PRO.19.27","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"cease, my son, to hear instruction that causes err from words of knowledge"}
+{"verse_id":"PRO.19.28","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"ungodly witness scorns judgment; mouth of wicked devours iniquity"}
+{"verse_id":"PRO.19.29","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"judgments prepared for scorners; stripes for back of fools"}
+{"verse_id":"PRO.20.1","polarity":-0.30,"label":"warning","confidence":0.92,"notes":"famous: wine is mocker, strong drink raging; deceived not wise"}
+{"verse_id":"PRO.20.2","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"fear of king as roaring of lion; provokes him sins against own soul"}
+{"verse_id":"PRO.20.3","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"honor to cease from strife; every fool meddling"}
+{"verse_id":"PRO.20.4","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"sluggard not plow by reason of cold; beg in harvest, nothing"}
+{"verse_id":"PRO.20.5","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"counsel in heart of man like deep water; man of understanding draws out"}
+{"verse_id":"PRO.20.6","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"most men proclaim every one own goodness; faithful man who can find"}
+{"verse_id":"PRO.20.7","polarity":0.55,"label":"hope","confidence":0.88,"notes":"just walks in integrity; children blessed after him"}
+{"verse_id":"PRO.20.8","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"king sits on throne of judgment scatters away all evil with eyes"}
+{"verse_id":"PRO.20.9","polarity":-0.20,"label":"confession","confidence":0.85,"notes":"who can say I have made heart clean, pure from sin"}
+{"verse_id":"PRO.20.10","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"divers weights, divers measures, both abomination to LORD"}
+{"verse_id":"PRO.20.11","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"even child known by doings, whether work pure and right"}
+{"verse_id":"PRO.20.12","polarity":0.45,"label":"awe","confidence":0.85,"notes":"hearing ear, seeing eye, LORD has made even both of them"}
+{"verse_id":"PRO.20.13","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"love not sleep lest poverty; open eyes shall be satisfied with bread"}
+{"verse_id":"PRO.20.14","polarity":-0.10,"label":"narrative","confidence":0.82,"notes":"naught, naught, says buyer; gone, then boasts"}
+{"verse_id":"PRO.20.15","polarity":0.45,"label":"praise","confidence":0.85,"notes":"there is gold and rubies; lips of knowledge precious jewel"}
+{"verse_id":"PRO.20.16","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"take garment surety for stranger; pledge for strange woman"}
+{"verse_id":"PRO.20.17","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"bread of deceit sweet; afterward mouth filled with gravel"}
+{"verse_id":"PRO.20.18","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"every purpose established by counsel; with good advice make war"}
+{"verse_id":"PRO.20.19","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"talebearer reveals secrets; meddle not with flatters with lips"}
+{"verse_id":"PRO.20.20","polarity":-0.55,"label":"warning","confidence":0.88,"notes":"curses father or mother, lamp put out in obscure darkness"}
+{"verse_id":"PRO.20.21","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"inheritance gotten hastily at beginning; end not blessed"}
+{"verse_id":"PRO.20.22","polarity":0.55,"label":"hope","confidence":0.92,"notes":"famous: say not, I will recompense evil; wait on LORD, save thee"}
+{"verse_id":"PRO.20.23","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"divers weights abomination to LORD; false balance not good"}
+{"verse_id":"PRO.20.24","polarity":0.30,"label":"awe","confidence":0.85,"notes":"man's goings of LORD; how can man understand way"}
+{"verse_id":"PRO.20.25","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"snare to devour holy, after vows make inquiry"}
+{"verse_id":"PRO.20.26","polarity":0.20,"label":"narrative","confidence":0.82,"notes":"wise king scatters wicked, brings wheel over them"}
+{"verse_id":"PRO.20.27","polarity":0.45,"label":"awe","confidence":0.85,"notes":"spirit of man candle of LORD, searching all inward parts"}
+{"verse_id":"PRO.20.28","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"mercy and truth preserve king; throne upholden by mercy"}
+{"verse_id":"PRO.20.29","polarity":0.45,"label":"praise","confidence":0.85,"notes":"glory of young men strength; beauty of old men gray head"}
+{"verse_id":"PRO.20.30","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"blueness of wound cleanses evil; stripes inward parts of belly"}
+{"verse_id":"PRO.21.1","polarity":0.55,"label":"awe","confidence":0.88,"notes":"king's heart in hand of LORD as rivers of water; turns whithersoever"}
+{"verse_id":"PRO.21.2","polarity":0.30,"label":"awe","confidence":0.85,"notes":"every way of man right in own eyes; LORD ponders heart"}
+{"verse_id":"PRO.21.3","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"to do justice and judgment more acceptable to LORD than sacrifice"}
+{"verse_id":"PRO.21.4","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"high look, proud heart, plowing of wicked, sin"}
+{"verse_id":"PRO.21.5","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"thoughts of diligent tend to plenteousness; hasty to want"}
+{"verse_id":"PRO.21.6","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"getting treasures by lying tongue vanity tossed by death"}
+{"verse_id":"PRO.21.7","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"robbery of wicked destroy them; refuse to do judgment"}
+{"verse_id":"PRO.21.8","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"way of man froward and strange; for pure work right"}
+{"verse_id":"PRO.21.9","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"better dwell in corner of housetop than brawling woman in wide house"}
+{"verse_id":"PRO.21.10","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"soul of wicked desires evil; neighbor finds no favor"}
+{"verse_id":"PRO.21.11","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"scorner punished simple wise; wise instructed receives knowledge"}
+{"verse_id":"PRO.21.12","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"righteous wisely considers house of wicked; God overthrows wicked"}
+{"verse_id":"PRO.21.13","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"stops ears at cry of poor, also cry, not be heard"}
+{"verse_id":"PRO.21.14","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"gift in secret pacifies anger; reward in bosom strong wrath"}
+{"verse_id":"PRO.21.15","polarity":0.30,"label":"hope","confidence":0.85,"notes":"joy to just to do judgment; destruction to workers of iniquity"}
+{"verse_id":"PRO.21.16","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"wanders out of way of understanding remain in congregation of dead"}
+{"verse_id":"PRO.21.17","polarity":-0.10,"label":"warning","confidence":0.82,"notes":"loves pleasure poor man; loves wine and oil not rich"}
+{"verse_id":"PRO.21.18","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"wicked ransom for righteous; transgressor for upright"}
+{"verse_id":"PRO.21.19","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"better dwell in wilderness than with contentious and angry woman"}
+{"verse_id":"PRO.21.20","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"treasure to be desired and oil in dwelling of wise; foolish spends up"}
+{"verse_id":"PRO.21.21","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: follows after righteousness and mercy finds life, righteousness, honor"}
+{"verse_id":"PRO.21.22","polarity":0.30,"label":"praise","confidence":0.85,"notes":"wise man scales city of mighty, casts down strength of confidence"}
+{"verse_id":"PRO.21.23","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"keeps mouth and tongue keeps soul from troubles"}
+{"verse_id":"PRO.21.24","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"proud and haughty scorner, deals in proud wrath"}
+{"verse_id":"PRO.21.25","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"desire of slothful kills him; hands refuse to labor"}
+{"verse_id":"PRO.21.26","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"covets greedily all day long; righteous gives, spares not"}
+{"verse_id":"PRO.21.27","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"sacrifice of wicked abomination; how much more brings with wicked mind"}
+{"verse_id":"PRO.21.28","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"false witness perish; man who hears speaks constantly"}
+{"verse_id":"PRO.21.29","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wicked man hardens face; upright directs way"}
+{"verse_id":"PRO.21.30","polarity":0.55,"label":"awe","confidence":0.88,"notes":"famous: no wisdom, understanding, nor counsel against LORD"}
+{"verse_id":"PRO.21.31","polarity":0.55,"label":"hope","confidence":0.88,"notes":"famous: horse prepared for battle; safety is of LORD"}
+{"verse_id":"PRO.22.1","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: good name rather to be chosen than great riches"}
+{"verse_id":"PRO.22.2","polarity":0.30,"label":"awe","confidence":0.85,"notes":"rich and poor meet together; LORD maker of all"}
+{"verse_id":"PRO.22.3","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"prudent foresees evil hides; simple pass on punished"}
+{"verse_id":"PRO.22.4","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: by humility and fear of LORD riches, honor, life"}
+{"verse_id":"PRO.22.5","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"thorns and snares in way of froward; keeps soul far from"}
+{"verse_id":"PRO.22.6","polarity":0.65,"label":"instruction","confidence":0.92,"notes":"famous: train up child in way go; when old not depart"}
+{"verse_id":"PRO.22.7","polarity":0.05,"label":"narrative","confidence":0.82,"notes":"rich rules over poor; borrower servant to lender"}
+{"verse_id":"PRO.22.8","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"sows iniquity reaps vanity; rod of anger fail"}
+{"verse_id":"PRO.22.9","polarity":0.55,"label":"love","confidence":0.88,"notes":"bountiful eye blessed; gives bread to poor"}
+{"verse_id":"PRO.22.10","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"cast out scorner, contention go out, strife and reproach cease"}
+{"verse_id":"PRO.22.11","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"loves pureness of heart, grace of lips, king his friend"}
+{"verse_id":"PRO.22.12","polarity":0.30,"label":"awe","confidence":0.85,"notes":"eyes of LORD preserve knowledge; overthrows words of transgressor"}
+{"verse_id":"PRO.22.13","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"slothful says lion without; slain in streets"}
+{"verse_id":"PRO.22.14","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"mouth of strange women deep pit; abhorred of LORD shall fall"}
+{"verse_id":"PRO.22.15","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"foolishness bound in heart of child; rod of correction drives away"}
+{"verse_id":"PRO.22.16","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"oppresses poor to increase; gives to rich shall come to want"}
+{"verse_id":"PRO.22.17","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"bow ear and hear words of wise, apply heart to my knowledge"}
+{"verse_id":"PRO.22.18","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"pleasant if keep within thee, fitted in lips"}
+{"verse_id":"PRO.22.19","polarity":0.65,"label":"hope","confidence":0.88,"notes":"that thy trust may be in LORD, made known to thee today"}
+{"verse_id":"PRO.22.20","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"have I not written to thee excellent things in counsels and knowledge"}
+{"verse_id":"PRO.22.21","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"to make thee know certainty of words of truth"}
+{"verse_id":"PRO.22.22","polarity":-0.30,"label":"instruction","confidence":0.85,"notes":"rob not poor because is poor; oppress not afflicted in gate"}
+{"verse_id":"PRO.22.23","polarity":0.30,"label":"hope","confidence":0.85,"notes":"LORD will plead their cause, spoil soul of those who spoil them"}
+{"verse_id":"PRO.22.24","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"make no friendship with angry man; with furious man go not"}
+{"verse_id":"PRO.22.25","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"lest learn ways, get snare to soul"}
+{"verse_id":"PRO.22.26","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"be not of those who strike hands, of those who are sureties for debts"}
+{"verse_id":"PRO.22.27","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"if hast nothing to pay, why take bed from under"}
+{"verse_id":"PRO.22.28","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"remove not ancient landmark which fathers have set"}
+{"verse_id":"PRO.22.29","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"see man diligent in business, stand before kings, not before mean"}
+{"verse_id":"PRO.23.1","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"when sit to eat with ruler, consider diligently what is before"}
+{"verse_id":"PRO.23.2","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"put knife to throat if given to appetite"}
+{"verse_id":"PRO.23.3","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"be not desirous of dainties; deceitful meat"}
+{"verse_id":"PRO.23.4","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"labor not to be rich; cease from own wisdom"}
+{"verse_id":"PRO.23.5","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"set eyes on that which is not? riches make wings, fly as eagle"}
+{"verse_id":"PRO.23.6","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"eat not bread of him who has evil eye; desire not dainties"}
+{"verse_id":"PRO.23.7","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"as thinks in heart, so is he; eat and drink, says, but heart not with"}
+{"verse_id":"PRO.23.8","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"morsel hast eaten shalt vomit up; lose sweet words"}
+{"verse_id":"PRO.23.9","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"speak not in ears of fool; will despise wisdom of words"}
+{"verse_id":"PRO.23.10","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"remove not old landmark; enter not into fields of fatherless"}
+{"verse_id":"PRO.23.11","polarity":0.30,"label":"hope","confidence":0.85,"notes":"redeemer is mighty; will plead their cause"}
+{"verse_id":"PRO.23.12","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"apply heart to instruction, ears to words of knowledge"}
+{"verse_id":"PRO.23.13","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"withhold not correction from child; if beat with rod, not die"}
+{"verse_id":"PRO.23.14","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"shalt beat with rod, deliver soul from hell"}
+{"verse_id":"PRO.23.15","polarity":0.55,"label":"love","confidence":0.85,"notes":"my son, if heart be wise, mine shall rejoice"}
+{"verse_id":"PRO.23.16","polarity":0.55,"label":"love","confidence":0.85,"notes":"my reins shall rejoice when lips speak right things"}
+{"verse_id":"PRO.23.17","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"let not heart envy sinners; in fear of LORD all day long"}
+{"verse_id":"PRO.23.18","polarity":0.65,"label":"hope","confidence":0.88,"notes":"surely there is end; thy expectation not cut off"}
+{"verse_id":"PRO.23.19","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"hear, my son, be wise, guide heart in way"}
+{"verse_id":"PRO.23.20","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"be not among winebibbers, riotous eaters of flesh"}
+{"verse_id":"PRO.23.21","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"drunkard and glutton come to poverty; drowsiness clothe with rags"}
+{"verse_id":"PRO.23.22","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"hearken to father who begat thee; despise not mother when old"}
+{"verse_id":"PRO.23.23","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"buy truth, sell not; also wisdom, instruction, understanding"}
+{"verse_id":"PRO.23.24","polarity":0.65,"label":"love","confidence":0.88,"notes":"father of righteous greatly rejoice; begets wise child shall have joy"}
+{"verse_id":"PRO.23.25","polarity":0.65,"label":"love","confidence":0.88,"notes":"thy father and mother shall be glad; rejoice that bare thee"}
+{"verse_id":"PRO.23.26","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"my son, give me thine heart; let eyes observe my ways"}
+{"verse_id":"PRO.23.27","polarity":-0.55,"label":"warning","confidence":0.88,"notes":"whore is deep ditch; strange woman narrow pit"}
+{"verse_id":"PRO.23.28","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"lies in wait as for prey; increases transgressors among men"}
+{"verse_id":"PRO.23.29","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"who has woe? who sorrow? who contentions? who babbling? who wounds?"}
+{"verse_id":"PRO.23.30","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"those who tarry long at wine, seek mixed wine"}
+{"verse_id":"PRO.23.31","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"look not upon wine when red, gives color in cup, moves smoothly"}
+{"verse_id":"PRO.23.32","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"at last bites like serpent, stings like adder"}
+{"verse_id":"PRO.23.33","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"eyes shall behold strange women; heart shall utter perverse things"}
+{"verse_id":"PRO.23.34","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"shalt be as one who lies down in midst of sea, on top of mast"}
+{"verse_id":"PRO.23.35","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"struck me not sick; beaten me felt not; when awake I will seek again"}
+{"verse_id":"PRO.24.1","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"be not envious against evil men; desire not to be with them"}
+{"verse_id":"PRO.24.2","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"their heart studies destruction; lips talk of mischief"}
+{"verse_id":"PRO.24.3","polarity":0.45,"label":"praise","confidence":0.85,"notes":"through wisdom house builded; by understanding established"}
+{"verse_id":"PRO.24.4","polarity":0.45,"label":"praise","confidence":0.85,"notes":"by knowledge chambers filled with all precious and pleasant riches"}
+{"verse_id":"PRO.24.5","polarity":0.45,"label":"praise","confidence":0.85,"notes":"wise man strong; man of knowledge increases strength"}
+{"verse_id":"PRO.24.6","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"by wise counsel make war; multitude of counsellors safety"}
+{"verse_id":"PRO.24.7","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"wisdom too high for fool; opens not mouth in gate"}
+{"verse_id":"PRO.24.8","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"devises to do evil shall be called mischievous person"}
+{"verse_id":"PRO.24.9","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"thought of foolishness sin; scorner abomination to men"}
+{"verse_id":"PRO.24.10","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"if faint in day of adversity, strength is small"}
+{"verse_id":"PRO.24.11","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"deliver those drawn to death; spare those ready to be slain"}
+{"verse_id":"PRO.24.12","polarity":0.30,"label":"awe","confidence":0.85,"notes":"if say we knew not, doth not he who ponders heart consider"}
+{"verse_id":"PRO.24.13","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"my son, eat honey, good; honeycomb sweet to taste"}
+{"verse_id":"PRO.24.14","polarity":0.65,"label":"hope","confidence":0.88,"notes":"so shall knowledge of wisdom be to soul; reward, expectation not cut off"}
+{"verse_id":"PRO.24.15","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"O wicked man, lay not wait against dwelling of righteous; spoil not"}
+{"verse_id":"PRO.24.16","polarity":0.55,"label":"hope","confidence":0.88,"notes":"famous: just falls seven times rises up; wicked fall into mischief"}
+{"verse_id":"PRO.24.17","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"rejoice not when enemy falls; let not heart be glad when stumbles"}
+{"verse_id":"PRO.24.18","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"lest LORD see, displease, turn wrath away"}
+{"verse_id":"PRO.24.19","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"fret not because of evil men; envy not wicked"}
+{"verse_id":"PRO.24.20","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"no reward to evil man; candle of wicked put out"}
+{"verse_id":"PRO.24.21","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"my son, fear LORD and king; meddle not with given to change"}
+{"verse_id":"PRO.24.22","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"calamity rise suddenly; ruin of both, who knows"}
+{"verse_id":"PRO.24.23","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"these things also belong to wise; not good to have respect of persons in judgment"}
+{"verse_id":"PRO.24.24","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"says to wicked, thou art righteous, peoples curse, nations abhor"}
+{"verse_id":"PRO.24.25","polarity":0.55,"label":"hope","confidence":0.85,"notes":"those who rebuke shall be delight; good blessing come"}
+{"verse_id":"PRO.24.26","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"every man kiss lips that gives right answer"}
+{"verse_id":"PRO.24.27","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"prepare work without; afterwards build house"}
+{"verse_id":"PRO.24.28","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"be not witness against neighbor without cause; deceive not with lips"}
+{"verse_id":"PRO.24.29","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"say not, will do as he done to me; render to man according to work"}
+{"verse_id":"PRO.24.30","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"went by field of slothful, vineyard of man void of understanding"}
+{"verse_id":"PRO.24.31","polarity":-0.45,"label":"narrative","confidence":0.85,"notes":"all grown over with thorns; nettles covered face; stone wall broken down"}
+{"verse_id":"PRO.24.32","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"saw, considered well; looked, received instruction"}
+{"verse_id":"PRO.24.33","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"yet little sleep, slumber, folding of hands to sleep (parallel 6:10)"}
+{"verse_id":"PRO.24.34","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"poverty come as one travels; want as armed man (parallel 6:11)"}
+{"verse_id":"PRO.25.1","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"these also are proverbs of Solomon, copied by men of Hezekiah"}
+{"verse_id":"PRO.25.2","polarity":0.45,"label":"awe","confidence":0.85,"notes":"glory of God to conceal thing; honor of kings to search out"}
+{"verse_id":"PRO.25.3","polarity":0.30,"label":"awe","confidence":0.85,"notes":"heaven for height, earth depth, heart of kings unsearchable"}
+{"verse_id":"PRO.25.4","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"take dross from silver, vessel for finer"}
+{"verse_id":"PRO.25.5","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"take wicked from king, throne shall be established in righteousness"}
+{"verse_id":"PRO.25.6","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"put not forth before king, stand not in place of great men"}
+{"verse_id":"PRO.25.7","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better said come up hither than be put lower in presence of prince"}
+{"verse_id":"PRO.25.8","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"go not forth hastily to strive lest know not what to do at end"}
+{"verse_id":"PRO.25.9","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"debate cause with neighbor; discover not secret to another"}
+{"verse_id":"PRO.25.10","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"lest hears put to shame; thy infamy turn not away"}
+{"verse_id":"PRO.25.11","polarity":0.55,"label":"praise","confidence":0.92,"notes":"famous: word fitly spoken, like apples of gold in pictures of silver"}
+{"verse_id":"PRO.25.12","polarity":0.45,"label":"praise","confidence":0.85,"notes":"as earring of gold, ornament of fine gold, wise reprover on obedient ear"}
+{"verse_id":"PRO.25.13","polarity":0.55,"label":"praise","confidence":0.88,"notes":"as cold of snow in time of harvest, faithful messenger; refreshes soul of masters"}
+{"verse_id":"PRO.25.14","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"clouds and wind without rain, boasts of false gift"}
+{"verse_id":"PRO.25.15","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"by long forbearing prince persuaded; soft tongue breaks bone"}
+{"verse_id":"PRO.25.16","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"hast thou found honey? eat what suffices, lest filled, vomit"}
+{"verse_id":"PRO.25.17","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"withdraw foot from neighbor's house, lest weary, hate"}
+{"verse_id":"PRO.25.18","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"man bears false witness against neighbor as maul, sword, sharp arrow"}
+{"verse_id":"PRO.25.19","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"confidence in unfaithful man in time of trouble like broken tooth, foot out of joint"}
+{"verse_id":"PRO.25.20","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"sings songs to heavy heart as taking garment in cold, vinegar on nitre"}
+{"verse_id":"PRO.25.21","polarity":0.65,"label":"love","confidence":0.92,"notes":"famous: if enemy hungry, feed him bread; thirsty, give to drink"}
+{"verse_id":"PRO.25.22","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: heap coals of fire on head; LORD shall reward"}
+{"verse_id":"PRO.25.23","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"north wind drives away rain; angry countenance backbiting tongue"}
+{"verse_id":"PRO.25.24","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"better dwell in corner of housetop than with brawling woman in wide house (par 21:9)"}
+{"verse_id":"PRO.25.25","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: as cold waters to thirsty soul, good news from far country"}
+{"verse_id":"PRO.25.26","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"righteous falling before wicked as troubled fountain, corrupt spring"}
+{"verse_id":"PRO.25.27","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"not good to eat much honey; for men to search own glory not glory"}
+{"verse_id":"PRO.25.28","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"man without rule over own spirit like city broken down, without walls"}
+{"verse_id":"PRO.26.1","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"as snow in summer, rain in harvest, so honor not seemly for fool"}
+{"verse_id":"PRO.26.2","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"as bird by wandering, swallow flying, curse causeless not come"}
+{"verse_id":"PRO.26.3","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"whip for horse, bridle for ass, rod for fool's back"}
+{"verse_id":"PRO.26.4","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"answer not fool according to folly, lest be like him"}
+{"verse_id":"PRO.26.5","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"answer fool according to folly, lest wise in own conceit"}
+{"verse_id":"PRO.26.6","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"sends message by hand of fool, cuts off feet, drinks damage"}
+{"verse_id":"PRO.26.7","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"legs of lame not equal; parable in mouth of fools"}
+{"verse_id":"PRO.26.8","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"as binds stone in sling, so gives honor to fool"}
+{"verse_id":"PRO.26.9","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"as thorn goes up into hand of drunkard, parable in mouth of fools"}
+{"verse_id":"PRO.26.10","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"great God formed all; rewards fool, transgressors"}
+{"verse_id":"PRO.26.11","polarity":-0.45,"label":"warning","confidence":0.92,"notes":"famous: as dog returns to own vomit, fool returns to folly"}
+{"verse_id":"PRO.26.12","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"see man wise in own conceit? more hope of fool than him"}
+{"verse_id":"PRO.26.13","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"slothful says lion in way, lion in streets"}
+{"verse_id":"PRO.26.14","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"as door turns on hinges, slothful on bed"}
+{"verse_id":"PRO.26.15","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"slothful hides hand in bosom, grieves to bring to mouth"}
+{"verse_id":"PRO.26.16","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"slothful wiser in own conceit than seven men who can render reason"}
+{"verse_id":"PRO.26.17","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"meddles with strife not belonging, takes dog by ears"}
+{"verse_id":"PRO.26.18","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"as mad man casts firebrands, arrows, death"}
+{"verse_id":"PRO.26.19","polarity":-0.40,"label":"warning","confidence":0.85,"notes":"so is man who deceives neighbor, says, am not in sport"}
+{"verse_id":"PRO.26.20","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"where no wood is, fire goes out; where no talebearer, strife ceases"}
+{"verse_id":"PRO.26.21","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"as coals to burning, wood to fire, contentious man to kindle strife"}
+{"verse_id":"PRO.26.22","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"words of talebearer as wounds, go to belly (par 18:8)"}
+{"verse_id":"PRO.26.23","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"burning lips, wicked heart, like potsherd covered with silver dross"}
+{"verse_id":"PRO.26.24","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"hates dissembles with lips, lays up deceit within"}
+{"verse_id":"PRO.26.25","polarity":-0.55,"label":"warning","confidence":0.88,"notes":"speaks fair, believe not; seven abominations in heart"}
+{"verse_id":"PRO.26.26","polarity":-0.30,"label":"narrative","confidence":0.85,"notes":"hatred covered by deceit, wickedness shewed before whole congregation"}
+{"verse_id":"PRO.26.27","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"digs pit fall therein; rolls stone, return on him"}
+{"verse_id":"PRO.26.28","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"lying tongue hates afflicted by it; flattering mouth works ruin"}
+{"verse_id":"PRO.27.1","polarity":0.30,"label":"instruction","confidence":0.92,"notes":"famous: boast not of tomorrow, knowest not what day brings"}
+{"verse_id":"PRO.27.2","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"let another praise thee, not own mouth; stranger, not own lips"}
+{"verse_id":"PRO.27.3","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"stone heavy, sand weighty; fool's wrath heavier than both"}
+{"verse_id":"PRO.27.4","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"wrath cruel, anger outrageous; who can stand before envy"}
+{"verse_id":"PRO.27.5","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"open rebuke better than secret love"}
+{"verse_id":"PRO.27.6","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: faithful wounds of friend; deceitful kisses of enemy"}
+{"verse_id":"PRO.27.7","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"full soul loathes honeycomb; hungry every bitter thing sweet"}
+{"verse_id":"PRO.27.8","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"as bird wanders from nest, so man wanders from place"}
+{"verse_id":"PRO.27.9","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: ointment and perfume rejoice heart; sweetness of friend by hearty counsel"}
+{"verse_id":"PRO.27.10","polarity":0.55,"label":"love","confidence":0.88,"notes":"thine own friend, father's friend forsake not; better near neighbor than far brother"}
+{"verse_id":"PRO.27.11","polarity":0.55,"label":"love","confidence":0.85,"notes":"my son, be wise, make heart glad, may answer him who reproaches"}
+{"verse_id":"PRO.27.12","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"prudent man foresees evil, hides; simple pass on, punished (par 22:3)"}
+{"verse_id":"PRO.27.13","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"take garment of him surety for stranger, pledge for strange woman (par 20:16)"}
+{"verse_id":"PRO.27.14","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"he who blesses friend with loud voice rising early shall be counted as curse"}
+{"verse_id":"PRO.27.15","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"continual dropping in rainy day, contentious woman alike"}
+{"verse_id":"PRO.27.16","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"hides her hides wind; ointment of right hand betrays itself"}
+{"verse_id":"PRO.27.17","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: iron sharpens iron; man sharpens countenance of friend"}
+{"verse_id":"PRO.27.18","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"keeps fig tree eat fruit; waits on master honored"}
+{"verse_id":"PRO.27.19","polarity":0.20,"label":"narrative","confidence":0.82,"notes":"as in water face answers face, heart of man to man"}
+{"verse_id":"PRO.27.20","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"hell and destruction never full; eyes of man never satisfied"}
+{"verse_id":"PRO.27.21","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"fining pot for silver, furnace for gold; man to praise"}
+{"verse_id":"PRO.27.22","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"though bray fool in mortar with pestle, foolishness not depart"}
+{"verse_id":"PRO.27.23","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"diligent know state of flocks; look well to herds"}
+{"verse_id":"PRO.27.24","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"riches not for ever; crown to every generation"}
+{"verse_id":"PRO.27.25","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"hay appears, tender grass shows, herbs of mountains gathered"}
+{"verse_id":"PRO.27.26","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"lambs for clothing, goats for price of field"}
+{"verse_id":"PRO.27.27","polarity":0.45,"label":"hope","confidence":0.85,"notes":"goats' milk enough for food, food of household, maintenance for maidens"}
+{"verse_id":"PRO.28.1","polarity":0.55,"label":"praise","confidence":0.92,"notes":"famous: wicked flee no man pursues; righteous bold as lion"}
+{"verse_id":"PRO.28.2","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"for transgression of land many princes; man understanding state prolonged"}
+{"verse_id":"PRO.28.3","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"poor man oppresses poor like sweeping rain leaving no food"}
+{"verse_id":"PRO.28.4","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"forsake law praise wicked; keep law contend with"}
+{"verse_id":"PRO.28.5","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"evil men understand not judgment; seek LORD understand all"}
+{"verse_id":"PRO.28.6","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better poor walks in uprightness than perverse rich"}
+{"verse_id":"PRO.28.7","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"keeps law wise son; companion of riotous shames father"}
+{"verse_id":"PRO.28.8","polarity":-0.10,"label":"narrative","confidence":0.82,"notes":"increases by usury and unjust gain, gather for him who pities poor"}
+{"verse_id":"PRO.28.9","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"turns ear from law, prayer abomination"}
+{"verse_id":"PRO.28.10","polarity":0.30,"label":"hope","confidence":0.85,"notes":"causes righteous to err, fall in own pit; upright inherit good"}
+{"verse_id":"PRO.28.11","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"rich wise in own conceit; poor with understanding searches out"}
+{"verse_id":"PRO.28.12","polarity":0.20,"label":"hope","confidence":0.85,"notes":"when righteous rejoice, glory; wicked rise, man hidden"}
+{"verse_id":"PRO.28.13","polarity":0.55,"label":"hope","confidence":0.92,"notes":"famous: covers sins not prosper; confesses, forsakes, mercy"}
+{"verse_id":"PRO.28.14","polarity":0.30,"label":"hope","confidence":0.85,"notes":"happy fears always; hardens heart fall into mischief"}
+{"verse_id":"PRO.28.15","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"as roaring lion, ranging bear, wicked ruler over poor people"}
+{"verse_id":"PRO.28.16","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"prince wants understanding great oppressor; hates covetousness prolong days"}
+{"verse_id":"PRO.28.17","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"does violence to blood of person flee to pit; let none stay"}
+{"verse_id":"PRO.28.18","polarity":0.30,"label":"hope","confidence":0.85,"notes":"walks uprightly saved; perverse fall at once"}
+{"verse_id":"PRO.28.19","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"tills land plenty bread; follows vain enough poverty"}
+{"verse_id":"PRO.28.20","polarity":0.30,"label":"hope","confidence":0.85,"notes":"faithful man abound blessings; hastes to be rich not innocent"}
+{"verse_id":"PRO.28.21","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"have respect of persons not good; for piece of bread transgress"}
+{"verse_id":"PRO.28.22","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"hastes to be rich evil eye; knows not poverty come"}
+{"verse_id":"PRO.28.23","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"rebukes man find more favor than flatters with tongue"}
+{"verse_id":"PRO.28.24","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"robs father, mother, says no transgression, companion of destroyer"}
+{"verse_id":"PRO.28.25","polarity":0.30,"label":"hope","confidence":0.85,"notes":"proud heart stirs strife; trusts in LORD made fat"}
+{"verse_id":"PRO.28.26","polarity":0.30,"label":"hope","confidence":0.85,"notes":"trusts own heart fool; walks wisely delivered"}
+{"verse_id":"PRO.28.27","polarity":0.55,"label":"love","confidence":0.88,"notes":"gives to poor not lack; hides eyes have many curse"}
+{"verse_id":"PRO.28.28","polarity":0.20,"label":"hope","confidence":0.85,"notes":"when wicked rise, men hide; perish, righteous increase"}
+{"verse_id":"PRO.29.1","polarity":-0.55,"label":"warning","confidence":0.88,"notes":"often reproved hardens neck shall suddenly be destroyed without remedy"}
+{"verse_id":"PRO.29.2","polarity":0.30,"label":"hope","confidence":0.85,"notes":"righteous in authority people rejoice; wicked rule, people mourn"}
+{"verse_id":"PRO.29.3","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"loves wisdom rejoices father; keeps company with harlots wastes"}
+{"verse_id":"PRO.29.4","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"king by judgment establishes land; receives gifts overthrows"}
+{"verse_id":"PRO.29.5","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"flatters neighbor spreads net for feet"}
+{"verse_id":"PRO.29.6","polarity":0.30,"label":"hope","confidence":0.85,"notes":"transgression of evil man snare; righteous sing and rejoice"}
+{"verse_id":"PRO.29.7","polarity":0.45,"label":"love","confidence":0.85,"notes":"righteous considers cause of poor; wicked regards not to know"}
+{"verse_id":"PRO.29.8","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"scornful men bring city into snare; wise turn away wrath"}
+{"verse_id":"PRO.29.9","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"if wise contends with foolish, whether rage or laugh, no rest"}
+{"verse_id":"PRO.29.10","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"bloodthirsty hate upright; just seek soul"}
+{"verse_id":"PRO.29.11","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"fool utters mind; wise keeps in till afterwards"}
+{"verse_id":"PRO.29.12","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"ruler hearken to lies, all servants wicked"}
+{"verse_id":"PRO.29.13","polarity":0.20,"label":"awe","confidence":0.82,"notes":"poor and deceitful man meet; LORD lightens both their eyes"}
+{"verse_id":"PRO.29.14","polarity":0.45,"label":"hope","confidence":0.85,"notes":"king faithfully judges poor, throne established forever"}
+{"verse_id":"PRO.29.15","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"rod and reproof give wisdom; child left bringing to shame"}
+{"verse_id":"PRO.29.16","polarity":0.20,"label":"hope","confidence":0.82,"notes":"wicked multiplied transgression increase; righteous see fall"}
+{"verse_id":"PRO.29.17","polarity":0.55,"label":"hope","confidence":0.88,"notes":"correct son give rest; yea, give delight to soul"}
+{"verse_id":"PRO.29.18","polarity":0.55,"label":"hope","confidence":0.92,"notes":"famous: where no vision, people perish; keeps law happy"}
+{"verse_id":"PRO.29.19","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"servant not corrected by words; though understand, will not answer"}
+{"verse_id":"PRO.29.20","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"see man hasty in words? more hope of fool"}
+{"verse_id":"PRO.29.21","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"delicately brings up servant from child, son at length"}
+{"verse_id":"PRO.29.22","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"angry man stirs strife; furious abounds in transgression"}
+{"verse_id":"PRO.29.23","polarity":0.45,"label":"hope","confidence":0.92,"notes":"famous: pride bring low; humble in spirit shall uphold honor"}
+{"verse_id":"PRO.29.24","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"partner with thief hates own soul; hears cursing reveals not"}
+{"verse_id":"PRO.29.25","polarity":0.55,"label":"hope","confidence":0.92,"notes":"famous: fear of man brings snare; trusts in LORD safe"}
+{"verse_id":"PRO.29.26","polarity":0.30,"label":"hope","confidence":0.85,"notes":"many seek ruler's favor; every man's judgment from LORD"}
+{"verse_id":"PRO.29.27","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"unjust man abomination to just; upright in way abomination to wicked"}
+{"verse_id":"PRO.30.1","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"words of Agur, son of Jakeh; prophecy spoke to Ithiel and Ucal"}
+{"verse_id":"PRO.30.2","polarity":-0.30,"label":"confession","confidence":0.85,"notes":"surely more brutish than any; not understanding of man"}
+{"verse_id":"PRO.30.3","polarity":-0.30,"label":"confession","confidence":0.85,"notes":"neither learned wisdom nor have knowledge of holy"}
+{"verse_id":"PRO.30.4","polarity":0.65,"label":"awe","confidence":0.92,"notes":"famous: who has ascended into heaven? who gathered wind in fists? his name and son's"}
+{"verse_id":"PRO.30.5","polarity":0.85,"label":"praise","confidence":0.95,"notes":"famous: every word of God pure; shield to those who put trust"}
+{"verse_id":"PRO.30.6","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"add not to his words, lest reprove, found liar"}
+{"verse_id":"PRO.30.7","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"two things have I required; deny not before die"}
+{"verse_id":"PRO.30.8","polarity":0.55,"label":"hope","confidence":0.88,"notes":"remove vanity and lies; give neither poverty nor riches; food convenient"}
+{"verse_id":"PRO.30.9","polarity":0.30,"label":"instruction","confidence":0.88,"notes":"lest full and deny, who is LORD; or poor and steal, take name"}
+{"verse_id":"PRO.30.10","polarity":-0.10,"label":"warning","confidence":0.82,"notes":"accuse not servant to master, lest curse, found guilty"}
+{"verse_id":"PRO.30.11","polarity":-0.55,"label":"warning","confidence":0.88,"notes":"generation curses father, blesses not mother"}
+{"verse_id":"PRO.30.12","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"generation pure in own eyes, yet not washed from filthiness"}
+{"verse_id":"PRO.30.13","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"generation lofty eyes, eyelids lifted up"}
+{"verse_id":"PRO.30.14","polarity":-0.55,"label":"warning","confidence":0.88,"notes":"generation teeth as swords, jaw teeth as knives, devour poor"}
+{"verse_id":"PRO.30.15","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"horseleach two daughters, give, give; three things never satisfied"}
+{"verse_id":"PRO.30.16","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"grave, barren womb, earth not filled with water, fire says not enough"}
+{"verse_id":"PRO.30.17","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"eye mocks at father, despises mother, ravens of valley pick out"}
+{"verse_id":"PRO.30.18","polarity":0.20,"label":"narrative","confidence":0.82,"notes":"three things too wonderful for me; yea four know not"}
+{"verse_id":"PRO.30.19","polarity":0.30,"label":"awe","confidence":0.85,"notes":"way of eagle in air; serpent on rock; ship in sea; man with maid"}
+{"verse_id":"PRO.30.20","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"such way of adulterous woman; eats, wipes mouth, says no wickedness"}
+{"verse_id":"PRO.30.21","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"for three things earth disquieted, four cannot bear"}
+{"verse_id":"PRO.30.22","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"servant when reigns; fool filled with meat"}
+{"verse_id":"PRO.30.23","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"odious woman married; handmaid heir to mistress"}
+{"verse_id":"PRO.30.24","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"four little upon earth, exceeding wise"}
+{"verse_id":"PRO.30.25","polarity":0.45,"label":"praise","confidence":0.85,"notes":"ants people not strong, prepare meat in summer"}
+{"verse_id":"PRO.30.26","polarity":0.45,"label":"praise","confidence":0.85,"notes":"conies but feeble folk, make houses in rocks"}
+{"verse_id":"PRO.30.27","polarity":0.45,"label":"praise","confidence":0.85,"notes":"locusts have no king, go forth all by bands"}
+{"verse_id":"PRO.30.28","polarity":0.45,"label":"praise","confidence":0.85,"notes":"spider takes hold with hands, in king's palaces"}
+{"verse_id":"PRO.30.29","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"three things go well, four comely in going"}
+{"verse_id":"PRO.30.30","polarity":0.45,"label":"narrative","confidence":0.85,"notes":"lion strongest among beasts, turns not from any"}
+{"verse_id":"PRO.30.31","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"greyhound, he goat also; king not be risen up"}
+{"verse_id":"PRO.30.32","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"if done foolishly in lifting up, or if thought evil, hand on mouth"}
+{"verse_id":"PRO.30.33","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"surely churning of milk brings butter; wringing of nose blood; forcing wrath strife"}
+{"verse_id":"PRO.31.1","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"words of king Lemuel, prophecy mother taught him"}
+{"verse_id":"PRO.31.2","polarity":0.30,"label":"love","confidence":0.85,"notes":"what, my son? what, son of my womb? what, son of my vows?"}
+{"verse_id":"PRO.31.3","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"give not strength to women; ways to that which destroys kings"}
+{"verse_id":"PRO.31.4","polarity":-0.20,"label":"warning","confidence":0.85,"notes":"not for kings to drink wine; nor princes strong drink"}
+{"verse_id":"PRO.31.5","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"lest drink, forget law, pervert judgment of afflicted"}
+{"verse_id":"PRO.31.6","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"give strong drink to him ready to perish, wine to those of heavy hearts"}
+{"verse_id":"PRO.31.7","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"let drink and forget poverty; remember misery no more"}
+{"verse_id":"PRO.31.8","polarity":0.55,"label":"love","confidence":0.92,"notes":"famous: open mouth for dumb, in cause of all appointed to destruction"}
+{"verse_id":"PRO.31.9","polarity":0.55,"label":"love","confidence":0.88,"notes":"open mouth, judge righteously, plead cause of poor and needy"}
+{"verse_id":"PRO.31.10","polarity":0.85,"label":"praise","confidence":0.95,"notes":"famous: who can find virtuous woman? price far above rubies"}
+{"verse_id":"PRO.31.11","polarity":0.75,"label":"praise","confidence":0.88,"notes":"heart of husband safely trust, no need of spoil"}
+{"verse_id":"PRO.31.12","polarity":0.75,"label":"love","confidence":0.88,"notes":"do good and not evil all days of her life"}
+{"verse_id":"PRO.31.13","polarity":0.55,"label":"praise","confidence":0.85,"notes":"seeks wool and flax, works willingly with hands"}
+{"verse_id":"PRO.31.14","polarity":0.55,"label":"praise","confidence":0.85,"notes":"like merchants' ships, brings food from afar"}
+{"verse_id":"PRO.31.15","polarity":0.55,"label":"praise","confidence":0.85,"notes":"rises while yet night; gives meat to household, portion to maidens"}
+{"verse_id":"PRO.31.16","polarity":0.55,"label":"praise","confidence":0.85,"notes":"considers field and buys it; with fruit of hands plants vineyard"}
+{"verse_id":"PRO.31.17","polarity":0.55,"label":"praise","confidence":0.85,"notes":"girds loins with strength, strengthens arms"}
+{"verse_id":"PRO.31.18","polarity":0.65,"label":"praise","confidence":0.88,"notes":"perceives merchandise good; candle goes not out by night"}
+{"verse_id":"PRO.31.19","polarity":0.45,"label":"praise","confidence":0.85,"notes":"lays hands to spindle, hands hold distaff"}
+{"verse_id":"PRO.31.20","polarity":0.65,"label":"love","confidence":0.92,"notes":"famous: stretches hand to poor, reaches forth hands to needy"}
+{"verse_id":"PRO.31.21","polarity":0.55,"label":"praise","confidence":0.85,"notes":"not afraid of snow for household; all clothed in scarlet"}
+{"verse_id":"PRO.31.22","polarity":0.55,"label":"praise","confidence":0.85,"notes":"makes coverings of tapestry; clothing silk and purple"}
+{"verse_id":"PRO.31.23","polarity":0.55,"label":"praise","confidence":0.85,"notes":"husband known in gates, sits among elders of land"}
+{"verse_id":"PRO.31.24","polarity":0.55,"label":"praise","confidence":0.85,"notes":"makes fine linen and sells; delivers girdles to merchant"}
+{"verse_id":"PRO.31.25","polarity":0.85,"label":"praise","confidence":0.92,"notes":"famous: strength and honor are her clothing; shall rejoice in time to come"}
+{"verse_id":"PRO.31.26","polarity":0.65,"label":"praise","confidence":0.88,"notes":"opens mouth with wisdom; in tongue is law of kindness"}
+{"verse_id":"PRO.31.27","polarity":0.55,"label":"praise","confidence":0.85,"notes":"looks well to ways of household; eats not bread of idleness"}
+{"verse_id":"PRO.31.28","polarity":0.85,"label":"love","confidence":0.92,"notes":"famous: children rise up, call her blessed; husband also praises"}
+{"verse_id":"PRO.31.29","polarity":0.85,"label":"praise","confidence":0.92,"notes":"many daughters have done virtuously; thou excellest them all"}
+{"verse_id":"PRO.31.30","polarity":0.85,"label":"praise","confidence":0.95,"notes":"famous: favor deceitful, beauty vain; woman fears LORD shall be praised"}
+{"verse_id":"PRO.31.31","polarity":0.75,"label":"praise","confidence":0.92,"notes":"give of fruit of hands; let own works praise in gates"}
