@@ -928,5 +928,12 @@
   "verseActions.emotion.openLandscape": "Abrir paisagem emocional",
   "verseActions.topics.title": "Tags temáticas deste verso",
   "verseActions.topics.none": "Sem tags temáticas encontradas.",
-  "verseActions.topics.versesIn": "{n} versos neste tópico"
+  "verseActions.topics.versesIn": "{n} versos neste tópico",
+
+  "install.title": "Instalar o Verbum",
+  "install.androidHint": "Adicione à tela inicial para acesso rápido — funciona offline também.",
+  "install.iosHint": "Toque em ",
+  "install.iosHint2": " e depois em \"Adicionar à Tela de Início\".",
+  "install.cta": "Instalar",
+  "install.dismiss": "Fechar banner de instalação"
 }

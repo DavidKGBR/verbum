@@ -928,5 +928,12 @@
   "verseActions.emotion.openLandscape": "Abrir paisaje emocional",
   "verseActions.topics.title": "Etiquetas temáticas de este versículo",
   "verseActions.topics.none": "Sin etiquetas temáticas encontradas.",
-  "verseActions.topics.versesIn": "{n} versículos en este tema"
+  "verseActions.topics.versesIn": "{n} versículos en este tema",
+
+  "install.title": "Instalar Verbum",
+  "install.androidHint": "Añade a tu pantalla de inicio para acceso rápido — también funciona sin conexión.",
+  "install.iosHint": "Toca ",
+  "install.iosHint2": " y luego \"Añadir a pantalla de inicio\".",
+  "install.cta": "Instalar",
+  "install.dismiss": "Cerrar banner de instalación"
 }

@@ -6,6 +6,7 @@ import { localizeBookName } from "../i18n/bookNames";
 import VerbumLogo from "./common/VerbumLogo";
 import StreakBadge from "./streak/StreakBadge";
 import CookieBanner from "./CookieBanner";
+import InstallBanner from "./InstallBanner";
 
 type NavItem = {
   to: string;
@@ -399,6 +400,7 @@ export default function Layout() {
       </main>
 
       <CookieBanner />
+      <InstallBanner />
     </div>
   );
 }
