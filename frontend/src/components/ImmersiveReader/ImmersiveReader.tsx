@@ -257,18 +257,35 @@ export default function ImmersiveReader() {
   const flipBookRef = useRef<any>(null);
   const isKjv = translation === "kjv";
 
+  // On mobile, shrink the book so it never exceeds the viewport width.
+  // Normal mode has p-3 (12px/side = 24px), fullscreen has p-8 (32px/side = 64px).
+  function calcBookWidth(fs: boolean) {
+    return Math.min(320, window.innerWidth - (fs ? 80 : 32));
+  }
+  const [mobileBookWidth, setMobileBookWidth] = useState(() => calcBookWidth(false));
+
   function highlightBgFor(verseId: string): string | undefined {
     const cat = verseNotes[verseId]?.category;
     if (!cat) return undefined;
     return `color-mix(in srgb, var(--hl-${cat}) 22%, transparent)`;
   }
 
-  // Responsive: detect mobile
+  // Recompute book width when fullscreen state changes (different padding)
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < 768);
+    setMobileBookWidth(calcBookWidth(isFullscreen));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFullscreen]);
+
+  // Responsive: detect mobile + compute safe book width
+  useEffect(() => {
+    const onResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      setMobileBookWidth(calcBookWidth(isFullscreen));
+    };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFullscreen]);
 
   const toggleFullscreen = useCallback(() => {
     if (!document.fullscreenElement) {
@@ -582,9 +599,9 @@ export default function ImmersiveReader() {
           <div className="flex justify-center w-full overflow-hidden">
             <HTMLFlipBook
               ref={flipBookRef}
-              width={isMobile ? 320 : 550}
-              height={isMobile ? 480 : 720}
-              size="stretch"
+              width={isMobile ? mobileBookWidth : 550}
+              height={isMobile ? Math.round(mobileBookWidth * 1.5) : 720}
+              size={isMobile ? "fixed" : "stretch"}
               minWidth={260}
               maxWidth={600}
               minHeight={380}
