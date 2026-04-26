@@ -8,7 +8,9 @@
     "prebuild": "node scripts/build-blog-manifest.mjs && node scripts/generate-sitemap.mjs",
     "build": "tsc -b && vite build",
     "postbuild": "node scripts/prerender.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && firebase deploy --only hosting --project verbum-app-bible && node scripts/indexnow-ping.mjs",
+    "indexnow": "node scripts/indexnow-ping.mjs"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
