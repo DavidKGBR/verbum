@@ -73,6 +73,7 @@ class TestTranslationRegistry:
     def test_source_groupings_cover_all(self):
         from src.extract.translations import (
             PRE_CACHED_TRANSLATIONS,
+            USFX_TRANSLATIONS,
             ZEFANIA_XML_TRANSLATIONS,
         )
 
@@ -81,6 +82,7 @@ class TestTranslationRegistry:
             | ABIBLIA_DIGITAL_TRANSLATIONS
             | ZEFANIA_XML_TRANSLATIONS
             | PRE_CACHED_TRANSLATIONS
+            | USFX_TRANSLATIONS
         )
         assert all_ids == set(TRANSLATION_REGISTRY.keys())
 

@@ -621,12 +621,6 @@ class USFXSource(BibleSource):
 
         result: dict[str, dict[int, list[RawVerse]]] = {}
 
-        # USFX is a flat sequence of elements inside <book>.
-        # Verse text lives in element *tails*, not inside elements:
-        #   <v id="1"/>text here<ve/>   → v.tail = "text here"
-        # Inline markup (wj, nd, add…) are siblings between <v> and <ve>,
-        # so we accumulate tails of all siblings until <ve> is reached.
-
         for book_el in root.findall(".//book"):
             raw_id = book_el.get("id", "").upper()
             book_id = _USFX_TO_INTERNAL.get(raw_id, raw_id)
@@ -634,73 +628,86 @@ class USFXSource(BibleSource):
             if not book_name:
                 continue  # deuterocanonical or unrecognised book
 
-            chapters: dict[int, list[RawVerse]] = {}
-            current_chapter = 0
-            current_verse: int | None = None
-            parts: list[str] = []
-
-            def _flush() -> None:
-                nonlocal current_verse, parts
-                if current_verse is not None and parts:
-                    text = " ".join("".join(parts).split()).strip()
-                    if text:
-                        chapters.setdefault(current_chapter, []).append(
-                            RawVerse(
-                                book_id=book_id,
-                                book_name=book_name,
-                                chapter=current_chapter,
-                                verse=current_verse,
-                                text=text,
-                                translation_id=self.translation_id,
-                                language=self.translation.language,
-                            )
-                        )
-                current_verse = None
-                parts = []
-
-            # iter() traverses ALL descendants in document order —
-            # handles both flat (Chinese) and paragraph-nested (Arabic) USFX.
-            for el in book_el.iter():
-                tag = el.tag.split("}")[-1] if "}" in el.tag else el.tag
-
-                if tag == "c":
-                    _flush()
-                    try:
-                        current_chapter = int(el.get("id", "0"))
-                    except ValueError:
-                        pass
-
-                elif tag == "v":
-                    _flush()
-                    try:
-                        current_verse = int(el.get("id", "0")) or None
-                    except ValueError:
-                        current_verse = None
-                    if current_verse and el.tail:
-                        parts.append(el.tail)
-
-                elif tag == "ve":
-                    _flush()
-
-                elif current_verse is not None:
-                    # Inline markup (wj, nd, add, it, …) — grab text and tail
-                    if el.text:
-                        parts.append(el.text)
-                    if el.tail:
-                        parts.append(el.tail)
-
-            _flush()
-
-            result[book_name] = {
-                ch: sorted(vs, key=lambda v: v.verse)
-                for ch, vs in chapters.items()
-                if vs
-            }
+            result[book_name] = self._parse_usfx_book(book_el, book_id, book_name)
 
         self._parsed = result
         total = sum(len(v) for chs in result.values() for v in chs.values())
         logger.info(f"📖 Parsed {total} verses from USFX: {self.xml_path.name}")
         return result
+
+    def _parse_usfx_book(
+        self,
+        book_el: ET.Element,
+        book_id: str,
+        book_name: str,
+    ) -> dict[int, list[RawVerse]]:
+        """Parse a single <book> element from USFX XML.
+
+        USFX verse text lives in element *tails*, not inside elements:
+          <v id="1"/>text here<ve/>  →  v.tail = "text here"
+        Inline markup (wj, nd, add…) is siblings between <v> and <ve>;
+        iter() traverses ALL descendants so both flat (Chinese) and
+        paragraph-nested (Arabic) variants are handled.
+        """
+        import contextlib
+
+        chapters: dict[int, list[RawVerse]] = {}
+        current_chapter = 0
+        current_verse: int | None = None
+        parts: list[str] = []
+
+        def _flush() -> None:
+            nonlocal current_verse, parts
+            if current_verse is not None and parts:
+                text = " ".join("".join(parts).split()).strip()
+                if text:
+                    chapters.setdefault(current_chapter, []).append(
+                        RawVerse(
+                            book_id=book_id,
+                            book_name=book_name,
+                            chapter=current_chapter,
+                            verse=current_verse,
+                            text=text,
+                            translation_id=self.translation_id,
+                            language=self.translation.language,
+                        )
+                    )
+            current_verse = None
+            parts = []
+
+        for el in book_el.iter():
+            tag = el.tag.split("}")[-1] if "}" in el.tag else el.tag
+
+            if tag == "c":
+                _flush()
+                with contextlib.suppress(ValueError):
+                    current_chapter = int(el.get("id", "0"))
+
+            elif tag == "v":
+                _flush()
+                try:
+                    current_verse = int(el.get("id", "0")) or None
+                except ValueError:
+                    current_verse = None
+                if current_verse and el.tail:
+                    parts.append(el.tail)
+
+            elif tag == "ve":
+                _flush()
+
+            elif current_verse is not None:
+                if el.text:
+                    parts.append(el.text)
+                if el.tail:
+                    parts.append(el.tail)
+
+        _flush()
+
+        return {
+            ch: sorted(vs, key=lambda v: v.verse)
+            for ch, vs in chapters.items()
+            if vs
+        }
 
     def fetch_chapter(self, book_name: str, chapter: int) -> list[RawVerse]:
         return self._parse_xml().get(book_name, {}).get(chapter, [])

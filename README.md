@@ -30,6 +30,7 @@
   <img src="https://img.shields.io/badge/DuckDB-1.1+-yellow?logo=duckdb" alt="DuckDB">
   <img src="https://img.shields.io/badge/Gemini-AI-8E75B2?logo=google&logoColor=white" alt="Gemini">
   <img src="https://img.shields.io/badge/i18n-EN%20|%20PT%20|%20ES-ff69b4" alt="i18n">
+  <img src="https://img.shields.io/badge/PWA-installable-blueviolet?logo=pwa" alt="PWA">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
 </p>
 
@@ -172,7 +173,7 @@ The AI is not a co-author of the Gospel. The Gospel exists without it. But a too
 
 | | |
 |---|---|
-| **372,308 verses** | 12 translations across 5 languages (EN, PT, ES, FR, DE) |
+| **465,612 verses** | 15 translations across 7 languages (EN, PT, ES, FR, DE, AR, ZH) |
 | **62,209 manually-labeled verses** | LLM-annotated sentiment in PT (31,107) and ES (31,102) |
 | **344,754 cross-references** | Full intertextual mapping from OpenBible.info |
 | **800,000+ interlinear words** | Greek (TAGNT) and Hebrew (TAHOT) with morphology |
@@ -182,7 +183,7 @@ The AI is not a co-author of the Gospel. The Gospel exists without it. But a too
 | **20,000+ topics** | Nave's Topical Bible, searchable |
 | **93 API endpoints** | 27 RESTful routers powered by DuckDB |
 | **32 frontend pages** | React 19 + Tailwind v4, fully responsive |
-| **392 test cases** | pytest with seeded fixtures (387 fast + 4 integration/slow) |
+| **391 test cases** | pytest with seeded fixtures (387 fast + 4 integration/slow) |
 | **3 languages (UI)** | English, Portuguese, Spanish |
 
 ### Translations
@@ -194,6 +195,8 @@ The AI is not a co-author of the Gospel. The Gospel exists without it. But a too
 | Spanish | RVR |
 | French | APEE |
 | German | LUTHER, NEUE |
+| Arabic | ARB-VD (Smith & Van Dyke, 1865) |
+| Chinese | CMN-CU89T (Union Version Traditional), CMN-CU89S (Union Version Simplified) |
 
 ---
 
@@ -278,8 +281,11 @@ cp .env.example .env          # fill in ABIBLIA_DIGITAL_TOKEN, GEMINI_API_KEY (o
 ### 2. Run the pipeline
 
 ```bash
-# All 12 translations + cross-refs (cached runs ~2 min; first fetch longer)
-python -m src.cli run --translations kjv,nvi,bbe,ra,acf,rvr,apee,asv,web,darby,luther,neue
+# All 15 translations + cross-refs (cached runs ~3 min; first fetch longer)
+# Download USFX files first (Arabic + Chinese, one-time):
+python scripts/download_usfx_translations.py
+
+python -m src.cli run --translations kjv,nvi,bbe,ra,acf,rvr,apee,asv,web,darby,luther,neue,arb-vd,cmn-cu89t,cmn-cu89s
 
 # Single translation, specific books
 python -m src.cli run --books "GEN,PSA,JHN" --translations kjv
@@ -315,11 +321,13 @@ cd frontend && npm run dev
 ├──────────────────┤    ├──────────────┤    ├─────────────┤    ├──────────────────┤
 │ bible-api.com    │    │ Clean + HTML │    │ DuckDB      │    │ FastAPI (93 API) │
 │ abibliadigital   │    │ TextBlob NLP │    │ 32 tables   │    │ React 19 SPA     │
-│ Zefania-XML (DE) │    │ LLM labels   │    │ 372K verses │    │ 32 pages         │
-│ STEPBible TAGNT  │    │ Dedup + KJV  │    │ 344K xrefs  │    │ Gemini AI        │
-│ Theographic      │    │ annotations  │    │ 800K interl. │    │ i18n (EN/PT/ES)  │
-│ OpenBible refs   │    │ Sentiment    │    │ 14K Strong's │    │                  │
-│ Nave's Topical   │    │ enrichment   │    │             │    │                  │
+│ Zefania-XML (DE) │    │ LLM labels   │    │ 466K verses │    │ 32 pages         │
+│ eBible USFX (AR) │    │ Dedup + KJV  │    │ 344K xrefs  │    │ Gemini AI        │
+│ open-bibles (ZH) │    │ annotations  │    │ 800K interl.│    │ i18n (EN/PT/ES)  │
+│ STEPBible TAGNT  │    │ Sentiment    │    │ 14K Strong's│    │                  │
+│ Theographic      │    │ enrichment   │    │             │    │                  │
+│ OpenBible refs   │    │              │    │             │    │                  │
+│ Nave's Topical   │    │              │    │             │    │                  │
 │ OpenBible Geo    │    │              │    │             │    │                  │
 └──────────────────┘    └──────────────┘    └─────────────┘    └──────────────────┘
 ```
@@ -328,14 +336,14 @@ cd frontend && npm run dev
 
 | Layer | Stack |
 |-------|-------|
-| **Extract** | `httpx`, per-translation JSON cache, STEPBible parsers, Theographic, Nave's |
+| **Extract** | `httpx`, per-translation JSON cache, USFX XML parser, STEPBible parsers, Theographic, Nave's |
 | **Transform** | `pandas`, `textblob`, `html.unescape`, KJV annotation stripper, sentiment enrichment |
 | **Load** | `duckdb` (analytical views, parameterised inserts, 32 tables) |
 | **API** | `fastapi`, `pydantic v2`, `typer` CLI, 27 routers, 93 endpoints |
 | **Frontend** | `react 19`, `vite 6`, `typescript`, `tailwind v4`, `d3`, `leaflet`, `react-router` |
 | **AI** | `google-generativeai` (Gemini 2.5 Flash Lite), disk cache + per-IP rate limit + Pydantic Literal whitelists |
 | **i18n** | React Context + `useI18n()` hook, 3 languages, localStorage persistence |
-| **Quality** | `ruff`, `mypy`, `pytest` (392 tests), `tsc --noEmit` |
+| **Quality** | `ruff`, `mypy`, `pytest` (391 tests), `tsc --noEmit` |
 | **Deploy** | Firebase Hosting (frontend) + Cloud Run (backend) + Secret Manager + Artifact Registry |
 
 ### Source layout
@@ -347,7 +355,7 @@ src/
   config.py               # Dataclass config + env overrides
   extract/
     bible_sources.py      # BibleSource ABC + 2 implementations
-    translations.py       # 12 translations registry
+    translations.py       # 15 translations registry (5 sources)
     crossref_extractor.py # OpenBible 344K cross-refs
     strongs_extractor.py  # 14,870 Strong's entries
     stepbible_extractor.py # TAGNT + TAHOT interlinear
@@ -431,7 +439,7 @@ Full OpenAPI docs at `http://localhost:8000/docs` (local) or via Cloud Run (prod
 
 ```bash
 make test            # fast tests (excludes @slow, @integration)
-make test-all        # full suite (392 tests) with coverage HTML
+make test-all        # full suite (391 tests) with coverage HTML
 make lint            # ruff check
 make typecheck       # mypy
 make quality         # lint + typecheck + test
@@ -444,7 +452,7 @@ cd frontend && npm run build       # production build
 ### Test coverage
 
 - ~32 test files covering all API routers, extractors, transforms, and loaders
-- **392 test cases** with parameterised fixtures and seeded DuckDB (387 fast + 4 deselected via @integration/@slow)
+- **391 test cases** with parameterised fixtures and seeded DuckDB (387 fast + 4 deselected via @integration/@slow)
 - Markers: `@pytest.mark.integration`, `@pytest.mark.slow`
 
 ---
@@ -455,6 +463,8 @@ cd frontend && npm run build       # production build
 |--------|------|---------|
 | [bible-api.com](https://bible-api.com) | KJV, BBE, ASV, WEB, DARBY text | Public domain |
 | [abibliadigital.com.br](https://www.abibliadigital.com.br) | NVI, RA, ACF, RVR, APEE text | Public domain |
+| [eBible.org](https://ebible.org) | Arabic Van Dyke (ARB-VD) USFX | Public domain |
+| [seven1m/open-bibles](https://github.com/seven1m/open-bibles) | Chinese Union Version Traditional + Simplified USFX | Public domain |
 | [OpenBible.info](https://www.openbible.info/labs/cross-references/) | 344K cross-references | CC-BY |
 | [STEPBible](https://github.com/STEPBible/STEPBible-Data) | TAGNT + TAHOT interlinear | CC-BY |
 | [Theographic](https://github.com/robertrouse/theographic-bible-metadata) | People, places, events | CC-BY-SA 4.0 |
@@ -477,15 +487,16 @@ cd frontend && npm run build       # production build
 - **v4.0** — The full ecosystem: 17 new features across geography, AI analysis, devotional content, and community — built with [Claude Code](https://claude.ai/code) as a pair programmer
 - **v4.1** — Verbum identity: 62K manually-labeled verses (PT+ES), emotional arc KPIs, 30 curated community notes (3 languages), nav consolidation (6 collapsible sidebar sections + /connections + /concepts wrappers), Home onboarding tour, /about page with AI-partnership note
 - **v4.2** — **Live in production** at [verbum-app-bible.web.app](https://verbum-app-bible.web.app) on Firebase Hosting + Cloud Run, with Gemini hardened (Pydantic Literal whitelists, per-IP rate limit, gemini-2.5-flash-lite + daily quota cap)
+- **v4.3** — 15 translations across 7 languages: Arabic (Smith & Van Dyke 1865) with RTL support + Chinese Union Version (Traditional + Simplified); PWA installable on Android/iOS; Immersive Reader mobile overflow fixed (fullscreen + normal mode); Map z-index isolated from navbar; per-chapter audio player infrastructure (Bible Brain API proxy, pending API key)
 
 ### What's next
 
-- Mobile polish for Immersive Reader + Arc Diagram (the two heaviest visual surfaces — desktop is flush, phones still need a dedicated pass)
-- ES second-pass quality audit (LAM, PSA, JOB, ISA — programmatically labeled in first pass)
+- `/dedicatoria` — a dedication page for the project
+- ES second-pass quality audit for remaining books (JER, EZK, Pauline epistles)
 - Tribes + family-tree page
 - Three.js 3D emotional terrain visualization
 - BigQuery public dataset + HuggingFace bonus datasets
-- Mobile PWA optimization
+- Audio player activation (Bible Brain API key pending)
 - Custom domain (verbum.app or similar)
 
 ---
