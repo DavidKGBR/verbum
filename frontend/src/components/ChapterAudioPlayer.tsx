@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect, useCallback } from "react";
-import { kjvChapterUrl } from "../data/kjvAudioMap";
 
 interface Props {
   bookId: string;
   chapter: number;
+  translation: string;
 }
 
 function fmt(s: number): string {
@@ -13,24 +13,50 @@ function fmt(s: number): string {
   return `${m}:${sec.toString().padStart(2, "0")}`;
 }
 
-export default function ChapterAudioPlayer({ bookId, chapter }: Props) {
-  const url = kjvChapterUrl(bookId, chapter);
+// Translations that have audio configured on the backend
+const AUDIO_TRANSLATIONS = new Set(["kjv", "web", "asv", "nvi", "ra", "acf", "rvr"]);
+
+export default function ChapterAudioPlayer({ bookId, chapter, translation }: Props) {
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [resolved, setResolved] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [unavailable, setUnavailable] = useState(false);
 
-  // Reset on chapter/book change
+  // Fetch the signed URL from our backend when book/chapter/translation changes
   useEffect(() => {
     setPlaying(false);
     setCurrent(0);
     setDuration(0);
     setLoading(false);
-    setUnavailable(false);
-  }, [bookId, chapter]);
+    setAudioUrl(null);
+    setResolved(false);
+
+    if (!AUDIO_TRANSLATIONS.has(translation.toLowerCase())) {
+      setResolved(true);
+      return;
+    }
+
+    let cancelled = false;
+    fetch(
+      `/api/v1/audio/chapter?translation=${translation}&book=${bookId}&chapter=${chapter}`
+    )
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (!cancelled) {
+          setAudioUrl(data?.url ?? null);
+          setResolved(true);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setResolved(true);
+      });
+
+    return () => { cancelled = true; };
+  }, [bookId, chapter, translation]);
 
   const toggle = useCallback(async () => {
     const a = audioRef.current;
@@ -44,7 +70,7 @@ export default function ChapterAudioPlayer({ bookId, chapter }: Props) {
         await a.play();
         setPlaying(true);
       } catch {
-        setUnavailable(true);
+        setAudioUrl(null);
       } finally {
         setLoading(false);
       }
@@ -54,9 +80,8 @@ export default function ChapterAudioPlayer({ bookId, chapter }: Props) {
   const seek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const a = audioRef.current;
     if (!a || !duration) return;
-    const t = (Number(e.target.value) / 1000) * duration;
-    a.currentTime = t;
-    setCurrent(t);
+    a.currentTime = (Number(e.target.value) / 1000) * duration;
+    setCurrent(a.currentTime);
   };
 
   const rewind = () => {
@@ -71,9 +96,15 @@ export default function ChapterAudioPlayer({ bookId, chapter }: Props) {
     a.currentTime = Math.min(duration, a.currentTime + 30);
   };
 
-  if (!url || unavailable) return null;
+  // Hide until resolved, and hide permanently if no URL
+  if (!resolved || !audioUrl) return null;
 
   const progress = duration > 0 ? (current / duration) * 1000 : 0;
+  const langLabel = ["nvi", "ra", "acf"].includes(translation.toLowerCase())
+    ? "PT · Bible Brain"
+    : translation.toLowerCase() === "rvr"
+    ? "ES · Bible Brain"
+    : "KJV · Bible Brain";
 
   return (
     <div className="flex items-center gap-2 py-2 px-3 mb-5 rounded-lg
@@ -82,12 +113,12 @@ export default function ChapterAudioPlayer({ bookId, chapter }: Props) {
 
       <audio
         ref={audioRef}
-        src={url}
+        src={audioUrl}
         preload="none"
         onTimeUpdate={(e) => setCurrent((e.target as HTMLAudioElement).currentTime)}
         onDurationChange={(e) => setDuration((e.target as HTMLAudioElement).duration)}
         onEnded={() => { setPlaying(false); setCurrent(0); }}
-        onError={() => setUnavailable(true)}
+        onError={() => setAudioUrl(null)}
         onWaiting={() => setLoading(true)}
         onCanPlay={() => setLoading(false)}
       />
@@ -144,7 +175,7 @@ export default function ChapterAudioPlayer({ bookId, chapter }: Props) {
         />
         <div className="flex justify-between text-[10px] opacity-40 tabular-nums">
           <span>{fmt(current)}</span>
-          <span>{duration > 0 ? fmt(duration) : "KJV · LibriVox"}</span>
+          <span>{duration > 0 ? fmt(duration) : langLabel}</span>
         </div>
       </div>
 

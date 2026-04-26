@@ -23,6 +23,7 @@ from fastapi.staticfiles import StaticFiles
 from src.api.routers import (
     ai_insights,
     analytics,
+    audio,
     authors,
     books,
     community,
@@ -109,6 +110,7 @@ app.include_router(genealogy.router, prefix="/api/v1", tags=["Semantic Genealogy
 app.include_router(emotional.router, prefix="/api/v1", tags=["Emotional Landscape"])
 app.include_router(home.router, prefix="/api/v1", tags=["Home"])
 app.include_router(community.router, prefix="/api/v1", tags=["Community Notes"])
+app.include_router(audio.router, prefix="/api/v1", tags=["Audio"])
 
 
 @app.get("/health")

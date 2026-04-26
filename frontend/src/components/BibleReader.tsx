@@ -277,10 +277,12 @@ export default function BibleReader() {
             </p>
           </div>
 
-          {/* Audio player — only for KJV (LibriVox public-domain recordings) */}
-          {page.translation === "kjv" && (
-            <ChapterAudioPlayer bookId={page.book_id} chapter={page.chapter} />
-          )}
+          {/* Audio player — shown for translations with Bible Brain audio configured */}
+          <ChapterAudioPlayer
+            bookId={page.book_id}
+            chapter={page.chapter}
+            translation={page.translation}
+          />
 
           {/* Plan banner moved to ReaderPage → <ActivePlanIndicator />, which
               now renders it once across every mode (Single/Parallel/Immersive/
