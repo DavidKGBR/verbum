@@ -142,12 +142,17 @@ export default function ArcDiagramPage() {
         <div className="flex flex-col lg:flex-row border rounded bg-white overflow-hidden"
              style={{ height: "calc(100vh - 200px)", minHeight: 500 }}>
           {/* Mobile: ArcDiagram has minWidth=720, so wrap in a horizontal
-              scroller. lg:overflow-hidden keeps the diagram flush at desktop. */}
-          <div className="flex-1 min-w-0 overflow-x-auto overflow-y-hidden lg:overflow-hidden">
+              scroller. lg:overflow-hidden keeps the diagram flush at desktop.
+              The fixed h-[500px] ensures the diagram has a deterministic
+              height on small screens — without it, the parent's
+              calc(100vh - 200px) sometimes resolves transient sub-100px
+              values during iOS URL-bar collapse and the canvas never paints. */}
+          <div className="flex-1 min-w-0 h-[500px] lg:h-auto overflow-x-auto overflow-y-hidden lg:overflow-hidden">
             <ArcDiagram
               books={books}
               arcs={arcs}
               colorBy={filters.colorBy}
+              height={500}
               onArcClick={handleArcClick}
             />
           </div>

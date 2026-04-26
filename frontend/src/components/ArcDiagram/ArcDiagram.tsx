@@ -60,13 +60,21 @@ export default function ArcDiagram({
   // Observe container size — fill available space. Use `useLayoutEffect` so
   // the re-render triggered by the first measurement is flushed into the same
   // paint; the user never sees the default-dimensions frame.
+  //
+  // Mobile gotcha: on iOS Safari, the parent's calc(100vh - 200px) can briefly
+  // resolve to <100px while the URL bar is still collapsing. The original
+  // guard `if (h <= 100) return` then permanently held `measured` at null
+  // and the canvas never painted. We now fall back to the prop `height`
+  // (default 500) so the diagram appears even if the layout never grows.
   useLayoutEffect(() => {
     const el = containerRef.current;
     if (!el) return;
     const update = () => {
       const w = widthProp ?? Math.max(MIN_WIDTH, el.clientWidth);
-      const h = el.clientHeight;
-      if (h <= 100) return; // transient zero-height layout; wait for a real one
+      // Prefer the live container height; fall back to the `height` prop so a
+      // transient 0-height layout never leaves the canvas blank forever.
+      const measuredH = el.clientHeight;
+      const h = measuredH > 100 ? measuredH : height;
       setMeasured((prev) =>
         prev && prev.w === w && prev.h === h ? prev : { w, h }
       );
@@ -75,7 +83,7 @@ export default function ArcDiagram({
     const ro = new ResizeObserver(update);
     ro.observe(el);
     return () => ro.disconnect();
-  }, [widthProp]);
+  }, [widthProp, height]);
 
   const width = measured?.w ?? (widthProp ?? MIN_WIDTH);
   const effectiveHeight = measured?.h ?? height;

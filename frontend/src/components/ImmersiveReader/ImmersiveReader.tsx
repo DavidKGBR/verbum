@@ -16,22 +16,31 @@ import { parseKjvAnnotations } from "../reader/kjvAnnotations";
 import { useI18n, defaultTranslationFor } from "../../i18n/i18nContext";
 import { useTranslationIds } from "../../hooks/useTranslations";
 
-/** Approximate max chars per page — keeps pages balanced. */
-const CHARS_PER_PAGE = 1400;
+/**
+ * Approximate max chars per page. Mobile pages are 320×480 (vs. 550×720 on
+ * desktop), and at 17px/1.85 line-height inside p-8 (32px) padding the
+ * mobile content area fits ~13 lines × ~50 chars ≈ 650 chars before text
+ * overflows the page boundary. Desktop has roughly 2× the area, so 1400
+ * chars there. The previous single 1400 budget was the cause of mobile's
+ * "text spilling past the bottom edge" bug.
+ */
+const CHARS_PER_PAGE_DESKTOP = 1400;
+const CHARS_PER_PAGE_MOBILE = 700;
 
 /**
  * Split verses into pages using a character-budget heuristic so that
  * no page is nearly empty while the previous overflows.
  */
-function paginateVerses(verses: ReaderVerse[]): ReaderVerse[][] {
+function paginateVerses(verses: ReaderVerse[], isMobile: boolean): ReaderVerse[][] {
   if (verses.length === 0) return [];
+  const budget = isMobile ? CHARS_PER_PAGE_MOBILE : CHARS_PER_PAGE_DESKTOP;
   const pages: ReaderVerse[][] = [];
   let current: ReaderVerse[] = [];
   let charCount = 0;
 
   for (const v of verses) {
     const len = (v.text_clean ?? v.text).length;
-    if (current.length > 0 && charCount + len > CHARS_PER_PAGE) {
+    if (current.length > 0 && charCount + len > budget) {
       pages.push(current);
       current = [];
       charCount = 0;
@@ -41,8 +50,9 @@ function paginateVerses(verses: ReaderVerse[]): ReaderVerse[][] {
   }
   if (current.length > 0) pages.push(current);
 
-  // Ensure even number of pages for book spread
-  if (pages.length % 2 !== 0) pages.push([]);
+  // Ensure even number of pages for book spread (desktop) — on mobile portrait
+  // the FlipBook shows one page at a time so an odd page count is fine.
+  if (!isMobile && pages.length % 2 !== 0) pages.push([]);
 
   return pages;
 }
@@ -99,7 +109,7 @@ const BookPage = forwardRef<HTMLDivElement, BookPageProps>(function BookPage(
   return (
     <div
       ref={ref}
-      className="paper-texture relative w-full h-full p-8 md:p-10 overflow-hidden"
+      className="paper-texture relative w-full h-full p-5 md:p-10 overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #f5f0e8 0%, #ede5d8 50%, #e8e0d0 100%)",
         boxShadow:
@@ -144,7 +154,7 @@ const BookPage = forwardRef<HTMLDivElement, BookPageProps>(function BookPage(
           )}
         </div>
       ) : (
-        <div className="font-body text-[var(--color-ink)] text-[17px] leading-[1.85]">
+        <div className="font-body text-[var(--color-ink)] text-[15px] md:text-[17px] leading-[1.75] md:leading-[1.85]">
           {verses.map((v, i) => {
             const hlBg = highlightBgFor(v.verse_id);
             const hlStyle = hlBg
@@ -367,7 +377,10 @@ export default function ImmersiveReader() {
     pageCache.current.clear();
   }, [translation]);
 
-  const pages = useMemo(() => (data ? paginateVerses(data.verses) : []), [data]);
+  const pages = useMemo(
+    () => (data ? paginateVerses(data.verses, isMobile) : []),
+    [data, isMobile],
+  );
 
   // Navigate to next/prev chapter when at book boundaries
   const goNextChapter = useCallback(() => {
