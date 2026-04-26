@@ -319,8 +319,9 @@ export default function MapPage() {
           </div>
         </div>
 
-        {/* Map */}
-        <div className="flex-1 relative">
+        {/* Map — isolate creates a local stacking context so Leaflet's z-indexes
+            (400–1000) don't bleed above the mobile navbar/drawer (z-30/z-50). */}
+        <div className="flex-1 relative isolate">
           {loading && (
             <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-[1000]">
               <p className="text-sm opacity-50">{t("map.loading")}</p>
