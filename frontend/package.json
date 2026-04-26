@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "postbuild": "node scripts/prerender.mjs",
     "preview": "vite preview",
-    "deploy": "npm run build && firebase deploy --only hosting --project verbum-app-bible && node scripts/indexnow-ping.mjs",
+    "deploy": "npm run build && npx firebase deploy --only hosting --project verbum-app-bible && node scripts/indexnow-ping.mjs",
     "indexnow": "node scripts/indexnow-ping.mjs"
   },
   "dependencies": {
