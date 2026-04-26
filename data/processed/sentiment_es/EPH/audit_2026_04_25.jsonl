@@ -1,0 +1,155 @@
+{"verse_id":"EPH.1.1","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"epistolary greeting"}
+{"verse_id":"EPH.1.2","polarity":0.65,"label":"peace","confidence":0.90,"notes":"grace and peace"}
+{"verse_id":"EPH.1.3","polarity":0.85,"label":"praise","confidence":0.92,"notes":"blessed be God who blessed us with every spiritual blessing"}
+{"verse_id":"EPH.1.4","polarity":0.75,"label":"love","confidence":0.90,"notes":"chose us before foundation of world to be holy in love"}
+{"verse_id":"EPH.1.5","polarity":0.80,"label":"love","confidence":0.92,"notes":"predestined to adoption as sons"}
+{"verse_id":"EPH.1.6","polarity":0.85,"label":"praise","confidence":0.92,"notes":"to the praise of glory of his grace, accepted in the Beloved"}
+{"verse_id":"EPH.1.7","polarity":0.80,"label":"hope","confidence":0.92,"notes":"redemption through his blood, forgiveness of sins"}
+{"verse_id":"EPH.1.8","polarity":0.70,"label":"hope","confidence":0.88,"notes":"abounded toward us in wisdom and prudence"}
+{"verse_id":"EPH.1.9","polarity":0.65,"label":"hope","confidence":0.88,"notes":"making known mystery of his will"}
+{"verse_id":"EPH.1.10","polarity":0.75,"label":"hope","confidence":0.90,"notes":"gather all things in Christ in fullness of times"}
+{"verse_id":"EPH.1.11","polarity":0.70,"label":"hope","confidence":0.88,"notes":"obtained inheritance, predestined according to his purpose"}
+{"verse_id":"EPH.1.12","polarity":0.75,"label":"praise","confidence":0.88,"notes":"to praise of his glory"}
+{"verse_id":"EPH.1.13","polarity":0.75,"label":"hope","confidence":0.90,"notes":"sealed with Holy Spirit of promise"}
+{"verse_id":"EPH.1.14","polarity":0.75,"label":"hope","confidence":0.90,"notes":"earnest of inheritance, redemption of purchased possession"}
+{"verse_id":"EPH.1.15","polarity":0.55,"label":"gratitude","confidence":0.85,"notes":"having heard of your faith and love"}
+{"verse_id":"EPH.1.16","polarity":0.65,"label":"gratitude","confidence":0.88,"notes":"do not cease to give thanks for you"}
+{"verse_id":"EPH.1.17","polarity":0.65,"label":"hope","confidence":0.88,"notes":"that God may give spirit of wisdom and revelation"}
+{"verse_id":"EPH.1.18","polarity":0.75,"label":"hope","confidence":0.90,"notes":"eyes of understanding enlightened, hope of his calling"}
+{"verse_id":"EPH.1.19","polarity":0.75,"label":"awe","confidence":0.88,"notes":"exceeding greatness of his power toward us"}
+{"verse_id":"EPH.1.20","polarity":0.80,"label":"praise","confidence":0.90,"notes":"raised Christ from dead, set at his right hand"}
+{"verse_id":"EPH.1.21","polarity":0.85,"label":"praise","confidence":0.92,"notes":"far above all principality and power"}
+{"verse_id":"EPH.1.22","polarity":0.80,"label":"praise","confidence":0.90,"notes":"put all under his feet, gave him head over church"}
+{"verse_id":"EPH.1.23","polarity":0.75,"label":"praise","confidence":0.88,"notes":"church his body, fullness of him who fills all"}
+{"verse_id":"EPH.2.1","polarity":-0.50,"label":"narrative","confidence":0.88,"notes":"you were dead in trespasses and sins"}
+{"verse_id":"EPH.2.2","polarity":-0.55,"label":"narrative","confidence":0.88,"notes":"walked according to course of world, prince of power of air"}
+{"verse_id":"EPH.2.3","polarity":-0.50,"label":"confession","confidence":0.88,"notes":"all conducted in lusts of flesh, by nature children of wrath"}
+{"verse_id":"EPH.2.4","polarity":0.85,"label":"love","confidence":0.95,"notes":"famous: BUT GOD rich in mercy, great love"}
+{"verse_id":"EPH.2.5","polarity":0.85,"label":"love","confidence":0.92,"notes":"made alive together with Christ, by grace saved"}
+{"verse_id":"EPH.2.6","polarity":0.80,"label":"praise","confidence":0.90,"notes":"raised together, made to sit in heavenly places"}
+{"verse_id":"EPH.2.7","polarity":0.85,"label":"hope","confidence":0.92,"notes":"show in coming ages exceeding riches of his grace"}
+{"verse_id":"EPH.2.8","polarity":0.85,"label":"hope","confidence":0.95,"notes":"famous: by grace are you saved through faith, gift of God"}
+{"verse_id":"EPH.2.9","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"not by works lest any boast"}
+{"verse_id":"EPH.2.10","polarity":0.75,"label":"hope","confidence":0.90,"notes":"we are his workmanship, created in Christ for good works"}
+{"verse_id":"EPH.2.11","polarity":-0.10,"label":"narrative","confidence":0.82,"notes":"remember Gentiles in flesh — recalling former state"}
+{"verse_id":"EPH.2.12","polarity":-0.55,"label":"narrative","confidence":0.88,"notes":"without Christ, aliens, no hope, without God in world"}
+{"verse_id":"EPH.2.13","polarity":0.80,"label":"hope","confidence":0.92,"notes":"now in Christ, made near by blood of Christ"}
+{"verse_id":"EPH.2.14","polarity":0.85,"label":"peace","confidence":0.92,"notes":"he is our peace, broke down dividing wall"}
+{"verse_id":"EPH.2.15","polarity":0.75,"label":"peace","confidence":0.90,"notes":"made peace, creating new man"}
+{"verse_id":"EPH.2.16","polarity":0.70,"label":"peace","confidence":0.88,"notes":"reconcile both to God by cross"}
+{"verse_id":"EPH.2.17","polarity":0.85,"label":"peace","confidence":0.92,"notes":"preached peace to those far and near"}
+{"verse_id":"EPH.2.18","polarity":0.75,"label":"hope","confidence":0.90,"notes":"both have access by one Spirit to Father"}
+{"verse_id":"EPH.2.19","polarity":0.80,"label":"hope","confidence":0.92,"notes":"no longer strangers but fellow citizens"}
+{"verse_id":"EPH.2.20","polarity":0.65,"label":"hope","confidence":0.88,"notes":"built on foundation of apostles and prophets"}
+{"verse_id":"EPH.2.21","polarity":0.70,"label":"hope","confidence":0.88,"notes":"growing into holy temple in Lord"}
+{"verse_id":"EPH.2.22","polarity":0.75,"label":"hope","confidence":0.88,"notes":"built together for habitation of God in Spirit"}
+{"verse_id":"EPH.3.1","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"prisoner of Christ for Gentiles"}
+{"verse_id":"EPH.3.2","polarity":0.50,"label":"narrative","confidence":0.85,"notes":"if you have heard of dispensation of grace"}
+{"verse_id":"EPH.3.3","polarity":0.55,"label":"hope","confidence":0.85,"notes":"by revelation made known mystery"}
+{"verse_id":"EPH.3.4","polarity":0.45,"label":"narrative","confidence":0.82,"notes":"reading you may understand my knowledge in mystery"}
+{"verse_id":"EPH.3.5","polarity":0.70,"label":"hope","confidence":0.88,"notes":"now revealed to apostles and prophets in Spirit"}
+{"verse_id":"EPH.3.6","polarity":0.75,"label":"hope","confidence":0.88,"notes":"Gentiles fellow heirs, of same body, partakers of promise"}
+{"verse_id":"EPH.3.7","polarity":0.55,"label":"gratitude","confidence":0.85,"notes":"made minister by gift of grace"}
+{"verse_id":"EPH.3.8","polarity":0.75,"label":"praise","confidence":0.88,"notes":"unsearchable riches of Christ — humility + wonder"}
+{"verse_id":"EPH.3.9","polarity":0.65,"label":"hope","confidence":0.85,"notes":"make all see fellowship of mystery hidden in God"}
+{"verse_id":"EPH.3.10","polarity":0.70,"label":"praise","confidence":0.88,"notes":"manifold wisdom of God known by church"}
+{"verse_id":"EPH.3.11","polarity":0.65,"label":"praise","confidence":0.85,"notes":"according to eternal purpose in Christ Jesus"}
+{"verse_id":"EPH.3.12","polarity":0.75,"label":"confidence","confidence":0.90,"notes":"in whom we have boldness and access by faith"}
+{"verse_id":"EPH.3.13","polarity":0.40,"label":"hope","confidence":0.82,"notes":"do not faint at my tribulations which are your glory"}
+{"verse_id":"EPH.3.14","polarity":0.55,"label":"praise","confidence":0.85,"notes":"bow my knees to the Father"}
+{"verse_id":"EPH.3.15","polarity":0.50,"label":"praise","confidence":0.82,"notes":"of whom every family in heaven and earth named"}
+{"verse_id":"EPH.3.16","polarity":0.75,"label":"hope","confidence":0.90,"notes":"strengthened with might by Spirit in inner man"}
+{"verse_id":"EPH.3.17","polarity":0.85,"label":"love","confidence":0.92,"notes":"Christ may dwell in your hearts by faith, rooted in love"}
+{"verse_id":"EPH.3.18","polarity":0.75,"label":"awe","confidence":0.88,"notes":"comprehend with all saints breadth, length, depth, height"}
+{"verse_id":"EPH.3.19","polarity":0.85,"label":"love","confidence":0.95,"notes":"famous: know love of Christ which surpasses knowledge"}
+{"verse_id":"EPH.3.20","polarity":0.85,"label":"praise","confidence":0.92,"notes":"now to him who is able to do exceedingly abundantly"}
+{"verse_id":"EPH.3.21","polarity":0.85,"label":"praise","confidence":0.92,"notes":"to him be glory in church by Christ Jesus"}
+{"verse_id":"EPH.4.1","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"walk worthy of vocation"}
+{"verse_id":"EPH.4.2","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"with all lowliness, meekness, longsuffering, forbearance in love"}
+{"verse_id":"EPH.4.3","polarity":0.60,"label":"peace","confidence":0.85,"notes":"keep unity of Spirit in bond of peace"}
+{"verse_id":"EPH.4.4","polarity":0.65,"label":"hope","confidence":0.85,"notes":"one body, one Spirit, one hope of calling"}
+{"verse_id":"EPH.4.5","polarity":0.70,"label":"praise","confidence":0.88,"notes":"one Lord, one faith, one baptism"}
+{"verse_id":"EPH.4.6","polarity":0.80,"label":"praise","confidence":0.92,"notes":"one God and Father of all, above all, in all"}
+{"verse_id":"EPH.4.7","polarity":0.55,"label":"hope","confidence":0.85,"notes":"to each grace given according to measure of gift of Christ"}
+{"verse_id":"EPH.4.8","polarity":0.65,"label":"praise","confidence":0.85,"notes":"led captivity captive, gave gifts to men"}
+{"verse_id":"EPH.4.9","polarity":0.20,"label":"narrative","confidence":0.78,"notes":"descended first to lower parts of earth"}
+{"verse_id":"EPH.4.10","polarity":0.65,"label":"praise","confidence":0.85,"notes":"ascended above all heavens to fill all"}
+{"verse_id":"EPH.4.11","polarity":0.60,"label":"hope","confidence":0.85,"notes":"gave apostles, prophets, evangelists, pastors, teachers"}
+{"verse_id":"EPH.4.12","polarity":0.65,"label":"hope","confidence":0.85,"notes":"perfecting saints, work of ministry, edifying body"}
+{"verse_id":"EPH.4.13","polarity":0.75,"label":"hope","confidence":0.90,"notes":"till all attain unity of faith, full stature of Christ"}
+{"verse_id":"EPH.4.14","polarity":-0.20,"label":"warning","confidence":0.82,"notes":"no longer children tossed by every wind of doctrine"}
+{"verse_id":"EPH.4.15","polarity":0.70,"label":"love","confidence":0.88,"notes":"speaking truth in love, grow up into him"}
+{"verse_id":"EPH.4.16","polarity":0.70,"label":"love","confidence":0.88,"notes":"whole body fitly joined, growing in love"}
+{"verse_id":"EPH.4.17","polarity":-0.30,"label":"instruction","confidence":0.85,"notes":"no longer walk as Gentiles in vanity of mind"}
+{"verse_id":"EPH.4.18","polarity":-0.55,"label":"narrative","confidence":0.88,"notes":"darkened understanding, alienated from life of God"}
+{"verse_id":"EPH.4.19","polarity":-0.65,"label":"narrative","confidence":0.88,"notes":"past feeling, given to lasciviousness, uncleanness"}
+{"verse_id":"EPH.4.20","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"but you have not so learned Christ"}
+{"verse_id":"EPH.4.21","polarity":0.45,"label":"instruction","confidence":0.82,"notes":"taught by him as truth is in Jesus"}
+{"verse_id":"EPH.4.22","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"put off old man, corrupt according to deceitful lusts"}
+{"verse_id":"EPH.4.23","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"renewed in spirit of mind"}
+{"verse_id":"EPH.4.24","polarity":0.70,"label":"instruction","confidence":0.88,"notes":"put on new man created in righteousness and holiness"}
+{"verse_id":"EPH.4.25","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"speak truth, members one of another"}
+{"verse_id":"EPH.4.26","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"be angry and sin not, sun not down on wrath"}
+{"verse_id":"EPH.4.27","polarity":-0.10,"label":"warning","confidence":0.80,"notes":"give no place to devil"}
+{"verse_id":"EPH.4.28","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"let him steal no more, work, give to needy"}
+{"verse_id":"EPH.4.29","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"no corrupt word, but edifying"}
+{"verse_id":"EPH.4.30","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"grieve not Holy Spirit"}
+{"verse_id":"EPH.4.31","polarity":-0.15,"label":"instruction","confidence":0.85,"notes":"put away bitterness, wrath, anger, malice"}
+{"verse_id":"EPH.4.32","polarity":0.75,"label":"love","confidence":0.92,"notes":"famous: be kind, tenderhearted, forgiving as God forgave you"}
+{"verse_id":"EPH.5.1","polarity":0.65,"label":"love","confidence":0.88,"notes":"be followers of God as dear children"}
+{"verse_id":"EPH.5.2","polarity":0.85,"label":"love","confidence":0.92,"notes":"walk in love as Christ loved us, sweet aroma offering"}
+{"verse_id":"EPH.5.3","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"fornication, uncleanness not named among saints"}
+{"verse_id":"EPH.5.4","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"no filthy talk; rather thanksgiving"}
+{"verse_id":"EPH.5.5","polarity":-0.40,"label":"warning","confidence":0.85,"notes":"no fornicator, unclean, covetous has inheritance in kingdom"}
+{"verse_id":"EPH.5.6","polarity":-0.50,"label":"warning","confidence":0.85,"notes":"let no one deceive — wrath comes on disobedience"}
+{"verse_id":"EPH.5.7","polarity":-0.20,"label":"instruction","confidence":0.80,"notes":"do not partake with them"}
+{"verse_id":"EPH.5.8","polarity":0.65,"label":"hope","confidence":0.88,"notes":"once darkness, now light in Lord; walk as children of light"}
+{"verse_id":"EPH.5.9","polarity":0.70,"label":"praise","confidence":0.88,"notes":"fruit of Spirit in goodness, righteousness, truth"}
+{"verse_id":"EPH.5.10","polarity":0.45,"label":"instruction","confidence":0.82,"notes":"proving what is acceptable to Lord"}
+{"verse_id":"EPH.5.11","polarity":-0.15,"label":"instruction","confidence":0.82,"notes":"no fellowship with unfruitful works of darkness; reprove them"}
+{"verse_id":"EPH.5.12","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"shameful even to speak of secret deeds"}
+{"verse_id":"EPH.5.13","polarity":0.30,"label":"instruction","confidence":0.80,"notes":"all reproved made manifest by light"}
+{"verse_id":"EPH.5.14","polarity":0.60,"label":"hope","confidence":0.85,"notes":"awake sleeper, arise, Christ shall give you light"}
+{"verse_id":"EPH.5.15","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"walk circumspectly as wise"}
+{"verse_id":"EPH.5.16","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"redeeming time because days are evil"}
+{"verse_id":"EPH.5.17","polarity":0.40,"label":"instruction","confidence":0.82,"notes":"understand will of Lord"}
+{"verse_id":"EPH.5.18","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"not drunk with wine but filled with Spirit"}
+{"verse_id":"EPH.5.19","polarity":0.80,"label":"praise","confidence":0.92,"notes":"speaking psalms and hymns, singing in heart to Lord"}
+{"verse_id":"EPH.5.20","polarity":0.85,"label":"gratitude","confidence":0.92,"notes":"giving thanks always for all things"}
+{"verse_id":"EPH.5.21","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"submitting one to another in fear of God"}
+{"verse_id":"EPH.5.22","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"wives submit to your husbands as to Lord"}
+{"verse_id":"EPH.5.23","polarity":0.45,"label":"instruction","confidence":0.82,"notes":"husband head of wife as Christ head of church"}
+{"verse_id":"EPH.5.24","polarity":0.35,"label":"instruction","confidence":0.82,"notes":"as church submits to Christ, so wives to husbands"}
+{"verse_id":"EPH.5.25","polarity":0.85,"label":"love","confidence":0.95,"notes":"famous: husbands love wives as Christ loved church"}
+{"verse_id":"EPH.5.26","polarity":0.65,"label":"love","confidence":0.88,"notes":"sanctify and cleanse with washing of water by word"}
+{"verse_id":"EPH.5.27","polarity":0.75,"label":"hope","confidence":0.88,"notes":"present glorious church without spot or wrinkle"}
+{"verse_id":"EPH.5.28","polarity":0.65,"label":"love","confidence":0.85,"notes":"husbands love wives as own bodies"}
+{"verse_id":"EPH.5.29","polarity":0.55,"label":"love","confidence":0.85,"notes":"no man hates own flesh, nourishes it as Christ church"}
+{"verse_id":"EPH.5.30","polarity":0.65,"label":"love","confidence":0.85,"notes":"we are members of his body"}
+{"verse_id":"EPH.5.31","polarity":0.55,"label":"love","confidence":0.85,"notes":"man leave father and mother, joined to wife, two one flesh"}
+{"verse_id":"EPH.5.32","polarity":0.65,"label":"awe","confidence":0.85,"notes":"this is great mystery — concerning Christ and church"}
+{"verse_id":"EPH.5.33","polarity":0.60,"label":"love","confidence":0.85,"notes":"each love wife as self, wife reverence husband"}
+{"verse_id":"EPH.6.1","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"children obey parents in Lord, this is right"}
+{"verse_id":"EPH.6.2","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"honor father and mother — first command with promise"}
+{"verse_id":"EPH.6.3","polarity":0.65,"label":"hope","confidence":0.88,"notes":"that it may be well, you may live long"}
+{"verse_id":"EPH.6.4","polarity":0.45,"label":"instruction","confidence":0.82,"notes":"fathers, do not provoke; nurture in Lord"}
+{"verse_id":"EPH.6.5","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"servants obey masters with fear, sincerity, as to Christ"}
+{"verse_id":"EPH.6.6","polarity":0.40,"label":"instruction","confidence":0.82,"notes":"not eyeservice, but as servants of Christ"}
+{"verse_id":"EPH.6.7","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"with goodwill serving as to Lord"}
+{"verse_id":"EPH.6.8","polarity":0.60,"label":"hope","confidence":0.88,"notes":"good each does, will receive same of Lord"}
+{"verse_id":"EPH.6.9","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"masters do same, no respecter of persons with God"}
+{"verse_id":"EPH.6.10","polarity":0.70,"label":"confidence","confidence":0.92,"notes":"finally, be strong in Lord and power of his might"}
+{"verse_id":"EPH.6.11","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"put on whole armor of God"}
+{"verse_id":"EPH.6.12","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"wrestle not against flesh and blood, but principalities"}
+{"verse_id":"EPH.6.13","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"take whole armor to withstand evil day"}
+{"verse_id":"EPH.6.14","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"loins girt with truth, breastplate of righteousness"}
+{"verse_id":"EPH.6.15","polarity":0.65,"label":"peace","confidence":0.85,"notes":"feet shod with preparation of gospel of peace"}
+{"verse_id":"EPH.6.16","polarity":0.55,"label":"confidence","confidence":0.85,"notes":"shield of faith to quench fiery darts of wicked"}
+{"verse_id":"EPH.6.17","polarity":0.60,"label":"hope","confidence":0.85,"notes":"helmet of salvation, sword of Spirit which is word of God"}
+{"verse_id":"EPH.6.18","polarity":0.55,"label":"instruction","confidence":0.85,"notes":"praying always with all prayer in Spirit"}
+{"verse_id":"EPH.6.19","polarity":0.45,"label":"instruction","confidence":0.82,"notes":"and for me, that utterance be given me to make known mystery"}
+{"verse_id":"EPH.6.20","polarity":0.20,"label":"narrative","confidence":0.82,"notes":"ambassador in chains, that I may speak boldly"}
+{"verse_id":"EPH.6.21","polarity":0.40,"label":"narrative","confidence":0.82,"notes":"Tychicus shall make known all things, beloved brother"}
+{"verse_id":"EPH.6.22","polarity":0.55,"label":"love","confidence":0.85,"notes":"sent him that he may comfort your hearts"}
+{"verse_id":"EPH.6.23","polarity":0.75,"label":"peace","confidence":0.92,"notes":"peace, love with faith, from God Father and Lord Jesus"}
+{"verse_id":"EPH.6.24","polarity":0.75,"label":"love","confidence":0.92,"notes":"grace with all who love Lord Jesus in sincerity, Amen"}
