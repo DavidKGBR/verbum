@@ -1,0 +1,1070 @@
+{"verse_id":"JOB.1.1","polarity":0.55,"label":"praise","confidence":0.85,"notes":"Job perfecto, recto, temeroso"}
+{"verse_id":"JOB.1.2","polarity":0.40,"label":"narrative","confidence":0.82,"notes":"siete hijos y tres hijas"}
+{"verse_id":"JOB.1.3","polarity":0.45,"label":"narrative","confidence":0.82,"notes":"hacienda — grande entre orientales"}
+{"verse_id":"JOB.1.4","polarity":0.40,"label":"narrative","confidence":0.80,"notes":"hijos hacían banquetes"}
+{"verse_id":"JOB.1.5","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"Job ofrecía holocaustos por hijos"}
+{"verse_id":"JOB.1.6","polarity":0.10,"label":"narrative","confidence":0.80,"notes":"hijos de Dios + Satán"}
+{"verse_id":"JOB.1.7","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"diálogo Jehová-Satán"}
+{"verse_id":"JOB.1.8","polarity":0.55,"label":"narrative","confidence":0.85,"notes":"Jehová elogia a Job"}
+{"verse_id":"JOB.1.9","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"Satán cuestiona motivos"}
+{"verse_id":"JOB.1.10","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"Satán reconoce bendición"}
+{"verse_id":"JOB.1.11","polarity":-0.55,"label":"narrative","confidence":0.85,"notes":"Satán pide tocar bienes"}
+{"verse_id":"JOB.1.12","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"YHWH permite, no toca persona"}
+{"verse_id":"JOB.1.13","polarity":0.20,"label":"narrative","confidence":0.78,"notes":"hijos comían"}
+{"verse_id":"JOB.1.14","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"primer mensajero"}
+{"verse_id":"JOB.1.15","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"sabeos atacaron, mozos a espada"}
+{"verse_id":"JOB.1.16","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"fuego de Dios cayó, ovejas y mozos"}
+{"verse_id":"JOB.1.17","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"caldeos, camellos, mozos"}
+{"verse_id":"JOB.1.18","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"hijos comiendo"}
+{"verse_id":"JOB.1.19","polarity":-0.90,"label":"grief","confidence":0.92,"notes":"viento del desierto, casa cayó, hijos murieron"}
+{"verse_id":"JOB.1.20","polarity":-0.55,"label":"grief","confidence":0.85,"notes":"Job rasgó manto, adoró"}
+{"verse_id":"JOB.1.21","polarity":0.50,"label":"praise","confidence":0.92,"notes":"famous: Jehová dió, Jehová quitó, sea bendito"}
+{"verse_id":"JOB.1.22","polarity":0.45,"label":"praise","confidence":0.85,"notes":"Job no pecó, no atribuyó despropósito"}
+{"verse_id":"JOB.2.1","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"segunda asamblea"}
+{"verse_id":"JOB.2.2","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"diálogo"}
+{"verse_id":"JOB.2.3","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"Job retiene perfección"}
+{"verse_id":"JOB.2.4","polarity":-0.45,"label":"narrative","confidence":0.85,"notes":"piel por piel"}
+{"verse_id":"JOB.2.5","polarity":-0.65,"label":"narrative","confidence":0.88,"notes":"toca su carne y blasfemará"}
+{"verse_id":"JOB.2.6","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"YHWH permite, guarda vida"}
+{"verse_id":"JOB.2.7","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"sarna desde planta a mollera"}
+{"verse_id":"JOB.2.8","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"teja para rascarse, en ceniza"}
+{"verse_id":"JOB.2.9","polarity":-0.65,"label":"grief","confidence":0.88,"notes":"esposa: bendice/maldice y muere"}
+{"verse_id":"JOB.2.10","polarity":0.45,"label":"praise","confidence":0.88,"notes":"famous: bien y mal de Dios; no pecó con labios"}
+{"verse_id":"JOB.2.11","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"tres amigos vienen a consolar"}
+{"verse_id":"JOB.2.12","polarity":-0.65,"label":"grief","confidence":0.88,"notes":"lloraron, rasgaron mantos, polvo sobre cabezas"}
+{"verse_id":"JOB.2.13","polarity":-0.65,"label":"grief","confidence":0.88,"notes":"siete días siete noches en silencio, dolor grande"}
+{"verse_id":"JOB.3.1","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"Job maldijo su día"}
+{"verse_id":"JOB.3.2","polarity":-0.40,"label":"narrative","confidence":0.78,"notes":"Job exclama"}
+{"verse_id":"JOB.3.3","polarity":-0.90,"label":"despair","confidence":0.92,"notes":"perezca día en que nací"}
+{"verse_id":"JOB.3.4","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"sea aquel día sombrío"}
+{"verse_id":"JOB.3.5","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"tinieblas, sombra de muerte"}
+{"verse_id":"JOB.3.6","polarity":-0.85,"label":"despair","confidence":0.90,"notes":"oscuridad ocupe noche"}
+{"verse_id":"JOB.3.7","polarity":-0.80,"label":"despair","confidence":0.90,"notes":"oh si fuera solitaria"}
+{"verse_id":"JOB.3.8","polarity":-0.75,"label":"imprecation","confidence":0.88,"notes":"maldíganla los que maldicen"}
+{"verse_id":"JOB.3.9","polarity":-0.80,"label":"despair","confidence":0.90,"notes":"oscurézcanse estrellas"}
+{"verse_id":"JOB.3.10","polarity":-0.80,"label":"despair","confidence":0.90,"notes":"no cerró puertas del vientre"}
+{"verse_id":"JOB.3.11","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"por qué no morí desde matriz"}
+{"verse_id":"JOB.3.12","polarity":-0.80,"label":"despair","confidence":0.90,"notes":"por qué me previnieron las rodillas"}
+{"verse_id":"JOB.3.13","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"yaciera y reposara"}
+{"verse_id":"JOB.3.14","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"con reyes y consejeros"}
+{"verse_id":"JOB.3.15","polarity":-0.45,"label":"narrative","confidence":0.82,"notes":"con príncipes que poseían oro"}
+{"verse_id":"JOB.3.16","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"como aborto"}
+{"verse_id":"JOB.3.17","polarity":-0.45,"label":"despair","confidence":0.82,"notes":"impíos dejan perturbar; cansadas reposan"}
+{"verse_id":"JOB.3.18","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"cautivos reposan"}
+{"verse_id":"JOB.3.19","polarity":-0.45,"label":"narrative","confidence":0.82,"notes":"chico y grande, siervo libre de señor"}
+{"verse_id":"JOB.3.20","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"por qué da luz al trabajado"}
+{"verse_id":"JOB.3.21","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"esperan muerte y no llega"}
+{"verse_id":"JOB.3.22","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"se alegran cuando hallan sepulcro"}
+{"verse_id":"JOB.3.23","polarity":-0.75,"label":"despair","confidence":0.88,"notes":"hombre cuyo camino encubierto"}
+{"verse_id":"JOB.3.24","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"antes que pan viene suspiro; gemidos como aguas"}
+{"verse_id":"JOB.3.25","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"el temor me ha venido"}
+{"verse_id":"JOB.3.26","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"no he tenido paz, vino turbación"}
+{"verse_id":"JOB.4.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"Eliphaz responde"}
+{"verse_id":"JOB.4.2","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"si te hablare, te será molesto"}
+{"verse_id":"JOB.4.3","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"tú enseñabas a muchos"}
+{"verse_id":"JOB.4.4","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"al que vacilaba enderezabas"}
+{"verse_id":"JOB.4.5","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"ahora que mal vino, te turbas"}
+{"verse_id":"JOB.4.6","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿es este tu temor, tu confianza?"}
+{"verse_id":"JOB.4.7","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"¿quién inocente se perdió?"}
+{"verse_id":"JOB.4.8","polarity":-0.45,"label":"instruction","confidence":0.85,"notes":"los que aran iniquidad la siegan"}
+{"verse_id":"JOB.4.9","polarity":-0.55,"label":"judgment","confidence":0.85,"notes":"perecen por aliento de Dios"}
+{"verse_id":"JOB.4.10","polarity":-0.45,"label":"judgment","confidence":0.82,"notes":"bramido del león quebrantado"}
+{"verse_id":"JOB.4.11","polarity":-0.45,"label":"judgment","confidence":0.82,"notes":"león viejo perece"}
+{"verse_id":"JOB.4.12","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"oído percibió algo"}
+{"verse_id":"JOB.4.13","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"visiones nocturnas"}
+{"verse_id":"JOB.4.14","polarity":-0.55,"label":"awe","confidence":0.85,"notes":"espanto y temblor estremeció huesos"}
+{"verse_id":"JOB.4.15","polarity":-0.55,"label":"awe","confidence":0.85,"notes":"espíritu pasó, erizó pelo"}
+{"verse_id":"JOB.4.16","polarity":-0.30,"label":"awe","confidence":0.82,"notes":"fantasma delante, voz quieta"}
+{"verse_id":"JOB.4.17","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"¿hombre más justo que Dios?"}
+{"verse_id":"JOB.4.18","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"no confía en sus siervos"}
+{"verse_id":"JOB.4.19","polarity":-0.45,"label":"instruction","confidence":0.85,"notes":"casas de lodo, polilla quebranta"}
+{"verse_id":"JOB.4.20","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"de mañana a tarde quebrantados"}
+{"verse_id":"JOB.4.21","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"hermosura se pierde, mueren sin sabiduría"}
+{"verse_id":"JOB.5.1","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"da voces, ¿quién responderá?"}
+{"verse_id":"JOB.5.2","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"ira mata al necio"}
+{"verse_id":"JOB.5.3","polarity":-0.40,"label":"instruction","confidence":0.82,"notes":"vi al necio echar raíces"}
+{"verse_id":"JOB.5.4","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"hijos lejos de salud, quebrantados"}
+{"verse_id":"JOB.5.5","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"hambrientos comen su mies"}
+{"verse_id":"JOB.5.6","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"iniquidad no sale del polvo"}
+{"verse_id":"JOB.5.7","polarity":-0.40,"label":"narrative","confidence":0.85,"notes":"hombre nace para aflicción"}
+{"verse_id":"JOB.5.8","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"buscaría a Dios, depositaría"}
+{"verse_id":"JOB.5.9","polarity":0.65,"label":"praise","confidence":0.88,"notes":"hace cosas grandes inescrutables"}
+{"verse_id":"JOB.5.10","polarity":0.55,"label":"praise","confidence":0.85,"notes":"da lluvia sobre la tierra"}
+{"verse_id":"JOB.5.11","polarity":0.55,"label":"praise","confidence":0.85,"notes":"pone humildes en altura"}
+{"verse_id":"JOB.5.12","polarity":0.30,"label":"praise","confidence":0.82,"notes":"frustra pensamientos de astutos"}
+{"verse_id":"JOB.5.13","polarity":0.30,"label":"praise","confidence":0.82,"notes":"prende a sabios en astucia"}
+{"verse_id":"JOB.5.14","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"de día tinieblas, andan a tientas"}
+{"verse_id":"JOB.5.15","polarity":0.55,"label":"hope","confidence":0.85,"notes":"libra de espada al pobre"}
+{"verse_id":"JOB.5.16","polarity":0.55,"label":"hope","confidence":0.85,"notes":"esperanza al menesteroso"}
+{"verse_id":"JOB.5.17","polarity":0.55,"label":"hope","confidence":0.92,"notes":"famous: bienaventurado a quien Dios castiga"}
+{"verse_id":"JOB.5.18","polarity":0.65,"label":"hope","confidence":0.88,"notes":"él hiere y sus manos curan"}
+{"verse_id":"JOB.5.19","polarity":0.65,"label":"hope","confidence":0.85,"notes":"en seis tribulaciones librará"}
+{"verse_id":"JOB.5.20","polarity":0.65,"label":"hope","confidence":0.85,"notes":"en hambre redimirá de muerte"}
+{"verse_id":"JOB.5.21","polarity":0.55,"label":"hope","confidence":0.85,"notes":"del azote de lengua encubierto"}
+{"verse_id":"JOB.5.22","polarity":0.55,"label":"hope","confidence":0.85,"notes":"de destrucción y hambre te reirás"}
+{"verse_id":"JOB.5.23","polarity":0.55,"label":"hope","confidence":0.85,"notes":"con piedras del campo concierto"}
+{"verse_id":"JOB.5.24","polarity":0.65,"label":"hope","confidence":0.88,"notes":"sabrás que hay paz en tu tienda"}
+{"verse_id":"JOB.5.25","polarity":0.65,"label":"hope","confidence":0.88,"notes":"simiente mucha, prole como hierba"}
+{"verse_id":"JOB.5.26","polarity":0.55,"label":"hope","confidence":0.85,"notes":"vendrás en vejez al sepulcro"}
+{"verse_id":"JOB.5.27","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"hemos inquirido, así es"}
+{"verse_id":"JOB.6.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"Job responde"}
+{"verse_id":"JOB.6.2","polarity":-0.65,"label":"lament","confidence":0.88,"notes":"oh si pesaran mi queja"}
+{"verse_id":"JOB.6.3","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"más pesado que arena del mar"}
+{"verse_id":"JOB.6.4","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"saetas del Todopoderoso, terrores"}
+{"verse_id":"JOB.6.5","polarity":-0.30,"label":"narrative","confidence":0.80,"notes":"asno gime junto a hierba?"}
+{"verse_id":"JOB.6.6","polarity":-0.30,"label":"narrative","confidence":0.80,"notes":"comerá lo desabrido sin sal?"}
+{"verse_id":"JOB.6.7","polarity":-0.65,"label":"grief","confidence":0.88,"notes":"alma rehusa tocar, dolores comida"}
+{"verse_id":"JOB.6.8","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"oh si Dios otorgase mi petición"}
+{"verse_id":"JOB.6.9","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"que pluguiera quebrantarme, deshacerme"}
+{"verse_id":"JOB.6.10","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"sería consuelo, no escondí palabras del Santo"}
+{"verse_id":"JOB.6.11","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"¿cuál fortaleza para esperar?"}
+{"verse_id":"JOB.6.12","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"¿fortaleza de piedras, carne acero?"}
+{"verse_id":"JOB.6.13","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"¿no me ayudo y poder falta?"}
+{"verse_id":"JOB.6.14","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"atribulado consolado de compañero"}
+{"verse_id":"JOB.6.15","polarity":-0.55,"label":"grief","confidence":0.85,"notes":"hermanos mintieron como arroyo"}
+{"verse_id":"JOB.6.16","polarity":-0.30,"label":"narrative","confidence":0.78,"notes":"escondidos por helada"}
+{"verse_id":"JOB.6.17","polarity":-0.30,"label":"narrative","confidence":0.78,"notes":"al calor desaparecen"}
+{"verse_id":"JOB.6.18","polarity":-0.30,"label":"narrative","confidence":0.78,"notes":"se apartan de la senda"}
+{"verse_id":"JOB.6.19","polarity":-0.30,"label":"narrative","confidence":0.78,"notes":"caminantes de Temán esperaron"}
+{"verse_id":"JOB.6.20","polarity":-0.55,"label":"grief","confidence":0.85,"notes":"avergonzados por su esperanza"}
+{"verse_id":"JOB.6.21","polarity":-0.55,"label":"grief","confidence":0.85,"notes":"como ellas sois vosotros, teméis"}
+{"verse_id":"JOB.6.22","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"¿os he dicho traedme?"}
+{"verse_id":"JOB.6.23","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"¿libradme del opresor?"}
+{"verse_id":"JOB.6.24","polarity":0.10,"label":"instruction","confidence":0.80,"notes":"enseñadme y callaré"}
+{"verse_id":"JOB.6.25","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"palabras de rectitud, mas qué reprende"}
+{"verse_id":"JOB.6.26","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"discursos de un desesperado, viento"}
+{"verse_id":"JOB.6.27","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"os arrojáis sobre huérfano"}
+{"verse_id":"JOB.6.28","polarity":-0.20,"label":"instruction","confidence":0.80,"notes":"mirad, no miento"}
+{"verse_id":"JOB.6.29","polarity":-0.10,"label":"instruction","confidence":0.80,"notes":"tornad, no haya iniquidad"}
+{"verse_id":"JOB.6.30","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"¿hay iniquidad en mi lengua?"}
+{"verse_id":"JOB.7.1","polarity":-0.50,"label":"despair","confidence":0.85,"notes":"tiempo limitado, días como jornalero"}
+{"verse_id":"JOB.7.2","polarity":-0.45,"label":"despair","confidence":0.82,"notes":"como siervo anhela sombra"}
+{"verse_id":"JOB.7.3","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"meses de vanidad, noches de trabajo"}
+{"verse_id":"JOB.7.4","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"acostado, ¿cuándo me levantaré? hartado de devaneos"}
+{"verse_id":"JOB.7.5","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"carne vestida de gusanos, piel hendida"}
+{"verse_id":"JOB.7.6","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"días más ligeros que lanzadera, sin esperanza"}
+{"verse_id":"JOB.7.7","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"vida es viento, ojos no verán bien"}
+{"verse_id":"JOB.7.8","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"tus ojos sobre mí, dejaré de ser"}
+{"verse_id":"JOB.7.9","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"nube se consume, sepulcro no sube"}
+{"verse_id":"JOB.7.10","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"no tornará a su casa"}
+{"verse_id":"JOB.7.11","polarity":-0.75,"label":"lament","confidence":0.90,"notes":"no reprimiré, hablaré en angustia"}
+{"verse_id":"JOB.7.12","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"¿soy mar o ballena que pongas guarda?"}
+{"verse_id":"JOB.7.13","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"cama me consolará, atenuará quejas"}
+{"verse_id":"JOB.7.14","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"me quebrantarás con sueños, visiones"}
+{"verse_id":"JOB.7.15","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"alma prefirió ahogamiento, muerte"}
+{"verse_id":"JOB.7.16","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"aburríme, no viviré para siempre"}
+{"verse_id":"JOB.7.17","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"¿qué es el hombre para que lo engrandezcas?"}
+{"verse_id":"JOB.7.18","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"lo visites todas las mañanas"}
+{"verse_id":"JOB.7.19","polarity":-0.65,"label":"lament","confidence":0.85,"notes":"¿hasta cuándo no me dejarás?"}
+{"verse_id":"JOB.7.20","polarity":-0.65,"label":"confession","confidence":0.85,"notes":"pequé, ¿qué te haré, Guarda de hombres?"}
+{"verse_id":"JOB.7.21","polarity":-0.65,"label":"confession","confidence":0.85,"notes":"¿por qué no quitas mi rebelión?"}
+{"verse_id":"JOB.8.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"Bildad responde"}
+{"verse_id":"JOB.8.2","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"¿hasta cuándo hablarás tales cosas?"}
+{"verse_id":"JOB.8.3","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"¿pervertirá Dios el derecho?"}
+{"verse_id":"JOB.8.4","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"si tus hijos pecaron, los echó"}
+{"verse_id":"JOB.8.5","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"si buscares a Dios"}
+{"verse_id":"JOB.8.6","polarity":0.55,"label":"hope","confidence":0.85,"notes":"si limpio y derecho, despertará"}
+{"verse_id":"JOB.8.7","polarity":0.55,"label":"hope","confidence":0.85,"notes":"principio pequeño, postrimería grande"}
+{"verse_id":"JOB.8.8","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"pregunta a la edad pasada"}
+{"verse_id":"JOB.8.9","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"somos de ayer, días son sombra"}
+{"verse_id":"JOB.8.10","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"¿no te enseñarán?"}
+{"verse_id":"JOB.8.11","polarity":-0.10,"label":"instruction","confidence":0.80,"notes":"¿crece junco sin lodo?"}
+{"verse_id":"JOB.8.12","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"en su verdor secará"}
+{"verse_id":"JOB.8.13","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"esperanza del impío perecerá"}
+{"verse_id":"JOB.8.14","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"esperanza cortada, casa de araña"}
+{"verse_id":"JOB.8.15","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"se apoyará y no permanecerá"}
+{"verse_id":"JOB.8.16","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"verde delante del sol"}
+{"verse_id":"JOB.8.17","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"raíces se entretejen"}
+{"verse_id":"JOB.8.18","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"si arrancado, negará: nunca te vi"}
+{"verse_id":"JOB.8.19","polarity":-0.30,"label":"narrative","confidence":0.78,"notes":"este es el gozo de su camino"}
+{"verse_id":"JOB.8.20","polarity":0.55,"label":"hope","confidence":0.85,"notes":"Dios no aborrece al perfecto"}
+{"verse_id":"JOB.8.21","polarity":0.65,"label":"hope","confidence":0.88,"notes":"henchirá tu boca de risa"}
+{"verse_id":"JOB.8.22","polarity":0.30,"label":"hope","confidence":0.82,"notes":"aborrecedores de confusión, impíos perecerán"}
+{"verse_id":"JOB.9.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"Job responde"}
+{"verse_id":"JOB.9.2","polarity":-0.30,"label":"confession","confidence":0.82,"notes":"¿cómo se justificará hombre con Dios?"}
+{"verse_id":"JOB.9.3","polarity":-0.40,"label":"despair","confidence":0.82,"notes":"contender no le respondería una de mil"}
+{"verse_id":"JOB.9.4","polarity":0.30,"label":"awe","confidence":0.82,"notes":"sabio en corazón, poderoso"}
+{"verse_id":"JOB.9.5","polarity":0.20,"label":"awe","confidence":0.82,"notes":"arranca montes con su furor"}
+{"verse_id":"JOB.9.6","polarity":0.20,"label":"awe","confidence":0.82,"notes":"remueve la tierra"}
+{"verse_id":"JOB.9.7","polarity":0.20,"label":"awe","confidence":0.82,"notes":"manda al sol y no sale"}
+{"verse_id":"JOB.9.8","polarity":0.30,"label":"awe","confidence":0.82,"notes":"extiende solo los cielos"}
+{"verse_id":"JOB.9.9","polarity":0.45,"label":"awe","confidence":0.85,"notes":"hizo Arcturo, Orión, Pléyades"}
+{"verse_id":"JOB.9.10","polarity":0.55,"label":"awe","confidence":0.85,"notes":"cosas grandes incomprensibles"}
+{"verse_id":"JOB.9.11","polarity":-0.30,"label":"despair","confidence":0.82,"notes":"pasará y yo no lo veré"}
+{"verse_id":"JOB.9.12","polarity":-0.45,"label":"despair","confidence":0.82,"notes":"arrebatará, ¿quién le dirá qué haces?"}
+{"verse_id":"JOB.9.13","polarity":-0.45,"label":"awe","confidence":0.82,"notes":"Dios no tornará atrás su ira"}
+{"verse_id":"JOB.9.14","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"¿cuánto menos le responderé?"}
+{"verse_id":"JOB.9.15","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"aunque justo no responderé"}
+{"verse_id":"JOB.9.16","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"si invocase no creeré que escuchó"}
+{"verse_id":"JOB.9.17","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"me ha quebrado con tempestad"}
+{"verse_id":"JOB.9.18","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"hartado de amarguras"}
+{"verse_id":"JOB.9.19","polarity":-0.45,"label":"despair","confidence":0.82,"notes":"si potencia, fuerte; si juicio, ¿quién?"}
+{"verse_id":"JOB.9.20","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"si me justificare boca me condenará"}
+{"verse_id":"JOB.9.21","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"aunque íntegro, reprocho mi vida"}
+{"verse_id":"JOB.9.22","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"al perfecto y al impío él consume"}
+{"verse_id":"JOB.9.23","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"ríe de la prueba de inocentes"}
+{"verse_id":"JOB.9.24","polarity":-0.75,"label":"despair","confidence":0.88,"notes":"tierra entregada a impíos"}
+{"verse_id":"JOB.9.25","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"días más ligeros que correo, no vieron bien"}
+{"verse_id":"JOB.9.26","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"como navíos veloces"}
+{"verse_id":"JOB.9.27","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"si digo olvidaré queja"}
+{"verse_id":"JOB.9.28","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"contúrbanme trabajos, no me darás libre"}
+{"verse_id":"JOB.9.29","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"yo soy impío, ¿para qué trabajaré en vano?"}
+{"verse_id":"JOB.9.30","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"aunque me lave con nieve"}
+{"verse_id":"JOB.9.31","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"me hundirás en el hoyo"}
+{"verse_id":"JOB.9.32","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"no es hombre como yo para responder"}
+{"verse_id":"JOB.9.33","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"no hay árbitro entre nosotros"}
+{"verse_id":"JOB.9.34","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"quite su vara"}
+{"verse_id":"JOB.9.35","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"hablaré, pues no estoy en mí mismo"}
+{"verse_id":"JOB.10.1","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"alma aburrida, hablaré con amargura"}
+{"verse_id":"JOB.10.2","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"diré a Dios: hazme entender"}
+{"verse_id":"JOB.10.3","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"¿te parece bien que oprimas?"}
+{"verse_id":"JOB.10.4","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"¿tienes ojos de carne?"}
+{"verse_id":"JOB.10.5","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"¿días tuyos como del hombre?"}
+{"verse_id":"JOB.10.6","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"¿inquieras mi iniquidad?"}
+{"verse_id":"JOB.10.7","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"sabes que no soy impío"}
+{"verse_id":"JOB.10.8","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"manos me formaron, ¿deshaces?"}
+{"verse_id":"JOB.10.9","polarity":-0.65,"label":"lament","confidence":0.88,"notes":"como lodo me diste forma; ¿en polvo tornarás?"}
+{"verse_id":"JOB.10.10","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"como leche fundiste"}
+{"verse_id":"JOB.10.11","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"vestiste de piel y carne"}
+{"verse_id":"JOB.10.12","polarity":0.45,"label":"praise","confidence":0.85,"notes":"vida y misericordia me concediste"}
+{"verse_id":"JOB.10.13","polarity":-0.30,"label":"despair","confidence":0.82,"notes":"esto guardado en tu corazón"}
+{"verse_id":"JOB.10.14","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"si pequé observas, no limpias"}
+{"verse_id":"JOB.10.15","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"si malo, ay; si justo, no levantaré cabeza"}
+{"verse_id":"JOB.10.16","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"me cazas como a león"}
+{"verse_id":"JOB.10.17","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"renuevas plagas, aumentas furor"}
+{"verse_id":"JOB.10.18","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"¿por qué me sacaste de la matriz?"}
+{"verse_id":"JOB.10.19","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"como si nunca hubiera sido"}
+{"verse_id":"JOB.10.20","polarity":-0.65,"label":"lament","confidence":0.88,"notes":"cesa, déjame conforte un poco"}
+{"verse_id":"JOB.10.21","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"tierra de tinieblas y sombra de muerte"}
+{"verse_id":"JOB.10.22","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"tierra de oscuridad, sombra de muerte"}
+{"verse_id":"JOB.11.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"Sophar responde"}
+{"verse_id":"JOB.11.2","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿muchas palabras sin respuesta?"}
+{"verse_id":"JOB.11.3","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"¿harás escarnio sin avergonzarte?"}
+{"verse_id":"JOB.11.4","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"tú dices: mi conversar es puro"}
+{"verse_id":"JOB.11.5","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"oh si Dios hablara contigo"}
+{"verse_id":"JOB.11.6","polarity":-0.45,"label":"warning","confidence":0.85,"notes":"Dios te castigó menos que mereces"}
+{"verse_id":"JOB.11.7","polarity":0.20,"label":"awe","confidence":0.82,"notes":"¿alcanzarás rastro de Dios?"}
+{"verse_id":"JOB.11.8","polarity":0.30,"label":"awe","confidence":0.82,"notes":"más alto que cielos, más profundo que infierno"}
+{"verse_id":"JOB.11.9","polarity":0.30,"label":"awe","confidence":0.82,"notes":"más larga que tierra, más ancha que mar"}
+{"verse_id":"JOB.11.10","polarity":0.10,"label":"awe","confidence":0.80,"notes":"si cortare o juntare, ¿quién se opondrá?"}
+{"verse_id":"JOB.11.11","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"conoce a hombres vanos, ve iniquidad"}
+{"verse_id":"JOB.11.12","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"hombre vano se hará entendido"}
+{"verse_id":"JOB.11.13","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"si apercibieres tu corazón"}
+{"verse_id":"JOB.11.14","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"si iniquidad echares de ti"}
+{"verse_id":"JOB.11.15","polarity":0.55,"label":"hope","confidence":0.85,"notes":"levantarás rostro limpio"}
+{"verse_id":"JOB.11.16","polarity":0.65,"label":"hope","confidence":0.85,"notes":"olvidarás trabajo como aguas que pasaron"}
+{"verse_id":"JOB.11.17","polarity":0.75,"label":"hope","confidence":0.88,"notes":"resplandecerás como mañana"}
+{"verse_id":"JOB.11.18","polarity":0.75,"label":"hope","confidence":0.88,"notes":"confiarás, habrá esperanza"}
+{"verse_id":"JOB.11.19","polarity":0.65,"label":"hope","confidence":0.85,"notes":"acostarás sin espanto, muchos rogarán"}
+{"verse_id":"JOB.11.20","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"ojos de malos se consumirán"}
+{"verse_id":"JOB.12.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"Job responde"}
+{"verse_id":"JOB.12.2","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"sois el pueblo, sabiduría morirá"}
+{"verse_id":"JOB.12.3","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"también tengo seso como vosotros"}
+{"verse_id":"JOB.12.4","polarity":-0.55,"label":"grief","confidence":0.85,"notes":"de quien amigo se mofa, justo escarnecido"}
+{"verse_id":"JOB.12.5","polarity":-0.45,"label":"narrative","confidence":0.82,"notes":"lámpara despreciada de quien está a sus anchuras"}
+{"verse_id":"JOB.12.6","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"prosperan tiendas de ladrones"}
+{"verse_id":"JOB.12.7","polarity":0.10,"label":"instruction","confidence":0.80,"notes":"pregunta a las bestias"}
+{"verse_id":"JOB.12.8","polarity":0.10,"label":"instruction","confidence":0.80,"notes":"habla a la tierra, peces"}
+{"verse_id":"JOB.12.9","polarity":0.30,"label":"awe","confidence":0.82,"notes":"mano de Jehová la hizo"}
+{"verse_id":"JOB.12.10","polarity":0.45,"label":"awe","confidence":0.85,"notes":"en su mano alma de viviente"}
+{"verse_id":"JOB.12.11","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"oído distingue, paladar gusta"}
+{"verse_id":"JOB.12.12","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"en viejos está la ciencia"}
+{"verse_id":"JOB.12.13","polarity":0.55,"label":"praise","confidence":0.85,"notes":"con Dios sabiduría y fortaleza"}
+{"verse_id":"JOB.12.14","polarity":-0.30,"label":"awe","confidence":0.82,"notes":"derribará y no será edificado"}
+{"verse_id":"JOB.12.15","polarity":-0.30,"label":"awe","confidence":0.82,"notes":"detendrá las aguas"}
+{"verse_id":"JOB.12.16","polarity":0.10,"label":"awe","confidence":0.80,"notes":"con él fortaleza y existencia"}
+{"verse_id":"JOB.12.17","polarity":-0.10,"label":"awe","confidence":0.80,"notes":"hace andar consejeros desnudos"}
+{"verse_id":"JOB.12.18","polarity":-0.10,"label":"awe","confidence":0.80,"notes":"suelta atadura de tiranos"}
+{"verse_id":"JOB.12.19","polarity":-0.10,"label":"awe","confidence":0.80,"notes":"lleva despojados a príncipes"}
+{"verse_id":"JOB.12.20","polarity":-0.20,"label":"awe","confidence":0.80,"notes":"impide labio de los que dicen verdad"}
+{"verse_id":"JOB.12.21","polarity":-0.20,"label":"awe","confidence":0.80,"notes":"derrama menosprecio sobre príncipes"}
+{"verse_id":"JOB.12.22","polarity":-0.10,"label":"awe","confidence":0.80,"notes":"descubre profundidades de tinieblas"}
+{"verse_id":"JOB.12.23","polarity":-0.20,"label":"awe","confidence":0.80,"notes":"multiplica las gentes y destruye"}
+{"verse_id":"JOB.12.24","polarity":-0.30,"label":"awe","confidence":0.82,"notes":"quita seso de cabezas del pueblo"}
+{"verse_id":"JOB.12.25","polarity":-0.40,"label":"awe","confidence":0.82,"notes":"van a tientas en tinieblas"}
+{"verse_id":"JOB.13.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"todo esto vieron mis ojos"}
+{"verse_id":"JOB.13.2","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"como vosotros sé, no soy menos"}
+{"verse_id":"JOB.13.3","polarity":-0.20,"label":"lament","confidence":0.80,"notes":"yo hablaría con el Todopoderoso"}
+{"verse_id":"JOB.13.4","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"sois fraguadores de mentira, médicos nulos"}
+{"verse_id":"JOB.13.5","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"ojalá callarais"}
+{"verse_id":"JOB.13.6","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"oíd mi razonamiento"}
+{"verse_id":"JOB.13.7","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿hablar iniquidad por Dios?"}
+{"verse_id":"JOB.13.8","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿hacer acepción de su persona?"}
+{"verse_id":"JOB.13.9","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"¿bueno que él os escudriñase?"}
+{"verse_id":"JOB.13.10","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"os reprochará si solapadamente"}
+{"verse_id":"JOB.13.11","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"su alteza espantaría"}
+{"verse_id":"JOB.13.12","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"memorias serán comparadas a ceniza"}
+{"verse_id":"JOB.13.13","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"escuchadme, hablaré"}
+{"verse_id":"JOB.13.14","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"¿por qué quitaré mi carne?"}
+{"verse_id":"JOB.13.15","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: aunque me matare, en él esperaré"}
+{"verse_id":"JOB.13.16","polarity":0.45,"label":"hope","confidence":0.85,"notes":"él será mi salud"}
+{"verse_id":"JOB.13.17","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"oíd con atención"}
+{"verse_id":"JOB.13.18","polarity":0.30,"label":"hope","confidence":0.82,"notes":"sé que seré justificado"}
+{"verse_id":"JOB.13.19","polarity":-0.40,"label":"despair","confidence":0.82,"notes":"si callara, fenecería"}
+{"verse_id":"JOB.13.20","polarity":-0.30,"label":"lament","confidence":0.82,"notes":"dos cosas no hagas conmigo"}
+{"verse_id":"JOB.13.21","polarity":-0.45,"label":"lament","confidence":0.85,"notes":"aparta tu mano, no me asombre terror"}
+{"verse_id":"JOB.13.22","polarity":-0.30,"label":"lament","confidence":0.82,"notes":"llama y responderé"}
+{"verse_id":"JOB.13.23","polarity":-0.55,"label":"confession","confidence":0.85,"notes":"¿cuántas iniquidades?"}
+{"verse_id":"JOB.13.24","polarity":-0.65,"label":"lament","confidence":0.88,"notes":"¿por qué escondes rostro?"}
+{"verse_id":"JOB.13.25","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"¿hoja arrebatada has de quebrantar?"}
+{"verse_id":"JOB.13.26","polarity":-0.65,"label":"lament","confidence":0.88,"notes":"escribes contra mí amarguras"}
+{"verse_id":"JOB.13.27","polarity":-0.65,"label":"grief","confidence":0.88,"notes":"pones pies en cepo"}
+{"verse_id":"JOB.13.28","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"cuerpo va gastando como carcoma"}
+{"verse_id":"JOB.14.1","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"hombre nacido de mujer, corto de días, harto de sinsabores"}
+{"verse_id":"JOB.14.2","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"sale como flor y es cortado"}
+{"verse_id":"JOB.14.3","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"sobre éste abres tus ojos"}
+{"verse_id":"JOB.14.4","polarity":-0.45,"label":"confession","confidence":0.82,"notes":"¿quién hará limpio de inmundo? Nadie"}
+{"verse_id":"JOB.14.5","polarity":-0.30,"label":"lament","confidence":0.82,"notes":"sus días determinados"}
+{"verse_id":"JOB.14.6","polarity":-0.30,"label":"lament","confidence":0.82,"notes":"déjale, deseará su día"}
+{"verse_id":"JOB.14.7","polarity":0.30,"label":"hope","confidence":0.82,"notes":"árbol cortado, esperanza, retoñecerá"}
+{"verse_id":"JOB.14.8","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"si raíz envejeciere"}
+{"verse_id":"JOB.14.9","polarity":0.30,"label":"hope","confidence":0.82,"notes":"al percibir agua reverdecerá"}
+{"verse_id":"JOB.14.10","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"hombre morirá y será cortado"}
+{"verse_id":"JOB.14.11","polarity":-0.45,"label":"despair","confidence":0.82,"notes":"aguas se fueron, río agotado"}
+{"verse_id":"JOB.14.12","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"hombre yace, no se levantará"}
+{"verse_id":"JOB.14.13","polarity":-0.20,"label":"lament","confidence":0.82,"notes":"oh quién me escondiese en sepulcro"}
+{"verse_id":"JOB.14.14","polarity":0.10,"label":"hope","confidence":0.82,"notes":"si muriere, ¿volverá a vivir? esperaré"}
+{"verse_id":"JOB.14.15","polarity":0.45,"label":"hope","confidence":0.85,"notes":"llamarás y responderé"}
+{"verse_id":"JOB.14.16","polarity":-0.45,"label":"lament","confidence":0.82,"notes":"me cuentas pasos"}
+{"verse_id":"JOB.14.17","polarity":-0.55,"label":"lament","confidence":0.85,"notes":"sellada en saco mi prevaricación"}
+{"verse_id":"JOB.14.18","polarity":-0.45,"label":"despair","confidence":0.82,"notes":"monte que cae se deshace"}
+{"verse_id":"JOB.14.19","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"haces perecer la esperanza del hombre"}
+{"verse_id":"JOB.14.20","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"para siempre más fuerte que él"}
+{"verse_id":"JOB.14.21","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"hijos honrados o humillados, no sabrá"}
+{"verse_id":"JOB.14.22","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"carne sobre él se dolerá, alma se entristecerá"}
+{"verse_id":"JOB.15.1","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"Eliphaz responde"}
+{"verse_id":"JOB.15.2","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"¿proferirá sabio vana sabiduría?"}
+{"verse_id":"JOB.15.3","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"¿disputará con palabras inútiles?"}
+{"verse_id":"JOB.15.4","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"disipas el temor, menoscabas oración"}
+{"verse_id":"JOB.15.5","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"tu boca declaró tu iniquidad"}
+{"verse_id":"JOB.15.6","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"tu boca te condenará"}
+{"verse_id":"JOB.15.7","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿naciste primero que Adam?"}
+{"verse_id":"JOB.15.8","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿oíste secreto de Dios?"}
+{"verse_id":"JOB.15.9","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿qué sabes que no sepamos?"}
+{"verse_id":"JOB.15.10","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"entre nosotros hay cano y viejo"}
+{"verse_id":"JOB.15.11","polarity":-0.30,"label":"warning","confidence":0.82,"notes":"¿en poco las consolaciones de Dios?"}
+{"verse_id":"JOB.15.12","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"¿por qué te enajena tu corazón?"}
+{"verse_id":"JOB.15.13","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"haces frente a Dios"}
+{"verse_id":"JOB.15.14","polarity":-0.45,"label":"confession","confidence":0.82,"notes":"¿qué es el hombre para que sea limpio?"}
+{"verse_id":"JOB.15.15","polarity":-0.45,"label":"awe","confidence":0.82,"notes":"en sus santos no confía"}
+{"verse_id":"JOB.15.16","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"hombre abominable bebe iniquidad como agua"}
+{"verse_id":"JOB.15.17","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"escúchame, te mostraré"}
+{"verse_id":"JOB.15.18","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"sabios contaron de sus padres"}
+{"verse_id":"JOB.15.19","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"a ellos solos fue dada tierra"}
+{"verse_id":"JOB.15.20","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"impío atormentado de dolor"}
+{"verse_id":"JOB.15.21","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"estruendos en sus oídos"}
+{"verse_id":"JOB.15.22","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"no creerá volver de tinieblas"}
+{"verse_id":"JOB.15.23","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"desasosegado a comer"}
+{"verse_id":"JOB.15.24","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"tribulación lo asombra"}
+{"verse_id":"JOB.15.25","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"extendió mano contra Dios"}
+{"verse_id":"JOB.15.26","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"acomete contra cerviz"}
+{"verse_id":"JOB.15.27","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"cubrió rostro con gordura"}
+{"verse_id":"JOB.15.28","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"habitó ciudades asoladas"}
+{"verse_id":"JOB.15.29","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"no enriquecerá ni firme"}
+{"verse_id":"JOB.15.30","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"no escapará de tinieblas, llama secará"}
+{"verse_id":"JOB.15.31","polarity":-0.45,"label":"warning","confidence":0.82,"notes":"no confíe en vanidad"}
+{"verse_id":"JOB.15.32","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"cortado antes de su tiempo"}
+{"verse_id":"JOB.15.33","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"perderá agraz como vid"}
+{"verse_id":"JOB.15.34","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"sociedad de hipócritas asolada"}
+{"verse_id":"JOB.15.35","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"concibieron dolor, parieron iniquidad"}
+{"verse_id": "JOB.16.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job responde"}
+{"verse_id": "JOB.16.2", "polarity": -0.55, "label": "grief", "confidence": 0.85, "notes": "consoladores molestos"}
+{"verse_id": "JOB.16.3", "polarity": -0.45, "label": "narrative", "confidence": 0.82, "notes": "palabras ventosas"}
+{"verse_id": "JOB.16.4", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "yo hablaría como vosotros"}
+{"verse_id": "JOB.16.5", "polarity": 0.3, "label": "love", "confidence": 0.82, "notes": "yo os alentaría"}
+{"verse_id": "JOB.16.6", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "si hablo dolor no cesa"}
+{"verse_id": "JOB.16.7", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "asolado mi compañía"}
+{"verse_id": "JOB.16.8", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "flacura testimonia"}
+{"verse_id": "JOB.16.9", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "furor me destrizó"}
+{"verse_id": "JOB.16.10", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "abrieron boca, hirieron mejillas"}
+{"verse_id": "JOB.16.11", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "Dios entregó al mentiroso"}
+{"verse_id": "JOB.16.12", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "próspero, desmenuzóme"}
+{"verse_id": "JOB.16.13", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "flecheros cercaron, riñones partidos"}
+{"verse_id": "JOB.16.14", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "quebranto sobre quebranto"}
+{"verse_id": "JOB.16.15", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "saco sobre piel, polvo en cabeza"}
+{"verse_id": "JOB.16.16", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "rostro enlodado con lloro"}
+{"verse_id": "JOB.16.17", "polarity": -0.45, "label": "lament", "confidence": 0.85, "notes": "sin iniquidad en mis manos"}
+{"verse_id": "JOB.16.18", "polarity": -0.65, "label": "lament", "confidence": 0.88, "notes": "oh tierra no cubras mi sangre"}
+{"verse_id": "JOB.16.19", "polarity": 0.55, "label": "hope", "confidence": 0.88, "notes": "famous: en cielos está mi testigo"}
+{"verse_id": "JOB.16.20", "polarity": -0.3, "label": "lament", "confidence": 0.82, "notes": "a Dios destilarán mis ojos"}
+{"verse_id": "JOB.16.21", "polarity": -0.3, "label": "lament", "confidence": 0.82, "notes": "ojalá disputar hombre con Dios"}
+{"verse_id": "JOB.16.22", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "camino sin volver"}
+{"verse_id": "JOB.17.1", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "sepulcro aparejado"}
+{"verse_id": "JOB.17.2", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "escarnecedores"}
+{"verse_id": "JOB.17.3", "polarity": -0.45, "label": "lament", "confidence": 0.82, "notes": "dame fianza para litigar"}
+{"verse_id": "JOB.17.4", "polarity": -0.45, "label": "lament", "confidence": 0.82, "notes": "corazón escondido de inteligencia"}
+{"verse_id": "JOB.17.5", "polarity": -0.4, "label": "warning", "confidence": 0.82, "notes": "denuncia lisonjas"}
+{"verse_id": "JOB.17.6", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "parábola de pueblos"}
+{"verse_id": "JOB.17.7", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "ojos oscurecieron de desabrimiento"}
+{"verse_id": "JOB.17.8", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "rectos se maravillarán"}
+{"verse_id": "JOB.17.9", "polarity": 0.3, "label": "hope", "confidence": 0.82, "notes": "justo proseguirá camino"}
+{"verse_id": "JOB.17.10", "polarity": -0.4, "label": "narrative", "confidence": 0.82, "notes": "no hallaré sabio"}
+{"verse_id": "JOB.17.11", "polarity": -0.65, "label": "despair", "confidence": 0.88, "notes": "días pasaron, pensamientos arrancados"}
+{"verse_id": "JOB.17.12", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "noche por día"}
+{"verse_id": "JOB.17.13", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "sepulcro mi casa"}
+{"verse_id": "JOB.17.14", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "a la huesa: padre eres"}
+{"verse_id": "JOB.17.15", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "¿dónde mi esperanza?"}
+{"verse_id": "JOB.17.16", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "a rincones de huesa descenderán"}
+{"verse_id": "JOB.18.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Bildad responde"}
+{"verse_id": "JOB.18.2", "polarity": -0.4, "label": "warning", "confidence": 0.82, "notes": "¿cuándo pondréis fin?"}
+{"verse_id": "JOB.18.3", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "¿somos tenidos por bestias?"}
+{"verse_id": "JOB.18.4", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "despedazas tu alma con furor"}
+{"verse_id": "JOB.18.5", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "luz de impíos será apagada"}
+{"verse_id": "JOB.18.6", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "luz oscurecerá en tienda"}
+{"verse_id": "JOB.18.7", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "pasos acortados"}
+{"verse_id": "JOB.18.8", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "red echada en sus pies"}
+{"verse_id": "JOB.18.9", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "lazo prenderá calcañar"}
+{"verse_id": "JOB.18.10", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "cuerda escondida"}
+{"verse_id": "JOB.18.11", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "asombrarán temores"}
+{"verse_id": "JOB.18.12", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "fuerza hambrienta"}
+{"verse_id": "JOB.18.13", "polarity": -0.75, "label": "judgment", "confidence": 0.9, "notes": "primogénito de la muerte"}
+{"verse_id": "JOB.18.14", "polarity": -0.75, "label": "judgment", "confidence": 0.9, "notes": "rey de espantos"}
+{"verse_id": "JOB.18.15", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "piedra azufre sobre morada"}
+{"verse_id": "JOB.18.16", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "raíces secarán"}
+{"verse_id": "JOB.18.17", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "memoria perecerá"}
+{"verse_id": "JOB.18.18", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "de luz a tinieblas"}
+{"verse_id": "JOB.18.19", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "sin hijo ni nieto"}
+{"verse_id": "JOB.18.20", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "se espantarán los por venir"}
+{"verse_id": "JOB.18.21", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "moradas del impío"}
+{"verse_id": "JOB.19.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job responde"}
+{"verse_id": "JOB.19.2", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "angustiaréis mi alma"}
+{"verse_id": "JOB.19.3", "polarity": -0.55, "label": "grief", "confidence": 0.85, "notes": "diez veces vituperado"}
+{"verse_id": "JOB.19.4", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "si erré, conmigo se quedará"}
+{"verse_id": "JOB.19.5", "polarity": -0.45, "label": "narrative", "confidence": 0.82, "notes": "si os engrandeciereis"}
+{"verse_id": "JOB.19.6", "polarity": -0.65, "label": "despair", "confidence": 0.88, "notes": "Dios trastornado, red sobre mí"}
+{"verse_id": "JOB.19.7", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "clamaré agravio y no oído"}
+{"verse_id": "JOB.19.8", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "cercó camino, tinieblas"}
+{"verse_id": "JOB.19.9", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "despojado de gloria"}
+{"verse_id": "JOB.19.10", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "arruinó por todos lados"}
+{"verse_id": "JOB.19.11", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "inflamó furor"}
+{"verse_id": "JOB.19.12", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "ejércitos asentaron campo"}
+{"verse_id": "JOB.19.13", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "hermanos lejos"}
+{"verse_id": "JOB.19.14", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "parientes detuvieron"}
+{"verse_id": "JOB.19.15", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "moradores me tuvieron por extraño"}
+{"verse_id": "JOB.19.16", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "siervo no respondió"}
+{"verse_id": "JOB.19.17", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "aliento extraño a mujer"}
+{"verse_id": "JOB.19.18", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "muchachos me menospreciaron"}
+{"verse_id": "JOB.19.19", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "confidentes me aborrecieron"}
+{"verse_id": "JOB.19.20", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "piel de dientes"}
+{"verse_id": "JOB.19.21", "polarity": -0.75, "label": "lament", "confidence": 0.9, "notes": "oh amigos, tened compasión"}
+{"verse_id": "JOB.19.22", "polarity": -0.65, "label": "lament", "confidence": 0.88, "notes": "¿por qué me perseguís?"}
+{"verse_id": "JOB.19.23", "polarity": -0.3, "label": "lament", "confidence": 0.82, "notes": "oh que mis palabras escritas"}
+{"verse_id": "JOB.19.24", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "con cincel de hierro"}
+{"verse_id": "JOB.19.25", "polarity": 0.85, "label": "hope", "confidence": 0.95, "notes": "famous: yo sé que mi Redentor vive"}
+{"verse_id": "JOB.19.26", "polarity": 0.85, "label": "hope", "confidence": 0.95, "notes": "famous: en mi carne veré a Dios"}
+{"verse_id": "JOB.19.27", "polarity": 0.85, "label": "hope", "confidence": 0.95, "notes": "famous: mis ojos lo verán"}
+{"verse_id": "JOB.19.28", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "¿por qué lo perseguimos?"}
+{"verse_id": "JOB.19.29", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "temed delante de la espada"}
+{"verse_id": "JOB.20.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Sophar responde"}
+{"verse_id": "JOB.20.2", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "pensamientos hacen responder"}
+{"verse_id": "JOB.20.3", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "reprensión oída"}
+{"verse_id": "JOB.20.4", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "¿no sabes desde antiguo?"}
+{"verse_id": "JOB.20.5", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "alegría de impíos breve"}
+{"verse_id": "JOB.20.6", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "si subiere altivez"}
+{"verse_id": "JOB.20.7", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "con su estiércol perecerá"}
+{"verse_id": "JOB.20.8", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "como sueño volará"}
+{"verse_id": "JOB.20.9", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "ojo no le verá"}
+{"verse_id": "JOB.20.10", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "hijos pobres rogando"}
+{"verse_id": "JOB.20.11", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "sepultados en polvo"}
+{"verse_id": "JOB.20.12", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "si mal endulzó en boca"}
+{"verse_id": "JOB.20.13", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "detenía entre paladar"}
+{"verse_id": "JOB.20.14", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "hiel de áspides"}
+{"verse_id": "JOB.20.15", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "devoró riquezas, vomitará"}
+{"verse_id": "JOB.20.16", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "veneno de áspides"}
+{"verse_id": "JOB.20.17", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "no verá arroyos de miel"}
+{"verse_id": "JOB.20.18", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "restituirá trabajo"}
+{"verse_id": "JOB.20.19", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "quebrantó pobres"}
+{"verse_id": "JOB.20.20", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "no sentirá sosiego"}
+{"verse_id": "JOB.20.21", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "su bien no durable"}
+{"verse_id": "JOB.20.22", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "angustia"}
+{"verse_id": "JOB.20.23", "polarity": -0.75, "label": "judgment", "confidence": 0.9, "notes": "furor de su ira"}
+{"verse_id": "JOB.20.24", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "arco le atraviesa"}
+{"verse_id": "JOB.20.25", "polarity": -0.75, "label": "judgment", "confidence": 0.9, "notes": "saeta por hiel"}
+{"verse_id": "JOB.20.26", "polarity": -0.75, "label": "judgment", "confidence": 0.9, "notes": "fuego no soplado"}
+{"verse_id": "JOB.20.27", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "cielos descubrirán iniquidad"}
+{"verse_id": "JOB.20.28", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "renuevos transportados"}
+{"verse_id": "JOB.20.29", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "parte del impío"}
+{"verse_id": "JOB.21.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job responde"}
+{"verse_id": "JOB.21.2", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "oíd atentamente"}
+{"verse_id": "JOB.21.3", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "soportadme"}
+{"verse_id": "JOB.21.4", "polarity": -0.55, "label": "lament", "confidence": 0.85, "notes": "angustiar mi espíritu"}
+{"verse_id": "JOB.21.5", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "miradme y espantaos"}
+{"verse_id": "JOB.21.6", "polarity": -0.65, "label": "despair", "confidence": 0.88, "notes": "asombro al recordar"}
+{"verse_id": "JOB.21.7", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "¿por qué viven los impíos?"}
+{"verse_id": "JOB.21.8", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "simiente compuesta"}
+{"verse_id": "JOB.21.9", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "casas seguras"}
+{"verse_id": "JOB.21.10", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "vacas conciben no abortan"}
+{"verse_id": "JOB.21.11", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "hijos saltando"}
+{"verse_id": "JOB.21.12", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "al son de tamboril"}
+{"verse_id": "JOB.21.13", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "gastan días en bien"}
+{"verse_id": "JOB.21.14", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "apártate de nosotros"}
+{"verse_id": "JOB.21.15", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "¿quién es Todopoderoso?"}
+{"verse_id": "JOB.21.16", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "consejo de impíos lejos"}
+{"verse_id": "JOB.21.17", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "¿cuántas veces lámpara apagada?"}
+{"verse_id": "JOB.21.18", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "como paja delante del viento"}
+{"verse_id": "JOB.21.19", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "guardará para hijos su violencia"}
+{"verse_id": "JOB.21.20", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "beberán ira"}
+{"verse_id": "JOB.21.21", "polarity": -0.45, "label": "narrative", "confidence": 0.82, "notes": "¿qué deleite de su casa?"}
+{"verse_id": "JOB.21.22", "polarity": -0.1, "label": "awe", "confidence": 0.8, "notes": "¿enseñará a Dios sabiduría?"}
+{"verse_id": "JOB.21.23", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "este morirá en vigor"}
+{"verse_id": "JOB.21.24", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "colodras llenas de leche"}
+{"verse_id": "JOB.21.25", "polarity": -0.65, "label": "despair", "confidence": 0.88, "notes": "otro morirá en amargura"}
+{"verse_id": "JOB.21.26", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "yacerán en polvo"}
+{"verse_id": "JOB.21.27", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "conozco vuestros pensamientos"}
+{"verse_id": "JOB.21.28", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "¿qué de casa del príncipe?"}
+{"verse_id": "JOB.21.29", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "¿no preguntasteis a los que pasan?"}
+{"verse_id": "JOB.21.30", "polarity": -0.45, "label": "narrative", "confidence": 0.82, "notes": "malo reservado para destrucción"}
+{"verse_id": "JOB.21.31", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "¿quién le denunciará?"}
+{"verse_id": "JOB.21.32", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "llevado a sepulcros"}
+{"verse_id": "JOB.21.33", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "terrones del valle dulces"}
+{"verse_id": "JOB.21.34", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "¿cómo me consoláis en vano?"}
+{"verse_id": "JOB.22.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Eliphaz responde"}
+{"verse_id": "JOB.22.2", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "¿traerá hombre provecho a Dios?"}
+{"verse_id": "JOB.22.3", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "¿tiene Omnipotente contentamiento?"}
+{"verse_id": "JOB.22.4", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "¿castigaráte porque te teme?"}
+{"verse_id": "JOB.22.5", "polarity": -0.65, "label": "warning", "confidence": 0.88, "notes": "tu malicia es grande"}
+{"verse_id": "JOB.22.6", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "sacaste prenda a hermanos"}
+{"verse_id": "JOB.22.7", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "no diste agua al cansado"}
+{"verse_id": "JOB.22.8", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "hombre pudiente tuvo tierra"}
+{"verse_id": "JOB.22.9", "polarity": -0.65, "label": "warning", "confidence": 0.88, "notes": "viudas vacías"}
+{"verse_id": "JOB.22.10", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "lazos alrededor"}
+{"verse_id": "JOB.22.11", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "tinieblas, abundancia de agua"}
+{"verse_id": "JOB.22.12", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿no está Dios en altura?"}
+{"verse_id": "JOB.22.13", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "¿qué sabe Dios?"}
+{"verse_id": "JOB.22.14", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "nubes son su escondedero"}
+{"verse_id": "JOB.22.15", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "¿senda antigua de perversos?"}
+{"verse_id": "JOB.22.16", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "cortados antes de tiempo"}
+{"verse_id": "JOB.22.17", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "decían: apártate"}
+{"verse_id": "JOB.22.18", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "casas llenas de bienes"}
+{"verse_id": "JOB.22.19", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "justos verán y se gozarán"}
+{"verse_id": "JOB.22.20", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "sustancia cortada, fuego consume"}
+{"verse_id": "JOB.22.21", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "amístate con él, paz"}
+{"verse_id": "JOB.22.22", "polarity": 0.55, "label": "instruction", "confidence": 0.85, "notes": "toma ley de su boca"}
+{"verse_id": "JOB.22.23", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "si te tornares serás edificado"}
+{"verse_id": "JOB.22.24", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "más oro que tierra"}
+{"verse_id": "JOB.22.25", "polarity": 0.65, "label": "hope", "confidence": 0.88, "notes": "Todopoderoso será defensa"}
+{"verse_id": "JOB.22.26", "polarity": 0.75, "label": "hope", "confidence": 0.88, "notes": "te deleitarás en Omnipotente"}
+{"verse_id": "JOB.22.27", "polarity": 0.65, "label": "hope", "confidence": 0.88, "notes": "orarás y te oirá"}
+{"verse_id": "JOB.22.28", "polarity": 0.65, "label": "hope", "confidence": 0.88, "notes": "resplandecerá luz"}
+{"verse_id": "JOB.22.29", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "Dios salvará al humilde"}
+{"verse_id": "JOB.22.30", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "librará isla del inocente"}
+{"verse_id": "JOB.23.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job responde"}
+{"verse_id": "JOB.23.2", "polarity": -0.75, "label": "despair", "confidence": 0.9, "notes": "hablaré con amargura"}
+{"verse_id": "JOB.23.3", "polarity": -0.45, "label": "lament", "confidence": 0.85, "notes": "oh quién me diera hallar a Dios"}
+{"verse_id": "JOB.23.4", "polarity": -0.3, "label": "lament", "confidence": 0.82, "notes": "ordenaría juicio"}
+{"verse_id": "JOB.23.5", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "sabría lo que respondería"}
+{"verse_id": "JOB.23.6", "polarity": 0.1, "label": "hope", "confidence": 0.8, "notes": "no pleitearía con grandeza"}
+{"verse_id": "JOB.23.7", "polarity": 0.3, "label": "hope", "confidence": 0.82, "notes": "justo razonaría con él"}
+{"verse_id": "JOB.23.8", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "al oriente y no lo hallaré"}
+{"verse_id": "JOB.23.9", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "al norte no lo veré"}
+{"verse_id": "JOB.23.10", "polarity": 0.55, "label": "hope", "confidence": 0.92, "notes": "famous: probaráme y saldré como oro"}
+{"verse_id": "JOB.23.11", "polarity": 0.45, "label": "hope", "confidence": 0.85, "notes": "mis pies tomaron rastro"}
+{"verse_id": "JOB.23.12", "polarity": 0.55, "label": "hope", "confidence": 0.88, "notes": "guardé palabras más que comida"}
+{"verse_id": "JOB.23.13", "polarity": -0.3, "label": "awe", "confidence": 0.82, "notes": "si determina ¿quién apartará?"}
+{"verse_id": "JOB.23.14", "polarity": -0.3, "label": "awe", "confidence": 0.82, "notes": "acabará lo determinado de mí"}
+{"verse_id": "JOB.23.15", "polarity": -0.55, "label": "awe", "confidence": 0.85, "notes": "me espanto en su presencia"}
+{"verse_id": "JOB.23.16", "polarity": -0.65, "label": "despair", "confidence": 0.88, "notes": "Dios enervó mi corazón"}
+{"verse_id": "JOB.23.17", "polarity": -0.75, "label": "despair", "confidence": 0.9, "notes": "¿por qué no fui cortado?"}
+{"verse_id": "JOB.24.1", "polarity": -0.55, "label": "despair", "confidence": 0.85, "notes": "¿por qué no ven sus días?"}
+{"verse_id": "JOB.24.2", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "traspasan términos"}
+{"verse_id": "JOB.24.3", "polarity": -0.65, "label": "warning", "confidence": 0.88, "notes": "asno de huérfanos, buey de viuda"}
+{"verse_id": "JOB.24.4", "polarity": -0.65, "label": "warning", "confidence": 0.88, "notes": "apartar a menesterosos"}
+{"verse_id": "JOB.24.5", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "como asnos monteses"}
+{"verse_id": "JOB.24.6", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "siegan pasto, vendimian viña ajena"}
+{"verse_id": "JOB.24.7", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "al desnudo sin ropa"}
+{"verse_id": "JOB.24.8", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "se mojan con avenidas"}
+{"verse_id": "JOB.24.9", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "quitan pecho a huérfanos"}
+{"verse_id": "JOB.24.10", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "al desnudo sin vestido"}
+{"verse_id": "JOB.24.11", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "exprimen aceite, mueren de sed"}
+{"verse_id": "JOB.24.12", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "gimen hombres, Dios no puso estorbo"}
+{"verse_id": "JOB.24.13", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "rebeldes a la luz"}
+{"verse_id": "JOB.24.14", "polarity": -0.65, "label": "warning", "confidence": 0.88, "notes": "matador de noche"}
+{"verse_id": "JOB.24.15", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "adúltero aguarda noche"}
+{"verse_id": "JOB.24.16", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "en tinieblas minan casas"}
+{"verse_id": "JOB.24.17", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "mañana como sombra de muerte"}
+{"verse_id": "JOB.24.18", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "instables más que aguas"}
+{"verse_id": "JOB.24.19", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "sequía arrebata"}
+{"verse_id": "JOB.24.20", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "olvidará seno materno"}
+{"verse_id": "JOB.24.21", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "a estéril afligió"}
+{"verse_id": "JOB.24.22", "polarity": -0.45, "label": "narrative", "confidence": 0.82, "notes": "a fuertes adelantó"}
+{"verse_id": "JOB.24.23", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "le dieron a crédito"}
+{"verse_id": "JOB.24.24", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "ensalzados un poco"}
+{"verse_id": "JOB.24.25", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "si no, ¿quién me desmentirá?"}
+{"verse_id": "JOB.25.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Bildad responde"}
+{"verse_id": "JOB.25.2", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "señorío y temor con él"}
+{"verse_id": "JOB.25.3", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿ejércitos número?"}
+{"verse_id": "JOB.25.4", "polarity": -0.3, "label": "confession", "confidence": 0.82, "notes": "¿cómo se justificará hombre con Dios?"}
+{"verse_id": "JOB.25.5", "polarity": -0.1, "label": "awe", "confidence": 0.8, "notes": "luna no resplandeciente"}
+{"verse_id": "JOB.25.6", "polarity": -0.45, "label": "confession", "confidence": 0.82, "notes": "hombre gusano"}
+{"verse_id": "JOB.26.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job responde"}
+{"verse_id": "JOB.26.2", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "¿en qué ayudaste?"}
+{"verse_id": "JOB.26.3", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "¿en qué aconsejaste?"}
+{"verse_id": "JOB.26.4", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "¿a quién has anunciado?"}
+{"verse_id": "JOB.26.5", "polarity": -0.2, "label": "awe", "confidence": 0.8, "notes": "cosas inanimadas formadas"}
+{"verse_id": "JOB.26.6", "polarity": -0.1, "label": "awe", "confidence": 0.8, "notes": "sepulcro descubierto"}
+{"verse_id": "JOB.26.7", "polarity": 0.55, "label": "awe", "confidence": 0.88, "notes": "famous: cuelga la tierra sobre nada"}
+{"verse_id": "JOB.26.8", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "ata aguas en nubes"}
+{"verse_id": "JOB.26.9", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "restriñe faz de su trono"}
+{"verse_id": "JOB.26.10", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "cercó con término aguas"}
+{"verse_id": "JOB.26.11", "polarity": 0.2, "label": "awe", "confidence": 0.82, "notes": "columnas del cielo tiemblan"}
+{"verse_id": "JOB.26.12", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "rompe la mar con poder"}
+{"verse_id": "JOB.26.13", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "espíritu adornó cielos"}
+{"verse_id": "JOB.26.14", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "qué poco oímos"}
+{"verse_id": "JOB.27.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job reasume"}
+{"verse_id": "JOB.27.2", "polarity": -0.55, "label": "lament", "confidence": 0.85, "notes": "vive Dios, apartó mi causa"}
+{"verse_id": "JOB.27.3", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "todo el tiempo que mi alma esté"}
+{"verse_id": "JOB.27.4", "polarity": 0.3, "label": "praise", "confidence": 0.82, "notes": "labios no hablarán iniquidad"}
+{"verse_id": "JOB.27.5", "polarity": 0.45, "label": "confidence", "confidence": 0.85, "notes": "hasta morir no quitaré integridad"}
+{"verse_id": "JOB.27.6", "polarity": 0.45, "label": "confidence", "confidence": 0.85, "notes": "mi justicia tengo asida"}
+{"verse_id": "JOB.27.7", "polarity": -0.3, "label": "imprecation", "confidence": 0.82, "notes": "sea como impío mi enemigo"}
+{"verse_id": "JOB.27.8", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "esperanza del hipócrita"}
+{"verse_id": "JOB.27.9", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "¿oirá Dios su clamor?"}
+{"verse_id": "JOB.27.10", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "¿deleitaráse en Omnipotente?"}
+{"verse_id": "JOB.27.11", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "yo os enseñaré la mano de Dios"}
+{"verse_id": "JOB.27.12", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "todos lo habéis visto"}
+{"verse_id": "JOB.27.13", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "suerte del impío"}
+{"verse_id": "JOB.27.14", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "hijos para el cuchillo"}
+{"verse_id": "JOB.27.15", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "sepultados en muerte"}
+{"verse_id": "JOB.27.16", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "si amontonare plata como polvo"}
+{"verse_id": "JOB.27.17", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "justo se vestirá"}
+{"verse_id": "JOB.27.18", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "casa como polilla"}
+{"verse_id": "JOB.27.19", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "rico no será recogido"}
+{"verse_id": "JOB.27.20", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "terrores como aguas"}
+{"verse_id": "JOB.27.21", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "solano lo arrebatará"}
+{"verse_id": "JOB.27.22", "polarity": -0.65, "label": "judgment", "confidence": 0.88, "notes": "Dios descargará, no perdonará"}
+{"verse_id": "JOB.27.23", "polarity": -0.55, "label": "judgment", "confidence": 0.85, "notes": "batirán manos, silbarán"}
+{"verse_id": "JOB.28.1", "polarity": 0.3, "label": "narrative", "confidence": 0.85, "notes": "plata tiene veneros"}
+{"verse_id": "JOB.28.2", "polarity": 0.3, "label": "narrative", "confidence": 0.85, "notes": "hierro del polvo"}
+{"verse_id": "JOB.28.3", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "a tinieblas puso término"}
+{"verse_id": "JOB.28.4", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "brota torrente"}
+{"verse_id": "JOB.28.5", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "de tierra nace pan"}
+{"verse_id": "JOB.28.6", "polarity": 0.45, "label": "narrative", "confidence": 0.85, "notes": "piedras zafiro"}
+{"verse_id": "JOB.28.7", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "senda no conoció ave"}
+{"verse_id": "JOB.28.8", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "ni león pasó"}
+{"verse_id": "JOB.28.9", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "en pedernal puso mano"}
+{"verse_id": "JOB.28.10", "polarity": 0.45, "label": "narrative", "confidence": 0.85, "notes": "de peñascos cortó ríos"}
+{"verse_id": "JOB.28.11", "polarity": 0.45, "label": "narrative", "confidence": 0.85, "notes": "sacó a luz lo escondido"}
+{"verse_id": "JOB.28.12", "polarity": 0.55, "label": "awe", "confidence": 0.92, "notes": "famous: ¿dónde se hallará la sabiduría?"}
+{"verse_id": "JOB.28.13", "polarity": -0.1, "label": "awe", "confidence": 0.82, "notes": "no conoce su valor el hombre"}
+{"verse_id": "JOB.28.14", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "abismo: no está en mí"}
+{"verse_id": "JOB.28.15", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "no se dará por oro"}
+{"verse_id": "JOB.28.16", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "no apreciada con oro de Ophir"}
+{"verse_id": "JOB.28.17", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "oro no se le igualará"}
+{"verse_id": "JOB.28.18", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "sabiduría mejor que piedras"}
+{"verse_id": "JOB.28.19", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "esmeralda no se igualará"}
+{"verse_id": "JOB.28.20", "polarity": 0.55, "label": "awe", "confidence": 0.92, "notes": "famous: ¿de dónde vendrá la sabiduría?"}
+{"verse_id": "JOB.28.21", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "encubierta a viviente"}
+{"verse_id": "JOB.28.22", "polarity": 0.2, "label": "awe", "confidence": 0.82, "notes": "infierno y muerte: fama oímos"}
+{"verse_id": "JOB.28.23", "polarity": 0.65, "label": "awe", "confidence": 0.92, "notes": "famous: Dios entiende su camino"}
+{"verse_id": "JOB.28.24", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "él mira hasta los fines"}
+{"verse_id": "JOB.28.25", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "da peso al viento"}
+{"verse_id": "JOB.28.26", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "hizo ley a la lluvia"}
+{"verse_id": "JOB.28.27", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "la veía y manifestaba"}
+{"verse_id": "JOB.28.28", "polarity": 0.85, "label": "praise", "confidence": 0.95, "notes": "famous: temor del Señor es la sabiduría"}
+{"verse_id": "JOB.29.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job vuelve"}
+{"verse_id": "JOB.29.2", "polarity": 0.45, "label": "hope", "confidence": 0.85, "notes": "oh quién me tornase como en meses pasados"}
+{"verse_id": "JOB.29.3", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "resplandecía su candela"}
+{"verse_id": "JOB.29.4", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "secreto de Dios en tienda"}
+{"verse_id": "JOB.29.5", "polarity": 0.65, "label": "love", "confidence": 0.88, "notes": "hijos alrededor de mí"}
+{"verse_id": "JOB.29.6", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "ríos de aceite"}
+{"verse_id": "JOB.29.7", "polarity": 0.45, "label": "narrative", "confidence": 0.82, "notes": "salía a la puerta a juicio"}
+{"verse_id": "JOB.29.8", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "viejos se levantaban"}
+{"verse_id": "JOB.29.9", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "príncipes detenían palabras"}
+{"verse_id": "JOB.29.10", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "voz de principales se ocultaba"}
+{"verse_id": "JOB.29.11", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "oídos llamaban bienaventurado"}
+{"verse_id": "JOB.29.12", "polarity": 0.65, "label": "love", "confidence": 0.88, "notes": "libraba al pobre, al huérfano"}
+{"verse_id": "JOB.29.13", "polarity": 0.65, "label": "love", "confidence": 0.88, "notes": "viuda alegría"}
+{"verse_id": "JOB.29.14", "polarity": 0.65, "label": "praise", "confidence": 0.88, "notes": "vestíame de justicia"}
+{"verse_id": "JOB.29.15", "polarity": 0.65, "label": "love", "confidence": 0.88, "notes": "ojos al ciego, pies al cojo"}
+{"verse_id": "JOB.29.16", "polarity": 0.65, "label": "love", "confidence": 0.88, "notes": "a menesterosos era padre"}
+{"verse_id": "JOB.29.17", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "quebraba colmillos del inicuo"}
+{"verse_id": "JOB.29.18", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "en mi nido moriré"}
+{"verse_id": "JOB.29.19", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "raíz junto a aguas"}
+{"verse_id": "JOB.29.20", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "honra renovada"}
+{"verse_id": "JOB.29.21", "polarity": 0.45, "label": "narrative", "confidence": 0.82, "notes": "oíanme y esperaban"}
+{"verse_id": "JOB.29.22", "polarity": 0.45, "label": "narrative", "confidence": 0.82, "notes": "no replicaban tras mi palabra"}
+{"verse_id": "JOB.29.23", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "esperábanme como lluvia"}
+{"verse_id": "JOB.29.24", "polarity": 0.45, "label": "narrative", "confidence": 0.82, "notes": "si me reía no lo creían"}
+{"verse_id": "JOB.29.25", "polarity": 0.65, "label": "praise", "confidence": 0.85, "notes": "como rey en el ejército"}
+{"verse_id": "JOB.30.1", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "se ríen de mí más mozos"}
+{"verse_id": "JOB.30.2", "polarity": -0.45, "label": "grief", "confidence": 0.82, "notes": "¿para qué fuerza de manos?"}
+{"verse_id": "JOB.30.3", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "pobreza y hambre"}
+{"verse_id": "JOB.30.4", "polarity": -0.55, "label": "grief", "confidence": 0.85, "notes": "cogían malvas"}
+{"verse_id": "JOB.30.5", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "echados de las gentes"}
+{"verse_id": "JOB.30.6", "polarity": -0.55, "label": "grief", "confidence": 0.85, "notes": "habitaban en barrancas"}
+{"verse_id": "JOB.30.7", "polarity": -0.55, "label": "grief", "confidence": 0.85, "notes": "bramaban entre matas"}
+{"verse_id": "JOB.30.8", "polarity": -0.65, "label": "grief", "confidence": 0.88, "notes": "hijos de viles"}
+{"verse_id": "JOB.30.9", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "yo soy su canción"}
+{"verse_id": "JOB.30.10", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "abomínanme"}
+{"verse_id": "JOB.30.11", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "Dios desató cuerda"}
+{"verse_id": "JOB.30.12", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "jóvenes empujaron pies"}
+{"verse_id": "JOB.30.13", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "desbarataron mi senda"}
+{"verse_id": "JOB.30.14", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "vinieron por portillo ancho"}
+{"verse_id": "JOB.30.15", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "salud pasó como nube"}
+{"verse_id": "JOB.30.16", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "alma derramada"}
+{"verse_id": "JOB.30.17", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "de noche taladra huesos"}
+{"verse_id": "JOB.30.18", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "vestidura demudada"}
+{"verse_id": "JOB.30.19", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "derribóme en lodo"}
+{"verse_id": "JOB.30.20", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "clamo y no me oyes"}
+{"verse_id": "JOB.30.21", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "haste tornado cruel"}
+{"verse_id": "JOB.30.22", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "cabalgar sobre viento"}
+{"verse_id": "JOB.30.23", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "me reduces a la muerte"}
+{"verse_id": "JOB.30.24", "polarity": -0.55, "label": "lament", "confidence": 0.85, "notes": "no extenderá mano contra sepulcro"}
+{"verse_id": "JOB.30.25", "polarity": -0.45, "label": "lament", "confidence": 0.85, "notes": "¿no lloré yo al afligido?"}
+{"verse_id": "JOB.30.26", "polarity": -0.85, "label": "despair", "confidence": 0.92, "notes": "esperaba bien, vino mal"}
+{"verse_id": "JOB.30.27", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "entrañas hierven"}
+{"verse_id": "JOB.30.28", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "denegrido ando"}
+{"verse_id": "JOB.30.29", "polarity": -0.75, "label": "grief", "confidence": 0.9, "notes": "hermano de dragones"}
+{"verse_id": "JOB.30.30", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "piel denegrida"}
+{"verse_id": "JOB.30.31", "polarity": -0.85, "label": "grief", "confidence": 0.92, "notes": "arpa en luto"}
+{"verse_id": "JOB.31.1", "polarity": 0.3, "label": "confidence", "confidence": 0.85, "notes": "hice pacto con mis ojos"}
+{"verse_id": "JOB.31.2", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "¿qué galardón de Dios?"}
+{"verse_id": "JOB.31.3", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "quebrantamiento para impío"}
+{"verse_id": "JOB.31.4", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿no ve mis caminos?"}
+{"verse_id": "JOB.31.5", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si anduve con mentira"}
+{"verse_id": "JOB.31.6", "polarity": 0.55, "label": "confidence", "confidence": 0.85, "notes": "pésame Dios en balanzas"}
+{"verse_id": "JOB.31.7", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si pasos se apartaron"}
+{"verse_id": "JOB.31.8", "polarity": -0.3, "label": "imprecation", "confidence": 0.82, "notes": "siembre y otro coma"}
+{"verse_id": "JOB.31.9", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si engañado por mujer"}
+{"verse_id": "JOB.31.10", "polarity": -0.45, "label": "imprecation", "confidence": 0.82, "notes": "muela mi mujer para otro"}
+{"verse_id": "JOB.31.11", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "es maldad e iniquidad"}
+{"verse_id": "JOB.31.12", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "fuego que devora"}
+{"verse_id": "JOB.31.13", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si tuve en poco derecho de siervo"}
+{"verse_id": "JOB.31.14", "polarity": -0.3, "label": "awe", "confidence": 0.82, "notes": "¿qué haría cuando Dios visite?"}
+{"verse_id": "JOB.31.15", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "el que en vientre me hizo, también a él"}
+{"verse_id": "JOB.31.16", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si estorbé contento de pobres"}
+{"verse_id": "JOB.31.17", "polarity": 0.3, "label": "love", "confidence": 0.82, "notes": "si comí bocado solo"}
+{"verse_id": "JOB.31.18", "polarity": 0.55, "label": "love", "confidence": 0.85, "notes": "desde mocedad creció como con padre"}
+{"verse_id": "JOB.31.19", "polarity": 0.3, "label": "love", "confidence": 0.82, "notes": "si vi perecer sin vestido"}
+{"verse_id": "JOB.31.20", "polarity": 0.45, "label": "love", "confidence": 0.85, "notes": "si no me bendijeron sus lomos"}
+{"verse_id": "JOB.31.21", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si alcé mano contra huérfano"}
+{"verse_id": "JOB.31.22", "polarity": -0.3, "label": "imprecation", "confidence": 0.82, "notes": "espalda caiga del hombro"}
+{"verse_id": "JOB.31.23", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "temí castigo de Dios"}
+{"verse_id": "JOB.31.24", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si puse en oro mi esperanza"}
+{"verse_id": "JOB.31.25", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "si me alegré de hacienda"}
+{"verse_id": "JOB.31.26", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "si miré al sol"}
+{"verse_id": "JOB.31.27", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "si corazón engañó secreto"}
+{"verse_id": "JOB.31.28", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "esto fuera maldad juzgada"}
+{"verse_id": "JOB.31.29", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si me alegré en quebrantamiento"}
+{"verse_id": "JOB.31.30", "polarity": 0.3, "label": "praise", "confidence": 0.82, "notes": "no entregué al pecado paladar"}
+{"verse_id": "JOB.31.31", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "domésticos hambrientos"}
+{"verse_id": "JOB.31.32", "polarity": 0.55, "label": "love", "confidence": 0.85, "notes": "extranjero no fuera, puertas abría"}
+{"verse_id": "JOB.31.33", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si encubrí prevaricaciones"}
+{"verse_id": "JOB.31.34", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "quebranté gran multitud"}
+{"verse_id": "JOB.31.35", "polarity": -0.3, "label": "lament", "confidence": 0.82, "notes": "oh quién me oyese"}
+{"verse_id": "JOB.31.36", "polarity": 0.3, "label": "confidence", "confidence": 0.82, "notes": "lo llevaría sobre mi hombro"}
+{"verse_id": "JOB.31.37", "polarity": 0.45, "label": "confidence", "confidence": 0.85, "notes": "como príncipe me llegaría"}
+{"verse_id": "JOB.31.38", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si mi tierra clama"}
+{"verse_id": "JOB.31.39", "polarity": 0.2, "label": "confidence", "confidence": 0.82, "notes": "si comí su sustancia"}
+{"verse_id": "JOB.31.40", "polarity": -0.3, "label": "imprecation", "confidence": 0.82, "notes": "abrojos en lugar de trigo"}
+{"verse_id": "JOB.32.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "cesaron tres varones de responder"}
+{"verse_id": "JOB.32.2", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "Eliú se enojó con furor"}
+{"verse_id": "JOB.32.3", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "enojo contra tres amigos también"}
+{"verse_id": "JOB.32.4", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "Eliú había esperado"}
+{"verse_id": "JOB.32.5", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "viendo no había respuesta"}
+{"verse_id": "JOB.32.6", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "yo soy menor de días"}
+{"verse_id": "JOB.32.7", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "días hablarán, años declararán sabiduría"}
+{"verse_id": "JOB.32.8", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "espíritu hay en hombre, inspiración del Omnipotente"}
+{"verse_id": "JOB.32.9", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "no los grandes son sabios"}
+{"verse_id": "JOB.32.10", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "escuchadme, declararé sabiduría"}
+{"verse_id": "JOB.32.11", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "esperé vuestras razones"}
+{"verse_id": "JOB.32.12", "polarity": -0.1, "label": "narrative", "confidence": 0.8, "notes": "no hay quien redarguya a Job"}
+{"verse_id": "JOB.32.13", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "hemos hallado sabiduría"}
+{"verse_id": "JOB.32.14", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "Job no enderezó a mí"}
+{"verse_id": "JOB.32.15", "polarity": -0.1, "label": "narrative", "confidence": 0.8, "notes": "se espantaron"}
+{"verse_id": "JOB.32.16", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "no respondieron más"}
+{"verse_id": "JOB.32.17", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "yo también responderé"}
+{"verse_id": "JOB.32.18", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "lleno de palabras"}
+{"verse_id": "JOB.32.19", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "vientre como vino sin respiradero"}
+{"verse_id": "JOB.32.20", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "hablaré y respiraré"}
+{"verse_id": "JOB.32.21", "polarity": 0.3, "label": "confidence", "confidence": 0.82, "notes": "no acepción de personas"}
+{"verse_id": "JOB.32.22", "polarity": 0.3, "label": "confidence", "confidence": 0.82, "notes": "no sé hablar lisonjas"}
+{"verse_id": "JOB.33.1", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "oye mis razones, Job"}
+{"verse_id": "JOB.33.2", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "abriré mi boca"}
+{"verse_id": "JOB.33.3", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "rectitud de mi corazón"}
+{"verse_id": "JOB.33.4", "polarity": 0.65, "label": "praise", "confidence": 0.88, "notes": "Espíritu de Dios me hizo"}
+{"verse_id": "JOB.33.5", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "si pudieres respóndeme"}
+{"verse_id": "JOB.33.6", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "de lodo soy formado"}
+{"verse_id": "JOB.33.7", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "mi terror no te espantará"}
+{"verse_id": "JOB.33.8", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "oí voz de tus palabras"}
+{"verse_id": "JOB.33.9", "polarity": -0.1, "label": "narrative", "confidence": 0.8, "notes": "yo soy limpio sin defecto"}
+{"verse_id": "JOB.33.10", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "buscó achaques contra mí"}
+{"verse_id": "JOB.33.11", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "puso pies en el cepo"}
+{"verse_id": "JOB.33.12", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "mayor es Dios que el hombre"}
+{"verse_id": "JOB.33.13", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "él no da cuenta"}
+{"verse_id": "JOB.33.14", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "Dios habla"}
+{"verse_id": "JOB.33.15", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "sueño de visión nocturna"}
+{"verse_id": "JOB.33.16", "polarity": 0.3, "label": "praise", "confidence": 0.82, "notes": "revela al oído de hombres"}
+{"verse_id": "JOB.33.17", "polarity": 0.3, "label": "praise", "confidence": 0.82, "notes": "para apartar del varón soberbia"}
+{"verse_id": "JOB.33.18", "polarity": 0.45, "label": "hope", "confidence": 0.85, "notes": "detendrá su alma de corrupción"}
+{"verse_id": "JOB.33.19", "polarity": -0.45, "label": "narrative", "confidence": 0.82, "notes": "sobre cama castigado con dolor"}
+{"verse_id": "JOB.33.20", "polarity": -0.45, "label": "narrative", "confidence": 0.82, "notes": "vida aborrece pan"}
+{"verse_id": "JOB.33.21", "polarity": -0.55, "label": "narrative", "confidence": 0.85, "notes": "carne desfallece"}
+{"verse_id": "JOB.33.22", "polarity": -0.65, "label": "narrative", "confidence": 0.88, "notes": "alma se acerca al sepulcro"}
+{"verse_id": "JOB.33.23", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "si tuviera un anunciador escogido"}
+{"verse_id": "JOB.33.24", "polarity": 0.75, "label": "hope", "confidence": 0.92, "notes": "Dios tuvo misericordia, halló redención"}
+{"verse_id": "JOB.33.25", "polarity": 0.65, "label": "hope", "confidence": 0.88, "notes": "carne más que de niño, días de mocedad"}
+{"verse_id": "JOB.33.26", "polarity": 0.75, "label": "praise", "confidence": 0.9, "notes": "orará a Dios con júbilo"}
+{"verse_id": "JOB.33.27", "polarity": 0.45, "label": "confession", "confidence": 0.85, "notes": "pequé y pervertí lo recto"}
+{"verse_id": "JOB.33.28", "polarity": 0.65, "label": "hope", "confidence": 0.88, "notes": "redimirá su alma"}
+{"verse_id": "JOB.33.29", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "todas estas cosas hace Dios"}
+{"verse_id": "JOB.33.30", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "apartar alma del sepulcro"}
+{"verse_id": "JOB.33.31", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "escucha Job y óyeme"}
+{"verse_id": "JOB.33.32", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "si tuvieres razones, respóndeme"}
+{"verse_id": "JOB.33.33", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "calla y enseñarte he sabiduría"}
+{"verse_id": "JOB.34.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Eliú continúa"}
+{"verse_id": "JOB.34.2", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "oíd sabios mis palabras"}
+{"verse_id": "JOB.34.3", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "oído prueba palabras"}
+{"verse_id": "JOB.34.4", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "escojamos juicio"}
+{"verse_id": "JOB.34.5", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "Job dijo: yo soy justo"}
+{"verse_id": "JOB.34.6", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "saeta gravosa"}
+{"verse_id": "JOB.34.7", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "¿qué hombre como Job?"}
+{"verse_id": "JOB.34.8", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "va con los que obran iniquidad"}
+{"verse_id": "JOB.34.9", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "de nada servirá conformar a Dios"}
+{"verse_id": "JOB.34.10", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "lejos esté de Dios la impiedad"}
+{"verse_id": "JOB.34.11", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "pagará al hombre según su obra"}
+{"verse_id": "JOB.34.12", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "Dios no hará injusticia"}
+{"verse_id": "JOB.34.13", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿quién visitó por él la tierra?"}
+{"verse_id": "JOB.34.14", "polarity": -0.1, "label": "awe", "confidence": 0.8, "notes": "si recogiese su espíritu"}
+{"verse_id": "JOB.34.15", "polarity": -0.3, "label": "awe", "confidence": 0.82, "notes": "toda carne perecería"}
+{"verse_id": "JOB.34.16", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "oye esto, escucha"}
+{"verse_id": "JOB.34.17", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "¿condenarás al que es justo?"}
+{"verse_id": "JOB.34.18", "polarity": -0.1, "label": "narrative", "confidence": 0.8, "notes": "¿se dirá al rey: perverso?"}
+{"verse_id": "JOB.34.19", "polarity": 0.3, "label": "praise", "confidence": 0.82, "notes": "no acepción de personas"}
+{"verse_id": "JOB.34.20", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "morirán en un momento"}
+{"verse_id": "JOB.34.21", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "sus ojos sobre caminos"}
+{"verse_id": "JOB.34.22", "polarity": -0.1, "label": "awe", "confidence": 0.8, "notes": "no hay tinieblas donde se encubran"}
+{"verse_id": "JOB.34.23", "polarity": 0.2, "label": "instruction", "confidence": 0.82, "notes": "no carga al hombre más de lo justo"}
+{"verse_id": "JOB.34.24", "polarity": -0.3, "label": "judgment", "confidence": 0.82, "notes": "quebrantará a fuertes"}
+{"verse_id": "JOB.34.25", "polarity": -0.3, "label": "judgment", "confidence": 0.82, "notes": "trastornará en la noche"}
+{"verse_id": "JOB.34.26", "polarity": -0.45, "label": "judgment", "confidence": 0.82, "notes": "como a malos los herirá"}
+{"verse_id": "JOB.34.27", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "se apartaron de él"}
+{"verse_id": "JOB.34.28", "polarity": 0.2, "label": "praise", "confidence": 0.82, "notes": "oirá clamor de necesitados"}
+{"verse_id": "JOB.34.29", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "si diere reposo, ¿quién inquietará?"}
+{"verse_id": "JOB.34.30", "polarity": 0.1, "label": "instruction", "confidence": 0.8, "notes": "que no reine hipócrita"}
+{"verse_id": "JOB.34.31", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "llevado he ya castigo"}
+{"verse_id": "JOB.34.32", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "enséñame lo que no veo"}
+{"verse_id": "JOB.34.33", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "¿según tu mente?"}
+{"verse_id": "JOB.34.34", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "hombres de seso dirán conmigo"}
+{"verse_id": "JOB.34.35", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "Job no habla con sabiduría"}
+{"verse_id": "JOB.34.36", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "deseo Job sea probado ampliamente"}
+{"verse_id": "JOB.34.37", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "a su pecado añadió impiedad"}
+{"verse_id": "JOB.35.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Eliú continúa"}
+{"verse_id": "JOB.35.2", "polarity": -0.2, "label": "warning", "confidence": 0.8, "notes": "¿más justo soy yo que Dios?"}
+{"verse_id": "JOB.35.3", "polarity": -0.2, "label": "warning", "confidence": 0.8, "notes": "¿qué ventaja sacarás?"}
+{"verse_id": "JOB.35.4", "polarity": 0.1, "label": "instruction", "confidence": 0.8, "notes": "yo te responderé"}
+{"verse_id": "JOB.35.5", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "mira los cielos"}
+{"verse_id": "JOB.35.6", "polarity": 0.1, "label": "instruction", "confidence": 0.8, "notes": "si pecares, ¿qué le harás?"}
+{"verse_id": "JOB.35.7", "polarity": 0.1, "label": "instruction", "confidence": 0.8, "notes": "si justo, ¿qué le darás?"}
+{"verse_id": "JOB.35.8", "polarity": 0.1, "label": "instruction", "confidence": 0.8, "notes": "al hombre como tú dañará tu impiedad"}
+{"verse_id": "JOB.35.9", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "clamarán por violencias"}
+{"verse_id": "JOB.35.10", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "da canciones en la noche"}
+{"verse_id": "JOB.35.11", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "nos enseña más que a las bestias"}
+{"verse_id": "JOB.35.12", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "clamarán y él no oirá"}
+{"verse_id": "JOB.35.13", "polarity": -0.1, "label": "warning", "confidence": 0.8, "notes": "Dios no oirá vanidad"}
+{"verse_id": "JOB.35.14", "polarity": 0.2, "label": "hope", "confidence": 0.82, "notes": "haz juicio delante de él, espera"}
+{"verse_id": "JOB.35.15", "polarity": -0.1, "label": "narrative", "confidence": 0.8, "notes": "en su ira no visita"}
+{"verse_id": "JOB.35.16", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "Job multiplica palabras sin sabiduría"}
+{"verse_id": "JOB.36.1", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Eliú añade"}
+{"verse_id": "JOB.36.2", "polarity": 0.2, "label": "narrative", "confidence": 0.8, "notes": "espérame y enseñarte he"}
+{"verse_id": "JOB.36.3", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "atribuiré justicia a mi Hacedor"}
+{"verse_id": "JOB.36.4", "polarity": 0.3, "label": "narrative", "confidence": 0.82, "notes": "no son mentira mis palabras"}
+{"verse_id": "JOB.36.5", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "Dios es grande, no desestima"}
+{"verse_id": "JOB.36.6", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "a afligidos dará su derecho"}
+{"verse_id": "JOB.36.7", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "no quitará ojos del justo"}
+{"verse_id": "JOB.36.8", "polarity": -0.3, "label": "narrative", "confidence": 0.82, "notes": "si prendidos en grillos"}
+{"verse_id": "JOB.36.9", "polarity": -0.2, "label": "narrative", "confidence": 0.8, "notes": "dará a conocer obra de ellos"}
+{"verse_id": "JOB.36.10", "polarity": 0.3, "label": "instruction", "confidence": 0.82, "notes": "despierta el oído para corrección"}
+{"verse_id": "JOB.36.11", "polarity": 0.65, "label": "hope", "confidence": 0.88, "notes": "acabarán días en bien, años en deleites"}
+{"verse_id": "JOB.36.12", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "si no oyeren, perecerán sin sabiduría"}
+{"verse_id": "JOB.36.13", "polarity": -0.45, "label": "warning", "confidence": 0.82, "notes": "hipócritas irritarán"}
+{"verse_id": "JOB.36.14", "polarity": -0.55, "label": "warning", "confidence": 0.85, "notes": "alma de ellos en mocedad"}
+{"verse_id": "JOB.36.15", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "al pobre librará de pobreza"}
+{"verse_id": "JOB.36.16", "polarity": 0.55, "label": "hope", "confidence": 0.85, "notes": "asentará mesa llena"}
+{"verse_id": "JOB.36.17", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "has llenado juicio del impío"}
+{"verse_id": "JOB.36.18", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "teme que en su ira no te quite"}
+{"verse_id": "JOB.36.19", "polarity": -0.2, "label": "warning", "confidence": 0.8, "notes": "¿hará estima de tus riquezas?"}
+{"verse_id": "JOB.36.20", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "no anheles la noche"}
+{"verse_id": "JOB.36.21", "polarity": -0.3, "label": "warning", "confidence": 0.82, "notes": "guárdate, no tornes a iniquidad"}
+{"verse_id": "JOB.36.22", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "Dios excelso, ¿qué enseñador como él?"}
+{"verse_id": "JOB.36.23", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿quién le ha prescrito camino?"}
+{"verse_id": "JOB.36.24", "polarity": 0.55, "label": "praise", "confidence": 0.85, "notes": "engrandecer su obra"}
+{"verse_id": "JOB.36.25", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "hombres todos la ven"}
+{"verse_id": "JOB.36.26", "polarity": 0.55, "label": "awe", "confidence": 0.88, "notes": "famous: Dios grande, no le conocemos"}
+{"verse_id": "JOB.36.27", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "reduce gotas de aguas"}
+{"verse_id": "JOB.36.28", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "destilan las nubes"}
+{"verse_id": "JOB.36.29", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "extensión de las nubes"}
+{"verse_id": "JOB.36.30", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "extiende su luz"}
+{"verse_id": "JOB.36.31", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "da comida a multitud"}
+{"verse_id": "JOB.36.32", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "con nubes encubre la luz"}
+{"verse_id": "JOB.36.33", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "trueno anuncia"}
+{"verse_id": "JOB.37.1", "polarity": -0.3, "label": "awe", "confidence": 0.82, "notes": "corazón se espanta"}
+{"verse_id": "JOB.37.2", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "oíd su voz terrible"}
+{"verse_id": "JOB.37.3", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "luz hasta los fines"}
+{"verse_id": "JOB.37.4", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "tronará con voz de magnificencia"}
+{"verse_id": "JOB.37.5", "polarity": 0.65, "label": "awe", "confidence": 0.88, "notes": "famous: Dios truena maravillosamente"}
+{"verse_id": "JOB.37.6", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "a la nieve dice: desciende"}
+{"verse_id": "JOB.37.7", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "reconozcan su obra"}
+{"verse_id": "JOB.37.8", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "bestia se entrará en escondrijo"}
+{"verse_id": "JOB.37.9", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "del mediodía viene torbellino"}
+{"verse_id": "JOB.37.10", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "por soplo de Dios se da hielo"}
+{"verse_id": "JOB.37.11", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "con luz esparce niebla"}
+{"verse_id": "JOB.37.12", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "por sus designios revuelven"}
+{"verse_id": "JOB.37.13", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "unas veces por azote, otras misericordia"}
+{"verse_id": "JOB.37.14", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "considera maravillas de Dios"}
+{"verse_id": "JOB.37.15", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿supiste cuándo Dios las ponía?"}
+{"verse_id": "JOB.37.16", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "maravillas del Perfecto en sabiduría"}
+{"verse_id": "JOB.37.17", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "vestidos calientes"}
+{"verse_id": "JOB.37.18", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "firmes como espejo sólido"}
+{"verse_id": "JOB.37.19", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "muéstranos qué le hemos de decir"}
+{"verse_id": "JOB.37.20", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "hombre razone, abismado"}
+{"verse_id": "JOB.37.21", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "no se puede mirar luz esplendente"}
+{"verse_id": "JOB.37.22", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "en Dios majestad terrible"}
+{"verse_id": "JOB.37.23", "polarity": 0.65, "label": "praise", "confidence": 0.88, "notes": "Todopoderoso no afligirá"}
+{"verse_id": "JOB.37.24", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "temerlo han por tanto los hombres"}
+{"verse_id": "JOB.38.1", "polarity": 0.55, "label": "awe", "confidence": 0.92, "notes": "Jehová respondió desde torbellino"}
+{"verse_id": "JOB.38.2", "polarity": -0.2, "label": "warning", "confidence": 0.82, "notes": "¿quién oscurece consejo sin sabiduría?"}
+{"verse_id": "JOB.38.3", "polarity": 0.2, "label": "awe", "confidence": 0.82, "notes": "ciñe como varón tus lomos"}
+{"verse_id": "JOB.38.4", "polarity": 0.45, "label": "awe", "confidence": 0.92, "notes": "famous: ¿dónde estabas cuando fundaba la tierra?"}
+{"verse_id": "JOB.38.5", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién ordenó sus medidas?"}
+{"verse_id": "JOB.38.6", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién puso piedra angular?"}
+{"verse_id": "JOB.38.7", "polarity": 0.85, "label": "joy", "confidence": 0.92, "notes": "famous: estrellas alababan, hijos de Dios se regocijaban"}
+{"verse_id": "JOB.38.8", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién encerró con puertas la mar?"}
+{"verse_id": "JOB.38.9", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "puse nubes por vestidura"}
+{"verse_id": "JOB.38.10", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "establecí decreto sobre ella"}
+{"verse_id": "JOB.38.11", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "hasta aquí vendrás y no pasarás"}
+{"verse_id": "JOB.38.12", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿has mandado a la mañana?"}
+{"verse_id": "JOB.38.13", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "que ocupe los fines de la tierra"}
+{"verse_id": "JOB.38.14", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "trasmúdase como lodo bajo sello"}
+{"verse_id": "JOB.38.15", "polarity": -0.2, "label": "awe", "confidence": 0.8, "notes": "luz de impíos quitada"}
+{"verse_id": "JOB.38.16", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿has entrado hasta profundos de la mar?"}
+{"verse_id": "JOB.38.17", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿hante sido descubiertas puertas de muerte?"}
+{"verse_id": "JOB.38.18", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿has considerado anchuras de la tierra?"}
+{"verse_id": "JOB.38.19", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿dónde camino a habitación de luz?"}
+{"verse_id": "JOB.38.20", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿llevarás ambas cosas a sus términos?"}
+{"verse_id": "JOB.38.21", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "¿sabíaslo porque ya nacido?"}
+{"verse_id": "JOB.38.22", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿has entrado en tesoros de la nieve?"}
+{"verse_id": "JOB.38.23", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "reservado para tiempo de angustia"}
+{"verse_id": "JOB.38.24", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿por qué camino se reparte la luz?"}
+{"verse_id": "JOB.38.25", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién repartió conducto al turbión?"}
+{"verse_id": "JOB.38.26", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "hacer llover sobre tierra deshabitada"}
+{"verse_id": "JOB.38.27", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "hartar tierra desierta, hierba"}
+{"verse_id": "JOB.38.28", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿tiene la lluvia padre?"}
+{"verse_id": "JOB.38.29", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿de qué vientre salió el hielo?"}
+{"verse_id": "JOB.38.30", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "aguas se endurecen como piedra"}
+{"verse_id": "JOB.38.31", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "famous: ¿podrás impedir las Pléyades?"}
+{"verse_id": "JOB.38.32", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿guiarás Arcturo con sus hijos?"}
+{"verse_id": "JOB.38.33", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿ordenanzas de los cielos?"}
+{"verse_id": "JOB.38.34", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿alzarás voz a las nubes?"}
+{"verse_id": "JOB.38.35", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿enviarás los relámpagos?"}
+{"verse_id": "JOB.38.36", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién puso sabiduría en interior?"}
+{"verse_id": "JOB.38.37", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿quién puso por cuenta los cielos?"}
+{"verse_id": "JOB.38.38", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "polvo convertido en dureza"}
+{"verse_id": "JOB.38.39", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿cazarás presa para león?"}
+{"verse_id": "JOB.38.40", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "echados en cuevas"}
+{"verse_id": "JOB.38.41", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién prepara al cuervo alimento?"}
+{"verse_id": "JOB.39.1", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿sabes tiempo de cabras monteses?"}
+{"verse_id": "JOB.39.2", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿contaste meses de su preñez?"}
+{"verse_id": "JOB.39.3", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "encórvanse, hacen salir hijos"}
+{"verse_id": "JOB.39.4", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "hijos sanos, crecen con pasto"}
+{"verse_id": "JOB.39.5", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién soltó al asno montés?"}
+{"verse_id": "JOB.39.6", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "yo puse casa en soledad"}
+{"verse_id": "JOB.39.7", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "búrlase de la multitud"}
+{"verse_id": "JOB.39.8", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "oculto de montes su pasto"}
+{"verse_id": "JOB.39.9", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿unicornio servirte?"}
+{"verse_id": "JOB.39.10", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿atarás unicornio con coyunda?"}
+{"verse_id": "JOB.39.11", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿confiarás en él?"}
+{"verse_id": "JOB.39.12", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿fiarás que tornará simiente?"}
+{"verse_id": "JOB.39.13", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿alas hermosas al pavo real?"}
+{"verse_id": "JOB.39.14", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "desampara huevos en tierra"}
+{"verse_id": "JOB.39.15", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "olvida que pisará pie"}
+{"verse_id": "JOB.39.16", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "endurécese para con sus hijos"}
+{"verse_id": "JOB.39.17", "polarity": 0.1, "label": "narrative", "confidence": 0.8, "notes": "Dios privó de sabiduría"}
+{"verse_id": "JOB.39.18", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "búrlase del caballo y jinete"}
+{"verse_id": "JOB.39.19", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿diste al caballo fortaleza?"}
+{"verse_id": "JOB.39.20", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "resoplido formidable"}
+{"verse_id": "JOB.39.21", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "escarba tierra, alégrase en fuerza"}
+{"verse_id": "JOB.39.22", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "hace burla del espanto"}
+{"verse_id": "JOB.39.23", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "contra él suena la aljaba"}
+{"verse_id": "JOB.39.24", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "con ímpetu y furor escarba"}
+{"verse_id": "JOB.39.25", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "desde lejos huele la batalla"}
+{"verse_id": "JOB.39.26", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿vuela gavilán por tu industria?"}
+{"verse_id": "JOB.39.27", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "¿se remonta el águila?"}
+{"verse_id": "JOB.39.28", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "habita en la piedra"}
+{"verse_id": "JOB.39.29", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "acecha la comida"}
+{"verse_id": "JOB.39.30", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "sus pollos chupan la sangre"}
+{"verse_id": "JOB.40.1", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "Jehová responde otra vez"}
+{"verse_id": "JOB.40.2", "polarity": -0.1, "label": "awe", "confidence": 0.8, "notes": "¿es sabiduría contender?"}
+{"verse_id": "JOB.40.3", "polarity": -0.1, "label": "narrative", "confidence": 0.78, "notes": "Job responde"}
+{"verse_id": "JOB.40.4", "polarity": -0.3, "label": "confession", "confidence": 0.85, "notes": "yo soy vil, pongo mano sobre boca"}
+{"verse_id": "JOB.40.5", "polarity": -0.3, "label": "confession", "confidence": 0.82, "notes": "una vez hablé y no responderé"}
+{"verse_id": "JOB.40.6", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "Jehová responde desde oscuridad"}
+{"verse_id": "JOB.40.7", "polarity": 0.2, "label": "awe", "confidence": 0.82, "notes": "ciñe como varón tus lomos"}
+{"verse_id": "JOB.40.8", "polarity": -0.2, "label": "awe", "confidence": 0.82, "notes": "¿invalidarás mi juicio?"}
+{"verse_id": "JOB.40.9", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿tienes tú brazo como Dios?"}
+{"verse_id": "JOB.40.10", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "atavíate de majestad"}
+{"verse_id": "JOB.40.11", "polarity": -0.2, "label": "awe", "confidence": 0.8, "notes": "esparce furores, abate soberbio"}
+{"verse_id": "JOB.40.12", "polarity": -0.2, "label": "awe", "confidence": 0.8, "notes": "humíllalo, quebranta a impíos"}
+{"verse_id": "JOB.40.13", "polarity": -0.2, "label": "awe", "confidence": 0.8, "notes": "encúbrelos en el polvo"}
+{"verse_id": "JOB.40.14", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "yo confesaré que tu diestra puede"}
+{"verse_id": "JOB.40.15", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "behemoth, hierba como buey"}
+{"verse_id": "JOB.40.16", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "fuerza en sus lomos"}
+{"verse_id": "JOB.40.17", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "cola mueve como cedro"}
+{"verse_id": "JOB.40.18", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "huesos fuertes como bronce"}
+{"verse_id": "JOB.40.19", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "cabeza de los caminos de Dios"}
+{"verse_id": "JOB.40.20", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "montes producen hierba"}
+{"verse_id": "JOB.40.21", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "echaráse debajo de sombras"}
+{"verse_id": "JOB.40.22", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "árboles sombríos lo cubren"}
+{"verse_id": "JOB.40.23", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "toma el río sin inmutarse"}
+{"verse_id": "JOB.40.24", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿alguno por sus ojos?"}
+{"verse_id": "JOB.41.1", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿sacarás al leviatán con anzuelo?"}
+{"verse_id": "JOB.41.2", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿pondrás garfio en sus narices?"}
+{"verse_id": "JOB.41.3", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿multiplicará ruegos?"}
+{"verse_id": "JOB.41.4", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿siervo perpetuo?"}
+{"verse_id": "JOB.41.5", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿jugarás con él como pájaro?"}
+{"verse_id": "JOB.41.6", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "¿harán de él banquete?"}
+{"verse_id": "JOB.41.7", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "¿cortarás su cuero?"}
+{"verse_id": "JOB.41.8", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "pon tu mano sobre él"}
+{"verse_id": "JOB.41.9", "polarity": 0.2, "label": "awe", "confidence": 0.8, "notes": "esperanza burlada"}
+{"verse_id": "JOB.41.10", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "¿quién podrá estar delante de mí?"}
+{"verse_id": "JOB.41.11", "polarity": 0.65, "label": "praise", "confidence": 0.88, "notes": "todo lo que hay debajo del cielo es mío"}
+{"verse_id": "JOB.41.12", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "no callaré sus miembros"}
+{"verse_id": "JOB.41.13", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "¿quién descubrirá vestidura?"}
+{"verse_id": "JOB.41.14", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "órdenes de sus dientes espantan"}
+{"verse_id": "JOB.41.15", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "escudos fuertes su vestido"}
+{"verse_id": "JOB.41.16", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "viento no entra entre ellos"}
+{"verse_id": "JOB.41.17", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "trabados que no se apartan"}
+{"verse_id": "JOB.41.18", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "con estornudos encienden lumbre"}
+{"verse_id": "JOB.41.19", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "hachas de fuego salen de boca"}
+{"verse_id": "JOB.41.20", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "de narices sale humo"}
+{"verse_id": "JOB.41.21", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "aliento enciende los carbones"}
+{"verse_id": "JOB.41.22", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "en su cerviz mora la fortaleza"}
+{"verse_id": "JOB.41.23", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "partes de carne apretadas"}
+{"verse_id": "JOB.41.24", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "corazón firme como piedra"}
+{"verse_id": "JOB.41.25", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "de su grandeza tienen temor"}
+{"verse_id": "JOB.41.26", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "ni espada, lanza, dardo durará"}
+{"verse_id": "JOB.41.27", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "hierro estima por pajas"}
+{"verse_id": "JOB.41.28", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "saeta no le hace huir"}
+{"verse_id": "JOB.41.29", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "toda arma por hojarascas"}
+{"verse_id": "JOB.41.30", "polarity": 0.3, "label": "awe", "confidence": 0.82, "notes": "agudas conchas debajo"}
+{"verse_id": "JOB.41.31", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "hace hervir mar profunda"}
+{"verse_id": "JOB.41.32", "polarity": 0.45, "label": "awe", "confidence": 0.85, "notes": "resplandecer la senda"}
+{"verse_id": "JOB.41.33", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "no hay sobre tierra su semejante"}
+{"verse_id": "JOB.41.34", "polarity": 0.55, "label": "awe", "confidence": 0.85, "notes": "rey sobre todos los soberbios"}
+{"verse_id": "JOB.42.1", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "Job responde a Jehová"}
+{"verse_id": "JOB.42.2", "polarity": 0.85, "label": "praise", "confidence": 0.92, "notes": "yo conozco que todo lo puedes"}
+{"verse_id": "JOB.42.3", "polarity": 0.45, "label": "confession", "confidence": 0.85, "notes": "yo denunciaba lo que no entendía"}
+{"verse_id": "JOB.42.4", "polarity": 0.45, "label": "praise", "confidence": 0.85, "notes": "oye y hablaré, tú me enseñarás"}
+{"verse_id": "JOB.42.5", "polarity": 0.85, "label": "awe", "confidence": 0.95, "notes": "famous: de oídas te había oído, mas ahora mis ojos te ven"}
+{"verse_id": "JOB.42.6", "polarity": 0.45, "label": "confession", "confidence": 0.92, "notes": "famous: me aborrezco y arrepiento en polvo y ceniza"}
+{"verse_id": "JOB.42.7", "polarity": 0.3, "label": "narrative", "confidence": 0.85, "notes": "Jehová a Eliphaz: mi ira contra ti"}
+{"verse_id": "JOB.42.8", "polarity": 0.45, "label": "hope", "confidence": 0.85, "notes": "Job orará por vosotros"}
+{"verse_id": "JOB.42.9", "polarity": 0.55, "label": "narrative", "confidence": 0.85, "notes": "Jehová atendió a Job"}
+{"verse_id": "JOB.42.10", "polarity": 0.85, "label": "hope", "confidence": 0.95, "notes": "famous: mudó la aflicción de Job, aumentó al doble"}
+{"verse_id": "JOB.42.11", "polarity": 0.75, "label": "love", "confidence": 0.9, "notes": "hermanos vinieron, comieron, consolaron"}
+{"verse_id": "JOB.42.12", "polarity": 0.85, "label": "praise", "confidence": 0.92, "notes": "bendijo postrimería más que principio"}
+{"verse_id": "JOB.42.13", "polarity": 0.65, "label": "hope", "confidence": 0.88, "notes": "siete hijos y tres hijas"}
+{"verse_id": "JOB.42.14", "polarity": 0.55, "label": "narrative", "confidence": 0.85, "notes": "nombres: Jemimah, Cesiah, Keren-happuch"}
+{"verse_id": "JOB.42.15", "polarity": 0.75, "label": "praise", "confidence": 0.9, "notes": "no tan hermosas como hijas de Job"}
+{"verse_id": "JOB.42.16", "polarity": 0.75, "label": "hope", "confidence": 0.88, "notes": "vivió 140 años, vio cuarta generación"}
+{"verse_id": "JOB.42.17", "polarity": 0.65, "label": "peace", "confidence": 0.92, "notes": "famous: murió Job viejo y lleno de días"}
