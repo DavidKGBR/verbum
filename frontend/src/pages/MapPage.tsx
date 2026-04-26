@@ -6,6 +6,8 @@ import "leaflet/dist/leaflet.css";
 import { useI18n } from "../i18n/i18nContext";
 import { placeName } from "../i18n/placeNames";
 import { localized } from "../i18n/localized";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 const BASE = "/api/v1";
 
@@ -224,6 +226,7 @@ export default function MapPage() {
 
   return (
     <div className="flex flex-col h-[calc(100vh-4rem)]">
+      <SEO {...ROUTE_META["/map"]} canonical="/map" />
       {/* Header */}
       <div className="px-4 py-3 border-b border-[var(--color-gold-dark)]/10 bg-white shrink-0">
         <div className="flex items-center justify-between max-w-none">

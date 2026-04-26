@@ -2,6 +2,8 @@ import { useSearchParams } from "react-router-dom";
 import ThreadsPage from "./ThreadsPage";
 import GenealogyPage from "./GenealogyPage";
 import { useI18n } from "../i18n/i18nContext";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 const TABS = ["threads", "genealogy"] as const;
 type Tab = (typeof TABS)[number];
@@ -24,6 +26,7 @@ export default function ConceptsPage() {
 
   return (
     <div className="space-y-4">
+      <SEO {...ROUTE_META["/concepts"]} canonical="/concepts" />
       <div role="tablist" aria-label={t("nav.concepts")} className="flex gap-1 border-b border-white/10">
         {TABS.map((tab) => {
           const selected = active === tab;

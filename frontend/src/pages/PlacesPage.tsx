@@ -12,6 +12,8 @@ import { useI18n } from "../i18n/i18nContext";
 import { placeName, placeTypeLabel, resolvePlaceSlugsByLocaleQuery } from "../i18n/placeNames";
 import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 /* ── Lightbox overlay for full-res image ─────────────────────────────────── */
 
@@ -397,6 +399,7 @@ export default function PlacesPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <SEO {...ROUTE_META["/places"]} canonical="/places" />
       <div className="mb-6">
         <h1 className="page-title text-3xl">{t("nav.places")}</h1>
         <p className="text-sm opacity-60 mt-1">

@@ -7,6 +7,8 @@ import InterlinearView from "../components/reader/InterlinearView";
 import StructuralView from "../components/structure/StructuralView";
 import ActivePlanIndicator from "../components/plans/ActivePlanIndicator";
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 type Mode = "single" | "parallel" | "immersive" | "interlinear" | "structural";
 
@@ -34,6 +36,7 @@ export default function ReaderPage() {
 
   return (
     <div>
+      <SEO {...ROUTE_META["/reader"]} canonical="/reader" />
       <div className="flex items-center gap-4 mb-6 flex-wrap">
         <h2 className="page-title text-2xl">{t("reader.title")}</h2>
         <div className="flex rounded overflow-hidden border">

@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verbum — Bible Data Pipeline</title>
+
+    <!-- Default <head> values; the React-side <SEO> component overrides per
+         route. The data-default attribute lets the prerender script drop the
+         static defaults when a Helmet-injected version exists for the same key. -->
+    <title data-default>Verbum — Free Open-Source Bible Study App</title>
+    <meta data-default
+      name="description"
+      content="Free open-source Bible study app — 12 translations, 344K cross-references, interlinear Greek/Hebrew, AI-assisted analysis. No paywall, no ads."
+    />
+    <link data-default rel="canonical" href="https://verbum-app-bible.web.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://verbum-app-bible.web.app/" />
+    <meta name="theme-color" content="#2c1810" />
+
+    <!-- Open Graph defaults -->
+    <meta data-default property="og:type" content="website" />
+    <meta data-default property="og:site_name" content="Verbum" />
+    <meta data-default property="og:title" content="Verbum — Free Open-Source Bible Study App" />
+    <meta data-default property="og:description" content="12 translations, 344K cross-references, interlinear Greek/Hebrew, AI-assisted analysis. No paywall, no ads." />
+    <meta data-default property="og:url" content="https://verbum-app-bible.web.app/" />
+    <meta data-default property="og:image" content="https://verbum-app-bible.web.app/og-default.png" />
+    <meta data-default property="og:image:width" content="1200" />
+    <meta data-default property="og:image:height" content="630" />
+
+    <!-- Twitter defaults -->
+    <meta data-default name="twitter:card" content="summary_large_image" />
+    <meta data-default name="twitter:title" content="Verbum — Free Open-Source Bible Study App" />
+    <meta data-default name="twitter:description" content="12 translations, 344K cross-references, interlinear Greek/Hebrew, AI-assisted analysis. No paywall, no ads." />
+    <meta data-default name="twitter:image" content="https://verbum-app-bible.web.app/og-default.png" />
+
+    <!-- Google Search Console verification — replace with the file or meta tag GSC issues. -->
+    <!-- <meta name="google-site-verification" content="REPLACE_ME" /> -->
+
     <link rel="icon" type="image/svg+xml" href="/verbum-icon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

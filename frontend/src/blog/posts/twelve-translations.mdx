@@ -1,0 +1,151 @@
+---
+title: Twelve translations, five languages, one comparison view
+description: How Verbum chose its 12 default Bible translations across English, Portuguese, Spanish, French, and German — and what each one is for.
+slug: twelve-translations
+date: 2026-04-20
+ogImage: /og/twelve-translations.png
+tags: [translations, multilingual, methodology]
+---
+
+# Why these twelve
+
+Verbum ships with 12 Bible translations across 5 languages. Most online
+Bible apps offer either two (KJV and one modern English) or several dozen.
+Twelve is a deliberate middle: enough breadth that comparison is meaningful,
+narrow enough that we could ensure each one was carefully sourced, checked,
+and represented in [the comparison view](/compare).
+
+## The list
+
+| Language | Translations |
+|---|---|
+| English | KJV, BBE, ASV, WEB, Darby |
+| Portuguese | NVI, RA, ACF |
+| Spanish | RVR1960 |
+| French | APEE |
+| German | Luther 1545, Neue Genfer Übersetzung |
+
+All twelve are either public domain or licensed for free public use.
+None have license restrictions that would prevent shipping the full text
+inside a free app.
+
+## English: five translations, three eras
+
+**KJV (1611, revised 1769)** is the still-canonical English Bible.
+Beautiful, hieratic, syntactically Hebrew-inflected. Required reading
+because so much downstream English Christianity quotes it idiomatically.
+KJV's translator annotations (the curly-bracket `{Heb. ...}` notes) are
+preserved in the source data; the reader can toggle them off.
+
+**ASV (1901)** — American Standard Version. The KJV's grandchild, more
+literal, less elegant. The base text for the NASB and the RSV families.
+Useful in [the comparison view](/compare) precisely because it shows how
+the KJV's choices were revised once 19th-century textual scholarship caught
+up to its base text.
+
+**BBE (1949)** — Bible in Basic English. Translated using a controlled
+vocabulary of about 1,000 words. Clumsy as literature, fascinating as a
+diagnostic. If you can't follow a passage in BBE, the difficulty is in
+the meaning, not the vocabulary.
+
+**WEB (2000s)** — World English Bible. Public-domain modern English
+translation, ASV-derived. Reads cleaner than KJV without losing literalness.
+A reasonable default if you want something modern that you can quote
+without copyright concerns.
+
+**Darby (1890)** — extremely literal, idiosyncratic. Useful for word study
+because Darby aggressively preserves grammatical structure. Less useful for
+devotional reading.
+
+## Portuguese: three translations, three audiences
+
+**NVI** — Nova Versão Internacional. The Brazilian-Portuguese Evangelical
+default. Modern, readable, balanced. The translation most likely to be
+used in Brazilian church Bible study programs and in Spotify devotionals.
+
+**RA** — Almeida Revista e Atualizada. The historic Almeida text revised
+in the 1990s. Formal-equivalent (more literal than NVI), uses traditional
+Portuguese ecclesiastical vocabulary. The Catholic-and-Reformed crossover
+text in Brazil. Older readers and academic settings prefer it.
+
+**ACF** — Almeida Corrigida Fiel. The Textus Receptus stream of Almeida —
+this is the Portuguese equivalent of preferring the KJV's underlying Greek
+text over the modern eclectic critical text. Used by communities that
+distrust modern textual criticism. In [the comparison view](/compare),
+ACF's variants from RA on disputed passages (1 John 5:7, John 7:53–8:11,
+Mark 16:9–20) reveal exactly how the translator's textual choices ripple
+into the receptor language.
+
+## Spanish: one anchor
+
+**RVR1960** — Reina-Valera Revisión 1960. The single most-read Spanish
+Bible by a wide margin. Spanish-speaking Reformed and Evangelical churches
+use it almost universally. Verbum's Spanish-language users get this
+translation as the default, with the multi-translation comparison reserved
+for English when needed.
+
+We considered shipping NVI (Spanish) and the Biblia de las Américas, but
+neither has the ecclesial centrality of RVR for the audience Verbum
+expects.
+
+## French and German: minimum-viable representation
+
+**APEE (French)** — Alliance Biblique Universelle's modern French
+translation. One translation per language is enough for a v1 launch in
+French; we'll add La Sainte Bible (Louis Segond 1910) in v1.1 if there's
+demand.
+
+**Luther 1545** and **Neue Genfer Übersetzung** for German. Same logic
+as Portuguese: one historical, one modern. Luther 1545 is the
+foundational German text, the rough analogue to the KJV. Neue Genfer is
+contemporary, dynamic-equivalent, used in modern Reformed churches.
+
+## What's not in (yet)
+
+- **Hebrew Masoretic Text and Greek SBLGNT** — these are *in* Verbum but
+  rendered through the [interlinear reader](/reader?mode=interlinear), not
+  through the standard verse view. They are not "translations" in the
+  user-facing sense.
+- **NIV, ESV, NASB, NLT (English)** — all proprietary, all expensive to
+  license. We don't ship copyrighted modern English translations because
+  the licensing terms typically prohibit free redistribution.
+- **NRSV, RSV** — restrictive license terms for digital redistribution
+  even though academic use is permitted. Not worth the legal complexity
+  for a free app.
+- **Italian, Russian, Korean, Mandarin** — not on the v1 roadmap. The
+  language list reflects the audiences the project owner can validate by
+  reading. Adding a language without a native speaker on the team would
+  produce mojibake bugs we couldn't detect, which we have learned the
+  hard way.
+
+## Using the comparison view
+
+Open [the comparison view](/compare?ref=John+1:1). Pick John 1:1. Add 6–8
+translations. Read them in sequence:
+
+> KJV — In the beginning was the Word, and the Word was with God, and the
+> Word was God.
+>
+> NVI — No princípio era aquele que é a Palavra, e a Palavra estava com
+> Deus, e a Palavra era Deus.
+>
+> RVR — En el principio era el Verbo, y el Verbo era con Dios, y el Verbo
+> era Dios.
+>
+> Luther — Im Anfang war das Wort, und das Wort war bei Gott, und Gott
+> war das Wort.
+
+Notice that NVI says *aquele que é a Palavra* — "the one who is the Word",
+inserting an interpretive gloss that none of the other translations do.
+This is the kind of decision that comparison view makes visible. KJV and
+RVR keep "Word" / "Verbo" without elaboration; NVI smuggles in the
+grammatical subject.
+
+Whether NVI's gloss is helpful or tendentious is a debate. Verbum's job
+is just to put the gloss next to the alternatives so the debate can
+happen with the texts in view. That is most of what comparing translations
+is *for*.
+
+Open [the comparison view](/compare). Try Romans 7:24 across all twelve.
+The interpretive choices on a single Pauline lament will tell you more
+about translation philosophy than any meta-commentary.

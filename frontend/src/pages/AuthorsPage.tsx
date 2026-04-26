@@ -13,6 +13,8 @@ import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext
 import { localized } from "../i18n/localized";
 import { localizeBookAbbrev, localizeBookName } from "../i18n/bookNames";
 import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 // ── Period parser ──────────────────────────────────────────────────────────
 
@@ -90,6 +92,7 @@ export default function AuthorsPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <SEO {...ROUTE_META["/authors"]} canonical="/authors" />
       <div className="mb-6">
         <h1 className="page-title text-3xl">{t("authors.title")}</h1>
         <p className="text-sm opacity-60 mt-1">

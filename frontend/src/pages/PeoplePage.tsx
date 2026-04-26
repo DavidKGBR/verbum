@@ -15,6 +15,8 @@ import { placeName } from "../i18n/placeNames";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
 import { tribeName } from "../i18n/tribeNames";
 import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 const RELATION_ORDER = ["father", "mother", "spouse", "sibling", "half_sibling", "child"];
 
@@ -184,6 +186,7 @@ export default function PeoplePage() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <SEO {...ROUTE_META["/people"]} canonical="/people" />
       <div className="mb-6">
         <h1 className="page-title text-3xl">{t("people.title")}</h1>
         <p className="text-sm opacity-60 mt-1">

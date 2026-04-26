@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import * as Sentry from "@sentry/react";
 import { I18nProvider } from "./i18n/i18nContext";
 import App from "./App";
@@ -71,28 +72,30 @@ function FallbackUI() {
   );
 }
 
-const root = createRoot(document.getElementById("root")!);
-
-if (Boundary) {
-  root.render(
-    <StrictMode>
+// react-snap renders static HTML at build time; on first paint we hydrate that
+// markup instead of throwing it away. Plain dev/prod (empty #root) falls back
+// to createRoot.
+const rootEl = document.getElementById("root")!;
+const tree = (
+  <StrictMode>
+    <HelmetProvider>
       <BrowserRouter>
         <I18nProvider>
-          <Boundary />
+          {Boundary ? (
+            <Boundary />
+          ) : (
+            <ErrorBoundary>
+              <App />
+            </ErrorBoundary>
+          )}
         </I18nProvider>
       </BrowserRouter>
-    </StrictMode>,
-  );
+    </HelmetProvider>
+  </StrictMode>
+);
+
+if (rootEl.hasChildNodes()) {
+  hydrateRoot(rootEl, tree);
 } else {
-  root.render(
-    <StrictMode>
-      <ErrorBoundary>
-        <BrowserRouter>
-          <I18nProvider>
-            <App />
-          </I18nProvider>
-        </BrowserRouter>
-      </ErrorBoundary>
-    </StrictMode>,
-  );
+  createRoot(rootEl).render(tree);
 }

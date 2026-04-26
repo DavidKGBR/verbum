@@ -4,6 +4,8 @@ import { searchVerses, type SearchResult } from "../services/api";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import { useI18n, defaultTranslationFor, type Locale } from "../i18n/i18nContext";
 import { localizeBookName } from "../i18n/bookNames";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 // Suggestions are matched against verse text via ILIKE — they must exist in
 // the user's active translation, so they're locale-specific.
@@ -143,6 +145,7 @@ export default function SearchPage() {
 
   return (
     <div className="max-w-3xl mx-auto">
+      <SEO {...ROUTE_META["/search"]} canonical="/search" />
       <h2 className="page-title text-3xl mb-4">{t("search.title")}</h2>
 
       <form onSubmit={handleSubmit} className="flex gap-3 mb-6">

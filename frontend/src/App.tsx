@@ -29,6 +29,8 @@ import PrivacyPage from "./pages/PrivacyPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ConnectionsPage from "./pages/ConnectionsPage";
 import ConceptsPage from "./pages/ConceptsPage";
+import BlogIndexPage from "./pages/BlogIndexPage";
+import BlogPostPage from "./pages/BlogPostPage";
 
 export default function App() {
   return (
@@ -60,6 +62,9 @@ export default function App() {
         <Route path="/special-passages/:passageId" element={<SpecialPassagePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
+
+        <Route path="/blog" element={<BlogIndexPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
 
         {/* Consolidated wrappers (Entregável 2) */}
         <Route path="/connections" element={<ConnectionsPage />} />

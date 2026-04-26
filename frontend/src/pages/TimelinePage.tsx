@@ -11,6 +11,8 @@ import { useI18n, type Locale } from "../i18n/i18nContext";
 import { personName } from "../i18n/personNames";
 import { placeName } from "../i18n/placeNames";
 import { eventTitle, eraName } from "../i18n/timelineEvents";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 function yearLabel(year: number, t: (k: string) => string): string {
   const bc = t("common.bc");
@@ -159,6 +161,7 @@ export default function TimelinePage() {
 
   return (
     <div className="max-w-6xl mx-auto">
+      <SEO {...ROUTE_META["/timeline"]} canonical="/timeline" />
       <div className="mb-6">
         <h1 className="page-title text-3xl">{t("timeline.title")}</h1>
         <p className="text-sm opacity-60 mt-1">{t("timeline.subtitle")}</p>

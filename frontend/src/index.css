@@ -4,6 +4,7 @@
    @import here would re-introduce the waterfall: HTML → main.css → @import
    fetch → font. */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   /* ── Base palette (parchment theme) ─────────────────────────── */

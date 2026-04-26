@@ -16,6 +16,8 @@ import { localizeBookName } from "../i18n/bookNames";
 import { personName } from "../i18n/personNames";
 import { placeName } from "../i18n/placeNames";
 import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 export default function TopicsPage() {
   const { t, locale } = useI18n();
@@ -119,6 +121,7 @@ export default function TopicsPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <SEO {...ROUTE_META["/topics"]} canonical="/topics" />
       <div className="mb-6">
         <h1 className="page-title text-3xl">{t("topics.title")}</h1>
         <p className="text-sm opacity-60 mt-1">{t("topics.subtitle")}</p>

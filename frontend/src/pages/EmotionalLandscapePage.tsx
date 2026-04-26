@@ -10,6 +10,8 @@ import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { SENTIMENT_COVERED_PT, SENTIMENT_COVERED_ES } from "../i18n/sentimentCoverage";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import BookEmotionalArc from "../components/emotional/BookEmotionalArc";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 interface SentimentPoint {
   verse_id: string;
@@ -95,6 +97,7 @@ export default function EmotionalLandscapePage() {
 
   return (
     <div className="max-w-5xl mx-auto">
+      <SEO {...ROUTE_META["/emotional"]} canonical="/emotional" />
       <h1 className="text-2xl font-display font-bold mb-1">{t("emotional.title")}</h1>
       <p className="text-sm opacity-60 mb-6">{t("emotional.subtitle")}</p>
 

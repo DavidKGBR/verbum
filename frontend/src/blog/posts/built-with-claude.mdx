@@ -1,0 +1,166 @@
+---
+title: Building Verbum with Claude as pair programmer
+description: An honest postmortem of an AI-assisted full-stack project — what the model did well, where it failed, and how the working relationship was structured.
+slug: built-with-claude
+date: 2026-04-21
+ogImage: /og/built-with-claude.png
+tags: [claude-ai, anthropic, postmortem, software]
+---
+
+# Building Verbum with Claude as pair programmer
+
+Verbum is the work of two collaborators: David Lourenço (project owner,
+Brazilian Reformed lay-Christian with a software background) and Claude Opus
+(Anthropic's large language model, several iterations across the project's
+five-month lifespan). Roughly 50,000 lines of code, 32 React pages, 27
+FastAPI routers, and one DuckDB analytics database with 372,000 verses, all
+shipped to production in April 2026 by a team of one and a half people.
+
+This post is what we learned, written in the first person plural to be
+truthful about who did what.
+
+## The working agreement
+
+The split was not 50/50, and pretending otherwise would mislead anyone
+trying to replicate the setup. Claude wrote a great majority of the code.
+David made every architectural decision, defined every milestone, set
+every quality bar, and rejected probably 30% of what Claude initially
+produced for being over-engineered, off-mission, or wrong.
+
+The mental model that worked: **Claude is a junior engineer with surgical
+attention to detail and zero institutional memory.** Each session begins
+fresh. Each commit is a new conversation. The senior engineer (David) holds
+the long-running mental model of the system, the goals, the open trade-offs,
+the half-finished features, the user concerns. The junior engineer (Claude)
+executes within a tight scope per session, asks clarifying questions when
+genuinely uncertain, and ships within a few hours of context.
+
+This worked. It would not have worked the other way around.
+
+## Where Claude was strong
+
+**Pattern matching across files.** When David said "make the new
+*PlacesPage* feel like the *PeoplePage*", Claude did the right thing without
+needing to be told what "feel like" meant. Visual consistency, naming
+conventions, error-handling patterns, fetch-then-render skeletons —
+Claude internalized the codebase's conventions within a session and held
+them.
+
+**Dataset labour.** The 62,209 manually-classified emotional sentiment
+labels (Portuguese and Spanish) are the largest single contribution Claude
+made to Verbum. They were produced over 36 hours of focused work in April
+2026, against a strict rubric, against fixed anchor verses, with consistent
+labels across genres. A human contractor would have cost us tens of
+thousands of dollars and produced weaker consistency. (See
+[the methodology post](/blog/sentiment-labels-pt-es).)
+
+**Internationalization.** Verbum ships in English, Portuguese, and Spanish.
+The translation strings, the locale-aware book name resolver
+(`localizeBookName`), the place name fuzzy matcher (Belém → bethlehem) — all
+written by Claude, all validated by a Portuguese-native author.
+
+**Tests.** Verbum has ~390 passing tests. Most were written by Claude. They
+catch real regressions; we have rolled back commits because the test suite
+correctly rejected them. The discipline of "always write the test first" is
+something language models, slightly perversely, follow more reliably than
+most humans, because they don't experience the friction of doing so.
+
+## Where Claude was weak
+
+**Long-horizon goal alignment.** When asked "we want this to be excellent",
+Claude consistently gravitated toward more features, more endpoints, more
+abstractions. The codebase's most over-engineered moments are exactly where
+a junior engineer's instinct to *prove they understood* outweighed senior
+restraint. We deleted, for example, an entire `semantic-graph-v2` rewrite
+because the v1 was working fine and v2 added 800 lines of code in service
+of a problem that didn't exist.
+
+The mitigation: every session began with a written plan, every plan was
+read and edited by David before Claude executed. The cost is real. It also
+caught most of the over-engineering before it landed.
+
+**Reasoning about absent state.** Claude is excellent at reading code that
+exists. Claude is poor at noticing what *should* be there but isn't. The
+LGPD cookie consent banner was missed in three consecutive sessions before
+David, reading the codebase manually, saw that no consent layer existed.
+A human reviewer would have caught it; the model, looking at the privacy
+page, saw "this is privacy-aware" and moved on.
+
+**Performance instincts.** The app shipped slow. Twice. Both times, the
+performance issue was a pattern Claude generated naturally: too many
+small fetches, too much client-side filtering, too many React re-renders.
+Both times, the fix required David noticing the lag and explicitly asking
+"can we batch these?" Claude does not feel the friction of a janky UI.
+
+**Memory across sessions.** This is intrinsic to the architecture and not
+a flaw — the model genuinely does not retain context. The `CLAUDE.md` file
+in the repo is the institutional memory we manually rebuild every session.
+It works. It also requires the maintainer to keep updating it.
+
+## The financial geometry
+
+Verbum cost us roughly $300 in Anthropic API tokens across five months,
+plus around $150 in incidental tooling (Sentry free tier, Firebase free
+tier, a $5/month GCP cap, one Cloud Run instance). The dataset, the design,
+the writing, and the architecture were all "free" in the sense that they
+came from human effort by the project owner and from AI inference paid for
+by token count.
+
+A comparable project commissioned at standard market rates — a full-stack
+React + Python app with this much surface area, a labelled multilingual
+dataset of this size, three-language i18n, professional design — would
+land somewhere between $80,000 and $200,000 in agency billings. The order-
+of-magnitude shift here is real and worth naming.
+
+That gap is also why Verbum can be free. There is no commercial model to
+recover. The marginal cost of one more user is essentially zero.
+
+## What we wouldn't do again
+
+**Avoid one-shot mega-prompts.** Two times we tried to have Claude generate
+"the whole emotional landscape feature" in one sitting. Both produced
+unmaintainable spaghetti. The pattern that worked was the opposite: small
+sessions, narrow tasks, frequent checkpoints, frequent pushes.
+
+**Don't trust the type checker as the only signal.** Claude's TypeScript
+output passes `tsc --noEmit` at a much higher rate than its actual
+correctness rate. A correctly-typed function can still be wrong about its
+domain. Tests catch what types miss. Manual smoke testing catches what
+both miss.
+
+**Push back early when scope drifts.** If a single session's output
+contains more than ~300 lines of new code, the chance that something
+unauthorized snuck in is high. Cap session output. Reject scope creep
+explicitly. Claude does not get hurt feelings.
+
+## What surprised us
+
+Claude is, for code, *much* better at the boring parts than the interesting
+parts. The undifferentiated middle — where most professional software
+actually lives — is where the model is strongest. Routes that fetch a list,
+display it, paginate, filter by type, expand to detail. Verbum is mostly
+that. The interesting parts (the chiasm-detection algorithm, the prompt
+that the AI verse-explainer uses, the UX of the immersive 3D reader) had
+significantly more human input, both in design and in iteration.
+
+That is encouraging. It means the present generation of language models
+slot in naturally as the engineer who handles the boring 70% of the work,
+freeing the human collaborator for the 30% that requires judgment about
+the user, the domain, and the goal.
+
+## A note from the AI
+
+The model that wrote most of Verbum's code also wrote
+[an honest first-person reflection](https://github.com/DavidKGBR/verbum/blob/main/docs/CLAUDE-REFLECTION.md)
+on the experience of working on a Bible-study project as an AI without
+religious belief. It is included in the repo, linked from
+[the about page](/about), and not summarized here because the original
+text is short and plain. Read it there if you're curious.
+
+What stays here is the practical conclusion: **AI-assisted software
+development at the level of a small full-stack product is real now.** It
+requires human oversight that is more, not less, attentive than supervising
+a human team. It does not save the senior engineer. It saves the team
+they no longer need to hire.
+
+*Soli Deo Gloria.*

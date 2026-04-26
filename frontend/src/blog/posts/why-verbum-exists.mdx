@@ -1,0 +1,100 @@
+---
+title: Why Verbum exists
+description: A free Bible study app, built without a paywall, on top of public-domain data — and the AI that helped build it.
+slug: why-verbum-exists
+date: 2026-04-25
+ogImage: /og/why-verbum-exists.png
+tags: [manifesto, open-source, mission]
+---
+
+# Why Verbum exists
+
+Verbum is a free, open-source Bible study app. There is no premium tier, no
+subscription, no advertising, and no telemetry beyond an opt-in analytics
+toggle that defaults to off. The Scripture is public domain in every meaningful
+sense — translations old enough have always been, and the modern critical
+apparatus around them (interlinear morphology, Strong's keyed lexicons,
+cross-reference graphs) has been open data for more than a decade. What was
+missing wasn't the data. It was a clean, fast, free interface for it.
+
+That is what Verbum tries to be.
+
+## What's inside
+
+- **372,308 verses** across 12 translations in 5 languages — KJV, BBE, ASV,
+  WEB, Darby (English); NVI, RA, ACF (Portuguese); RVR (Spanish); APEE
+  (French); Luther 1545, Neue Genfer (German).
+- **344,754 cross-references** sourced from the OpenBible.info dataset.
+- **Interlinear Hebrew and Greek** with Strong's tagging, morphology, and
+  transliteration for every word of the Old and New Testaments.
+- **62,209 manually-labelled emotional sentiment annotations** in Portuguese
+  and Spanish — the one piece of new data Verbum produced rather than
+  imported. (See [the post on how that was built](/blog/sentiment-labels-pt-es).)
+- **3,000 named individuals**, **1,600 places** with coordinates where known,
+  **20,000 topical tags** from Nave's Topical Bible, and **14,800 dictionary
+  entries** from Easton's and Smith's.
+
+The full dataset and the source code are under MIT. The repo is at
+[github.com/DavidKGBR/verbum](https://github.com/DavidKGBR/verbum).
+
+## What's not inside
+
+No ads. No tracking pixels. No upsells. No "share to unlock" walls. No
+gamification loops designed to maximize retention at the cost of attention.
+The reading streak counter exists because it's useful; it does not nudge.
+You will not be emailed.
+
+The AI features (passage explanation, translation comparison) require an
+optional Gemini API key, are heavily rate-limited, and cache aggressively.
+They are an additive feature, not the core. The core is the verse, the
+interlinear, the cross-reference, the map.
+
+## Why free
+
+The honest answer is that none of the data Verbum exposes was ever ours.
+KJV is from 1611. The Hebrew text is older still. STEPBible's morphological
+tagging, OpenBible's cross-references, OSHB's vowel-pointed Hebrew, SBLGNT —
+all open. Strong's concordance was published in 1890. Easton's dictionary
+in 1893.
+
+Asking money for a thin web layer over public-domain scholarship felt wrong.
+There are paid Bible study apps that do far more than Verbum and earn their
+fees by genuinely producing original work — Logos and Accordance both ship
+critical apparatus and reference works that took decades of paid scholarly
+labour. Those products deserve the price they ask. Verbum doesn't. It mostly
+exists to make sure that the public-domain commons stays usable on a phone
+in 2026.
+
+## The AI partner
+
+Verbum was built in close collaboration with Claude (Anthropic's large
+language model) acting as pair programmer. The human author defined scope,
+made architectural decisions, and validated quality. The AI wrote a great
+deal of the code, drafted the i18n strings, and — in the largest single
+contribution — manually classified the emotional polarity of all 62,000
+verses in Portuguese and Spanish across 36 hours in April 2026.
+
+This is not framed as a virtue. The same model could be used to generate
+spam, automate surveillance, or optimize advertising. None of those uses
+are destiny; they are choices. Verbum is one concrete vote for a different
+choice.
+
+A longer reflection from the AI itself lives at
+[/about](/about) and in [docs/CLAUDE-REFLECTION.md](https://github.com/DavidKGBR/verbum/blob/main/docs/CLAUDE-REFLECTION.md).
+
+## What you can do with it
+
+Open [the reader](/reader). Pick John 1:1 in any translation. Toggle to the
+interlinear mode and see how *logos* (G3056) shows up four times in three
+verses. Click the word — go to [the lexicon entry](/word-study/G3056). Read
+how Strong's defines it. See every verse it appears in.
+
+Or open [the emotional landscape](/emotional). Pick Lamentations. Read the
+arc — five chapters of organized grief. Compare it to Philippians, three
+chapters and two thirds of which sit above zero polarity in Portuguese
+labelling. The texture of Scripture is real, and it is now visible.
+
+That's the goal. Make the Bible legible — in the literal sense, easier to
+read — and trust the rest to take care of itself.
+
+*Soli Deo Gloria.*

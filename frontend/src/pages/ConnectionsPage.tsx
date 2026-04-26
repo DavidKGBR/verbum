@@ -3,6 +3,8 @@ import ArcDiagramPage from "./ArcDiagramPage";
 import SemanticExplorerPage from "./SemanticExplorerPage";
 import IntertextualityPage from "./IntertextualityPage";
 import { useI18n } from "../i18n/i18nContext";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 const TABS = ["arc", "graph", "citations"] as const;
 type Tab = (typeof TABS)[number];
@@ -25,6 +27,7 @@ export default function ConnectionsPage() {
 
   return (
     <div className="space-y-4">
+      <SEO {...ROUTE_META["/connections"]} canonical="/connections" />
       <div role="tablist" aria-label={t("nav.connections")} className="flex gap-1 border-b border-white/10">
         {TABS.map((tab) => {
           const selected = active === tab;

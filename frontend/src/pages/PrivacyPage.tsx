@@ -1,6 +1,8 @@
 import { useI18n } from "../i18n/i18nContext";
 import { getConsent, setConsent } from "../lib/consent";
 import { useEffect, useState } from "react";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 /**
  * LGPD/GDPR-compliant privacy notice.
@@ -26,6 +28,7 @@ export default function PrivacyPage() {
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-10 leading-relaxed text-[var(--color-ink)]">
+      <SEO {...ROUTE_META["/privacy"]} canonical="/privacy" />
       <h1 className="text-3xl font-bold mb-2">{content.title}</h1>
       <p className="opacity-60 text-sm mb-8">{content.lastUpdated}</p>
 

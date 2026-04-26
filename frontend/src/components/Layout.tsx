@@ -356,6 +356,10 @@ export default function Layout() {
                 {t("footer.about")}
               </Link>
               <span aria-hidden>·</span>
+              <Link to="/blog" className="hover:text-[var(--color-gold)] transition">
+                Blog
+              </Link>
+              <span aria-hidden>·</span>
               <Link to="/privacy" className="hover:text-[var(--color-gold)] transition">
                 {t("footer.privacy")}
               </Link>

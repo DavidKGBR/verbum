@@ -9,6 +9,8 @@ import {
 } from "../services/api";
 import { useBooks, localizeBookName } from "../i18n/bookNames";
 import { useI18n } from "../i18n/i18nContext";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 import VerseOfTheDay from "../components/VerseOfTheDay";
 import TranslationPreview from "../components/TranslationPreview";
 import DiscoverGrid from "../components/home/DiscoverGrid";
@@ -170,6 +172,35 @@ export default function HomePage() {
 
   return (
     <div className="max-w-5xl mx-auto">
+      <SEO
+        description={ROUTE_META["/"].description}
+        canonical="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Verbum",
+          alternateName: "Verbum Bible Study",
+          applicationCategory: "EducationalApplication",
+          operatingSystem: "Web",
+          url: "https://verbum-app-bible.web.app",
+          description:
+            "Free open-source Bible study app — 12 translations, 344K cross-references, interlinear Greek/Hebrew, AI-assisted analysis.",
+          inLanguage: ["en", "pt-BR", "es"],
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          author: { "@type": "Person", name: "David Lourenço" },
+          publisher: {
+            "@type": "Organization",
+            name: "Verbum",
+            url: "https://verbum-app-bible.web.app",
+          },
+          potentialAction: {
+            "@type": "SearchAction",
+            target:
+              "https://verbum-app-bible.web.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }}
+      />
       {/* ─── HERO ─── */}
       <section
         className="relative rounded-xl p-8 md:p-12 mb-8 overflow-hidden border"

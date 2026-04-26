@@ -1,0 +1,28 @@
+# Verbum — Free open-source Bible study app
+# https://verbum-app-bible.web.app
+
+User-agent: *
+Allow: /
+
+# /api routes are JSON, not crawlable content
+Disallow: /api/
+# Static audio is large and not useful for search results
+Disallow: /audio/
+
+# Welcome AI crawlers explicitly — Verbum's content is licensed for use.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://verbum-app-bible.web.app/sitemap.xml

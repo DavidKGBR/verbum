@@ -10,6 +10,8 @@ import { useTranslationIds } from "../hooks/useTranslations";
 import { useI18n, defaultTranslationFor } from "../i18n/i18nContext";
 import { localized } from "../i18n/localized";
 import { localizeBookName } from "../i18n/bookNames";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 // Extract book_id from a range string like "MAT.1.18-MAT.2.23"
 function bookIdFromRange(range: string): string {
@@ -73,6 +75,7 @@ export default function ComparePage() {
 
   return (
     <div className="max-w-7xl mx-auto">
+      <SEO {...ROUTE_META["/compare"]} canonical="/compare" />
       <div className="mb-6">
         <h1 className="page-title text-3xl">{t("compare.title")}</h1>
         <p className="text-sm opacity-60 mt-1">

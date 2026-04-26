@@ -1,4 +1,6 @@
 import { useI18n } from "../i18n/i18nContext";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 /**
  * /about — Dedicated page for the project's purpose + the AI-partnership note.
@@ -17,6 +19,7 @@ export default function AboutPage() {
 
   return (
     <div className="max-w-2xl mx-auto prose prose-sm sm:prose-base">
+      <SEO {...ROUTE_META["/about"]} canonical="/about" />
       <h1 className="page-title text-3xl mb-6">{content.title}</h1>
 
       <p className="text-sm opacity-70 italic">{content.lead}</p>

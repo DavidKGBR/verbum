@@ -5,6 +5,8 @@ import { useI18n, type Locale } from "../i18n/i18nContext";
 import { PERSONS } from "../i18n/personNames";
 import { useScrollToExpanded } from "../hooks/useScrollIntoViewOnChange";
 import { PLACES } from "../i18n/placeNames";
+import SEO from "../components/SEO";
+import { ROUTE_META } from "../seoMeta";
 
 /**
  * The dictionary backend (Easton + Smith) is English-only. When a PT/ES user
@@ -75,6 +77,7 @@ export default function DictionaryPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <SEO {...ROUTE_META["/dictionary"]} canonical="/dictionary" />
       <div className="mb-6">
         <h1 className="page-title text-3xl">{t("dictionary.title")}</h1>
         <p className="text-sm opacity-60 mt-1">{t("dictionary.subtitle")}</p>

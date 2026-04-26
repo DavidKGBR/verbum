@@ -1,0 +1,67 @@
+# Verbum
+
+> Verbum is a free, open-source Bible study app combining 12 translations
+> across 5 languages (English, Portuguese, Spanish, French, German), 344K
+> cross-references from OpenBible, interlinear Hebrew and Greek with
+> Strong's tagging, 62K manually-labelled emotional sentiment annotations
+> in PT and ES, AI-assisted verse explanations, biblical maps, and
+> topical/thematic indexes. No paywall, no advertising, MIT-licensed
+> source. https://verbum-app-bible.web.app
+
+The full source code and dataset live at
+https://github.com/DavidKGBR/verbum.
+
+## Pages
+
+- [Home](https://verbum-app-bible.web.app/): Daily verse, translation overview, getting started.
+- [About](https://verbum-app-bible.web.app/about): Why the project exists and the human/AI partnership behind it.
+- [Reader](https://verbum-app-bible.web.app/reader): Bible reader with five modes — single, parallel, immersive 3D, interlinear (Greek/Hebrew with Strong's), and structural literary view.
+- [Search](https://verbum-app-bible.web.app/search): Full-text search across all 12 translations.
+- [Compare](https://verbum-app-bible.web.app/compare): Side-by-side comparison of any verse across up to 12 translations.
+- [Dictionary](https://verbum-app-bible.web.app/dictionary): 14,800 entries from Easton's and Smith's Bible dictionaries.
+- [Word Study](https://verbum-app-bible.web.app/word-study): Strong's-keyed deep dive on Hebrew/Greek terms.
+- [Map](https://verbum-app-bible.web.app/map): Interactive map of 1,600 biblical places with coordinates.
+- [Timeline](https://verbum-app-bible.web.app/timeline): 4,000 events across the Old and New Testaments.
+- [Topics](https://verbum-app-bible.web.app/topics): 20,000 topical tags from Nave's Topical Bible.
+- [People](https://verbum-app-bible.web.app/people): 3,000 named individuals from Genesis to Revelation.
+- [Places](https://verbum-app-bible.web.app/places): 1,600 cities, regions, mountains, and bodies of water.
+- [Authors](https://verbum-app-bible.web.app/authors): The human authors of Scripture with biographies and writing context.
+- [Emotional Landscape](https://verbum-app-bible.web.app/emotional): Per-verse sentiment polarity and per-book emotional arcs.
+- [Connections](https://verbum-app-bible.web.app/connections): 344K cross-references rendered as arc diagram, semantic graph, and intertextual citations.
+- [Concepts](https://verbum-app-bible.web.app/concepts): Semantic threads and Hebrew→Greek genealogy of theological vocabulary.
+- [Structure](https://verbum-app-bible.web.app/structure): Chiasms and literary parallelism.
+- [Privacy](https://verbum-app-bible.web.app/privacy): LGPD/GDPR-compliant data policy.
+
+## Blog
+
+- [Why Verbum exists](https://verbum-app-bible.web.app/blog/why-verbum-exists): Project manifesto, what's inside, and why everything is free.
+- [How we manually labelled 62,209 verses for sentiment in Portuguese and Spanish](https://verbum-app-bible.web.app/blog/sentiment-labels-pt-es): Methodology for the emotional landscape dataset.
+- [A practical guide to reading interlinear Hebrew and Greek](https://verbum-app-bible.web.app/blog/interlinear-strongs-explained): Tutorial on Strong's numbers and the interlinear reader.
+- [Building Verbum with Claude as pair programmer](https://verbum-app-bible.web.app/blog/built-with-claude): Honest postmortem of AI-assisted full-stack software development.
+- [Twelve translations, five languages, one comparison view](https://verbum-app-bible.web.app/blog/twelve-translations): Why these specific translations were chosen.
+
+## API
+
+Base URL: `https://verbum-app-bible.web.app/api/v1`
+
+Free, unauthenticated, JSON. Highlights:
+
+- `GET /verses/search?q=love&translation=kjv&limit=20` — full-text search
+- `GET /reader/page?translation=kjv&book=JHN&chapter=1` — read a chapter
+- `GET /reader/parallel?book=JHN&chapter=1&translations=kjv,nvi,rvr` — parallel
+- `GET /verses/{verse_id}` — single verse
+- `GET /lexicon/{strongs_id}` — Strong's entry
+- `GET /lexicon/interlinear?book=JHN&chapter=1` — interlinear words
+- `GET /crossrefs/{verse_id}` — cross-references for a verse
+- `GET /places` and `GET /places/geo` — biblical places, optionally as GeoJSON
+- `GET /people` — biblical people
+- `GET /emotional/landscape?book=PSA` — sentiment data per chapter
+
+## Licensing
+
+- Source code: MIT (https://github.com/DavidKGBR/verbum/blob/main/LICENSE)
+- Bible translations: each translation's own license — KJV/BBE/ASV/WEB/Darby (public domain), NVI/RA/ACF/RVR/APEE (free public use), Luther 1545 (public domain), Neue Genfer Übersetzung (free distribution).
+- Cross-references: OpenBible.info CC-BY 4.0
+- Strong's lexicon, Easton's, Smith's: public domain
+- STEPBible interlinear: CC-BY 4.0
+- Manual sentiment labels: CC-BY 4.0 (Verbum project, April 2026)

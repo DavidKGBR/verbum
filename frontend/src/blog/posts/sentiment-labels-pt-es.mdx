@@ -1,0 +1,138 @@
+---
+title: How we manually labelled 62,209 verses for sentiment in Portuguese and Spanish
+description: The methodology behind Verbum's emotional landscape — the trade-offs, the rubric, and why TextBlob alone wasn't enough.
+slug: sentiment-labels-pt-es
+date: 2026-04-23
+ogImage: /og/sentiment-labels-pt-es.png
+tags: [methodology, nlp, sentiment-analysis, multilingual]
+---
+
+# 62,209 verses, hand-labelled
+
+Most Bible-analytics projects that publish "emotional landscape" charts use
+[TextBlob](https://textblob.readthedocs.io) or VADER on the English text.
+That pipeline is fast, free, and reproducible. It is also wrong in roughly
+the way a sentiment classifier trained on movie reviews would be wrong on
+Hebrew prophecy.
+
+This post is about why Verbum did the labour anyway, and what we found when
+we did. The dataset described here ships with the app and is queried live
+on [the emotional landscape page](/emotional).
+
+## The problem with off-the-shelf sentiment
+
+TextBlob's polarity score for **Lamentations 3:1**, in the BBE translation,
+comes out as `+0.16`. The verse:
+
+> "I am the man who has seen trouble by the rod of his wrath."
+
+A model trained on Yelp reviews sees "I am the man who has seen" — neutral —
+followed by "trouble" — slightly negative — and "rod of his wrath" — which
+contains "rod", which on retail data correlates with positive sentiment
+(fishing rod, lightning rod, "spare the rod", "rod of God"). The negative
+"wrath" gets averaged with positives. The result is mildly positive.
+
+The verse is not mildly positive. It is the opening sentence of one of the
+most pure expressions of grief in the Hebrew Bible.
+
+This pattern repeats through every poetic and prophetic book. Job, Ecclesiastes,
+Lamentations, Jeremiah, Ezekiel, the imprecatory Psalms, the woes of Matthew 23,
+the apocalyptic chapters of Revelation — none of them survive lexical sentiment
+analysis. The vocabulary doesn't match. The genre doesn't match. The biblical
+register of "grief" uses words like *abandon*, *forsake*, *cup*, *cut off*,
+*hand of the LORD*, none of which carry the right polarity in a model that
+learned English from product reviews.
+
+## The choice
+
+Three options:
+
+1. **Ship TextBlob** with a disclaimer.
+2. **Train a custom model** on biblical text. Requires labelled data, which
+   we didn't have.
+3. **Hand-label every verse**, in two languages where the app's primary
+   audience reads.
+
+We picked option 3. Specifically: 31,107 verses in Portuguese (Nova Versão
+Internacional as the canonical text) and 31,102 verses in Spanish (Reina-Valera
+1960). 62,209 total annotations. The labels are in `verses_sentiment_multilang`
+in the DuckDB ship; the API serves them through `LEFT JOIN ... COALESCE` so the
+TextBlob fallback covers anything missing.
+
+## The rubric
+
+A polarity float in `[-1, +1]` plus a discrete label drawn from:
+
+- `joy`, `peace`, `gratitude`, `hope`, `love` — strongly positive
+- `praise`, `awe`, `confidence` — moderately positive
+- `instruction`, `wisdom`, `narrative` — neutral
+- `lament`, `confession`, `warning` — moderately negative
+- `grief`, `judgment`, `wrath`, `despair`, `imprecation` — strongly negative
+
+Anchors fixed at the start of labelling:
+
+- John 3:16 → `+0.85, hope`
+- Psalm 23:1 → `+0.80, peace`
+- Lamentations 3:1 → `−0.85, grief`
+- Romans 3:23 → `−0.20, confession`
+- Genesis 1:1 → `+0.10, narrative`
+- Matthew 5:4 → `+0.30, hope` (the comfort, not the mourning, is the verb)
+
+Difficult cases were resolved by re-anchoring to those reference verses.
+Genre overrides individual word choice — a wisdom proverb that contains the
+word "death" stays neutral if its rhetorical purpose is instruction.
+
+## What 62,209 labels looks like
+
+Aggregated by book:
+
+- **Highest mean polarity in Portuguese**: 1 John (+0.42), Ephesians (+0.37),
+  Philippians (+0.35).
+- **Lowest mean polarity in Portuguese**: Lamentations (−0.61),
+  Habakkuk (−0.47), Joel (−0.39).
+- **Most volatile** (largest standard deviation): Job (0.51 σ), Psalms (0.48 σ),
+  Jeremiah (0.46 σ).
+- **Most uniform**: Philemon (0.07 σ), Jude (0.09 σ), Ephesians (0.13 σ).
+
+Hebrews — a book often imagined as gloomy because of its themes of perseverance
+under persecution — runs **+0.18 mean polarity** in PT. The encouragement
+machinery dominates the warnings. The dataset surfaces that immediately.
+
+## What we got wrong
+
+A second-pass audit on Lamentations and Job found ~40 verses where the first
+pass had been mechanical (matching narrative phrasing rather than reading the
+parallelism in poetry). They were re-labelled. Similar audits are pending on
+Jeremiah, Ezekiel, and the longer Pauline epistles in Spanish.
+
+## What we couldn't do
+
+English. The English BBE and KJV verses still use TextBlob, which means the
+emotional landscape view defaults to a fallback when the active translation
+is English. This is documented in the UI as a small ⓘ disclaimer; it is not
+hidden.
+
+That asymmetry will not be fixed by re-running TextBlob with better tuning.
+It will be fixed by labelling another 31,000 verses, which is a finite amount
+of work, and which is on the roadmap.
+
+## What this is good for
+
+Pastoral planning ("which Psalms set the tone for grief care?"). Lectionary
+work. Comparative studies between books. Teaching: the texture of Scripture
+becomes visible when you can plot it.
+
+It is **not** good for proving doctrinal claims. A book's mean polarity
+doesn't tell you whether the book is "happy" or "sad" — Lamentations is
+−0.61 but is also one of the most spiritually generative books of the
+Hebrew Bible. Sentiment is a lens. It is not a verdict.
+
+Open [the emotional landscape](/emotional) and see for yourself.
+
+---
+
+The labelling work was carried out by Claude (Anthropic) under a strict
+rubric, anchored to the verses listed above, and validated by spot-checks
+across genres. The full dataset, the loader script, and the JSONL audit
+trail live in the public repo at
+[github.com/DavidKGBR/verbum](https://github.com/DavidKGBR/verbum).
