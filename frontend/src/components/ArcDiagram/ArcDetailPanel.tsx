@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchCrossrefsBetween, type DetailedCrossRef } from "../../services/api";
-import { localizeBookName } from "../../i18n/bookNames";
-import { useI18n } from "../../i18n/i18nContext";
+import { localizeBookName, localizeBookAbbrev } from "../../i18n/bookNames";
+import { useI18n, type Locale } from "../../i18n/i18nContext";
 
 interface Props {
   sourceBook: string;
@@ -25,14 +25,22 @@ function shortRef(verseId: string): string {
   return `${parts[1]}:${parts[2]}`;
 }
 
-/** "Jer 2:12" from "JER.2.12" for the target side. */
-function shortRefWithBook(verseId: string, fallback?: string | null): string {
-  if (fallback) return fallback;
+/** Locale-aware "Ap 22:4" / "Rev 22:4" / "Ap 22:4" from "REV.22.4".
+ *
+ * The backend's `target_ref` is always English ("Revelation 22:4"), so we
+ * ignore it for non-English locales and rebuild from the canonical verse_id
+ * via the localized abbreviation table. English keeps the backend string
+ * (which already carries the human form like "Rev 22:4"). */
+function shortRefWithBook(
+  verseId: string,
+  fallback: string | null | undefined,
+  locale: Locale,
+): string {
   const parts = verseId.split(".");
-  if (parts.length < 3) return verseId;
-  // Title-case the book id for readability
-  const book = parts[0].charAt(0) + parts[0].slice(1).toLowerCase();
-  return `${book} ${parts[1]}:${parts[2]}`;
+  if (parts.length < 3) return fallback || verseId;
+  if (locale === "en" && fallback) return fallback;
+  const abbrev = localizeBookAbbrev(parts[0], locale);
+  return `${abbrev} ${parts[1]}:${parts[2]}`;
 }
 
 export default function ArcDetailPanel({
@@ -183,7 +191,7 @@ export default function ArcDetailPanel({
                         </span>
                         <span className="opacity-50">→</span>
                         <span className="text-[var(--color-gold)] font-bold truncate">
-                          {shortRefWithBook(cr.target_verse_id, cr.target_ref)}
+                          {shortRefWithBook(cr.target_verse_id, cr.target_ref, locale)}
                         </span>
                         <span className="opacity-40 ml-auto">▸</span>
                       </button>
