@@ -1,0 +1,222 @@
+{"verse_id":"ECC.1.1","polarity":0.10,"label":"narrative","confidence":0.85,"notes":"superscription"}
+{"verse_id":"ECC.1.2","polarity":-0.65,"label":"despair","confidence":0.92,"notes":"famous: vanity of vanities, all is vanity"}
+{"verse_id":"ECC.1.3","polarity":-0.50,"label":"despair","confidence":0.88,"notes":"what profit has man in all his labor under sun"}
+{"verse_id":"ECC.1.4","polarity":-0.20,"label":"narrative","confidence":0.82,"notes":"generations come and go, earth abides — melancholic continuity"}
+{"verse_id":"ECC.1.5","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"sun rises and sets, returns — cyclic futility"}
+{"verse_id":"ECC.1.6","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"wind goes south, turns north — cyclical"}
+{"verse_id":"ECC.1.7","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"rivers run to sea, sea not full"}
+{"verse_id":"ECC.1.8","polarity":-0.40,"label":"despair","confidence":0.85,"notes":"all things wearisome; eye not satisfied with seeing"}
+{"verse_id":"ECC.1.9","polarity":-0.45,"label":"despair","confidence":0.85,"notes":"famous: nothing new under the sun"}
+{"verse_id":"ECC.1.10","polarity":-0.40,"label":"despair","confidence":0.82,"notes":"already been in ages before us"}
+{"verse_id":"ECC.1.11","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"no remembrance of former, none of latter"}
+{"verse_id":"ECC.1.12","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"I the Preacher was king over Israel"}
+{"verse_id":"ECC.1.13","polarity":-0.40,"label":"despair","confidence":0.85,"notes":"applied heart to seek wisdom — sore travail given by God"}
+{"verse_id":"ECC.1.14","polarity":-0.65,"label":"despair","confidence":0.92,"notes":"famous: all vanity and vexation of spirit"}
+{"verse_id":"ECC.1.15","polarity":-0.40,"label":"instruction","confidence":0.85,"notes":"crooked cannot be made straight"}
+{"verse_id":"ECC.1.16","polarity":0.20,"label":"narrative","confidence":0.80,"notes":"I have come to great estate, increased in wisdom"}
+{"verse_id":"ECC.1.17","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"to know wisdom, madness, folly — also vexation of spirit"}
+{"verse_id":"ECC.1.18","polarity":-0.65,"label":"despair","confidence":0.90,"notes":"famous: in much wisdom is much grief; he who increases knowledge increases sorrow"}
+{"verse_id":"ECC.2.1","polarity":-0.50,"label":"despair","confidence":0.88,"notes":"tested with mirth, behold also vanity"}
+{"verse_id":"ECC.2.2","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"laughter is mad, what does pleasure accomplish"}
+{"verse_id":"ECC.2.3","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"give heart to wine, lay hold on folly to see what was good"}
+{"verse_id":"ECC.2.4","polarity":0.10,"label":"narrative","confidence":0.78,"notes":"made great works, built houses, planted vineyards"}
+{"verse_id":"ECC.2.5","polarity":0.20,"label":"narrative","confidence":0.78,"notes":"made gardens and orchards, planted trees"}
+{"verse_id":"ECC.2.6","polarity":0.20,"label":"narrative","confidence":0.78,"notes":"made pools to water forest of trees"}
+{"verse_id":"ECC.2.7","polarity":0.20,"label":"narrative","confidence":0.78,"notes":"got servants, herds, flocks above all before me"}
+{"verse_id":"ECC.2.8","polarity":0.20,"label":"narrative","confidence":0.78,"notes":"gathered silver, gold, peculiar treasure of kings"}
+{"verse_id":"ECC.2.9","polarity":0.30,"label":"narrative","confidence":0.80,"notes":"became great, increased above all before me; wisdom remained"}
+{"verse_id":"ECC.2.10","polarity":0.40,"label":"narrative","confidence":0.82,"notes":"whatever eyes desired, I withheld not — heart rejoiced in labor"}
+{"verse_id":"ECC.2.11","polarity":-0.65,"label":"despair","confidence":0.92,"notes":"all vanity and vexation of spirit, no profit under sun"}
+{"verse_id":"ECC.2.12","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"turned to behold wisdom and folly"}
+{"verse_id":"ECC.2.13","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"wisdom excels folly as light excels darkness"}
+{"verse_id":"ECC.2.14","polarity":-0.20,"label":"despair","confidence":0.82,"notes":"wise has eyes; fool walks in darkness — but one event happens to both"}
+{"verse_id":"ECC.2.15","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"why am I more wise — also vanity"}
+{"verse_id":"ECC.2.16","polarity":-0.65,"label":"despair","confidence":0.90,"notes":"no remembrance of wise more than fool — wise dies as fool"}
+{"verse_id":"ECC.2.17","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"hated life because work grievous; all vanity"}
+{"verse_id":"ECC.2.18","polarity":-0.70,"label":"despair","confidence":0.90,"notes":"hated all my labor I leave to him after me"}
+{"verse_id":"ECC.2.19","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"who knows if heir will be wise or fool — also vanity"}
+{"verse_id":"ECC.2.20","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"caused heart to despair of all labor"}
+{"verse_id":"ECC.2.21","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"work in wisdom, leave to one who has not labored — vanity and great evil"}
+{"verse_id":"ECC.2.22","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"what has man of all his labor and vexation"}
+{"verse_id":"ECC.2.23","polarity":-0.75,"label":"grief","confidence":0.90,"notes":"all his days sorrows; heart not rest in night"}
+{"verse_id":"ECC.2.24","polarity":0.55,"label":"hope","confidence":0.88,"notes":"famous carpe diem refrain: nothing better than to eat, drink, enjoy good of labor — gift from God"}
+{"verse_id":"ECC.2.25","polarity":0.20,"label":"narrative","confidence":0.78,"notes":"who can eat or have enjoyment more than I"}
+{"verse_id":"ECC.2.26","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"to good man God gives wisdom; to sinner travail; also vanity"}
+{"verse_id":"ECC.3.1","polarity":0.30,"label":"instruction","confidence":0.92,"notes":"famous: to every thing there is a season"}
+{"verse_id":"ECC.3.2","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"time to be born, die; plant, pluck up"}
+{"verse_id":"ECC.3.3","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"time to kill, heal; break down, build up"}
+{"verse_id":"ECC.3.4","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"time to weep, laugh; mourn, dance"}
+{"verse_id":"ECC.3.5","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"time to scatter stones, gather; embrace, refrain"}
+{"verse_id":"ECC.3.6","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"time to get, lose; keep, cast away"}
+{"verse_id":"ECC.3.7","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"time to rend, sew; silence, speak"}
+{"verse_id":"ECC.3.8","polarity":0.05,"label":"instruction","confidence":0.85,"notes":"time to love, hate; war, peace"}
+{"verse_id":"ECC.3.9","polarity":-0.40,"label":"despair","confidence":0.85,"notes":"refrain — what profit has worker"}
+{"verse_id":"ECC.3.10","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"travail God has given sons of men"}
+{"verse_id":"ECC.3.11","polarity":0.65,"label":"awe","confidence":0.92,"notes":"famous: made everything beautiful in his time; set eternity in heart"}
+{"verse_id":"ECC.3.12","polarity":0.55,"label":"hope","confidence":0.88,"notes":"no good in them but to rejoice and do good"}
+{"verse_id":"ECC.3.13","polarity":0.65,"label":"hope","confidence":0.90,"notes":"every man should eat, drink, enjoy labor — gift of God"}
+{"verse_id":"ECC.3.14","polarity":0.45,"label":"awe","confidence":0.85,"notes":"whatever God does shall be forever; men should fear before him"}
+{"verse_id":"ECC.3.15","polarity":-0.10,"label":"narrative","confidence":0.80,"notes":"that which has been is now; God requires what is past"}
+{"verse_id":"ECC.3.16","polarity":-0.55,"label":"judgment","confidence":0.85,"notes":"saw under sun place of judgment, wickedness was there"}
+{"verse_id":"ECC.3.17","polarity":0.20,"label":"hope","confidence":0.82,"notes":"God shall judge righteous and wicked"}
+{"verse_id":"ECC.3.18","polarity":-0.30,"label":"narrative","confidence":0.80,"notes":"God tests sons of men to see they are like beasts"}
+{"verse_id":"ECC.3.19","polarity":-0.65,"label":"despair","confidence":0.92,"notes":"one event happens to men and beasts; man no preeminence; all vanity"}
+{"verse_id":"ECC.3.20","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"all go to one place, all of dust, all turn to dust"}
+{"verse_id":"ECC.3.21","polarity":-0.30,"label":"despair","confidence":0.85,"notes":"who knows spirit of man goes upward, beast downward"}
+{"verse_id":"ECC.3.22","polarity":0.45,"label":"hope","confidence":0.85,"notes":"nothing better than rejoice in own works — for who shall bring him to see"}
+{"verse_id":"ECC.4.1","polarity":-0.85,"label":"grief","confidence":0.92,"notes":"oppressions under sun; tears of oppressed, no comforter"}
+{"verse_id":"ECC.4.2","polarity":-0.75,"label":"despair","confidence":0.92,"notes":"praised dead more than living"}
+{"verse_id":"ECC.4.3","polarity":-0.85,"label":"despair","confidence":0.92,"notes":"better than both is he not yet been, has not seen evil work"}
+{"verse_id":"ECC.4.4","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"every right work man is envied of neighbor — vanity"}
+{"verse_id":"ECC.4.5","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"fool folds hands, eats own flesh"}
+{"verse_id":"ECC.4.6","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"better handful with quietness than two with travail"}
+{"verse_id":"ECC.4.7","polarity":-0.45,"label":"despair","confidence":0.85,"notes":"returned, saw vanity under sun"}
+{"verse_id":"ECC.4.8","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"one alone, no second; never satisfied — sore travail"}
+{"verse_id":"ECC.4.9","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: two are better than one"}
+{"verse_id":"ECC.4.10","polarity":0.45,"label":"instruction","confidence":0.88,"notes":"if they fall, one lifts; woe to him alone when falls"}
+{"verse_id":"ECC.4.11","polarity":0.50,"label":"instruction","confidence":0.85,"notes":"two together, they have heat — one alone how warm"}
+{"verse_id":"ECC.4.12","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: threefold cord not quickly broken"}
+{"verse_id":"ECC.4.13","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better poor wise child than old foolish king"}
+{"verse_id":"ECC.4.14","polarity":0.10,"label":"narrative","confidence":0.80,"notes":"out of prison comes to reign; born in his kingdom becomes poor"}
+{"verse_id":"ECC.4.15","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"saw all living walking with second child"}
+{"verse_id":"ECC.4.16","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"no end of all people; latter shall not rejoice in him — vanity"}
+{"verse_id":"ECC.5.1","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"keep foot when go to house of God; ready to hear more than offer"}
+{"verse_id":"ECC.5.2","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"be not rash with mouth; God in heaven, let words be few"}
+{"verse_id":"ECC.5.3","polarity":-0.10,"label":"instruction","confidence":0.80,"notes":"dream comes through multitude of business; fool's voice multitude of words"}
+{"verse_id":"ECC.5.4","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"when vow vow to God, defer not to pay"}
+{"verse_id":"ECC.5.5","polarity":0.20,"label":"instruction","confidence":0.85,"notes":"better not vow than vow and not pay"}
+{"verse_id":"ECC.5.6","polarity":-0.30,"label":"warning","confidence":0.85,"notes":"suffer not mouth to cause flesh to sin — God angry at voice"}
+{"verse_id":"ECC.5.7","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"in multitude of dreams divers vanities; fear God"}
+{"verse_id":"ECC.5.8","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"if oppression of poor seen, marvel not — higher one above"}
+{"verse_id":"ECC.5.9","polarity":0.10,"label":"narrative","confidence":0.78,"notes":"profit of earth for all; king served by field"}
+{"verse_id":"ECC.5.10","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"famous: lover of silver not satisfied with silver — also vanity"}
+{"verse_id":"ECC.5.11","polarity":-0.45,"label":"despair","confidence":0.85,"notes":"goods increase, eaters increase; what good to owners"}
+{"verse_id":"ECC.5.12","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"sleep of laborer is sweet; abundance of rich not let him sleep"}
+{"verse_id":"ECC.5.13","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"sore evil saw under sun — riches kept to hurt of owners"}
+{"verse_id":"ECC.5.14","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"riches perish by evil travail; nothing left in hand for sons"}
+{"verse_id":"ECC.5.15","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"as came forth naked, return — nothing of his labor takes away"}
+{"verse_id":"ECC.5.16","polarity":-0.70,"label":"despair","confidence":0.90,"notes":"sore evil — what profit labored for wind"}
+{"verse_id":"ECC.5.17","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"all days eats in darkness, much sorrow, sickness"}
+{"verse_id":"ECC.5.18","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous carpe diem: good for one to eat, drink, enjoy good of labor — his portion"}
+{"verse_id":"ECC.5.19","polarity":0.70,"label":"hope","confidence":0.92,"notes":"every man God gives riches to enjoy them — gift of God"}
+{"verse_id":"ECC.5.20","polarity":0.75,"label":"hope","confidence":0.92,"notes":"shall not much remember days of life; God answers in joy of heart"}
+{"verse_id":"ECC.6.1","polarity":-0.50,"label":"despair","confidence":0.85,"notes":"evil seen under sun, common among men"}
+{"verse_id":"ECC.6.2","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"man God gives riches but no power to eat — stranger eats; vanity, evil disease"}
+{"verse_id":"ECC.6.3","polarity":-0.75,"label":"despair","confidence":0.90,"notes":"if begets hundred children, lives many years — but soul not filled — untimely birth better"}
+{"verse_id":"ECC.6.4","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"comes vain, departs in darkness, name covered with darkness"}
+{"verse_id":"ECC.6.5","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"untimely birth has not seen sun — yet has more rest than this man"}
+{"verse_id":"ECC.6.6","polarity":-0.65,"label":"despair","confidence":0.88,"notes":"if lives 1000 years twice, no good — all go to one place"}
+{"verse_id":"ECC.6.7","polarity":-0.50,"label":"despair","confidence":0.85,"notes":"all labor of man for mouth, yet appetite not filled"}
+{"verse_id":"ECC.6.8","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"what has wise more than fool? What poor before living?"}
+{"verse_id":"ECC.6.9","polarity":-0.60,"label":"despair","confidence":0.88,"notes":"better sight of eyes than wandering desire — also vanity, vexation"}
+{"verse_id":"ECC.6.10","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"that which has been is named already; man cannot contend with mightier"}
+{"verse_id":"ECC.6.11","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"many things increase vanity — what is man better"}
+{"verse_id":"ECC.6.12","polarity":-0.50,"label":"despair","confidence":0.88,"notes":"who knows what is good for man in days of vain life — passes as shadow"}
+{"verse_id":"ECC.7.1","polarity":-0.10,"label":"instruction","confidence":0.85,"notes":"good name better than precious ointment; day of death than day of birth"}
+{"verse_id":"ECC.7.2","polarity":-0.20,"label":"instruction","confidence":0.85,"notes":"better go to house of mourning than feasting — end of all men"}
+{"verse_id":"ECC.7.3","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"sorrow better than laughter — by sadness of countenance heart made better"}
+{"verse_id":"ECC.7.4","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"heart of wise in house of mourning; heart of fools in house of mirth"}
+{"verse_id":"ECC.7.5","polarity":0.10,"label":"instruction","confidence":0.85,"notes":"better hear rebuke of wise than song of fools"}
+{"verse_id":"ECC.7.6","polarity":-0.30,"label":"instruction","confidence":0.85,"notes":"laughter of fool as crackling thorns under pot — also vanity"}
+{"verse_id":"ECC.7.7","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"oppression makes wise man mad; gift destroys heart"}
+{"verse_id":"ECC.7.8","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"better end of thing than beginning; patient in spirit better than proud"}
+{"verse_id":"ECC.7.9","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"be not hasty to be angry — anger rests in bosom of fools"}
+{"verse_id":"ECC.7.10","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"say not why former days better — not wise to inquire"}
+{"verse_id":"ECC.7.11","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"wisdom good with inheritance, profit to those who see sun"}
+{"verse_id":"ECC.7.12","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"wisdom defense, money defense; wisdom gives life to those who have it"}
+{"verse_id":"ECC.7.13","polarity":0.30,"label":"awe","confidence":0.82,"notes":"consider work of God — who can make straight what he made crooked"}
+{"verse_id":"ECC.7.14","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"in day of prosperity be joyful; in adversity consider"}
+{"verse_id":"ECC.7.15","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"days of vanity I saw — just man perishes in righteousness; wicked prolongs days"}
+{"verse_id":"ECC.7.16","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"be not righteous overmuch nor over-wise — why destroy thyself"}
+{"verse_id":"ECC.7.17","polarity":-0.40,"label":"warning","confidence":0.82,"notes":"be not over much wicked nor foolish — why die before time"}
+{"verse_id":"ECC.7.18","polarity":0.40,"label":"hope","confidence":0.85,"notes":"good thou shouldest take hold; he who fears God shall come forth of all"}
+{"verse_id":"ECC.7.19","polarity":0.55,"label":"instruction","confidence":0.88,"notes":"wisdom strengthens wise more than ten mighty men"}
+{"verse_id":"ECC.7.20","polarity":-0.40,"label":"confession","confidence":0.85,"notes":"there is no just man on earth that does good and sins not"}
+{"verse_id":"ECC.7.21","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"take no heed to all words spoken — lest hear servant curse thee"}
+{"verse_id":"ECC.7.22","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"thy heart knows thou hast cursed others"}
+{"verse_id":"ECC.7.23","polarity":-0.40,"label":"despair","confidence":0.85,"notes":"all this proved by wisdom; said I will be wise — but it was far from me"}
+{"verse_id":"ECC.7.24","polarity":-0.45,"label":"despair","confidence":0.85,"notes":"that which is far off and exceeding deep — who can find"}
+{"verse_id":"ECC.7.25","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"applied heart to know wisdom, reason — wickedness of folly"}
+{"verse_id":"ECC.7.26","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"more bitter than death the woman whose heart is snares — pleases God shall escape"}
+{"verse_id":"ECC.7.27","polarity":-0.30,"label":"narrative","confidence":0.80,"notes":"behold this I have found, said the preacher, counting one by one"}
+{"verse_id":"ECC.7.28","polarity":-0.50,"label":"despair","confidence":0.82,"notes":"one man among thousand have I found; woman among all not found"}
+{"verse_id":"ECC.7.29","polarity":-0.30,"label":"confession","confidence":0.85,"notes":"God made man upright; but they sought out many inventions"}
+{"verse_id":"ECC.8.1","polarity":0.45,"label":"praise","confidence":0.85,"notes":"who is as wise man? wisdom makes face shine"}
+{"verse_id":"ECC.8.2","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"keep king's commandment in regard of oath of God"}
+{"verse_id":"ECC.8.3","polarity":0.10,"label":"instruction","confidence":0.80,"notes":"be not hasty to go from his presence; do not stand in evil thing"}
+{"verse_id":"ECC.8.4","polarity":-0.10,"label":"narrative","confidence":0.78,"notes":"king's word has power; who say what doest thou"}
+{"verse_id":"ECC.8.5","polarity":0.30,"label":"instruction","confidence":0.82,"notes":"keep commandment, no evil; wise heart discerns time and judgment"}
+{"verse_id":"ECC.8.6","polarity":0.10,"label":"instruction","confidence":0.80,"notes":"every purpose has time and judgment; misery great upon him"}
+{"verse_id":"ECC.8.7","polarity":-0.30,"label":"despair","confidence":0.82,"notes":"knows not what shall be; who can tell when shall be"}
+{"verse_id":"ECC.8.8","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"no man has power over spirit nor day of death — wickedness not deliver"}
+{"verse_id":"ECC.8.9","polarity":-0.40,"label":"despair","confidence":0.82,"notes":"saw all this; man rules over another to his own hurt"}
+{"verse_id":"ECC.8.10","polarity":-0.55,"label":"despair","confidence":0.85,"notes":"saw wicked buried, came in remembrance — also vanity"}
+{"verse_id":"ECC.8.11","polarity":-0.65,"label":"warning","confidence":0.88,"notes":"sentence not executed speedily; heart fully set to do evil"}
+{"verse_id":"ECC.8.12","polarity":0.45,"label":"hope","confidence":0.85,"notes":"sinner does evil hundred times; yet I know it shall be well with those that fear God"}
+{"verse_id":"ECC.8.13","polarity":-0.40,"label":"judgment","confidence":0.85,"notes":"shall not be well with wicked; not prolong days because fears not God"}
+{"verse_id":"ECC.8.14","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"vanity on earth — just men receive according to wicked work; wicked according to just"}
+{"verse_id":"ECC.8.15","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: commended mirth — nothing better than to eat, drink, be merry"}
+{"verse_id":"ECC.8.16","polarity":-0.30,"label":"narrative","confidence":0.82,"notes":"applied heart to know wisdom; saw business done — sees no sleep day or night"}
+{"verse_id":"ECC.8.17","polarity":-0.45,"label":"despair","confidence":0.85,"notes":"man cannot find out work of God under sun"}
+{"verse_id":"ECC.9.1","polarity":-0.30,"label":"despair","confidence":0.85,"notes":"righteous and wise in hand of God; man knows not love or hatred"}
+{"verse_id":"ECC.9.2","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"all things alike — one event to righteous and wicked; good and evil"}
+{"verse_id":"ECC.9.3","polarity":-0.75,"label":"despair","confidence":0.92,"notes":"evil among all under sun — heart of sons full of evil; madness; then to dead"}
+{"verse_id":"ECC.9.4","polarity":0.30,"label":"hope","confidence":0.85,"notes":"famous: there is hope for living; better living dog than dead lion"}
+{"verse_id":"ECC.9.5","polarity":-0.30,"label":"despair","confidence":0.85,"notes":"living know they shall die; dead know nothing"}
+{"verse_id":"ECC.9.6","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"their love, hatred, envy perished — no more portion in any thing under sun"}
+{"verse_id":"ECC.9.7","polarity":0.85,"label":"hope","confidence":0.92,"notes":"famous carpe diem: go thy way, eat bread with joy, drink wine with merry heart — God accepts works"}
+{"verse_id":"ECC.9.8","polarity":0.65,"label":"hope","confidence":0.88,"notes":"let garments always be white; let head lack no ointment"}
+{"verse_id":"ECC.9.9","polarity":0.75,"label":"love","confidence":0.92,"notes":"famous: live joyfully with wife you love all days — your portion in life"}
+{"verse_id":"ECC.9.10","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: whatsoever hand finds to do, do with thy might — no work in grave"}
+{"verse_id":"ECC.9.11","polarity":-0.45,"label":"despair","confidence":0.88,"notes":"famous: race not to swift, battle not to strong — time and chance happen to all"}
+{"verse_id":"ECC.9.12","polarity":-0.55,"label":"despair","confidence":0.88,"notes":"man knows not his time; like fish, birds — sons of men snared in evil time"}
+{"verse_id":"ECC.9.13","polarity":0.20,"label":"narrative","confidence":0.80,"notes":"this wisdom seen under sun — seemed great to me"}
+{"verse_id":"ECC.9.14","polarity":-0.45,"label":"narrative","confidence":0.82,"notes":"little city, few men; great king came, besieged it"}
+{"verse_id":"ECC.9.15","polarity":0.10,"label":"narrative","confidence":0.82,"notes":"poor wise man delivered city by wisdom; no man remembered him"}
+{"verse_id":"ECC.9.16","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"wisdom better than strength; wisdom of poor despised, words not heard"}
+{"verse_id":"ECC.9.17","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"words of wise heard in quiet more than cry of him who rules among fools"}
+{"verse_id":"ECC.9.18","polarity":0.20,"label":"instruction","confidence":0.82,"notes":"wisdom better than weapons — one sinner destroys much good"}
+{"verse_id":"ECC.10.1","polarity":-0.30,"label":"instruction","confidence":0.85,"notes":"dead flies cause stink; little folly outweighs honor and wisdom"}
+{"verse_id":"ECC.10.2","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"wise heart at right hand; fool's at left"}
+{"verse_id":"ECC.10.3","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"fool walks by way, wisdom fails; says to all he is fool"}
+{"verse_id":"ECC.10.4","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"if ruler's spirit rises, leave not place; yielding pacifies offenses"}
+{"verse_id":"ECC.10.5","polarity":-0.30,"label":"despair","confidence":0.82,"notes":"evil seen under sun — error from ruler"}
+{"verse_id":"ECC.10.6","polarity":-0.30,"label":"despair","confidence":0.82,"notes":"folly set in great dignity; rich sit in low place"}
+{"verse_id":"ECC.10.7","polarity":-0.20,"label":"narrative","confidence":0.80,"notes":"saw servants on horses, princes walking as servants"}
+{"verse_id":"ECC.10.8","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"he that digs pit shall fall in; serpent bites who breaks hedge"}
+{"verse_id":"ECC.10.9","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"he that removes stones is hurt; he that cleaves wood endangered"}
+{"verse_id":"ECC.10.10","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"if iron blunt and edge not whet, must put more strength; wisdom is profitable to direct"}
+{"verse_id":"ECC.10.11","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"serpent will bite without enchantment; babbler no better"}
+{"verse_id":"ECC.10.12","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"words of wise man's mouth gracious; lips of fool swallow himself"}
+{"verse_id":"ECC.10.13","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"beginning of words foolishness; end of his talk mischievous madness"}
+{"verse_id":"ECC.10.14","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"fool full of words; man cannot tell what shall be"}
+{"verse_id":"ECC.10.15","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"labor of foolish wearies them; knows not how to go to city"}
+{"verse_id":"ECC.10.16","polarity":-0.55,"label":"warning","confidence":0.85,"notes":"woe to thee land when king is child, princes eat in morning"}
+{"verse_id":"ECC.10.17","polarity":0.65,"label":"hope","confidence":0.88,"notes":"blessed land when king is son of nobles; princes eat in due season"}
+{"verse_id":"ECC.10.18","polarity":-0.20,"label":"instruction","confidence":0.82,"notes":"by slothfulness building decays; idleness drops through"}
+{"verse_id":"ECC.10.19","polarity":0.30,"label":"narrative","confidence":0.82,"notes":"feast for laughter; wine makes merry; money answers all"}
+{"verse_id":"ECC.10.20","polarity":-0.10,"label":"instruction","confidence":0.82,"notes":"curse not king in thought; bird of air may carry voice"}
+{"verse_id":"ECC.11.1","polarity":0.45,"label":"instruction","confidence":0.92,"notes":"famous: cast bread on waters — find after many days"}
+{"verse_id":"ECC.11.2","polarity":0.40,"label":"instruction","confidence":0.85,"notes":"give portion to seven, also to eight — knowest not what evil shall be"}
+{"verse_id":"ECC.11.3","polarity":-0.10,"label":"instruction","confidence":0.80,"notes":"clouds full of rain empty themselves; tree falls there it lies"}
+{"verse_id":"ECC.11.4","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"observes wind shall not sow; regards clouds shall not reap"}
+{"verse_id":"ECC.11.5","polarity":0.30,"label":"awe","confidence":0.85,"notes":"as not knowst way of wind, bones in womb — knowst not works of God"}
+{"verse_id":"ECC.11.6","polarity":0.45,"label":"instruction","confidence":0.85,"notes":"in morning sow seed, in evening withhold not hand — knowest not which prosper"}
+{"verse_id":"ECC.11.7","polarity":0.65,"label":"hope","confidence":0.92,"notes":"famous: light is sweet, pleasant for eyes to behold sun"}
+{"verse_id":"ECC.11.8","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"if man lives many years, rejoice in all; days of darkness many — all to come is vanity"}
+{"verse_id":"ECC.11.9","polarity":0.45,"label":"instruction","confidence":0.92,"notes":"famous: rejoice young man in youth; God will bring to judgment"}
+{"verse_id":"ECC.11.10","polarity":0.30,"label":"instruction","confidence":0.85,"notes":"remove sorrow from heart; childhood and youth are vanity"}
+{"verse_id":"ECC.12.1","polarity":0.55,"label":"instruction","confidence":0.92,"notes":"famous: remember now thy Creator in days of youth"}
+{"verse_id":"ECC.12.2","polarity":-0.30,"label":"instruction","confidence":0.82,"notes":"before sun darkens, light, moon, stars — clouds return after rain"}
+{"verse_id":"ECC.12.3","polarity":-0.55,"label":"grief","confidence":0.88,"notes":"keepers of house tremble, strong men bow, grinders cease — old age imagery"}
+{"verse_id":"ECC.12.4","polarity":-0.55,"label":"grief","confidence":0.88,"notes":"doors shut in streets; sound of grinding low; rises at voice of bird"}
+{"verse_id":"ECC.12.5","polarity":-0.65,"label":"grief","confidence":0.90,"notes":"afraid of high; fears in way; almond tree blossoms; man goes to long home"}
+{"verse_id":"ECC.12.6","polarity":-0.65,"label":"grief","confidence":0.90,"notes":"silver cord loosed, golden bowl broken — death imagery"}
+{"verse_id":"ECC.12.7","polarity":-0.20,"label":"hope","confidence":0.88,"notes":"dust returns to earth; spirit returns to God who gave it"}
+{"verse_id":"ECC.12.8","polarity":-0.65,"label":"despair","confidence":0.92,"notes":"refrain: vanity of vanities, all is vanity"}
+{"verse_id":"ECC.12.9","polarity":0.30,"label":"narrative","confidence":0.85,"notes":"preacher was wise, taught people knowledge; sought out, set in order proverbs"}
+{"verse_id":"ECC.12.10","polarity":0.40,"label":"narrative","confidence":0.85,"notes":"sought to find acceptable words; that written upright, words of truth"}
+{"verse_id":"ECC.12.11","polarity":0.40,"label":"instruction","confidence":0.82,"notes":"words of wise as goads; nails fastened by masters of assemblies"}
+{"verse_id":"ECC.12.12","polarity":0.10,"label":"instruction","confidence":0.82,"notes":"of making many books no end; much study weariness of flesh"}
+{"verse_id":"ECC.12.13","polarity":0.85,"label":"hope","confidence":0.95,"notes":"famous conclusion: fear God, keep his commandments — whole duty of man"}
+{"verse_id":"ECC.12.14","polarity":0.30,"label":"hope","confidence":0.88,"notes":"God shall bring every work into judgment; with every secret thing, good or evil"}
