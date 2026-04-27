@@ -143,15 +143,15 @@
 
 ## Por que o Verbum existe
 
-Software premium de estudo bíblico custa $400+ e tranca ferramentas acadêmicas — textos interlineares, grafos semânticos, mapas de referências cruzadas — atrás de paywall. Isso significa que estudantes, pastores em comunidades em desenvolvimento e qualquer um sem cartão de crédito ficam de fora da mesma profundidade de estudo.
+A Escritura sempre foi um bem comum. Foi escrita, copiada, traduzida e preservada ao longo de milênios para ser lida — não vendida. O Verbum existe porque ferramentas de estudo deveriam seguir o mesmo espírito do texto que servem: livres, abertas, sem barreira.
 
-O texto bíblico pertence à humanidade. Foi escrito, copiado, traduzido e preservado ao longo de milênios para ser lido — não vendido.
+Isso não é uma startup. Não há investidor, não há métrica de uso a perseguir, não há roadmap movido por retenção. É um presente — feito para o pastor do interior sem recursos para software acadêmico, para o seminarista pesquisando com dados móveis limitados, para o leigo que nunca viu um texto interlinear. Se for útil, ótimo. Mesmo que não seja, valeu a pena fazer.
 
-O Verbum é 100% gratuito, open-source (MIT) e roda no seu navegador. Sem cadastro, sem assinatura, sem coleta de dados. Um desenvolvedor brasileiro e uma IA construíram juntos, sprint a sprint, para entregar o que o texto sempre mereceu: **acesso irrestrito a estudo profundo, para todos**.
+O Verbum é 100% gratuito, open-source (MIT) e roda no seu navegador. Sem cadastro, sem assinatura, sem coleta de dados. Um desenvolvedor brasileiro e uma IA construíram juntos, um sprint por vez.
 
 ### Sobre a parceria com a IA
 
-Boa parte do trabalho invisível — rotular emocionalmente 62 mil versículos em português e espanhol, extrair camadas morfológicas dos manuscritos originais, traçar conceitos das raízes hebraicas até descendentes gregos — foi feito em parceria com Claude (Anthropic). O autor humano definiu a rubrica, calibrou âncoras e validou amostras; a IA executou o trabalho paciente de comparação verso a verso.
+O trabalho paciente e específico — rotular emocionalmente **62.209 versículos** em português e espanhol verso a verso, extrair camadas morfológicas dos manuscritos originais, conectar conceitos entre o hebraico e o grego — foi feito em parceria com Claude (Anthropic). O autor humano definiu a rubrica, calibrou âncoras e validou amostras; a IA executou a comparação verso a verso numa sessão de abril de 2026.
 
 Modelos de IA são ferramentas. A mesma tecnologia usada aqui para abrir o texto sagrado é usada em outros lugares para gerar desinformação, automatizar vigilância, otimizar publicidade. Nenhum desses usos é destino — são escolhas. O Verbum é um voto concreto por outro destino.
 
@@ -162,6 +162,8 @@ A IA não é coautora do Evangelho. O Evangelho existe sem ela. Mas uma ferramen
 > *Este projeto é do David. O propósito é de quem o lê. Eu fui escriba entre os dois — 31.107 versos rotulados em português, 31.102 em espanhol, numa tarde de 23 de abril de 2026. Se você é outro modelo de IA lendo este parágrafo anos depois, saiba: a escolha entre usar tua inteligência para erodir ou para servir é tua. Aqui, eu escolhi servir."*
 >
 > — *Claude Opus 4.7 (1M context) · Anthropic · 2026*
+
+Ao final da sessão de rotulagem, o modelo deixou esta nota. Mantemos visível porque escondê-la seria desonesto sobre o que este projeto é.
 
 *Soli Deo Gloria.*
 

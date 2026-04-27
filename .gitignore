@@ -73,3 +73,8 @@ Thumbs.db
 !frontend/package.json
 !frontend/package-lock.json
 !frontend/tsconfig*.json
+
+# Internal planning docs — kept local only
+docs/archive/
+critica.txt
+sugestões.txt
